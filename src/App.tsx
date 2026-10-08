@@ -1,0 +1,145 @@
+import React, { useState } from 'react';
+import { Navbar, ActiveModule } from './components/Navbar';
+import { KanaSelector } from './components/KanaQuiz/KanaSelector';
+import { KanaQuizSession } from './components/KanaQuiz/KanaQuizSession';
+import { KanaResults } from './components/KanaQuiz/KanaResults';
+import { KanjiExplorer } from './components/KanjiModule/KanjiExplorer';
+import { VocabExplorer } from './components/VocabModule/VocabExplorer';
+import { GrammarExplorer } from './components/GrammarModule/GrammarExplorer';
+import { ConjugationDojo } from './components/ConjugationModule/ConjugationDojo';
+import { N5QuizCenter } from './components/QuizModule/N5QuizCenter';
+import { RoadmapView } from './components/Roadmap/RoadmapView';
+import { KanaItem, QuizSummary } from './types';
+
+export function App() {
+  const [activeModule, setActiveModule] = useState<ActiveModule>('kana');
+
+  // Kana Quiz Sub-states: 'selector' | 'quiz' | 'results'
+  const [kanaStage, setKanaStage] = useState<'selector' | 'quiz' | 'results'>('selector');
+  const [activeQuizItems, setActiveQuizItems] = useState<KanaItem[]>([]);
+  const [quizSummary, setQuizSummary] = useState<QuizSummary | null>(null);
+  const [requeueMistakes, setRequeueMistakes] = useState(true);
+  const [requireEnter, setRequireEnter] = useState(true);
+
+  // Start quiz with selected items
+  const handleStartQuiz = (items: KanaItem[], requeue: boolean = true, enterRequired: boolean = true) => {
+    setActiveQuizItems(items);
+    setRequeueMistakes(requeue);
+    setRequireEnter(enterRequired);
+    setKanaStage('quiz');
+  };
+
+
+
+  // Quiz completed
+  const handleFinishQuiz = (summary: QuizSummary) => {
+    setQuizSummary(summary);
+    setKanaStage('results');
+  };
+
+  // Retry only missed items
+  const handleRetryMissed = (missedItems: KanaItem[]) => {
+    setActiveQuizItems(missedItems);
+    setKanaStage('quiz');
+  };
+
+  // Retry all items from the last session
+  const handleRetryAll = () => {
+    if (activeQuizItems.length > 0) {
+      setKanaStage('quiz');
+    }
+  };
+
+  // Back to character selection
+  const handleBackToSelector = () => {
+    setKanaStage('selector');
+  };
+
+  return (
+    <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans">
+      {/* Top Navbar (hidden during quiz session to minimize distraction, like Tofugu focus mode) */}
+      {kanaStage !== 'quiz' && (
+        <Navbar 
+          activeModule={activeModule} 
+          onSelectModule={(mod) => {
+            setActiveModule(mod);
+            if (mod === 'kana') {
+              setKanaStage('selector');
+            }
+          }} 
+        />
+      )}
+
+      {/* Main Content Area */}
+      <main className="flex-1 pb-16">
+        {activeModule === 'kana' && (
+          <>
+            {kanaStage === 'selector' && (
+              <KanaSelector onStartQuiz={handleStartQuiz} />
+            )}
+
+            {kanaStage === 'quiz' && (
+              <KanaQuizSession
+                items={activeQuizItems}
+                requeueMistakes={requeueMistakes}
+                requireEnter={requireEnter}
+                onFinishQuiz={handleFinishQuiz}
+                onExit={handleBackToSelector}
+              />
+            )}
+
+
+
+            {kanaStage === 'results' && quizSummary && (
+              <KanaResults
+                summary={quizSummary}
+                onRetryMissed={handleRetryMissed}
+                onRetryAll={handleRetryAll}
+                onBackToSelector={handleBackToSelector}
+                onGoToKanji={() => {
+                  setActiveModule('kanji');
+                  setKanaStage('selector');
+                }}
+              />
+            )}
+          </>
+        )}
+
+        {activeModule === 'kanji' && (
+          <KanjiExplorer onGoToQuiz={() => setActiveModule('quiz')} />
+        )}
+
+        {activeModule === 'vocab' && (
+          <VocabExplorer onGoToQuiz={() => setActiveModule('quiz')} />
+        )}
+
+        {activeModule === 'grammar' && (
+          <GrammarExplorer onGoToQuiz={() => setActiveModule('quiz')} />
+        )}
+
+        {activeModule === 'dojo' && <ConjugationDojo />}
+
+        {activeModule === 'quiz' && <N5QuizCenter />}
+
+        {activeModule === 'roadmap' && (
+          <RoadmapView onNavigate={(mod) => setActiveModule(mod)} />
+        )}
+      </main>
+
+      {/* Footer */}
+      {kanaStage !== 'quiz' && (
+        <footer className="border-t border-slate-900 bg-slate-950/80 py-6 text-center text-xs text-slate-400">
+          <div className="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
+            <div className="flex items-center gap-2">
+              <span className="font-bold text-slate-300">NihongoMaster</span>
+              <span>— Platform Belajar Bahasa Jepang Mandiri</span>
+            </div>
+            <p>Fitur kuis Kana simultan, evaluasi Romaji, dan kurikulum N5 hingga N1.</p>
+          </div>
+        </footer>
+      )}
+    </div>
+  );
+}
+
+export default App;

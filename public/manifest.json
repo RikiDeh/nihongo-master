@@ -1,0 +1,16 @@
+{
+  "name": "NihongoMaster — Belajar Bahasa Jepang 0 ke N1",
+  "short_name": "NihongoMaster",
+  "description": "Aplikasi belajar bahasa Jepang interaktif dari 0 hingga JLPT N1.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#020617",
+  "theme_color": "#f43f5e",
+  "icons": [
+    {
+      "src": "./favicon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}
