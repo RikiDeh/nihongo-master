@@ -1,6 +1,7 @@
 import { KanjiItem } from '../types';
+import { KANJI_N1_BATCH2 } from './kanjiN1Batch2Data';
 
-export const KANJI_N1_LIST: KanjiItem[] = [
+const KANJI_N1_CORE: KanjiItem[] = [
   // =========================================================================
   // ABSTRAK, KECERMATAN & PENILAIAN TAJAM
   // =========================================================================
@@ -283,3 +284,5 @@ export const KANJI_N1_LIST: KanjiItem[] = [
     ],
   },
 ];
+
+export const KANJI_N1_LIST: KanjiItem[] = [...KANJI_N1_CORE, ...KANJI_N1_BATCH2];

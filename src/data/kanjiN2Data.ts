@@ -1,6 +1,7 @@
 import { KanjiItem } from '../types';
+import { KANJI_N2_BATCH2 } from './kanjiN2Batch2Data';
 
-export const KANJI_N2_LIST: KanjiItem[] = [
+const KANJI_N2_CORE: KanjiItem[] = [
   // =========================================================================
   // FORMAL, KORPORAT & BISNIS
   // =========================================================================
@@ -532,3 +533,5 @@ export const KANJI_N2_LIST: KanjiItem[] = [
     ],
   },
 ];
+
+export const KANJI_N2_LIST: KanjiItem[] = [...KANJI_N2_CORE, ...KANJI_N2_BATCH2];

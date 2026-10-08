@@ -1,6 +1,7 @@
 import { VocabItem } from '../types';
+import { VOCAB_N3_BATCH2 } from './vocabN3Batch2Data';
 
-export const VOCAB_N3_LIST: VocabItem[] = [
+const VOCAB_N3_CORE: VocabItem[] = [
   // =========================================================================
   // KATA SAMBUNG WACANA & LOGIKA (DISCOURSE CONNECTORS)
   // =========================================================================
@@ -521,3 +522,5 @@ export const VOCAB_N3_LIST: VocabItem[] = [
     },
   },
 ];
+
+export const VOCAB_N3_LIST: VocabItem[] = [...VOCAB_N3_CORE, ...VOCAB_N3_BATCH2];

@@ -1,6 +1,7 @@
 import { KanjiItem } from '../types';
+import { KANJI_N3_BATCH2 } from './kanjiN3Batch2Data';
 
-export const KANJI_N3_LIST: KanjiItem[] = [
+const KANJI_N3_CORE: KanjiItem[] = [
   // =========================================================================
   // RELASI, SOSIAL & POLITIK-EKONOMI
   // =========================================================================
@@ -883,3 +884,5 @@ export const KANJI_N3_LIST: KanjiItem[] = [
     ],
   },
 ];
+
+export const KANJI_N3_LIST: KanjiItem[] = [...KANJI_N3_CORE, ...KANJI_N3_BATCH2];

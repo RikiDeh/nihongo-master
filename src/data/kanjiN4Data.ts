@@ -1,6 +1,7 @@
 import { KanjiItem } from '../types';
+import { KANJI_N4_BATCH2 } from './kanjiN4Batch2Data';
 
-export const KANJI_N4_LIST: KanjiItem[] = [
+const KANJI_N4_CORE: KanjiItem[] = [
   // =========================================================================
   // RELASI, ORANG & SOSIAL
   // =========================================================================
@@ -827,3 +828,5 @@ export const KANJI_N4_LIST: KanjiItem[] = [
     ],
   },
 ];
+
+export const KANJI_N4_LIST: KanjiItem[] = [...KANJI_N4_CORE, ...KANJI_N4_BATCH2];

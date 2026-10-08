@@ -1,6 +1,7 @@
 import { VocabItem } from '../types';
+import { VOCAB_N4_BATCH2 } from './vocabN4Batch2Data';
 
-export const VOCAB_N4_LIST: VocabItem[] = [
+const VOCAB_N4_CORE: VocabItem[] = [
   // =========================================================================
   // PASANGAN KATA KERJA TRANSITIF VS INTRANSITIF (他動詞 VS 自動詞)
   // =========================================================================
@@ -641,3 +642,5 @@ export const VOCAB_N4_LIST: VocabItem[] = [
     },
   },
 ];
+
+export const VOCAB_N4_LIST: VocabItem[] = [...VOCAB_N4_CORE, ...VOCAB_N4_BATCH2];

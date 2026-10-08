@@ -1,6 +1,7 @@
 import { VocabItem } from '../types';
+import { VOCAB_N2_BATCH2 } from './vocabN2Batch2Data';
 
-export const VOCAB_N2_LIST: VocabItem[] = [
+const VOCAB_N2_CORE: VocabItem[] = [
   // =========================================================================
   // KOSAKATA FORMAL, BISNIS, KORPORAT & HUKUM
   // =========================================================================
@@ -261,3 +262,5 @@ export const VOCAB_N2_LIST: VocabItem[] = [
     },
   },
 ];
+
+export const VOCAB_N2_LIST: VocabItem[] = [...VOCAB_N2_CORE, ...VOCAB_N2_BATCH2];

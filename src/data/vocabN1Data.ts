@@ -1,6 +1,7 @@
 import { VocabItem } from '../types';
+import { VOCAB_N1_BATCH2 } from './vocabN1Batch2Data';
 
-export const VOCAB_N1_LIST: VocabItem[] = [
+const VOCAB_N1_CORE: VocabItem[] = [
   // =========================================================================
   // YOJIJUKUGO (四字熟語 - IDIOM EMPAT KARAKTER)
   // =========================================================================
@@ -233,3 +234,5 @@ export const VOCAB_N1_LIST: VocabItem[] = [
     },
   },
 ];
+
+export const VOCAB_N1_LIST: VocabItem[] = [...VOCAB_N1_CORE, ...VOCAB_N1_BATCH2];
