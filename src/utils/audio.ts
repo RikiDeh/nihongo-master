@@ -171,9 +171,78 @@ export function speakJapanese(text: string): Promise<void> {
   });
 }
 
+let lastToastTime = 0;
+
+/**
+ * Menampilkan notifikasi banner / toast ramah jika perangkat tidak memiliki suara ja-JP
+ */
+export function showTtsWarningToast(customMsg?: string) {
+  if (typeof document === 'undefined') return;
+  const now = Date.now();
+  if (now - lastToastTime < 5000) return; // Debounce 5s
+  lastToastTime = now;
+
+  const msg = customMsg || 'Perangkat Anda belum memiliki paket suara Bahasa Jepang (ja-JP). Silakan aktifkan di Pengaturan Text-to-Speech perangkat Anda.';
+
+  if (typeof window !== 'undefined') {
+    window.dispatchEvent(new CustomEvent('japanese-tts-warning', { detail: { message: msg } }));
+  }
+
+  let toastContainer = document.getElementById('tts-toast-banner');
+  if (!toastContainer) {
+    toastContainer = document.createElement('div');
+    toastContainer.id = 'tts-toast-banner';
+    toastContainer.className = 'fixed bottom-5 right-5 z-[9999] max-w-sm p-4 bg-amber-950/95 border border-amber-500/50 text-amber-200 text-xs rounded-xl shadow-2xl backdrop-blur-md transition-all duration-300 flex items-start gap-3 pointer-events-auto';
+    document.body.appendChild(toastContainer);
+  }
+
+  toastContainer.innerHTML = `
+    <div class="text-amber-400 mt-0.5 text-base flex-shrink-0">⚠️</div>
+    <div class="flex-1">
+      <div class="font-bold text-amber-300 mb-0.5">Paket Suara Jepang Tidak Ditemukan</div>
+      <div>${msg}</div>
+    </div>
+    <button id="tts-toast-close" class="text-amber-400 hover:text-white text-sm font-bold ml-1 p-1">✕</button>
+  `;
+
+  toastContainer.style.opacity = '1';
+  toastContainer.style.transform = 'translateY(0)';
+
+  const closeBtn = document.getElementById('tts-toast-close');
+  if (closeBtn) {
+    closeBtn.onclick = () => {
+      if (toastContainer) toastContainer.style.opacity = '0';
+    };
+  }
+
+  setTimeout(() => {
+    if (toastContainer) {
+      toastContainer.style.opacity = '0';
+      toastContainer.style.transform = 'translateY(10px)';
+    }
+  }, 6000);
+}
+
+/**
+ * Memeriksa apakah browser memiliki suara bahasa Jepang yang terinstal
+ */
+export function hasJapaneseVoiceSupport(): boolean {
+  if (typeof window === 'undefined' || !('speechSynthesis' in window)) return false;
+  const voices = window.speechSynthesis.getVoices();
+  return voices.some(v => 
+    v.lang.startsWith('ja') || 
+    v.lang.includes('ja-JP') || 
+    v.lang.includes('ja_JP') || 
+    v.name.toLowerCase().includes('japanese') ||
+    v.name.includes('Kyoko') ||
+    v.name.includes('Otoya')
+  );
+}
+
 function fallbackSpeechSynthesis(text: string): Promise<void> {
   return new Promise((resolve) => {
     if (typeof window === 'undefined' || !('speechSynthesis' in window)) {
+      showTtsWarningToast();
       resolve();
       return;
     }
@@ -189,13 +258,29 @@ function fallbackSpeechSynthesis(text: string): Promise<void> {
       utterance.rate = 0.95;
 
       const voices = window.speechSynthesis.getVoices();
-      const jaVoice = voices.find(v => v.lang.startsWith('ja') || v.name.includes('Japanese') || v.name.includes('Kyoko') || v.name.includes('Otoya'));
+      const jaVoice = voices.find(v => 
+        v.lang.startsWith('ja') || 
+        v.lang.includes('ja-JP') || 
+        v.lang.includes('ja_JP') || 
+        v.name.includes('Japanese') || 
+        v.name.includes('Kyoko') || 
+        v.name.includes('Otoya')
+      );
+
       if (jaVoice) {
         utterance.voice = jaVoice;
+      } else {
+        // Jika voices sudah termuat namun tidak ada suara ja
+        if (voices.length > 0) {
+          showTtsWarningToast();
+        }
       }
 
       utterance.onend = () => resolve();
-      utterance.onerror = () => resolve();
+      utterance.onerror = () => {
+        showTtsWarningToast();
+        resolve();
+      };
 
       window.speechSynthesis.speak(utterance);
 
@@ -208,6 +293,7 @@ function fallbackSpeechSynthesis(text: string): Promise<void> {
       }, 1500);
     } catch (e) {
       console.debug('Fallback speech error:', e);
+      showTtsWarningToast();
       resolve();
     }
   });
