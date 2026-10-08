@@ -1,0 +1,347 @@
+[
+  {
+    "kanji": "意見",
+    "kana": "いけん",
+    "romaji": "iken",
+    "meaningEn": "Opinion / view",
+    "meaningId": "Pendapat / opini",
+    "level": "N4",
+    "category": "Pikiran & Logika",
+    "partOfSpeech": "Kata Benda",
+    "exampleSentence": {
+      "jp": "自分の意見をはっきり伝えます。",
+      "furigana": "じぶんのいけんをはっきりつたえます。",
+      "id": "Menyampaikan pendapat sendiri dengan jelas."
+    }
+  },
+  {
+    "kanji": "用意",
+    "kana": "ようい",
+    "romaji": "youi",
+    "meaningEn": "Preparation",
+    "meaningId": "Persiapan / penyediaan",
+    "level": "N4",
+    "category": "Aktivitas Sehari-hari",
+    "partOfSpeech": "Kata Benda / Suru Verb",
+    "exampleSentence": {
+      "jp": "出かける用意ができました。",
+      "furigana": "でかけるよういができました。",
+      "id": "Persiapan untuk berangkat sudah selesai."
+    }
+  },
+  {
+    "kanji": "説明",
+    "kana": "せつめい",
+    "romaji": "setsumei",
+    "meaningEn": "Explanation",
+    "meaningId": "Penjelasan / keterangan",
+    "level": "N4",
+    "category": "Komunikasi & Bahasa",
+    "partOfSpeech": "Kata Benda / Suru Verb",
+    "exampleSentence": {
+      "jp": "機械の使い方を詳しく説明します。",
+      "furigana": "きかいのつかいかたをくわしくせつめいします。",
+      "id": "Menjelaskan cara penggunaan mesin secara rinci."
+    }
+  },
+  {
+    "kanji": "注意",
+    "kana": "ちゅうい",
+    "romaji": "chuui",
+    "meaningEn": "Caution / attention",
+    "meaningId": "Peringatan / perhatian / hati-hati",
+    "level": "N4",
+    "category": "Keamanan & Etika",
+    "partOfSpeech": "Kata Benda / Suru Verb",
+    "exampleSentence": {
+      "jp": "足元に十分注意して歩いてください。",
+      "furigana": "あしもとにじゅうぶんちゅういしてあるいてください。",
+      "id": "Harap berhati-hati memperhatikan langkah kaki."
+    }
+  },
+  {
+    "kanji": "失敗",
+    "kana": "しっぱい",
+    "romaji": "shippai",
+    "meaningEn": "Failure / mistake",
+    "meaningId": "Kegagalan / kesalahan",
+    "level": "N4",
+    "category": "Aktivitas & Hasil",
+    "partOfSpeech": "Kata Benda / Suru Verb",
+    "exampleSentence": {
+      "jp": "失敗を恐れずに挑戦します。",
+      "furigana": "しっぱいをおそれずにちょうせんします。",
+      "id": "Berani mencoba tanpa takut gagal."
+    }
+  },
+  {
+    "kanji": "簡単",
+    "kana": "かんたん",
+    "romaji": "kantan",
+    "meaningEn": "Simple / easy",
+    "meaningId": "Sederhana / gampang",
+    "level": "N4",
+    "category": "Sifat & Keadaan",
+    "partOfSpeech": "Kata Sifat-na",
+    "exampleSentence": {
+      "jp": "簡単なレシピで料理を作ります。",
+      "furigana": "かんたんなレシピでりょうりをつくります。",
+      "id": "Memasak hidangan dengan resep sederhana."
+    }
+  },
+  {
+    "kanji": "熱心",
+    "kana": "ねっしん",
+    "romaji": "nesshin",
+    "meaningEn": "Enthusiastic / dedicated",
+    "meaningId": "Tekun / antusias bersungguh-sungguh",
+    "level": "N4",
+    "category": "Sifat & Karakter",
+    "partOfSpeech": "Kata Sifat-na",
+    "exampleSentence": {
+      "jp": "日本語を熱心に勉強しています。",
+      "furigana": "にほんごをねっしんにべんきょうしています。",
+      "id": "Belajar bahasa Jepang dengan penuh ketekunan."
+    }
+  },
+  {
+    "kanji": "真面目",
+    "kana": "まじめ",
+    "romaji": "majime",
+    "meaningEn": "Serious / earnest",
+    "meaningId": "Jujur / rajin bersungguh-sungguh",
+    "level": "N4",
+    "category": "Sifat & Karakter",
+    "partOfSpeech": "Kata Sifat-na",
+    "exampleSentence": {
+      "jp": "彼はとても真面目な学生です。",
+      "furigana": "かれはとてもまじめながくせいです。",
+      "id": "Dia adalah murid yang sangat tekun dan rajin."
+    }
+  },
+  {
+    "kanji": "退屈",
+    "kana": "たいくつ",
+    "romaji": "taikutsu",
+    "meaningEn": "Boring / tedious",
+    "meaningId": "Membosankan / jenuh",
+    "level": "N4",
+    "category": "Perasaan & Pikiran",
+    "partOfSpeech": "Kata Sifat-na",
+    "exampleSentence": {
+      "jp": "休日に何もすることがなくて退屈です。",
+      "furigana": "きゅうじつになにもすることがなくてたいくつです。",
+      "id": "Merasa bosan karena tidak ada yang dikerjakan di hari libur."
+    }
+  },
+  {
+    "kanji": "心配",
+    "kana": "しんぱい",
+    "romaji": "shinpai",
+    "meaningEn": "Worry / concern",
+    "meaningId": "Khawatir / cemas",
+    "level": "N4",
+    "category": "Perasaan & Pikiran",
+    "partOfSpeech": "Kata Benda / Suru Verb",
+    "exampleSentence": {
+      "jp": "テストの結果が心配です。",
+      "furigana": "テストのけっかがしんぱいです。",
+      "id": "Saya khawatir dengan hasil ujian."
+    }
+  },
+  {
+    "kanji": "びっくり",
+    "kana": "びっくり",
+    "romaji": "bikkuri",
+    "meaningEn": "Surprised / shocked",
+    "meaningId": "Kaget / terkejut",
+    "level": "N4",
+    "category": "Perasaan & Pikiran",
+    "partOfSpeech": "Kata Keterangan / Suru Verb",
+    "exampleSentence": {
+      "jp": "突然の雷の音にびっくりしました。",
+      "furigana": "とつぜんのかみなりのオとにびっくりしました。",
+      "id": "Terkejut mendengar suara petir yang tiba-tiba."
+    }
+  },
+  {
+    "kanji": "やっぱり",
+    "kana": "やっぱり",
+    "romaji": "yappari",
+    "meaningEn": "As expected / after all",
+    "meaningId": "Ternyata benar / bagaimanapun juga",
+    "level": "N4",
+    "category": "Keadaan & Gaya",
+    "partOfSpeech": "Kata Keterangan",
+    "exampleSentence": {
+      "jp": "やっぱり家のご飯が一番おいしいです。",
+      "furigana": "やっぱりいえのごはんがいちばんおいしいです。",
+      "id": "Ternyata memang masakan rumah yang paling enak."
+    }
+  },
+  {
+    "kanji": "大体",
+    "kana": "だいたい",
+    "romaji": "daitai",
+    "meaningEn": "Generally / approximately",
+    "meaningId": "Kira-kira / secara garis besar",
+    "level": "N4",
+    "category": "Jumlah & Derajat",
+    "partOfSpeech": "Kata Keterangan",
+    "exampleSentence": {
+      "jp": "宿題は大体終わりました。",
+      "furigana": "しゅくだいはだいたいおわりました。",
+      "id": "Pekerjaan rumah kira-kira sudah hampir selesai."
+    }
+  },
+  {
+    "kanji": "随分",
+    "kana": "ずいぶん",
+    "romaji": "zuibun",
+    "meaningEn": "Considerably / remarkably",
+    "meaningId": "Sangat / lumayan amat",
+    "level": "N4",
+    "category": "Jumlah & Derajat",
+    "partOfSpeech": "Kata Keterangan",
+    "exampleSentence": {
+      "jp": "日本語が随分上手になりましたね。",
+      "furigana": "にほんごがずいぶんじょうずになりましたね。",
+      "id": "Bahasa Jepang Anda sudah sangat mahir ya."
+    }
+  },
+  {
+    "kanji": "直接",
+    "kana": "ちょくせつ",
+    "romaji": "chokusetsu",
+    "meaningEn": "Direct / directly",
+    "meaningId": "Langsung / tatap muka",
+    "level": "N4",
+    "category": "Hubungan & Cara",
+    "partOfSpeech": "Kata Benda / Kata Keterangan",
+    "exampleSentence": {
+      "jp": "本人に直接話を聞きます。",
+      "furigana": "ほんにんにちょくせつはなしをききます。",
+      "id": "Mendengarkan keterangan langsung dari yang bersangkutan."
+    }
+  },
+  {
+    "kanji": "規則",
+    "kana": "きそく",
+    "romaji": "kisoku",
+    "meaningEn": "Rule / regulation",
+    "meaningId": "Aturan / tata tertib",
+    "level": "N4",
+    "category": "Hukum & Aturan",
+    "partOfSpeech": "Kata Benda",
+    "exampleSentence": {
+      "jp": "寮の規則をしっかり守ります。",
+      "furigana": "りょうのきそくをしっかりまもります。",
+      "id": "Mematuhi aturan asrama dengan baik."
+    }
+  },
+  {
+    "kanji": "交通",
+    "kana": "こうつう",
+    "romaji": "koutsuu",
+    "meaningEn": "Traffic / transportation",
+    "meaningId": "Lalu lintas / transportasi",
+    "level": "N4",
+    "category": "Transportasi & Kota",
+    "partOfSpeech": "Kata Benda",
+    "exampleSentence": {
+      "jp": "東京は交通がとても便利です。",
+      "furigana": "とうきょうはこうつうがとてもべんりです。",
+      "id": "Tokyo lalu lintas transportasinya sangat praktis."
+    }
+  },
+  {
+    "kanji": "文化",
+    "kana": "ぶんか",
+    "romaji": "bunka",
+    "meaningEn": "Culture",
+    "meaningId": "Kebudayaan / kultur",
+    "level": "N4",
+    "category": "Masyarakat & Budaya",
+    "partOfSpeech": "Kata Benda",
+    "exampleSentence": {
+      "jp": "日本の伝統文化に興味があります。",
+      "furigana": "にほんのでんとうぶんかにきょうみがあります。",
+      "id": "Saya tertarik pada kebudayaan tradisional Jepang."
+    }
+  },
+  {
+    "kanji": "歴史",
+    "kana": "れきし",
+    "romaji": "rekishi",
+    "meaningEn": "History",
+    "meaningId": "Sejarah",
+    "level": "N4",
+    "category": "Pendidikan & Sosial",
+    "partOfSpeech": "Kata Benda",
+    "exampleSentence": {
+      "jp": "奈良の古い歴史を学びます。",
+      "furigana": "ならのふるいれきしをまなびます。",
+      "id": "Mempelajari sejarah kuno kota Nara."
+    }
+  },
+  {
+    "kanji": "世界",
+    "kana": "せかい",
+    "romaji": "sekai",
+    "meaningEn": "World",
+    "meaningId": "Dunia / jagat raya",
+    "level": "N4",
+    "category": "Geografi & Masyarakat",
+    "partOfSpeech": "Kata Benda",
+    "exampleSentence": {
+      "jp": "世界中を旅行してみたいです。",
+      "furigana": "せかいじゅうをりょこうしてみたいです。",
+      "id": "Saya ingin mencoba berkeliling dunia."
+    }
+  },
+  {
+    "kanji": "平和",
+    "kana": "へいわ",
+    "romaji": "heiwa",
+    "meaningEn": "Peace",
+    "meaningId": "Perdamaian / damai tentram",
+    "level": "N4",
+    "category": "Masyarakat & Sosial",
+    "partOfSpeech": "Kata Benda / Kata Sifat-na",
+    "exampleSentence": {
+      "jp": "世界の平和を心から祈ります。",
+      "furigana": "せかいのへいわをこころからいのります。",
+      "id": "Mendoakan perdamaian dunia dari lubuk hati."
+    }
+  },
+  {
+    "kanji": "将来",
+    "kana": "しょうらい",
+    "romaji": "shourai",
+    "meaningEn": "Future",
+    "meaningId": "Masa depan",
+    "level": "N4",
+    "category": "Waktu & Harapan",
+    "partOfSpeech": "Kata Benda",
+    "exampleSentence": {
+      "jp": "将来は日本語の先生になりたいです。",
+      "furigana": "しょうらいはにほんごのせんせいになりたいです。",
+      "id": "Di masa depan saya ingin menjadi guru bahasa Jepang."
+    }
+  },
+  {
+    "kanji": "夢",
+    "kana": "ゆめ",
+    "romaji": "yume",
+    "meaningEn": "Dream",
+    "meaningId": "Mimpi / cita-cita",
+    "level": "N4",
+    "category": "Pikiran & Harapan",
+    "partOfSpeech": "Kata Benda",
+    "exampleSentence": {
+      "jp": "子供の頃の夢を覚えていますか。",
+      "furigana": "こどものころのゆめをおぼえていますか。",
+      "id": "Apakah Anda ingat mimpi masa kecil Anda?"
+    }
+  }
+]
