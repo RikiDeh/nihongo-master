@@ -18,6 +18,12 @@ import {
   generateN3GrammarQuiz,
   generateN3MockExam
 } from '../../data/quizN3Data';
+import {
+  generateN2KanjiQuiz,
+  generateN2VocabQuiz,
+  generateN2GrammarQuiz,
+  generateN2MockExam
+} from '../../data/quizN2Data';
 import { N5QuizSession } from './N5QuizSession';
 import { N5QuizResults } from './N5QuizResults';
 import { saveQuizHistory, getUserProgress } from '../../utils/storage';
@@ -31,7 +37,7 @@ import {
 } from 'lucide-react';
 
 export const N5QuizCenter: React.FC = () => {
-  const [selectedLevel, setSelectedLevel] = useState<'N5' | 'N4' | 'N3'>('N5');
+  const [selectedLevel, setSelectedLevel] = useState<'N5' | 'N4' | 'N3' | 'N2'>('N5');
   const [stage, setStage] = useState<'menu' | 'session' | 'results'>('menu');
   const [selectedCategory, setSelectedCategory] = useState<N5QuizCategory>('kanji');
   const [activeQuestions, setActiveQuestions] = useState<MultipleChoiceQuestion[]>([]);
@@ -76,7 +82,7 @@ export const N5QuizCenter: React.FC = () => {
           questions = generateN4MockExam(15);
           break;
       }
-    } else {
+    } else if (selectedLevel === 'N3') {
       switch (category) {
         case 'kanji':
           questions = generateN3KanjiQuiz(10);
@@ -89,6 +95,21 @@ export const N5QuizCenter: React.FC = () => {
           break;
         case 'mock-exam':
           questions = generateN3MockExam(15);
+          break;
+      }
+    } else {
+      switch (category) {
+        case 'kanji':
+          questions = generateN2KanjiQuiz(10);
+          break;
+        case 'vocab':
+          questions = generateN2VocabQuiz(10);
+          break;
+        case 'grammar':
+          questions = generateN2GrammarQuiz(10);
+          break;
+        case 'mock-exam':
+          questions = generateN2MockExam(15);
           break;
       }
     }
@@ -141,10 +162,10 @@ export const N5QuizCenter: React.FC = () => {
             </p>
 
             {/* Level Switcher Tab */}
-            <div className="inline-flex p-1 bg-slate-900 border border-slate-800 rounded-2xl shadow-inner">
+            <div className="inline-flex flex-wrap justify-center p-1 bg-slate-900 border border-slate-800 rounded-2xl shadow-inner gap-1">
               <button
                 onClick={() => setSelectedLevel('N5')}
-                className={`px-5 py-2.5 rounded-xl text-xs font-bold transition-all flex items-center gap-2 ${
+                className={`px-4 py-2.5 rounded-xl text-xs font-bold transition-all flex items-center gap-2 ${
                   selectedLevel === 'N5'
                     ? 'bg-gradient-to-r from-indigo-500 to-purple-600 text-white shadow-md shadow-indigo-500/20'
                     : 'text-slate-400 hover:text-white'
@@ -154,7 +175,7 @@ export const N5QuizCenter: React.FC = () => {
               </button>
               <button
                 onClick={() => setSelectedLevel('N4')}
-                className={`px-5 py-2.5 rounded-xl text-xs font-bold transition-all flex items-center gap-2 ${
+                className={`px-4 py-2.5 rounded-xl text-xs font-bold transition-all flex items-center gap-2 ${
                   selectedLevel === 'N4'
                     ? 'bg-gradient-to-r from-amber-500 to-orange-600 text-white shadow-md shadow-amber-500/20'
                     : 'text-slate-400 hover:text-white'
@@ -164,13 +185,23 @@ export const N5QuizCenter: React.FC = () => {
               </button>
               <button
                 onClick={() => setSelectedLevel('N3')}
-                className={`px-5 py-2.5 rounded-xl text-xs font-bold transition-all flex items-center gap-2 ${
+                className={`px-4 py-2.5 rounded-xl text-xs font-bold transition-all flex items-center gap-2 ${
                   selectedLevel === 'N3'
                     ? 'bg-gradient-to-r from-rose-500 to-pink-600 text-white shadow-md shadow-rose-500/20'
                     : 'text-slate-400 hover:text-white'
                 }`}
               >
                 <span>🎯 JLPT N3 (Menengah)</span>
+              </button>
+              <button
+                onClick={() => setSelectedLevel('N2')}
+                className={`px-4 py-2.5 rounded-xl text-xs font-bold transition-all flex items-center gap-2 ${
+                  selectedLevel === 'N2'
+                    ? 'bg-gradient-to-r from-emerald-500 to-teal-600 text-white shadow-md shadow-emerald-500/20'
+                    : 'text-slate-400 hover:text-white'
+                }`}
+              >
+                <span>💼 JLPT N2 (Bisnis & Media)</span>
               </button>
             </div>
           </div>

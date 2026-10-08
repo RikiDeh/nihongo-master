@@ -2,6 +2,7 @@ import { VocabItem } from '../types';
 import { VOCAB_N5_LIST } from './vocabN5Data';
 import { VOCAB_N4_LIST } from './vocabN4Data';
 import { VOCAB_N3_LIST } from './vocabN3Data';
+import { VOCAB_N2_LIST } from './vocabN2Data';
 
 export const VOCAB_DATA: VocabItem[] = [
   // Complete JLPT N5 Vocabulary
@@ -13,39 +14,8 @@ export const VOCAB_DATA: VocabItem[] = [
   // Complete JLPT N3 Vocabulary
   ...VOCAB_N3_LIST,
 
-  // N2 Vocabulary
-  {
-    id: 'v-n2-1',
-    kanji: '把握',
-    kana: 'はあく',
-    romaji: 'haaku',
-    meaningEn: 'Grasp / Comprehend / Master',
-    meaningId: 'Memahami sepenuhnya / Menguasai situasi',
-    level: 'N2',
-    category: 'Bisnis & Formal',
-    partOfSpeech: 'Noun / Suru Verb',
-    exampleSentence: {
-      jp: '現状を正しく把握することが重要です。',
-      furigana: 'げんじょうをただしくはあくすることがじゅうようです。',
-      id: 'Sangat penting untuk memahami situasi saat ini dengan benar.',
-    },
-  },
-  {
-    id: 'v-n2-2',
-    kanji: '貢献',
-    kana: 'こうけん',
-    romaji: 'kouken',
-    meaningEn: 'Contribution / Services',
-    meaningId: 'Kontribusi / Jasa',
-    level: 'N2',
-    category: 'Sosial & Karir',
-    partOfSpeech: 'Noun / Suru Verb',
-    exampleSentence: {
-      jp: '社会に貢献する仕事がしたい。',
-      furigana: 'しゃかいにこうけんするしごとがしたい。',
-      id: 'Saya ingin melakukan pekerjaan yang berkontribusi pada masyarakat.',
-    },
-  },
+  // Complete JLPT N2 Vocabulary
+  ...VOCAB_N2_LIST,
 
   // N1 Vocabulary
   {
