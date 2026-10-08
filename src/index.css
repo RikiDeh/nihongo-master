@@ -2,8 +2,8 @@
 
 :root {
   --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
-  --font-jp: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
-  --font-serif-jp: 'Noto Serif JP', 'Hiragino Mincho ProN', 'Yu Mincho', serif;
+  --font-jp: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'Meiryo', sans-serif;
+  --font-serif-jp: 'Noto Serif JP', 'Hiragino Mincho ProN', 'Yu Mincho', 'Meiryo', serif;
 }
 
 body {
@@ -17,11 +17,11 @@ body {
 }
 
 .font-jp {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'Meiryo', sans-serif;
 }
 
 .font-serif-jp {
-  font-family: 'Noto Serif JP', serif;
+  font-family: 'Noto Serif JP', 'Hiragino Mincho ProN', 'Yu Mincho', 'Meiryo', serif;
 }
 
 @keyframes shake {

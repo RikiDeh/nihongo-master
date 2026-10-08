@@ -119,6 +119,7 @@ export interface QuizHistoryEntry {
 }
 
 export interface UserProgressData {
+  version: number; // Schema version (v2)
   bookmarkedKanjiIds: string[];
   masteredKanjiIds: string[];
   bookmarkedVocabIds: string[];

@@ -6,5 +6,16 @@ import { defineConfig } from 'vite'
 export default defineConfig({
   base: './',
   plugins: [react(), tailwindcss()],
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes('kanjiData')) return 'data-kanji';
+          if (id.includes('vocabData')) return 'data-vocab';
+          if (id.includes('grammarData')) return 'data-grammar';
+        },
+      },
+    },
+  },
 })
 

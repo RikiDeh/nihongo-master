@@ -1,8 +1,13 @@
 import { UserProgressData, QuizHistoryEntry } from '../types';
+import { KANJI_DATA } from '../data/kanjiData';
+import { VOCAB_DATA } from '../data/vocabData';
+import { GRAMMAR_DATA } from '../data/grammarData';
 
 const STORAGE_KEY = 'nihongo_master_progress_v1';
+export const CURRENT_STORAGE_VERSION = 2;
 
 const DEFAULT_PROGRESS: UserProgressData = {
+  version: CURRENT_STORAGE_VERSION,
   bookmarkedKanjiIds: [],
   masteredKanjiIds: [],
   bookmarkedVocabIds: [],
@@ -10,6 +15,62 @@ const DEFAULT_PROGRESS: UserProgressData = {
   quizHistory: [],
   failedItemIds: [],
 };
+
+// Cached valid ID sets for O(1) membership checks
+let validKanjiIds: Set<string> | null = null;
+let validVocabIds: Set<string> | null = null;
+let validGrammarIds: Set<string> | null = null;
+
+function getValidKanjiIds(): Set<string> {
+  if (!validKanjiIds) validKanjiIds = new Set(KANJI_DATA.map(k => k.id));
+  return validKanjiIds;
+}
+
+function getValidVocabIds(): Set<string> {
+  if (!validVocabIds) validVocabIds = new Set(VOCAB_DATA.map(v => v.id));
+  return validVocabIds;
+}
+
+function getValidGrammarIds(): Set<string> {
+  if (!validGrammarIds) validGrammarIds = new Set(GRAMMAR_DATA.map(g => g.id));
+  return validGrammarIds;
+}
+
+/**
+ * Pembersih otomatis untuk mencegah 'ID Hantu' di localStorage
+ */
+export function sanitizeUserProgress(data: UserProgressData): { sanitized: UserProgressData; modified: boolean } {
+  const kanjiSet = getValidKanjiIds();
+  const vocabSet = getValidVocabIds();
+  const grammarSet = getValidGrammarIds();
+
+  const cleanBookmarkedKanji = data.bookmarkedKanjiIds.filter(id => kanjiSet.has(id));
+  const cleanMasteredKanji = data.masteredKanjiIds.filter(id => kanjiSet.has(id));
+  const cleanBookmarkedVocab = data.bookmarkedVocabIds.filter(id => vocabSet.has(id));
+  const cleanMasteredVocab = data.masteredVocabIds.filter(id => vocabSet.has(id));
+  const cleanFailedItems = data.failedItemIds.filter(id => kanjiSet.has(id) || vocabSet.has(id) || grammarSet.has(id));
+
+  const modified = 
+    data.version !== CURRENT_STORAGE_VERSION ||
+    cleanBookmarkedKanji.length !== data.bookmarkedKanjiIds.length ||
+    cleanMasteredKanji.length !== data.masteredKanjiIds.length ||
+    cleanBookmarkedVocab.length !== data.bookmarkedVocabIds.length ||
+    cleanMasteredVocab.length !== data.masteredVocabIds.length ||
+    cleanFailedItems.length !== data.failedItemIds.length;
+
+  return {
+    sanitized: {
+      version: CURRENT_STORAGE_VERSION,
+      bookmarkedKanjiIds: cleanBookmarkedKanji,
+      masteredKanjiIds: cleanMasteredKanji,
+      bookmarkedVocabIds: cleanBookmarkedVocab,
+      masteredVocabIds: cleanMasteredVocab,
+      quizHistory: data.quizHistory,
+      failedItemIds: cleanFailedItems,
+    },
+    modified,
+  };
+}
 
 // Dispatch custom event agar komponen React dapat bereaksi secara real-time
 function notifyListeners() {
@@ -19,7 +80,7 @@ function notifyListeners() {
 }
 
 /**
- * Mengambil seluruh data progress dari localStorage
+ * Mengambil seluruh data progress dari localStorage dengan sanitasi otomatis
  */
 export function getUserProgress(): UserProgressData {
   if (typeof window === 'undefined') return DEFAULT_PROGRESS;
@@ -27,7 +88,8 @@ export function getUserProgress(): UserProgressData {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (!raw) return DEFAULT_PROGRESS;
     const parsed = JSON.parse(raw);
-    return {
+    const rawData: UserProgressData = {
+      version: typeof parsed.version === 'number' ? parsed.version : 1,
       bookmarkedKanjiIds: Array.isArray(parsed.bookmarkedKanjiIds) ? parsed.bookmarkedKanjiIds : [],
       masteredKanjiIds: Array.isArray(parsed.masteredKanjiIds) ? parsed.masteredKanjiIds : [],
       bookmarkedVocabIds: Array.isArray(parsed.bookmarkedVocabIds) ? parsed.bookmarkedVocabIds : [],
@@ -35,6 +97,13 @@ export function getUserProgress(): UserProgressData {
       quizHistory: Array.isArray(parsed.quizHistory) ? parsed.quizHistory : [],
       failedItemIds: Array.isArray(parsed.failedItemIds) ? parsed.failedItemIds : [],
     };
+
+    const { sanitized, modified } = sanitizeUserProgress(rawData);
+    if (modified) {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(sanitized));
+    }
+
+    return sanitized;
   } catch (err) {
     console.error('Gagal membaca user progress dari localStorage:', err);
     return DEFAULT_PROGRESS;
@@ -158,6 +227,7 @@ export function importProgressJSON(jsonString: string): boolean {
     if (typeof parsed !== 'object' || parsed === null) return false;
 
     const validated: UserProgressData = {
+      version: typeof parsed.version === 'number' ? parsed.version : CURRENT_STORAGE_VERSION,
       bookmarkedKanjiIds: Array.isArray(parsed.bookmarkedKanjiIds) ? parsed.bookmarkedKanjiIds : [],
       masteredKanjiIds: Array.isArray(parsed.masteredKanjiIds) ? parsed.masteredKanjiIds : [],
       bookmarkedVocabIds: Array.isArray(parsed.bookmarkedVocabIds) ? parsed.bookmarkedVocabIds : [],
@@ -166,7 +236,8 @@ export function importProgressJSON(jsonString: string): boolean {
       failedItemIds: Array.isArray(parsed.failedItemIds) ? parsed.failedItemIds : [],
     };
 
-    saveUserProgress(validated);
+    const { sanitized } = sanitizeUserProgress(validated);
+    saveUserProgress(sanitized);
     return true;
   } catch (err) {
     console.error('Format JSON tidak valid saat import progress:', err);
