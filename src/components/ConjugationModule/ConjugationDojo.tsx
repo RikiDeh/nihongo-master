@@ -37,7 +37,7 @@ function generateNewQuestion(
   const chosenVerb = pool[Math.floor(Math.random() * pool.length)] || VERBS_DATA[0];
 
   // Tentukan bentuk target
-  const forms: ConjugationForm[] = ['masu', 'te', 'nai', 'ta'];
+  const forms: ConjugationForm[] = ['masu', 'te', 'nai', 'ta', 'potential', 'passive'];
   const targetForm: ConjugationForm = formFilter === 'random' 
     ? forms[Math.floor(Math.random() * forms.length)] 
     : formFilter;
@@ -61,6 +61,8 @@ function generateNewQuestion(
       case 'te': return 'Bentuk ~Te (Penghubung / Permintaan)';
       case 'nai': return 'Bentuk Negatif (~Nai)';
       case 'ta': return 'Bentuk Lampau (~Ta)';
+      case 'potential': return 'Bentuk Potensial / Bisa (~Eru / ~Rareru)';
+      case 'passive': return 'Bentuk Pasif / Di- (~Areru / ~Rareru)';
     }
   };
 
@@ -139,6 +141,8 @@ export const ConjugationDojo: React.FC = () => {
       case 'masu': return { label: 'BENTUK ~MASU', color: 'bg-sky-500/20 text-sky-300 border-sky-500/40' };
       case 'nai': return { label: 'BENTUK ~NAI', color: 'bg-rose-500/20 text-rose-300 border-rose-500/40' };
       case 'ta': return { label: 'BENTUK ~TA', color: 'bg-amber-500/20 text-amber-300 border-amber-500/40' };
+      case 'potential': return { label: 'POTENSIAL (BISA)', color: 'bg-cyan-500/20 text-cyan-300 border-cyan-500/40' };
+      case 'passive': return { label: 'PASIF (DI-/TER-)', color: 'bg-violet-500/20 text-violet-300 border-violet-500/40' };
     }
   };
 
@@ -159,10 +163,10 @@ export const ConjugationDojo: React.FC = () => {
           <span>Dojo Konjugasi Kata Kerja (Doushi no Katsuyou)</span>
         </div>
         <h1 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-2">
-          Masteri Perubahan Bentuk Kata Kerja N5
+          Masteri Perubahan Bentuk Kata Kerja (N5 & N4)
         </h1>
         <p className="text-slate-400 text-sm max-w-xl mx-auto">
-          Tembus tembok tersulit pemula! Kuasai rumus perubahan Bentuk-Te, Masu, Nai, dan Ta dengan panduan visual dan latihan refleks instan.
+          Tembus tembok konjugasi! Kuasai rumus perubahan Bentuk-Te, Masu, Nai, Ta, Potensial (可能形), dan Pasif (受身形) dengan panduan visual dan latihan refleks instan.
         </p>
       </div>
 
@@ -204,7 +208,7 @@ export const ConjugationDojo: React.FC = () => {
               {/* Form Filter Selector */}
               <div className="flex items-center gap-1 overflow-x-auto w-full sm:w-auto pb-1 sm:pb-0">
                 <span className="text-[11px] font-bold text-slate-500 uppercase mr-1 shrink-0">Bentuk:</span>
-                {(['te', 'masu', 'nai', 'ta', 'random'] as const).map(f => (
+                {(['te', 'masu', 'nai', 'ta', 'potential', 'passive', 'random'] as const).map(f => (
                   <button
                     key={f}
                     onClick={() => {
@@ -219,7 +223,7 @@ export const ConjugationDojo: React.FC = () => {
                         : 'bg-slate-950 border border-slate-800 text-slate-400 hover:text-white'
                     }`}
                   >
-                    {f === 'random' ? '🎲 Acak' : `~${f.toUpperCase()}`}
+                    {f === 'random' ? '🎲 Acak' : f === 'potential' ? '⚡ Potensial (N4)' : f === 'passive' ? '🛡️ Pasif (N4)' : `~${f.toUpperCase()}`}
                   </button>
                 ))}
               </div>
@@ -514,12 +518,12 @@ export const ConjugationDojo: React.FC = () => {
                 ))}
               </div>
 
-              {/* 4 Forms Matrix Table */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+              {/* 6 Forms Matrix Table */}
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
                 {/* Form 1: Masu */}
                 <div className="p-4 rounded-2xl bg-slate-950 border border-slate-800 text-center">
                   <span className="text-[10px] font-bold text-sky-400 uppercase tracking-wider block mb-1">
-                    Bentuk Sopan (~Masu)
+                    Sopan (~Masu)
                   </span>
                   <div className="text-xl font-jp font-bold text-white mb-0.5">
                     {selectedVerb.forms.masu.kanji}
@@ -538,7 +542,7 @@ export const ConjugationDojo: React.FC = () => {
                 {/* Form 2: Te */}
                 <div className="p-4 rounded-2xl bg-slate-950 border border-slate-800 text-center">
                   <span className="text-[10px] font-bold text-emerald-400 uppercase tracking-wider block mb-1">
-                    Bentuk Sambung (~Te)
+                    Sambung (~Te)
                   </span>
                   <div className="text-xl font-jp font-bold text-white mb-0.5">
                     {selectedVerb.forms.te.kanji}
@@ -557,7 +561,7 @@ export const ConjugationDojo: React.FC = () => {
                 {/* Form 3: Nai */}
                 <div className="p-4 rounded-2xl bg-slate-950 border border-slate-800 text-center">
                   <span className="text-[10px] font-bold text-rose-400 uppercase tracking-wider block mb-1">
-                    Bentuk Negatif (~Nai)
+                    Negatif (~Nai)
                   </span>
                   <div className="text-xl font-jp font-bold text-white mb-0.5">
                     {selectedVerb.forms.nai.kanji}
@@ -576,7 +580,7 @@ export const ConjugationDojo: React.FC = () => {
                 {/* Form 4: Ta */}
                 <div className="p-4 rounded-2xl bg-slate-950 border border-slate-800 text-center">
                   <span className="text-[10px] font-bold text-amber-400 uppercase tracking-wider block mb-1">
-                    Bentuk Lampau (~Ta)
+                    Lampau (~Ta)
                   </span>
                   <div className="text-xl font-jp font-bold text-white mb-0.5">
                     {selectedVerb.forms.ta.kanji}
@@ -590,6 +594,148 @@ export const ConjugationDojo: React.FC = () => {
                   >
                     <Volume2 className="w-3.5 h-3.5 text-emerald-400" />
                   </button>
+                </div>
+
+                {/* Form 5: Potential */}
+                <div className="p-4 rounded-2xl bg-slate-950 border border-slate-800 text-center">
+                  <span className="text-[10px] font-bold text-cyan-400 uppercase tracking-wider block mb-1">
+                    ⚡ Potensial (N4)
+                  </span>
+                  <div className="text-xl font-jp font-bold text-white mb-0.5">
+                    {selectedVerb.forms.potential.kanji}
+                  </div>
+                  <div className="text-xs font-mono text-slate-400 mb-2">
+                    {selectedVerb.forms.potential.romaji}
+                  </div>
+                  <button
+                    onClick={() => speakJapanese(selectedVerb.forms.potential.kanji)}
+                    className="p-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white transition"
+                  >
+                    <Volume2 className="w-3.5 h-3.5 text-cyan-400" />
+                  </button>
+                </div>
+
+                {/* Form 6: Passive */}
+                <div className="p-4 rounded-2xl bg-slate-950 border border-slate-800 text-center">
+                  <span className="text-[10px] font-bold text-violet-400 uppercase tracking-wider block mb-1">
+                    🛡️ Pasif (N4)
+                  </span>
+                  <div className="text-xl font-jp font-bold text-white mb-0.5">
+                    {selectedVerb.forms.passive.kanji}
+                  </div>
+                  <div className="text-xs font-mono text-slate-400 mb-2">
+                    {selectedVerb.forms.passive.romaji}
+                  </div>
+                  <button
+                    onClick={() => speakJapanese(selectedVerb.forms.passive.kanji)}
+                    className="p-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white transition"
+                  >
+                    <Volume2 className="w-3.5 h-3.5 text-violet-400" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Card 2: N4 Potential & Passive Formula Guide */}
+          <div className="bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8 shadow-xl">
+            <div className="flex items-center gap-2.5 mb-6">
+              <Sparkles className="w-5 h-5 text-cyan-400" />
+              <h2 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
+                Rumus Emas Konjugasi Level N4: Potensial (可能形) & Pasif (受身形)
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+              {/* Potential Guide */}
+              <div className="bg-slate-950/80 border border-cyan-500/30 rounded-2xl p-5">
+                <div className="flex items-center justify-between mb-3">
+                  <span className="px-2.5 py-1 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 text-xs font-bold inline-block">
+                    ⚡ Bentuk Potensial (Arti: Bisa / Mampu)
+                  </span>
+                  <span className="text-[11px] text-slate-500 font-mono">可能形 (Kanōkei)</span>
+                </div>
+                <p className="text-xs text-slate-300 mb-4">
+                  Mengubah kata kerja dasar menjadi kemampuan melakukan tindakan:
+                </p>
+
+                <div className="space-y-2 text-xs">
+                  <div className="p-3 rounded-xl bg-slate-900 border border-slate-800">
+                    <div className="font-bold text-slate-200 mb-1">Golongan 1 (Godan):</div>
+                    <p className="text-slate-400">
+                      Ganti vokal akhir baris <span className="text-amber-400 font-bold">"u"</span> ke baris <span className="text-cyan-300 font-bold">"e"</span> lalu tambahkan <span className="text-emerald-400 font-bold">[る]</span>:
+                    </p>
+                    <div className="mt-1.5 font-jp text-slate-200 space-y-0.5">
+                      <div>書く (kaku) ➔ 書<strong className="text-cyan-300">ける</strong> (kakeru = bisa menulis)</div>
+                      <div>飲む (nomu) ➔ 飲<strong className="text-cyan-300">める</strong> (nomeru = bisa minum)</div>
+                      <div>買う (kau) ➔ 買<strong className="text-cyan-300">える</strong> (kaeru = bisa beli)</div>
+                    </div>
+                  </div>
+
+                  <div className="p-3 rounded-xl bg-slate-900 border border-slate-800">
+                    <div className="font-bold text-slate-200 mb-1">Golongan 2 (Ichidan):</div>
+                    <p className="text-slate-400">
+                      Buang akhiran <span className="text-rose-400 font-bold">[る]</span> lalu ganti dengan <span className="text-cyan-300 font-bold">[られる]</span>:
+                    </p>
+                    <div className="mt-1.5 font-jp text-slate-200 space-y-0.5">
+                      <div>食べる ➔ 食べ<strong className="text-cyan-300">られる</strong> (taberareru = bisa makan)</div>
+                      <div>見る ➔ 見<strong className="text-cyan-300">られる</strong> (mirareru = bisa melihat)</div>
+                    </div>
+                  </div>
+
+                  <div className="p-3 rounded-xl bg-slate-900 border border-slate-800">
+                    <div className="font-bold text-slate-200 mb-1">Golongan 3 (Irregular):</div>
+                    <div className="font-jp text-slate-200 space-y-0.5">
+                      <div>する ➔ <strong className="text-cyan-300">できる</strong> (dekiru = bisa melakukan)</div>
+                      <div>来る (kuru) ➔ <strong className="text-cyan-300">来られる</strong> (korareru = bisa datang)</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Passive Guide */}
+              <div className="bg-slate-950/80 border border-violet-500/30 rounded-2xl p-5">
+                <div className="flex items-center justify-between mb-3">
+                  <span className="px-2.5 py-1 rounded-full bg-violet-500/20 text-violet-300 border border-violet-500/40 text-xs font-bold inline-block">
+                    🛡️ Bentuk Pasif (Arti: Di- / Ter- / Kena)
+                  </span>
+                  <span className="text-[11px] text-slate-500 font-mono">受身形 (Ukemikei)</span>
+                </div>
+                <p className="text-xs text-slate-300 mb-4">
+                  Menyatakan perbuatan yang diterima subjek atau perbuatan yang merugikan (adversative passive):
+                </p>
+
+                <div className="space-y-2 text-xs">
+                  <div className="p-3 rounded-xl bg-slate-900 border border-slate-800">
+                    <div className="font-bold text-slate-200 mb-1">Golongan 1 (Godan):</div>
+                    <p className="text-slate-400">
+                      Ganti vokal akhir baris <span className="text-amber-400 font-bold">"u"</span> ke baris <span className="text-violet-300 font-bold">"a"</span> lalu tambahkan <span className="text-emerald-400 font-bold">[れる]</span> (ingat akhiran う ➔ <strong className="text-rose-400">わ</strong>れる!):
+                    </p>
+                    <div className="mt-1.5 font-jp text-slate-200 space-y-0.5">
+                      <div>書く (kaku) ➔ 書<strong className="text-violet-300">かれる</strong> (kakareru = ditulis)</div>
+                      <div>買う (kau) ➔ 買<strong className="text-violet-300">われる</strong> (kawareru = dibeli)</div>
+                      <div>話す (hanasu) ➔ 話<strong className="text-violet-300">される</strong> (hanasareru = dibicarakan)</div>
+                    </div>
+                  </div>
+
+                  <div className="p-3 rounded-xl bg-slate-900 border border-slate-800">
+                    <div className="font-bold text-slate-200 mb-1">Golongan 2 (Ichidan):</div>
+                    <p className="text-slate-400">
+                      Buang <span className="text-rose-400 font-bold">[る]</span> lalu tambahkan <span className="text-violet-300 font-bold">[られる]</span> (kembar dengan potensial):
+                    </p>
+                    <div className="mt-1.5 font-jp text-slate-200 space-y-0.5">
+                      <div>食べる ➔ 食べ<strong className="text-violet-300">られる</strong> (taberareru = dimakan)</div>
+                      <div>褒める ➔ 褒め<strong className="text-violet-300">られる</strong> (homerareru = dipuji)</div>
+                    </div>
+                  </div>
+
+                  <div className="p-3 rounded-xl bg-slate-900 border border-slate-800">
+                    <div className="font-bold text-slate-200 mb-1">Golongan 3 (Irregular):</div>
+                    <div className="font-jp text-slate-200 space-y-0.5">
+                      <div>する ➔ <strong className="text-violet-300">される</strong> (sareru = dilakukan / dikerjai)</div>
+                      <div>来る (kuru) ➔ <strong className="text-violet-300">来られる</strong> (korareru = didatangi)</div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

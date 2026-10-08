@@ -27,6 +27,16 @@ export const SPECIFIC_DISTRACTORS: Record<string, Record<ConjugationForm, Option
       { kanji: '行かます', romaji: 'ikamasu' },
       { kanji: '行けます', romaji: 'ikemasu' },
     ],
+    potential: [
+      { kanji: '行かれる', romaji: 'ikareru' },
+      { kanji: '行けられる', romaji: 'ikerareru' },
+      { kanji: '行られる', romaji: 'ikurareru' },
+    ],
+    passive: [
+      { kanji: '行ける', romaji: 'ikeru' },
+      { kanji: '行かせる', romaji: 'ikaseru' },
+      { kanji: '行てられる', romaji: 'itterareru' },
+    ],
   },
   'v-kaku': {
     te: [
@@ -48,6 +58,16 @@ export const SPECIFIC_DISTRACTORS: Record<string, Record<ConjugationForm, Option
       { kanji: '書くます', romaji: 'kakumasu' },
       { kanji: '書かます', romaji: 'kakamasu' },
       { kanji: '書けます', romaji: 'kakemasu' },
+    ],
+    potential: [
+      { kanji: '書かれる', romaji: 'kakareru' },
+      { kanji: '書けられる', romaji: 'kakerareru' },
+      { kanji: '書くられる', romaji: 'kakurareru' },
+    ],
+    passive: [
+      { kanji: '書ける', romaji: 'kakeru' },
+      { kanji: '書かせる', romaji: 'kakaseru' },
+      { kanji: '書いてれる', romaji: 'kaitereru' },
     ],
   },
   'v-kiku': {
@@ -71,6 +91,16 @@ export const SPECIFIC_DISTRACTORS: Record<string, Record<ConjugationForm, Option
       { kanji: '聞かます', romaji: 'kikamasu' },
       { kanji: '聞けます', romaji: 'kikemasu' },
     ],
+    potential: [
+      { kanji: '聞かれる', romaji: 'kikareru' },
+      { kanji: '聞けられる', romaji: 'kikerareru' },
+      { kanji: '聞くられる', romaji: 'kikurareru' },
+    ],
+    passive: [
+      { kanji: '聞ける', romaji: 'kikeru' },
+      { kanji: '聞かせる', romaji: 'kikaseru' },
+      { kanji: '聞いてれる', romaji: 'kiitereru' },
+    ],
   },
   'v-oyogu': {
     te: [
@@ -92,6 +122,16 @@ export const SPECIFIC_DISTRACTORS: Record<string, Record<ConjugationForm, Option
       { kanji: '泳ぐます', romaji: 'oyogumasu' },
       { kanji: '泳がます', romaji: 'oyogamasu' },
       { kanji: '泳げます', romaji: 'oyogemasu' },
+    ],
+    potential: [
+      { kanji: '泳がれる', romaji: 'oyogareru' },
+      { kanji: '泳げられる', romaji: 'oyogerareru' },
+      { kanji: '泳ぐられる', romaji: 'oyogurareru' },
+    ],
+    passive: [
+      { kanji: '泳げる', romaji: 'oyogeru' },
+      { kanji: '泳がせる', romaji: 'oyogaseru' },
+      { kanji: '泳いでれる', romaji: 'oyoidereru' },
     ],
   },
   'v-hanasu': {
@@ -115,6 +155,16 @@ export const SPECIFIC_DISTRACTORS: Record<string, Record<ConjugationForm, Option
       { kanji: '話さます', romaji: 'hanasamasu' },
       { kanji: '話せます', romaji: 'hanasemasu' },
     ],
+    potential: [
+      { kanji: '話される', romaji: 'hanasareru' },
+      { kanji: '話せられる', romaji: 'hanaserareru' },
+      { kanji: '話すられる', romaji: 'hanasurareru' },
+    ],
+    passive: [
+      { kanji: '話せる', romaji: 'hanaseru' },
+      { kanji: '話させる', romaji: 'hanasaseru' },
+      { kanji: '話してれる', romaji: 'hanashitereru' },
+    ],
   },
   'v-matsu': {
     te: [
@@ -136,6 +186,48 @@ export const SPECIFIC_DISTRACTORS: Record<string, Record<ConjugationForm, Option
       { kanji: '待つます', romaji: 'matsumasu' },
       { kanji: 'またます', romaji: 'matamasu' },
       { kanji: '待てます', romaji: 'matemasu' },
+    ],
+    potential: [
+      { kanji: '待たれる', romaji: 'matareru' },
+      { kanji: '待てられる', romaji: 'materareru' },
+      { kanji: '待ちられる', romaji: 'machirareru' },
+    ],
+    passive: [
+      { kanji: '待てる', romaji: 'materu' },
+      { kanji: '待たせる', romaji: 'mataseru' },
+      { kanji: '待ってれる', romaji: 'mattereru' },
+    ],
+  },
+  'v-toru': {
+    te: [
+      { kanji: '取て', romaji: 'tote' },
+      { kanji: '取りて', romaji: 'torite' },
+      { kanji: '取いで', romaji: 'toide' },
+    ],
+    ta: [
+      { kanji: '取た', romaji: 'tota' },
+      { kanji: '取りた', romaji: 'torita' },
+      { kanji: '取いだ', romaji: 'toida' },
+    ],
+    nai: [
+      { kanji: '取ない', romaji: 'tonai' },
+      { kanji: '取りない', romaji: 'torinai' },
+      { kanji: '取れない', romaji: 'torenai' },
+    ],
+    masu: [
+      { kanji: '取くます', romaji: 'tokumasu' },
+      { kanji: '取ます', romaji: 'tomasu' },
+      { kanji: '取れます', romaji: 'toremasu' },
+    ],
+    potential: [
+      { kanji: '取られる', romaji: 'torareru' },
+      { kanji: '取れられる', romaji: 'torerareru' },
+      { kanji: '取りられる', romaji: 'torirareru' },
+    ],
+    passive: [
+      { kanji: '取れる', romaji: 'toreru' },
+      { kanji: '取らせる', romaji: 'toraseru' },
+      { kanji: '取ってれる', romaji: 'tottereru' },
     ],
   },
   'v-kau': {
@@ -159,6 +251,16 @@ export const SPECIFIC_DISTRACTORS: Record<string, Record<ConjugationForm, Option
       { kanji: '買わます', romaji: 'kawamasu' },
       { kanji: '買えます', romaji: 'kaemasu' },
     ],
+    potential: [
+      { kanji: '買われる', romaji: 'kawareru' },
+      { kanji: '買えられる', romaji: 'kaerareru' },
+      { kanji: '買られる', romaji: 'kaurareru' },
+    ],
+    passive: [
+      { kanji: '買あれる', romaji: 'kaareru' },
+      { kanji: '買える', romaji: 'kaeru' },
+      { kanji: '買わせる', romaji: 'kawaseru' },
+    ],
   },
   'v-kaeru': {
     te: [
@@ -180,6 +282,16 @@ export const SPECIFIC_DISTRACTORS: Record<string, Record<ConjugationForm, Option
       { kanji: '帰ます', romaji: 'kaemasu' },
       { kanji: '帰るます', romaji: 'kaerumasu' },
       { kanji: '帰らます', romaji: 'kaeramasu' },
+    ],
+    potential: [
+      { kanji: '帰られる', romaji: 'kaerareru' },
+      { kanji: '帰えれる', romaji: 'kaeereru' },
+      { kanji: '帰りられる', romaji: 'kaerirareru' },
+    ],
+    passive: [
+      { kanji: '帰れる', romaji: 'kaereru' },
+      { kanji: '帰らせる', romaji: 'kaeraseru' },
+      { kanji: '帰ってれる', romaji: 'kaettereru' },
     ],
   },
   'v-nomu': {
@@ -203,6 +315,48 @@ export const SPECIFIC_DISTRACTORS: Record<string, Record<ConjugationForm, Option
       { kanji: '飲まます', romaji: 'nomamasu' },
       { kanji: '飲めます', romaji: 'nomemasu' },
     ],
+    potential: [
+      { kanji: '飲まれる', romaji: 'nomareru' },
+      { kanji: '飲められる', romaji: 'nomerareru' },
+      { kanji: '飲みられる', romaji: 'nomirareru' },
+    ],
+    passive: [
+      { kanji: '飲める', romaji: 'nomeru' },
+      { kanji: '飲ませる', romaji: 'nomaseru' },
+      { kanji: '飲んでれる', romaji: 'nondereru' },
+    ],
+  },
+  'v-yomu': {
+    te: [
+      { kanji: '読んて', romaji: 'yonte' },
+      { kanji: '読みて', romaji: 'yomite' },
+      { kanji: '読って', romaji: 'yotte' },
+    ],
+    ta: [
+      { kanji: '読んた', romaji: 'yonta' },
+      { kanji: '読みた', romaji: 'yomita' },
+      { kanji: '読った', romaji: 'yotta' },
+    ],
+    nai: [
+      { kanji: '読みない', romaji: 'yominai' },
+      { kanji: '読むない', romaji: 'yomunai' },
+      { kanji: '読めない', romaji: 'yomenai' },
+    ],
+    masu: [
+      { kanji: '読むます', romaji: 'yomumasu' },
+      { kanji: '読まます', romaji: 'yomamasu' },
+      { kanji: '読めます', romaji: 'yomemasu' },
+    ],
+    potential: [
+      { kanji: '読まれる', romaji: 'yomareru' },
+      { kanji: '読められる', romaji: 'yomerareru' },
+      { kanji: '読みられる', romaji: 'yomirareru' },
+    ],
+    passive: [
+      { kanji: '読める', romaji: 'yomeru' },
+      { kanji: '読ませる', romaji: 'yomaseru' },
+      { kanji: '読んでれる', romaji: 'yondereru' },
+    ],
   },
   'v-asobu': {
     te: [
@@ -224,6 +378,16 @@ export const SPECIFIC_DISTRACTORS: Record<string, Record<ConjugationForm, Option
       { kanji: '遊ぶます', romaji: 'asobumasu' },
       { kanji: '遊ばます', romaji: 'asobamasu' },
       { kanji: '遊べます', romaji: 'asobemasu' },
+    ],
+    potential: [
+      { kanji: '遊ばれる', romaji: 'asobareru' },
+      { kanji: '遊べられる', romaji: 'asoberareru' },
+      { kanji: '遊びられる', romaji: 'asobirareru' },
+    ],
+    passive: [
+      { kanji: '遊べる', romaji: 'asoberu' },
+      { kanji: '遊ばせる', romaji: 'asobaseru' },
+      { kanji: '遊んでれる', romaji: 'asondereru' },
     ],
   },
   'v-shinu': {
@@ -247,6 +411,16 @@ export const SPECIFIC_DISTRACTORS: Record<string, Record<ConjugationForm, Option
       { kanji: '死なます', romaji: 'shinamasu' },
       { kanji: '死ねます', romaji: 'shinemasu' },
     ],
+    potential: [
+      { kanji: '死なれる', romaji: 'shinareru' },
+      { kanji: '死ねられる', romaji: 'shinerareru' },
+      { kanji: '死にられる', romaji: 'shinirareru' },
+    ],
+    passive: [
+      { kanji: '死ねる', romaji: 'shineru' },
+      { kanji: '死なせる', romaji: 'shinaseru' },
+      { kanji: '死んでれる', romaji: 'shindereru' },
+    ],
   },
   'v-taberu': {
     te: [
@@ -268,6 +442,16 @@ export const SPECIFIC_DISTRACTORS: Record<string, Record<ConjugationForm, Option
       { kanji: '食べるます', romaji: 'taberumasu' },
       { kanji: '食べります', romaji: 'taberimasu' },
       { kanji: '食べらます', romaji: 'taberamasu' },
+    ],
+    potential: [
+      { kanji: '食べれる', romaji: 'tabereru' },
+      { kanji: '食べえる', romaji: 'tabeeru' },
+      { kanji: '食べさせる', romaji: 'tabesaseru' },
+    ],
+    passive: [
+      { kanji: '食べれる', romaji: 'tabereru' },
+      { kanji: '食べされる', romaji: 'tabesareru' },
+      { kanji: '食べわす', romaji: 'tabewasu' },
     ],
   },
   'v-miru': {
@@ -291,6 +475,16 @@ export const SPECIFIC_DISTRACTORS: Record<string, Record<ConjugationForm, Option
       { kanji: '見ります', romaji: 'mirimasu' },
       { kanji: '見らます', romaji: 'miramasu' },
     ],
+    potential: [
+      { kanji: '見れる', romaji: 'mireru' },
+      { kanji: '見える', romaji: 'mieru' },
+      { kanji: '見せる', romaji: 'miseru' },
+    ],
+    passive: [
+      { kanji: '見れる', romaji: 'mireru' },
+      { kanji: '見される', romaji: 'misareru' },
+      { kanji: '見らせる', romaji: 'miraseru' },
+    ],
   },
   'v-okiru': {
     te: [
@@ -312,6 +506,16 @@ export const SPECIFIC_DISTRACTORS: Record<string, Record<ConjugationForm, Option
       { kanji: '起きるます', romaji: 'okirumasu' },
       { kanji: '起きります', romaji: 'okirimasu' },
       { kanji: '起きらます', romaji: 'okiramasu' },
+    ],
+    potential: [
+      { kanji: '起きれる', romaji: 'okireru' },
+      { kanji: '起きえる', romaji: 'okieru' },
+      { kanji: '起きらせる', romaji: 'okiraseru' },
+    ],
+    passive: [
+      { kanji: '起きれる', romaji: 'okireru' },
+      { kanji: '起きされる', romaji: 'okisareru' },
+      { kanji: '起きわす', romaji: 'okiewasu' },
     ],
   },
   'v-neru': {
@@ -335,6 +539,16 @@ export const SPECIFIC_DISTRACTORS: Record<string, Record<ConjugationForm, Option
       { kanji: '寝ります', romaji: 'nerimasu' },
       { kanji: '寝らます', romaji: 'neramasu' },
     ],
+    potential: [
+      { kanji: '寝れる', romaji: 'nereru' },
+      { kanji: '寝える', romaji: 'neeru' },
+      { kanji: '寝らせる', romaji: 'neraseru' },
+    ],
+    passive: [
+      { kanji: '寝れる', romaji: 'nereru' },
+      { kanji: '寝される', romaji: 'nesareru' },
+      { kanji: '寝わす', romaji: 'newasu' },
+    ],
   },
   'v-oshieru': {
     te: [
@@ -356,6 +570,16 @@ export const SPECIFIC_DISTRACTORS: Record<string, Record<ConjugationForm, Option
       { kanji: '教えるます', romaji: 'oshierumasu' },
       { kanji: '教えります', romaji: 'oshierimasu' },
       { kanji: '教えらます', romaji: 'oshieramasu' },
+    ],
+    potential: [
+      { kanji: '教えれる', romaji: 'oshiereru' },
+      { kanji: '教えるれる', romaji: 'oshierureru' },
+      { kanji: '教えらせる', romaji: 'oshieraseru' },
+    ],
+    passive: [
+      { kanji: '教えれる', romaji: 'oshiereru' },
+      { kanji: '教えされる', romaji: 'oshiesareru' },
+      { kanji: '教えわす', romaji: 'oshiewasu' },
     ],
   },
   'v-suru': {
@@ -379,6 +603,16 @@ export const SPECIFIC_DISTRACTORS: Record<string, Record<ConjugationForm, Option
       { kanji: 'すます', romaji: 'sumasu' },
       { kanji: 'せます', romaji: 'semasu' },
     ],
+    potential: [
+      { kanji: 'される', romaji: 'sareru' },
+      { kanji: 'すられる', romaji: 'surareru' },
+      { kanji: 'すれる', romaji: 'sureru' },
+    ],
+    passive: [
+      { kanji: 'できる', romaji: 'dekiru' },
+      { kanji: 'しられる', romaji: 'shirareru' },
+      { kanji: 'すられる', romaji: 'surareru' },
+    ],
   },
   'v-kuru': {
     te: [
@@ -400,6 +634,16 @@ export const SPECIFIC_DISTRACTORS: Record<string, Record<ConjugationForm, Option
       { kanji: 'くます', romaji: 'kumasu' },
       { kanji: 'こます', romaji: 'komasu' },
       { kanji: 'くるます', romaji: 'kurumasu' },
+    ],
+    potential: [
+      { kanji: 'きられる', romaji: 'kirareru' },
+      { kanji: 'くられる', romaji: 'kurareru' },
+      { kanji: 'これる', romaji: 'koreru' },
+    ],
+    passive: [
+      { kanji: 'きられる', romaji: 'kirareru' },
+      { kanji: 'くられる', romaji: 'kurareru' },
+      { kanji: 'こさせる', romaji: 'kosaseru' },
     ],
   },
 };
@@ -458,6 +702,18 @@ export function getDistractorsForVerb(verbId: string, form: ConjugationForm): Op
         { kanji: '〜きます', romaji: '~kimasu' },
         { kanji: '〜みます', romaji: '~mimasu' },
         { kanji: '〜ります', romaji: '~rimasu' },
+      ];
+    case 'potential':
+      return [
+        { kanji: '〜られる', romaji: '~rareru' },
+        { kanji: '〜れる', romaji: '~reru' },
+        { kanji: '〜える', romaji: '~eru' },
+      ];
+    case 'passive':
+      return [
+        { kanji: '〜れる', romaji: '~reru' },
+        { kanji: '〜られる', romaji: '~rareru' },
+        { kanji: '〜される', romaji: '~sareru' },
       ];
   }
 }

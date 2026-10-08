@@ -125,7 +125,7 @@ export interface UserProgressData {
 }
 
 export type VerbGroup = 'godan' | 'ichidan' | 'irregular';
-export type ConjugationForm = 'masu' | 'te' | 'nai' | 'ta';
+export type ConjugationForm = 'masu' | 'te' | 'nai' | 'ta' | 'potential' | 'passive';
 
 export interface VerbFormDetail {
   kanji: string;
@@ -142,12 +142,7 @@ export interface VerbItem {
   group: VerbGroup;
   level: JLPTLevel;
   ruleExplanation?: string; // Penjelasan aturan bunyi spesifik
-  forms: {
-    masu: VerbFormDetail;
-    te: VerbFormDetail;
-    nai: VerbFormDetail;
-    ta: VerbFormDetail;
-  };
+  forms: Record<ConjugationForm, VerbFormDetail>;
 }
 
 export interface ParticleQuestion {
