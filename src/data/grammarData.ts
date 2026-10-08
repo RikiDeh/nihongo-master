@@ -1,6 +1,7 @@
 import { GrammarItem } from '../types';
+import { GRAMMAR_BATCH2 } from './grammarBatch2Data';
 
-export const GRAMMAR_DATA: GrammarItem[] = [
+const GRAMMAR_CORE: GrammarItem[] = [
   // N5
   // =========================================================================
   // JLPT N5 GRAMMAR
@@ -735,3 +736,5 @@ export const GRAMMAR_DATA: GrammarItem[] = [
     ],
   },
 ];
+
+export const GRAMMAR_DATA: GrammarItem[] = [...GRAMMAR_CORE, ...GRAMMAR_BATCH2];
