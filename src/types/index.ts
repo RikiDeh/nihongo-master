@@ -94,7 +94,7 @@ export interface GrammarItem {
   }[];
 }
 
-export type N5QuizCategory = 'kanji' | 'vocab' | 'grammar' | 'mock-exam';
+export type N5QuizCategory = 'kanji' | 'vocab' | 'grammar' | 'mock-exam' | 'weak-points';
 
 export interface MultipleChoiceQuestion {
   id: string;
@@ -105,6 +105,8 @@ export interface MultipleChoiceQuestion {
   options: string[];
   correctIndex: number;
   explanation: string;
+  itemId?: string; // ID item sumber (Kanji/Vocab) untuk pelacakan titik lemah
+  vectorType?: 'phonetic' | 'semantic' | 'symbol' | 'listening';
 }
 
 export interface QuizHistoryEntry {
@@ -122,6 +124,7 @@ export interface UserProgressData {
   bookmarkedVocabIds: string[];
   masteredVocabIds: string[];
   quizHistory: QuizHistoryEntry[];
+  failedItemIds: string[]; // Daftar ID kanji/kata yang pernah salah dijawab
 }
 
 export type VerbGroup = 'godan' | 'ichidan' | 'irregular';

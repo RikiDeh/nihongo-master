@@ -100,19 +100,40 @@ export const N5QuizSession: React.FC<N5QuizSessionProps> = ({
       <div className="bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8 shadow-xl mb-6 relative overflow-hidden">
         {/* Category Accent */}
         <div className="text-center mb-6">
-          <h2 className="text-xl sm:text-2xl font-extrabold text-white leading-relaxed font-jp tracking-wide">
-            {currentQ.question}
-          </h2>
+          {currentQ.vectorType === 'listening' ? (
+            <div className="mb-4">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs font-bold mb-3">
+                <Volume2 className="w-3.5 h-3.5 text-cyan-400" />
+                <span>Soal Menyimak (Choukai)</span>
+              </span>
+              <h2 className="text-xl sm:text-2xl font-extrabold text-white leading-relaxed mb-4">
+                {currentQ.question}
+              </h2>
+              <button
+                onClick={() => speakJapanese(currentQ.audioText!)}
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-gradient-to-r from-cyan-600 to-indigo-600 hover:from-cyan-500 hover:to-indigo-500 text-white font-bold text-sm shadow-lg shadow-cyan-500/20 transition cursor-pointer animate-pop"
+              >
+                <Volume2 className="w-5 h-5 text-white" />
+                <span>Putar Audio Suara</span>
+              </button>
+            </div>
+          ) : (
+            <>
+              <h2 className="text-xl sm:text-2xl font-extrabold text-white leading-relaxed font-jp tracking-wide">
+                {currentQ.question}
+              </h2>
 
-          {currentQ.audioText && (
-            <button
-              onClick={() => speakJapanese(currentQ.audioText!)}
-              className="mt-3 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-emerald-400 text-xs font-semibold transition cursor-pointer"
-              title="Dengarkan pengucapan"
-            >
-              <Volume2 className="w-4 h-4" />
-              <span>Dengarkan Suara</span>
-            </button>
+              {currentQ.audioText && (
+                <button
+                  onClick={() => speakJapanese(currentQ.audioText!)}
+                  className="mt-3 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-emerald-400 text-xs font-semibold transition cursor-pointer"
+                  title="Dengarkan pengucapan"
+                >
+                  <Volume2 className="w-4 h-4" />
+                  <span>Dengarkan Suara</span>
+                </button>
+              )}
+            </>
           )}
         </div>
 

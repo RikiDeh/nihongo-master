@@ -8,6 +8,7 @@ const DEFAULT_PROGRESS: UserProgressData = {
   bookmarkedVocabIds: [],
   masteredVocabIds: [],
   quizHistory: [],
+  failedItemIds: [],
 };
 
 // Dispatch custom event agar komponen React dapat bereaksi secara real-time
@@ -32,6 +33,7 @@ export function getUserProgress(): UserProgressData {
       bookmarkedVocabIds: Array.isArray(parsed.bookmarkedVocabIds) ? parsed.bookmarkedVocabIds : [],
       masteredVocabIds: Array.isArray(parsed.masteredVocabIds) ? parsed.masteredVocabIds : [],
       quizHistory: Array.isArray(parsed.quizHistory) ? parsed.quizHistory : [],
+      failedItemIds: Array.isArray(parsed.failedItemIds) ? parsed.failedItemIds : [],
     };
   } catch (err) {
     console.error('Gagal membaca user progress dari localStorage:', err);
@@ -161,6 +163,7 @@ export function importProgressJSON(jsonString: string): boolean {
       bookmarkedVocabIds: Array.isArray(parsed.bookmarkedVocabIds) ? parsed.bookmarkedVocabIds : [],
       masteredVocabIds: Array.isArray(parsed.masteredVocabIds) ? parsed.masteredVocabIds : [],
       quizHistory: Array.isArray(parsed.quizHistory) ? parsed.quizHistory : [],
+      failedItemIds: Array.isArray(parsed.failedItemIds) ? parsed.failedItemIds : [],
     };
 
     saveUserProgress(validated);
@@ -169,6 +172,42 @@ export function importProgressJSON(jsonString: string): boolean {
     console.error('Format JSON tidak valid saat import progress:', err);
     return false;
   }
+}
+
+// ============================================================================
+// WEAK ITEMS / GHOST ENGINE HELPERS
+// ============================================================================
+
+export function getFailedItemIds(): string[] {
+  return getUserProgress().failedItemIds;
+}
+
+export function recordFailedItem(id: string): void {
+  const data = getUserProgress();
+  if (!data.failedItemIds.includes(id)) {
+    saveUserProgress({
+      ...data,
+      failedItemIds: [...data.failedItemIds, id],
+    });
+  }
+}
+
+export function recordSuccessItem(id: string): void {
+  const data = getUserProgress();
+  if (data.failedItemIds.includes(id)) {
+    saveUserProgress({
+      ...data,
+      failedItemIds: data.failedItemIds.filter(item => item !== id),
+    });
+  }
+}
+
+export function clearFailedItems(): void {
+  const data = getUserProgress();
+  saveUserProgress({
+    ...data,
+    failedItemIds: [],
+  });
 }
 
 // ============================================================================
