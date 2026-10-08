@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo, useDeferredValue } from 'react';
 import { KANJI_DATA } from '../../data/kanjiData';
-import { CORE_RADICALS_N5 } from '../../data/radicalsData';
+import { CORE_RADICALS_JOYO } from '../../data/radicalsData';
 import { JLPTLevel, KanjiItem } from '../../types';
 import { Search, BookOpen, Volume2, Sparkles, Lightbulb, Play, Layers, Star, CheckCircle2 } from 'lucide-react';
 import { speakJapanese } from '../../utils/audio';
@@ -24,9 +24,10 @@ export const KanjiExplorer: React.FC<KanjiExplorerProps> = ({ onGoToQuiz, initia
   const [selectedCategory, setSelectedCategory] = useState<string>('ALL');
   const [onlyBookmarked, setOnlyBookmarked] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
+  const deferredSearchQuery = useDeferredValue(searchQuery);
+  const [visibleCount, setVisibleCount] = useState(60);
   const [activeKanji, setActiveKanji] = useState<KanjiItem | null>(KANJI_DATA[0]);
   const [, setStorageTick] = useState(0);
-
 
   // Subscribe ke perubahan localStorage
   useEffect(() => {
@@ -45,35 +46,67 @@ export const KanjiExplorer: React.FC<KanjiExplorerProps> = ({ onGoToQuiz, initia
   // Quiz modal state
   const [showQuizModal, setShowQuizModal] = useState(false);
 
-  const levels: (JLPTLevel | 'ALL')[] = ['N5', 'ALL', 'N4', 'N3', 'N2', 'N1'];
+  const levels: (JLPTLevel | 'ALL')[] = ['ALL', 'N5', 'N4', 'N3', 'N2', 'N1'];
 
-  const n5Categories = [
-    { id: 'ALL', label: 'Semua Kategori' },
-    { id: 'Angka & Jumlah', label: '🔢 Angka & Jumlah' },
-    { id: 'Waktu & Kalender', label: '📅 Waktu & Kalender' },
-    { id: 'Alam & Arah', label: '🌲 Alam & Arah' },
-    { id: 'Orang & Keluarga', label: '👨‍👩‍👧 Orang & Keluarga' },
-    { id: 'Aktivitas & Sekolah', label: '🏫 Aktivitas & Sekolah' },
-    { id: 'Benda, Sifat & Tempat', label: '🏙️ Benda & Sifat' },
-  ];
+  // Komputasi kategori dinamis berdasarkan level aktif (TIKET 17.3)
+  const availableCategories = useMemo(() => {
+    const list = selectedLevel === 'ALL'
+      ? KANJI_DATA
+      : KANJI_DATA.filter(item => item.level === selectedLevel);
+    const unique = Array.from(
+      new Set(list.map(item => item.category).filter(Boolean))
+    ) as string[];
 
-  const filteredKanji = KANJI_DATA.filter(item => {
-    const matchesLevel = selectedLevel === 'ALL' || item.level === selectedLevel;
-    const matchesCategory = selectedCategory === 'ALL' || item.category === selectedCategory;
-    const matchesBookmark = !onlyBookmarked || isKanjiBookmarked(item.id);
+    return [
+      { id: 'ALL', label: 'Semua Kategori' },
+      ...unique.sort().map(cat => ({ id: cat, label: cat })),
+    ];
+  }, [selectedLevel]);
 
-    const query = searchQuery.trim().toLowerCase();
-    if (!query) return matchesLevel && matchesCategory && matchesBookmark;
-
-    const matchesSearch = 
-      item.kanji.includes(query) ||
-      item.meaningId.toLowerCase().includes(query) ||
-      item.meaning.toLowerCase().includes(query) ||
-      item.onyomi.some(on => on.toLowerCase().includes(query)) ||
-      item.kunyomi.some(kun => kun.toLowerCase().includes(query));
-
-    return matchesLevel && matchesCategory && matchesBookmark && matchesSearch;
+  // Reset pagination jika filter / search berubah (React render-phase state adjustment)
+  const [prevFilter, setPrevFilter] = useState({
+    level: selectedLevel,
+    category: selectedCategory,
+    bookmarked: onlyBookmarked,
+    query: deferredSearchQuery,
   });
+
+  if (
+    prevFilter.level !== selectedLevel ||
+    prevFilter.category !== selectedCategory ||
+    prevFilter.bookmarked !== onlyBookmarked ||
+    prevFilter.query !== deferredSearchQuery
+  ) {
+    setPrevFilter({
+      level: selectedLevel,
+      category: selectedCategory,
+      bookmarked: onlyBookmarked,
+      query: deferredSearchQuery,
+    });
+    setVisibleCount(60);
+  }
+
+  const filteredKanji = useMemo(() => {
+    return KANJI_DATA.filter(item => {
+      const matchesLevel = selectedLevel === 'ALL' || item.level === selectedLevel;
+      const matchesCategory = selectedCategory === 'ALL' || item.category === selectedCategory;
+      const matchesBookmark = !onlyBookmarked || progress.bookmarkedKanjiIds.includes(item.id);
+
+      const query = deferredSearchQuery.trim().toLowerCase();
+      if (!query) return matchesLevel && matchesCategory && matchesBookmark;
+
+      const matchesSearch = 
+        item.kanji.includes(query) ||
+        item.meaningId.toLowerCase().includes(query) ||
+        item.meaning.toLowerCase().includes(query) ||
+        item.onyomi.some(on => on.toLowerCase().includes(query)) ||
+        item.kunyomi.some(kun => kun.toLowerCase().includes(query));
+
+      return matchesLevel && matchesCategory && matchesBookmark && matchesSearch;
+    });
+  }, [selectedLevel, selectedCategory, onlyBookmarked, deferredSearchQuery, progress.bookmarkedKanjiIds]);
+
+  const displayedKanji = filteredKanji.slice(0, visibleCount);
 
   const getLevelBadgeClass = (level: JLPTLevel) => {
     switch (level) {
@@ -91,13 +124,13 @@ export const KanjiExplorer: React.FC<KanjiExplorerProps> = ({ onGoToQuiz, initia
       <div className="text-center mb-8">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-medium mb-3">
           <BookOpen className="w-3.5 h-3.5" />
-          <span>Modul Kanji Resmi JLPT N5 (105 Kanji Lengkap + Radikal & Mnemonic)</span>
+          <span>Kurikulum Lengkap Joyō Kanji (2.167 Kanji Resmi N5 s/d N1)</span>
         </div>
         <h1 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-2">
           Masteri Kanji Bahasa Jepang
         </h1>
         <p className="text-slate-400 text-sm max-w-2xl mx-auto">
-          Kuasai 105 Kanji resmi tingkat N5 melalui sistem dekonstruksi radikal dan cerita asosiasi visual (*mnemonic*) yang mudah diingat.
+          Kuasai 2.167 Kanji resmi Jepang (100% Joyō Kanji) melalui sistem dekonstruksi radikal dan cerita asosiasi visual (mnemonic) yang mudah diingat.
         </p>
       </div>
 
@@ -122,7 +155,7 @@ export const KanjiExplorer: React.FC<KanjiExplorerProps> = ({ onGoToQuiz, initia
                 : 'border-transparent text-slate-400 hover:text-slate-200'
             }`}
           >
-            🧩 Bengkel Radikal ({CORE_RADICALS_N5.length} Balok Lego)
+            🧩 Bengkel Radikal ({CORE_RADICALS_JOYO.length} Balok Lego)
           </button>
         </div>
 
@@ -156,11 +189,11 @@ export const KanjiExplorer: React.FC<KanjiExplorerProps> = ({ onGoToQuiz, initia
               <Sparkles className="w-4 h-4" />
               <span>Mengapa Harus Belajar Radikal Dulu? (Metode WaniKani & Heisig)</span>
             </h3>
-            Kanji bukanlah coretan acak yang harus dihafal membabi buta. Semua kanji tersusun dari kombinasi radikal dasar. Begitu kamu mengenal 22 radikal di bawah ini, menghafal 105 kanji N5 akan terasa seperti menyusun balok LEGO!
+            Kanji bukanlah coretan acak yang harus dihafal membabi buta. Semua kanji tersusun dari kombinasi radikal dasar. Begitu kamu mengenal 60+ Radikal Utama Joyō Kanji (N5 s/d N1) di bawah ini, menghafal 2.167 kanji akan terasa seperti menyusun balok LEGO!
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {CORE_RADICALS_N5.map((rad) => (
+            {CORE_RADICALS_JOYO.map((rad) => (
               <div
                 key={rad.id}
                 className="bg-slate-900/80 border border-slate-800 hover:border-indigo-500/60 rounded-2xl p-4 transition-all"
@@ -183,7 +216,7 @@ export const KanjiExplorer: React.FC<KanjiExplorerProps> = ({ onGoToQuiz, initia
 
                 <div className="pt-2 border-t border-slate-800">
                   <span className="text-[10px] text-slate-500 uppercase tracking-wider block mb-1">
-                    Contoh di Kanji N5:
+                    Contoh di Kanji Aktif:
                   </span>
                   <div className="flex flex-wrap gap-1.5">
                     {rad.examples.map((ex) => (
@@ -218,22 +251,27 @@ export const KanjiExplorer: React.FC<KanjiExplorerProps> = ({ onGoToQuiz, initia
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
               {/* JLPT Level filter */}
               <div className="flex items-center gap-1.5 overflow-x-auto w-full sm:w-auto pb-1 sm:pb-0">
-                {levels.map(lvl => (
-                  <button
-                    key={lvl}
-                    onClick={() => {
-                      setSelectedLevel(lvl);
-                      setSelectedCategory('ALL');
-                    }}
-                    className={`px-3 py-1.5 rounded-xl text-xs font-bold transition cursor-pointer shrink-0 ${
-                      selectedLevel === lvl
-                        ? 'bg-rose-500 text-white shadow-md shadow-rose-500/25'
-                        : 'bg-slate-800 text-slate-400 hover:text-white hover:bg-slate-700'
-                    }`}
-                  >
-                    {lvl === 'ALL' ? 'Semua Level' : lvl === 'N5' ? 'JLPT N5 (105 Kanji)' : lvl}
-                  </button>
-                ))}
+                {levels.map(lvl => {
+                  const count = lvl === 'ALL'
+                    ? KANJI_DATA.length
+                    : KANJI_DATA.filter(k => k.level === lvl).length;
+                  return (
+                    <button
+                      key={lvl}
+                      onClick={() => {
+                        setSelectedLevel(lvl);
+                        setSelectedCategory('ALL');
+                      }}
+                      className={`px-3 py-1.5 rounded-xl text-xs font-bold transition cursor-pointer shrink-0 ${
+                        selectedLevel === lvl
+                          ? 'bg-rose-500 text-white shadow-md shadow-rose-500/25'
+                          : 'bg-slate-800 text-slate-400 hover:text-white hover:bg-slate-700'
+                      }`}
+                    >
+                      {lvl === 'ALL' ? `Semua Level (${count})` : `JLPT ${lvl} (${count})`}
+                    </button>
+                  );
+                })}
               </div>
 
               {/* Search and Bookmark Filter */}
@@ -264,14 +302,14 @@ export const KanjiExplorer: React.FC<KanjiExplorerProps> = ({ onGoToQuiz, initia
               </div>
             </div>
 
-            {/* Category Sub-Filters for N5 */}
-            {selectedLevel === 'N5' && (
+            {/* Dynamic Category Sub-Filters (TIKET 17.3) */}
+            {availableCategories.length > 1 && (
               <div className="flex items-center gap-1.5 overflow-x-auto pt-2 border-t border-slate-800/80">
                 <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider shrink-0 mr-1 flex items-center gap-1">
                   <Layers className="w-3.5 h-3.5 text-rose-400" />
                   Tema:
                 </span>
-                {n5Categories.map(cat => (
+                {availableCategories.map(cat => (
                   <button
                     key={cat.id}
                     onClick={() => setSelectedCategory(cat.id)}
@@ -292,8 +330,16 @@ export const KanjiExplorer: React.FC<KanjiExplorerProps> = ({ onGoToQuiz, initia
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
             {/* Kanji Cards List (Left / 7 cols) */}
             <div className="lg:col-span-7">
+              {/* Counter Display (TIKET 17.2) */}
+              <div className="flex items-center justify-between text-xs text-slate-400 mb-3 px-1">
+                <span>
+                  Menampilkan <strong className="text-slate-200">{displayedKanji.length}</strong> dari <strong className="text-slate-200">{filteredKanji.length}</strong> kanji
+                </span>
+                {onlyBookmarked && <span className="text-amber-400 font-semibold">• Mode Favorit</span>}
+              </div>
+
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                {filteredKanji.map(item => {
+                {displayedKanji.map(item => {
                   const isActive = activeKanji?.id === item.id;
                   const isBookmarked = isKanjiBookmarked(item.id);
                   const isMastered = isKanjiMastered(item.id);
@@ -348,6 +394,24 @@ export const KanjiExplorer: React.FC<KanjiExplorerProps> = ({ onGoToQuiz, initia
                   );
                 })}
               </div>
+
+              {/* Load More Button (Anti-Lag Progressive Rendering) */}
+              {visibleCount < filteredKanji.length && (
+                <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
+                  <button
+                    onClick={() => setVisibleCount(prev => prev + 60)}
+                    className="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-xs font-bold transition cursor-pointer border border-slate-700 shadow-md flex items-center justify-center gap-1.5"
+                  >
+                    <span>Tampilkan Lebih Banyak (Muat 60 Lagi)</span>
+                  </button>
+                  <button
+                    onClick={() => setVisibleCount(filteredKanji.length)}
+                    className="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white text-xs font-medium transition cursor-pointer border border-slate-800 flex items-center justify-center"
+                  >
+                    <span>Muat Semua ({filteredKanji.length})</span>
+                  </button>
+                </div>
+              )}
 
               {filteredKanji.length === 0 && (
                 <div className="bg-slate-900/40 border border-slate-800 rounded-2xl p-8 text-center text-slate-400 text-sm">

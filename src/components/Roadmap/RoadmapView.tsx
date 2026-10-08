@@ -191,15 +191,52 @@ export const RoadmapView: React.FC<RoadmapViewProps> = ({ onNavigate }) => {
                 ))}
               </div>
 
-              {/* Action Button */}
-              <div className="pt-2 border-t border-slate-800 flex justify-end">
-                <button
-                  onClick={() => onNavigate(step.moduleAction, step.targetLevel)}
-                  className="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-xs font-semibold flex items-center gap-1.5 transition cursor-pointer"
-                >
-                  <span>{step.actionLabel}</span>
-                  <ArrowUpRight className="w-3.5 h-3.5 text-rose-400" />
-                </button>
+              {/* Multi-Action Navigator (TIKET 17.4) */}
+              <div className="pt-3 border-t border-slate-800 flex flex-wrap items-center justify-end gap-2">
+                {step.targetLevel ? (
+                  <>
+                    <button
+                      onClick={() => onNavigate('kanji', step.targetLevel)}
+                      className="px-3 py-1.5 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-white text-xs font-semibold flex items-center gap-1 transition cursor-pointer border border-slate-700/60 shadow-sm"
+                      title={`Buka Bank Kanji ${step.targetLevel}`}
+                    >
+                      <span>🈁 Kanji</span>
+                      <ArrowUpRight className="w-3 h-3 text-rose-400" />
+                    </button>
+                    <button
+                      onClick={() => onNavigate('vocab', step.targetLevel)}
+                      className="px-3 py-1.5 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-white text-xs font-semibold flex items-center gap-1 transition cursor-pointer border border-slate-700/60 shadow-sm"
+                      title={`Buka Bank Kosakata ${step.targetLevel}`}
+                    >
+                      <span>📚 Kosakata</span>
+                      <ArrowUpRight className="w-3 h-3 text-sky-400" />
+                    </button>
+                    <button
+                      onClick={() => onNavigate('grammar', step.targetLevel)}
+                      className="px-3 py-1.5 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-white text-xs font-semibold flex items-center gap-1 transition cursor-pointer border border-slate-700/60 shadow-sm"
+                      title={`Buka Tata Bahasa ${step.targetLevel}`}
+                    >
+                      <span>📖 Tata Bahasa</span>
+                      <ArrowUpRight className="w-3 h-3 text-indigo-400" />
+                    </button>
+                    <button
+                      onClick={() => onNavigate('quiz', step.targetLevel)}
+                      className="px-3 py-1.5 rounded-xl bg-rose-500/20 hover:bg-rose-500/30 text-rose-200 border border-rose-500/40 text-xs font-bold flex items-center gap-1 transition cursor-pointer shadow-sm"
+                      title={`Buka Kuis & Ujian ${step.targetLevel}`}
+                    >
+                      <span>🏆 Kuis</span>
+                      <ArrowUpRight className="w-3 h-3 text-rose-400" />
+                    </button>
+                  </>
+                ) : (
+                  <button
+                    onClick={() => onNavigate(step.moduleAction, step.targetLevel)}
+                    className="px-4 py-2 rounded-xl bg-rose-500 hover:bg-rose-600 text-white text-xs font-semibold flex items-center gap-1.5 transition cursor-pointer shadow-md shadow-rose-500/20"
+                  >
+                    <span>{step.actionLabel}</span>
+                    <ArrowUpRight className="w-3.5 h-3.5 text-white" />
+                  </button>
+                )}
               </div>
             </div>
           </div>
