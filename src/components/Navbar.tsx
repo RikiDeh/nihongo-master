@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Sparkles, BookOpen, Layers, Award, Compass, Trophy, Swords, Settings } from 'lucide-react';
 import { SettingsModal } from './Settings/SettingsModal';
 import { useShowRomaji } from '../hooks/useShowRomaji';
+import { KANJI_DATA } from '../data/kanjiData';
+import { VOCAB_DATA } from '../data/vocabData';
 
 export type ActiveModule = 'kana' | 'kanji' | 'vocab' | 'grammar' | 'dojo' | 'quiz' | 'roadmap';
 
@@ -124,8 +126,21 @@ export const Navbar: React.FC<NavbarProps> = ({ activeModule, onSelectModule }) 
             </button>
           </nav>
 
-          {/* Right Action Icons (Romaji Toggle, Dojo Shortcut & Settings) */}
+          {/* Right Action Icons (Live Mastery Counter, Romaji Toggle, Dojo Shortcut & Settings) */}
           <div className="flex items-center gap-2">
+            {/* Live Mastery Counter Badge */}
+            <div 
+              className="hidden lg:flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl bg-slate-900/90 border border-slate-800/80 text-xs text-slate-300 font-medium select-none shadow-sm"
+              title={`Total Basis Data: ${KANJI_DATA.length} Kanji + ${VOCAB_DATA.length} Kosakata aktif`}
+            >
+              <span className="text-sm leading-none">📚</span>
+              <span className="font-bold text-rose-300 tracking-tight">
+                {(KANJI_DATA.length + VOCAB_DATA.length).toLocaleString('id-ID')}+
+              </span>
+              <span className="text-slate-400 text-[11px] font-medium hidden 2xl:inline">Kata & Kanji Tersedia</span>
+              <span className="text-slate-400 text-[11px] font-medium inline 2xl:hidden">Materi</span>
+            </div>
+
             {/* Global Romaji Toggle Switch */}
             <button
               type="button"
