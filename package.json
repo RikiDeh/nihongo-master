@@ -9,6 +9,8 @@
     "lint": "oxlint",
     "test": "bun test",
     "validate": "bun run scripts/validateData.ts",
+    "generate:kanji": "bun run scripts/generateBulkKanji.ts",
+    "generate:vocab": "bun run scripts/generateBulkVocab.ts",
     "preview": "vite preview"
   },
   "dependencies": {
