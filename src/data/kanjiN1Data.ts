@@ -1,5 +1,6 @@
 import { KanjiItem } from '../types';
 import { KANJI_N1_BATCH2 } from './kanjiN1Batch2Data';
+import { KANJI_N1_BATCH3 } from './kanjiN1Batch3Data';
 
 const KANJI_N1_CORE: KanjiItem[] = [
   // =========================================================================
@@ -285,4 +286,4 @@ const KANJI_N1_CORE: KanjiItem[] = [
   },
 ];
 
-export const KANJI_N1_LIST: KanjiItem[] = [...KANJI_N1_CORE, ...KANJI_N1_BATCH2];
+export const KANJI_N1_LIST: KanjiItem[] = [...KANJI_N1_CORE, ...KANJI_N1_BATCH2, ...KANJI_N1_BATCH3];

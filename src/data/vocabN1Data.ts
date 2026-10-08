@@ -1,5 +1,6 @@
 import { VocabItem } from '../types';
 import { VOCAB_N1_BATCH2 } from './vocabN1Batch2Data';
+import { VOCAB_N1_BATCH3 } from './vocabN1Batch3Data';
 
 const VOCAB_N1_CORE: VocabItem[] = [
   // =========================================================================
@@ -235,4 +236,4 @@ const VOCAB_N1_CORE: VocabItem[] = [
   },
 ];
 
-export const VOCAB_N1_LIST: VocabItem[] = [...VOCAB_N1_CORE, ...VOCAB_N1_BATCH2];
+export const VOCAB_N1_LIST: VocabItem[] = [...VOCAB_N1_CORE, ...VOCAB_N1_BATCH2, ...VOCAB_N1_BATCH3];
