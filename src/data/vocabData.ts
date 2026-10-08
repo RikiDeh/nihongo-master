@@ -1,60 +1,13 @@
 import { VocabItem } from '../types';
 import { VOCAB_N5_LIST } from './vocabN5Data';
+import { VOCAB_N4_LIST } from './vocabN4Data';
 
 export const VOCAB_DATA: VocabItem[] = [
   // Complete JLPT N5 Vocabulary
   ...VOCAB_N5_LIST,
 
-
-  // N4 Vocabulary
-  {
-    id: 'v-n4-1',
-    kanji: '案内する',
-    kana: 'あんないする',
-    romaji: 'annai suru',
-    meaningEn: 'To guide / show around',
-    meaningId: 'Memandu / Menunjukkan jalan',
-    level: 'N4',
-    category: 'Kata Kerja (Verbs)',
-    partOfSpeech: 'Suru Verb',
-    exampleSentence: {
-      jp: '町を案内します。',
-      furigana: 'まちをあんないします。',
-      id: 'Saya akan memandu berkeliling kota.',
-    },
-  },
-  {
-    id: 'v-n4-2',
-    kanji: '複雑',
-    kana: 'ふくざつ',
-    romaji: 'fukuzatsu',
-    meaningEn: 'Complex / Complicated',
-    meaningId: 'Rumit / Kompleks',
-    level: 'N4',
-    category: 'Kata Sifat (Adjectives)',
-    partOfSpeech: 'Na-Adjective',
-    exampleSentence: {
-      jp: 'この問題は少し複雑です。',
-      furigana: 'このもんだいはすこしふくざつです。',
-      id: 'Masalah ini agak rumit.',
-    },
-  },
-  {
-    id: 'v-n4-3',
-    kanji: '約束',
-    kana: 'やくそく',
-    romaji: 'yakusoku',
-    meaningEn: 'Promise / Appointment',
-    meaningId: 'Janji / Perjanjian',
-    level: 'N4',
-    category: 'Kata Benda (Nouns)',
-    partOfSpeech: 'Noun',
-    exampleSentence: {
-      jp: '友達と約束があります。',
-      furigana: 'ともだちとやくそくがあります。',
-      id: 'Saya ada janji dengan teman.',
-    },
-  },
+  // Complete JLPT N4 Vocabulary
+  ...VOCAB_N4_LIST,
 
   // N3 Vocabulary
   {

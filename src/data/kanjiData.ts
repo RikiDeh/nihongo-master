@@ -1,74 +1,13 @@
 import { KanjiItem } from '../types';
 import { KANJI_N5_LIST } from './kanjiN5Data';
+import { KANJI_N4_LIST } from './kanjiN4Data';
 
 export const KANJI_DATA: KanjiItem[] = [
   // JLPT N5 Complete (105 Kanji Resmi)
   ...KANJI_N5_LIST,
 
-
-  // JLPT N4
-  {
-    id: 'kanji-n4-1',
-    kanji: '会',
-    level: 'N4',
-    meaning: 'Meet, Association',
-    meaningId: 'Bertemu, Pertemuan',
-    onyomi: ['カイ', 'エ'],
-    kunyomi: ['あ・う'],
-    strokes: 6,
-    radicals: ['人', '云'],
-    examples: [
-      { word: '会う', reading: 'あう', meaning: 'Bertemu' },
-      { word: '会社', reading: 'かいしゃ', meaning: 'Perusahaan' },
-      { word: '会話', reading: 'かいわ', meaning: 'Percakapan' },
-    ],
-  },
-  {
-    id: 'kanji-n4-2',
-    kanji: '思',
-    level: 'N4',
-    meaning: 'Think',
-    meaningId: 'Berpikir, Mengira',
-    onyomi: ['シ'],
-    kunyomi: ['おも・う'],
-    strokes: 9,
-    radicals: ['田', '心'],
-    examples: [
-      { word: '思う', reading: 'おもう', meaning: 'Berpikir' },
-      { word: '思い出', reading: 'おもいで', meaning: 'Kenangan' },
-    ],
-  },
-  {
-    id: 'kanji-n4-3',
-    kanji: '自',
-    level: 'N4',
-    meaning: 'Self',
-    meaningId: 'Diri sendiri',
-    onyomi: ['ジ', 'シ'],
-    kunyomi: ['みずか・ら'],
-    strokes: 6,
-    radicals: ['自'],
-    examples: [
-      { word: '自分', reading: 'じぶん', meaning: 'Diri sendiri' },
-      { word: '自転車', reading: 'じてんしゃ', meaning: 'Sepeda' },
-      { word: '自動車', reading: 'じどうしゃ', meaning: 'Mobil' },
-    ],
-  },
-  {
-    id: 'kanji-n4-4',
-    kanji: '旅',
-    level: 'N4',
-    meaning: 'Trip, Travel',
-    meaningId: 'Perjalanan, Wisata',
-    onyomi: ['リョ'],
-    kunyomi: ['たび'],
-    strokes: 10,
-    radicals: ['方'],
-    examples: [
-      { word: '旅行', reading: 'りょこう', meaning: 'Liburan / Wisata' },
-      { word: '旅', reading: 'たび', meaning: 'Perjalanan' },
-    ],
-  },
+  // JLPT N4 Complete
+  ...KANJI_N4_LIST,
 
   // JLPT N3
   {
