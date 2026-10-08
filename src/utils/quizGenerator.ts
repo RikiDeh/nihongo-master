@@ -68,6 +68,161 @@ function buildOptions(
   };
 }
 
+/**
+ * Peta pertukaran bunyi dakuten / handakuten untuk simulasi jebakan fonetik JLPT
+ */
+const DAKUTEN_TOGGLE: Record<string, string> = {
+  'か':'が','き':'ぎ','く':'ぐ','け':'げ','こ':'ご',
+  'が':'か','ぎ':'き','ぐ':'く','げ':'け','ご':'こ',
+  'さ':'ざ','し':'じ','す':'ず','せ':'ぜ','そ':'ぞ',
+  'ざ':'さ','じ':'し','ず':'す','ぜ':'せ','ぞ':'そ',
+  'た':'だ','ち':'ぢ','つ':'づ','て':'で','と':'ど',
+  'だ':'た','ぢ':'ち','づ':'つ','で':'て','ど':'と',
+  'は':'ば','ひ':'び','ふ':'ぶ','へ':'べ','ほ':'ぼ',
+  'ば':'ぱ','び':'ぴ','ぶ':'ぷ','べ':'ぺ','ぼ':'ぽ',
+  'ぱ':'は','ぴ':'ひ','ぷ':'ふ','ぺ':'へ','ぽ':'ほ',
+};
+
+/**
+ * Generator Jebakan Fonetik Cerdas (Smart Phonetic Trap):
+ * Menghasilkan variasi bunyi mirip (dakuten/handakuten, chouon/vokal panjang, sokuon/っ)
+ * sebagaimana pola soal resmi JLPT.
+ */
+export function generatePhoneticTraps(kana: string): string[] {
+  const traps = new Set<string>();
+  const clean = kana.trim();
+  if (clean.length === 0) return [];
+
+  // Trap 1: Dakuten / Handakuten toggle
+  for (let i = 0; i < Math.min(3, clean.length); i++) {
+    const char = clean[i];
+    if (DAKUTEN_TOGGLE[char]) {
+      const swapped = clean.slice(0, i) + DAKUTEN_TOGGLE[char] + clean.slice(i + 1);
+      if (swapped !== clean) traps.add(swapped);
+    }
+  }
+
+  // Trap 2: Chouon (vowel lengthening)
+  if (clean.includes('う') && clean.length > 2) {
+    traps.add(clean.replace(/う/g, ''));
+  } else if (clean.length >= 2) {
+    traps.add(clean.slice(0, -1) + 'う' + clean.slice(-1));
+  }
+  if (clean.includes('い') && clean.length > 2) {
+    traps.add(clean.replace(/い/g, ''));
+  }
+
+  // Trap 3: Sokuon (っ)
+  if (clean.includes('っ')) {
+    traps.add(clean.replace(/っ/g, ''));
+    traps.add(clean.replace(/っ/g, 'つ'));
+  } else if (clean.length >= 3) {
+    traps.add(clean.slice(0, 1) + 'っ' + clean.slice(1));
+  }
+
+  // Trap 4: Vowel flip di suku kata terakhir
+  const lastChar = clean[clean.length - 1];
+  const vowelSwaps: Record<string, string> = {
+    'る': 'り', 'り': 'る', 'す': 'し', 'し': 'す',
+    'う': 'お', 'お': 'う', 'い': 'え', 'え': 'い',
+    'く': 'き', 'き': 'く', 'む': 'み', 'み': 'む'
+  };
+  if (vowelSwaps[lastChar]) {
+    traps.add(clean.slice(0, -1) + vowelSwaps[lastChar]);
+  }
+
+  traps.delete(clean);
+  return Array.from(traps);
+}
+
+const EN_TO_ID_DICTIONARY: [RegExp, string][] = [
+  [/melakukan propose/gi, 'Mengusulkan'],
+  [/melakukan suggest/gi, 'Menyarankan'],
+  [/melakukan discuss/gi, 'Mendiskusikan'],
+  [/melakukan explain/gi, 'Menjelaskan'],
+  [/melakukan investigate/gi, 'Menyelidiki'],
+  [/melakukan decide/gi, 'Memutuskan'],
+  [/melakukan plan/gi, 'Merencanakan'],
+  [/\bscholarship\b/gi, 'Beasiswa'],
+  [/\bscholar\b/gi, 'Cendekiawan / Ilmuwan'],
+  [/\bstrife\b/gi, 'Pertikaian'],
+  [/\bdispute\b/gi, 'Perselisihan'],
+  [/\briot\b/gi, 'Kerusuhan'],
+  [/\brebellion\b/gi, 'Pemberontakan'],
+  [/\bdifficulty\b/gi, 'Kesulitan'],
+  [/\bhardships?\b/gi, 'Kesusahan'],
+  [/\bdefects?\b/gi, 'Cacat / Kekurangan'],
+  [/\bsubjects?\b/gi, 'Mata pelajaran'],
+  [/\bcurriculum\b/gi, 'Kurikulum'],
+  [/\bcourses?\b/gi, 'Kursus / Mata kuliah'],
+  [/\blearning\b/gi, 'Pembelajaran'],
+  [/\bscience\b/gi, 'Ilmu pengetahuan'],
+  [/\bknowledge\b/gi, 'Pengetahuan'],
+  [/\btroubles?\b/gi, 'Masalah / Gangguan'],
+  [/\bproposals?\b/gi, 'Usulan'],
+  [/\bsuggestions?\b/gi, 'Saran'],
+  [/\bagreements?\b/gi, 'Kesepakatan'],
+  [/\bcontracts?\b/gi, 'Kontrak / Perjanjian'],
+  [/\brules?\b/gi, 'Aturan'],
+  [/\blaws?\b/gi, 'Hukum'],
+  [/melakukan\s+be\s+([a-zA-Z]+)/gi, 'Menjadi $1'],
+  [/melakukan\s+dress\s+up/gi, 'Berdandan rapi'],
+  [/\bcontrary\b/gi, 'Sebaliknya / Bertolak belakang'],
+  [/\bappearance\b/gi, 'Penampilan / Pemuatan'],
+  [/\bbarely\b/gi, 'Nyaris / Pas-pasan'],
+  [/\bsquare\b/gi, 'Persegi'],
+  [/\buprising\b/gi, 'Pemberontakan'],
+  [/\brevolt\b/gi, 'Pemberontakan'],
+  [/\binspection\b/gi, 'Inspeksi / Pemeriksaan'],
+  [/\bbrowse\b/gi, 'Meramban'],
+  [/\bnormal\b/gi, 'Normal'],
+  [/\busual\b/gi, 'Biasa'],
+  [/\btransitive\s+verb\b/gi, 'Kata kerja transitif'],
+  [/\bintransitive\s+verb\b/gi, 'Kata kerja intransitif'],
+  [/\beuphemistic\b/gi, 'Penghalusan kata / Eufemisme'],
+  [/\bindirect\b/gi, 'Tidak langsung'],
+  [/\binsinuating\b/gi, 'Menyindir'],
+  [/\bticklish\b/gi, 'Geli'],
+];
+
+/**
+ * Sanitasi arti Bahasa Indonesia agar bersih dari translasi mentah bahasa Inggris
+ */
+export function sanitizeIndonesianMeaning(text: string): string {
+  if (!text) return '';
+  let clean = text.trim();
+
+  // Bersihkan kamus kata serapan / kamus dwibahasa mentah
+  for (const [pattern, repl] of EN_TO_ID_DICTIONARY) {
+    clean = clean.replace(pattern, repl);
+  }
+
+  // Bersihkan partikel to, pronouns, dan kurung berisi teks inggris murni
+  clean = clean
+    .replace(/\bto\s+/gi, '')
+    .replace(/\b(something|someone|somebody|etc\.?)\b/gi, '')
+    .replace(/\([a-zA-Z\s,/-]+\)/g, '')
+    .replace(/\s{2,}/g, ' ')
+    .trim();
+
+  if (clean.length > 0) {
+    clean = clean.charAt(0).toUpperCase() + clean.slice(1);
+  }
+
+  return clean || text;
+}
+
+/**
+ * Mengambil arti ringkas untuk opsi kuis Choukai (listening)
+ */
+export function getConciseMeaning(text: string, maxWords: number = 3): string {
+  const sanitized = sanitizeIndonesianMeaning(text);
+  const firstPart = sanitized.split(/[,;/]/)[0].trim();
+  const words = firstPart.split(/\s+/);
+  if (words.length <= maxWords) return firstPart;
+  return words.slice(0, maxWords).join(' ');
+}
+
 // ============================================================================
 // 1. MULTI-VECTOR QUESTION BUILDERS (KANJI)
 // ============================================================================
@@ -83,10 +238,12 @@ export function createKanjiPhoneticQuestion(
   if (k.examples && k.examples.length > 0) {
     const chosenEx = k.examples[Math.floor(Math.random() * k.examples.length)];
     const correctAnswer = chosenEx.reading;
+    const phoneticTraps = generatePhoneticTraps(correctAnswer);
 
-    const candidateDistractors = sameLevelKanji.flatMap(item => 
+    const sameLevelReadings = sameLevelKanji.flatMap(item => 
       item.examples ? item.examples.map(e => e.reading) : [...item.kunyomi, ...item.onyomi]
     );
+    const candidateDistractors = [...phoneticTraps, ...sameLevelReadings];
     const fallbackDistractors = globalKanji.flatMap(item => 
       item.examples ? item.examples.map(e => e.reading) : [...item.kunyomi, ...item.onyomi]
     );
@@ -103,17 +260,19 @@ export function createKanjiPhoneticQuestion(
       audioText: chosenEx.word,
       options,
       correctIndex,
-      explanation: `Kata 【${chosenEx.word}】 dibaca "${chosenEx.reading}" yang berarti "${chosenEx.meaning}". Kanji 【${k.kanji}】 bermakna "${k.meaningId}".`,
+      explanation: `Kata 【${chosenEx.word}】 dibaca "${chosenEx.reading}" yang berarti "${sanitizeIndonesianMeaning(chosenEx.meaning)}". Kanji 【${k.kanji}】 bermakna "${sanitizeIndonesianMeaning(k.meaningId)}".`,
     };
   }
 
   // Fallback: Isolated kanji reading
   const cleanKun = k.kunyomi[0]?.replace('・', '') || '';
   const correctAnswer = cleanKun || k.onyomi[0] || '—';
+  const phoneticTraps = generatePhoneticTraps(correctAnswer);
 
-  const candidateDistractors = sameLevelKanji.map(item => 
-    item.kunyomi[0]?.replace('・', '') || item.onyomi[0] || ''
-  );
+  const candidateDistractors = [
+    ...phoneticTraps,
+    ...sameLevelKanji.map(item => item.kunyomi[0]?.replace('・', '') || item.onyomi[0] || '')
+  ];
   const fallbackDistractors = globalKanji.map(item => 
     item.kunyomi[0]?.replace('・', '') || item.onyomi[0] || ''
   );
@@ -126,7 +285,7 @@ export function createKanjiPhoneticQuestion(
     level,
     itemId: k.id,
     vectorType: 'phonetic',
-    question: `Bagaimana cara baca (furigana) dari kanji 【${k.kanji}】 (${k.meaningId})?`,
+    question: `Bagaimana cara baca (furigana) dari kanji 【${k.kanji}】 (${sanitizeIndonesianMeaning(k.meaningId)})?`,
     audioText: k.kanji,
     options,
     correctIndex,
@@ -141,9 +300,9 @@ export function createKanjiSemanticQuestion(
   const sameLevelKanji = KANJI_DATA.filter(item => item.level === level && item.id !== k.id);
   const globalKanji = KANJI_DATA.filter(item => item.id !== k.id);
 
-  const correctAnswer = k.meaningId;
-  const candidateDistractors = sameLevelKanji.map(item => item.meaningId);
-  const fallbackDistractors = globalKanji.map(item => item.meaningId);
+  const correctAnswer = sanitizeIndonesianMeaning(k.meaningId);
+  const candidateDistractors = sameLevelKanji.map(item => sanitizeIndonesianMeaning(item.meaningId));
+  const fallbackDistractors = globalKanji.map(item => sanitizeIndonesianMeaning(item.meaningId));
 
   const { options, correctIndex } = buildOptions(correctAnswer, candidateDistractors, fallbackDistractors);
 
@@ -157,7 +316,7 @@ export function createKanjiSemanticQuestion(
     audioText: k.kanji,
     options,
     correctIndex,
-    explanation: `Kanji 【${k.kanji}】 berarti "${k.meaningId}". Bacaan: ${[...k.onyomi, ...k.kunyomi].join(', ') || '-'}.`,
+    explanation: `Kanji 【${k.kanji}】 berarti "${correctAnswer}". Bacaan: ${[...k.onyomi, ...k.kunyomi].join(', ') || '-'}.`,
   };
 }
 
@@ -168,6 +327,7 @@ export function createKanjiSymbolQuestion(
   const sameLevelKanji = KANJI_DATA.filter(item => item.level === level && item.id !== k.id);
   const globalKanji = KANJI_DATA.filter(item => item.id !== k.id);
 
+  const cleanMeaning = sanitizeIndonesianMeaning(k.meaningId);
   const correctAnswer = k.kanji;
   const candidateDistractors = sameLevelKanji.map(item => item.kanji);
   const fallbackDistractors = globalKanji.map(item => item.kanji);
@@ -180,11 +340,11 @@ export function createKanjiSymbolQuestion(
     level,
     itemId: k.id,
     vectorType: 'symbol',
-    question: `Manakah karakter Kanji yang tepat untuk kata/makna "${k.meaningId}"?`,
+    question: `Manakah karakter Kanji yang tepat untuk kata/makna "${cleanMeaning}"?`,
     audioText: k.kanji,
     options,
     correctIndex,
-    explanation: `Kanji untuk "${k.meaningId}" adalah 【${k.kanji}】. Onyomi: ${k.onyomi.join(', ') || '-'} • Kunyomi: ${k.kunyomi.join(', ') || '-'}.`,
+    explanation: `Kanji untuk "${cleanMeaning}" adalah 【${k.kanji}】. Onyomi: ${k.onyomi.join(', ') || '-'} • Kunyomi: ${k.kunyomi.join(', ') || '-'}.`,
   };
 }
 
@@ -197,15 +357,18 @@ export function createKanjiListeningQuestion(
 
   const primaryWord = k.examples && k.examples.length > 0 ? k.examples[0].word : k.kanji;
   const primaryReading = k.examples && k.examples.length > 0 ? k.examples[0].reading : (k.kunyomi[0] || k.onyomi[0] || '');
-  const correctAnswer = `${primaryWord} (${k.meaningId})`;
+  const cleanMeaning = getConciseMeaning(k.meaningId);
+
+  // Opsi listening bersih dan ringkas (murni tes pendengaran)
+  const correctAnswer = `${primaryReading} — ${cleanMeaning}`;
 
   const candidateDistractors = sameLevelKanji.map(item => {
-    const w = item.examples && item.examples.length > 0 ? item.examples[0].word : item.kanji;
-    return `${w} (${item.meaningId})`;
+    const reading = item.examples && item.examples.length > 0 ? item.examples[0].reading : (item.kunyomi[0] || item.onyomi[0] || '');
+    return `${reading} — ${getConciseMeaning(item.meaningId)}`;
   });
   const fallbackDistractors = globalKanji.map(item => {
-    const w = item.examples && item.examples.length > 0 ? item.examples[0].word : item.kanji;
-    return `${w} (${item.meaningId})`;
+    const reading = item.examples && item.examples.length > 0 ? item.examples[0].reading : (item.kunyomi[0] || item.onyomi[0] || '');
+    return `${reading} — ${getConciseMeaning(item.meaningId)}`;
   });
 
   const { options, correctIndex } = buildOptions(correctAnswer, candidateDistractors, fallbackDistractors);
@@ -216,11 +379,11 @@ export function createKanjiListeningQuestion(
     level,
     itemId: k.id,
     vectorType: 'listening',
-    question: '🎧 Dengarkan audionya! Kanji/kosakata apa yang diucapkan?',
+    question: '🎧 Dengarkan audionya! Kosakata apa yang diucapkan?',
     audioText: primaryWord,
     options,
     correctIndex,
-    explanation: `🔊 Suara yang diperdengarkan adalah 【${primaryWord}】 (${primaryReading}) dengan makna "${k.meaningId}".`,
+    explanation: `🔊 Suara yang diperdengarkan adalah 【${primaryWord}】 (${primaryReading}) dengan makna "${cleanMeaning}".`,
   };
 }
 
@@ -237,7 +400,9 @@ export function createVocabPhoneticQuestion(
 
   if (v.kanji && v.kanji !== v.kana) {
     const correctAnswer = v.kana;
-    const candidateDistractors = sameLevelVocab.map(item => item.kana);
+    const phoneticTraps = generatePhoneticTraps(correctAnswer);
+
+    const candidateDistractors = [...phoneticTraps, ...sameLevelVocab.map(item => item.kana)];
     const fallbackDistractors = globalVocab.map(item => item.kana);
 
     const { options, correctIndex } = buildOptions(correctAnswer, candidateDistractors, fallbackDistractors);
@@ -252,7 +417,7 @@ export function createVocabPhoneticQuestion(
       audioText: v.kanji,
       options,
       correctIndex,
-      explanation: `Kosakata 【${v.kanji}】 dibaca "${v.kana}" (${v.romaji}) yang berarti "${v.meaningId}".`,
+      explanation: `Kosakata 【${v.kanji}】 dibaca "${v.kana}" (${v.romaji}) yang berarti "${sanitizeIndonesianMeaning(v.meaningId)}".`,
     };
   }
 
@@ -273,7 +438,7 @@ export function createVocabPhoneticQuestion(
     audioText: v.kana,
     options,
     correctIndex,
-    explanation: `Kata 【${v.kana}】 dilafalkan "${v.romaji}" dan berarti "${v.meaningId}".`,
+    explanation: `Kata 【${v.kana}】 dilafalkan "${v.romaji}" dan berarti "${sanitizeIndonesianMeaning(v.meaningId)}".`,
   };
 }
 
@@ -284,9 +449,9 @@ export function createVocabSemanticQuestion(
   const sameLevelVocab = VOCAB_DATA.filter(item => item.level === level && item.id !== v.id);
   const globalVocab = VOCAB_DATA.filter(item => item.id !== v.id);
 
-  const correctAnswer = v.meaningId;
-  const candidateDistractors = sameLevelVocab.map(item => item.meaningId);
-  const fallbackDistractors = globalVocab.map(item => item.meaningId);
+  const correctAnswer = sanitizeIndonesianMeaning(v.meaningId);
+  const candidateDistractors = sameLevelVocab.map(item => sanitizeIndonesianMeaning(item.meaningId));
+  const fallbackDistractors = globalVocab.map(item => sanitizeIndonesianMeaning(item.meaningId));
 
   const { options, correctIndex } = buildOptions(correctAnswer, candidateDistractors, fallbackDistractors);
   const displayWord = v.kanji ? `${v.kanji} (${v.kana})` : v.kana;
@@ -301,7 +466,7 @@ export function createVocabSemanticQuestion(
     audioText: v.kanji || v.kana,
     options,
     correctIndex,
-    explanation: `Kosakata 【${displayWord}】 (${v.romaji}) berarti "${v.meaningId}". ${v.exampleSentence ? `Contoh: "${v.exampleSentence.jp}" (${v.exampleSentence.id})` : ''}`,
+    explanation: `Kosakata 【${displayWord}】 (${v.romaji}) berarti "${correctAnswer}". ${v.exampleSentence ? `Contoh: "${v.exampleSentence.jp}" (${sanitizeIndonesianMeaning(v.exampleSentence.id)})` : ''}`,
   };
 }
 
@@ -311,6 +476,8 @@ export function createVocabSymbolQuestion(
 ): MultipleChoiceQuestion {
   const sameLevelVocab = VOCAB_DATA.filter(item => item.level === level && item.id !== v.id && !!item.kanji && item.kanji !== item.kana);
   const globalVocab = VOCAB_DATA.filter(item => item.id !== v.id && !!item.kanji && item.kanji !== item.kana);
+
+  const cleanMeaning = sanitizeIndonesianMeaning(v.meaningId);
 
   if (v.kanji && v.kanji !== v.kana) {
     const correctAnswer = v.kanji;
@@ -325,11 +492,11 @@ export function createVocabSymbolQuestion(
       level,
       itemId: v.id,
       vectorType: 'symbol',
-      question: `Manakah penulisan Kanji yang tepat untuk kata "${v.kana}" (${v.meaningId})?`,
+      question: `Manakah penulisan Kanji yang tepat untuk kata "${v.kana}" (${cleanMeaning})?`,
       audioText: v.kanji,
       options,
       correctIndex,
-      explanation: `Kata "${v.kana}" (${v.meaningId}) ditulis dengan kanji 【${v.kanji}】 (${v.romaji}).`,
+      explanation: `Kata "${v.kana}" (${cleanMeaning}) ditulis dengan kanji 【${v.kanji}】 (${v.romaji}).`,
     };
   }
 
@@ -344,16 +511,15 @@ export function createVocabListeningQuestion(
   const sameLevelVocab = VOCAB_DATA.filter(item => item.level === level && item.id !== v.id);
   const globalVocab = VOCAB_DATA.filter(item => item.id !== v.id);
 
-  const displayWord = v.kanji ? `${v.kanji} (${v.kana})` : v.kana;
-  const correctAnswer = `${displayWord} — ${v.meaningId}`;
+  const cleanMeaning = getConciseMeaning(v.meaningId);
+  // Opsi listening bersih dan ringkas (murni menguji pendengaran kana / arti)
+  const correctAnswer = `${v.kana} — ${cleanMeaning}`;
 
   const candidateDistractors = sameLevelVocab.map(item => {
-    const dWord = item.kanji ? `${item.kanji} (${item.kana})` : item.kana;
-    return `${dWord} — ${item.meaningId}`;
+    return `${item.kana} — ${getConciseMeaning(item.meaningId)}`;
   });
   const fallbackDistractors = globalVocab.map(item => {
-    const dWord = item.kanji ? `${item.kanji} (${item.kana})` : item.kana;
-    return `${dWord} — ${item.meaningId}`;
+    return `${item.kana} — ${getConciseMeaning(item.meaningId)}`;
   });
 
   const { options, correctIndex } = buildOptions(correctAnswer, candidateDistractors, fallbackDistractors);
