@@ -128,7 +128,7 @@ export function speakJapanese(text: string): Promise<void> {
       try {
         currentAudioInstance.pause();
         currentAudioInstance.currentTime = 0;
-      } catch (_) {}
+      } catch {}
       currentAudioInstance = null;
     }
 

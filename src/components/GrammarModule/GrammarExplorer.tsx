@@ -1,25 +1,36 @@
 import React, { useState } from 'react';
 import { GRAMMAR_DATA } from '../../data/grammarData';
 import { JLPTLevel } from '../../types';
-import { Award, Volume2, BookMarked, ChevronDown, ChevronUp, Trophy } from 'lucide-react';
+import { Award, Volume2, BookMarked, ChevronDown, ChevronUp, Trophy, Search } from 'lucide-react';
 import { speakJapanese } from '../../utils/audio';
 import { ParticleDrill } from '../ParticleModule/ParticleDrill';
 import { useShowRomaji } from '../../hooks/useShowRomaji';
 
 interface GrammarExplorerProps {
   onGoToQuiz?: () => void;
+  initialLevel?: JLPTLevel | 'ALL';
 }
 
-export const GrammarExplorer: React.FC<GrammarExplorerProps> = ({ onGoToQuiz }) => {
+export const GrammarExplorer: React.FC<GrammarExplorerProps> = ({ onGoToQuiz, initialLevel }) => {
   const [showRomaji] = useShowRomaji();
   const [subModule, setSubModule] = useState<'patterns' | 'particles'>('patterns');
-  const [selectedLevel, setSelectedLevel] = useState<JLPTLevel | 'ALL'>('ALL');
+  const [selectedLevel, setSelectedLevel] = useState<JLPTLevel | 'ALL'>(initialLevel || 'ALL');
+  const [searchQuery, setSearchQuery] = useState('');
   const [expandedId, setExpandedId] = useState<string | null>(GRAMMAR_DATA[0]?.id || null);
+
 
   const levels: (JLPTLevel | 'ALL')[] = ['ALL', 'N5', 'N4', 'N3', 'N2', 'N1'];
 
   const filteredGrammar = GRAMMAR_DATA.filter(item => {
-    return selectedLevel === 'ALL' || item.level === selectedLevel;
+    const matchesLevel = selectedLevel === 'ALL' || item.level === selectedLevel;
+    const q = searchQuery.trim().toLowerCase();
+    const matchesSearch = !q || 
+      item.title.toLowerCase().includes(q) ||
+      item.meaningId.toLowerCase().includes(q) ||
+      item.structure.toLowerCase().includes(q) ||
+      item.explanationId.toLowerCase().includes(q);
+
+    return matchesLevel && matchesSearch;
   });
 
   const getLevelBadgeClass = (level: JLPTLevel) => {
@@ -90,33 +101,48 @@ export const GrammarExplorer: React.FC<GrammarExplorerProps> = ({ onGoToQuiz }) 
         </p>
       </div>
 
-      {/* Filter Tabs & Quiz CTA */}
-      <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pb-4 mb-6">
-        <div className="flex items-center gap-1.5 overflow-x-auto w-full sm:w-auto pb-1 sm:pb-0">
-          {levels.map(lvl => (
-            <button
-              key={lvl}
-              onClick={() => setSelectedLevel(lvl)}
-              className={`px-4 py-2 rounded-xl text-xs font-bold transition cursor-pointer shrink-0 ${
-                selectedLevel === lvl
-                  ? 'bg-rose-500 text-white shadow-md shadow-rose-500/25'
-                  : 'bg-slate-900 border border-slate-800 text-slate-400 hover:text-white hover:bg-slate-800'
-              }`}
-            >
-              {lvl === 'ALL' ? 'Semua Level' : `JLPT ${lvl}`}
-            </button>
-          ))}
-        </div>
+      {/* Filter Tabs & Search Bar & Quiz CTA */}
+      <div className="space-y-4 mb-6">
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
+          {/* Level Tabs */}
+          <div className="flex items-center gap-1.5 overflow-x-auto pb-1 sm:pb-0 scrollbar-none">
+            {levels.map(lvl => (
+              <button
+                key={lvl}
+                onClick={() => setSelectedLevel(lvl)}
+                className={`px-3.5 py-2 rounded-xl text-xs font-bold transition cursor-pointer shrink-0 ${
+                  selectedLevel === lvl
+                    ? 'bg-rose-500 text-white shadow-md shadow-rose-500/25'
+                    : 'bg-slate-900 border border-slate-800 text-slate-400 hover:text-white hover:bg-slate-800'
+                }`}
+              >
+                {lvl === 'ALL' ? 'Semua Level' : `JLPT ${lvl}`}
+              </button>
+            ))}
+          </div>
 
-        {onGoToQuiz && (
-          <button
-            onClick={onGoToQuiz}
-            className="px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold flex items-center gap-2 shadow-lg shadow-indigo-600/25 transition cursor-pointer shrink-0"
-          >
-            <Trophy className="w-4 h-4 text-amber-300" />
-            <span>Kuis Partikel & Pola Kalimat N5</span>
-          </button>
-        )}
+          {/* Search Bar */}
+          <div className="relative flex-1 sm:max-w-xs">
+            <Search className="w-4 h-4 text-slate-500 absolute left-3 top-1/2 -translate-y-1/2" />
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="Cari pola (misal: わけ, たら)..."
+              className="w-full pl-9 pr-3 py-2 rounded-xl bg-slate-950 border border-slate-800 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-rose-500"
+            />
+          </div>
+
+          {onGoToQuiz && (
+            <button
+              onClick={onGoToQuiz}
+              className="px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold flex items-center justify-center gap-2 shadow-lg shadow-indigo-600/25 transition cursor-pointer shrink-0"
+            >
+              <Trophy className="w-4 h-4 text-amber-300" />
+              <span>{selectedLevel === 'ALL' ? 'Pusat Ujian JLPT' : `Kuis Ujian JLPT ${selectedLevel}`}</span>
+            </button>
+          )}
+        </div>
       </div>
 
       {/* Grammar Cards Accordion */}

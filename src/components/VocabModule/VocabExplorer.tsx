@@ -13,11 +13,12 @@ import {
 
 interface VocabExplorerProps {
   onGoToQuiz?: () => void;
+  initialLevel?: JLPTLevel | 'ALL';
 }
 
-export const VocabExplorer: React.FC<VocabExplorerProps> = ({ onGoToQuiz }) => {
+export const VocabExplorer: React.FC<VocabExplorerProps> = ({ onGoToQuiz, initialLevel }) => {
   const [showRomaji] = useShowRomaji();
-  const [selectedLevel, setSelectedLevel] = useState<JLPTLevel | 'ALL'>('ALL');
+  const [selectedLevel, setSelectedLevel] = useState<JLPTLevel | 'ALL'>(initialLevel || 'ALL');
   const [selectedCategory, setSelectedCategory] = useState<string>('ALL');
   const [onlyBookmarked, setOnlyBookmarked] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
@@ -25,6 +26,7 @@ export const VocabExplorer: React.FC<VocabExplorerProps> = ({ onGoToQuiz }) => {
   const [flashcardIndex, setFlashcardIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
   const [, setStorageTick] = useState(0);
+
 
   // Subscribe ke perubahan localStorage
   useEffect(() => {
@@ -219,123 +221,157 @@ export const VocabExplorer: React.FC<VocabExplorerProps> = ({ onGoToQuiz }) => {
       )}
 
       {/* FLASHCARD MODE */}
-      {flashcardMode && currentFlashcard && (
-        <div className="max-w-xl mx-auto my-8">
-          <div className="flex items-center justify-between text-xs text-slate-400 mb-3">
-            <span>Kartu {flashcardIndex + 1} dari {filteredVocab.length}</span>
-            <span className={`px-2 py-0.5 rounded text-[10px] font-bold border ${getLevelBadgeClass(currentFlashcard.level)}`}>
-              JLPT {currentFlashcard.level}
-            </span>
-          </div>
-
-          <div
-            onClick={() => setIsFlipped(f => !f)}
-            className="min-h-[280px] bg-slate-900 border-2 border-slate-700 hover:border-slate-500 rounded-3xl p-8 flex flex-col items-center justify-center text-center cursor-pointer transition-all shadow-2xl relative select-none"
-          >
-            {/* Bookmark button on flashcard */}
-            <button
-              type="button"
-              onClick={(e) => {
-                e.stopPropagation();
-                toggleBookmarkVocab(currentFlashcard.id);
-              }}
-              className="absolute top-4 left-4 p-2 rounded-xl bg-slate-800/80 hover:bg-slate-700 text-slate-400 hover:text-amber-400 transition"
-              title={isVocabBookmarked(currentFlashcard.id) ? 'Hapus dari favorit' : 'Tandai favorit/sulit'}
-            >
-              <Star className={`w-4 h-4 ${isVocabBookmarked(currentFlashcard.id) ? 'fill-amber-400 text-amber-400' : ''}`} />
-            </button>
-
-            <span className="text-[11px] text-slate-400 absolute top-4 right-4">
-              Klik kartu untuk membalik
-            </span>
-
-            {!isFlipped ? (
-              // Front side: Japanese
-              <div className="animate-pop flex flex-col items-center">
-                <span className="text-4xl sm:text-5xl font-jp font-bold text-white mb-2">
-                  {currentFlashcard.kanji || currentFlashcard.kana}
+      {flashcardMode && (
+        <>
+          {filteredVocab.length === 0 ? (
+            <div className="max-w-md mx-auto my-12 p-8 text-center bg-slate-900/60 border border-slate-800 rounded-3xl">
+              <div className="w-12 h-12 mx-auto mb-3 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400">
+                <Star className="w-6 h-6" />
+              </div>
+              <h3 className="text-base font-bold text-white mb-1">
+                Tidak Ada Kosakata Ditemukan
+              </h3>
+              <p className="text-xs text-slate-400 mb-6 leading-relaxed">
+                {onlyBookmarked
+                  ? 'Belum ada kosakata yang kamu tandai bintang ⭐. Klik ikon bintang pada kartu kosakata untuk memasukkannya ke daftar favorit/latihan.'
+                  : 'Tidak ada kata yang sesuai dengan filter atau kata kunci pencarian kamu.'}
+              </p>
+              <div className="flex justify-center gap-3">
+                {onlyBookmarked && (
+                  <button
+                    onClick={() => setOnlyBookmarked(false)}
+                    className="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-white transition"
+                  >
+                    Lihat Semua Kosakata
+                  </button>
+                )}
+                <button
+                  onClick={() => setFlashcardMode(false)}
+                  className="px-4 py-2 rounded-xl bg-rose-500 hover:bg-rose-600 text-xs font-bold text-white transition"
+                >
+                  Kembali ke Daftar
+                </button>
+              </div>
+            </div>
+          ) : currentFlashcard && (
+            <div className="max-w-xl mx-auto my-8">
+              <div className="flex items-center justify-between text-xs text-slate-400 mb-3">
+                <span>Kartu {flashcardIndex + 1} dari {filteredVocab.length}</span>
+                <span className={`px-2 py-0.5 rounded text-[10px] font-bold border ${getLevelBadgeClass(currentFlashcard.level)}`}>
+                  JLPT {currentFlashcard.level}
                 </span>
-                {currentFlashcard.kanji && (
-                  <span className="text-lg font-jp text-rose-400 mb-1">
-                    {currentFlashcard.kana}
-                  </span>
-                )}
-                {showRomaji && (
-                  <span className="text-xs font-mono text-slate-400">
-                    {currentFlashcard.romaji}
-                  </span>
-                )}
+              </div>
 
+              <div
+                onClick={() => setIsFlipped(f => !f)}
+                className="min-h-[280px] bg-slate-900 border-2 border-slate-700 hover:border-slate-500 rounded-3xl p-8 flex flex-col items-center justify-center text-center cursor-pointer transition-all shadow-2xl relative select-none"
+              >
+                {/* Bookmark button on flashcard */}
                 <button
                   type="button"
                   onClick={(e) => {
                     e.stopPropagation();
-                    speakJapanese(currentFlashcard.kanji || currentFlashcard.kana);
+                    toggleBookmarkVocab(currentFlashcard.id);
                   }}
-                  className="mt-4 p-2 rounded-xl bg-slate-800 text-slate-300 hover:text-white transition"
+                  className="absolute top-4 left-4 p-2 rounded-xl bg-slate-800/80 hover:bg-slate-700 text-slate-400 hover:text-amber-400 transition"
+                  title={isVocabBookmarked(currentFlashcard.id) ? 'Hapus dari favorit' : 'Tandai favorit/sulit'}
                 >
-                  <Volume2 className="w-4 h-4 text-emerald-400" />
+                  <Star className={`w-4 h-4 ${isVocabBookmarked(currentFlashcard.id) ? 'fill-amber-400 text-amber-400' : ''}`} />
                 </button>
-              </div>
-            ) : (
-              // Back side: Indonesian & English meaning + Sentence
-              <div className="animate-pop flex flex-col items-center">
-                <span className="text-2xl font-bold text-emerald-400 mb-1">
-                  {currentFlashcard.meaningId}
-                </span>
-                <span className="text-xs text-slate-400 mb-4">
-                  {currentFlashcard.meaningEn} • {currentFlashcard.partOfSpeech}
+
+                <span className="text-[11px] text-slate-400 absolute top-4 right-4">
+                  Klik kartu untuk membalik
                 </span>
 
-                {currentFlashcard.exampleSentence && (
-                  <div className="p-3 rounded-xl bg-slate-950/60 border border-slate-800 text-left max-w-md w-full">
-                    <div className="flex items-center justify-between mb-1">
-                      <span className="text-[10px] text-slate-500 uppercase font-semibold">Contoh Kalimat:</span>
-                      <button
-                        type="button"
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          speakJapanese(currentFlashcard.exampleSentence!.jp);
-                        }}
-                        className="text-slate-400 hover:text-white"
-                      >
-                        <Volume2 className="w-3 h-3 text-emerald-400" />
-                      </button>
-                    </div>
-                    <div className="text-xs font-jp text-white mb-1">
-                      {currentFlashcard.exampleSentence.jp}
-                    </div>
-                    <div className="text-[11px] text-slate-400">
-                      {currentFlashcard.exampleSentence.id}
-                    </div>
+                {!isFlipped ? (
+                  // Front side: Japanese
+                  <div className="animate-pop flex flex-col items-center">
+                    <span className="text-4xl sm:text-5xl font-jp font-bold text-white mb-2">
+                      {currentFlashcard.kanji || currentFlashcard.kana}
+                    </span>
+                    {currentFlashcard.kanji && (
+                      <span className="text-lg font-jp text-rose-400 mb-1">
+                        {currentFlashcard.kana}
+                      </span>
+                    )}
+                    {showRomaji && (
+                      <span className="text-xs font-mono text-slate-400">
+                        {currentFlashcard.romaji}
+                      </span>
+                    )}
+
+                    <button
+                      type="button"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        speakJapanese(currentFlashcard.kanji || currentFlashcard.kana);
+                      }}
+                      className="mt-4 p-2 rounded-xl bg-slate-800 text-slate-300 hover:text-white transition"
+                    >
+                      <Volume2 className="w-4 h-4 text-emerald-400" />
+                    </button>
+                  </div>
+                ) : (
+                  // Back side: Indonesian & English meaning + Sentence
+                  <div className="animate-pop flex flex-col items-center">
+                    <span className="text-2xl font-bold text-emerald-400 mb-1">
+                      {currentFlashcard.meaningId}
+                    </span>
+                    <span className="text-xs text-slate-400 mb-4">
+                      {currentFlashcard.meaningEn} • {currentFlashcard.partOfSpeech}
+                    </span>
+
+                    {currentFlashcard.exampleSentence && (
+                      <div className="p-3 rounded-xl bg-slate-950/60 border border-slate-800 text-left max-w-md w-full">
+                        <div className="flex items-center justify-between mb-1">
+                          <span className="text-[10px] text-slate-500 uppercase font-semibold">Contoh Kalimat:</span>
+                          <button
+                            type="button"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              speakJapanese(currentFlashcard.exampleSentence!.jp);
+                            }}
+                            className="text-slate-400 hover:text-white"
+                          >
+                            <Volume2 className="w-3 h-3 text-emerald-400" />
+                          </button>
+                        </div>
+                        <div className="text-xs font-jp text-white mb-1">
+                          {currentFlashcard.exampleSentence.jp}
+                        </div>
+                        <div className="text-[11px] text-slate-400">
+                          {currentFlashcard.exampleSentence.id}
+                        </div>
+                      </div>
+                    )}
                   </div>
                 )}
               </div>
-            )}
-          </div>
 
-          {/* Flashcard Navigation */}
-          <div className="flex items-center justify-center gap-4 mt-6">
-            <button
-              onClick={handlePrevFlashcard}
-              className="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition cursor-pointer"
-            >
-              ← Sebelumnya
-            </button>
-            <button
-              onClick={() => setIsFlipped(f => !f)}
-              className="px-6 py-2.5 rounded-xl bg-rose-500 hover:bg-rose-600 text-white text-xs font-bold transition cursor-pointer"
-            >
-              Balik Kartu
-            </button>
-            <button
-              onClick={handleNextFlashcard}
-              className="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition cursor-pointer"
-            >
-              Selanjutnya →
-            </button>
-          </div>
-        </div>
+              {/* Flashcard Navigation */}
+              <div className="flex items-center justify-center gap-4 mt-6">
+                <button
+                  onClick={handlePrevFlashcard}
+                  className="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition cursor-pointer"
+                >
+                  ← Sebelumnya
+                </button>
+                <button
+                  onClick={() => setIsFlipped(f => !f)}
+                  className="px-6 py-2.5 rounded-xl bg-rose-500 hover:bg-rose-600 text-white text-xs font-bold transition cursor-pointer"
+                >
+                  Balik Kartu
+                </button>
+                <button
+                  onClick={handleNextFlashcard}
+                  className="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition cursor-pointer"
+                >
+                  Selanjutnya →
+                </button>
+              </div>
+            </div>
+          )}
+        </>
       )}
 
       {/* STANDARD LIST MODE */}

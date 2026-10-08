@@ -1,12 +1,32 @@
 import React from 'react';
-import { Compass, CheckCircle2, Sparkles, ArrowUpRight } from 'lucide-react';
+import { Compass, CheckCircle2, Sparkles, ArrowUpRight, TrendingUp } from 'lucide-react';
 import { ActiveModule } from '../Navbar';
+import { JLPTLevel } from '../../types';
+import { getUserProgress } from '../../utils/storage';
+import { KANJI_DATA } from '../../data/kanjiData';
+import { VOCAB_DATA } from '../../data/vocabData';
 
 interface RoadmapViewProps {
-  onNavigate: (module: ActiveModule) => void;
+  onNavigate: (module: ActiveModule, level?: JLPTLevel) => void;
 }
 
 export const RoadmapView: React.FC<RoadmapViewProps> = ({ onNavigate }) => {
+  const progress = getUserProgress();
+
+  // Hitung penguasaan riil per level
+  const calcLevelProgress = (lvl: JLPTLevel) => {
+    const levelKanji = KANJI_DATA.filter(k => k.level === lvl);
+    const levelVocab = VOCAB_DATA.filter(v => v.level === lvl);
+    const totalItems = levelKanji.length + levelVocab.length;
+    if (totalItems === 0) return 0;
+
+    const masteredCount = 
+      levelKanji.filter(k => progress.masteredKanjiIds.includes(k.id)).length +
+      levelVocab.filter(v => progress.masteredVocabIds.includes(v.id)).length;
+
+    return Math.round((masteredCount / totalItems) * 100);
+  };
+
   const steps = [
     {
       level: 'Level 0',
@@ -15,7 +35,9 @@ export const RoadmapView: React.FC<RoadmapViewProps> = ({ onNavigate }) => {
       desc: 'Kuasai 46 Hiragana + 46 Katakana beserta Dakuten dan Kombinasi (Yōon). Wajib 100% lancar sebelum melangkah ke Kanji.',
       target: '92+ Huruf (Kecepatan < 2 detik per karakter)',
       moduleAction: 'kana' as ActiveModule,
+      targetLevel: undefined,
       actionLabel: 'Mulai Kuis Kana',
+      progressPercent: progress.quizHistory.some(q => q.category.toLowerCase().includes('kana')) ? 100 : 0,
       color: 'from-rose-500 to-pink-600',
       badgeColor: 'bg-rose-500/20 text-rose-300 border-rose-500/30',
       items: ['Hiragana Gojūon, Dakuten & Handakuten', 'Katakana untuk kata serapan asing', 'Kombinasi Yōon (kya, sha, chu, dsb.)'],
@@ -27,7 +49,9 @@ export const RoadmapView: React.FC<RoadmapViewProps> = ({ onNavigate }) => {
       desc: 'Mulai membaca kanji dasar, angka, hari, partikel (wa, ga, o, ni, de), dan bentuk sopan (~desu / ~masu).',
       target: '~100 Kanji • ~800 Kosakata • Pola Kalimat Dasar',
       moduleAction: 'kanji' as ActiveModule,
-      actionLabel: 'Pelajari Kanji & Vocab N5',
+      targetLevel: 'N5' as JLPTLevel,
+      actionLabel: 'Buka Materi N5',
+      progressPercent: calcLevelProgress('N5'),
       color: 'from-emerald-500 to-teal-600',
       badgeColor: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30',
       items: ['Partikel esensial (は, が, を, に, で)', 'Konjugasi kata kerja dasar (bentuk-て, bentuk-ます)', 'Kanji angka, alam, keluarga, dan waktu'],
@@ -38,8 +62,10 @@ export const RoadmapView: React.FC<RoadmapViewProps> = ({ onNavigate }) => {
       tag: 'Menengah Bawah (Elementary)',
       desc: 'Mampu berbicara mengenai pengalaman, memberi saran, kalimat pengandaian (~tara, ~ba), bentuk pasif dan kausatif.',
       target: '~300 Kanji • ~1,500 Kosakata • Pemahaman Bacaan Pendek',
-      moduleAction: 'vocab' as ActiveModule,
+      moduleAction: 'kanji' as ActiveModule,
+      targetLevel: 'N4' as JLPTLevel,
       actionLabel: 'Buka Materi N4',
+      progressPercent: calcLevelProgress('N4'),
       color: 'from-sky-500 to-blue-600',
       badgeColor: 'bg-sky-500/20 text-sky-300 border-sky-500/30',
       items: ['Bentuk pengandaian (~tara, ~nara, ~ba)', 'Keigo dasar (bahasa sopan/hormat)', 'Pemahaman dialog kehidupan di Jepang'],
@@ -50,8 +76,10 @@ export const RoadmapView: React.FC<RoadmapViewProps> = ({ onNavigate }) => {
       tag: 'Menengah (Intermediate)',
       desc: 'Titik perubahan krusial: mampu memahami berita sederhana, artikel koran ringan, dan percakapan tempo alami tanpa furigana konstan.',
       target: '~650 Kanji • ~3,500 Kosakata • Bacaan Menengah',
-      moduleAction: 'grammar' as ActiveModule,
-      actionLabel: 'Buka Tata Bahasa N3',
+      moduleAction: 'kanji' as ActiveModule,
+      targetLevel: 'N3' as JLPTLevel,
+      actionLabel: 'Buka Materi N3',
+      progressPercent: calcLevelProgress('N3'),
       color: 'from-indigo-500 to-violet-600',
       badgeColor: 'bg-indigo-500/20 text-indigo-300 border-indigo-500/30',
       items: ['Pembedaan transitif & intransitif', 'Tata bahasa bernuansa (~wake, ~you ni, ~hazu)', 'Percakapan natural penutur asli'],
@@ -63,7 +91,9 @@ export const RoadmapView: React.FC<RoadmapViewProps> = ({ onNavigate }) => {
       desc: 'Standar minimum untuk bekerja di perusahaan Jepang atau kuliah di universitas Jepang. Mampu membaca editorial dan mendengar debat.',
       target: '~1,000 Kanji • ~6,000 Kosakata • Artikel Opini & Berita',
       moduleAction: 'kanji' as ActiveModule,
+      targetLevel: 'N2' as JLPTLevel,
       actionLabel: 'Buka Materi N2',
+      progressPercent: calcLevelProgress('N2'),
       color: 'from-amber-500 to-orange-600',
       badgeColor: 'bg-amber-500/20 text-amber-300 border-amber-500/30',
       items: ['Ekspresi bisnis dan keigo lanjutan', 'Membaca cepat artikel opini dan esai', 'Idiom majemuk profesional'],
@@ -74,8 +104,10 @@ export const RoadmapView: React.FC<RoadmapViewProps> = ({ onNavigate }) => {
       tag: 'Mahir Penuh (Mastery / Native Level)',
       desc: 'Tingkat tertinggi: mampu memahami nuansa tulisan sastra, dokumen hukum, debat filosofis, dan idiom 4 huruf (Yojijukugo).',
       target: '~2,000+ Kanji • ~10,000+ Kosakata • Literatur & Berita Kompleks',
-      moduleAction: 'vocab' as ActiveModule,
+      moduleAction: 'kanji' as ActiveModule,
+      targetLevel: 'N1' as JLPTLevel,
       actionLabel: 'Buka Materi N1',
+      progressPercent: calcLevelProgress('N1'),
       color: 'from-rose-600 to-red-700',
       badgeColor: 'bg-rose-500/20 text-rose-300 border-rose-500/30',
       items: ['Yojijukugo (四字熟語 - Idiom 4 Karakter)', 'Tata bahasa sastra & ekspresi kuno/formal', 'Membaca artikel kritik ilmiah dan filsafat'],
@@ -127,10 +159,26 @@ export const RoadmapView: React.FC<RoadmapViewProps> = ({ onNavigate }) => {
                 {step.desc}
               </p>
 
-              {/* Targets */}
-              <div className="p-3 rounded-xl bg-slate-950/60 border border-slate-800/80 mb-4 flex items-center gap-2 text-xs font-mono text-emerald-400">
-                <Sparkles className="w-3.5 h-3.5 shrink-0" />
-                <span>Target Penguasaan: <strong>{step.target}</strong></span>
+              {/* Targets & Live Mastery Bar */}
+              <div className="space-y-2 mb-4">
+                <div className="p-3 rounded-xl bg-slate-950/60 border border-slate-800/80 flex items-center justify-between text-xs font-mono text-emerald-400">
+                  <div className="flex items-center gap-2">
+                    <Sparkles className="w-3.5 h-3.5 shrink-0" />
+                    <span>Target: <strong>{step.target}</strong></span>
+                  </div>
+                  <div className="flex items-center gap-1.5 text-slate-300 font-sans font-semibold">
+                    <TrendingUp className="w-3.5 h-3.5 text-indigo-400" />
+                    <span>Kuasai: {step.progressPercent}%</span>
+                  </div>
+                </div>
+
+                {/* Progress bar */}
+                <div className="w-full h-1.5 bg-slate-800 rounded-full overflow-hidden">
+                  <div 
+                    className={`h-full bg-gradient-to-r ${step.color} transition-all duration-500 rounded-full`}
+                    style={{ width: `${Math.max(step.progressPercent, 4)}%` }}
+                  />
+                </div>
               </div>
 
               {/* Items checklist */}
@@ -146,7 +194,7 @@ export const RoadmapView: React.FC<RoadmapViewProps> = ({ onNavigate }) => {
               {/* Action Button */}
               <div className="pt-2 border-t border-slate-800 flex justify-end">
                 <button
-                  onClick={() => onNavigate(step.moduleAction)}
+                  onClick={() => onNavigate(step.moduleAction, step.targetLevel)}
                   className="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-xs font-semibold flex items-center gap-1.5 transition cursor-pointer"
                 >
                   <span>{step.actionLabel}</span>

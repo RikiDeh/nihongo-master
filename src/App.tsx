@@ -1,18 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, lazy, Suspense } from 'react';
 import { Navbar, ActiveModule } from './components/Navbar';
 import { KanaSelector } from './components/KanaQuiz/KanaSelector';
 import { KanaQuizSession } from './components/KanaQuiz/KanaQuizSession';
 import { KanaResults } from './components/KanaQuiz/KanaResults';
-import { KanjiExplorer } from './components/KanjiModule/KanjiExplorer';
-import { VocabExplorer } from './components/VocabModule/VocabExplorer';
-import { GrammarExplorer } from './components/GrammarModule/GrammarExplorer';
-import { ConjugationDojo } from './components/ConjugationModule/ConjugationDojo';
-import { N5QuizCenter } from './components/QuizModule/N5QuizCenter';
-import { RoadmapView } from './components/Roadmap/RoadmapView';
-import { KanaItem, QuizSummary } from './types';
+import { KanaItem, QuizSummary, JLPTLevel } from './types';
+
+// Lazy-loaded components for optimal bundle size
+const KanjiExplorer = lazy(() => import('./components/KanjiModule/KanjiExplorer').then(m => ({ default: m.KanjiExplorer })));
+const VocabExplorer = lazy(() => import('./components/VocabModule/VocabExplorer').then(m => ({ default: m.VocabExplorer })));
+const GrammarExplorer = lazy(() => import('./components/GrammarModule/GrammarExplorer').then(m => ({ default: m.GrammarExplorer })));
+const ConjugationDojo = lazy(() => import('./components/ConjugationModule/ConjugationDojo').then(m => ({ default: m.ConjugationDojo })));
+const N5QuizCenter = lazy(() => import('./components/QuizModule/N5QuizCenter').then(m => ({ default: m.N5QuizCenter })));
+const RoadmapView = lazy(() => import('./components/Roadmap/RoadmapView').then(m => ({ default: m.RoadmapView })));
 
 export function App() {
   const [activeModule, setActiveModule] = useState<ActiveModule>('kana');
+  const [activeLevel, setActiveLevel] = useState<JLPTLevel | 'ALL' | undefined>(undefined);
 
   // Kana Quiz Sub-states: 'selector' | 'quiz' | 'results'
   const [kanaStage, setKanaStage] = useState<'selector' | 'quiz' | 'results'>('selector');
@@ -28,8 +31,6 @@ export function App() {
     setRequireEnter(enterRequired);
     setKanaStage('quiz');
   };
-
-
 
   // Quiz completed
   const handleFinishQuiz = (summary: QuizSummary) => {
@@ -55,6 +56,13 @@ export function App() {
     setKanaStage('selector');
   };
 
+  const handleNavigateFromRoadmap = (module: ActiveModule, level?: JLPTLevel) => {
+    if (level) {
+      setActiveLevel(level);
+    }
+    setActiveModule(module);
+  };
+
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans">
       {/* Top Navbar (hidden during quiz session to minimize distraction, like Tofugu focus mode) */}
@@ -72,58 +80,75 @@ export function App() {
 
       {/* Main Content Area */}
       <main className="flex-1 pb-16">
-        {activeModule === 'kana' && (
-          <>
-            {kanaStage === 'selector' && (
-              <KanaSelector onStartQuiz={handleStartQuiz} />
-            )}
+        <Suspense fallback={
+          <div className="flex items-center justify-center min-h-[50vh]">
+            <div className="w-8 h-8 border-4 border-rose-500 border-t-transparent rounded-full animate-spin" />
+          </div>
+        }>
+          {activeModule === 'kana' && (
+            <>
+              {kanaStage === 'selector' && (
+                <KanaSelector onStartQuiz={handleStartQuiz} />
+              )}
 
-            {kanaStage === 'quiz' && (
-              <KanaQuizSession
-                items={activeQuizItems}
-                requeueMistakes={requeueMistakes}
-                requireEnter={requireEnter}
-                onFinishQuiz={handleFinishQuiz}
-                onExit={handleBackToSelector}
-              />
-            )}
+              {kanaStage === 'quiz' && (
+                <KanaQuizSession
+                  items={activeQuizItems}
+                  requeueMistakes={requeueMistakes}
+                  requireEnter={requireEnter}
+                  onFinishQuiz={handleFinishQuiz}
+                  onExit={handleBackToSelector}
+                />
+              )}
 
+              {kanaStage === 'results' && quizSummary && (
+                <KanaResults
+                  summary={quizSummary}
+                  onRetryMissed={handleRetryMissed}
+                  onRetryAll={handleRetryAll}
+                  onBackToSelector={handleBackToSelector}
+                  onGoToKanji={() => {
+                    setActiveModule('kanji');
+                    setActiveLevel('N5');
+                    setKanaStage('selector');
+                  }}
+                />
+              )}
+            </>
+          )}
 
+          {activeModule === 'kanji' && (
+            <KanjiExplorer 
+              key={`kanji-${activeLevel || 'N5'}`}
+              initialLevel={activeLevel} 
+              onGoToQuiz={() => setActiveModule('quiz')} 
+            />
+          )}
 
-            {kanaStage === 'results' && quizSummary && (
-              <KanaResults
-                summary={quizSummary}
-                onRetryMissed={handleRetryMissed}
-                onRetryAll={handleRetryAll}
-                onBackToSelector={handleBackToSelector}
-                onGoToKanji={() => {
-                  setActiveModule('kanji');
-                  setKanaStage('selector');
-                }}
-              />
-            )}
-          </>
-        )}
+          {activeModule === 'vocab' && (
+            <VocabExplorer 
+              key={`vocab-${activeLevel || 'N5'}`}
+              initialLevel={activeLevel} 
+              onGoToQuiz={() => setActiveModule('quiz')} 
+            />
+          )}
 
-        {activeModule === 'kanji' && (
-          <KanjiExplorer onGoToQuiz={() => setActiveModule('quiz')} />
-        )}
+          {activeModule === 'grammar' && (
+            <GrammarExplorer 
+              key={`grammar-${activeLevel || 'N5'}`}
+              initialLevel={activeLevel} 
+              onGoToQuiz={() => setActiveModule('quiz')} 
+            />
+          )}
 
-        {activeModule === 'vocab' && (
-          <VocabExplorer onGoToQuiz={() => setActiveModule('quiz')} />
-        )}
+          {activeModule === 'dojo' && <ConjugationDojo />}
 
-        {activeModule === 'grammar' && (
-          <GrammarExplorer onGoToQuiz={() => setActiveModule('quiz')} />
-        )}
+          {activeModule === 'quiz' && <N5QuizCenter />}
 
-        {activeModule === 'dojo' && <ConjugationDojo />}
-
-        {activeModule === 'quiz' && <N5QuizCenter />}
-
-        {activeModule === 'roadmap' && (
-          <RoadmapView onNavigate={(mod) => setActiveModule(mod)} />
-        )}
+          {activeModule === 'roadmap' && (
+            <RoadmapView onNavigate={handleNavigateFromRoadmap} />
+          )}
+        </Suspense>
       </main>
 
       {/* Footer */}

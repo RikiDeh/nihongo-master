@@ -16,15 +16,17 @@ import { KanjiQuizModal } from './KanjiQuizModal';
 
 interface KanjiExplorerProps {
   onGoToQuiz?: () => void;
+  initialLevel?: JLPTLevel | 'ALL';
 }
 
-export const KanjiExplorer: React.FC<KanjiExplorerProps> = ({ onGoToQuiz }) => {
-  const [selectedLevel, setSelectedLevel] = useState<JLPTLevel | 'ALL'>('N5');
+export const KanjiExplorer: React.FC<KanjiExplorerProps> = ({ onGoToQuiz, initialLevel }) => {
+  const [selectedLevel, setSelectedLevel] = useState<JLPTLevel | 'ALL'>(initialLevel || 'N5');
   const [selectedCategory, setSelectedCategory] = useState<string>('ALL');
   const [onlyBookmarked, setOnlyBookmarked] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [activeKanji, setActiveKanji] = useState<KanjiItem | null>(KANJI_DATA[0]);
   const [, setStorageTick] = useState(0);
+
 
   // Subscribe ke perubahan localStorage
   useEffect(() => {
