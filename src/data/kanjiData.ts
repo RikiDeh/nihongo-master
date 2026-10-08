@@ -1,6 +1,7 @@
 import { KanjiItem } from '../types';
 import { KANJI_N5_LIST } from './kanjiN5Data';
 import { KANJI_N4_LIST } from './kanjiN4Data';
+import { KANJI_N3_LIST } from './kanjiN3Data';
 
 export const KANJI_DATA: KanjiItem[] = [
   // JLPT N5 Complete (105 Kanji Resmi)
@@ -9,53 +10,8 @@ export const KANJI_DATA: KanjiItem[] = [
   // JLPT N4 Complete
   ...KANJI_N4_LIST,
 
-  // JLPT N3
-  {
-    id: 'kanji-n3-1',
-    kanji: '政',
-    level: 'N3',
-    meaning: 'Politics, Government',
-    meaningId: 'Politik, Pemerintahan',
-    onyomi: ['セイ', 'ショウ'],
-    kunyomi: ['まつりごと'],
-    strokes: 9,
-    radicals: ['正', '攵'],
-    examples: [
-      { word: '政治', reading: 'せいじ', meaning: 'Politik' },
-      { word: '政府', reading: 'せいふ', meaning: 'Pemerintah' },
-    ],
-  },
-  {
-    id: 'kanji-n3-2',
-    kanji: '経',
-    level: 'N3',
-    meaning: 'Pass through, Manage',
-    meaningId: 'Melalui, Mengelola',
-    onyomi: ['ケイ', 'キョウ'],
-    kunyomi: ['へ・る'],
-    strokes: 11,
-    radicals: ['糸'],
-    examples: [
-      { word: '経済', reading: 'けいざい', meaning: 'Ekonomi' },
-      { word: '経験', reading: 'けいけん', meaning: 'Pengalaman' },
-      { word: '経営', reading: 'けいえい', meaning: 'Manajemen bisnis' },
-    ],
-  },
-  {
-    id: 'kanji-n3-3',
-    kanji: '際',
-    level: 'N3',
-    meaning: 'Occasion, Edge',
-    meaningId: 'Saat, Batas, Antara',
-    onyomi: ['サイ'],
-    kunyomi: ['きわ'],
-    strokes: 14,
-    radicals: ['阝', '祭'],
-    examples: [
-      { word: '国際', reading: 'こくさい', meaning: 'Internasional' },
-      { word: '実際', reading: 'じっさい', meaning: 'Kenyataan / Sebenarnya' },
-    ],
-  },
+  // JLPT N3 Complete
+  ...KANJI_N3_LIST,
 
   // JLPT N2
   {

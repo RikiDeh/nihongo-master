@@ -1,6 +1,7 @@
 import { VocabItem } from '../types';
 import { VOCAB_N5_LIST } from './vocabN5Data';
 import { VOCAB_N4_LIST } from './vocabN4Data';
+import { VOCAB_N3_LIST } from './vocabN3Data';
 
 export const VOCAB_DATA: VocabItem[] = [
   // Complete JLPT N5 Vocabulary
@@ -9,39 +10,8 @@ export const VOCAB_DATA: VocabItem[] = [
   // Complete JLPT N4 Vocabulary
   ...VOCAB_N4_LIST,
 
-  // N3 Vocabulary
-  {
-    id: 'v-n3-1',
-    kanji: '影響',
-    kana: 'えいきょう',
-    romaji: 'eikyou',
-    meaningEn: 'Influence / Effect',
-    meaningId: 'Pengaruh / Efek',
-    level: 'N3',
-    category: 'Sosial & Konsep',
-    partOfSpeech: 'Noun / Suru Verb',
-    exampleSentence: {
-      jp: '天気が健康に影響を与える。',
-      furigana: 'てんきがけんこうにえいきょうをあたえる。',
-      id: 'Cuaca memberi pengaruh terhadap kesehatan.',
-    },
-  },
-  {
-    id: 'v-n3-2',
-    kanji: '解決',
-    kana: 'かいけつ',
-    romaji: 'kaiketsu',
-    meaningEn: 'Settlement / Solution',
-    meaningId: 'Penyelesaian / Solusi',
-    level: 'N3',
-    category: 'Aksi & Solusi',
-    partOfSpeech: 'Noun / Suru Verb',
-    exampleSentence: {
-      jp: '問題を早く解決しましょう。',
-      furigana: 'もんだいをはやくかいけつしましょう。',
-      id: 'Mari selesaikan masalah ini secepatnya.',
-    },
-  },
+  // Complete JLPT N3 Vocabulary
+  ...VOCAB_N3_LIST,
 
   // N2 Vocabulary
   {

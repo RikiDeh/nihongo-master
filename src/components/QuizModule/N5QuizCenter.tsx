@@ -12,6 +12,12 @@ import {
   generateN4GrammarQuiz,
   generateN4MockExam
 } from '../../data/quizN4Data';
+import {
+  generateN3KanjiQuiz,
+  generateN3VocabQuiz,
+  generateN3GrammarQuiz,
+  generateN3MockExam
+} from '../../data/quizN3Data';
 import { N5QuizSession } from './N5QuizSession';
 import { N5QuizResults } from './N5QuizResults';
 import { saveQuizHistory, getUserProgress } from '../../utils/storage';
@@ -25,7 +31,7 @@ import {
 } from 'lucide-react';
 
 export const N5QuizCenter: React.FC = () => {
-  const [selectedLevel, setSelectedLevel] = useState<'N5' | 'N4'>('N5');
+  const [selectedLevel, setSelectedLevel] = useState<'N5' | 'N4' | 'N3'>('N5');
   const [stage, setStage] = useState<'menu' | 'session' | 'results'>('menu');
   const [selectedCategory, setSelectedCategory] = useState<N5QuizCategory>('kanji');
   const [activeQuestions, setActiveQuestions] = useState<MultipleChoiceQuestion[]>([]);
@@ -55,7 +61,7 @@ export const N5QuizCenter: React.FC = () => {
           questions = generateMockExam(15);
           break;
       }
-    } else {
+    } else if (selectedLevel === 'N4') {
       switch (category) {
         case 'kanji':
           questions = generateN4KanjiQuiz(10);
@@ -68,6 +74,21 @@ export const N5QuizCenter: React.FC = () => {
           break;
         case 'mock-exam':
           questions = generateN4MockExam(15);
+          break;
+      }
+    } else {
+      switch (category) {
+        case 'kanji':
+          questions = generateN3KanjiQuiz(10);
+          break;
+        case 'vocab':
+          questions = generateN3VocabQuiz(10);
+          break;
+        case 'grammar':
+          questions = generateN3GrammarQuiz(10);
+          break;
+        case 'mock-exam':
+          questions = generateN3MockExam(15);
           break;
       }
     }
@@ -140,6 +161,16 @@ export const N5QuizCenter: React.FC = () => {
                 }`}
               >
                 <span>⚡ JLPT N4 (Menengah Bawah)</span>
+              </button>
+              <button
+                onClick={() => setSelectedLevel('N3')}
+                className={`px-5 py-2.5 rounded-xl text-xs font-bold transition-all flex items-center gap-2 ${
+                  selectedLevel === 'N3'
+                    ? 'bg-gradient-to-r from-rose-500 to-pink-600 text-white shadow-md shadow-rose-500/20'
+                    : 'text-slate-400 hover:text-white'
+                }`}
+              >
+                <span>🎯 JLPT N3 (Menengah)</span>
               </button>
             </div>
           </div>
