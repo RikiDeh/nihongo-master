@@ -36,8 +36,10 @@ function getValidGrammarIds(): Set<string> {
   return validGrammarIds;
 }
 
+export const MAX_QUIZ_HISTORY = 50;
+
 /**
- * Pembersih otomatis untuk mencegah 'ID Hantu' di localStorage
+ * Pembersih otomatis untuk mencegah 'ID Hantu' dan pembengkakan memori di localStorage
  */
 export function sanitizeUserProgress(data: UserProgressData): { sanitized: UserProgressData; modified: boolean } {
   const kanjiSet = getValidKanjiIds();
@@ -49,6 +51,10 @@ export function sanitizeUserProgress(data: UserProgressData): { sanitized: UserP
   const cleanBookmarkedVocab = data.bookmarkedVocabIds.filter(id => vocabSet.has(id));
   const cleanMasteredVocab = data.masteredVocabIds.filter(id => vocabSet.has(id));
   const cleanFailedItems = data.failedItemIds.filter(id => kanjiSet.has(id) || vocabSet.has(id) || grammarSet.has(id));
+  
+  // Batasi riwayat kuis maksimal 50 sesi terakhir (FIFO) demi mencegah QuotaExceededError
+  const rawHistory = Array.isArray(data.quizHistory) ? data.quizHistory : [];
+  const cleanQuizHistory = rawHistory.slice(0, MAX_QUIZ_HISTORY);
 
   const modified = 
     data.version !== CURRENT_STORAGE_VERSION ||
@@ -56,7 +62,8 @@ export function sanitizeUserProgress(data: UserProgressData): { sanitized: UserP
     cleanMasteredKanji.length !== data.masteredKanjiIds.length ||
     cleanBookmarkedVocab.length !== data.bookmarkedVocabIds.length ||
     cleanMasteredVocab.length !== data.masteredVocabIds.length ||
-    cleanFailedItems.length !== data.failedItemIds.length;
+    cleanFailedItems.length !== data.failedItemIds.length ||
+    cleanQuizHistory.length !== rawHistory.length;
 
   return {
     sanitized: {
@@ -65,11 +72,41 @@ export function sanitizeUserProgress(data: UserProgressData): { sanitized: UserP
       masteredKanjiIds: cleanMasteredKanji,
       bookmarkedVocabIds: cleanBookmarkedVocab,
       masteredVocabIds: cleanMasteredVocab,
-      quizHistory: data.quizHistory,
+      quizHistory: cleanQuizHistory,
       failedItemIds: cleanFailedItems,
     },
     modified,
   };
+}
+
+/**
+ * Operasi penyimpanan aman ke localStorage yang membungkus pemanggilan dalam try-catch
+ * serta memiliki perlindungan darurat jika kuota penyimpanan browser penuh (QuotaExceededError).
+ */
+export function safeSetLocalStorage(key: string, value: string): boolean {
+  if (typeof window === 'undefined') return false;
+  try {
+    localStorage.setItem(key, value);
+    return true;
+  } catch (err: unknown) {
+    console.warn(`[Storage Safeguard] Penyimpanan gagal atau kuota browser penuh pada key "${key}":`, err);
+
+    // Jika kuota penuh pada data utama, pangkas riwayat kuis lebih agresif ke 10 sesi terakhir
+    if (key === STORAGE_KEY) {
+      try {
+        const parsed = JSON.parse(value);
+        if (parsed && Array.isArray(parsed.quizHistory) && parsed.quizHistory.length > 10) {
+          parsed.quizHistory = parsed.quizHistory.slice(0, 10);
+          localStorage.setItem(key, JSON.stringify(parsed));
+          console.info('[Storage Safeguard] Berhasil melakukan pemangkasan darurat riwayat kuis ke 10 sesi.');
+          return true;
+        }
+      } catch {
+        // Gagal dalam pemangkasan darurat, kembalikan false tanpa melempar unhandled exception
+      }
+    }
+    return false;
+  }
 }
 
 // Dispatch custom event agar komponen React dapat bereaksi secara real-time
@@ -100,7 +137,7 @@ export function getUserProgress(): UserProgressData {
 
     const { sanitized, modified } = sanitizeUserProgress(rawData);
     if (modified) {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(sanitized));
+      safeSetLocalStorage(STORAGE_KEY, JSON.stringify(sanitized));
     }
 
     return sanitized;
@@ -115,11 +152,9 @@ export function getUserProgress(): UserProgressData {
  */
 function saveUserProgress(data: UserProgressData): void {
   if (typeof window === 'undefined') return;
-  try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+  const success = safeSetLocalStorage(STORAGE_KEY, JSON.stringify(data));
+  if (success) {
     notifyListeners();
-  } catch (err) {
-    console.error('Gagal menyimpan user progress ke localStorage:', err);
   }
 }
 
@@ -314,11 +349,9 @@ export function getShowRomaji(): boolean {
 
 export function setShowRomaji(show: boolean): void {
   if (typeof window === 'undefined') return;
-  try {
-    localStorage.setItem(ROMAJI_STORAGE_KEY, show ? 'true' : 'false');
+  const success = safeSetLocalStorage(ROMAJI_STORAGE_KEY, show ? 'true' : 'false');
+  if (success) {
     notifyListeners();
-  } catch (err) {
-    console.error('Gagal menyimpan preferensi romaji:', err);
   }
 }
 

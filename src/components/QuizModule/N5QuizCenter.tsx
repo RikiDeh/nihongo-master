@@ -26,8 +26,14 @@ import {
   Flame
 } from 'lucide-react';
 
-export const N5QuizCenter: React.FC = () => {
-  const [selectedLevel, setSelectedLevel] = useState<'N5' | 'N4' | 'N3' | 'N2' | 'N1'>('N5');
+interface QuizCenterProps {
+  initialLevel?: 'N5' | 'N4' | 'N3' | 'N2' | 'N1' | 'ALL';
+}
+
+export const N5QuizCenter: React.FC<QuizCenterProps> = ({ initialLevel }) => {
+  const [selectedLevel, setSelectedLevel] = useState<'N5' | 'N4' | 'N3' | 'N2' | 'N1'>(
+    initialLevel && initialLevel !== 'ALL' ? initialLevel : 'N5'
+  );
   const [stage, setStage] = useState<'menu' | 'session' | 'results'>('menu');
   const [selectedCategory, setSelectedCategory] = useState<N5QuizCategory>('kanji');
   const [questionCount, setQuestionCount] = useState<number>(10);
@@ -111,15 +117,15 @@ export const N5QuizCenter: React.FC = () => {
         <>
           {/* Header */}
           <div className="text-center mb-6">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-semibold mb-3">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-semibold mb-3">
               <Trophy className="w-3.5 h-3.5 text-indigo-400" />
-              <span>Pusat Uji Kompetensi JLPT Multi-Vector</span>
+              <span>Pusat Ujian & Tryout JLPT (N5 s/d N1)</span>
             </div>
             <h1 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-2">
-              Kuis Dinamis & Simulasi Ujian JLPT
+              Pusat Ujian & Tryout JLPT (N5 s/d N1)
             </h1>
-            <p className="text-slate-400 text-sm max-w-xl mx-auto mb-6">
-              Soal diracik otomatis via Multi-Vector Generator (Fonetik, Semantik, Simbol, & Menyimak Choukai). Dilengkapi Ghost Engine untuk melatih titik lemah.
+            <p className="text-slate-400 text-sm max-w-2xl mx-auto mb-6">
+              Simulasi ujian komprehensif dari level pemula (N5) hingga tingkat mahir (N1). Didukung Multi-Vector Engine (Fonetik, Semantik, Simbol Kanji, & Menyimak Choukai) serta Ghost Engine untuk membasmi titik lemah.
             </p>
 
             {/* Level Switcher Tab */}
@@ -446,3 +452,5 @@ export const N5QuizCenter: React.FC = () => {
     </div>
   );
 };
+
+export { N5QuizCenter as QuizCenter };

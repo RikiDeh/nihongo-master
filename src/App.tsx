@@ -143,7 +143,12 @@ export function App() {
 
           {activeModule === 'dojo' && <ConjugationDojo />}
 
-          {activeModule === 'quiz' && <N5QuizCenter />}
+          {activeModule === 'quiz' && (
+            <N5QuizCenter 
+              key={`quiz-${activeLevel || 'N5'}`}
+              initialLevel={activeLevel} 
+            />
+          )}
 
           {activeModule === 'roadmap' && (
             <RoadmapView onNavigate={handleNavigateFromRoadmap} />
