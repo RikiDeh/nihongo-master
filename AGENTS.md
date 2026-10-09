@@ -87,9 +87,10 @@ Semua data baru yang ditambahkan ke `src/data/` **wajib mematuhi interface di `s
 
 ---
 
-## 5. ⚖️ Doktrin Kepatuhan Mutlak: Mandor Manifesto
+## 5. ⚖️ Doktrin Kepatuhan Mutlak: Mandor Manifesto & Community Pedagogy
 
-Seluruh pekerjaan agen dan developer wajib mematuhi [MANDOR_MANIFESTO.md](./MANDOR_MANIFESTO.md).
+Seluruh pekerjaan agen dan developer wajib mematuhi [MANDOR_MANIFESTO.md](./MANDOR_MANIFESTO.md) dan [COMMUNITY_PEDAGOGY_STANDARDS.md](./COMMUNITY_PEDAGOGY_STANDARDS.md).
 * **Haram Glazing**: Dilarang mengklaim fitur aman/mantap hanya karena build atau linter hijau.
 * **Patuhi 4-Layer Forensic Protocol**: Uji integritas semantik (0 kata campur Inggris), lifecycle sesi (tidak boleh infinite loop), dan ketahanan memori mobile.
+* **Standar Emas Komunitas**: Wajib berkaca pada sistem matang (Anki SM-2 SRS, Bunpro Cloze Deletion & Ghost Remediation, WaniKani Radical Decomposition, dan format ujian resmi JEES JLPT). Dilarang membuat tebak kata terisolasi tanpa konteks!
 
