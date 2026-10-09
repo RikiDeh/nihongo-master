@@ -70,7 +70,13 @@ export const KanaQuizSession: React.FC<KanaQuizSessionProps> = ({
     const clean = input.trim().toLowerCase();
     if (!clean) return false;
     if (clean === item.romaji.toLowerCase()) return true;
-    return item.aliases.some(alias => alias.toLowerCase() === clean);
+    if (item.aliases && item.aliases.some(alias => alias.toLowerCase() === clean)) return true;
+    // Dukungan alias kanonikal bebas bentrok SPK #19 (ぢ: di/ji, づ: du/zu)
+    if ((item.character === 'ぢ' || item.character === 'ヂ') && (clean === 'di' || clean === 'ji' || clean === 'dji')) return true;
+    if ((item.character === 'づ' || item.character === 'ヅ') && (clean === 'du' || clean === 'zu' || clean === 'dzu')) return true;
+    if ((item.character === 'じ' || item.character === 'ジ') && (clean === 'ji' || clean === 'zi')) return true;
+    if ((item.character === 'ず' || item.character === 'ズ') && (clean === 'zu' || clean === 'dzu')) return true;
+    return false;
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -339,13 +345,13 @@ export const KanaQuizSession: React.FC<KanaQuizSessionProps> = ({
 
           {/* Ambiguity hints for duplicate sound characters */}
           {(currentItem.character === 'ぢ' || currentItem.character === 'ヂ') && (
-            <span className="text-[11px] text-amber-400/90 font-mono px-2 py-0.5 rounded bg-amber-500/10 border border-amber-500/30">
-              Baris-D (da, ji, zu, de, do)
+            <span className="text-[11px] text-amber-300 font-medium px-2.5 py-0.5 rounded bg-amber-500/15 border border-amber-500/30">
+              💡 Tips: {currentItem.character} bisa diketik &apos;di&apos; atau &apos;ji&apos;
             </span>
           )}
           {(currentItem.character === 'づ' || currentItem.character === 'ヅ') && (
-            <span className="text-[11px] text-amber-400/90 font-mono px-2 py-0.5 rounded bg-amber-500/10 border border-amber-500/30">
-              Baris-D (da, ji, zu, de, do)
+            <span className="text-[11px] text-amber-300 font-medium px-2.5 py-0.5 rounded bg-amber-500/15 border border-amber-500/30">
+              💡 Tips: {currentItem.character} bisa diketik &apos;du&apos; atau &apos;zu&apos;
             </span>
           )}
 

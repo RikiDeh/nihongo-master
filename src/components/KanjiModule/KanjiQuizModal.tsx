@@ -9,13 +9,27 @@ interface KanjiQuizModalProps {
   onClose: () => void;
 }
 
-export const KanjiQuizModal: React.FC<KanjiQuizModalProps> = ({ kanjiList, onClose }) => {
-  // Quiz queue
-  const [queue, setQueue] = useState<KanjiItem[]>(() => {
-    return [...kanjiList].sort(() => Math.random() - 0.5);
-  });
+function shuffleArray<T>(array: T[]): T[] {
+  const arr = [...array];
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
 
-  const [initialCount] = useState(kanjiList.length);
+export const KanjiQuizModal: React.FC<KanjiQuizModalProps> = ({ kanjiList, onClose }) => {
+  const [sessionLimit, setSessionLimit] = useState<number>(() => Math.min(10, kanjiList.length || 10));
+
+  const initQueue = (limit: number) => {
+    const shuffled = shuffleArray(kanjiList);
+    return shuffled.slice(0, Math.min(limit, shuffled.length));
+  };
+
+  // Quiz queue dibatasi default 10 kanji acak (Fisher-Yates) SPK #19
+  const [queue, setQueue] = useState<KanjiItem[]>(() => initQueue(10));
+  const [initialCount, setInitialCount] = useState<number>(() => Math.min(10, kanjiList.length));
+  const [answeredCount, setAnsweredCount] = useState<number>(0);
   const [userInput, setUserInput] = useState('');
   const [inputState, setInputState] = useState<'idle' | 'correct' | 'wrong'>('idle');
   const [streak, setStreak] = useState(0);
@@ -27,6 +41,20 @@ export const KanjiQuizModal: React.FC<KanjiQuizModalProps> = ({ kanjiList, onClo
 
   const inputRef = useRef<HTMLInputElement>(null);
   const currentKanji = queue[0];
+
+  const handleRestart = (newLimit: number = sessionLimit) => {
+    const newItems = initQueue(newLimit);
+    setQueue(newItems);
+    setInitialCount(newItems.length);
+    setSessionLimit(newLimit);
+    setAnsweredCount(0);
+    setUserInput('');
+    setInputState('idle');
+    setStreak(0);
+    setWrongItems([]);
+    setCorrectCount(0);
+    setIsFinished(false);
+  };
 
   useEffect(() => {
     inputRef.current?.focus();
@@ -85,6 +113,7 @@ export const KanjiQuizModal: React.FC<KanjiQuizModalProps> = ({ kanjiList, onClo
       setInputState('correct');
       setStreak(s => s + 1);
       setCorrectCount(c => c + 1);
+      setAnsweredCount(a => a + 1);
       playSuccessSound();
       speakJapanese(currentKanji.kanji);
 
@@ -138,11 +167,30 @@ export const KanjiQuizModal: React.FC<KanjiQuizModalProps> = ({ kanjiList, onClo
         <div className="flex items-center justify-between pb-4 border-b border-slate-800 mb-6">
           <div className="flex items-center gap-2">
             <span className="px-2.5 py-1 rounded-full bg-rose-500/20 text-rose-300 border border-rose-500/30 text-xs font-bold">
-              Kuis Kanji N5 (Wajib Enter)
+              Kuis Kanji {currentKanji ? `JLPT ${currentKanji.level}` : ''}
             </span>
             <div className="flex items-center gap-1 text-xs font-bold text-amber-400 bg-amber-500/10 px-2.5 py-1 rounded-full border border-amber-500/20">
               <Flame className="w-3.5 h-3.5 fill-current" />
               <span>{streak}</span>
+            </div>
+            {/* Session selector SPK #19 */}
+            <div className="hidden sm:flex items-center gap-1 bg-slate-950 p-1 rounded-xl border border-slate-800 text-[11px]">
+              <button
+                onClick={() => handleRestart(10)}
+                className={`px-2 py-0.5 rounded-lg font-bold transition cursor-pointer ${
+                  sessionLimit === 10 ? 'bg-rose-500 text-white' : 'text-slate-400 hover:text-white'
+                }`}
+              >
+                10 Soal
+              </button>
+              <button
+                onClick={() => handleRestart(20)}
+                className={`px-2 py-0.5 rounded-lg font-bold transition cursor-pointer ${
+                  sessionLimit === 20 ? 'bg-rose-500 text-white' : 'text-slate-400 hover:text-white'
+                }`}
+              >
+                20 Soal
+              </button>
             </div>
           </div>
 
@@ -156,9 +204,18 @@ export const KanjiQuizModal: React.FC<KanjiQuizModalProps> = ({ kanjiList, onClo
 
         {!isFinished && currentKanji ? (
           <div className="flex flex-col items-center justify-center py-4 my-auto">
-            {/* Progress indicator */}
-            <div className="text-xs font-mono text-slate-400 mb-4">
-              Sisa Antrean: <strong className="text-white">{queue.length}</strong> kanji
+            {/* Progress indicator (SPK #19: Kanji X dari Y) */}
+            <div className="w-full max-w-xs mb-4">
+              <div className="flex items-center justify-between text-xs font-mono text-slate-400 mb-1.5">
+                <span>Kanji <strong className="text-white">{Math.min(answeredCount + 1, initialCount)}</strong> dari <strong className="text-white">{initialCount}</strong></span>
+                <span>{Math.round((Math.min(answeredCount, initialCount) / initialCount) * 100)}%</span>
+              </div>
+              <div className="w-full bg-slate-800 rounded-full h-1.5 overflow-hidden">
+                <div 
+                  className="bg-gradient-to-r from-rose-500 to-indigo-500 h-full transition-all duration-300"
+                  style={{ width: `${Math.min(100, Math.round((Math.min(answeredCount, initialCount) / initialCount) * 100))}%` }}
+                />
+              </div>
             </div>
 
             {/* Big Kanji Character */}
@@ -289,12 +346,20 @@ export const KanjiQuizModal: React.FC<KanjiQuizModalProps> = ({ kanjiList, onClo
               </div>
             )}
 
-            <button
-              onClick={onClose}
-              className="px-6 py-2.5 rounded-xl bg-rose-500 hover:bg-rose-600 text-white font-bold text-xs shadow-lg shadow-rose-500/25 transition cursor-pointer"
-            >
-              Kembali ke Modul Kanji
-            </button>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+              <button
+                onClick={() => handleRestart(sessionLimit)}
+                className="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs shadow-lg shadow-indigo-500/25 transition cursor-pointer"
+              >
+                Latihan {sessionLimit} Kanji Lagi ↻
+              </button>
+              <button
+                onClick={onClose}
+                className="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-xs transition cursor-pointer border border-slate-700"
+              >
+                Kembali ke Modul Kanji
+              </button>
+            </div>
           </div>
         )}
       </div>

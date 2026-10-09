@@ -7,7 +7,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'ふむ',
     romaji: 'fumu',
     meaningEn: 'to step on, to tread on',
-    meaningId: 'melakukan step on / melakukan tread on',
+    meaningId: 'Step on / Tread on',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -28,9 +28,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Akhiran / Prefiks (Suffix/Prefix)',
     exampleSentence: {
-      jp: '実社会において、区についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、くについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai ~ district.',
+      jp: '周囲と協力しながら～区に取り組んでいる。',
+      furigana: 'しゅういときょうりょくしながら～くにとりくんでいる。',
+      id: 'Mengerjakan ~ district sambil bekerja sama dengan orang sekitar.',
     },
   },
   {
@@ -44,9 +44,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、すっとについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、すっとについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai straight.',
+      jp: '日々の生活ですっとを大切にしている。',
+      furigana: 'ひびのせいかつですっとをたいせつにしている。',
+      id: 'Menghargai straight dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -55,7 +55,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'ぬすむ',
     romaji: 'nusumu',
     meaningEn: 'to steal; to rob',
-    meaningId: 'melakukan steal / melakukan rob',
+    meaningId: 'Steal / Rob',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -92,9 +92,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、とうとうについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、とうとうについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai finally.',
+      jp: '将来のためにとうとうを深く学んでいる。',
+      furigana: 'しょうらいのためにとうとうをふかくまなんでいる。',
+      id: 'Mempelajari finally secara mendalam demi masa depan.',
     },
   },
   {
@@ -108,9 +108,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、ガソリンについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ガソリンについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai gasoline.',
+      jp: '仕事でガソリンを活用して成果を上げた。',
+      furigana: 'しごとでガソリンをかつようしてせいかをあげた。',
+      id: 'Memanfaatkan gasoline dalam pekerjaan dan meraih hasil baik.',
     },
   },
   {
@@ -119,7 +119,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'なる',
     romaji: 'naru',
     meaningEn: 'to sound, to ring (v.i.)',
-    meaningId: 'melakukan sound / melakukan ring (v.i.)',
+    meaningId: 'Sound / Ring (v.i.)',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -204,9 +204,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、意見についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、いけんについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai pendapat.',
+      jp: '専門家が意見の重要性について指摘した。',
+      furigana: 'せんもんかがいけんのじゅうようせいについてしてきした。',
+      id: 'Pakar menekankan pentingnya pendapat.',
     },
   },
   {
@@ -236,9 +236,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Komunikasi & Bahasa',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、漫画についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、まんがについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai comic (book).',
+      jp: '周囲と協力しながら漫画に取り組んでいる。',
+      furigana: 'しゅういときょうりょくしながらまんがにとりくんでいる。',
+      id: 'Mengerjakan comic (book) sambil bekerja sama dengan orang sekitar.',
     },
   },
   {
@@ -252,9 +252,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、ステレオについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ステレオについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai stereo.',
+      jp: '日々の生活でステレオを大切にしている。',
+      furigana: 'ひびのせいかつでステレオをたいせつにしている。',
+      id: 'Menghargai stereo dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -268,9 +268,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Sains & Kesehatan',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、医学についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、いがくについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai medical science.',
+      jp: '今回の会議で医学についての議論が行われた。',
+      furigana: 'こんかいのかいぎでいがくについてのぎろんがおこなわれた。',
+      id: 'Diskusi mengenai medical science dilakukan dalam rapat kali ini.',
     },
   },
   {
@@ -284,9 +284,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Komunikasi & Bahasa',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、テキストについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、テキストについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai text.',
+      jp: '先生からテキストに関する詳しい説明を受けた。',
+      furigana: 'せんせいからテキストにかんするくわしいせつめいをうけた。',
+      id: 'Mendapatkan penjelasan rinci mengenai text dari guru.',
     },
   },
   {
@@ -300,9 +300,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Akhiran / Prefiks (Suffix/Prefix)',
     exampleSentence: {
-      jp: '実社会において、月についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、つきについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai month.',
+      jp: '将来のために～月を深く学んでいる。',
+      furigana: 'しょうらいのために～つきをふかくまなんでいる。',
+      id: 'Mempelajari month secara mendalam demi masa depan.',
     },
   },
   {
@@ -311,7 +311,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'おる',
     romaji: 'oru',
     meaningEn: 'to snap, to break; to bend',
-    meaningId: 'melakukan snap / melakukan break / melakukan bend',
+    meaningId: 'Snap / Memecahkan / Merusak / Beristirahat / Membungkuk / Membengkokkan',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -359,7 +359,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'きこえる',
     romaji: 'kikoeru',
     meaningEn: 'to be heard, to be audible',
-    meaningId: 'melakukan be heard / melakukan be audible',
+    meaningId: 'Menjadi heard / Menjadi audible',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -380,9 +380,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、僕についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ぼくについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai i (used by men towards those of equal or lower status).',
+      jp: '専門家が僕の重要性について指摘した。',
+      furigana: 'せんもんかがぼくのじゅうようせいについてしてきした。',
+      id: 'Pakar menekankan pentingnya i (used by men towards those of equal or lower status).',
     },
   },
   {
@@ -396,9 +396,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、必ずについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、かならずについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai surely.',
+      jp: 'この本を読んで必ずの基礎を理解した。',
+      furigana: 'このほんをよんでかならずのきそをりかいした。',
+      id: 'Memahami dasar-dasar surely setelah membaca buku ini.',
     },
   },
   {
@@ -407,7 +407,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'こわす',
     romaji: 'kowasu',
     meaningEn: 'to break, to break down',
-    meaningId: 'melakukan break / melakukan break down',
+    meaningId: 'Memecahkan / Merusak / Beristirahat / Memecahkan (down)',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -423,7 +423,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'おこる',
     romaji: 'okoru',
     meaningEn: 'to get angry; to scold angrily',
-    meaningId: 'melakukan get angry / melakukan scold angrily',
+    meaningId: 'Mendapatkan (angry) / Memarahi (angrily)',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -444,9 +444,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、床屋についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、とこやについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai barber\'s (shop).',
+      jp: '今回の会議で床屋についての議論が行われた。',
+      furigana: 'こんかいのかいぎでとこやについてのぎろんがおこなわれた。',
+      id: 'Diskusi mengenai barber\'s (shop) dilakukan dalam rapat kali ini.',
     },
   },
   {
@@ -460,9 +460,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、オートバイについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、オートバイについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai motorcycle (lit: auto-bi(ke)).',
+      jp: '先生からオートバイに関する詳しい説明を受けた。',
+      furigana: 'せんせいからオートバイにかんするくわしいせつめいをうけた。',
+      id: 'Mendapatkan penjelasan rinci mengenai motorcycle (lit: auto-bi(ke)) dari guru.',
     },
   },
   {
@@ -476,9 +476,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、運動についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、うんどうするについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai exercise.',
+      jp: '日々の生活で運動を大切にしている。',
+      furigana: 'ひびのせいかつでうんどうするをたいせつにしている。',
+      id: 'Menghargai exercise dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -487,7 +487,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'やむ',
     romaji: 'yamu',
     meaningEn: 'to cease, to stop',
-    meaningId: 'melakukan cease / berhenti',
+    meaningId: 'Berhenti / Mereda / berhenti',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -508,9 +508,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、もしについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、もしについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai if.',
+      jp: '先生からもしに関する詳しい説明を受けた。',
+      furigana: 'せんせいからもしにかんするくわしいせつめいをうけた。',
+      id: 'Mendapatkan penjelasan rinci mengenai if dari guru.',
     },
   },
   {
@@ -524,9 +524,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、表についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、おもてについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai surface.',
+      jp: '将来のために表を深く学んでいる。',
+      furigana: 'しょうらいのためにおもてをふかくまなんでいる。',
+      id: 'Mempelajari surface secara mendalam demi masa depan.',
     },
   },
   {
@@ -556,9 +556,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、運転手についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、うんてんしゅについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai driver (by occupation).',
+      jp: '専門家が運転手の重要性について指摘した。',
+      furigana: 'せんもんかがうんてんしゅのじゅうようせいについてしてきした。',
+      id: 'Pakar menekankan pentingnya driver (by occupation).',
     },
   },
   {
@@ -572,9 +572,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、予習についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、よしゅうについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai preparation of lessons (for class).',
+      jp: 'この本を読んで予習の基礎を理解した。',
+      furigana: 'このほんをよんでよしゅうのきそをりかいした。',
+      id: 'Memahami dasar-dasar preparation of lessons (for class) setelah membaca buku ini.',
     },
   },
   {
@@ -588,9 +588,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Pikiran, Perasaan & Karakter',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、心配についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、しんぱいするについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai kekhawatiran.',
+      jp: '周囲と協力しながら心配に取り組んでいる。',
+      furigana: 'しゅういときょうりょくしながらしんぱいするにとりくんでいる。',
+      id: 'Mengerjakan kekhawatiran sambil bekerja sama dengan orang sekitar.',
     },
   },
   {
@@ -604,9 +604,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、別についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、べつについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai distinction.',
+      jp: '日々の生活で別を大切にしている。',
+      furigana: 'ひびのせいかつでべつをたいせつにしている。',
+      id: 'Menghargai distinction dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -620,9 +620,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、非常にについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ひじょうにについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai extremely.',
+      jp: '今回の会議で非常にについての議論が行われた。',
+      furigana: 'こんかいのかいぎでひじょうにについてのぎろんがおこなわれた。',
+      id: 'Diskusi mengenai extremely dilakukan dalam rapat kali ini.',
     },
   },
   {
@@ -636,9 +636,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Komunikasi & Bahasa',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、お宅についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、おたくについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai (someone else\'s) house.',
+      jp: '周囲と協力しながらお宅に取り組んでいる。',
+      furigana: 'しゅういときょうりょくしながらおたくにとりくんでいる。',
+      id: 'Mengerjakan (someone else\'s) house sambil bekerja sama dengan orang sekitar.',
     },
   },
   {
@@ -663,7 +663,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'ひろう',
     romaji: 'hirou',
     meaningEn: 'to pick up (something), to find',
-    meaningId: 'melakukan pick up (something) / menemukan',
+    meaningId: 'Pick up (something) / menemukan',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -679,7 +679,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: '～ございます',
     romaji: '～gozaimasu',
     meaningEn: 'to be (polite), to exist',
-    meaningId: 'melakukan be (polite) / melakukan exist',
+    meaningId: 'Menjadi (polite) / Exist',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -700,9 +700,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Pikiran, Perasaan & Karakter',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、気についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、きについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai spirit.',
+      jp: '将来のために気を深く学んでいる。',
+      furigana: 'しょうらいのためにきをふかくまなんでいる。',
+      id: 'Mempelajari spirit secara mendalam demi masa depan.',
     },
   },
   {
@@ -711,7 +711,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'くらべる',
     romaji: 'kuraberu',
     meaningEn: 'to compare',
-    meaningId: 'melakukan compare',
+    meaningId: 'Membandingkan',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -732,9 +732,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、ほとんどについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ほとんどについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai mostly.',
+      jp: '専門家がほとんどの重要性について指摘した。',
+      furigana: 'せんもんかがほとんどのじゅうようせいについてしてきした。',
+      id: 'Pakar menekankan pentingnya mostly.',
     },
   },
   {
@@ -780,9 +780,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、だめについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、だめについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai useless.',
+      jp: '日々の生活でだめを大切にしている。',
+      furigana: 'ひびのせいかつでだめをたいせつにしている。',
+      id: 'Menghargai useless dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -796,9 +796,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、売り場についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、うりばについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai place where things are sold.',
+      jp: 'この本を読んで売り場の基礎を理解した。',
+      furigana: 'このほんをよんでうりばのきそをりかいした。',
+      id: 'Memahami dasar-dasar place where things are sold setelah membaca buku ini.',
     },
   },
   {
@@ -812,9 +812,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、正月についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、しょうがつについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai new year.',
+      jp: '周囲と協力しながら正月に取り組んでいる。',
+      furigana: 'しゅういときょうりょくしながらしょうがつにとりくんでいる。',
+      id: 'Mengerjakan new year sambil bekerja sama dengan orang sekitar.',
     },
   },
   {
@@ -828,9 +828,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Masyarakat & Etika',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、規則についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、きそくについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai aturan.',
+      jp: '日々の生活で規則を大切にしている。',
+      furigana: 'ひびのせいかつできそくをたいせつにしている。',
+      id: 'Menghargai aturan dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -844,9 +844,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、うんについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、うんについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai yes (informal).',
+      jp: '今回の会議でうんについての議論が行われた。',
+      furigana: 'こんかいのかいぎでうんについてのぎろんがおこなわれた。',
+      id: 'Diskusi mengenai yes (informal) dilakukan dalam rapat kali ini.',
     },
   },
   {
@@ -860,9 +860,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、発音についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、はつおんについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai pronunciation.',
+      jp: '先生から発音に関する詳しい説明を受けた。',
+      furigana: 'せんせいからはつおんにかんするくわしいせつめいをうけた。',
+      id: 'Mendapatkan penjelasan rinci mengenai pronunciation dari guru.',
     },
   },
   {
@@ -871,7 +871,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'やく',
     romaji: 'yaku',
     meaningEn: 'to bake, to grill',
-    meaningId: 'melakukan bake / melakukan grill',
+    meaningId: 'Bake / Grill',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -892,9 +892,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、屋上についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、おくじょうについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai rooftop.',
+      jp: '仕事で屋上を活用して成果を上げた。',
+      furigana: 'しごとでおくじょうをかつようしてせいかをあげた。',
+      id: 'Memanfaatkan rooftop dalam pekerjaan dan meraih hasil baik.',
     },
   },
   {
@@ -924,9 +924,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、ごみについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ごみについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai trash.',
+      jp: 'この本を読んでごみの基礎を理解した。',
+      furigana: 'このほんをよんでごみのきそをりかいした。',
+      id: 'Memahami dasar-dasar trash setelah membaca buku ini.',
     },
   },
   {
@@ -940,9 +940,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、アフリカについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、アフリカについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai africa.',
+      jp: '周囲と協力しながらアフリカに取り組んでいる。',
+      furigana: 'しゅういときょうりょくしながらアフリカにとりくんでいる。',
+      id: 'Mengerjakan africa sambil bekerja sama dengan orang sekitar.',
     },
   },
   {
@@ -956,9 +956,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、点についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、てんについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai mark.',
+      jp: '専門家が点の重要性について指摘した。',
+      furigana: 'せんもんかがてんのじゅうようせいについてしてきした。',
+      id: 'Pakar menekankan pentingnya mark.',
     },
   },
   {
@@ -988,9 +988,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、今度についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、こんどについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai now.',
+      jp: '周囲と協力しながら今度に取り組んでいる。',
+      furigana: 'しゅういときょうりょくしながらこんどにとりくんでいる。',
+      id: 'Mengerjakan now sambil bekerja sama dengan orang sekitar.',
     },
   },
   {
@@ -1015,7 +1015,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'たてる',
     romaji: 'tateru',
     meaningEn: 'to build',
-    meaningId: 'melakukan build',
+    meaningId: 'Membangun',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -1036,9 +1036,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、複雑についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ふくざつについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai complexity.',
+      jp: '先生から複雑に関する詳しい説明を受けた。',
+      furigana: 'せんせいからふくざつにかんするくわしいせつめいをうけた。',
+      id: 'Mendapatkan penjelasan rinci mengenai complexity dari guru.',
     },
   },
   {
@@ -1052,9 +1052,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、彼についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、かれについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai he.',
+      jp: '将来のために彼を深く学んでいる。',
+      furigana: 'しょうらいのためにかれをふかくまなんでいる。',
+      id: 'Mempelajari he secara mendalam demi masa depan.',
     },
   },
   {
@@ -1068,9 +1068,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、いらっしゃるについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、いらっしゃるについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai -- honorific expression for いく.',
+      jp: '仕事でいらっしゃるを活用して成果を上げた。',
+      furigana: 'しごとでいらっしゃるをかつようしてせいかをあげた。',
+      id: 'Memanfaatkan -- honorific expression for いく dalam pekerjaan dan meraih hasil baik.',
     },
   },
   {
@@ -1084,9 +1084,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、布団についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ふとんについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai futon.',
+      jp: '専門家が布団の重要性について指摘した。',
+      furigana: 'せんもんかがふとんのじゅうようせいについてしてきした。',
+      id: 'Pakar menekankan pentingnya futon.',
     },
   },
   {
@@ -1100,9 +1100,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、大事についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、だいじについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai important.',
+      jp: 'この本を読んで大事の基礎を理解した。',
+      furigana: 'このほんをよんでだいじのきそをりかいした。',
+      id: 'Memahami dasar-dasar important setelah membaca buku ini.',
     },
   },
   {
@@ -1116,9 +1116,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、贈り物についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、おくりものについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai a gift.',
+      jp: '仕事で贈り物を活用して成果を上げた。',
+      furigana: 'しごとでおくりものをかつようしてせいかをあげた。',
+      id: 'Memanfaatkan a gift dalam pekerjaan dan meraih hasil baik.',
     },
   },
   {
@@ -1132,9 +1132,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、泥棒についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、どろぼうについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai thief.',
+      jp: '専門家が泥棒の重要性について指摘した。',
+      furigana: 'せんもんかがどろぼうのじゅうようせいについてしてきした。',
+      id: 'Pakar menekankan pentingnya thief.',
     },
   },
   {
@@ -1143,7 +1143,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: '～せい',
     romaji: '～sei',
     meaningEn: 'made in ~',
-    meaningId: 'made in ~',
+    meaningId: 'Buatan ~',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Sifat-i',
@@ -1180,9 +1180,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、台風についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、たいふうについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai angin topan.',
+      jp: '日々の生活で台風を大切にしている。',
+      furigana: 'ひびのせいかつでたいふうをたいせつにしている。',
+      id: 'Menghargai angin topan dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -1196,9 +1196,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、日についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ひについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai sun.',
+      jp: '今回の会議で日についての議論が行われた。',
+      furigana: 'こんかいのかいぎでひについてのぎろんがおこなわれた。',
+      id: 'Diskusi mengenai sun dilakukan dalam rapat kali ini.',
     },
   },
   {
@@ -1212,9 +1212,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Akhiran / Prefiks (Suffix/Prefix)',
     exampleSentence: {
-      jp: '実社会において、軒についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、けんについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai counter for houses.',
+      jp: '先生から～軒に関する詳しい説明を受けた。',
+      furigana: 'せんせいから～けんにかんするくわしいせつめいをうけた。',
+      id: 'Mendapatkan penjelasan rinci mengenai counter for houses dari guru.',
     },
   },
   {
@@ -1228,9 +1228,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、そうについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、そうについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai really.',
+      jp: '将来のためにそうを深く学んでいる。',
+      furigana: 'しょうらいのためにそうをふかくまなんでいる。',
+      id: 'Mempelajari really secara mendalam demi masa depan.',
     },
   },
   {
@@ -1239,7 +1239,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'とおる',
     romaji: 'tooru',
     meaningEn: 'to pass (by), to go through',
-    meaningId: 'melakukan pass (by) / melakukan go through',
+    meaningId: 'Melewati ((by)) / Go through',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -1255,7 +1255,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'すぎる',
     romaji: 'sugiru',
     meaningEn: 'to exceed, to go beyond',
-    meaningId: 'melakukan exceed / melakukan go beyond',
+    meaningId: 'Melampaui / Melebihi / Go beyond',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -1276,9 +1276,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、レポートについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、レポートについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai laporan.',
+      jp: '将来のためにレポートを深く学んでいる。',
+      furigana: 'しょうらいのためにレポートをふかくまなんでいる。',
+      id: 'Mempelajari laporan secara mendalam demi masa depan.',
     },
   },
   {
@@ -1292,9 +1292,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、葉についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、はについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai leaf.',
+      jp: '仕事で葉を活用して成果を上げた。',
+      furigana: 'しごとではをかつようしてせいかをあげた。',
+      id: 'Memanfaatkan leaf dalam pekerjaan dan meraih hasil baik.',
     },
   },
   {
@@ -1308,9 +1308,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、必要についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ひつようについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai necessary.',
+      jp: '専門家が必要の重要性について指摘した。',
+      furigana: 'せんもんかがひつようのじゅうようせいについてしてきした。',
+      id: 'Pakar menekankan pentingnya necessary.',
     },
   },
   {
@@ -1324,9 +1324,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、課長についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、かちょうについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai section manager.',
+      jp: 'この本を読んで課長の基礎を理解した。',
+      furigana: 'このほんをよんでかちょうのきそをりかいした。',
+      id: 'Memahami dasar-dasar section manager setelah membaca buku ini.',
     },
   },
   {
@@ -1340,9 +1340,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Lingkungan & Alam',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、地震についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、じしんについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai gempa bumi.',
+      jp: '周囲と協力しながら地震に取り組んでいる。',
+      furigana: 'しゅういときょうりょくしながらじしんにとりくんでいる。',
+      id: 'Mengerjakan gempa bumi sambil bekerja sama dengan orang sekitar.',
     },
   },
   {
@@ -1356,9 +1356,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、するとについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、するとについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai and.',
+      jp: '日々の生活でするとを大切にしている。',
+      furigana: 'ひびのせいかつでするとをたいせつにしている。',
+      id: 'Menghargai and dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -1367,7 +1367,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'やめる',
     romaji: 'yameru',
     meaningEn: 'to end, to stop',
-    meaningId: 'melakukan end / berhenti',
+    meaningId: 'Mengakhiri / Berakhir / berhenti',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -1388,9 +1388,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、ガラスについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ガラスについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai glass.',
+      jp: '先生からガラスに関する詳しい説明を受けた。',
+      furigana: 'せんせいからガラスにかんするくわしいせつめいをうけた。',
+      id: 'Mendapatkan penjelasan rinci mengenai glass dari guru.',
     },
   },
   {
@@ -1404,9 +1404,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Akhiran / Prefiks (Suffix/Prefix)',
     exampleSentence: {
-      jp: '実社会において、学部についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、がくぶについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai department of a university.',
+      jp: '将来のために～学部を深く学んでいる。',
+      furigana: 'しょうらいのために～がくぶをふかくまなんでいる。',
+      id: 'Mempelajari department of a university secara mendalam demi masa depan.',
     },
   },
   {
@@ -1436,9 +1436,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、エスカレーターについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、エスカレーターについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai escalator.',
+      jp: '先生からエスカレーターに関する詳しい説明を受けた。',
+      furigana: 'せんせいからエスカレーターにかんするくわしいせつめいをうけた。',
+      id: 'Mendapatkan penjelasan rinci mengenai escalator dari guru.',
     },
   },
   {
@@ -1452,9 +1452,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、人口についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、じんこうについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai population.',
+      jp: '将来のために人口を深く学んでいる。',
+      furigana: 'しょうらいのためにじんこうをふかくまなんでいる。',
+      id: 'Mempelajari population secara mendalam demi masa depan.',
     },
   },
   {
@@ -1468,9 +1468,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、月についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、つきについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai moon.',
+      jp: '仕事で月を活用して成果を上げた。',
+      furigana: 'しごとでつきをかつようしてせいかをあげた。',
+      id: 'Memanfaatkan moon dalam pekerjaan dan meraih hasil baik.',
     },
   },
   {
@@ -1484,9 +1484,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、絹についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、きぬについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai silk.',
+      jp: '専門家が絹の重要性について指摘した。',
+      furigana: 'せんもんかがきぬのじゅうようせいについてしてきした。',
+      id: 'Pakar menekankan pentingnya silk.',
     },
   },
   {
@@ -1500,9 +1500,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、ちっともについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ちっともについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai not at all (neg. verb).',
+      jp: 'この本を読んでちっともの基礎を理解した。',
+      furigana: 'このほんをよんでちっとものきそをりかいした。',
+      id: 'Memahami dasar-dasar not at all (neg. verb) setelah membaca buku ini.',
     },
   },
   {
@@ -1527,7 +1527,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'こわれる',
     romaji: 'kowareru',
     meaningEn: 'to be broken, to break',
-    meaningId: 'melakukan be broken / melakukan break',
+    meaningId: 'Menjadi broken / Memecahkan / Merusak / Beristirahat',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -1543,7 +1543,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'ゆれる',
     romaji: 'yureru',
     meaningEn: 'to shake, to sway',
-    meaningId: 'melakukan shake / melakukan sway',
+    meaningId: 'Mengguncang / Sway',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -1559,7 +1559,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'おちる',
     romaji: 'ochiru',
     meaningEn: 'to fall, to drop',
-    meaningId: 'melakukan fall / melakukan drop',
+    meaningId: 'Jatuh / Gugur / Menjatuhkan',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -1580,9 +1580,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、できるだけについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、できるだけについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai if at all possible.',
+      jp: '将来のためにできるだけを深く学んでいる。',
+      furigana: 'しょうらいのためにできるだけをふかくまなんでいる。',
+      id: 'Mempelajari if at all possible secara mendalam demi masa depan.',
     },
   },
   {
@@ -1612,9 +1612,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、中学校についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ちゅうがっこうについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai junior high school pupil.',
+      jp: '今回の会議で中学校についての議論が行われた。',
+      furigana: 'こんかいのかいぎでちゅうがっこうについてのぎろんがおこなわれた。',
+      id: 'Diskusi mengenai junior high school pupil dilakukan dalam rapat kali ini.',
     },
   },
   {
@@ -1628,9 +1628,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、ガスについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ガスについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai gas.',
+      jp: '日々の生活でガスを大切にしている。',
+      furigana: 'ひびのせいかつでガスをたいせつにしている。',
+      id: 'Menghargai gas dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -1639,7 +1639,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'いのる',
     romaji: 'inoru',
     meaningEn: 'to pray; to wish',
-    meaningId: 'melakukan pray / melakukan wish',
+    meaningId: 'Pray / Berharap',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -1660,9 +1660,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、盛んについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、さかんについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai prosperous.',
+      jp: 'この本を読んで盛んの基礎を理解した。',
+      furigana: 'このほんをよんでさかんのきそをりかいした。',
+      id: 'Memahami dasar-dasar prosperous setelah membaca buku ini.',
     },
   },
   {
@@ -1671,14 +1671,14 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'アルバイト',
     romaji: 'アルバイト',
     meaningEn: 'part-time job',
-    meaningId: 'part-time job',
+    meaningId: 'Kerja paruh waktu (Arubaito)',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、アルバイトについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、アルバイトについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai part-time job.',
+      jp: '専門家がアルバイトの重要性について指摘した。',
+      furigana: 'せんもんかがアルバイトのじゅうようせいについてしてきした。',
+      id: 'Pakar menekankan pentingnya kerja paruh waktu (arubaito).',
     },
   },
   {
@@ -1687,7 +1687,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'おこす',
     romaji: 'okosu',
     meaningEn: 'to wake (someone) up',
-    meaningId: 'melakukan wake (someone) up',
+    meaningId: 'Wake (someone) up',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -1708,9 +1708,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、致すについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、いたすについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai -- extra-modest expression for する --.',
+      jp: '将来のために致すを深く学んでいる。',
+      furigana: 'しょうらいのためにいたすをふかくまなんでいる。',
+      id: 'Mempelajari -- extra-modest expression for する -- secara mendalam demi masa depan.',
     },
   },
   {
@@ -1719,7 +1719,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'かむ',
     romaji: 'kamu',
     meaningEn: 'to bite, to chew',
-    meaningId: 'melakukan bite / melakukan chew',
+    meaningId: 'Bite / Chew',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -1740,9 +1740,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、赤ちゃんについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、あかちゃんについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai baby.',
+      jp: '今回の会議で赤ちゃんについての議論が行われた。',
+      furigana: 'こんかいのかいぎであかちゃんについてのぎろんがおこなわれた。',
+      id: 'Diskusi mengenai baby dilakukan dalam rapat kali ini.',
     },
   },
   {
@@ -1772,9 +1772,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、嘘についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、うそについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai lie.',
+      jp: '先生から嘘に関する詳しい説明を受けた。',
+      furigana: 'せんせいからうそにかんするくわしいせつめいをうけた。',
+      id: 'Mendapatkan penjelasan rinci mengenai lie dari guru.',
     },
   },
   {
@@ -1788,9 +1788,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、小説についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、しょうせつについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai novel.',
+      jp: '今回の会議で小説についての議論が行われた。',
+      furigana: 'こんかいのかいぎでしょうせつについてのぎろんがおこなわれた。',
+      id: 'Diskusi mengenai novel dilakukan dalam rapat kali ini.',
     },
   },
   {
@@ -1804,9 +1804,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、親についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、おやについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai a parent.',
+      jp: '日々の生活で親を大切にしている。',
+      furigana: 'ひびのせいかつでおやをたいせつにしている。',
+      id: 'Menghargai a parent dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -1836,9 +1836,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、西洋についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、せいようについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai the west.',
+      jp: 'この本を読んで西洋の基礎を理解した。',
+      furigana: 'このほんをよんでせいようのきそをりかいした。',
+      id: 'Memahami dasar-dasar the west setelah membaca buku ini.',
     },
   },
   {
@@ -1847,7 +1847,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'おもう',
     romaji: 'omou',
     meaningEn: 'to think, to feel',
-    meaningId: 'berpikir / melakukan feel',
+    meaningId: 'Berpikir / Merasakan',
     level: 'N4',
     category: 'Pikiran, Perasaan & Karakter',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -1868,9 +1868,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、パート (タイム)についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、パート (タイム)についてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai part time (esp. female part time employees).',
+      jp: '仕事でパート (タイム)を活用して成果を上げた。',
+      furigana: 'しごとでパート (タイム)をかつようしてせいかをあげた。',
+      id: 'Memanfaatkan part time (esp. female part time employees) dalam pekerjaan dan meraih hasil baik.',
     },
   },
   {
@@ -1900,9 +1900,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、申し上げるについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、もうしあげるについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai (humble)to say.',
+      jp: '先生から申し上げるに関する詳しい説明を受けた。',
+      furigana: 'せんせいからもうしあげるにかんするくわしいせつめいをうけた。',
+      id: 'Mendapatkan penjelasan rinci mengenai (humble)to say dari guru.',
     },
   },
   {
@@ -1916,9 +1916,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Akhiran / Prefiks (Suffix/Prefix)',
     exampleSentence: {
-      jp: '実社会において、式についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、しきについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai ~ ceremony.',
+      jp: '仕事で～式を活用して成果を上げた。',
+      furigana: 'しごとで～しきをかつようしてせいかをあげた。',
+      id: 'Memanfaatkan ~ ceremony dalam pekerjaan dan meraih hasil baik.',
     },
   },
   {
@@ -1932,9 +1932,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、出席についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、しゅっせきするについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai attendance.',
+      jp: '将来のために出席を深く学んでいる。',
+      furigana: 'しょうらいのためにしゅっせきするをふかくまなんでいる。',
+      id: 'Mempelajari attendance secara mendalam demi masa depan.',
     },
   },
   {
@@ -1948,9 +1948,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Akhiran / Prefiks (Suffix/Prefix)',
     exampleSentence: {
-      jp: '実社会において、家についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、かについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai person who is specialized in ~.',
+      jp: '先生から～家に関する詳しい説明を受けた。',
+      furigana: 'せんせいから～かにかんするくわしいせつめいをうけた。',
+      id: 'Mendapatkan penjelasan rinci mengenai person who is specialized in ~ dari guru.',
     },
   },
   {
@@ -1959,7 +1959,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'むかえる',
     romaji: 'mukaeru',
     meaningEn: 'to welcome; to meet; to greet',
-    meaningId: 'melakukan welcome / bertemu / melakukan greet',
+    meaningId: 'Welcome / bertemu / Menyapa',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -1975,7 +1975,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'さわる',
     romaji: 'sawaru',
     meaningEn: 'to touch, to feel',
-    meaningId: 'melakukan touch / melakukan feel',
+    meaningId: 'Menyentuh / Merasakan',
     level: 'N4',
     category: 'Pikiran, Perasaan & Karakter',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -1996,9 +1996,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Akhiran / Prefiks (Suffix/Prefix)',
     exampleSentence: {
-      jp: '実社会において、建てについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、だてについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai ~ storied.',
+      jp: '周囲と協力しながら建てに取り組んでいる。',
+      furigana: 'しゅういときょうりょくしながら～だてにとりくんでいる。',
+      id: 'Mengerjakan ~ storied sambil bekerja sama dengan orang sekitar.',
     },
   },
   {
@@ -2012,9 +2012,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Bisnis & Pekerjaan',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、社長についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、しゃちょうについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai president of a company.',
+      jp: 'この本を読んで社長の基礎を理解した。',
+      furigana: 'このほんをよんでしゃちょうのきそをりかいした。',
+      id: 'Memahami dasar-dasar president of a company setelah membaca buku ini.',
     },
   },
   {
@@ -2028,9 +2028,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、動物園についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、どうぶつえんについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai zoo.',
+      jp: '専門家が動物園の重要性について指摘した。',
+      furigana: 'せんもんかがどうぶつえんのじゅうようせいについてしてきした。',
+      id: 'Pakar menekankan pentingnya zoo.',
     },
   },
   {
@@ -2039,7 +2039,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'つかまえる',
     romaji: 'tsukamaeru',
     meaningEn: 'to catch, to arrest',
-    meaningId: 'melakukan catch / melakukan arrest',
+    meaningId: 'Menangkap / Arrest',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -2060,9 +2060,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Lingkungan & Alam',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、季節についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、きせつについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai season (in reference to weather).',
+      jp: '将来のために季節を深く学んでいる。',
+      furigana: 'しょうらいのためにきせつをふかくまなんでいる。',
+      id: 'Mempelajari season (in reference to weather) secara mendalam demi masa depan.',
     },
   },
   {
@@ -2071,7 +2071,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'よる',
     romaji: 'yoru',
     meaningEn: 'to stop by',
-    meaningId: 'melakukan stop by',
+    meaningId: 'Berhenti (by)',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -2087,7 +2087,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'きまる',
     romaji: 'kimaru',
     meaningEn: 'to be set; fixed (v.i.)',
-    meaningId: 'melakukan be set / fixed (v.i.)',
+    meaningId: 'Diyetel / menetapkan / fixed (v.i.)',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -2103,7 +2103,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'ひらく',
     romaji: 'hiraku',
     meaningEn: 'to open; to hold (an event)',
-    meaningId: 'membuka / melakukan hold (an event)',
+    meaningId: 'Membuka / Memegang ((an event))',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -2119,7 +2119,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'にげる',
     romaji: 'nigeru',
     meaningEn: 'to escape, to run away',
-    meaningId: 'melakukan escape / melakukan run away',
+    meaningId: 'Melarikan diri / Berlari (away)',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -2140,9 +2140,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、だからについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、だからについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai so.',
+      jp: '今回の会議でだからについての議論が行われた。',
+      furigana: 'こんかいのかいぎでだからについてのぎろんがおこなわれた。',
+      id: 'Diskusi mengenai so dilakukan dalam rapat kali ini.',
     },
   },
   {
@@ -2156,9 +2156,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、残念についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ざんねんについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai regret.',
+      jp: '日々の生活で残念を大切にしている。',
+      furigana: 'ひびのせいかつでざんねんをたいせつにしている。',
+      id: 'Menghargai regret dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -2172,9 +2172,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、畳についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、たたみについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai tatami mat (japanese straw mat).',
+      jp: '周囲と協力しながら畳に取り組んでいる。',
+      furigana: 'しゅういときょうりょくしながらたたみにとりくんでいる。',
+      id: 'Mengerjakan tatami mat (japanese straw mat) sambil bekerja sama dengan orang sekitar.',
     },
   },
   {
@@ -2220,9 +2220,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、さっきについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、さっきについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai a little while ago.',
+      jp: '仕事でさっきを活用して成果を上げた。',
+      furigana: 'しごとでさっきをかつようしてせいかをあげた。',
+      id: 'Memanfaatkan a little while ago dalam pekerjaan dan meraih hasil baik.',
     },
   },
   {
@@ -2247,7 +2247,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'つつむ',
     romaji: 'tsutsumu',
     meaningEn: 'to wrap, to cover',
-    meaningId: 'melakukan wrap / melakukan cover',
+    meaningId: 'Membungkus / Menutupi',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -2268,9 +2268,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、なるべくについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、なるべくについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai if possible.',
+      jp: '仕事でなるべくを活用して成果を上げた。',
+      furigana: 'しごとでなるべくをかつようしてせいかをあげた。',
+      id: 'Memanfaatkan if possible dalam pekerjaan dan meraih hasil baik.',
     },
   },
   {
@@ -2300,9 +2300,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、サンドイッチについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、サンドイッチについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai sandwich.',
+      jp: '先生からサンドイッチに関する詳しい説明を受けた。',
+      furigana: 'せんせいからサンドイッチにかんするくわしいせつめいをうけた。',
+      id: 'Mendapatkan penjelasan rinci mengenai sandwich dari guru.',
     },
   },
   {
@@ -2316,9 +2316,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、会議室についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、かいぎしつについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai conference room.',
+      jp: '今回の会議で会議室についての議論が行われた。',
+      furigana: 'こんかいのかいぎでかいぎしつについてのぎろんがおこなわれた。',
+      id: 'Diskusi mengenai conference room dilakukan dalam rapat kali ini.',
     },
   },
   {
@@ -2332,9 +2332,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、品物についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、しなものについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai barang komoditas.',
+      jp: '日々の生活で品物を大切にしている。',
+      furigana: 'ひびのせいかつでしなものをたいせつにしている。',
+      id: 'Menghargai barang komoditas dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -2348,9 +2348,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、人形についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、にんぎょうについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai doll.',
+      jp: '周囲と協力しながら人形に取り組んでいる。',
+      furigana: 'しゅういときょうりょくしながらにんぎょうにとりくんでいる。',
+      id: 'Mengerjakan doll sambil bekerja sama dengan orang sekitar.',
     },
   },
   {
@@ -2364,9 +2364,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、利用についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、りようについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai use.',
+      jp: 'この本を読んで利用の基礎を理解した。',
+      furigana: 'このほんをよんでりようのきそをりかいした。',
+      id: 'Memahami dasar-dasar use setelah membaca buku ini.',
     },
   },
   {
@@ -2375,7 +2375,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'かざる',
     romaji: 'kazaru',
     meaningEn: 'to decorate, to adorn',
-    meaningId: 'melakukan decorate / melakukan adorn',
+    meaningId: 'Decorate / Adorn',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -2391,7 +2391,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'とめる',
     romaji: 'tomeru',
     meaningEn: 'to stop (something)',
-    meaningId: 'melakukan stop (something)',
+    meaningId: 'Berhenti ((something))',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -2428,9 +2428,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、いくらてもについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、いくらてもについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai however much one may ~.',
+      jp: '専門家がいくら～てもの重要性について指摘した。',
+      furigana: 'せんもんかがいくら～てものじゅうようせいについてしてきした。',
+      id: 'Pakar menekankan pentingnya however much one may ~.',
     },
   },
   {
@@ -2444,9 +2444,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Bisnis & Pekerjaan',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、用事についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ようじについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai business to take care of.',
+      jp: '仕事で用事を活用して成果を上げた。',
+      furigana: 'しごとでようじをかつようしてせいかをあげた。',
+      id: 'Memanfaatkan business to take care of dalam pekerjaan dan meraih hasil baik.',
     },
   },
   {
@@ -2460,9 +2460,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、ビルについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ビルについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai (abbr.) building.',
+      jp: '将来のためにビルを深く学んでいる。',
+      furigana: 'しょうらいのためにビルをふかくまなんでいる。',
+      id: 'Mempelajari (abbr.) building secara mendalam demi masa depan.',
     },
   },
   {
@@ -2476,9 +2476,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、けんかするについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、けんかするについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai quarrel.',
+      jp: '先生からけんかするに関する詳しい説明を受けた。',
+      furigana: 'せんせいからけんかするにかんするくわしいせつめいをうけた。',
+      id: 'Mendapatkan penjelasan rinci mengenai quarrel dari guru.',
     },
   },
   {
@@ -2487,7 +2487,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'がんばる',
     romaji: 'ganbaru',
     meaningEn: 'to try one\'s best, to try hard, to persist',
-    meaningId: 'melakukan try one\'s best / melakukan try hard / melakukan persist',
+    meaningId: 'Berusaha sebaik mungkin / Berjuang keras / Bertahan / Gigih berjuang',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -2503,7 +2503,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'なげる',
     romaji: 'nageru',
     meaningEn: 'to pitch, to cast away',
-    meaningId: 'melakukan pitch / melakukan cast away',
+    meaningId: 'Pitch / Cast away',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -2524,9 +2524,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、故障についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、こしょうするについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai breakdown.',
+      jp: '周囲と協力しながら故障に取り組んでいる。',
+      furigana: 'しゅういときょうりょくしながらこしょうするにとりくんでいる。',
+      id: 'Mengerjakan breakdown sambil bekerja sama dengan orang sekitar.',
     },
   },
   {
@@ -2540,9 +2540,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、力についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ちからについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai strength.',
+      jp: 'この本を読んで力の基礎を理解した。',
+      furigana: 'このほんをよんでちからのきそをりかいした。',
+      id: 'Memahami dasar-dasar strength setelah membaca buku ini.',
     },
   },
   {
@@ -2551,7 +2551,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'うける',
     romaji: 'ukeru',
     meaningEn: 'to take (an examination, interview, etc.); to receive',
-    meaningId: 'melakukan take (an examination / interview / etc.)',
+    meaningId: 'Mengambil ((an examination) / interview / etc.)',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -2572,9 +2572,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Pikiran, Perasaan & Karakter',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、気分についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、きぶんについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai feeling.',
+      jp: '周囲と協力しながら気分に取り組んでいる。',
+      furigana: 'しゅういときょうりょくしながらきぶんにとりくんでいる。',
+      id: 'Mengerjakan feeling sambil bekerja sama dengan orang sekitar.',
     },
   },
   {
@@ -2583,7 +2583,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'まちがえる',
     romaji: 'machigaeru',
     meaningEn: 'to make a mistake',
-    meaningId: 'melakukan make a mistake',
+    meaningId: 'Membuat (a mistake)',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -2620,9 +2620,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、星についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ほしについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai star.',
+      jp: '仕事で星を活用して成果を上げた。',
+      furigana: 'しごとでほしをかつようしてせいかをあげた。',
+      id: 'Memanfaatkan star dalam pekerjaan dan meraih hasil baik.',
     },
   },
   {
@@ -2652,9 +2652,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、やっとについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、やっとについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai at last.',
+      jp: '先生からやっとに関する詳しい説明を受けた。',
+      furigana: 'せんせいからやっとにかんするくわしいせつめいをうけた。',
+      id: 'Mendapatkan penjelasan rinci mengenai at last dari guru.',
     },
   },
   {
@@ -2663,7 +2663,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'たりる',
     romaji: 'tariru',
     meaningEn: 'to be sufficient; to be enough',
-    meaningId: 'melakukan be sufficient / melakukan be enough',
+    meaningId: 'Menjadi sufficient / Menjadi enough',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -2679,7 +2679,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'おこなう',
     romaji: 'okonau',
     meaningEn: 'to carry out; to conduct (typically used in written language)',
-    meaningId: 'melakukan carry out / melakukan conduct (typically used in written language)',
+    meaningId: 'Mengangkut (out) / Conduct (typically used in written language)',
     level: 'N4',
     category: 'Komunikasi & Bahasa',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -2700,9 +2700,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、ぶどうについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ぶどうについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai grapes.',
+      jp: '周囲と協力しながらぶどうに取り組んでいる。',
+      furigana: 'しゅういときょうりょくしながらぶどうにとりくんでいる。',
+      id: 'Mengerjakan grapes sambil bekerja sama dengan orang sekitar.',
     },
   },
   {
@@ -2711,7 +2711,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'なくなる',
     romaji: 'nakunaru',
     meaningEn: 'to disappear, to get lost',
-    meaningId: 'melakukan disappear / melakukan get lost',
+    meaningId: 'Menghilang / Mendapatkan (lost)',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -2732,9 +2732,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、準備についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、じゅんびするについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai prepare.',
+      jp: '日々の生活で準備を大切にしている。',
+      furigana: 'ひびのせいかつでじゅんびするをたいせつにしている。',
+      id: 'Menghargai prepare dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -2764,9 +2764,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、住所についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、じゅうしょについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai address.',
+      jp: 'この本を読んで住所の基礎を理解した。',
+      furigana: 'このほんをよんでじゅうしょのきそをりかいした。',
+      id: 'Memahami dasar-dasar address setelah membaca buku ini.',
     },
   },
   {
@@ -2780,9 +2780,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、再来月についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、さらいげつについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai the month after next.',
+      jp: '専門家が再来月の重要性について指摘した。',
+      furigana: 'せんもんかがさらいげつのじゅうようせいについてしてきした。',
+      id: 'Pakar menekankan pentingnya the month after next.',
     },
   },
   {
@@ -2796,9 +2796,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Lingkungan & Alam',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、林についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、はやしについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai woods.',
+      jp: '仕事で林を活用して成果を上げた。',
+      furigana: 'しごとではやしをかつようしてせいかをあげた。',
+      id: 'Memanfaatkan woods dalam pekerjaan dan meraih hasil baik.',
     },
   },
   {
@@ -2823,7 +2823,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'やせる',
     romaji: 'yaseru',
     meaningEn: 'to lose weight',
-    meaningId: 'melakukan lose weight',
+    meaningId: 'Kehilangan (weight)',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -2844,9 +2844,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、線についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、せんについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai line.',
+      jp: '今回の会議で線についての議論が行われた。',
+      furigana: 'こんかいのかいぎでせんについてのぎろんがおこなわれた。',
+      id: 'Diskusi mengenai line dilakukan dalam rapat kali ini.',
     },
   },
   {
@@ -2860,9 +2860,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、戦争についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、せんそうについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai war.',
+      jp: '日々の生活で戦争を大切にしている。',
+      furigana: 'ひびのせいかつでせんそうをたいせつにしている。',
+      id: 'Menghargai war dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -2871,7 +2871,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'きめる',
     romaji: 'kimeru',
     meaningEn: 'to decide (v.t.)',
-    meaningId: 'melakukan decide (v.t.)',
+    meaningId: 'Memutuskan ((v.t.))',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -2887,7 +2887,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'しらべる',
     romaji: 'shiraberu',
     meaningEn: 'to check; to look up; to inquire; to search',
-    meaningId: 'melakukan check / melakukan look up / melakukan inquire',
+    meaningId: 'Memeriksa / Melihat (up) / Inquire',
     level: 'N4',
     category: 'Lingkungan & Alam',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -2908,9 +2908,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、寝坊についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ねぼうについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai sleeping in late.',
+      jp: '日々の生活で寝坊を大切にしている。',
+      furigana: 'ひびのせいかつでねぼうをたいせつにしている。',
+      id: 'Menghargai sleeping in late dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -2924,9 +2924,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、パパについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、パパについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai papa.',
+      jp: '周囲と協力しながらパパに取り組んでいる。',
+      furigana: 'しゅういときょうりょくしながらパパにとりくんでいる。',
+      id: 'Mengerjakan papa sambil bekerja sama dengan orang sekitar.',
     },
   },
   {
@@ -2935,7 +2935,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'ひかる',
     romaji: 'hikaru',
     meaningEn: 'to shine, to glitter',
-    meaningId: 'melakukan shine / melakukan glitter',
+    meaningId: 'Bersinar / Berkilau / Glitter',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -2956,9 +2956,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、夫についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、おっとについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai husband.',
+      jp: '専門家が夫の重要性について指摘した。',
+      furigana: 'せんもんかがおっとのじゅうようせいについてしてきした。',
+      id: 'Pakar menekankan pentingnya husband.',
     },
   },
   {
@@ -2972,9 +2972,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、雲についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、くもについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai cloud.',
+      jp: '仕事で雲を活用して成果を上げた。',
+      furigana: 'しごとでくもをかつようしてせいかをあげた。',
+      id: 'Memanfaatkan cloud dalam pekerjaan dan meraih hasil baik.',
     },
   },
   {
@@ -2988,9 +2988,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、坂についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、さかについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai slope.',
+      jp: '将来のために坂を深く学んでいる。',
+      furigana: 'しょうらいのためにさかをふかくまなんでいる。',
+      id: 'Mempelajari slope secara mendalam demi masa depan.',
     },
   },
   {
@@ -2999,7 +2999,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: '～(て) しまう',
     romaji: '～(te)shimau',
     meaningEn: 'to end up ~',
-    meaningId: 'melakukan end up ~',
+    meaningId: 'Mengakhiri (up ~)',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -3020,9 +3020,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、飛行場についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ひこうじょうについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai airport.',
+      jp: '今回の会議で飛行場についての議論が行われた。',
+      furigana: 'こんかいのかいぎでひこうじょうについてのぎろんがおこなわれた。',
+      id: 'Diskusi mengenai airport dilakukan dalam rapat kali ini.',
     },
   },
   {
@@ -3036,9 +3036,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、柔道についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、じゅうどうについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai judo.',
+      jp: '将来のために柔道を深く学んでいる。',
+      furigana: 'しょうらいのためにじゅうどうをふかくまなんでいる。',
+      id: 'Mempelajari judo secara mendalam demi masa depan.',
     },
   },
   {
@@ -3052,9 +3052,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、決してについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、けっしてについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai never.',
+      jp: '先生から決してに関する詳しい説明を受けた。',
+      furigana: 'せんせいからけっしてにかんするくわしいせつめいをうけた。',
+      id: 'Mendapatkan penjelasan rinci mengenai never dari guru.',
     },
   },
   {
@@ -3068,9 +3068,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Bisnis & Pekerjaan',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、事務所についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、じむしょについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai kantor.',
+      jp: '今回の会議で事務所についての議論が行われた。',
+      furigana: 'こんかいのかいぎでじむしょについてのぎろんがおこなわれた。',
+      id: 'Diskusi mengenai kantor dilakukan dalam rapat kali ini.',
     },
   },
   {
@@ -3084,9 +3084,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、連絡についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、れんらくについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai communication.',
+      jp: '日々の生活で連絡を大切にしている。',
+      furigana: 'ひびのせいかつでれんらくをたいせつにしている。',
+      id: 'Menghargai communication dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -3100,9 +3100,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、小学校についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、しょうがっこうについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai elementary school.',
+      jp: '周囲と協力しながら小学校に取り組んでいる。',
+      furigana: 'しゅういときょうりょくしながらしょうがっこうにとりくんでいる。',
+      id: 'Mengerjakan elementary school sambil bekerja sama dengan orang sekitar.',
     },
   },
   {
@@ -3116,9 +3116,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、客についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、きゃくについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai guest.',
+      jp: 'この本を読んで客の基礎を理解した。',
+      furigana: 'このほんをよんできゃくのきそをりかいした。',
+      id: 'Memahami dasar-dasar guest setelah membaca buku ini.',
     },
   },
   {
@@ -3132,9 +3132,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、昔についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、むかしについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai old days.',
+      jp: '専門家が昔の重要性について指摘した。',
+      furigana: 'せんもんかがむかしのじゅうようせいについてしてきした。',
+      id: 'Pakar menekankan pentingnya old days.',
     },
   },
   {
@@ -3164,9 +3164,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、捨てるについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、すてるについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai throw away (trash).',
+      jp: '将来のために捨てるを深く学んでいる。',
+      furigana: 'しょうらいのためにすてるをふかくまなんでいる。',
+      id: 'Mempelajari throw away (trash) secara mendalam demi masa depan.',
     },
   },
   {
@@ -3180,9 +3180,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、なさるについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、なさるについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai -- honorific expression for する --.',
+      jp: '先生からなさるに関する詳しい説明を受けた。',
+      furigana: 'せんせいからなさるにかんするくわしいせつめいをうけた。',
+      id: 'Mendapatkan penjelasan rinci mengenai -- honorific expression for する -- dari guru.',
     },
   },
   {
@@ -3196,9 +3196,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、事についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ことについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai thing(s).',
+      jp: '今回の会議で事についての議論が行われた。',
+      furigana: 'こんかいのかいぎでことについてのぎろんがおこなわれた。',
+      id: 'Diskusi mengenai thing(s) dilakukan dalam rapat kali ini.',
     },
   },
   {
@@ -3212,9 +3212,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、どんどんについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、どんどんについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai quickly and steadily.',
+      jp: '日々の生活でどんどんを大切にしている。',
+      furigana: 'ひびのせいかつでどんどんをたいせつにしている。',
+      id: 'Menghargai quickly and steadily dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -3244,9 +3244,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、適当についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、てきとうについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai fitness.',
+      jp: 'この本を読んで適当の基礎を理解した。',
+      furigana: 'このほんをよんでてきとうのきそをりかいした。',
+      id: 'Memahami dasar-dasar fitness setelah membaca buku ini.',
     },
   },
   {
@@ -3276,9 +3276,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、美術館についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、びじゅつかんについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai art gallery.',
+      jp: '仕事で美術館を活用して成果を上げた。',
+      furigana: 'しごとでびじゅつかんをかつようしてせいかをあげた。',
+      id: 'Memanfaatkan art gallery dalam pekerjaan dan meraih hasil baik.',
     },
   },
   {
@@ -3292,9 +3292,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、文法についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ぶんぽうについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai grammar.',
+      jp: '将来のために文法を深く学んでいる。',
+      furigana: 'しょうらいのためにぶんぽうをふかくまなんでいる。',
+      id: 'Mempelajari grammar secara mendalam demi masa depan.',
     },
   },
   {
@@ -3324,9 +3324,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、壁についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、かべについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai wall.',
+      jp: '今回の会議で壁についての議論が行われた。',
+      furigana: 'こんかいのかいぎでかべについてのぎろんがおこなわれた。',
+      id: 'Diskusi mengenai wall dilakukan dalam rapat kali ini.',
     },
   },
   {
@@ -3340,9 +3340,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、一度についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、いちどについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai once.',
+      jp: '日々の生活で一度を大切にしている。',
+      furigana: 'ひびのせいかつでいちどをたいせつにしている。',
+      id: 'Menghargai once dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -3372,9 +3372,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、親切についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、しんせつについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai kindness.',
+      jp: '今回の会議で親切についての議論が行われた。',
+      furigana: 'こんかいのかいぎでしんせつについてのぎろんがおこなわれた。',
+      id: 'Diskusi mengenai kindness dilakukan dalam rapat kali ini.',
     },
   },
   {
@@ -3383,7 +3383,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'しらせる',
     romaji: 'shiraseru',
     meaningEn: 'to notify',
-    meaningId: 'melakukan notify',
+    meaningId: 'Notify',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -3404,9 +3404,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、歯医者についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、はいしゃについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai dentist.',
+      jp: '周囲と協力しながら歯医者に取り組んでいる。',
+      furigana: 'しゅういときょうりょくしながらはいしゃにとりくんでいる。',
+      id: 'Mengerjakan dentist sambil bekerja sama dengan orang sekitar.',
     },
   },
   {
@@ -3420,9 +3420,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、熱心についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ねっしんについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai enthusiasm.',
+      jp: 'この本を読んで熱心の基礎を理解した。',
+      furigana: 'このほんをよんでねっしんのきそをりかいした。',
+      id: 'Memahami dasar-dasar enthusiasm setelah membaca buku ini.',
     },
   },
   {
@@ -3431,7 +3431,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'はじめる',
     romaji: 'hajimeru',
     meaningEn: 'to start, to begin',
-    meaningId: 'memulai / melakukan begin',
+    meaningId: 'Memulai / Memulai',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -3479,7 +3479,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'なおる',
     romaji: 'naoru',
     meaningEn: 'to get better; to recover from illness (v.i.)',
-    meaningId: 'melakukan get better / melakukan recover from illness (v.i.)',
+    meaningId: 'Mendapatkan (better) / Recover from illness (v.i.)',
     level: 'N4',
     category: 'Sains & Kesehatan',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -3500,9 +3500,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、熱についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ねつについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai fever.',
+      jp: '今回の会議で熱についての議論が行われた。',
+      furigana: 'こんかいのかいぎでねつについてのぎろんがおこなわれた。',
+      id: 'Diskusi mengenai fever dilakukan dalam rapat kali ini.',
     },
   },
   {
@@ -3532,9 +3532,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Lingkungan & Alam',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、水道についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、すいどうについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai water service.',
+      jp: '先生から水道に関する詳しい説明を受けた。',
+      furigana: 'せんせいからすいどうにかんするくわしいせつめいをうけた。',
+      id: 'Mendapatkan penjelasan rinci mengenai water service dari guru.',
     },
   },
   {
@@ -3564,9 +3564,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、ベルについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ベルについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai bell.',
+      jp: '日々の生活でベルを大切にしている。',
+      furigana: 'ひびのせいかつでベルをたいせつにしている。',
+      id: 'Menghargai bell dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -3580,9 +3580,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、赤ん坊についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、あかんぼうについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai baby.',
+      jp: '周囲と協力しながら赤ん坊に取り組んでいる。',
+      furigana: 'しゅういときょうりょくしながらあかんぼうにとりくんでいる。',
+      id: 'Mengerjakan baby sambil bekerja sama dengan orang sekitar.',
     },
   },
   {
@@ -3612,9 +3612,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、事故についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、じこについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai kecelakaan.',
+      jp: '専門家が事故の重要性について指摘した。',
+      furigana: 'せんもんかがじこのじゅうようせいについてしてきした。',
+      id: 'Pakar menekankan pentingnya kecelakaan.',
     },
   },
   {
@@ -3628,9 +3628,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、変についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、へんについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai strange.',
+      jp: '仕事で変を活用して成果を上げた。',
+      furigana: 'しごとでへんをかつようしてせいかをあげた。',
+      id: 'Memanfaatkan strange dalam pekerjaan dan meraih hasil baik.',
     },
   },
   {
@@ -3644,9 +3644,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Komunikasi & Bahasa',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、辞典についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、じてんについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai encyclopedia.',
+      jp: '将来のために辞典を深く学んでいる。',
+      furigana: 'しょうらいのためにじてんをふかくまなんでいる。',
+      id: 'Mempelajari encyclopedia secara mendalam demi masa depan.',
     },
   },
   {
@@ -3655,7 +3655,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'のこる',
     romaji: 'nokoru',
     meaningEn: 'to remain (v.i.), to be left',
-    meaningId: 'melakukan remain (v.i.) / melakukan be left',
+    meaningId: 'Remain (v.i.) / Menjadi left',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -3671,7 +3671,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'たてる',
     romaji: 'tateru',
     meaningEn: 'to stand (something) up, to erect (something)',
-    meaningId: 'melakukan stand (something) up / melakukan erect (something)',
+    meaningId: 'Berdiri ((something) up) / Erect (something)',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -3687,7 +3687,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'くれる',
     romaji: 'kureru',
     meaningEn: 'to give, to do for',
-    meaningId: 'memberi / melakukan do for',
+    meaningId: 'Memberi / Do for',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -3708,9 +3708,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Akhiran / Prefiks (Suffix/Prefix)',
     exampleSentence: {
-      jp: '実社会において、員についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、いんについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai member of ~.',
+      jp: '先生から～員に関する詳しい説明を受けた。',
+      furigana: 'せんせいから～いんにかんするくわしいせつめいをうけた。',
+      id: 'Mendapatkan penjelasan rinci mengenai member of ~ dari guru.',
     },
   },
   {
@@ -3724,9 +3724,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、原因についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、げんいんについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai cause.',
+      jp: '今回の会議で原因についての議論が行われた。',
+      furigana: 'こんかいのかいぎでげんいんについてのぎろんがおこなわれた。',
+      id: 'Diskusi mengenai cause dilakukan dalam rapat kali ini.',
     },
   },
   {
@@ -3735,7 +3735,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'おどろく',
     romaji: 'odoroku',
     meaningEn: 'to be surprised, to be astonished',
-    meaningId: 'melakukan be surprised / melakukan be astonished',
+    meaningId: 'Menjadi surprised / Menjadi astonished',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -3756,9 +3756,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、いただくについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、頂くについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai -- extra-modest expression for たべる and のむ.',
+      jp: '周囲と協力しながらいただくに取り組んでいる。',
+      furigana: 'しゅういときょうりょくしながら頂くにとりくんでいる。',
+      id: 'Mengerjakan -- extra-modest expression for たべる and のむ sambil bekerja sama dengan orang sekitar.',
     },
   },
   {
@@ -3772,9 +3772,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、祖母についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、そぼについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai grandmother.',
+      jp: 'この本を読んで祖母の基礎を理解した。',
+      furigana: 'このほんをよんでそぼのきそをりかいした。',
+      id: 'Memahami dasar-dasar grandmother setelah membaca buku ini.',
     },
   },
   {
@@ -3788,9 +3788,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、場所についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ばしょについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai place.',
+      jp: '専門家が場所の重要性について指摘した。',
+      furigana: 'せんもんかがばしょのじゅうようせいについてしてきした。',
+      id: 'Pakar menekankan pentingnya place.',
     },
   },
   {
@@ -3804,9 +3804,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、答についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、こたえについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai answer.',
+      jp: '仕事で答を活用して成果を上げた。',
+      furigana: 'しごとでこたえをかつようしてせいかをあげた。',
+      id: 'Memanfaatkan answer dalam pekerjaan dan meraih hasil baik.',
     },
   },
   {
@@ -3820,9 +3820,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、もちろんについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、もちろんについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai certainly.',
+      jp: '将来のためにもちろんを深く学んでいる。',
+      furigana: 'しょうらいのためにもちろんをふかくまなんでいる。',
+      id: 'Mempelajari certainly secara mendalam demi masa depan.',
     },
   },
   {
@@ -3831,7 +3831,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'つける',
     romaji: 'tsukeru',
     meaningEn: 'to soak, to moisten, to pickle',
-    meaningId: 'melakukan soak / melakukan moisten / melakukan pickle',
+    meaningId: 'Soak / Moisten / Pickle',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -3852,9 +3852,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、受付についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、うけつけについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai reception(ist) desk.',
+      jp: '仕事で受付を活用して成果を上げた。',
+      furigana: 'しごとでうけつけをかつようしてせいかをあげた。',
+      id: 'Memanfaatkan reception(ist) desk dalam pekerjaan dan meraih hasil baik.',
     },
   },
   {
@@ -3868,9 +3868,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、内についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、うちについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai within.',
+      jp: '将来のために内を深く学んでいる。',
+      furigana: 'しょうらいのためにうちをふかくまなんでいる。',
+      id: 'Mempelajari within secara mendalam demi masa depan.',
     },
   },
   {
@@ -3884,9 +3884,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、スクリーンについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、スクリーンについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai screen.',
+      jp: '先生からスクリーンに関する詳しい説明を受けた。',
+      furigana: 'せんせいからスクリーンにかんするくわしいせつめいをうけた。',
+      id: 'Mendapatkan penjelasan rinci mengenai screen dari guru.',
     },
   },
   {
@@ -3895,7 +3895,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'ふえる',
     romaji: 'fueru',
     meaningEn: 'to increase, to multiply',
-    meaningId: 'melakukan increase / melakukan multiply',
+    meaningId: 'Meningkat / Bertambah / Multiply',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -3916,9 +3916,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、またはについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、またはについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai or.',
+      jp: '日々の生活でまたはを大切にしている。',
+      furigana: 'ひびのせいかつでまたはをたいせつにしている。',
+      id: 'Menghargai or dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -3932,9 +3932,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、けがするについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、けがするについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai injury (to animate object).',
+      jp: '周囲と協力しながらけがするに取り組んでいる。',
+      furigana: 'しゅういときょうりょくしながらけがするにとりくんでいる。',
+      id: 'Mengerjakan injury (to animate object) sambil bekerja sama dengan orang sekitar.',
     },
   },
   {
@@ -3948,9 +3948,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、以下についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、いかについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai less than.',
+      jp: 'この本を読んで以下の基礎を理解した。',
+      furigana: 'このほんをよんでいかのきそをりかいした。',
+      id: 'Memahami dasar-dasar less than setelah membaca buku ini.',
     },
   },
   {
@@ -3959,7 +3959,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'えらぶ',
     romaji: 'erabu',
     meaningEn: 'to choose; to select',
-    meaningId: 'melakukan choose / melakukan select',
+    meaningId: 'Memilih',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -3996,9 +3996,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Pikiran, Perasaan & Karakter',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、心についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、こころについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai heart.',
+      jp: 'この本を読んで心の基礎を理解した。',
+      furigana: 'このほんをよんでこころのきそをりかいした。',
+      id: 'Memahami dasar-dasar heart setelah membaca buku ini.',
     },
   },
   {
@@ -4007,7 +4007,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: '～だす',
     romaji: '～dasu',
     meaningEn: 'to start doing ~',
-    meaningId: 'melakukan start doing ~',
+    meaningId: 'Memulai (doing ~)',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -4028,9 +4028,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、サラダについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、サラダについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai salad.',
+      jp: '仕事でサラダを活用して成果を上げた。',
+      furigana: 'しごとでサラダをかつようしてせいかをあげた。',
+      id: 'Memanfaatkan salad dalam pekerjaan dan meraih hasil baik.',
     },
   },
   {
@@ -4039,7 +4039,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'とどける',
     romaji: 'todokeru',
     meaningEn: 'to deliver (v.t.)',
-    meaningId: 'melakukan deliver (v.t.)',
+    meaningId: 'Deliver (v.t.)',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -4060,9 +4060,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、挨拶についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、あいさつするについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai greet(ing).',
+      jp: '先生から挨拶に関する詳しい説明を受けた。',
+      furigana: 'せんせいからあいさつするにかんするくわしいせつめいをうけた。',
+      id: 'Mendapatkan penjelasan rinci mengenai greet(ing) dari guru.',
     },
   },
   {
@@ -4076,9 +4076,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、景色についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、けしきについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai scenery.',
+      jp: '今回の会議で景色についての議論が行われた。',
+      furigana: 'こんかいのかいぎでけしきについてのぎろんがおこなわれた。',
+      id: 'Diskusi mengenai scenery dilakukan dalam rapat kali ini.',
     },
   },
   {
@@ -4092,9 +4092,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、確かについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、たしかについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai if i remember correctly.',
+      jp: '日々の生活で確かを大切にしている。',
+      furigana: 'ひびのせいかつでたしかをたいせつにしている。',
+      id: 'Menghargai if i remember correctly dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -4108,9 +4108,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、ステーキについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ステーキについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai steak.',
+      jp: '周囲と協力しながらステーキに取り組んでいる。',
+      furigana: 'しゅういときょうりょくしながらステーキにとりくんでいる。',
+      id: 'Mengerjakan steak sambil bekerja sama dengan orang sekitar.',
     },
   },
   {
@@ -4124,9 +4124,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Makanan & Cita Rasa',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、食料品についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、しょくりょうひんについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai foodstuff.',
+      jp: 'この本を読んで食料品の基礎を理解した。',
+      furigana: 'このほんをよんでしょくりょうひんのきそをりかいした。',
+      id: 'Memahami dasar-dasar foodstuff setelah membaca buku ini.',
     },
   },
   {
@@ -4156,9 +4156,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、以内についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、いないについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai within.',
+      jp: '周囲と協力しながら以内に取り組んでいる。',
+      furigana: 'しゅういときょうりょくしながらいないにとりくんでいる。',
+      id: 'Mengerjakan within sambil bekerja sama dengan orang sekitar.',
     },
   },
   {
@@ -4188,9 +4188,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、オーバーについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、オーバーについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai overcoat.',
+      jp: '専門家がオーバーの重要性について指摘した。',
+      furigana: 'せんもんかがオーバーのじゅうようせいについてしてきした。',
+      id: 'Pakar menekankan pentingnya overcoat.',
     },
   },
   {
@@ -4199,7 +4199,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'かわく',
     romaji: 'kawaku',
     meaningEn: 'to get dry',
-    meaningId: 'melakukan get dry',
+    meaningId: 'Mendapatkan (dry)',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -4220,9 +4220,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、石についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、いしについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai stone.',
+      jp: '将来のために石を深く学んでいる。',
+      furigana: 'しょうらいのためにいしをふかくまなんでいる。',
+      id: 'Mempelajari stone secara mendalam demi masa depan.',
     },
   },
   {
@@ -4231,7 +4231,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'おもいだす',
     romaji: 'omoidasu',
     meaningEn: 'to recall, to remember',
-    meaningId: 'melakukan recall / mengingat',
+    meaningId: 'Recall / mengingat',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -4247,7 +4247,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'おどる',
     romaji: 'odoru',
     meaningEn: 'to dance',
-    meaningId: 'melakukan dance',
+    meaningId: 'Menari',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -4279,7 +4279,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'ぬる',
     romaji: 'nuru',
     meaningEn: 'to paint, to plaster',
-    meaningId: 'melakukan paint / melakukan plaster',
+    meaningId: 'Paint / Plaster',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -4300,9 +4300,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、ご主人についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ごしゅじんについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai (your.',
+      jp: 'この本を読んでご主人の基礎を理解した。',
+      furigana: 'このほんをよんでごしゅじんのきそをりかいした。',
+      id: 'Memahami dasar-dasar (your setelah membaca buku ini.',
     },
   },
   {
@@ -4332,9 +4332,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Bisnis & Pekerjaan',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、用についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ようについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai errand.',
+      jp: '周囲と協力しながら用に取り組んでいる。',
+      furigana: 'しゅういときょうりょくしながらようにとりくんでいる。',
+      id: 'Mengerjakan errand sambil bekerja sama dengan orang sekitar.',
     },
   },
   {
@@ -4348,9 +4348,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Masyarakat & Etika',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、公務員についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、こうむいんについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai government worker.',
+      jp: 'この本を読んで公務員の基礎を理解した。',
+      furigana: 'このほんをよんでこうむいんのきそをりかいした。',
+      id: 'Memahami dasar-dasar government worker setelah membaca buku ini.',
     },
   },
   {
@@ -4364,9 +4364,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、お嬢さんについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、おじょうさんについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai (someone\'s) daughter (polite).',
+      jp: '専門家がお嬢さんの重要性について指摘した。',
+      furigana: 'せんもんかがおじょうさんのじゅうようせいについてしてきした。',
+      id: 'Pakar menekankan pentingnya (someone\'s) daughter (polite).',
     },
   },
   {
@@ -4391,7 +4391,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'さがす',
     romaji: 'sagasu',
     meaningEn: 'to search, to seek, to look for',
-    meaningId: 'melakukan search / melakukan seek / melakukan look for',
+    meaningId: 'Search / Seek / Melihat (for)',
     level: 'N4',
     category: 'Lingkungan & Alam',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -4412,9 +4412,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、形についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、かたちについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai shape.',
+      jp: '先生から形に関する詳しい説明を受けた。',
+      furigana: 'せんせいからかたちにかんするくわしいせつめいをうけた。',
+      id: 'Mendapatkan penjelasan rinci mengenai shape dari guru.',
     },
   },
   {
@@ -4428,9 +4428,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、運転についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、うんてんするについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai driving.',
+      jp: '今回の会議で運転についての議論が行われた。',
+      furigana: 'こんかいのかいぎでうんてんするについてのぎろんがおこなわれた。',
+      id: 'Diskusi mengenai driving dilakukan dalam rapat kali ini.',
     },
   },
   {
@@ -4460,9 +4460,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、アナウンサーについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、アナウンサーについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai announcer.',
+      jp: '周囲と協力しながらアナウンサーに取り組んでいる。',
+      furigana: 'しゅういときょうりょくしながらアナウンサーにとりくんでいる。',
+      id: 'Mengerjakan announcer sambil bekerja sama dengan orang sekitar.',
     },
   },
   {
@@ -4476,9 +4476,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、お土産についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、おみやげについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai souvenir.',
+      jp: '今回の会議でお土産についての議論が行われた。',
+      furigana: 'こんかいのかいぎでおみやげについてのぎろんがおこなわれた。',
+      id: 'Diskusi mengenai souvenir dilakukan dalam rapat kali ini.',
     },
   },
   {
@@ -4492,9 +4492,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、消しゴムについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、けしゴムについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai eraser.',
+      jp: '日々の生活で消しゴムを大切にしている。',
+      furigana: 'ひびのせいかつでけしゴムをたいせつにしている。',
+      id: 'Menghargai eraser dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -4508,9 +4508,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、旅館についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、りょかんについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai a japanese inn.',
+      jp: '周囲と協力しながら旅館に取り組んでいる。',
+      furigana: 'しゅういときょうりょくしながらりょかんにとりくんでいる。',
+      id: 'Mengerjakan a japanese inn sambil bekerja sama dengan orang sekitar.',
     },
   },
   {
@@ -4524,9 +4524,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Lingkungan & Alam',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、海岸についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、かいがんについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai coast.',
+      jp: 'この本を読んで海岸の基礎を理解した。',
+      furigana: 'このほんをよんでかいがんのきそをりかいした。',
+      id: 'Memahami dasar-dasar coast setelah membaca buku ini.',
     },
   },
   {
@@ -4556,9 +4556,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、火についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ひについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai kebakaran.',
+      jp: '仕事で火を活用して成果を上げた。',
+      furigana: 'しごとでひをかつようしてせいかをあげた。',
+      id: 'Memanfaatkan kebakaran dalam pekerjaan dan meraih hasil baik.',
     },
   },
   {
@@ -4567,7 +4567,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'そだてる',
     romaji: 'sodateru',
     meaningEn: 'to raise (v.t.); to bring up',
-    meaningId: 'melakukan raise (v.t.) / melakukan bring up',
+    meaningId: 'Raise (v.t.) / Membawa (up)',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -4588,9 +4588,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、味噌についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、みそについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai miso.',
+      jp: '先生から味噌に関する詳しい説明を受けた。',
+      furigana: 'せんせいからみそにかんするくわしいせつめいをうけた。',
+      id: 'Mendapatkan penjelasan rinci mengenai miso dari guru.',
     },
   },
   {
@@ -4620,9 +4620,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、乗り物についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、のりものについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai vehicle.',
+      jp: '日々の生活で乗り物を大切にしている。',
+      furigana: 'ひびのせいかつでのりものをたいせつにしている。',
+      id: 'Menghargai vehicle dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -4636,9 +4636,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、案内についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、あんないするについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai information.',
+      jp: '先生から案内に関する詳しい説明を受けた。',
+      furigana: 'せんせいからあんないするにかんするくわしいせつめいをうけた。',
+      id: 'Mendapatkan penjelasan rinci mengenai information dari guru.',
     },
   },
   {
@@ -4647,7 +4647,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'かよう',
     romaji: 'kayou',
     meaningEn: 'to go back and forth; to commute',
-    meaningId: 'melakukan go back and forth / melakukan commute',
+    meaningId: 'Go back and forth / Commute',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -4663,7 +4663,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'つれる',
     romaji: 'tsureru',
     meaningEn: 'to lead, to take (a person)',
-    meaningId: 'melakukan lead / melakukan take (a person)',
+    meaningId: 'Memimpin / Mengambil ((a person))',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -4684,9 +4684,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Sains & Kesehatan',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、技術についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ぎじゅつについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai technique.',
+      jp: '周囲と協力しながら技術に取り組んでいる。',
+      furigana: 'しゅういときょうりょくしながらぎじゅつにとりくんでいる。',
+      id: 'Mengerjakan technique sambil bekerja sama dengan orang sekitar.',
     },
   },
   {
@@ -4716,9 +4716,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、下宿についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、げしゅくについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai lodging.',
+      jp: '専門家が下宿の重要性について指摘した。',
+      furigana: 'せんもんかがげしゅくのじゅうようせいについてしてきした。',
+      id: 'Pakar menekankan pentingnya lodging.',
     },
   },
   {
@@ -4732,9 +4732,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、ジャムについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ジャムについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai jam.',
+      jp: '仕事でジャムを活用して成果を上げた。',
+      furigana: 'しごとでジャムをかつようしてせいかをあげた。',
+      id: 'Memanfaatkan jam dalam pekerjaan dan meraih hasil baik.',
     },
   },
   {
@@ -4748,9 +4748,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、招待についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、しょうたいするについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai invitation.',
+      jp: '将来のために招待を深く学んでいる。',
+      furigana: 'しょうらいのためにしょうたいするをふかくまなんでいる。',
+      id: 'Mempelajari invitation secara mendalam demi masa depan.',
     },
   },
   {
@@ -4764,9 +4764,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、鏡についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、かがみについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai mirror.',
+      jp: '先生から鏡に関する詳しい説明を受けた。',
+      furigana: 'せんせいからかがみにかんするくわしいせつめいをうけた。',
+      id: 'Mendapatkan penjelasan rinci mengenai mirror dari guru.',
     },
   },
   {
@@ -4780,9 +4780,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、はずについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、はずについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai it should be so.',
+      jp: '今回の会議ではずについての議論が行われた。',
+      furigana: 'こんかいのかいぎではずについてのぎろんがおこなわれた。',
+      id: 'Diskusi mengenai it should be so dilakukan dalam rapat kali ini.',
     },
   },
   {
@@ -4796,9 +4796,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Masyarakat & Etika',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、法律についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ほうりつについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai hukum.',
+      jp: '日々の生活で法律を大切にしている。',
+      furigana: 'ひびのせいかつでほうりつをたいせつにしている。',
+      id: 'Menghargai hukum dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -4807,7 +4807,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'すすむ',
     romaji: 'susumu',
     meaningEn: 'to advance, to proceed',
-    meaningId: 'melakukan advance / melakukan proceed',
+    meaningId: 'Advance / Proceed',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -4823,7 +4823,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'たのしむ',
     romaji: 'tanoshimu',
     meaningEn: 'to enjoy',
-    meaningId: 'melakukan enjoy',
+    meaningId: 'Enjoy',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -4844,9 +4844,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Bisnis & Pekerjaan',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、貿易についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ぼうえきについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai trade.',
+      jp: '専門家が貿易の重要性について指摘した。',
+      furigana: 'せんもんかがぼうえきのじゅうようせいについてしてきした。',
+      id: 'Pakar menekankan pentingnya trade.',
     },
   },
   {
@@ -4860,9 +4860,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、反対についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、はんたいについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai oppose.',
+      jp: '仕事で反対を活用して成果を上げた。',
+      furigana: 'しごとではんたいをかつようしてせいかをあげた。',
+      id: 'Memanfaatkan oppose dalam pekerjaan dan meraih hasil baik.',
     },
   },
   {
@@ -4876,9 +4876,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、おるについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、おるについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai -- extra-modest expression for いる --.',
+      jp: '将来のためにおるを深く学んでいる。',
+      furigana: 'しょうらいのためにおるをふかくまなんでいる。',
+      id: 'Mempelajari -- extra-modest expression for いる -- secara mendalam demi masa depan.',
     },
   },
   {
@@ -4892,9 +4892,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、申すについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、もうすについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai -- extra-modest (humble) expression for 言う (いう) --.',
+      jp: '先生から申すに関する詳しい説明を受けた。',
+      furigana: 'せんせいからもうすにかんするくわしいせつめいをうけた。',
+      id: 'Mendapatkan penjelasan rinci mengenai -- extra-modest (humble) expression for 言う (いう) -- dari guru.',
     },
   },
   {
@@ -4908,9 +4908,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、試験についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、しけんについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai an exam.',
+      jp: '今回の会議で試験についての議論が行われた。',
+      furigana: 'こんかいのかいぎでしけんについてのぎろんがおこなわれた。',
+      id: 'Diskusi mengenai an exam dilakukan dalam rapat kali ini.',
     },
   },
   {
@@ -4924,9 +4924,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、真面目についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、まじめについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai diligent.',
+      jp: '日々の生活で真面目を大切にしている。',
+      furigana: 'ひびのせいかつでまじめをたいせつにしている。',
+      id: 'Menghargai diligent dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -4940,9 +4940,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、ごらんになるについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ごらんになるについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai -- honorific expression for みる --.',
+      jp: '周囲と協力しながらごらんになるに取り組んでいる。',
+      furigana: 'しゅういときょうりょくしながらごらんになるにとりくんでいる。',
+      id: 'Mengerjakan -- honorific expression for みる -- sambil bekerja sama dengan orang sekitar.',
     },
   },
   {
@@ -4956,9 +4956,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、店員についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、てんいんについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai clerk.',
+      jp: '今回の会議で店員についての議論が行われた。',
+      furigana: 'こんかいのかいぎでてんいんについてのぎろんがおこなわれた。',
+      id: 'Diskusi mengenai clerk dilakukan dalam rapat kali ini.',
     },
   },
   {
@@ -4967,7 +4967,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'とまる',
     romaji: 'tomaru',
     meaningEn: 'to stay (over night) (v.i.)',
-    meaningId: 'melakukan stay (over night) (v.i.)',
+    meaningId: 'Stay (over night) (v.i.)',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -5004,9 +5004,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、今夜についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、こんやについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai this evening.',
+      jp: 'この本を読んで今夜の基礎を理解した。',
+      furigana: 'このほんをよんでこんやのきそをりかいした。',
+      id: 'Memahami dasar-dasar this evening setelah membaca buku ini.',
     },
   },
   {
@@ -5036,9 +5036,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、チェックするについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、チェックするについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai check.',
+      jp: '仕事でチェックするを活用して成果を上げた。',
+      furigana: 'しごとでチェックするをかつようしてせいかをあげた。',
+      id: 'Memanfaatkan check dalam pekerjaan dan meraih hasil baik.',
     },
   },
   {
@@ -5052,9 +5052,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Komunikasi & Bahasa',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、会話についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、かいわについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai conversation.',
+      jp: '将来のために会話を深く学んでいる。',
+      furigana: 'しょうらいのためにかいわをふかくまなんでいる。',
+      id: 'Mempelajari conversation secara mendalam demi masa depan.',
     },
   },
   {
@@ -5068,9 +5068,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、空気についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、くうきについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai air.',
+      jp: '先生から空気に関する詳しい説明を受けた。',
+      furigana: 'せんせいからくうきにかんするくわしいせつめいをうけた。',
+      id: 'Mendapatkan penjelasan rinci mengenai air dari guru.',
     },
   },
   {
@@ -5084,9 +5084,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、交通についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、こうつうについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai traffic.',
+      jp: '今回の会議で交通についての議論が行われた。',
+      furigana: 'こんかいのかいぎでこうつうについてのぎろんがおこなわれた。',
+      id: 'Diskusi mengenai traffic dilakukan dalam rapat kali ini.',
     },
   },
   {
@@ -5100,9 +5100,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Komunikasi & Bahasa',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、ワープロについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ワープロについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai word processor.',
+      jp: '日々の生活でワープロを大切にしている。',
+      furigana: 'ひびのせいかつでワープロをたいせつにしている。',
+      id: 'Menghargai word processor dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -5111,7 +5111,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'よろこぶ',
     romaji: 'yorokobu',
     meaningEn: 'to rejoice, to be delighted, to be glad',
-    meaningId: 'melakukan rejoice / melakukan be delighted / melakukan be glad',
+    meaningId: 'Rejoice / Menjadi delighted / Menjadi glad',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -5132,9 +5132,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Lingkungan & Alam',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、急行についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、きゅうこうについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai express train or bus.',
+      jp: '今回の会議で急行についての議論が行われた。',
+      furigana: 'こんかいのかいぎできゅうこうについてのぎろんがおこなわれた。',
+      id: 'Diskusi mengenai express train or bus dilakukan dalam rapat kali ini.',
     },
   },
   {
@@ -5164,9 +5164,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Makanan & Cita Rasa',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、味についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、あじについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai flavor.',
+      jp: '周囲と協力しながら味に取り組んでいる。',
+      furigana: 'しゅういときょうりょくしながらあじにとりくんでいる。',
+      id: 'Mengerjakan flavor sambil bekerja sama dengan orang sekitar.',
     },
   },
   {
@@ -5180,9 +5180,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、空港についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、くうこうについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai airport.',
+      jp: 'この本を読んで空港の基礎を理解した。',
+      furigana: 'このほんをよんでくうこうのきそをりかいした。',
+      id: 'Memahami dasar-dasar airport setelah membaca buku ini.',
     },
   },
   {
@@ -5196,9 +5196,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、手袋についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、てぶくろについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai glove(s).',
+      jp: '専門家が手袋の重要性について指摘した。',
+      furigana: 'せんもんかがてぶくろのじゅうようせいについてしてきした。',
+      id: 'Pakar menekankan pentingnya glove(s).',
     },
   },
   {
@@ -5212,9 +5212,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、校長についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、こうちょうについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai principal.',
+      jp: '仕事で校長を活用して成果を上げた。',
+      furigana: 'しごとでこうちょうをかつようしてせいかをあげた。',
+      id: 'Memanfaatkan principal dalam pekerjaan dan meraih hasil baik.',
     },
   },
   {
@@ -5228,9 +5228,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Makanan & Cita Rasa',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、ごちそうについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ごちそうについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai feast.',
+      jp: '将来のためにごちそうを深く学んでいる。',
+      furigana: 'しょうらいのためにごちそうをふかくまなんでいる。',
+      id: 'Mempelajari feast secara mendalam demi masa depan.',
     },
   },
   {
@@ -5260,9 +5260,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、興味についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、きょうみについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai interest (in something).',
+      jp: '今回の会議で興味についての議論が行われた。',
+      furigana: 'こんかいのかいぎできょうみについてのぎろんがおこなわれた。',
+      id: 'Diskusi mengenai interest (in something) dilakukan dalam rapat kali ini.',
     },
   },
   {
@@ -5271,7 +5271,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'ひっこす',
     romaji: 'hikkosu',
     meaningEn: 'to move to a new place of residence',
-    meaningId: 'melakukan move to a new place of residence',
+    meaningId: 'Bergerak (to a new place of residence)',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -5292,9 +5292,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、冷房についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、れいぼうについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai cooling.',
+      jp: '先生から冷房に関する詳しい説明を受けた。',
+      furigana: 'せんせいかられいぼうにかんするくわしいせつめいをうけた。',
+      id: 'Mendapatkan penjelasan rinci mengenai cooling dari guru.',
     },
   },
   {
@@ -5308,9 +5308,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、都合についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、つごうについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai circumstances.',
+      jp: '今回の会議で都合についての議論が行われた。',
+      furigana: 'こんかいのかいぎでつごうについてのぎろんがおこなわれた。',
+      id: 'Diskusi mengenai circumstances dilakukan dalam rapat kali ini.',
     },
   },
   {
@@ -5324,9 +5324,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Lingkungan & Alam',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、遠慮についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、えんりょするについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai restraint.',
+      jp: '日々の生活で遠慮を大切にしている。',
+      furigana: 'ひびのせいかつでえんりょするをたいせつにしている。',
+      id: 'Menghargai restraint dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -5335,7 +5335,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'なくなる',
     romaji: 'nakunaru',
     meaningEn: 'to pass away',
-    meaningId: 'melakukan pass away',
+    meaningId: 'Melewati (away)',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -5351,14 +5351,14 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'かがく',
     romaji: 'kagaku',
     meaningEn: 'science',
-    meaningId: 'science',
+    meaningId: 'Ilmu pengetahuan',
     level: 'N4',
     category: 'Sains & Kesehatan',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、科学についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、かがくについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai science.',
+      jp: 'この本を読んで科学の基礎を理解した。',
+      furigana: 'このほんをよんでかがくのきそをりかいした。',
+      id: 'Memahami dasar-dasar ilmu pengetahuan setelah membaca buku ini.',
     },
   },
   {
@@ -5388,9 +5388,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、差し上げるについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、さしあげるについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai -- humble expression for あげる --.',
+      jp: '仕事で差し上げるを活用して成果を上げた。',
+      furigana: 'しごとでさしあげるをかつようしてせいかをあげた。',
+      id: 'Memanfaatkan -- humble expression for あげる -- dalam pekerjaan dan meraih hasil baik.',
     },
   },
   {
@@ -5404,9 +5404,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Pikiran, Perasaan & Karakter',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、気持ちについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、きもちについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai feeling.',
+      jp: '将来のために気持ちを深く学んでいる。',
+      furigana: 'しょうらいのためにきもちをふかくまなんでいる。',
+      id: 'Mempelajari feeling secara mendalam demi masa depan.',
     },
   },
   {
@@ -5420,9 +5420,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、祖父についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、そふについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai grandfather.',
+      jp: '先生から祖父に関する詳しい説明を受けた。',
+      furigana: 'せんせいからそふにかんするくわしいせつめいをうけた。',
+      id: 'Mendapatkan penjelasan rinci mengenai grandfather dari guru.',
     },
   },
   {
@@ -5436,9 +5436,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、港についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、みなとについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai harbor.',
+      jp: '仕事で港を活用して成果を上げた。',
+      furigana: 'しごとでみなとをかつようしてせいかをあげた。',
+      id: 'Memanfaatkan harbor dalam pekerjaan dan meraih hasil baik.',
     },
   },
   {
@@ -5452,9 +5452,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、予約についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、よやくについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai reservation.',
+      jp: '将来のために予約を深く学んでいる。',
+      furigana: 'しょうらいのためによやくをふかくまなんでいる。',
+      id: 'Mempelajari reservation secara mendalam demi masa depan.',
     },
   },
   {
@@ -5484,9 +5484,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、入学についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、にゅうがくするについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai entry to school or university.',
+      jp: '今回の会議で入学についての議論が行われた。',
+      furigana: 'こんかいのかいぎでにゅうがくするについてのぎろんがおこなわれた。',
+      id: 'Diskusi mengenai entry to school or university dilakukan dalam rapat kali ini.',
     },
   },
   {
@@ -5495,7 +5495,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'かたづける',
     romaji: 'katazukeru',
     meaningEn: 'to (clean) tidy up (v.t.), to put away',
-    meaningId: 'melakukan (clean) tidy up (v.t.) / melakukan put away',
+    meaningId: '(clean) tidy up (v.t.) / Menaruh (away)',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -5511,7 +5511,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'うつす',
     romaji: 'utsusu',
     meaningEn: 'to copy (v.t.); to photograph',
-    meaningId: 'melakukan copy (v.t.) / melakukan photograph',
+    meaningId: 'Copy (v.t.) / Photograph',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -5532,9 +5532,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、パソコンについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、パソコンについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai (personal) computer.',
+      jp: 'この本を読んでパソコンの基礎を理解した。',
+      furigana: 'このほんをよんでパソコンのきそをりかいした。',
+      id: 'Memahami dasar-dasar (personal) computer setelah membaca buku ini.',
     },
   },
   {
@@ -5548,9 +5548,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、部長についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ぶちょうについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai department (division) manager.',
+      jp: '専門家が部長の重要性について指摘した。',
+      furigana: 'せんもんかがぶちょうのじゅうようせいについてしてきした。',
+      id: 'Pakar menekankan pentingnya department (division) manager.',
     },
   },
   {
@@ -5564,9 +5564,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、火事についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、かじについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai kebakaran.',
+      jp: '仕事で火事を活用して成果を上げた。',
+      furigana: 'しごとでかじをかつようしてせいかをあげた。',
+      id: 'Memanfaatkan kebakaran dalam pekerjaan dan meraih hasil baik.',
     },
   },
   {
@@ -5575,7 +5575,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'たす',
     romaji: 'tasu',
     meaningEn: 'to add (numbers)',
-    meaningId: 'melakukan add (numbers)',
+    meaningId: 'Add (numbers)',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -5612,9 +5612,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、彼らについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、かれらについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai they (usually male).',
+      jp: '仕事で彼らを活用して成果を上げた。',
+      furigana: 'しごとでかれらをかつようしてせいかをあげた。',
+      id: 'Memanfaatkan they (usually male) dalam pekerjaan dan meraih hasil baik.',
     },
   },
   {
@@ -5623,7 +5623,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'いっぱい',
     romaji: 'ippai',
     meaningEn: 'full, to the utmost',
-    meaningId: 'full / melakukan the utmost',
+    meaningId: 'Full / The utmost',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Sifat-i',
@@ -5644,9 +5644,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、アメリカについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、アメリカについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai america.',
+      jp: '先生からアメリカに関する詳しい説明を受けた。',
+      furigana: 'せんせいからアメリカにかんするくわしいせつめいをうけた。',
+      id: 'Mendapatkan penjelasan rinci mengenai america dari guru.',
     },
   },
   {
@@ -5676,9 +5676,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、理由についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、りゆうについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai alasan.',
+      jp: '日々の生活で理由を大切にしている。',
+      furigana: 'ひびのせいかつでりゆうをたいせつにしている。',
+      id: 'Menghargai alasan dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -5687,14 +5687,14 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'せいさんする',
     romaji: 'seisansuru',
     meaningEn: 'production; to produce',
-    meaningId: 'production / melakukan produce',
+    meaningId: 'Production / Produce',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、生産についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、せいさんするについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai production.',
+      jp: '周囲と協力しながら生産に取り組んでいる。',
+      furigana: 'しゅういときょうりょくしながらせいさんするにとりくんでいる。',
+      id: 'Mengerjakan production sambil bekerja sama dengan orang sekitar.',
     },
   },
   {
@@ -5708,9 +5708,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、着物についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、きものについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai kimono.',
+      jp: 'この本を読んで着物の基礎を理解した。',
+      furigana: 'このほんをよんできもののきそをりかいした。',
+      id: 'Memahami dasar-dasar kimono setelah membaca buku ini.',
     },
   },
   {
@@ -5724,9 +5724,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、おもちゃについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、おもちゃについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai a toy.',
+      jp: '専門家がおもちゃの重要性について指摘した。',
+      furigana: 'せんもんかがおもちゃのじゅうようせいについてしてきした。',
+      id: 'Pakar menekankan pentingnya a toy.',
     },
   },
   {
@@ -5735,7 +5735,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'くれる',
     romaji: 'kureru',
     meaningEn: 'to get dark, to come to an end',
-    meaningId: 'melakukan get dark / melakukan come to an end',
+    meaningId: 'Mendapatkan (dark) / Come to an end',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -5751,7 +5751,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'つる',
     romaji: 'tsuru',
     meaningEn: 'to fish',
-    meaningId: 'melakukan fish',
+    meaningId: 'Fish',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -5772,9 +5772,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Akhiran / Prefiks (Suffix/Prefix)',
     exampleSentence: {
-      jp: '実社会において、ちゃんについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ちゃんについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai suffix for familiar (female) person.',
+      jp: '専門家が～ちゃんの重要性について指摘した。',
+      furigana: 'せんもんかが～ちゃんのじゅうようせいについてしてきした。',
+      id: 'Pakar menekankan pentingnya suffix for familiar (female) person.',
     },
   },
   {
@@ -5783,7 +5783,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'うつ',
     romaji: 'utsu',
     meaningEn: 'to hit, to strike',
-    meaningId: 'melakukan hit / melakukan strike',
+    meaningId: 'Memukul / Mengenai / Memukul / Menyerang',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -5815,7 +5815,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'あやまる',
     romaji: 'ayamaru',
     meaningEn: 'to apologize',
-    meaningId: 'melakukan apologize',
+    meaningId: 'Meminta maaf',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -5836,9 +5836,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、昼間についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ひるまについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai daytime.',
+      jp: '今回の会議で昼間についての議論が行われた。',
+      furigana: 'こんかいのかいぎでひるまについてのぎろんがおこなわれた。',
+      id: 'Diskusi mengenai daytime dilakukan dalam rapat kali ini.',
     },
   },
   {
@@ -5852,9 +5852,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、教育についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、きょういくについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai pendidikan.',
+      jp: '日々の生活で教育を大切にしている。',
+      furigana: 'ひびのせいかつできょういくをたいせつにしている。',
+      id: 'Menghargai pendidikan dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -5884,9 +5884,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Makanan & Cita Rasa',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、米についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、こめについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai uncooked rice.',
+      jp: 'この本を読んで米の基礎を理解した。',
+      furigana: 'このほんをよんでこめのきそをりかいした。',
+      id: 'Memahami dasar-dasar uncooked rice setelah membaca buku ini.',
     },
   },
   {
@@ -5900,9 +5900,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、邪魔についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、じゃまについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai hindrance.',
+      jp: '専門家が邪魔の重要性について指摘した。',
+      furigana: 'せんもんかがじゃまのじゅうようせいについてしてきした。',
+      id: 'Pakar menekankan pentingnya hindrance.',
     },
   },
   {
@@ -5932,9 +5932,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、隅についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、すみについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai corner.',
+      jp: 'この本を読んで隅の基礎を理解した。',
+      furigana: 'このほんをよんですみのきそをりかいした。',
+      id: 'Memahami dasar-dasar corner setelah membaca buku ini.',
     },
   },
   {
@@ -5948,9 +5948,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、伺うについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、うかがうについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai humble form of 行く (いく).',
+      jp: '専門家が伺うの重要性について指摘した。',
+      furigana: 'せんもんかがうかがうのじゅうようせいについてしてきした。',
+      id: 'Pakar menekankan pentingnya humble form of 行く (いく).',
     },
   },
   {
@@ -5964,9 +5964,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、再来週についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、さらいしゅうについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai the week after next.',
+      jp: '仕事で再来週を活用して成果を上げた。',
+      furigana: 'しごとでさらいしゅうをかつようしてせいかをあげた。',
+      id: 'Memanfaatkan the week after next dalam pekerjaan dan meraih hasil baik.',
     },
   },
   {
@@ -5980,9 +5980,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、夢についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ゆめについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai mimpi.',
+      jp: '将来のために夢を深く学んでいる。',
+      furigana: 'しょうらいのためにゆめをふかくまなんでいる。',
+      id: 'Mempelajari mimpi secara mendalam demi masa depan.',
     },
   },
   {
@@ -5996,9 +5996,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、喉についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、のどについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai tenggorokan.',
+      jp: '先生から喉に関する詳しい説明を受けた。',
+      furigana: 'せんせいからのどにかんするくわしいせつめいをうけた。',
+      id: 'Mendapatkan penjelasan rinci mengenai tenggorokan dari guru.',
     },
   },
   {
@@ -6012,9 +6012,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、最近についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、さいきんについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai recently.',
+      jp: '今回の会議で最近についての議論が行われた。',
+      furigana: 'こんかいのかいぎでさいきんについてのぎろんがおこなわれた。',
+      id: 'Diskusi mengenai recently dilakukan dalam rapat kali ini.',
     },
   },
   {
@@ -6044,9 +6044,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、歴史についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、れきしについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai sejarah.',
+      jp: '周囲と協力しながら歴史に取り組んでいる。',
+      furigana: 'しゅういときょうりょくしながられきしにとりくんでいる。',
+      id: 'Mengerjakan sejarah sambil bekerja sama dengan orang sekitar.',
     },
   },
   {
@@ -6060,9 +6060,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、不便についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ふべんについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai inconvenience.',
+      jp: 'この本を読んで不便の基礎を理解した。',
+      furigana: 'このほんをよんでふべんのきそをりかいした。',
+      id: 'Memahami dasar-dasar inconvenience setelah membaca buku ini.',
     },
   },
   {
@@ -6076,9 +6076,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、血についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ちについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai blood.',
+      jp: '日々の生活で血を大切にしている。',
+      furigana: 'ひびのせいかつでちをたいせつにしている。',
+      id: 'Menghargai blood dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -6087,7 +6087,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: '～つづける',
     romaji: '～tsuzukeru',
     meaningEn: 'to continue doing ~',
-    meaningId: 'melakukan continue doing ~',
+    meaningId: 'Continue doing ~',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -6108,9 +6108,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、毛についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、けについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai hair.',
+      jp: 'この本を読んで毛の基礎を理解した。',
+      furigana: 'このほんをよんでけのきそをりかいした。',
+      id: 'Memahami dasar-dasar hair setelah membaca buku ini.',
     },
   },
   {
@@ -6140,9 +6140,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、例えばについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、たとえばについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai for example.',
+      jp: '仕事で例えばを活用して成果を上げた。',
+      furigana: 'しごとでたとえばをかつようしてせいかをあげた。',
+      id: 'Memanfaatkan for example dalam pekerjaan dan meraih hasil baik.',
     },
   },
   {
@@ -6156,9 +6156,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、中々についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、なかなかについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai very.',
+      jp: '将来のために中々を深く学んでいる。',
+      furigana: 'しょうらいのためになかなかをふかくまなんでいる。',
+      id: 'Mempelajari very secara mendalam demi masa depan.',
     },
   },
   {
@@ -6172,9 +6172,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、随分についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ずいぶんについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai extremely.',
+      jp: '先生から随分に関する詳しい説明を受けた。',
+      furigana: 'せんせいからずいぶんにかんするくわしいせつめいをうけた。',
+      id: 'Mendapatkan penjelasan rinci mengenai extremely dari guru.',
     },
   },
   {
@@ -6204,9 +6204,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、押し入れについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、おしいれについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai closet.',
+      jp: '日々の生活で押し入れを大切にしている。',
+      furigana: 'ひびのせいかつでおしいれをたいせつにしている。',
+      id: 'Menghargai closet dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -6220,9 +6220,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、電灯についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、でんとうについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai electric light.',
+      jp: '周囲と協力しながら電灯に取り組んでいる。',
+      furigana: 'しゅういときょうりょくしながらでんとうにとりくんでいる。',
+      id: 'Mengerjakan electric light sambil bekerja sama dengan orang sekitar.',
     },
   },
   {
@@ -6231,7 +6231,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'しかる',
     romaji: 'shikaru',
     meaningEn: 'to scold',
-    meaningId: 'melakukan scold',
+    meaningId: 'Memarahi',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -6252,9 +6252,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、サンダルについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、サンダルについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai sandal.',
+      jp: '日々の生活でサンダルを大切にしている。',
+      furigana: 'ひびのせいかつでサンダルをたいせつにしている。',
+      id: 'Menghargai sandal dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -6263,7 +6263,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'びっくりする',
     romaji: 'bikkurisuru',
     meaningEn: 'to be surprised',
-    meaningId: 'melakukan be surprised',
+    meaningId: 'Menjadi surprised',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -6295,7 +6295,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'かえる',
     romaji: 'kaeru',
     meaningEn: 'to change, to alter, to vary',
-    meaningId: 'melakukan change / melakukan alter / melakukan vary',
+    meaningId: 'Mengubah / Berubah / Alter / Vary',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -6316,9 +6316,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、講堂についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、こうどうについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai auditorium.',
+      jp: '仕事で講堂を活用して成果を上げた。',
+      furigana: 'しごとでこうどうをかつようしてせいかをあげた。',
+      id: 'Memanfaatkan auditorium dalam pekerjaan dan meraih hasil baik.',
     },
   },
   {
@@ -6332,9 +6332,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、子についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、こについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai child.',
+      jp: '将来のために子を深く学んでいる。',
+      furigana: 'しょうらいのためにこをふかくまなんでいる。',
+      id: 'Mempelajari child secara mendalam demi masa depan.',
     },
   },
   {
@@ -6364,9 +6364,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、レジについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、レジについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai register.',
+      jp: '今回の会議でレジについての議論が行われた。',
+      furigana: 'こんかいのかいぎでレジについてのぎろんがおこなわれた。',
+      id: 'Diskusi mengenai register dilakukan dalam rapat kali ini.',
     },
   },
   {
@@ -6380,9 +6380,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、しばらくについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、しばらくについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai little while.',
+      jp: '日々の生活でしばらくを大切にしている。',
+      furigana: 'ひびのせいかつでしばらくをたいせつにしている。',
+      id: 'Menghargai little while dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -6396,9 +6396,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、特にについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、とくにについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai particularly.',
+      jp: '周囲と協力しながら特にに取り組んでいる。',
+      furigana: 'しゅういときょうりょくしながらとくににとりくんでいる。',
+      id: 'Mengerjakan particularly sambil bekerja sama dengan orang sekitar.',
     },
   },
   {
@@ -6407,7 +6407,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'あく',
     romaji: 'aku',
     meaningEn: 'to open, to become empty (vacant)',
-    meaningId: 'membuka / melakukan become empty (vacant)',
+    meaningId: 'Membuka / Become empty (vacant)',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -6428,9 +6428,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、計画についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、けいかくするについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai rencana.',
+      jp: '専門家が計画の重要性について指摘した。',
+      furigana: 'せんもんかがけいかくするのじゅうようせいについてしてきした。',
+      id: 'Pakar menekankan pentingnya rencana.',
     },
   },
   {
@@ -6460,9 +6460,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、下着についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、したぎについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai underwear.',
+      jp: '将来のために下着を深く学んでいる。',
+      furigana: 'しょうらいのためにしたぎをふかくまなんでいる。',
+      id: 'Mempelajari underwear secara mendalam demi masa depan.',
     },
   },
   {
@@ -6492,9 +6492,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、こうについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、こうについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai like this.',
+      jp: '今回の会議でこうについての議論が行われた。',
+      furigana: 'こんかいのかいぎでこうについてのぎろんがおこなわれた。',
+      id: 'Diskusi mengenai like this dilakukan dalam rapat kali ini.',
     },
   },
   {
@@ -6508,9 +6508,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、是非についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ぜひについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai certainly.',
+      jp: '日々の生活で是非を大切にしている。',
+      furigana: 'ひびのせいかつでぜひをたいせつにしている。',
+      id: 'Menghargai certainly dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -6524,9 +6524,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、裏についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、うらについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai reverse side.',
+      jp: '周囲と協力しながら裏に取り組んでいる。',
+      furigana: 'しゅういときょうりょくしながらうらにとりくんでいる。',
+      id: 'Mengerjakan reverse side sambil bekerja sama dengan orang sekitar.',
     },
   },
   {
@@ -6540,9 +6540,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、為についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ためについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai good.',
+      jp: 'この本を読んで為の基礎を理解した。',
+      furigana: 'このほんをよんでためのきそをりかいした。',
+      id: 'Memahami dasar-dasar good setelah membaca buku ini.',
     },
   },
   {
@@ -6556,9 +6556,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、おいでになるについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、おいでになるについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai (hon.) to be.',
+      jp: '日々の生活でおいでになるを大切にしている。',
+      furigana: 'ひびのせいかつでおいでになるをたいせつにしている。',
+      id: 'Menghargai (hon.) to be dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -6567,7 +6567,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'かわる',
     romaji: 'kawaru',
     meaningEn: 'to change (v.i.), to be transformed, to vary',
-    meaningId: 'melakukan change (v.i.) / melakukan be transformed / melakukan vary',
+    meaningId: 'Mengubah ((v.i.)) / Menjadi transformed / Vary',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -6599,7 +6599,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'すむ',
     romaji: 'sumu',
     meaningEn: 'to finish, to end',
-    meaningId: 'melakukan finish / melakukan end',
+    meaningId: 'Menyelesaikan / Mengakhiri / Berakhir',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -6620,9 +6620,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、ハンバーグについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ハンバーグについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai hamburger steak.',
+      jp: '仕事でハンバーグを活用して成果を上げた。',
+      furigana: 'しごとでハンバーグをかつようしてせいかをあげた。',
+      id: 'Memanfaatkan hamburger steak dalam pekerjaan dan meraih hasil baik.',
     },
   },
   {
@@ -6636,9 +6636,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、市についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、しについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai city.',
+      jp: '将来のために市を深く学んでいる。',
+      furigana: 'しょうらいのためにしをふかくまなんでいる。',
+      id: 'Mempelajari city secara mendalam demi masa depan.',
     },
   },
   {
@@ -6652,9 +6652,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、引き出しについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ひきだしについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai drawer.',
+      jp: '先生から引き出しに関する詳しい説明を受けた。',
+      furigana: 'せんせいからひきだしにかんするくわしいせつめいをうけた。',
+      id: 'Mendapatkan penjelasan rinci mengenai drawer dari guru.',
     },
   },
   {
@@ -6668,9 +6668,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、遊びについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、あそびについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai play.',
+      jp: '今回の会議で遊びについての議論が行われた。',
+      furigana: 'こんかいのかいぎであそびについてのぎろんがおこなわれた。',
+      id: 'Diskusi mengenai play dilakukan dalam rapat kali ini.',
     },
   },
   {
@@ -6684,9 +6684,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、支度についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、したくするについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai persiapan.',
+      jp: '日々の生活で支度を大切にしている。',
+      furigana: 'ひびのせいかつでしたくするをたいせつにしている。',
+      id: 'Menghargai persiapan dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -6695,7 +6695,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: '～はじめる',
     romaji: '～hajimeru',
     meaningEn: 'to start doing ~',
-    meaningId: 'melakukan start doing ~',
+    meaningId: 'Memulai (doing ~)',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -6711,7 +6711,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'みえる',
     romaji: 'mieru',
     meaningEn: 'to be visible; -- polite verb meaning 来る (くる) --',
-    meaningId: 'melakukan be visible / -- polite verb meaning 来る (くる) --',
+    meaningId: 'Menjadi visible / -- polite verb meaning 来る (くる) --',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -6732,9 +6732,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、十分についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、じゅうぶんについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai enough.',
+      jp: '日々の生活で十分を大切にしている。',
+      furigana: 'ひびのせいかつでじゅうぶんをたいせつにしている。',
+      id: 'Menghargai enough dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -6748,9 +6748,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、音についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、おとについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai sound.',
+      jp: '周囲と協力しながら音に取り組んでいる。',
+      furigana: 'しゅういときょうりょくしながらおとにとりくんでいる。',
+      id: 'Mengerjakan sound sambil bekerja sama dengan orang sekitar.',
     },
   },
   {
@@ -6764,9 +6764,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、きっとについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、きっとについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai surely.',
+      jp: 'この本を読んできっとの基礎を理解した。',
+      furigana: 'このほんをよんできっとのきそをりかいした。',
+      id: 'Memahami dasar-dasar surely setelah membaca buku ini.',
     },
   },
   {
@@ -6775,14 +6775,14 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'まず',
     romaji: 'mazu',
     meaningEn: 'first (of all), to start with',
-    meaningId: 'first (of all) / melakukan start with',
+    meaningId: 'First (of all) / Memulai (with)',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、まずについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、まずについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai first (of all).',
+      jp: '専門家がまずの重要性について指摘した。',
+      furigana: 'せんもんかがまずのじゅうようせいについてしてきした。',
+      id: 'Pakar menekankan pentingnya first (of all).',
     },
   },
   {
@@ -6796,9 +6796,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、遠くについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、とおくについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai far away.',
+      jp: '仕事で遠くを活用して成果を上げた。',
+      furigana: 'しごとでとおくをかつようしてせいかをあげた。',
+      id: 'Memanfaatkan far away dalam pekerjaan dan meraih hasil baik.',
     },
   },
   {
@@ -6812,9 +6812,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、大体についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、だいたいについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai approximately.',
+      jp: '将来のために大体を深く学んでいる。',
+      furigana: 'しょうらいのためにだいたいをふかくまなんでいる。',
+      id: 'Mempelajari approximately secara mendalam demi masa depan.',
     },
   },
   {
@@ -6823,7 +6823,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'おれる',
     romaji: 'oreru',
     meaningEn: 'to break, to be folded, to give in; to turn (a corner)',
-    meaningId: 'melakukan break / melakukan be folded / melakukan give in',
+    meaningId: 'Memecahkan / Merusak / Beristirahat / Menjadi folded / Memberikan (in)',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -6860,9 +6860,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、輸入についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ゆにゅうについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai import.',
+      jp: '日々の生活で輸入を大切にしている。',
+      furigana: 'ひびのせいかつでゆにゅうをたいせつにしている。',
+      id: 'Menghargai import dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -6876,9 +6876,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、返事についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、へんじについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai reply.',
+      jp: '先生から返事に関する詳しい説明を受けた。',
+      furigana: 'せんせいからへんじにかんするくわしいせつめいをうけた。',
+      id: 'Mendapatkan penjelasan rinci mengenai reply dari guru.',
     },
   },
   {
@@ -6892,9 +6892,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、都についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、とについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai metropolitan.',
+      jp: '今回の会議で都についての議論が行われた。',
+      furigana: 'こんかいのかいぎでとについてのぎろんがおこなわれた。',
+      id: 'Diskusi mengenai metropolitan dilakukan dalam rapat kali ini.',
     },
   },
   {
@@ -6908,9 +6908,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、産業についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、さんぎょうについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai industry.',
+      jp: '日々の生活で産業を大切にしている。',
+      furigana: 'ひびのせいかつでさんぎょうをたいせつにしている。',
+      id: 'Menghargai industry dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -6919,7 +6919,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'つたえる',
     romaji: 'tsutaeru',
     meaningEn: 'to convey (a message); to tell, to report',
-    meaningId: 'melakukan convey (a message) / memberitahu / laporan',
+    meaningId: 'Convey (a message) / memberitahu / laporan',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -6940,9 +6940,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、お金持ちについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、かねもちについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai rich person.',
+      jp: 'この本を読んでお金持ちの基礎を理解した。',
+      furigana: 'このほんをよんでかねもちのきそをりかいした。',
+      id: 'Memahami dasar-dasar rich person setelah membaca buku ini.',
     },
   },
   {
@@ -6972,9 +6972,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、島についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、しまについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai island.',
+      jp: '仕事で島を活用して成果を上げた。',
+      furigana: 'しごとでしまをかつようしてせいかをあげた。',
+      id: 'Memanfaatkan island dalam pekerjaan dan meraih hasil baik.',
     },
   },
   {
@@ -6988,9 +6988,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、道具についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、どうぐについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai tool.',
+      jp: '将来のために道具を深く学んでいる。',
+      furigana: 'しょうらいのためにどうぐをふかくまなんでいる。',
+      id: 'Mempelajari tool secara mendalam demi masa depan.',
     },
   },
   {
@@ -6999,7 +6999,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'すべる',
     romaji: 'suberu',
     meaningEn: 'to slide, to slip',
-    meaningId: 'melakukan slide / melakukan slip',
+    meaningId: 'Slide / Slip',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -7015,7 +7015,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'それほど',
     romaji: 'sorehodo',
     meaningEn: 'to that degree; extent',
-    meaningId: 'melakukan that degree / extent',
+    meaningId: 'That degree / extent',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -7036,9 +7036,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、以上についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、いじょうについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai more than.',
+      jp: '将来のために以上を深く学んでいる。',
+      furigana: 'しょうらいのためにいじょうをふかくまなんでいる。',
+      id: 'Mempelajari more than secara mendalam demi masa depan.',
     },
   },
   {
@@ -7052,9 +7052,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Akhiran / Prefiks (Suffix/Prefix)',
     exampleSentence: {
-      jp: '実社会において、ままについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ままについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai as it is.',
+      jp: '先生から～ままに関する詳しい説明を受けた。',
+      furigana: 'せんせいから～ままにかんするくわしいせつめいをうけた。',
+      id: 'Mendapatkan penjelasan rinci mengenai as it is dari guru.',
     },
   },
   {
@@ -7068,9 +7068,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Lingkungan & Alam',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、特急についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、とっきゅうについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai limited express (train faster than an express).',
+      jp: '今回の会議で特急についての議論が行われた。',
+      furigana: 'こんかいのかいぎでとっきゅうについてのぎろんがおこなわれた。',
+      id: 'Diskusi mengenai limited express (train faster than an express) dilakukan dalam rapat kali ini.',
     },
   },
   {
@@ -7084,9 +7084,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、プレゼントについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、プレゼントについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai present.',
+      jp: '日々の生活でプレゼントを大切にしている。',
+      furigana: 'ひびのせいかつでプレゼントをたいせつにしている。',
+      id: 'Menghargai present dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -7100,9 +7100,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Akhiran / Prefiks (Suffix/Prefix)',
     exampleSentence: {
-      jp: '実社会において、(に) よるとについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、(に) よるとについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai according to ~.',
+      jp: '周囲と協力しながら～(に) よるとに取り組んでいる。',
+      furigana: 'しゅういときょうりょくしながら～(に) よるとにとりくんでいる。',
+      id: 'Mengerjakan according to ~ sambil bekerja sama dengan orang sekitar.',
     },
   },
   {
@@ -7116,9 +7116,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、妻についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、つまについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai wife (humble).',
+      jp: 'この本を読んで妻の基礎を理解した。',
+      furigana: 'このほんをよんでつまのきそをりかいした。',
+      id: 'Memahami dasar-dasar wife (humble) setelah membaca buku ini.',
     },
   },
   {
@@ -7164,9 +7164,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、堅についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、かたいについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai solid.',
+      jp: '将来のために堅を深く学んでいる。',
+      furigana: 'しょうらいのためにかたいをふかくまなんでいる。',
+      id: 'Mempelajari solid secara mendalam demi masa depan.',
     },
   },
   {
@@ -7180,9 +7180,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、駐車場についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ちゅうしゃじょうについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai parking lot.',
+      jp: '先生から駐車場に関する詳しい説明を受けた。',
+      furigana: 'せんせいからちゅうしゃじょうにかんするくわしいせつめいをうけた。',
+      id: 'Mendapatkan penjelasan rinci mengenai parking lot dari guru.',
     },
   },
   {
@@ -7196,9 +7196,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、スーツについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、スーツについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai suit.',
+      jp: '仕事でスーツを活用して成果を上げた。',
+      furigana: 'しごとでスーツをかつようしてせいかをあげた。',
+      id: 'Memanfaatkan suit dalam pekerjaan dan meraih hasil baik.',
     },
   },
   {
@@ -7212,9 +7212,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、危険についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、きけんについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai danger.',
+      jp: '将来のために危険を深く学んでいる。',
+      furigana: 'しょうらいのためにきけんをふかくまなんでいる。',
+      id: 'Mempelajari danger secara mendalam demi masa depan.',
     },
   },
   {
@@ -7228,9 +7228,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、髪についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、かみについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai hair.',
+      jp: '先生から髪に関する詳しい説明を受けた。',
+      furigana: 'せんせいからかみにかんするくわしいせつめいをうけた。',
+      id: 'Mendapatkan penjelasan rinci mengenai hair dari guru.',
     },
   },
   {
@@ -7244,9 +7244,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Lingkungan & Alam',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、天気予報についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、てんきよほうについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai weather forecast.',
+      jp: '今回の会議で天気予報についての議論が行われた。',
+      furigana: 'こんかいのかいぎでてんきよほうについてのぎろんがおこなわれた。',
+      id: 'Diskusi mengenai weather forecast dilakukan dalam rapat kali ini.',
     },
   },
   {
@@ -7260,9 +7260,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、彼女についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、かのじょについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai girlfriend.',
+      jp: '日々の生活で彼女を大切にしている。',
+      furigana: 'ひびのせいかつでかのじょをたいせつにしている。',
+      id: 'Menghargai girlfriend dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -7276,9 +7276,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、間についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、あいだについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai space.',
+      jp: '周囲と協力しながら間に取り組んでいる。',
+      furigana: 'しゅういときょうりょくしながらあいだにとりくんでいる。',
+      id: 'Mengerjakan space sambil bekerja sama dengan orang sekitar.',
     },
   },
   {
@@ -7292,9 +7292,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、卒業についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、そつぎょうについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai graduation.',
+      jp: 'この本を読んで卒業の基礎を理解した。',
+      furigana: 'このほんをよんでそつぎょうのきそをりかいした。',
+      id: 'Memahami dasar-dasar graduation setelah membaca buku ini.',
     },
   },
   {
@@ -7308,9 +7308,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、それでについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、それでについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai and (conj.).',
+      jp: '専門家がそれでの重要性について指摘した。',
+      furigana: 'せんもんかがそれでのじゅうようせいについてしてきした。',
+      id: 'Pakar menekankan pentingnya and (conj.).',
     },
   },
   {
@@ -7324,9 +7324,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、枝についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、えだについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai branch.',
+      jp: '仕事で枝を活用して成果を上げた。',
+      furigana: 'しごとでえだをかつようしてせいかをあげた。',
+      id: 'Memanfaatkan branch dalam pekerjaan dan meraih hasil baik.',
     },
   },
   {
@@ -7340,9 +7340,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、専門についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、せんもんについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai major.',
+      jp: '将来のために専門を深く学んでいる。',
+      furigana: 'しょうらいのためにせんもんをふかくまなんでいる。',
+      id: 'Mempelajari major secara mendalam demi masa depan.',
     },
   },
   {
@@ -7367,7 +7367,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'おくる',
     romaji: 'okuru',
     meaningEn: 'to send, to dispatch',
-    meaningId: 'melakukan send / melakukan dispatch',
+    meaningId: 'Mengirim / Dispatch',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -7399,7 +7399,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'さわぐ',
     romaji: 'sawagu',
     meaningEn: 'to make noise, to clamor',
-    meaningId: 'melakukan make noise / melakukan clamor',
+    meaningId: 'Membuat (noise) / Clamor',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -7415,7 +7415,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'たずねる',
     romaji: 'tazuneru',
     meaningEn: 'to inquire (same as 質問する)',
-    meaningId: 'melakukan inquire (same as 質問する)',
+    meaningId: 'Inquire (same as 質問する)',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -7436,9 +7436,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、放送についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ほうそうするについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai broadcasting.',
+      jp: '日々の生活で放送を大切にしている。',
+      furigana: 'ひびのせいかつでほうそうするをたいせつにしている。',
+      id: 'Menghargai broadcasting dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -7452,9 +7452,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Masyarakat & Etika',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、政治についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、せいじについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai politik.',
+      jp: '周囲と協力しながら政治に取り組んでいる。',
+      furigana: 'しゅういときょうりょくしながらせいじにとりくんでいる。',
+      id: 'Mengerjakan politik sambil bekerja sama dengan orang sekitar.',
     },
   },
   {
@@ -7468,9 +7468,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Masyarakat & Etika',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、市民についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、しみんについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai citizen.',
+      jp: 'この本を読んで市民の基礎を理解した。',
+      furigana: 'このほんをよんでしみんのきそをりかいした。',
+      id: 'Memahami dasar-dasar citizen setelah membaca buku ini.',
     },
   },
   {
@@ -7484,9 +7484,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、ファックスについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ファックスについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai fax.',
+      jp: '専門家がファックスの重要性について指摘した。',
+      furigana: 'せんもんかがファックスのじゅうようせいについてしてきした。',
+      id: 'Pakar menekankan pentingnya fax.',
     },
   },
   {
@@ -7495,7 +7495,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'まける',
     romaji: 'makeru',
     meaningEn: 'to lose (a game) (v.i.), to be defeated',
-    meaningId: 'melakukan lose (a game) (v.i.) / melakukan be defeated',
+    meaningId: 'Kehilangan ((a game) (v.i.)) / Menjadi defeated',
     level: 'N4',
     category: 'Makanan & Cita Rasa',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -7516,9 +7516,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、指輪についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ゆびわについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai (finger) ring.',
+      jp: 'この本を読んで指輪の基礎を理解した。',
+      furigana: 'このほんをよんでゆびわのきそをりかいした。',
+      id: 'Memahami dasar-dasar (finger) ring setelah membaca buku ini.',
     },
   },
   {
@@ -7532,9 +7532,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、田舎についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、いなかについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai rural.',
+      jp: '専門家が田舎の重要性について指摘した。',
+      furigana: 'せんもんかがいなかのじゅうようせいについてしてきした。',
+      id: 'Pakar menekankan pentingnya rural.',
     },
   },
   {
@@ -7543,7 +7543,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'みつける',
     romaji: 'mitsukeru',
     meaningEn: 'to discover, to find (v.t.)',
-    meaningId: 'melakukan discover / melakukan find (v.t.)',
+    meaningId: 'Discover / Menemukan ((v.t.))',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -7580,9 +7580,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、講義についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、こうぎについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai a lecture.',
+      jp: '先生から講義に関する詳しい説明を受けた。',
+      furigana: 'せんせいからこうぎにかんするくわしいせつめいをうけた。',
+      id: 'Mendapatkan penjelasan rinci mengenai a lecture dari guru.',
     },
   },
   {
@@ -7596,9 +7596,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、そんなにについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、そんなにについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai so much.',
+      jp: '今回の会議でそんなにについての議論が行われた。',
+      furigana: 'こんかいのかいぎでそんなにについてのぎろんがおこなわれた。',
+      id: 'Diskusi mengenai so much dilakukan dalam rapat kali ini.',
     },
   },
   {
@@ -7612,9 +7612,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、昼休みについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ひるやすみについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai lunch break.',
+      jp: '日々の生活で昼休みを大切にしている。',
+      furigana: 'ひびのせいかつでひるやすみをたいせつにしている。',
+      id: 'Menghargai lunch break dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -7628,9 +7628,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、忘れ物についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、わすれものについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai lost article.',
+      jp: '周囲と協力しながら忘れ物に取り組んでいる。',
+      furigana: 'しゅういときょうりょくしながらわすれものにとりくんでいる。',
+      id: 'Mengerjakan lost article sambil bekerja sama dengan orang sekitar.',
     },
   },
   {
@@ -7639,7 +7639,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'おりる',
     romaji: 'oriru',
     meaningEn: 'to get down, to go; come down',
-    meaningId: 'melakukan get down / pergi / come down',
+    meaningId: 'Mendapatkan (down) / pergi / come down',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -7660,9 +7660,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Sains & Kesehatan',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、腕についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、うでについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai arm (in reference to body).',
+      jp: '専門家が腕の重要性について指摘した。',
+      furigana: 'せんもんかがうでのじゅうようせいについてしてきした。',
+      id: 'Pakar menekankan pentingnya arm (in reference to body).',
     },
   },
   {
@@ -7676,9 +7676,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、訳についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、わけについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai alasan.',
+      jp: '周囲と協力しながら訳に取り組んでいる。',
+      furigana: 'しゅういときょうりょくしながらわけにとりくんでいる。',
+      id: 'Mengerjakan alasan sambil bekerja sama dengan orang sekitar.',
     },
   },
   {
@@ -7692,9 +7692,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、承知についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、しょうちするについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai consent.',
+      jp: 'この本を読んで承知の基礎を理解した。',
+      furigana: 'このほんをよんでしょうちするのきそをりかいした。',
+      id: 'Memahami dasar-dasar consent setelah membaca buku ini.',
     },
   },
   {
@@ -7708,9 +7708,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、日記についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、にっきについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai diary.',
+      jp: '専門家が日記の重要性について指摘した。',
+      furigana: 'せんもんかがにっきのじゅうようせいについてしてきした。',
+      id: 'Pakar menekankan pentingnya diary.',
     },
   },
   {
@@ -7724,9 +7724,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、高校についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、こうこうについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai high school.',
+      jp: '仕事で高校を活用して成果を上げた。',
+      furigana: 'しごとでこうこうをかつようしてせいかをあげた。',
+      id: 'Memanfaatkan high school dalam pekerjaan dan meraih hasil baik.',
     },
   },
   {
@@ -7735,7 +7735,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'にる',
     romaji: 'niru',
     meaningEn: 'to resemble, to be similar',
-    meaningId: 'melakukan resemble / melakukan be similar',
+    meaningId: 'Resemble / Menjadi similar',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -7751,7 +7751,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: '～おわる',
     romaji: '～owaru',
     meaningEn: 'to finish doing ~',
-    meaningId: 'melakukan finish doing ~',
+    meaningId: 'Menyelesaikan (doing ~)',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -7772,9 +7772,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Makanan & Cita Rasa',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、暖房についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、だんぼうについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai heating.',
+      jp: '今回の会議で暖房についての議論が行われた。',
+      furigana: 'こんかいのかいぎでだんぼうについてのぎろんがおこなわれた。',
+      id: 'Diskusi mengenai heating dilakukan dalam rapat kali ini.',
     },
   },
   {
@@ -7788,9 +7788,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、留守についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、るすについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai absence.',
+      jp: '日々の生活で留守を大切にしている。',
+      furigana: 'ひびのせいかつでるすをたいせつにしている。',
+      id: 'Menghargai absence dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -7820,9 +7820,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、寺についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、てらについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai buddhist temple.',
+      jp: 'この本を読んで寺の基礎を理解した。',
+      furigana: 'このほんをよんでてらのきそをりかいした。',
+      id: 'Memahami dasar-dasar buddhist temple setelah membaca buku ini.',
     },
   },
   {
@@ -7831,7 +7831,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'なれる',
     romaji: 'nareru',
     meaningEn: 'to grow accustomed to',
-    meaningId: 'melakukan grow accustomed to',
+    meaningId: 'Tumbuh (accustomed to)',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -7852,9 +7852,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、普通についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ふつうについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai common.',
+      jp: '周囲と協力しながら普通に取り組んでいる。',
+      furigana: 'しゅういときょうりょくしながらふつうにとりくんでいる。',
+      id: 'Mengerjakan common sambil bekerja sama dengan orang sekitar.',
     },
   },
   {
@@ -7884,9 +7884,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、なるほどについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、なるほどについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai i see.',
+      jp: '専門家がなるほどの重要性について指摘した。',
+      furigana: 'せんもんかがなるほどのじゅうようせいについてしてきした。',
+      id: 'Pakar menekankan pentingnya i see.',
     },
   },
   {
@@ -7895,14 +7895,14 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'くださる',
     romaji: 'kudasaru',
     meaningEn: '(hon.) to give, to confer',
-    meaningId: '(hon.) to give / melakukan confer',
+    meaningId: '(hon.) to give / Confer',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、くださるについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、くださるについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai (hon.) to give.',
+      jp: '仕事でくださるを活用して成果を上げた。',
+      furigana: 'しごとでくださるをかつようしてせいかをあげた。',
+      id: 'Memanfaatkan (hon.) to give dalam pekerjaan dan meraih hasil baik.',
     },
   },
   {
@@ -7916,9 +7916,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、息子についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、むすこについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai (humble) son.',
+      jp: '将来のために息子を深く学んでいる。',
+      furigana: 'しょうらいのためにむすこをふかくまなんでいる。',
+      id: 'Mempelajari (humble) son secara mendalam demi masa depan.',
     },
   },
   {
@@ -7932,9 +7932,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、お子さんについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、おこさんについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai (someone else\'s) child (polite).',
+      jp: '先生からお子さんに関する詳しい説明を受けた。',
+      furigana: 'せんせいからおこさんにかんするくわしいせつめいをうけた。',
+      id: 'Mendapatkan penjelasan rinci mengenai (someone else\'s) child (polite) dari guru.',
     },
   },
   {
@@ -7948,9 +7948,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、会場についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、かいじょうについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai venue.',
+      jp: '今回の会議で会場についての議論が行われた。',
+      furigana: 'こんかいのかいぎでかいじょうについてのぎろんがおこなわれた。',
+      id: 'Diskusi mengenai venue dilakukan dalam rapat kali ini.',
     },
   },
   {
@@ -7959,7 +7959,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'わらう',
     romaji: 'warau',
     meaningEn: 'to laugh, to smile',
-    meaningId: 'tertawa / melakukan smile',
+    meaningId: 'Tertawa / Tersenyum',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -7975,7 +7975,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'はこぶ',
     romaji: 'hakobu',
     meaningEn: 'to transport, to carry',
-    meaningId: 'melakukan transport / melakukan carry',
+    meaningId: 'Transport / Mengangkut / Membawa',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -7996,9 +7996,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、文学についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ぶんがくについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai literature.',
+      jp: 'この本を読んで文学の基礎を理解した。',
+      furigana: 'このほんをよんでぶんがくのきそをりかいした。',
+      id: 'Memahami dasar-dasar literature setelah membaca buku ini.',
     },
   },
   {
@@ -8044,9 +8044,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Lingkungan & Alam',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、席についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、せきについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai a seat.',
+      jp: '将来のために席を深く学んでいる。',
+      furigana: 'しょうらいのためにせきをふかくまなんでいる。',
+      id: 'Mempelajari a seat secara mendalam demi masa depan.',
     },
   },
   {
@@ -8060,9 +8060,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Akhiran / Prefiks (Suffix/Prefix)',
     exampleSentence: {
-      jp: '実社会において、様についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、さまについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai mr..',
+      jp: '先生から～様に関する詳しい説明を受けた。',
+      furigana: 'せんせいから～さまにかんするくわしいせつめいをうけた。',
+      id: 'Mendapatkan penjelasan rinci mengenai mr. dari guru.',
     },
   },
   {
@@ -8076,9 +8076,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、ご存じについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ごぞんじについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai knowing.',
+      jp: '今回の会議でご存じについての議論が行われた。',
+      furigana: 'こんかいのかいぎでごぞんじについてのぎろんがおこなわれた。',
+      id: 'Diskusi mengenai knowing dilakukan dalam rapat kali ini.',
     },
   },
   {
@@ -8087,7 +8087,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'さがる',
     romaji: 'sagaru',
     meaningEn: 'to descend, to drop, to fall',
-    meaningId: 'melakukan descend / melakukan drop / melakukan fall',
+    meaningId: 'Turun / Menjatuhkan / Jatuh / Gugur',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -8108,9 +8108,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Komunikasi & Bahasa',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、字についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、じについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai letter.',
+      jp: '周囲と協力しながら字に取り組んでいる。',
+      furigana: 'しゅういときょうりょくしながらじにとりくんでいる。',
+      id: 'Mengerjakan letter sambil bekerja sama dengan orang sekitar.',
     },
   },
   {
@@ -8124,9 +8124,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、アジアについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、アジアについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai asia.',
+      jp: 'この本を読んでアジアの基礎を理解した。',
+      furigana: 'このほんをよんでアジアのきそをりかいした。',
+      id: 'Memahami dasar-dasar asia setelah membaca buku ini.',
     },
   },
   {
@@ -8135,7 +8135,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'ほめる',
     romaji: 'homeru',
     meaningEn: 'to praise; to say nice things',
-    meaningId: 'melakukan praise / melakukan say nice things',
+    meaningId: 'Memuji / Mengatakan (nice things)',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -8151,7 +8151,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'すく',
     romaji: 'suku',
     meaningEn: 'to be empty (in reference to people), to be less crowded',
-    meaningId: 'melakukan be empty (in reference to people) / melakukan be less crowded',
+    meaningId: 'Menjadi empty (in reference to people) / Menjadi less crowded',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -8172,9 +8172,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、あについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、あについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai ah.',
+      jp: 'この本を読んであの基礎を理解した。',
+      furigana: 'このほんをよんであのきそをりかいした。',
+      id: 'Memahami dasar-dasar ah setelah membaca buku ini.',
     },
   },
   {
@@ -8188,9 +8188,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、最もについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、もっともについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai most.',
+      jp: '専門家が最もの重要性について指摘した。',
+      furigana: 'せんもんかがもっとものじゅうようせいについてしてきした。',
+      id: 'Pakar menekankan pentingnya most.',
     },
   },
   {
@@ -8199,7 +8199,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'あう',
     romaji: 'au',
     meaningEn: 'to fit, to match',
-    meaningId: 'melakukan fit / melakukan match',
+    meaningId: 'Fit / Match',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -8236,9 +8236,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、最後についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、さいごについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai last.',
+      jp: '先生から最後に関する詳しい説明を受けた。',
+      furigana: 'せんせいからさいごにかんするくわしいせつめいをうけた。',
+      id: 'Mendapatkan penjelasan rinci mengenai last dari guru.',
     },
   },
   {
@@ -8252,9 +8252,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、値段についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ねだんについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai harga.',
+      jp: '今回の会議で値段についての議論が行われた。',
+      furigana: 'こんかいのかいぎでねだんについてのぎろんがおこなわれた。',
+      id: 'Diskusi mengenai harga dilakukan dalam rapat kali ini.',
     },
   },
   {
@@ -8268,9 +8268,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Sains & Kesehatan',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、退院についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、たいいんするについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai leaving hospital.',
+      jp: '日々の生活で退院を大切にしている。',
+      furigana: 'ひびのせいかつでたいいんするをたいせつにしている。',
+      id: 'Menghargai leaving hospital dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -8316,9 +8316,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、カーテンについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、カーテンについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai curtain.',
+      jp: '日々の生活でカーテンを大切にしている。',
+      furigana: 'ひびのせいかつでカーテンをたいせつにしている。',
+      id: 'Menghargai curtain dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -8332,9 +8332,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Lingkungan & Alam',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、汽車についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、きしゃについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai train (steam).',
+      jp: '周囲と協力しながら汽車に取り組んでいる。',
+      furigana: 'しゅういときょうりょくしながらきしゃにとりくんでいる。',
+      id: 'Mengerjakan train (steam) sambil bekerja sama dengan orang sekitar.',
     },
   },
   {
@@ -8343,7 +8343,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'おくれる',
     romaji: 'okureru',
     meaningEn: 'to (be) become late',
-    meaningId: 'melakukan (be) become late',
+    meaningId: '(be) become late',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -8359,7 +8359,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'みつかる',
     romaji: 'mitsukaru',
     meaningEn: 'to be found (v.i.), to be discovered',
-    meaningId: 'melakukan be found (v.i.) / melakukan be discovered',
+    meaningId: 'Menjadi found (v.i.) / Menjadi discovered',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -8380,9 +8380,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、召し上がるについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、めしあがるについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai -- honorific form of 食べる (たべる) and 飲む (のむ) --.',
+      jp: '仕事で召し上がるを活用して成果を上げた。',
+      furigana: 'しごとでめしあがるをかつようしてせいかをあげた。',
+      id: 'Memanfaatkan -- honorific form of 食べる (たべる) and 飲む (のむ) -- dalam pekerjaan dan meraih hasil baik.',
     },
   },
   {
@@ -8391,7 +8391,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'ふとる',
     romaji: 'futoru',
     meaningEn: 'to gain weight',
-    meaningId: 'melakukan gain weight',
+    meaningId: 'Meraih (weight)',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -8412,9 +8412,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、注射についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ちゅうしゃについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai injection.',
+      jp: '先生から注射に関する詳しい説明を受けた。',
+      furigana: 'せんせいからちゅうしゃにかんするくわしいせつめいをうけた。',
+      id: 'Mendapatkan penjelasan rinci mengenai injection dari guru.',
     },
   },
   {
@@ -8428,9 +8428,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、様についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ようについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai way.',
+      jp: '今回の会議で様についての議論が行われた。',
+      furigana: 'こんかいのかいぎでようについてのぎろんがおこなわれた。',
+      id: 'Diskusi mengenai way dilakukan dalam rapat kali ini.',
     },
   },
   {
@@ -8444,9 +8444,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Akhiran / Prefiks (Suffix/Prefix)',
     exampleSentence: {
-      jp: '実社会において、おきについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、おきについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai after every ~.',
+      jp: '日々の生活で～おきを大切にしている。',
+      furigana: 'ひびのせいかつで～おきをたいせつにしている。',
+      id: 'Menghargai after every ~ dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -8460,9 +8460,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、最初についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、さいしょについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai beginning.',
+      jp: '周囲と協力しながら最初に取り組んでいる。',
+      furigana: 'しゅういときょうりょくしながらさいしょにとりくんでいる。',
+      id: 'Mengerjakan beginning sambil bekerja sama dengan orang sekitar.',
     },
   },
   {
@@ -8476,9 +8476,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、御についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ごについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai honorable ~.',
+      jp: '今回の会議で御～についての議論が行われた。',
+      furigana: 'こんかいのかいぎでご～についてのぎろんがおこなわれた。',
+      id: 'Diskusi mengenai honorable ~ dilakukan dalam rapat kali ini.',
     },
   },
   {
@@ -8492,9 +8492,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Pikiran, Perasaan & Karakter',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、安心についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、あんしんについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai peace of mind.',
+      jp: '日々の生活で安心を大切にしている。',
+      furigana: 'ひびのせいかつであんしんをたいせつにしている。',
+      id: 'Menghargai peace of mind dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -8503,7 +8503,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'なおる',
     romaji: 'naoru',
     meaningEn: 'to be fixed',
-    meaningId: 'melakukan be fixed',
+    meaningId: 'Ditetapkan / Diperbaiki',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -8519,7 +8519,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'あつめる',
     romaji: 'atsumeru',
     meaningEn: 'to collect, to gather (v.t.), to assemble',
-    meaningId: 'melakukan collect / melakukan gather (v.t.) / melakukan assemble',
+    meaningId: 'Mengumpulkan / Berkumpul ((v.t.)) / Assemble',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -8535,7 +8535,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'なおす',
     romaji: 'naosu',
     meaningEn: 'to correct (v.t.); to fix',
-    meaningId: 'melakukan correct (v.t.) / melakukan fix',
+    meaningId: 'Correct (v.t.) / Memperbaiki',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -8551,7 +8551,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'つづく',
     romaji: 'tsuzuku',
     meaningEn: 'to be continued',
-    meaningId: 'melakukan be continued',
+    meaningId: 'Menjadi continued',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -8588,9 +8588,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、約束についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、やくそくについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai arrangement.',
+      jp: '先生から約束に関する詳しい説明を受けた。',
+      furigana: 'せんせいからやくそくにかんするくわしいせつめいをうけた。',
+      id: 'Mendapatkan penjelasan rinci mengenai arrangement dari guru.',
     },
   },
   {
@@ -8599,14 +8599,14 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'せわする',
     romaji: 'sewasuru',
     meaningEn: 'looking after; to look after',
-    meaningId: 'looking after / melakukan look after',
+    meaningId: 'Looking after / Melihat (after)',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、世話についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、せわするについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai looking after.',
+      jp: '今回の会議で世話についての議論が行われた。',
+      furigana: 'こんかいのかいぎでせわするについてのぎろんがおこなわれた。',
+      id: 'Diskusi mengenai looking after dilakukan dalam rapat kali ini.',
     },
   },
   {
@@ -8620,9 +8620,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、近所についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、きんじょについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai neighborhood.',
+      jp: '日々の生活で近所を大切にしている。',
+      furigana: 'ひびのせいかつできんじょをたいせつにしている。',
+      id: 'Menghargai neighborhood dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -8652,9 +8652,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、億についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、おくについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai hundred million.',
+      jp: '今回の会議で億についての議論が行われた。',
+      furigana: 'こんかいのかいぎでおくについてのぎろんがおこなわれた。',
+      id: 'Diskusi mengenai hundred million dilakukan dalam rapat kali ini.',
     },
   },
   {
@@ -8668,9 +8668,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、数学についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、すうがくについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai mathematics.',
+      jp: '日々の生活で数学を大切にしている。',
+      furigana: 'ひびのせいかつですうがくをたいせつにしている。',
+      id: 'Menghargai mathematics dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -8684,9 +8684,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、文化についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ぶんかについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai kebudayaan.',
+      jp: '周囲と協力しながら文化に取り組んでいる。',
+      furigana: 'しゅういときょうりょくしながらぶんかにとりくんでいる。',
+      id: 'Mengerjakan kebudayaan sambil bekerja sama dengan orang sekitar.',
     },
   },
   {
@@ -8695,7 +8695,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'はらう',
     romaji: 'harau',
     meaningEn: 'to pay',
-    meaningId: 'melakukan pay',
+    meaningId: 'Membayar',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -8716,9 +8716,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、習慣についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、しゅうかんについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai custom (in reference to culture).',
+      jp: '専門家が習慣の重要性について指摘した。',
+      furigana: 'せんもんかがしゅうかんのじゅうようせいについてしてきした。',
+      id: 'Pakar menekankan pentingnya custom (in reference to culture).',
     },
   },
   {
@@ -8727,7 +8727,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'やける',
     romaji: 'yakeru',
     meaningEn: 'to burn, to be roasted',
-    meaningId: 'melakukan burn / melakukan be roasted',
+    meaningId: 'Membakar / Hangus / Menjadi roasted',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -8748,9 +8748,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、君についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、きみについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai you (informal for men).',
+      jp: '将来のために君を深く学んでいる。',
+      furigana: 'しょうらいのためにきみをふかくまなんでいる。',
+      id: 'Mempelajari you (informal for men) secara mendalam demi masa depan.',
     },
   },
   {
@@ -8759,7 +8759,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'ひえる',
     romaji: 'hieru',
     meaningEn: 'to grow cold, to cool down',
-    meaningId: 'melakukan grow cold / melakukan cool down',
+    meaningId: 'Tumbuh (cold) / Cool down',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -8775,7 +8775,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'つく',
     romaji: 'tsuku',
     meaningEn: 'to be started, to be switched on',
-    meaningId: 'melakukan be started / melakukan be switched on',
+    meaningId: 'Menjadi started / Menjadi switched on',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -8796,9 +8796,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、この間についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、このあいだについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai the other day.',
+      jp: '将来のためにこの間を深く学んでいる。',
+      furigana: 'しょうらいのためにこのあいだをふかくまなんでいる。',
+      id: 'Mempelajari the other day secara mendalam demi masa depan.',
     },
   },
   {
@@ -8812,9 +8812,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、格好についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、かっこうについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai appearance.',
+      jp: '先生から格好に関する詳しい説明を受けた。',
+      furigana: 'せんせいからかっこうにかんするくわしいせつめいをうけた。',
+      id: 'Mendapatkan penjelasan rinci mengenai appearance dari guru.',
     },
   },
   {
@@ -8823,7 +8823,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'かまう',
     romaji: 'kamau',
     meaningEn: 'to mind, to care about, to be concerned about',
-    meaningId: 'melakukan mind / melakukan care about / melakukan be concerned about',
+    meaningId: 'Mind / Care about / Menjadi concerned about',
     level: 'N4',
     category: 'Pikiran, Perasaan & Karakter',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -8839,7 +8839,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'つづける',
     romaji: 'tsuzukeru',
     meaningEn: 'to continue, to keep up',
-    meaningId: 'melakukan continue / melakukan keep up',
+    meaningId: 'Continue / Keep up',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -8855,7 +8855,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'おとす',
     romaji: 'otosu',
     meaningEn: 'to drop, to lose',
-    meaningId: 'melakukan drop / kehilangan',
+    meaningId: 'Menjatuhkan / kehilangan',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -8871,14 +8871,14 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'あす',
     romaji: 'asu',
     meaningEn: 'tomorrow',
-    meaningId: 'tomorrow',
+    meaningId: 'Besok',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、明日についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、あすについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai tomorrow.',
+      jp: 'この本を読んで明日の基礎を理解した。',
+      furigana: 'このほんをよんであすのきそをりかいした。',
+      id: 'Memahami dasar-dasar besok setelah membaca buku ini.',
     },
   },
   {
@@ -8892,9 +8892,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、出発についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、しゅっぱつするについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai departure.',
+      jp: '専門家が出発の重要性について指摘した。',
+      furigana: 'せんもんかがしゅっぱつするのじゅうようせいについてしてきした。',
+      id: 'Pakar menekankan pentingnya departure.',
     },
   },
   {
@@ -8908,9 +8908,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、拝見についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、はいけんするについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai (humble) (polite) seeing.',
+      jp: '仕事で拝見を活用して成果を上げた。',
+      furigana: 'しごとではいけんするをかつようしてせいかをあげた。',
+      id: 'Memanfaatkan (humble) (polite) seeing dalam pekerjaan dan meraih hasil baik.',
     },
   },
   {
@@ -8919,7 +8919,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'われる',
     romaji: 'wareru',
     meaningEn: 'to break',
-    meaningId: 'melakukan break',
+    meaningId: 'Memecahkan / Merusak / Beristirahat',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -8940,9 +8940,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Sains & Kesehatan',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、背中についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、せなかについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai back (of body).',
+      jp: '先生から背中に関する詳しい説明を受けた。',
+      furigana: 'せんせいからせなかにかんするくわしいせつめいをうけた。',
+      id: 'Mendapatkan penjelasan rinci mengenai back (of body) dari guru.',
     },
   },
   {
@@ -8956,9 +8956,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Bisnis & Pekerjaan',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、新聞社についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、しんぶんしゃについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai newspaper company.',
+      jp: '仕事で新聞社を活用して成果を上げた。',
+      furigana: 'しごとでしんぶんしゃをかつようしてせいかをあげた。',
+      id: 'Memanfaatkan newspaper company dalam pekerjaan dan meraih hasil baik.',
     },
   },
   {
@@ -8967,7 +8967,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'いじめる',
     romaji: 'ijimeru',
     meaningEn: 'to bully, to torment',
-    meaningId: 'melakukan bully / melakukan torment',
+    meaningId: 'Bully / Torment',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -8983,7 +8983,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'まわる、まわす',
     romaji: 'mawaru、mawasu',
     meaningEn: 'to go around, to revolve',
-    meaningId: 'melakukan go around / melakukan revolve',
+    meaningId: 'Go around / Revolve',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -9004,9 +9004,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Akhiran / Prefiks (Suffix/Prefix)',
     exampleSentence: {
-      jp: '実社会において、君についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、くんについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai mr. (junior) ~.',
+      jp: '今回の会議で～君についての議論が行われた。',
+      furigana: 'こんかいのかいぎで～くんについてのぎろんがおこなわれた。',
+      id: 'Diskusi mengenai mr. (junior) ~ dilakukan dalam rapat kali ini.',
     },
   },
   {
@@ -9020,9 +9020,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、おっしゃるについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、おっしゃるについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai -- honorific expression for いう --.',
+      jp: '日々の生活でおっしゃるを大切にしている。',
+      furigana: 'ひびのせいかつでおっしゃるをたいせつにしている。',
+      id: 'Menghargai -- honorific expression for いう -- dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -9047,7 +9047,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'ぬれる',
     romaji: 'nureru',
     meaningEn: 'to get wet',
-    meaningId: 'melakukan get wet',
+    meaningId: 'Mendapatkan (wet)',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -9063,7 +9063,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'たおれる',
     romaji: 'taoreru',
     meaningEn: 'to collapse, to break down',
-    meaningId: 'melakukan collapse / melakukan break down',
+    meaningId: 'Collapse / Memecahkan (down)',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -9084,9 +9084,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、スーパー (マーケット)についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、スーパー (マーケット)についてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai supermarket.',
+      jp: '仕事でスーパー (マーケット)を活用して成果を上げた。',
+      furigana: 'しごとでスーパー (マーケット)をかつようしてせいかをあげた。',
+      id: 'Memanfaatkan supermarket dalam pekerjaan dan meraih hasil baik.',
     },
   },
   {
@@ -9100,9 +9100,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、アクセサリーについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、アクセサリーについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai accessory.',
+      jp: '将来のためにアクセサリーを深く学んでいる。',
+      furigana: 'しょうらいのためにアクセサリーをふかくまなんでいる。',
+      id: 'Mempelajari accessory secara mendalam demi masa depan.',
     },
   },
   {
@@ -9111,7 +9111,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'かんがえる',
     romaji: 'kangaeru',
     meaningEn: 'to think (about); to consider',
-    meaningId: 'melakukan think (about) / melakukan consider',
+    meaningId: 'Berpikir ((about)) / Consider',
     level: 'N4',
     category: 'Pikiran, Perasaan & Karakter',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -9127,7 +9127,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'むかう',
     romaji: 'mukau',
     meaningEn: 'to face, to go towards',
-    meaningId: 'melakukan face / melakukan go towards',
+    meaningId: 'Menghadap / Go towards',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -9148,9 +9148,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、自由についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、じゆうについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai freedom.',
+      jp: '将来のために自由を深く学んでいる。',
+      furigana: 'しょうらいのためにじゆうをふかくまなんでいる。',
+      id: 'Mempelajari freedom secara mendalam demi masa depan.',
     },
   },
   {
@@ -9164,9 +9164,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、仕方についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、しかたについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai way (of doing something).',
+      jp: '先生から仕方に関する詳しい説明を受けた。',
+      furigana: 'せんせいからしかたにかんするくわしいせつめいをうけた。',
+      id: 'Mendapatkan penjelasan rinci mengenai way (of doing something) dari guru.',
     },
   },
   {
@@ -9180,9 +9180,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、首についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、くびについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai neck.',
+      jp: '今回の会議で首についての議論が行われた。',
+      furigana: 'こんかいのかいぎでくびについてのぎろんがおこなわれた。',
+      id: 'Diskusi mengenai neck dilakukan dalam rapat kali ini.',
     },
   },
   {
@@ -9196,9 +9196,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、程についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ほどについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai degree.',
+      jp: '日々の生活で程を大切にしている。',
+      furigana: 'ひびのせいかつでほどをたいせつにしている。',
+      id: 'Menghargai degree dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -9244,9 +9244,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、工業についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、こうぎょうについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai (manufacturing) industry.',
+      jp: '専門家が工業の重要性について指摘した。',
+      furigana: 'せんもんかがこうぎょうのじゅうようせいについてしてきした。',
+      id: 'Pakar menekankan pentingnya (manufacturing) industry.',
     },
   },
   {
@@ -9255,7 +9255,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'うつる',
     romaji: 'utsuru',
     meaningEn: 'to move (from a house); to transfer (from a department); to shift',
-    meaningId: 'melakukan move (from a house) / melakukan transfer (from a department) / melakukan shift',
+    meaningId: 'Bergerak ((from a house)) / Transfer (from a department) / Shift',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -9276,9 +9276,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、スーツケースについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、スーツケースについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai suitcase.',
+      jp: 'この本を読んでスーツケースの基礎を理解した。',
+      furigana: 'このほんをよんでスーツケースのきそをりかいした。',
+      id: 'Memahami dasar-dasar suitcase setelah membaca buku ini.',
     },
   },
   {
@@ -9292,9 +9292,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、ひげについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ひげについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai beard.',
+      jp: '専門家がひげの重要性について指摘した。',
+      furigana: 'せんもんかがひげのじゅうようせいについてしてきした。',
+      id: 'Pakar menekankan pentingnya beard.',
     },
   },
   {
@@ -9308,9 +9308,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Bisnis & Pekerjaan',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、研究室についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、けんきゅうしつについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai the professor\'s office.',
+      jp: '仕事で研究室を活用して成果を上げた。',
+      furigana: 'しごとでけんきゅうしつをかつようしてせいかをあげた。',
+      id: 'Memanfaatkan the professor\'s office dalam pekerjaan dan meraih hasil baik.',
     },
   },
   {
@@ -9324,9 +9324,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、工場についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、こうじょうについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai pabrik.',
+      jp: '将来のために工場を深く学んでいる。',
+      furigana: 'しょうらいのためにこうじょうをふかくまなんでいる。',
+      id: 'Mempelajari pabrik secara mendalam demi masa depan.',
     },
   },
   {
@@ -9356,9 +9356,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、けれどについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、けれどについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai but.',
+      jp: '今回の会議でけれどについての議論が行われた。',
+      furigana: 'こんかいのかいぎでけれどについてのぎろんがおこなわれた。',
+      id: 'Diskusi mengenai but dilakukan dalam rapat kali ini.',
     },
   },
   {
@@ -9372,9 +9372,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、舟についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ふねについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai ship.',
+      jp: '日々の生活で舟を大切にしている。',
+      furigana: 'ひびのせいかつでふねをたいせつにしている。',
+      id: 'Menghargai ship dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -9383,7 +9383,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'うごく',
     romaji: 'ugoku',
     meaningEn: 'to move',
-    meaningId: 'melakukan move',
+    meaningId: 'Bergerak / Berpindah',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -9404,9 +9404,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Akhiran / Prefiks (Suffix/Prefix)',
     exampleSentence: {
-      jp: '実社会において、(に) ついてについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、(に) ついてについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai about.',
+      jp: 'この本を読んで～(に) ついての基礎を理解した。',
+      furigana: 'このほんをよんで～(に) ついてのきそをりかいした。',
+      id: 'Memahami dasar-dasar about setelah membaca buku ini.',
     },
   },
   {
@@ -9420,9 +9420,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、コンサートについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、コンサートについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai concert.',
+      jp: '専門家がコンサートの重要性について指摘した。',
+      furigana: 'せんもんかがコンサートのじゅうようせいについてしてきした。',
+      id: 'Pakar menekankan pentingnya concert.',
     },
   },
   {
@@ -9436,9 +9436,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、虫についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、むしについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai insect.',
+      jp: '周囲と協力しながら虫に取り組んでいる。',
+      furigana: 'しゅういときょうりょくしながらむしにとりくんでいる。',
+      id: 'Mengerjakan insect sambil bekerja sama dengan orang sekitar.',
     },
   },
   {
@@ -9468,9 +9468,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、コンピュータについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、コンピュータについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai computer.',
+      jp: '専門家がコンピュータの重要性について指摘した。',
+      furigana: 'せんもんかがコンピュータのじゅうようせいについてしてきした。',
+      id: 'Pakar menekankan pentingnya computer.',
     },
   },
   {
@@ -9479,7 +9479,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'うえる',
     romaji: 'ueru',
     meaningEn: 'to plant',
-    meaningId: 'melakukan plant',
+    meaningId: 'Menanam',
     level: 'N4',
     category: 'Lingkungan & Alam',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -9500,9 +9500,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、両方についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、りょうほうについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai both sides.',
+      jp: '将来のために両方を深く学んでいる。',
+      furigana: 'しょうらいのためにりょうほうをふかくまなんでいる。',
+      id: 'Mempelajari both sides secara mendalam demi masa depan.',
     },
   },
   {
@@ -9511,7 +9511,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'よごれる',
     romaji: 'yogoreru',
     meaningEn: 'to become dirty',
-    meaningId: 'melakukan become dirty',
+    meaningId: 'Become dirty',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -9548,9 +9548,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、経験についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、けいけんするについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai pengalaman.',
+      jp: '日々の生活で経験を大切にしている。',
+      furigana: 'ひびのせいかつでけいけんするをたいせつにしている。',
+      id: 'Menghargai pengalaman dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -9559,7 +9559,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'かつ',
     romaji: 'katsu',
     meaningEn: 'to win',
-    meaningId: 'melakukan win',
+    meaningId: 'Menang',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -9596,9 +9596,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、警察についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、けいさつについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai police.',
+      jp: '専門家が警察の重要性について指摘した。',
+      furigana: 'せんもんかがけいさつのじゅうようせいについてしてきした。',
+      id: 'Pakar menekankan pentingnya police.',
     },
   },
   {
@@ -9607,7 +9607,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'とりかえる',
     romaji: 'torikaeru',
     meaningEn: 'to exchange, to replace',
-    meaningId: 'melakukan exchange / melakukan replace',
+    meaningId: 'Menukar / Bertukar / Replace',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -9623,7 +9623,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'いそぐ',
     romaji: 'isogu',
     meaningEn: 'to hurry, to be in a hurry, to rush',
-    meaningId: 'melakukan hurry / melakukan be in a hurry / melakukan rush',
+    meaningId: 'Hurry / Menjadi in a hurry / Rush',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -9644,9 +9644,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、簡単についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、かんたんについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai sederhana.',
+      jp: '先生から簡単に関する詳しい説明を受けた。',
+      furigana: 'せんせいからかんたんにかんするくわしいせつめいをうけた。',
+      id: 'Mendapatkan penjelasan rinci mengenai sederhana dari guru.',
     },
   },
   {
@@ -9660,9 +9660,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、参るについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、まいるについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai humble expression for 行く and 来る.',
+      jp: '今回の会議で参るについての議論が行われた。',
+      furigana: 'こんかいのかいぎでまいるについてのぎろんがおこなわれた。',
+      id: 'Diskusi mengenai humble expression for 行く and 来る dilakukan dalam rapat kali ini.',
     },
   },
   {
@@ -9676,9 +9676,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、全然についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ぜんぜんについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai not at all.',
+      jp: '日々の生活で全然を大切にしている。',
+      furigana: 'ひびのせいかつでぜんぜんをたいせつにしている。',
+      id: 'Menghargai not at all dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -9692,9 +9692,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、特別についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、とくべつについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai special.',
+      jp: '周囲と協力しながら特別に取り組んでいる。',
+      furigana: 'しゅういときょうりょくしながらとくべつにとりくんでいる。',
+      id: 'Mengerjakan special sambil bekerja sama dengan orang sekitar.',
     },
   },
   {
@@ -9708,9 +9708,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、復習についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ふくしゅうについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai review (of lessons).',
+      jp: 'この本を読んで復習の基礎を理解した。',
+      furigana: 'このほんをよんでふくしゅうのきそをりかいした。',
+      id: 'Memahami dasar-dasar review (of lessons) setelah membaca buku ini.',
     },
   },
   {
@@ -9719,7 +9719,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'まにあう',
     romaji: 'maniau',
     meaningEn: 'to be in time for',
-    meaningId: 'melakukan be in time for',
+    meaningId: 'Menjadi in time for',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -9735,7 +9735,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'やくにたつ',
     romaji: 'yakunitatsu',
     meaningEn: 'to be helpful, to be useful',
-    meaningId: 'melakukan be helpful / melakukan be useful',
+    meaningId: 'Menjadi helpful / Menjadi useful',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -9756,9 +9756,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、もうすぐについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、もうすぐについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai very soon.',
+      jp: 'この本を読んでもうすぐの基礎を理解した。',
+      furigana: 'このほんをよんでもうすぐのきそをりかいした。',
+      id: 'Memahami dasar-dasar very soon setelah membaca buku ini.',
     },
   },
   {
@@ -9772,9 +9772,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、真中についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、まんなかについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai middle.',
+      jp: '専門家が真中の重要性について指摘した。',
+      furigana: 'せんもんかがまんなかのじゅうようせいについてしてきした。',
+      id: 'Pakar menekankan pentingnya middle.',
     },
   },
   {
@@ -9783,7 +9783,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'もどる',
     romaji: 'modoru',
     meaningEn: 'to return (v.i.); to come back',
-    meaningId: 'melakukan return (v.i.) / melakukan come back',
+    meaningId: 'Mengembalikan ((v.i.)) / Come back',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -9804,9 +9804,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Lingkungan & Alam',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、研究についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、けんきゅうについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai study.',
+      jp: '将来のために研究を深く学んでいる。',
+      furigana: 'しょうらいのためにけんきゅうをふかくまなんでいる。',
+      id: 'Mempelajari study secara mendalam demi masa depan.',
     },
   },
   {
@@ -9820,9 +9820,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、ケーキについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ケーキについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai cake.',
+      jp: '先生からケーキに関する詳しい説明を受けた。',
+      furigana: 'せんせいからケーキにかんするくわしいせつめいをうけた。',
+      id: 'Mendapatkan penjelasan rinci mengenai cake dari guru.',
     },
   },
   {
@@ -9836,9 +9836,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、草についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、くさについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai grass.',
+      jp: '今回の会議で草についての議論が行われた。',
+      furigana: 'こんかいのかいぎでくさについてのぎろんがおこなわれた。',
+      id: 'Diskusi mengenai grass dilakukan dalam rapat kali ini.',
     },
   },
   {
@@ -9847,7 +9847,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'こむ',
     romaji: 'komu',
     meaningEn: 'to be crowded',
-    meaningId: 'melakukan be crowded',
+    meaningId: 'Menjadi crowded',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -9868,9 +9868,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、この頃についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、このごろについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai these days.',
+      jp: '周囲と協力しながらこの頃に取り組んでいる。',
+      furigana: 'しゅういときょうりょくしながらこのごろにとりくんでいる。',
+      id: 'Mengerjakan these days sambil bekerja sama dengan orang sekitar.',
     },
   },
   {
@@ -9879,7 +9879,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'たずねる',
     romaji: 'tazuneru',
     meaningEn: 'to visit',
-    meaningId: 'melakukan visit',
+    meaningId: 'Mengunjungi',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -9895,7 +9895,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'さげる',
     romaji: 'sageru',
     meaningEn: 'to lower (v.t.); to hang',
-    meaningId: 'melakukan lower (v.t.) / melakukan hang',
+    meaningId: 'Lower (v.t.) / Menggantung',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -9916,9 +9916,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、花見についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、はなみについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai cherry-blossom viewing.',
+      jp: '周囲と協力しながら花見に取り組んでいる。',
+      furigana: 'しゅういときょうりょくしながらはなみにとりくんでいる。',
+      id: 'Mengerjakan cherry-blossom viewing sambil bekerja sama dengan orang sekitar.',
     },
   },
   {
@@ -9932,9 +9932,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、途中についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、とちゅうについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai on the way.',
+      jp: 'この本を読んで途中の基礎を理解した。',
+      furigana: 'このほんをよんでとちゅうのきそをりかいした。',
+      id: 'Memahami dasar-dasar on the way setelah membaca buku ini.',
     },
   },
   {
@@ -9948,9 +9948,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Sains & Kesehatan',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、入院についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、にゅういんするについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai hospitalization.',
+      jp: '専門家が入院の重要性について指摘した。',
+      furigana: 'せんもんかがにゅういんするのじゅうようせいについてしてきした。',
+      id: 'Pakar menekankan pentingnya hospitalization.',
     },
   },
   {
@@ -9959,7 +9959,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'のりかえる',
     romaji: 'norikaeru',
     meaningEn: 'to transfer (trains), to change (bus, train, etc.)',
-    meaningId: 'melakukan transfer (trains) / melakukan change (bus / train',
+    meaningId: 'Transfer (trains) / Mengubah ((bus) / train',
     level: 'N4',
     category: 'Lingkungan & Alam',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -9975,7 +9975,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'わかれる',
     romaji: 'wakareru',
     meaningEn: 'to part from, to separate',
-    meaningId: 'melakukan part from / melakukan separate',
+    meaningId: 'Part from / Memisahkan',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -9996,9 +9996,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Akhiran / Prefiks (Suffix/Prefix)',
     exampleSentence: {
-      jp: '実社会において、町についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ちょうについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai the town of ~.',
+      jp: '先生から～町に関する詳しい説明を受けた。',
+      furigana: 'せんせいから～ちょうにかんするくわしいせつめいをうけた。',
+      id: 'Mendapatkan penjelasan rinci mengenai the town of ~ dari guru.',
     },
   },
   {
@@ -10012,9 +10012,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、安全についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、あんぜんについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai safety.',
+      jp: '今回の会議で安全についての議論が行われた。',
+      furigana: 'こんかいのかいぎであんぜんについてのぎろんがおこなわれた。',
+      id: 'Diskusi mengenai safety dilakukan dalam rapat kali ini.',
     },
   },
   {
@@ -10028,9 +10028,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、看護婦についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、かんごふについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai (female) nurse.',
+      jp: '日々の生活で看護婦を大切にしている。',
+      furigana: 'ひびのせいかつでかんごふをたいせつにしている。',
+      id: 'Menghargai (female) nurse dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -10044,9 +10044,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、見物についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、けんぶつについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai sightseeing.',
+      jp: '周囲と協力しながら見物に取り組んでいる。',
+      furigana: 'しゅういときょうりょくしながらけんぶつにとりくんでいる。',
+      id: 'Mengerjakan sightseeing sambil bekerja sama dengan orang sekitar.',
     },
   },
   {
@@ -10060,9 +10060,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、相談についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、そうだんするについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai konsultasi.',
+      jp: 'この本を読んで相談の基礎を理解した。',
+      furigana: 'このほんをよんでそうだんするのきそをりかいした。',
+      id: 'Memahami dasar-dasar konsultasi setelah membaca buku ini.',
     },
   },
   {
@@ -10076,9 +10076,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、ガソリンスタンドについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ガソリンスタンドについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai gas station.',
+      jp: '日々の生活でガソリンスタンドを大切にしている。',
+      furigana: 'ひびのせいかつでガソリンスタンドをたいせつにしている。',
+      id: 'Menghargai gas station dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -10092,9 +10092,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、テニスについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、テニスについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai tennis.',
+      jp: '周囲と協力しながらテニスに取り組んでいる。',
+      furigana: 'しゅういときょうりょくしながらテニスにとりくんでいる。',
+      id: 'Mengerjakan tennis sambil bekerja sama dengan orang sekitar.',
     },
   },
   {
@@ -10119,7 +10119,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'あがる',
     romaji: 'agaru',
     meaningEn: 'to rise, to go up',
-    meaningId: 'melakukan rise / melakukan go up',
+    meaningId: 'Terbit / Naik / Go up',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -10140,9 +10140,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、翻訳についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ほんやくについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai translation.',
+      jp: '仕事で翻訳を活用して成果を上げた。',
+      furigana: 'しごとでほんやくをかつようしてせいかをあげた。',
+      id: 'Memanfaatkan translation dalam pekerjaan dan meraih hasil baik.',
     },
   },
   {
@@ -10156,9 +10156,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Makanan & Cita Rasa',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、食事についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、しょくじするについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai meal.',
+      jp: '将来のために食事を深く学んでいる。',
+      furigana: 'しょうらいのためにしょくじするをふかくまなんでいる。',
+      id: 'Mempelajari meal secara mendalam demi masa depan.',
     },
   },
   {
@@ -10172,9 +10172,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、お陰についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、おかげについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai thanks or owing to.',
+      jp: '先生からお陰に関する詳しい説明を受けた。',
+      furigana: 'せんせいからおかげにかんするくわしいせつめいをうけた。',
+      id: 'Mendapatkan penjelasan rinci mengenai thanks or owing to dari guru.',
     },
   },
   {
@@ -10188,9 +10188,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、娘についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、むすめについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai daughter (humble).',
+      jp: '今回の会議で娘についての議論が行われた。',
+      furigana: 'こんかいのかいぎでむすめについてのぎろんがおこなわれた。',
+      id: 'Diskusi mengenai daughter (humble) dilakukan dalam rapat kali ini.',
     },
   },
   {
@@ -10204,9 +10204,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Lingkungan & Alam',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、湯についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ゆについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai hot water.',
+      jp: '日々の生活で湯を大切にしている。',
+      furigana: 'ひびのせいかつでゆをたいせつにしている。',
+      id: 'Menghargai hot water dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -10220,9 +10220,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、競争についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、きょうそうについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai competition.',
+      jp: '周囲と協力しながら競争に取り組んでいる。',
+      furigana: 'しゅういときょうりょくしながらきょうそうにとりくんでいる。',
+      id: 'Mengerjakan competition sambil bekerja sama dengan orang sekitar.',
     },
   },
   {
@@ -10236,9 +10236,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Bisnis & Pekerjaan',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、会議についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、かいぎについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai business meeting.',
+      jp: '今回の会議で会議についての議論が行われた。',
+      furigana: 'こんかいのかいぎでかいぎについてのぎろんがおこなわれた。',
+      id: 'Diskusi mengenai business meeting dilakukan dalam rapat kali ini.',
     },
   },
   {
@@ -10252,9 +10252,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、湖についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、みずうみについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai lake.',
+      jp: '日々の生活で湖を大切にしている。',
+      furigana: 'ひびのせいかつでみずうみをたいせつにしている。',
+      id: 'Menghargai lake dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -10263,7 +10263,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'あつまる',
     romaji: 'atsumaru',
     meaningEn: 'to gather (v.i.), to collect',
-    meaningId: 'melakukan gather (v.i.) / melakukan collect',
+    meaningId: 'Berkumpul ((v.i.)) / Mengumpulkan',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -10300,9 +10300,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、生活についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、せいかつするについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai living.',
+      jp: '専門家が生活の重要性について指摘した。',
+      furigana: 'せんもんかがせいかつするのじゅうようせいについてしてきした。',
+      id: 'Pakar menekankan pentingnya living.',
     },
   },
   {
@@ -10316,9 +10316,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、糸についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、いとについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai thread.',
+      jp: '仕事で糸を活用して成果を上げた。',
+      furigana: 'しごとでいとをかつようしてせいかをあげた。',
+      id: 'Memanfaatkan thread dalam pekerjaan dan meraih hasil baik.',
     },
   },
   {
@@ -10348,9 +10348,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、ピアノについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ピアノについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai piano.',
+      jp: '先生からピアノに関する詳しい説明を受けた。',
+      furigana: 'せんせいからピアノにかんするくわしいせつめいをうけた。',
+      id: 'Mendapatkan penjelasan rinci mengenai piano dari guru.',
     },
   },
   {
@@ -10364,9 +10364,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Akhiran / Prefiks (Suffix/Prefix)',
     exampleSentence: {
-      jp: '実社会において、目についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、めについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai number ~ sequence.',
+      jp: '今回の会議で～目についての議論が行われた。',
+      furigana: 'こんかいのかいぎで～めについてのぎろんがおこなわれた。',
+      id: 'Diskusi mengenai number ~ sequence dilakukan dalam rapat kali ini.',
     },
   },
   {
@@ -10380,9 +10380,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、番組についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ばんぐみについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai broadcast program.',
+      jp: '日々の生活で番組を大切にしている。',
+      furigana: 'ひびのせいかつでばんぐみをたいせつにしている。',
+      id: 'Menghargai broadcast program dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -10396,9 +10396,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、急についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、きゅうについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai urgent.',
+      jp: '先生から急に関する詳しい説明を受けた。',
+      furigana: 'せんせいからきゅうにかんするくわしいせつめいをうけた。',
+      id: 'Mendapatkan penjelasan rinci mengenai urgent dari guru.',
     },
   },
   {
@@ -10428,9 +10428,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、木綿についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、もめんについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai cotton.',
+      jp: '日々の生活で木綿を大切にしている。',
+      furigana: 'ひびのせいかつでもめんをたいせつにしている。',
+      id: 'Menghargai cotton dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -10444,9 +10444,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、輸出についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ゆしゅつするについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai export.',
+      jp: '周囲と協力しながら輸出に取り組んでいる。',
+      furigana: 'しゅういときょうりょくしながらゆしゅつするにとりくんでいる。',
+      id: 'Mengerjakan export sambil bekerja sama dengan orang sekitar.',
     },
   },
   {
@@ -10460,9 +10460,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、タイプについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、タイプについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai type.',
+      jp: 'この本を読んでタイプの基礎を理解した。',
+      furigana: 'このほんをよんでタイプのきそをりかいした。',
+      id: 'Memahami dasar-dasar type setelah membaca buku ini.',
     },
   },
   {
@@ -10487,7 +10487,7 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'うれしい',
     romaji: 'ureshii',
     meaningEn: 'to be happy; to be glad',
-    meaningId: 'melakukan be happy / melakukan be glad',
+    meaningId: 'Menjadi happy / Menjadi glad',
     level: 'N4',
     category: 'Pikiran, Perasaan & Karakter',
     partOfSpeech: 'Kata Kerja (Verb)',
@@ -10508,9 +10508,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、アルコールについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、アルコールについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai alcohol.',
+      jp: '将来のためにアルコールを深く学んでいる。',
+      furigana: 'しょうらいのためにアルコールをふかくまなんでいる。',
+      id: 'Mempelajari alcohol secara mendalam demi masa depan.',
     },
   },
   {
@@ -10524,9 +10524,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、ソフトについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ソフトについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai soft.',
+      jp: '先生からソフトに関する詳しい説明を受けた。',
+      furigana: 'せんせいからソフトにかんするくわしいせつめいをうけた。',
+      id: 'Mendapatkan penjelasan rinci mengenai soft dari guru.',
     },
   },
   {
@@ -10540,9 +10540,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、神社についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、じんじゃについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai shinto shrine.',
+      jp: '今回の会議で神社についての議論が行われた。',
+      furigana: 'こんかいのかいぎでじんじゃについてのぎろんがおこなわれた。',
+      id: 'Diskusi mengenai shinto shrine dilakukan dalam rapat kali ini.',
     },
   },
   {
@@ -10551,14 +10551,14 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     kana: 'だいぶ',
     romaji: 'daibu',
     meaningEn: 'fairly well, to a large extent, considerably, pretty much',
-    meaningId: 'fairly well / melakukan a large extent / considerably',
+    meaningId: 'Fairly well / Large extent / considerably',
     level: 'N4',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、大分についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、だいぶについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai fairly well.',
+      jp: '将来のために大分を深く学んでいる。',
+      furigana: 'しょうらいのためにだいぶをふかくまなんでいる。',
+      id: 'Mempelajari fairly well secara mendalam demi masa depan.',
     },
   },
   {
@@ -10572,9 +10572,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、楽しみについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、たのしみについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai pleasure.',
+      jp: '先生から楽しみに関する詳しい説明を受けた。',
+      furigana: 'せんせいからたのしみにかんするくわしいせつめいをうけた。',
+      id: 'Mendapatkan penjelasan rinci mengenai pleasure dari guru.',
     },
   },
   {
@@ -10588,9 +10588,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、趣味についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、しゅみについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai hobi.',
+      jp: '今回の会議で趣味についての議論が行われた。',
+      furigana: 'こんかいのかいぎでしゅみについてのぎろんがおこなわれた。',
+      id: 'Diskusi mengenai hobi dilakukan dalam rapat kali ini.',
     },
   },
   {
@@ -10604,9 +10604,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、電報についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、でんぽうについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai telegram.',
+      jp: '日々の生活で電報を大切にしている。',
+      furigana: 'ひびのせいかつででんぽうをたいせつにしている。',
+      id: 'Menghargai telegram dalam kehidupan sehari-hari.',
     },
   },
   {
@@ -10620,9 +10620,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、家内についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、かないについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai (one\'s own) wife.',
+      jp: '周囲と協力しながら家内に取り組んでいる。',
+      furigana: 'しゅういときょうりょくしながらかないにとりくんでいる。',
+      id: 'Mengerjakan (one\'s own) wife sambil bekerja sama dengan orang sekitar.',
     },
   },
   {
@@ -10636,9 +10636,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、指についての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、ゆびについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai finger.',
+      jp: 'この本を読んで指の基礎を理解した。',
+      furigana: 'このほんをよんでゆびのきそをりかいした。',
+      id: 'Memahami dasar-dasar finger setelah membaca buku ini.',
     },
   },
   {
@@ -10652,9 +10652,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、これからについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、これからについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai from now on.',
+      jp: '専門家がこれからの重要性について指摘した。',
+      furigana: 'せんもんかがこれからのじゅうようせいについてしてきした。',
+      id: 'Pakar menekankan pentingnya from now on.',
     },
   },
   {
@@ -10668,9 +10668,9 @@ export const VOCAB_N4_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
     exampleSentence: {
-      jp: '実社会において、たまにについての知識を活用する。',
-      furigana: 'じっしゃかいにおいて、たまにについてのちしきをかつようする。',
-      id: 'Dalam masyarakat nyata, memanfaatkan pengetahuan mengenai occasionally.',
+      jp: '仕事でたまにを活用して成果を上げた。',
+      furigana: 'しごとでたまにをかつようしてせいかをあげた。',
+      id: 'Memanfaatkan occasionally dalam pekerjaan dan meraih hasil baik.',
     },
   },
   {

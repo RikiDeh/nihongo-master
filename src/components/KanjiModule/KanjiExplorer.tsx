@@ -395,17 +395,25 @@ export const KanjiExplorer: React.FC<KanjiExplorerProps> = ({ onGoToQuiz, initia
                 })}
               </div>
 
-              {/* Load More Button (Anti-Lag Progressive Rendering) */}
+              {/* Load More Button (Anti-Lag Progressive Rendering & Mobile Safeguard SPK #19) */}
               {visibleCount < filteredKanji.length && (
                 <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
                   <button
-                    onClick={() => setVisibleCount(prev => prev + 60)}
+                    onClick={() => setVisibleCount(prev => Math.min(filteredKanji.length, prev + 60))}
                     className="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-xs font-bold transition cursor-pointer border border-slate-700 shadow-md flex items-center justify-center gap-1.5"
                   >
-                    <span>Tampilkan Lebih Banyak (Muat 60 Lagi)</span>
+                    <span>Muat 60 Item Lagi (Menampilkan {displayedKanji.length} dari {filteredKanji.length})</span>
                   </button>
                   <button
-                    onClick={() => setVisibleCount(filteredKanji.length)}
+                    onClick={() => {
+                      if (filteredKanji.length > 500) {
+                        const confirmLoad = window.confirm(
+                          `⚠️ Peringatan Performa HP:\nMemuat ${filteredKanji.length} kanji sekaligus dapat memperlambat browser HP Anda.\n\nApakah Anda yakin ingin melanjutkan?`
+                        );
+                        if (!confirmLoad) return;
+                      }
+                      setVisibleCount(filteredKanji.length);
+                    }}
                     className="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white text-xs font-medium transition cursor-pointer border border-slate-800 flex items-center justify-center"
                   >
                     <span>Muat Semua ({filteredKanji.length})</span>

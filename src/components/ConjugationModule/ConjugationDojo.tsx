@@ -14,9 +14,13 @@ import {
   ArrowRight, 
   Flame, 
   AlertTriangle,
-  Lightbulb
+  Lightbulb,
+  Trophy,
+  RotateCcw
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
+
+export type DojoSessionMode = '10' | '20' | 'endless';
 
 interface DrillQuestion {
   verb: VerbItem;
@@ -29,14 +33,15 @@ interface DrillQuestion {
 
 // Pure helper function untuk membuat soal drill baru dengan Fisher-Yates Shuffle & distractor bunyi seimbang
 function generateNewQuestion(
-  formFilter: ConjugationForm | 'random' = 'te',
-  groupFilter: VerbGroup | 'all' = 'all'
+  formFilter: ConjugationForm | 'random' = 'random',
+  groupFilter: VerbGroup | 'all' = 'all',
+  chosenVerbInput?: VerbItem
 ): DrillQuestion {
   // Filter pool kata kerja
   const pool = VERBS_DATA.filter(v => groupFilter === 'all' || v.group === groupFilter);
-  const chosenVerb = pool[Math.floor(Math.random() * pool.length)] || VERBS_DATA[0];
+  const chosenVerb = chosenVerbInput || pool[Math.floor(Math.random() * pool.length)] || VERBS_DATA[0];
 
-  // Tentukan bentuk target
+  // Tentukan bentuk target (default random 6 bentuk SPK #19)
   const forms: ConjugationForm[] = ['masu', 'te', 'nai', 'ta', 'potential', 'passive'];
   const targetForm: ConjugationForm = formFilter === 'random' 
     ? forms[Math.floor(Math.random() * forms.length)] 
@@ -87,10 +92,26 @@ export const ConjugationDojo: React.FC = () => {
   // Cheatsheet inspector state
   const [selectedVerbId, setSelectedVerbId] = useState<string>(VERBS_DATA[0].id);
 
-  // Trainer state
-  const [selectedFormFilter, setSelectedFormFilter] = useState<ConjugationForm | 'random'>('te');
+  // Trainer state SPK #19
+  const [sessionMode, setSessionMode] = useState<DojoSessionMode>('10');
+  const [selectedFormFilter, setSelectedFormFilter] = useState<ConjugationForm | 'random'>('random');
   const [selectedGroupFilter, setSelectedGroupFilter] = useState<VerbGroup | 'all'>('all');
-  const [currentQuestion, setCurrentQuestion] = useState<DrillQuestion>(() => generateNewQuestion('te', 'all'));
+
+  // Unseen Deck state (Anti-pengulangan Fisher-Yates deck SPK #19)
+  const [unseenDeck, setUnseenDeck] = useState<VerbItem[]>(() => {
+    return fisherYatesShuffle([...VERBS_DATA]);
+  });
+
+  const [currentQuestion, setCurrentQuestion] = useState<DrillQuestion>(() => {
+    const initialPool = fisherYatesShuffle([...VERBS_DATA]);
+    const firstVerb = initialPool.pop() || VERBS_DATA[0];
+    return generateNewQuestion('random', 'all', firstVerb);
+  });
+
+  const [questionIndex, setQuestionIndex] = useState(1);
+  const [isSessionFinished, setIsSessionFinished] = useState(false);
+  const [wrongItems, setWrongItems] = useState<{ verb: VerbItem; targetForm: ConjugationForm; userAnswer: string; correctAnswer: string }[]>([]);
+
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
   const [isAnswered, setIsAnswered] = useState(false);
   const [streak, setStreak] = useState(0);
@@ -99,6 +120,30 @@ export const ConjugationDojo: React.FC = () => {
   const [correctCount, setCorrectCount] = useState(0);
 
   const selectedVerb = VERBS_DATA.find(v => v.id === selectedVerbId) || VERBS_DATA[0];
+
+  const handleStartNewSession = (
+    mode: DojoSessionMode = sessionMode,
+    form: ConjugationForm | 'random' = selectedFormFilter,
+    group: VerbGroup | 'all' = selectedGroupFilter
+  ) => {
+    const pool = VERBS_DATA.filter(v => group === 'all' || v.group === group);
+    const newDeck = fisherYatesShuffle([...pool]);
+    const firstVerb = newDeck.pop() || pool[0];
+
+    setSessionMode(mode);
+    setSelectedFormFilter(form);
+    setSelectedGroupFilter(group);
+    setUnseenDeck(newDeck);
+    setCurrentQuestion(generateNewQuestion(form, group, firstVerb));
+    setQuestionIndex(1);
+    setIsSessionFinished(false);
+    setSelectedOption(null);
+    setIsAnswered(false);
+    setStreak(0);
+    setCorrectCount(0);
+    setTotalAnswered(0);
+    setWrongItems([]);
+  };
 
   const handleSelectOption = (index: number) => {
     if (isAnswered || !currentQuestion) return;
@@ -126,13 +171,42 @@ export const ConjugationDojo: React.FC = () => {
     } else {
       playErrorSound();
       setStreak(0);
+      setWrongItems(prev => [
+        ...prev,
+        {
+          verb: currentQuestion.verb,
+          targetForm: currentQuestion.targetForm,
+          userAnswer: currentQuestion.options[index].kanji,
+          correctAnswer: currentQuestion.correctAnswer,
+        }
+      ]);
     }
   };
 
   const handleNextQuestion = () => {
+    const maxQuestions = sessionMode === 'endless' ? Infinity : parseInt(sessionMode, 10);
+    if (questionIndex >= maxQuestions) {
+      setIsSessionFinished(true);
+      const finalAccuracy = (correctCount / (totalAnswered || 1)) * 100;
+      if (finalAccuracy >= 70) {
+        confetti({ particleCount: 70, spread: 70, origin: { y: 0.6 } });
+      }
+      return;
+    }
+
     setIsAnswered(false);
     setSelectedOption(null);
-    setCurrentQuestion(generateNewQuestion(selectedFormFilter, selectedGroupFilter));
+    setQuestionIndex(prev => prev + 1);
+
+    // Ambil kata kerja berikutnya dari Unseen Deck tanpa repetisi
+    let nextDeck = [...unseenDeck];
+    const pool = VERBS_DATA.filter(v => selectedGroupFilter === 'all' || v.group === selectedGroupFilter);
+    if (nextDeck.length === 0) {
+      nextDeck = fisherYatesShuffle([...pool]);
+    }
+    const nextVerb = nextDeck.pop() || pool[0];
+    setUnseenDeck(nextDeck);
+    setCurrentQuestion(generateNewQuestion(selectedFormFilter, selectedGroupFilter, nextVerb));
   };
 
   const getTargetFormBadge = (form: ConjugationForm) => {
@@ -200,22 +274,156 @@ export const ConjugationDojo: React.FC = () => {
       {/* ==================================================================== */}
       {/* TAB 1: DRILL TRAINER                                                 */}
       {/* ==================================================================== */}
-      {activeTab === 'trainer' && currentQuestion && (
+      {activeTab === 'trainer' && isSessionFinished && (
+        <div className="max-w-2xl mx-auto bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8 shadow-2xl text-center animate-fadeIn">
+          <Trophy className="w-14 h-14 text-amber-400 mx-auto mb-3" />
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-white mb-2">
+            Sesi Latihan Dojo Selesai!
+          </h2>
+          <p className="text-xs sm:text-sm text-slate-400 mb-6">
+            Refleks konjugasi Anda semakin terasah. Sesi {sessionMode === 'endless' ? 'Mode Bertahan' : `${sessionMode} Soal`} telah selesai.
+          </p>
+
+          {/* Stats Grid */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-lg mx-auto mb-8">
+            <div className="p-3 bg-slate-950/60 border border-slate-800 rounded-2xl">
+              <span className="text-[10px] text-slate-400 block uppercase font-bold">Total Soal</span>
+              <span className="text-2xl font-bold text-white">{totalAnswered}</span>
+            </div>
+            <div className="p-3 bg-slate-950/60 border border-slate-800 rounded-2xl">
+              <span className="text-[10px] text-slate-400 block uppercase font-bold">Jawaban Benar</span>
+              <span className="text-2xl font-bold text-emerald-400">{correctCount}</span>
+            </div>
+            <div className="p-3 bg-slate-950/60 border border-slate-800 rounded-2xl">
+              <span className="text-[10px] text-slate-400 block uppercase font-bold">Akurasi</span>
+              <span className="text-2xl font-bold text-indigo-400">
+                {Math.round((correctCount / (totalAnswered || 1)) * 100)}%
+              </span>
+            </div>
+            <div className="p-3 bg-slate-950/60 border border-slate-800 rounded-2xl">
+              <span className="text-[10px] text-slate-400 block uppercase font-bold">Rekor Streak</span>
+              <span className="text-2xl font-bold text-amber-400">{bestStreak}</span>
+            </div>
+          </div>
+
+          {/* Mistakes Breakdown */}
+          {wrongItems.length > 0 && (
+            <div className="mb-8 text-left max-w-lg mx-auto">
+              <h3 className="text-xs font-bold uppercase tracking-wider text-rose-400 mb-3 flex items-center gap-1.5">
+                <AlertTriangle className="w-4 h-4" />
+                <span>Kata Kerja yang Sempat Keliru ({wrongItems.length}):</span>
+              </h3>
+              <div className="space-y-2 max-h-56 overflow-y-auto p-1 scrollbar-thin">
+                {wrongItems.map((item, idx) => (
+                  <div key={idx} className="p-3 rounded-2xl bg-slate-950 border border-slate-800/80 flex items-center justify-between">
+                    <div>
+                      <div className="flex items-center gap-2">
+                        <span className="text-lg font-jp font-bold text-white">{item.verb.kanji}</span>
+                        <span className="text-xs text-slate-400">({item.verb.kana})</span>
+                        <span className={`px-2 py-0.5 rounded text-[10px] font-bold border ${getTargetFormBadge(item.targetForm).color}`}>
+                          {getTargetFormBadge(item.targetForm).label}
+                        </span>
+                      </div>
+                      <div className="text-xs mt-1">
+                        <span className="text-rose-400 font-mono mr-2">Pilihan: {item.userAnswer}</span>
+                        <span className="text-emerald-400 font-bold font-mono">Kunci: {item.correctAnswer}</span>
+                      </div>
+                    </div>
+                    <button
+                      onClick={() => speakJapanese(item.correctAnswer)}
+                      className="p-2 rounded-xl bg-slate-900 text-slate-400 hover:text-white hover:bg-slate-800 transition cursor-pointer"
+                      title="Dengarkan pelafalan"
+                    >
+                      <Volume2 className="w-4 h-4" />
+                    </button>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Action Buttons */}
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            <button
+              onClick={() => handleStartNewSession('10')}
+              className="px-5 py-2.5 rounded-xl bg-rose-500 hover:bg-rose-600 text-white font-bold text-xs shadow-lg shadow-rose-500/25 transition cursor-pointer flex items-center gap-1.5"
+            >
+              <RotateCcw className="w-3.5 h-3.5" />
+              <span>⚡ Latihan 10 Soal Lagi</span>
+            </button>
+            <button
+              onClick={() => handleStartNewSession('20')}
+              className="px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs shadow-lg shadow-indigo-600/25 transition cursor-pointer flex items-center gap-1.5"
+            >
+              <RotateCcw className="w-3.5 h-3.5" />
+              <span>📝 Latihan 20 Soal Lagi</span>
+            </button>
+            <button
+              onClick={() => handleStartNewSession('endless')}
+              className="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-xs transition cursor-pointer border border-slate-700"
+            >
+              🔥 Coba Mode Bertahan
+            </button>
+          </div>
+        </div>
+      )}
+
+      {activeTab === 'trainer' && !isSessionFinished && currentQuestion && (
         <div className="max-w-2xl mx-auto">
           {/* Trainer Filter & Streak Bar */}
           <div className="bg-slate-900/90 border border-slate-800 rounded-3xl p-4 mb-6 shadow-xl space-y-3">
-            <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+            {/* Session Duration Selector SPK #19 */}
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 p-2.5 bg-slate-950/80 border border-slate-800/80 rounded-2xl">
+              <div className="flex items-center gap-1.5 overflow-x-auto w-full sm:w-auto">
+                <span className="text-[11px] font-bold text-slate-500 uppercase mr-1 shrink-0">Durasi:</span>
+                {(
+                  [
+                    { id: '10', label: '⚡ 10 Soal (Kilat)' },
+                    { id: '20', label: '📝 20 Soal (Standar)' },
+                    { id: 'endless', label: '🔥 Mode Bertahan' },
+                  ] as const
+                ).map(m => (
+                  <button
+                    key={m.id}
+                    onClick={() => handleStartNewSession(m.id)}
+                    className={`px-2.5 py-1 rounded-xl text-xs font-bold transition cursor-pointer shrink-0 ${
+                      sessionMode === m.id
+                        ? 'bg-rose-500 text-white shadow-sm shadow-rose-500/30'
+                        : 'bg-slate-900 border border-slate-800 text-slate-400 hover:text-white'
+                    }`}
+                  >
+                    {m.label}
+                  </button>
+                ))}
+              </div>
+
+              {/* Progress counter: Soal X dari Y */}
+              <div className="text-xs font-mono font-bold text-slate-300 shrink-0 self-end sm:self-auto">
+                {sessionMode === 'endless' ? (
+                  <span>Soal ke-<strong className="text-rose-400">{questionIndex}</strong></span>
+                ) : (
+                  <span>Soal <strong className="text-rose-400">{questionIndex}</strong> dari <strong className="text-white">{sessionMode}</strong></span>
+                )}
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-1">
               {/* Form Filter Selector */}
               <div className="flex items-center gap-1 overflow-x-auto w-full sm:w-auto pb-1 sm:pb-0">
                 <span className="text-[11px] font-bold text-slate-500 uppercase mr-1 shrink-0">Bentuk:</span>
-                {(['te', 'masu', 'nai', 'ta', 'potential', 'passive', 'random'] as const).map(f => (
+                {(['random', 'te', 'masu', 'nai', 'ta', 'potential', 'passive'] as const).map(f => (
                   <button
                     key={f}
                     onClick={() => {
                       setSelectedFormFilter(f);
                       setIsAnswered(false);
                       setSelectedOption(null);
-                      setCurrentQuestion(generateNewQuestion(f, selectedGroupFilter));
+                      let nextDeck = [...unseenDeck];
+                      const pool = VERBS_DATA.filter(v => selectedGroupFilter === 'all' || v.group === selectedGroupFilter);
+                      if (nextDeck.length === 0) nextDeck = fisherYatesShuffle([...pool]);
+                      const nextVerb = nextDeck.pop() || pool[0];
+                      setUnseenDeck(nextDeck);
+                      setCurrentQuestion(generateNewQuestion(f, selectedGroupFilter, nextVerb));
                     }}
                     className={`px-3 py-1 rounded-xl text-xs font-bold transition cursor-pointer shrink-0 ${
                       selectedFormFilter === f
@@ -255,7 +463,12 @@ export const ConjugationDojo: React.FC = () => {
                     setSelectedGroupFilter(g.id);
                     setIsAnswered(false);
                     setSelectedOption(null);
-                    setCurrentQuestion(generateNewQuestion(selectedFormFilter, g.id));
+                    let nextDeck = [...unseenDeck];
+                    const pool = VERBS_DATA.filter(v => g.id === 'all' || v.group === g.id);
+                    if (nextDeck.length === 0) nextDeck = fisherYatesShuffle([...pool]);
+                    const nextVerb = nextDeck.pop() || pool[0];
+                    setUnseenDeck(nextDeck);
+                    setCurrentQuestion(generateNewQuestion(selectedFormFilter, g.id, nextVerb));
                   }}
                   className={`px-2.5 py-1 rounded-lg text-xs font-medium transition cursor-pointer shrink-0 ${
                     selectedGroupFilter === g.id
@@ -382,7 +595,11 @@ export const ConjugationDojo: React.FC = () => {
                   onClick={handleNextQuestion}
                   className="px-6 py-3 rounded-2xl bg-gradient-to-r from-rose-500 to-indigo-600 hover:from-rose-600 hover:to-indigo-700 text-white font-bold text-sm flex items-center gap-2 shadow-lg shadow-rose-500/25 transition cursor-pointer animate-pop"
                 >
-                  <span>Tantangan Berikutnya</span>
+                  <span>
+                    {sessionMode !== 'endless' && questionIndex >= parseInt(sessionMode, 10)
+                      ? 'Lihat Hasil Sesi'
+                      : 'Tantangan Berikutnya'}
+                  </span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
               </div>
