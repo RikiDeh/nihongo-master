@@ -84,3 +84,12 @@ Semua data baru yang ditambahkan ke `src/data/` **wajib mematuhi interface di `s
    * Setelah menambahkan data atau memodifikasi komponen logika, selalu jalankan `bun run lint` dan `bun run build` untuk memastikan tidak ada lint error atau type mismatch.
 3. **Preservasi Logika Eksisting**:
    * Jangan menghapus atau mengubah fungsionalitas yang sudah berjalan (seperti algoritma *re-queuing* salah jawab pada `KanaQuizSession` atau preset filter pada `KanaSelector`) kecuali diminta secara eksplisit oleh pengguna.
+
+---
+
+## 5. ⚖️ Doktrin Kepatuhan Mutlak: Mandor Manifesto
+
+Seluruh pekerjaan agen dan developer wajib mematuhi [MANDOR_MANIFESTO.md](./MANDOR_MANIFESTO.md).
+* **Haram Glazing**: Dilarang mengklaim fitur aman/mantap hanya karena build atau linter hijau.
+* **Patuhi 4-Layer Forensic Protocol**: Uji integritas semantik (0 kata campur Inggris), lifecycle sesi (tidak boleh infinite loop), dan ketahanan memori mobile.
+
