@@ -165,7 +165,7 @@ export const N5QuizSession: React.FC<N5QuizSessionProps> = ({
                 <Volume2 className="w-3.5 h-3.5" />
                 <span>[聴解] SOAL MENYIMAK</span>
               </span>
-              <h2 className="text-lg sm:text-xl font-serif-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] leading-relaxed mb-4">
+              <h2 className="text-lg sm:text-xl font-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] leading-relaxed mb-4">
                 {currentQ.question}
               </h2>
               <button
@@ -178,7 +178,7 @@ export const N5QuizSession: React.FC<N5QuizSessionProps> = ({
             </div>
           ) : (
             <div className="bg-[#faf8f5] dark:bg-[#18181b]/50 border border-[#e7e5e4] dark:border-[#27272a] rounded-lg p-5 mb-4">
-              <h2 className="text-lg sm:text-2xl font-serif-jp font-semibold text-[#1c1917] dark:text-[#f4f4f5] leading-relaxed tracking-wide whitespace-pre-line">
+              <h2 className="text-lg sm:text-2xl font-jp font-semibold text-[#1c1917] dark:text-[#f4f4f5] leading-relaxed tracking-wide whitespace-pre-line">
                 {currentQ.question}
               </h2>
 
@@ -222,7 +222,7 @@ export const N5QuizSession: React.FC<N5QuizSessionProps> = ({
                   <span className="w-6 h-6 rounded border border-[#e7e5e4] dark:border-[#27272a] bg-[#faf8f5] dark:bg-[#18181b] flex items-center justify-center text-xs font-mono font-bold text-[#78716c] dark:text-[#a1a1aa]">
                     {idx + 1}
                   </span>
-                  <span className="font-serif-jp">{opt}</span>
+                  <span className="font-jp">{opt}</span>
                 </div>
 
                 {isAnswered && idx === currentQ.correctIndex && (
@@ -252,7 +252,7 @@ export const N5QuizSession: React.FC<N5QuizSessionProps> = ({
                 )}
               </div>
               <div className="flex-1">
-                <span className="font-serif-jp font-bold text-sm block mb-1">
+                <span className="font-jp font-bold text-sm block mb-1">
                   {isCurrentCorrect ? 'Jawaban Tepat [正解]' : 'Evaluasi Jawaban [解説]'}
                 </span>
                 <p className="text-xs sm:text-sm text-[#78716c] dark:text-[#a1a1aa] leading-relaxed whitespace-pre-line">

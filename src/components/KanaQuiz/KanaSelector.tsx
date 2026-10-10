@@ -187,7 +187,7 @@ export const KanaSelector: React.FC<KanaSelectorProps> = ({ onStartQuiz }) => {
             <Sparkles className="w-3.5 h-3.5" />
             <span>[五十音図] MATRIKS 50 BUNYI KANA JEPANG</span>
           </div>
-          <h1 className="text-2xl sm:text-3xl font-serif-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] tracking-tight">
+          <h1 className="text-2xl sm:text-3xl font-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] tracking-tight">
             Pusat Latihan Aksara Kana
           </h1>
           <p className="text-xs sm:text-sm text-[#78716c] dark:text-[#a1a1aa] mt-1 max-w-2xl font-sans">
@@ -206,7 +206,7 @@ export const KanaSelector: React.FC<KanaSelectorProps> = ({ onStartQuiz }) => {
                 : 'text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
             }`}
           >
-            <span className="font-serif-jp text-sm font-bold">あ</span>
+            <span className="font-jp text-sm font-bold">あ</span>
             <span>Hiragana (平仮名)</span>
             {isHiraganaAllActive && (
               <span className="w-2 h-2 rounded-full bg-[#c84b31] dark:bg-[#e05d44]" title="Semua Hiragana terpilih" />
@@ -221,7 +221,7 @@ export const KanaSelector: React.FC<KanaSelectorProps> = ({ onStartQuiz }) => {
                 : 'text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
             }`}
           >
-            <span className="font-serif-jp text-sm font-bold">ア</span>
+            <span className="font-jp text-sm font-bold">ア</span>
             <span>Katakana (片仮名)</span>
             {isKatakanaAllActive && (
               <span className="w-2 h-2 rounded-full bg-[#1e3a8a] dark:bg-[#3b82f6]" title="Semua Katakana terpilih" />
@@ -347,7 +347,7 @@ export const KanaSelector: React.FC<KanaSelectorProps> = ({ onStartQuiz }) => {
           <div className="min-w-[620px]">
             {/* Table Header: Vowel Columns [A, I, U, E, O] */}
             <div className="grid grid-cols-6 gap-2 mb-2 pb-2 border-b border-[#e7e5e4] dark:border-[#27272a] text-center font-mono text-xs font-bold text-[#78716c] dark:text-[#a1a1aa]">
-              <div className="text-left font-serif-jp text-xs uppercase text-[#1c1917] dark:text-[#f4f4f5] flex items-center">
+              <div className="text-left font-jp text-xs uppercase text-[#1c1917] dark:text-[#f4f4f5] flex items-center">
                 Baris \ Kolom
               </div>
               {['a (段)', 'i (段)', 'u (段)', 'e (段)', 'o (段)'].map((col, idx) => {
@@ -442,7 +442,7 @@ export const KanaSelector: React.FC<KanaSelectorProps> = ({ onStartQuiz }) => {
                               : 'bg-[#faf8f5] dark:bg-[#18181b] border-[#e7e5e4] dark:border-[#27272a] text-[#1c1917] dark:text-[#f4f4f5] hover:border-[#1c1917] dark:hover:border-[#f4f4f5]'
                           }`}
                         >
-                          <span className="text-xl sm:text-2xl font-serif-jp leading-none mb-1">
+                          <span className="text-xl sm:text-2xl font-jp leading-none mb-1">
                             {item.character}
                           </span>
                           <span className="text-[10px] font-mono text-[#78716c] dark:text-[#a1a1aa] leading-none">
@@ -470,7 +470,7 @@ export const KanaSelector: React.FC<KanaSelectorProps> = ({ onStartQuiz }) => {
                         : 'bg-[#faf8f5] dark:bg-[#18181b] border-[#e7e5e4] dark:border-[#27272a] text-[#1c1917] dark:text-[#f4f4f5] hover:border-[#1c1917] dark:hover:border-[#f4f4f5]'
                     }`}
                   >
-                    <span className="text-xl sm:text-2xl font-serif-jp leading-none mb-1">
+                    <span className="text-xl sm:text-2xl font-jp leading-none mb-1">
                       {specialNItem.character}
                     </span>
                     <span className="text-[10px] font-mono text-[#78716c] dark:text-[#a1a1aa] leading-none">
@@ -499,7 +499,7 @@ export const KanaSelector: React.FC<KanaSelectorProps> = ({ onStartQuiz }) => {
                   className="p-4 rounded-xl border border-[#e7e5e4] dark:border-[#27272a] bg-white dark:bg-[#1f1f23] shadow-xs"
                 >
                   <div className="flex items-center justify-between mb-3 pb-2 border-b border-[#e7e5e4] dark:border-[#27272a]">
-                    <span className="font-serif-jp font-bold text-sm text-[#1c1917] dark:text-[#f4f4f5]">
+                    <span className="font-jp font-bold text-sm text-[#1c1917] dark:text-[#f4f4f5]">
                       {group.name}
                     </span>
                     <button
@@ -524,7 +524,7 @@ export const KanaSelector: React.FC<KanaSelectorProps> = ({ onStartQuiz }) => {
                               : 'bg-[#faf8f5] dark:bg-[#18181b] border-[#e7e5e4] dark:border-[#27272a] text-[#1c1917] dark:text-[#f4f4f5] hover:border-[#1c1917]'
                           }`}
                         >
-                          <span className="text-xl font-serif-jp leading-none mb-1">{item.character}</span>
+                          <span className="text-xl font-jp leading-none mb-1">{item.character}</span>
                           <span className="text-[10px] font-mono text-[#78716c] dark:text-[#a1a1aa]">{item.romaji}</span>
                         </button>
                       );
@@ -549,7 +549,7 @@ export const KanaSelector: React.FC<KanaSelectorProps> = ({ onStartQuiz }) => {
                   className="p-4 rounded-xl border border-[#e7e5e4] dark:border-[#27272a] bg-white dark:bg-[#1f1f23] shadow-xs"
                 >
                   <div className="flex items-center justify-between mb-3 pb-2 border-b border-[#e7e5e4] dark:border-[#27272a]">
-                    <span className="font-serif-jp font-bold text-sm text-[#1c1917] dark:text-[#f4f4f5]">
+                    <span className="font-jp font-bold text-sm text-[#1c1917] dark:text-[#f4f4f5]">
                       {group.name}
                     </span>
                     <button
@@ -574,7 +574,7 @@ export const KanaSelector: React.FC<KanaSelectorProps> = ({ onStartQuiz }) => {
                               : 'bg-[#faf8f5] dark:bg-[#18181b] border-[#e7e5e4] dark:border-[#27272a] text-[#1c1917] dark:text-[#f4f4f5] hover:border-[#1c1917]'
                           }`}
                         >
-                          <span className="text-xl font-serif-jp leading-none mb-1">{item.character}</span>
+                          <span className="text-xl font-jp leading-none mb-1">{item.character}</span>
                           <span className="text-[10px] font-mono text-[#78716c] dark:text-[#a1a1aa]">{item.romaji}</span>
                         </button>
                       );

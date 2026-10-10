@@ -236,7 +236,7 @@ export const ConjugationDojo: React.FC = () => {
           <Swords className="w-3.5 h-3.5" />
           <span>DOJO KONJUGASI KATA KERJA (動詞の活用)</span>
         </div>
-        <h1 className="text-3xl sm:text-4xl font-bold font-serif-jp text-[#1c1917] dark:text-[#f4f4f5] tracking-tight mb-2">
+        <h1 className="text-3xl sm:text-4xl font-bold font-jp text-[#1c1917] dark:text-[#f4f4f5] tracking-tight mb-2">
           Masteri Perubahan Bentuk Kata Kerja
         </h1>
         <p className="text-[#78716c] dark:text-[#a1a1aa] text-sm max-w-xl mx-auto">
@@ -277,7 +277,7 @@ export const ConjugationDojo: React.FC = () => {
       {activeTab === 'trainer' && isSessionFinished && (
         <div className="max-w-2xl mx-auto bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] rounded-xl p-6 sm:p-8 shadow-xs text-center animate-fadeIn">
           <Trophy className="w-12 h-12 text-[#c84b31] mx-auto mb-3" />
-          <h2 className="text-2xl sm:text-3xl font-bold font-serif-jp text-[#1c1917] dark:text-[#f4f4f5] mb-2">
+          <h2 className="text-2xl sm:text-3xl font-bold font-jp text-[#1c1917] dark:text-[#f4f4f5] mb-2">
             Sesi Latihan Dojo Selesai
           </h2>
           <p className="text-xs sm:text-sm text-[#78716c] dark:text-[#a1a1aa] mb-6">
@@ -318,7 +318,7 @@ export const ConjugationDojo: React.FC = () => {
                   <div key={idx} className="p-3 rounded-lg bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a] flex items-center justify-between">
                     <div>
                       <div className="flex items-center gap-2">
-                        <span className="text-lg font-serif-jp font-bold text-[#1c1917] dark:text-[#f4f4f5]">{item.verb.kanji}</span>
+                        <span className="text-lg font-jp font-bold text-[#1c1917] dark:text-[#f4f4f5]">{item.verb.kanji}</span>
                         <span className="text-xs text-[#78716c] dark:text-[#a1a1aa]">({item.verb.kana})</span>
                         <span className={`px-2 py-0.5 rounded text-[10px] font-mono font-bold border ${getTargetFormBadge(item.targetForm).color}`}>
                           {getTargetFormBadge(item.targetForm).label}
@@ -501,7 +501,7 @@ export const ConjugationDojo: React.FC = () => {
                 BENTUK KAMUS (JISHOKEI):
               </span>
               <div className="flex items-center justify-center gap-3">
-                <span className="text-4xl sm:text-5xl font-serif-jp font-bold text-[#1c1917] dark:text-[#f4f4f5]">
+                <span className="text-4xl sm:text-5xl font-jp font-bold text-[#1c1917] dark:text-[#f4f4f5]">
                   {currentQuestion.verb.kanji}
                 </span>
                 <button
@@ -513,7 +513,7 @@ export const ConjugationDojo: React.FC = () => {
                   <Volume2 className="w-4 h-4 text-[#2e7d32]" />
                 </button>
               </div>
-              <div className="text-sm font-serif-jp text-[#c84b31] font-semibold mt-1">
+              <div className="text-sm font-jp text-[#c84b31] font-semibold mt-1">
                 {currentQuestion.verb.kana}
                 {showRomaji && (
                   <span className="text-[#78716c] dark:text-[#a1a1aa] font-mono text-xs ml-1.5 font-normal">
@@ -550,7 +550,7 @@ export const ConjugationDojo: React.FC = () => {
                     className={`p-4 rounded-xl border text-base text-left font-medium transition flex items-center justify-between cursor-pointer select-none shadow-xs ${btnStyle}`}
                   >
                     <div>
-                      <span className="text-lg font-serif-jp font-bold block mb-0.5">
+                      <span className="text-lg font-jp font-bold block mb-0.5">
                         {opt.kanji}
                       </span>
                       {showRomaji && opt.romaji && (
@@ -580,7 +580,7 @@ export const ConjugationDojo: React.FC = () => {
                     <span className="font-bold text-sm text-[#1c1917] dark:text-[#f4f4f5] block mb-1">
                       Kunci Jawaban & Logika Perubahan:
                     </span>
-                    <p className="text-xs sm:text-sm text-[#78716c] dark:text-[#a1a1aa] leading-relaxed whitespace-pre-line font-serif-jp">
+                    <p className="text-xs sm:text-sm text-[#78716c] dark:text-[#a1a1aa] leading-relaxed whitespace-pre-line font-jp">
                       {currentQuestion.explanation}
                     </p>
                   </div>
@@ -617,7 +617,7 @@ export const ConjugationDojo: React.FC = () => {
           <div className="bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] rounded-xl p-6 sm:p-8 shadow-xs">
             <div className="flex items-center gap-2.5 mb-6">
               <Sparkles className="w-5 h-5 text-[#c84b31]" />
-              <h2 className="text-xl sm:text-2xl font-bold font-serif-jp text-[#1c1917] dark:text-[#f4f4f5] tracking-tight">
+              <h2 className="text-xl sm:text-2xl font-bold font-jp text-[#1c1917] dark:text-[#f4f4f5] tracking-tight">
                 Rumus Bentuk-Te & Ta (Godan vs Ichidan)
               </h2>
             </div>
@@ -635,32 +635,32 @@ export const ConjugationDojo: React.FC = () => {
                 <div className="space-y-2 text-xs">
                   <div className="p-3 rounded-lg bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] flex items-center justify-between">
                     <span className="font-mono text-[#c84b31] font-bold">Akhiran [う], [つ], [る]</span>
-                    <span className="font-bold text-[#2e7d32] font-serif-jp">➔ 〜って (〜tte) / 〜った (〜tta)</span>
-                    <span className="text-[11px] text-[#78716c] dark:text-[#a1a1aa] font-serif-jp">買<strong className="text-[#1c1917] dark:text-[#f4f4f5]">って</strong>, 待<strong className="text-[#1c1917] dark:text-[#f4f4f5]">って</strong></span>
+                    <span className="font-bold text-[#2e7d32] font-jp">➔ 〜って (〜tte) / 〜った (〜tta)</span>
+                    <span className="text-[11px] text-[#78716c] dark:text-[#a1a1aa] font-jp">買<strong className="text-[#1c1917] dark:text-[#f4f4f5]">って</strong>, 待<strong className="text-[#1c1917] dark:text-[#f4f4f5]">って</strong></span>
                   </div>
 
                   <div className="p-3 rounded-lg bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] flex items-center justify-between">
                     <span className="font-mono text-[#1e3a8a] dark:text-[#60a5fa] font-bold">Akhiran [む], [ぶ], [ぬ]</span>
-                    <span className="font-bold text-[#2e7d32] font-serif-jp">➔ 〜んで (〜nde) / 〜んだ (〜nda)</span>
-                    <span className="text-[11px] text-[#78716c] dark:text-[#a1a1aa] font-serif-jp">飲<strong className="text-[#1c1917] dark:text-[#f4f4f5]">んで</strong>, 遊<strong className="text-[#1c1917] dark:text-[#f4f4f5]">んで</strong></span>
+                    <span className="font-bold text-[#2e7d32] font-jp">➔ 〜んで (〜nde) / 〜んだ (〜nda)</span>
+                    <span className="text-[11px] text-[#78716c] dark:text-[#a1a1aa] font-jp">飲<strong className="text-[#1c1917] dark:text-[#f4f4f5]">んで</strong>, 遊<strong className="text-[#1c1917] dark:text-[#f4f4f5]">んで</strong></span>
                   </div>
 
                   <div className="p-3 rounded-lg bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] flex items-center justify-between">
                     <span className="font-mono text-[#d97706] font-bold">Akhiran [く]</span>
-                    <span className="font-bold text-[#2e7d32] font-serif-jp">➔ 〜いて (〜ite) / 〜いた (〜ita)</span>
-                    <span className="text-[11px] text-[#78716c] dark:text-[#a1a1aa] font-serif-jp">書<strong className="text-[#1c1917] dark:text-[#f4f4f5]">いて</strong>, 聞<strong className="text-[#1c1917] dark:text-[#f4f4f5]">いて</strong></span>
+                    <span className="font-bold text-[#2e7d32] font-jp">➔ 〜いて (〜ite) / 〜いた (〜ita)</span>
+                    <span className="text-[11px] text-[#78716c] dark:text-[#a1a1aa] font-jp">書<strong className="text-[#1c1917] dark:text-[#f4f4f5]">いて</strong>, 聞<strong className="text-[#1c1917] dark:text-[#f4f4f5]">いて</strong></span>
                   </div>
 
                   <div className="p-3 rounded-lg bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] flex items-center justify-between">
                     <span className="font-mono text-[#7c3aed] font-bold">Akhiran [ぐ]</span>
-                    <span className="font-bold text-[#2e7d32] font-serif-jp">➔ 〜いで (〜ide) / 〜いだ (〜ida)</span>
-                    <span className="text-[11px] text-[#78716c] dark:text-[#a1a1aa] font-serif-jp">泳<strong className="text-[#1c1917] dark:text-[#f4f4f5]">いで</strong></span>
+                    <span className="font-bold text-[#2e7d32] font-jp">➔ 〜いで (〜ide) / 〜いだ (〜ida)</span>
+                    <span className="text-[11px] text-[#78716c] dark:text-[#a1a1aa] font-jp">泳<strong className="text-[#1c1917] dark:text-[#f4f4f5]">いで</strong></span>
                   </div>
 
                   <div className="p-3 rounded-lg bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] flex items-center justify-between">
                     <span className="font-mono text-[#0284c7] font-bold">Akhiran [す]</span>
-                    <span className="font-bold text-[#2e7d32] font-serif-jp">➔ 〜して (〜shite) / 〜した (〜shita)</span>
-                    <span className="text-[11px] text-[#78716c] dark:text-[#a1a1aa] font-serif-jp">話<strong className="text-[#1c1917] dark:text-[#f4f4f5]">して</strong></span>
+                    <span className="font-bold text-[#2e7d32] font-jp">➔ 〜して (〜shite) / 〜した (〜shita)</span>
+                    <span className="text-[11px] text-[#78716c] dark:text-[#a1a1aa] font-jp">話<strong className="text-[#1c1917] dark:text-[#f4f4f5]">して</strong></span>
                   </div>
                 </div>
 
@@ -670,7 +670,7 @@ export const ConjugationDojo: React.FC = () => {
                     <AlertTriangle className="w-4 h-4 text-[#c84b31]" />
                     <span>2 Pengecualian Wajib Ingat:</span>
                   </div>
-                  <ul className="list-disc list-inside space-y-1 text-[#78716c] dark:text-[#a1a1aa] pl-1 font-serif-jp">
+                  <ul className="list-disc list-inside space-y-1 text-[#78716c] dark:text-[#a1a1aa] pl-1 font-jp">
                     <li><strong>行く (iku = pergi)</strong>: Berubah menjadi <strong className="text-[#1c1917] dark:text-[#f4f4f5]">行って (itte)</strong>, BUKAN <s>iite</s>!</li>
                     <li><strong>帰る (kaeru = pulang)</strong>: Berakhiran "-eru" tapi termasuk <strong>GODAN</strong> ➔ <strong className="text-[#1c1917] dark:text-[#f4f4f5]">帰って (kaette)</strong>!</li>
                   </ul>
@@ -687,7 +687,7 @@ export const ConjugationDojo: React.FC = () => {
                   <p className="text-xs text-[#78716c] dark:text-[#a1a1aa] mb-3">
                     Paling mudah! Cukup <strong>buang [る]</strong> lalu tempel akhiran yang diinginkan:
                   </p>
-                  <div className="p-2.5 rounded-lg bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] text-xs text-[#2e7d32] font-serif-jp font-bold">
+                  <div className="p-2.5 rounded-lg bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] text-xs text-[#2e7d32] font-jp font-bold">
                     食べる ➔ 食べ【て】 / 食べ【ます】 / 食べ【ない】
                   </div>
                 </div>
@@ -700,7 +700,7 @@ export const ConjugationDojo: React.FC = () => {
                   <p className="text-xs text-[#78716c] dark:text-[#a1a1aa] mb-3">
                     Hanya ada 2 kata dasar (wajib dihafal mati):
                   </p>
-                  <div className="space-y-1.5 text-xs font-serif-jp">
+                  <div className="space-y-1.5 text-xs font-jp">
                     <div className="p-2 rounded-md bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] text-[#1c1917] dark:text-[#f4f4f5]">
                       <strong>する (suru):</strong> して • します • しない • した
                     </div>
@@ -714,7 +714,7 @@ export const ConjugationDojo: React.FC = () => {
 
             {/* Interactive Verb Matrix Inspector */}
             <div className="pt-6 border-t border-[#e7e5e4] dark:border-[#27272a]">
-              <h3 className="text-base font-bold font-serif-jp text-[#1c1917] dark:text-[#f4f4f5] mb-4 flex items-center gap-2">
+              <h3 className="text-base font-bold font-jp text-[#1c1917] dark:text-[#f4f4f5] mb-4 flex items-center gap-2">
                 <span>Pilih Kata Kerja untuk Melihat Matriks Perubahan:</span>
               </h3>
 
@@ -724,7 +724,7 @@ export const ConjugationDojo: React.FC = () => {
                   <button
                     key={v.id}
                     onClick={() => setSelectedVerbId(v.id)}
-                    className={`px-3 py-1.5 rounded-lg text-xs font-medium transition cursor-pointer shrink-0 font-serif-jp border ${
+                    className={`px-3 py-1.5 rounded-lg text-xs font-medium transition cursor-pointer shrink-0 font-jp border ${
                       selectedVerbId === v.id
                         ? 'bg-[#1c1917] dark:bg-[#f4f4f5] text-white dark:text-[#18181b] border-transparent font-bold'
                         : 'bg-white dark:bg-[#1f1f23] border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
@@ -742,7 +742,7 @@ export const ConjugationDojo: React.FC = () => {
                   <span className="text-[10px] font-mono font-bold text-[#1e3a8a] dark:text-[#60a5fa] uppercase tracking-wider block mb-1">
                     Sopan (~Masu)
                   </span>
-                  <div className="text-xl font-serif-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-0.5">
+                  <div className="text-xl font-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-0.5">
                     {selectedVerb.forms.masu.kanji}
                   </div>
                   <div className="text-xs font-mono text-[#78716c] dark:text-[#a1a1aa] mb-2">
@@ -761,7 +761,7 @@ export const ConjugationDojo: React.FC = () => {
                   <span className="text-[10px] font-mono font-bold text-[#2e7d32] uppercase tracking-wider block mb-1">
                     Sambung (~Te)
                   </span>
-                  <div className="text-xl font-serif-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-0.5">
+                  <div className="text-xl font-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-0.5">
                     {selectedVerb.forms.te.kanji}
                   </div>
                   <div className="text-xs font-mono text-[#78716c] dark:text-[#a1a1aa] mb-2">
@@ -780,7 +780,7 @@ export const ConjugationDojo: React.FC = () => {
                   <span className="text-[10px] font-mono font-bold text-[#c84b31] uppercase tracking-wider block mb-1">
                     Negatif (~Nai)
                   </span>
-                  <div className="text-xl font-serif-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-0.5">
+                  <div className="text-xl font-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-0.5">
                     {selectedVerb.forms.nai.kanji}
                   </div>
                   <div className="text-xs font-mono text-[#78716c] dark:text-[#a1a1aa] mb-2">
@@ -799,7 +799,7 @@ export const ConjugationDojo: React.FC = () => {
                   <span className="text-[10px] font-mono font-bold text-[#d97706] uppercase tracking-wider block mb-1">
                     Lampau (~Ta)
                   </span>
-                  <div className="text-xl font-serif-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-0.5">
+                  <div className="text-xl font-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-0.5">
                     {selectedVerb.forms.ta.kanji}
                   </div>
                   <div className="text-xs font-mono text-[#78716c] dark:text-[#a1a1aa] mb-2">
@@ -818,7 +818,7 @@ export const ConjugationDojo: React.FC = () => {
                   <span className="text-[10px] font-mono font-bold text-[#0284c7] uppercase tracking-wider block mb-1">
                     Potensial (N4)
                   </span>
-                  <div className="text-xl font-serif-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-0.5">
+                  <div className="text-xl font-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-0.5">
                     {selectedVerb.forms.potential.kanji}
                   </div>
                   <div className="text-xs font-mono text-[#78716c] dark:text-[#a1a1aa] mb-2">
@@ -837,7 +837,7 @@ export const ConjugationDojo: React.FC = () => {
                   <span className="text-[10px] font-mono font-bold text-[#7c3aed] uppercase tracking-wider block mb-1">
                     Pasif (N4)
                   </span>
-                  <div className="text-xl font-serif-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-0.5">
+                  <div className="text-xl font-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-0.5">
                     {selectedVerb.forms.passive.kanji}
                   </div>
                   <div className="text-xs font-mono text-[#78716c] dark:text-[#a1a1aa] mb-2">
@@ -858,7 +858,7 @@ export const ConjugationDojo: React.FC = () => {
           <div className="bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] rounded-xl p-6 sm:p-8 shadow-xs">
             <div className="flex items-center gap-2.5 mb-6">
               <Sparkles className="w-5 h-5 text-[#1e3a8a] dark:text-[#60a5fa]" />
-              <h2 className="text-xl sm:text-2xl font-bold font-serif-jp text-[#1c1917] dark:text-[#f4f4f5] tracking-tight">
+              <h2 className="text-xl sm:text-2xl font-bold font-jp text-[#1c1917] dark:text-[#f4f4f5] tracking-tight">
                 Rumus Konjugasi N4: Potensial (可能形) & Pasif (受身形)
               </h2>
             </div>
@@ -882,7 +882,7 @@ export const ConjugationDojo: React.FC = () => {
                     <p className="text-[#78716c] dark:text-[#a1a1aa]">
                       Ganti vokal akhir baris <span className="text-[#d97706] font-bold">"u"</span> ke baris <span className="text-[#0284c7] font-bold">"e"</span> lalu tambahkan <span className="text-[#2e7d32] font-bold">[る]</span>:
                     </p>
-                    <div className="mt-1.5 font-serif-jp text-[#1c1917] dark:text-[#f4f4f5] space-y-0.5">
+                    <div className="mt-1.5 font-jp text-[#1c1917] dark:text-[#f4f4f5] space-y-0.5">
                       <div>書く (kaku) ➔ 書<strong className="text-[#0284c7]">ける</strong> (kakeru = bisa menulis)</div>
                       <div>飲む (nomu) ➔ 飲<strong className="text-[#0284c7]">める</strong> (nomeru = bisa minum)</div>
                       <div>買う (kau) ➔ 買<strong className="text-[#0284c7]">える</strong> (kaeru = bisa beli)</div>
@@ -894,7 +894,7 @@ export const ConjugationDojo: React.FC = () => {
                     <p className="text-[#78716c] dark:text-[#a1a1aa]">
                       Buang akhiran <span className="text-[#c84b31] font-bold">[る]</span> lalu ganti dengan <span className="text-[#0284c7] font-bold">[られる]</span>:
                     </p>
-                    <div className="mt-1.5 font-serif-jp text-[#1c1917] dark:text-[#f4f4f5] space-y-0.5">
+                    <div className="mt-1.5 font-jp text-[#1c1917] dark:text-[#f4f4f5] space-y-0.5">
                       <div>食べる ➔ 食べ<strong className="text-[#0284c7]">られる</strong> (taberareru = bisa makan)</div>
                       <div>見る ➔ 見<strong className="text-[#0284c7]">られる</strong> (mirareru = bisa melihat)</div>
                     </div>
@@ -902,7 +902,7 @@ export const ConjugationDojo: React.FC = () => {
 
                   <div className="p-3 rounded-lg bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a]">
                     <div className="font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-1 font-sans">Golongan 3 (Irregular):</div>
-                    <div className="font-serif-jp text-[#1c1917] dark:text-[#f4f4f5] space-y-0.5">
+                    <div className="font-jp text-[#1c1917] dark:text-[#f4f4f5] space-y-0.5">
                       <div>する ➔ <strong className="text-[#0284c7]">できる</strong> (dekiru = bisa melakukan)</div>
                       <div>来る (kuru) ➔ <strong className="text-[#0284c7]">来られる</strong> (korareru = bisa datang)</div>
                     </div>
@@ -928,7 +928,7 @@ export const ConjugationDojo: React.FC = () => {
                     <p className="text-[#78716c] dark:text-[#a1a1aa]">
                       Ganti vokal akhir baris <span className="text-[#d97706] font-bold">"u"</span> ke baris <span className="text-[#7c3aed] font-bold">"a"</span> lalu tambahkan <span className="text-[#2e7d32] font-bold">[れる]</span> (ingat akhiran う ➔ <strong className="text-[#c84b31]">わ</strong>れる!):
                     </p>
-                    <div className="mt-1.5 font-serif-jp text-[#1c1917] dark:text-[#f4f4f5] space-y-0.5">
+                    <div className="mt-1.5 font-jp text-[#1c1917] dark:text-[#f4f4f5] space-y-0.5">
                       <div>書く (kaku) ➔ 書<strong className="text-[#7c3aed]">かれる</strong> (kakareru = ditulis)</div>
                       <div>買う (kau) ➔ 買<strong className="text-[#7c3aed]">われる</strong> (kawareru = dibeli)</div>
                       <div>話す (hanasu) ➔ 話<strong className="text-[#7c3aed]">される</strong> (hanasareru = dibicarakan)</div>
@@ -940,7 +940,7 @@ export const ConjugationDojo: React.FC = () => {
                     <p className="text-[#78716c] dark:text-[#a1a1aa]">
                       Buang <span className="text-[#c84b31] font-bold">[る]</span> lalu tambahkan <span className="text-[#7c3aed] font-bold">[られる]</span>:
                     </p>
-                    <div className="mt-1.5 font-serif-jp text-[#1c1917] dark:text-[#f4f4f5] space-y-0.5">
+                    <div className="mt-1.5 font-jp text-[#1c1917] dark:text-[#f4f4f5] space-y-0.5">
                       <div>食べる ➔ 食べ<strong className="text-[#7c3aed]">られる</strong> (taberareru = dimakan)</div>
                       <div>褒める ➔ 褒め<strong className="text-[#7c3aed]">られる</strong> (homerareru = dipuji)</div>
                     </div>
@@ -948,7 +948,7 @@ export const ConjugationDojo: React.FC = () => {
 
                   <div className="p-3 rounded-lg bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a]">
                     <div className="font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-1 font-sans">Golongan 3 (Irregular):</div>
-                    <div className="font-serif-jp text-[#1c1917] dark:text-[#f4f4f5] space-y-0.5">
+                    <div className="font-jp text-[#1c1917] dark:text-[#f4f4f5] space-y-0.5">
                       <div>する ➔ <strong className="text-[#7c3aed]">される</strong> (sareru = dilakukan / dikerjai)</div>
                       <div>来る (kuru) ➔ <strong className="text-[#7c3aed]">来られる</strong> (korareru = didatangi)</div>
                     </div>

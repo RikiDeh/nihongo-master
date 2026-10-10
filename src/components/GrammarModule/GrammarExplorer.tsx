@@ -96,7 +96,7 @@ export const GrammarExplorer: React.FC<GrammarExplorerProps> = ({ onGoToQuiz, in
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded border border-[#1e3a8a]/25 bg-[#1e3a8a]/5 text-[#1e3a8a] dark:text-[#60a5fa] text-xs font-mono font-medium mb-3">
           <span>[文法道場] TATA BAHASA & RUMUS BENTUK</span>
         </div>
-        <h1 className="text-3xl sm:text-4xl font-bold font-serif-jp text-[#1c1917] dark:text-[#f4f4f5] tracking-tight mb-2">
+        <h1 className="text-3xl sm:text-4xl font-bold font-jp text-[#1c1917] dark:text-[#f4f4f5] tracking-tight mb-2">
           Kamus Pola Kalimat JLPT N5 s/d N1
         </h1>
         <p className="text-[#78716c] dark:text-[#a1a1aa] text-sm max-w-xl mx-auto leading-relaxed">
@@ -173,7 +173,7 @@ export const GrammarExplorer: React.FC<GrammarExplorerProps> = ({ onGoToQuiz, in
                     [{item.level}]
                   </span>
                   <div>
-                    <h3 className="text-base font-serif-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-0.5">
+                    <h3 className="text-base font-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-0.5">
                       {item.title}
                     </h3>
                     <p className="text-xs text-[#c84b31] dark:text-[#e05d44] font-medium">
@@ -225,7 +225,7 @@ export const GrammarExplorer: React.FC<GrammarExplorerProps> = ({ onGoToQuiz, in
                           className="p-3.5 rounded-lg bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a] flex items-start justify-between gap-3 group"
                         >
                           <div>
-                            <div className="text-base font-serif-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-0.5">
+                            <div className="text-base font-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-0.5">
                               {ex.jp}
                             </div>
                             {showRomaji && (

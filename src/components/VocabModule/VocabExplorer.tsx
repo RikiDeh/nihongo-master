@@ -136,7 +136,7 @@ export const VocabExplorer: React.FC<VocabExplorerProps> = ({ onGoToQuiz, initia
             <Layers className="w-3.5 h-3.5" />
             <span>[語彙] 9.177 PERBENDAHARAAN KOSAKATA N5→N1</span>
           </div>
-          <h1 className="text-2xl sm:text-3xl font-serif-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] tracking-tight">
+          <h1 className="text-2xl sm:text-3xl font-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] tracking-tight">
             Penjelajah Kosakata Bahasa Jepang
           </h1>
           <p className="text-xs sm:text-sm text-[#78716c] dark:text-[#a1a1aa] mt-1 max-w-2xl font-sans">
@@ -277,11 +277,11 @@ export const VocabExplorer: React.FC<VocabExplorerProps> = ({ onGoToQuiz, initia
                     <span className="text-[11px] font-mono text-[#78716c] uppercase mb-3 block">
                       [{currentFlashcard.level}] {currentFlashcard.category}
                     </span>
-                    <div className="text-5xl font-serif-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-2">
+                    <div className="text-5xl font-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-2">
                       {currentFlashcard.kanji || currentFlashcard.kana}
                     </div>
                     {currentFlashcard.kanji && (
-                      <div className="text-lg font-serif-jp text-[#c84b31] dark:text-[#e05d44]">
+                      <div className="text-lg font-jp text-[#c84b31] dark:text-[#e05d44]">
                         {currentFlashcard.kana}
                       </div>
                     )}
@@ -299,7 +299,7 @@ export const VocabExplorer: React.FC<VocabExplorerProps> = ({ onGoToQuiz, initia
                     </div>
                     {currentFlashcard.exampleSentence && (
                       <div className="p-3 rounded-lg bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a] text-left text-xs">
-                        <div className="font-serif-jp text-[#1c1917] dark:text-[#f4f4f5] mb-1">
+                        <div className="font-jp text-[#1c1917] dark:text-[#f4f4f5] mb-1">
                           {currentFlashcard.exampleSentence.jp}
                         </div>
                         <div className="text-[#78716c] dark:text-[#a1a1aa]">
@@ -386,11 +386,11 @@ export const VocabExplorer: React.FC<VocabExplorerProps> = ({ onGoToQuiz, initia
                       {/* Word Info */}
                       <div className="truncate">
                         <div className="flex items-baseline gap-2">
-                          <span className="font-serif-jp font-bold text-base text-[#1c1917] dark:text-[#f4f4f5]">
+                          <span className="font-jp font-bold text-base text-[#1c1917] dark:text-[#f4f4f5]">
                             {item.kanji || item.kana}
                           </span>
                           {item.kanji && (
-                            <span className="text-xs font-serif-jp text-[#78716c] dark:text-[#a1a1aa]">
+                            <span className="text-xs font-jp text-[#78716c] dark:text-[#a1a1aa]">
                               {item.kana}
                             </span>
                           )}
@@ -490,11 +490,11 @@ export const VocabExplorer: React.FC<VocabExplorerProps> = ({ onGoToQuiz, initia
 
                   {/* Big Hero Word Display */}
                   <div className="text-center py-6 bg-[#faf8f5] dark:bg-[#18181b] rounded-lg border border-[#e7e5e4] dark:border-[#27272a] mb-5">
-                    <div className="text-4xl sm:text-5xl font-serif-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-2 leading-none">
+                    <div className="text-4xl sm:text-5xl font-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-2 leading-none">
                       {currentInspectorItem.kanji || currentInspectorItem.kana}
                     </div>
                     {currentInspectorItem.kanji && (
-                      <div className="text-lg font-serif-jp text-[#c84b31] dark:text-[#e05d44] mb-1">
+                      <div className="text-lg font-jp text-[#c84b31] dark:text-[#e05d44] mb-1">
                         {currentInspectorItem.kana}
                       </div>
                     )}
@@ -548,7 +548,7 @@ export const VocabExplorer: React.FC<VocabExplorerProps> = ({ onGoToQuiz, initia
                       </div>
 
                       <div className="p-3.5 rounded-lg bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a]">
-                        <div className="text-sm font-serif-jp text-[#1c1917] dark:text-[#f4f4f5] leading-relaxed mb-1.5">
+                        <div className="text-sm font-jp text-[#1c1917] dark:text-[#f4f4f5] leading-relaxed mb-1.5">
                           {currentInspectorItem.exampleSentence.jp}
                         </div>
                         <div className="text-xs text-[#78716c] dark:text-[#a1a1aa] leading-relaxed">

@@ -111,7 +111,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, onClose })
             <Database className="w-4 h-4" />
           </div>
           <div>
-            <h3 className="text-base font-bold font-serif-jp text-[#1c1917] dark:text-[#f4f4f5]">Manajemen Data & Backup</h3>
+            <h3 className="text-base font-bold font-jp text-[#1c1917] dark:text-[#f4f4f5]">Manajemen Data & Backup</h3>
             <p className="text-xs text-[#78716c] dark:text-[#a1a1aa]">Penyimpanan lokal di browser (localStorage)</p>
           </div>
         </div>

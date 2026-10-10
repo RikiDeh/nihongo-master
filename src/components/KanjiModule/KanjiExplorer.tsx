@@ -126,7 +126,7 @@ export const KanjiExplorer: React.FC<KanjiExplorerProps> = ({ onGoToQuiz, initia
           <BookOpen className="w-3.5 h-3.5" />
           <span>[漢] 2.167 JOYŌ KANJI RESMI N5→N1</span>
         </div>
-        <h1 className="text-2xl sm:text-3xl font-serif-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] tracking-tight mb-2">
+        <h1 className="text-2xl sm:text-3xl font-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] tracking-tight mb-2">
           Perbendaharaan Kanji Jepang
         </h1>
         <p className="text-[#78716c] dark:text-[#a1a1aa] text-xs sm:text-sm max-w-2xl mx-auto font-sans">
@@ -145,7 +145,7 @@ export const KanjiExplorer: React.FC<KanjiExplorerProps> = ({ onGoToQuiz, initia
                 : 'border-transparent text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
             }`}
           >
-            <span className="font-serif-jp font-bold">字</span>
+            <span className="font-jp font-bold">字</span>
             <span>Bank Kanji ({filteredKanji.length})</span>
           </button>
           <button
@@ -156,7 +156,7 @@ export const KanjiExplorer: React.FC<KanjiExplorerProps> = ({ onGoToQuiz, initia
                 : 'border-transparent text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
             }`}
           >
-            <span className="font-serif-jp font-bold">部</span>
+            <span className="font-jp font-bold">部</span>
             <span>Radikal Dasar ({CORE_RADICALS_JOYO.length})</span>
           </button>
         </div>
@@ -187,7 +187,7 @@ export const KanjiExplorer: React.FC<KanjiExplorerProps> = ({ onGoToQuiz, initia
       {activeTab === 'radicals' && (
         <div className="mb-12">
           <div className="bg-[#1e3a8a]/5 dark:bg-[#3b82f6]/10 border border-[#1e3a8a]/20 dark:border-[#3b82f6]/30 rounded-xl p-5 mb-6 text-xs sm:text-sm text-[#78716c] dark:text-[#a1a1aa] leading-relaxed">
-            <h3 className="text-sm sm:text-base font-serif-jp font-bold text-[#1e3a8a] dark:text-[#3b82f6] mb-1.5 flex items-center gap-2">
+            <h3 className="text-sm sm:text-base font-jp font-bold text-[#1e3a8a] dark:text-[#3b82f6] mb-1.5 flex items-center gap-2">
               <Sparkles className="w-4 h-4" />
               <span>Mengapa Harus Belajar Radikal Dulu? (Metode WaniKani & Heisig)</span>
             </h3>
@@ -201,7 +201,7 @@ export const KanjiExplorer: React.FC<KanjiExplorerProps> = ({ onGoToQuiz, initia
                 className="bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] hover:border-[#1e3a8a] dark:hover:border-[#3b82f6] rounded-xl p-4 transition shadow-xs"
               >
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-3xl font-serif-jp font-bold text-[#1e3a8a] dark:text-[#3b82f6]">
+                  <span className="text-3xl font-jp font-bold text-[#1e3a8a] dark:text-[#3b82f6]">
                     {rad.radical}
                   </span>
                   <span className="text-[11px] font-mono text-[#78716c] dark:text-[#a1a1aa] px-2 py-0.5 rounded bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a]">
@@ -231,7 +231,7 @@ export const KanjiExplorer: React.FC<KanjiExplorerProps> = ({ onGoToQuiz, initia
                             setActiveTab('kanji');
                           }
                         }}
-                        className="px-2 py-0.5 rounded bg-[#faf8f5] dark:bg-[#18181b] hover:bg-[#c84b31]/10 hover:text-[#c84b31] dark:hover:bg-[#e05d44]/15 dark:hover:text-[#e05d44] border border-[#e7e5e4] dark:border-[#27272a] text-xs font-serif-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] transition cursor-pointer"
+                        className="px-2 py-0.5 rounded bg-[#faf8f5] dark:bg-[#18181b] hover:bg-[#c84b31]/10 hover:text-[#c84b31] dark:hover:bg-[#e05d44]/15 dark:hover:text-[#e05d44] border border-[#e7e5e4] dark:border-[#27272a] text-xs font-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] transition cursor-pointer"
                         title="Klik untuk lihat kanji ini di penjelajah"
                       >
                         {ex}
@@ -381,7 +381,7 @@ export const KanjiExplorer: React.FC<KanjiExplorerProps> = ({ onGoToQuiz, initia
                         </span>
                       </div>
 
-                      <div className="text-4xl sm:text-5xl font-serif-jp font-black text-[#1c1917] dark:text-[#f4f4f5] my-2 group-hover:scale-105 transition-transform">
+                      <div className="text-4xl sm:text-5xl font-jp font-black text-[#1c1917] dark:text-[#f4f4f5] my-2 group-hover:scale-105 transition-transform">
                         {item.kanji}
                       </div>
 
@@ -486,10 +486,10 @@ export const KanjiExplorer: React.FC<KanjiExplorerProps> = ({ onGoToQuiz, initia
 
                   {/* Big Character Display */}
                   <div className="text-center py-6 bg-[#faf8f5] dark:bg-[#18181b] rounded-lg border border-[#e7e5e4] dark:border-[#27272a] mb-4">
-                    <div className="text-7xl sm:text-8xl font-serif-jp font-black text-[#1c1917] dark:text-[#f4f4f5] mb-2 leading-none">
+                    <div className="text-7xl sm:text-8xl font-jp font-black text-[#1c1917] dark:text-[#f4f4f5] mb-2 leading-none">
                       {activeKanji.kanji}
                     </div>
-                    <div className="text-lg font-serif-jp font-bold text-[#c84b31] dark:text-[#e05d44]">
+                    <div className="text-lg font-jp font-bold text-[#c84b31] dark:text-[#e05d44]">
                       {activeKanji.meaningId}
                     </div>
                     <div className="text-xs font-sans text-[#78716c] dark:text-[#a1a1aa]">
@@ -500,7 +500,7 @@ export const KanjiExplorer: React.FC<KanjiExplorerProps> = ({ onGoToQuiz, initia
                   {/* MNEMONIC STORY CARD (WaniKani Style) */}
                   {activeKanji.mnemonic && (
                     <div className="p-3.5 rounded-lg bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a] mb-4">
-                      <div className="flex items-center gap-1.5 text-xs font-serif-jp font-bold text-[#c84b31] dark:text-[#e05d44] mb-1">
+                      <div className="flex items-center gap-1.5 text-xs font-jp font-bold text-[#c84b31] dark:text-[#e05d44] mb-1">
                         <Lightbulb className="w-3.5 h-3.5" />
                         <span>Cerita Pengingat [記憶術]:</span>
                       </div>
@@ -555,7 +555,7 @@ export const KanjiExplorer: React.FC<KanjiExplorerProps> = ({ onGoToQuiz, initia
                     </div>
                     <div className="p-2.5 rounded-lg bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a]">
                       <span className="text-[10px] text-[#78716c] dark:text-[#a1a1aa] block uppercase">Radikal</span>
-                      <span className="text-sm font-serif-jp font-bold text-[#1e3a8a] dark:text-[#3b82f6]">{activeKanji.radicals.join(', ')}</span>
+                      <span className="text-sm font-jp font-bold text-[#1e3a8a] dark:text-[#3b82f6]">{activeKanji.radicals.join(', ')}</span>
                     </div>
                   </div>
 
@@ -574,10 +574,10 @@ export const KanjiExplorer: React.FC<KanjiExplorerProps> = ({ onGoToQuiz, initia
                           >
                             <div>
                               <div className="flex items-center gap-1.5">
-                                <span className="text-sm font-serif-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] group-hover:text-[#c84b31] dark:group-hover:text-[#e05d44] transition-colors">
+                                <span className="text-sm font-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] group-hover:text-[#c84b31] dark:group-hover:text-[#e05d44] transition-colors">
                                   {ex.word}
                                 </span>
-                                <span className="text-xs font-serif-jp text-[#78716c] dark:text-[#a1a1aa]">
+                                <span className="text-xs font-jp text-[#78716c] dark:text-[#a1a1aa]">
                                   ({ex.reading})
                                 </span>
                               </div>

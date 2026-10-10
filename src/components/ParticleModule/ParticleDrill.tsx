@@ -79,7 +79,7 @@ export const ParticleDrill: React.FC = () => {
   const renderInteractiveSentence = () => {
     const parts = currentQuestion.sentenceWithBlank.split('【　】');
     return (
-      <div className="text-2xl sm:text-3xl font-serif-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] leading-relaxed flex flex-wrap items-center justify-center gap-1 my-3">
+      <div className="text-2xl sm:text-3xl font-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] leading-relaxed flex flex-wrap items-center justify-center gap-1 my-3">
         <span>{parts[0]}</span>
         <span 
           className={`inline-flex items-center justify-center min-w-[50px] px-3 py-0.5 rounded-lg border font-mono font-bold text-2xl transition-all ${
@@ -110,11 +110,11 @@ export const ParticleDrill: React.FC = () => {
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded border border-[#c84b31]/25 bg-[#c84b31]/5 text-[#c84b31] dark:text-[#e05d44] text-xs font-mono font-medium mb-3">
           <span>[助詞道場] N5 PARTICLE DRILL</span>
         </div>
-        <h1 className="text-3xl sm:text-4xl font-bold font-serif-jp text-[#1c1917] dark:text-[#f4f4f5] tracking-tight mb-2">
+        <h1 className="text-3xl sm:text-4xl font-bold font-jp text-[#1c1917] dark:text-[#f4f4f5] tracking-tight mb-2">
           Latihan Refleks Partikel Bahasa Jepang
         </h1>
         <p className="text-[#78716c] dark:text-[#a1a1aa] text-sm max-w-xl mx-auto">
-          Kuasai perbedaan partikel krusial: <span className="font-serif-jp font-bold text-[#c84b31]">は vs が</span>, <span className="font-serif-jp font-bold text-[#1e3a8a] dark:text-[#60a5fa]">に vs で</span>, <span className="font-serif-jp font-bold text-[#2e7d32]">を</span>, dan lainnya lewat kalimat nyata.
+          Kuasai perbedaan partikel krusial: <span className="font-jp font-bold text-[#c84b31]">は vs が</span>, <span className="font-jp font-bold text-[#1e3a8a] dark:text-[#60a5fa]">に vs で</span>, <span className="font-jp font-bold text-[#2e7d32]">を</span>, dan lainnya lewat kalimat nyata.
         </p>
       </div>
 
@@ -226,7 +226,7 @@ export const ParticleDrill: React.FC = () => {
                     type="button"
                     disabled={isAnswered}
                     onClick={() => handleSelectOption(particle)}
-                    className={`py-4 rounded-xl border-2 font-serif-jp font-bold text-3xl sm:text-4xl transition-all duration-150 cursor-pointer flex flex-col items-center justify-center relative ${btnClass}`}
+                    className={`py-4 rounded-xl border-2 font-jp font-bold text-3xl sm:text-4xl transition-all duration-150 cursor-pointer flex flex-col items-center justify-center relative ${btnClass}`}
                   >
                     <span>{particle}</span>
                     {isAnswered && isCorrect && (
@@ -285,7 +285,7 @@ export const ParticleDrill: React.FC = () => {
         <div className="bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] rounded-xl p-6 sm:p-8 shadow-xs space-y-6">
           <div className="flex items-center gap-2.5 mb-2">
             <BookOpen className="w-5 h-5 text-[#c84b31]" />
-            <h2 className="text-xl sm:text-2xl font-bold font-serif-jp text-[#1c1917] dark:text-[#f4f4f5] tracking-tight">
+            <h2 className="text-xl sm:text-2xl font-bold font-jp text-[#1c1917] dark:text-[#f4f4f5] tracking-tight">
               Tabel Komparasi Partikel Inti JLPT N5
             </h2>
           </div>
@@ -297,7 +297,7 @@ export const ParticleDrill: React.FC = () => {
             {/* WA vs GA */}
             <div className="p-4 rounded-lg bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a]">
               <div className="flex items-center justify-between mb-2">
-                <span className="font-serif-jp font-bold text-[#c84b31] dark:text-[#e05d44] text-lg">は (wa) vs が (ga)</span>
+                <span className="font-jp font-bold text-[#c84b31] dark:text-[#e05d44] text-lg">は (wa) vs が (ga)</span>
                 <span className="text-[10px] px-2 py-0.5 rounded font-mono border border-stone-200 dark:border-zinc-800 text-[#78716c]">Topik / Subjek</span>
               </div>
               <ul className="text-xs text-[#78716c] dark:text-[#a1a1aa] space-y-1.5 leading-relaxed">
@@ -309,7 +309,7 @@ export const ParticleDrill: React.FC = () => {
             {/* NI vs DE */}
             <div className="p-4 rounded-lg bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a]">
               <div className="flex items-center justify-between mb-2">
-                <span className="font-serif-jp font-bold text-[#1e3a8a] dark:text-[#60a5fa] text-lg">に (ni) vs で (de)</span>
+                <span className="font-jp font-bold text-[#1e3a8a] dark:text-[#60a5fa] text-lg">に (ni) vs で (de)</span>
                 <span className="text-[10px] px-2 py-0.5 rounded font-mono border border-stone-200 dark:border-zinc-800 text-[#78716c]">Tempat & Waktu</span>
               </div>
               <ul className="text-xs text-[#78716c] dark:text-[#a1a1aa] space-y-1.5 leading-relaxed">
@@ -321,7 +321,7 @@ export const ParticleDrill: React.FC = () => {
             {/* O & E */}
             <div className="p-4 rounded-lg bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a]">
               <div className="flex items-center justify-between mb-2">
-                <span className="font-serif-jp font-bold text-[#2e7d32] dark:text-[#4ade80] text-lg">を (o) & へ (e)</span>
+                <span className="font-jp font-bold text-[#2e7d32] dark:text-[#4ade80] text-lg">を (o) & へ (e)</span>
                 <span className="text-[10px] px-2 py-0.5 rounded font-mono border border-stone-200 dark:border-zinc-800 text-[#78716c]">Objek & Arah</span>
               </div>
               <ul className="text-xs text-[#78716c] dark:text-[#a1a1aa] space-y-1.5 leading-relaxed">
@@ -333,7 +333,7 @@ export const ParticleDrill: React.FC = () => {
             {/* TO, KARA, MADE */}
             <div className="p-4 rounded-lg bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a]">
               <div className="flex items-center justify-between mb-2">
-                <span className="font-serif-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] text-lg">と / から / まで / も</span>
+                <span className="font-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] text-lg">と / から / まで / も</span>
                 <span className="text-[10px] px-2 py-0.5 rounded font-mono border border-stone-200 dark:border-zinc-800 text-[#78716c]">Relasi</span>
               </div>
               <ul className="text-xs text-[#78716c] dark:text-[#a1a1aa] space-y-1.5 leading-relaxed">

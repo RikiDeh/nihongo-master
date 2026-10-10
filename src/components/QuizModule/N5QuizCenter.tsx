@@ -136,7 +136,7 @@ export const N5QuizCenter: React.FC<QuizCenterProps> = ({ initialLevel }) => {
               <Trophy className="w-3.5 h-3.5" />
               <span>[試] PUSAT UJIAN & TRYOUT JLPT</span>
             </div>
-            <h1 className="text-2xl sm:text-3xl font-serif-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] tracking-tight mb-2">
+            <h1 className="text-2xl sm:text-3xl font-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] tracking-tight mb-2">
               Pusat Ujian & Tryout JLPT (N5→N1)
             </h1>
             <p className="text-[#78716c] dark:text-[#a1a1aa] text-xs sm:text-sm max-w-2xl mx-auto mb-6 font-sans">
@@ -155,7 +155,7 @@ export const N5QuizCenter: React.FC<QuizCenterProps> = ({ initialLevel }) => {
                       : 'text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
                   }`}
                 >
-                  <span className="font-serif-jp text-xs">級</span>
+                  <span className="font-jp text-xs">級</span>
                   <span>{lvl}</span>
                 </button>
               ))}
@@ -237,7 +237,7 @@ export const N5QuizCenter: React.FC<QuizCenterProps> = ({ initialLevel }) => {
                   <div className="w-8 h-8 rounded-md bg-[#c84b31]/10 dark:bg-[#e05d44]/15 border border-[#c84b31]/30 dark:border-[#e05d44]/30 flex items-center justify-center text-[#c84b31] dark:text-[#e05d44]">
                     <Flame className="w-4 h-4" />
                   </div>
-                  <h3 className="text-base font-serif-jp font-bold text-[#1c1917] dark:text-[#f4f4f5]">
+                  <h3 className="text-base font-jp font-bold text-[#1c1917] dark:text-[#f4f4f5]">
                     Drill Titik Lemah (Ghost Remediation)
                   </h3>
                 </div>
@@ -284,7 +284,7 @@ export const N5QuizCenter: React.FC<QuizCenterProps> = ({ initialLevel }) => {
                   </span>
                 </div>
 
-                <h3 className="text-base font-serif-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-1">
+                <h3 className="text-base font-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-1">
                   1. Kuis Kanji {selectedLevel} (Moji)
                 </h3>
                 <p className="text-xs text-[#78716c] dark:text-[#a1a1aa] leading-relaxed mb-4 font-sans">
@@ -313,7 +313,7 @@ export const N5QuizCenter: React.FC<QuizCenterProps> = ({ initialLevel }) => {
                   </span>
                 </div>
 
-                <h3 className="text-base font-serif-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-1">
+                <h3 className="text-base font-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-1">
                   2. Kuis Kosakata {selectedLevel} (Goi)
                 </h3>
                 <p className="text-xs text-[#78716c] dark:text-[#a1a1aa] leading-relaxed mb-4 font-sans">
@@ -342,7 +342,7 @@ export const N5QuizCenter: React.FC<QuizCenterProps> = ({ initialLevel }) => {
                   </span>
                 </div>
 
-                <h3 className="text-base font-serif-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-1">
+                <h3 className="text-base font-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-1">
                   3. Kuis Tata Bahasa {selectedLevel} (Bunpou)
                 </h3>
                 <p className="text-xs text-[#78716c] dark:text-[#a1a1aa] leading-relaxed mb-4 font-sans">
@@ -371,7 +371,7 @@ export const N5QuizCenter: React.FC<QuizCenterProps> = ({ initialLevel }) => {
                   </span>
                 </div>
 
-                <h3 className="text-base font-serif-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-1">
+                <h3 className="text-base font-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-1">
                   4. Simulasi Ujian JLPT {selectedLevel}
                 </h3>
                 <p className="text-xs text-[#78716c] dark:text-[#a1a1aa] leading-relaxed mb-4 font-sans">

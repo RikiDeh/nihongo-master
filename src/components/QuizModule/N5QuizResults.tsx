@@ -40,14 +40,14 @@ export const N5QuizResults: React.FC<N5QuizResultsProps> = ({
           <span>HASIL EVALUASI: {categoryTitle.toUpperCase()}</span>
         </div>
 
-        <div className="text-5xl sm:text-6xl font-serif-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] tracking-tight mb-2">
+        <div className="text-5xl sm:text-6xl font-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] tracking-tight mb-2">
           {percentage}%
         </div>
         <p className="text-[#78716c] dark:text-[#a1a1aa] text-xs sm:text-sm mb-4 font-mono">
           Benar <strong className="text-[#2e7d32] dark:text-[#4ade80] font-bold">{correct}</strong> dari <strong className="text-[#1c1917] dark:text-[#f4f4f5]">{total}</strong> soal
         </p>
 
-        <div className="inline-block px-3 py-1.5 rounded-lg text-xs font-serif-jp border mb-6">
+        <div className="inline-block px-3 py-1.5 rounded-lg text-xs font-jp border mb-6">
           {isPassed ? (
             <span className="text-[#2e7d32] dark:text-[#4ade80] bg-[#2e7d32]/10 border border-[#2e7d32]/25 px-3 py-1 rounded">
               Memenuhi Standar Kelulusan JLPT {level} [合格]
@@ -116,7 +116,7 @@ export const N5QuizResults: React.FC<N5QuizResultsProps> = ({
                   }`}>
                     {idx + 1}
                   </span>
-                  <h4 className="text-sm sm:text-base font-serif-jp font-semibold text-[#1c1917] dark:text-[#f4f4f5]">
+                  <h4 className="text-sm sm:text-base font-jp font-semibold text-[#1c1917] dark:text-[#f4f4f5]">
                     {q.question}
                   </h4>
                 </div>
@@ -143,7 +143,7 @@ export const N5QuizResults: React.FC<N5QuizResultsProps> = ({
                 {!isCorrect && (
                   <div className="flex items-center gap-2">
                     <span className="text-[#78716c] dark:text-[#a1a1aa]">Kunci Jawaban:</span>
-                    <span className="text-[#2e7d32] dark:text-[#4ade80] font-medium font-serif-jp">
+                    <span className="text-[#2e7d32] dark:text-[#4ade80] font-medium font-jp">
                       {q.options[q.correctIndex]}
                     </span>
                   </div>
@@ -152,7 +152,7 @@ export const N5QuizResults: React.FC<N5QuizResultsProps> = ({
 
               {/* Detailed explanation */}
               <div className="p-3 rounded border border-[#e7e5e4] dark:border-[#27272a] bg-[#faf8f5] dark:bg-[#18181b] text-xs text-[#78716c] dark:text-[#a1a1aa] leading-relaxed pl-3 ml-7.5 font-sans">
-                <strong className="text-[#1c1917] dark:text-[#f4f4f5] block mb-0.5 font-serif-jp font-semibold">Penjelasan [解説]:</strong>
+                <strong className="text-[#1c1917] dark:text-[#f4f4f5] block mb-0.5 font-jp font-semibold">Penjelasan [解説]:</strong>
                 {q.explanation}
               </div>
             </div>

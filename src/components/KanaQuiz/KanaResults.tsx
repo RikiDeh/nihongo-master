@@ -62,7 +62,7 @@ export const KanaResults: React.FC<KanaResultsProps> = ({
           <span>[成績発表] EVALUASI SESI KANA</span>
         </div>
 
-        <h1 className="text-2xl sm:text-3xl font-bold font-serif-jp text-[#1c1917] dark:text-[#f4f4f5] mb-2 tracking-wide">
+        <h1 className="text-2xl sm:text-3xl font-bold font-jp text-[#1c1917] dark:text-[#f4f4f5] mb-2 tracking-wide">
           {getScoreMessage(summary.accuracy)}
         </h1>
         <p className="text-xs sm:text-sm text-[#78716c] dark:text-[#a1a1aa] mb-6 max-w-lg mx-auto">
@@ -184,7 +184,7 @@ export const KanaResults: React.FC<KanaResultsProps> = ({
                     [{attempt.kana.type === 'hiragana' ? '平' : '片'}]
                   </span>
 
-                  <span className="text-4xl font-serif-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-2">
+                  <span className="text-4xl font-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-2">
                     {attempt.kana.character}
                   </span>
 
@@ -220,7 +220,7 @@ export const KanaResults: React.FC<KanaResultsProps> = ({
       <div className="bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] rounded-xl p-5 sm:p-6 mb-8 shadow-xs">
         <div className="flex items-center justify-between mb-4 pb-3 border-b border-[#e7e5e4] dark:border-[#27272a]">
           <div>
-            <h2 className="text-sm font-bold font-serif-jp text-[#1c1917] dark:text-[#f4f4f5]">
+            <h2 className="text-sm font-bold font-jp text-[#1c1917] dark:text-[#f4f4f5]">
               Seluruh Karakter yang Dilatih Sesi Ini
             </h2>
           </div>
@@ -243,7 +243,7 @@ export const KanaResults: React.FC<KanaResultsProps> = ({
                     : 'bg-rose-50/50 dark:bg-rose-950/20 border-rose-200 dark:border-rose-900/60'
                 }`}
               >
-                <div className="text-xl font-serif-jp font-bold text-[#1c1917] dark:text-[#f4f4f5]">
+                <div className="text-xl font-jp font-bold text-[#1c1917] dark:text-[#f4f4f5]">
                   {attempt.kana.character}
                 </div>
                 <div className={`text-[11px] font-mono font-medium ${isCorrect ? 'text-[#78716c]' : 'text-rose-600'}`}>
@@ -262,7 +262,7 @@ export const KanaResults: React.FC<KanaResultsProps> = ({
             <span className="px-2 py-0.5 rounded text-[10px] font-mono font-bold border border-[#1e3a8a]/30 text-[#1e3a8a] dark:text-[#60a5fa] bg-[#1e3a8a]/5 mb-2 inline-block">
               [次へ] LANGKAH SELANJUTNYA
             </span>
-            <h3 className="text-base font-bold font-serif-jp text-[#1c1917] dark:text-[#f4f4f5] mb-1">
+            <h3 className="text-base font-bold font-jp text-[#1c1917] dark:text-[#f4f4f5] mb-1">
               Sudah Lancar Kana? Beralih ke Kanji & Kosakata N5
             </h3>
             <p className="text-xs text-[#78716c] dark:text-[#a1a1aa]">

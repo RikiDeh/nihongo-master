@@ -212,7 +212,7 @@ export const KanjiQuizModal: React.FC<KanjiQuizModalProps> = ({ kanjiList, onClo
 
             {/* Big Kanji Character */}
             <div
-              className={`w-44 h-44 sm:w-52 sm:h-52 rounded-xl flex items-center justify-center border transition-all duration-150 select-none font-serif-jp ${
+              className={`w-44 h-44 sm:w-52 sm:h-52 rounded-xl flex items-center justify-center border transition-all duration-150 select-none font-jp ${
                 inputState === 'correct'
                   ? 'bg-emerald-50 dark:bg-emerald-950/30 border-emerald-500 text-emerald-800 dark:text-emerald-300 scale-102'
                   : inputState === 'wrong'
@@ -292,7 +292,7 @@ export const KanjiQuizModal: React.FC<KanjiQuizModalProps> = ({ kanjiList, onClo
           /* Finished Screen */
           <div className="py-6 text-center">
             <Trophy className="w-10 h-10 text-amber-500 mx-auto mb-2" />
-            <h2 className="text-xl font-bold font-serif-jp text-[#1c1917] dark:text-[#f4f4f5] mb-1">
+            <h2 className="text-xl font-bold font-jp text-[#1c1917] dark:text-[#f4f4f5] mb-1">
               Sesi Kuis Kanji Selesai
             </h2>
             <p className="text-xs text-[#78716c] dark:text-[#a1a1aa] mb-6">
@@ -322,7 +322,7 @@ export const KanjiQuizModal: React.FC<KanjiQuizModalProps> = ({ kanjiList, onClo
                   {wrongItems.map((item, idx) => (
                     <div key={idx} className="p-2.5 rounded-lg bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a] flex items-center justify-between">
                       <div className="flex items-center gap-2">
-                        <span className="text-2xl font-serif-jp font-bold text-[#1c1917] dark:text-[#f4f4f5]">{item.kanji.kanji}</span>
+                        <span className="text-2xl font-jp font-bold text-[#1c1917] dark:text-[#f4f4f5]">{item.kanji.kanji}</span>
                         <div>
                           <span className="text-xs font-bold text-[#1c1917] dark:text-[#f4f4f5] block">{item.kanji.meaningId}</span>
                           <span className="text-[10px] text-[#78716c] font-mono">

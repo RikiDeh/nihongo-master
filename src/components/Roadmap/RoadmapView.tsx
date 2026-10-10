@@ -120,7 +120,7 @@ export const RoadmapView: React.FC<RoadmapViewProps> = ({ onNavigate }) => {
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded border border-[#1e3a8a]/25 bg-[#1e3a8a]/5 text-[#1e3a8a] dark:text-[#60a5fa] text-xs font-mono font-medium mb-3">
           <span>[学修系統図] CURRICULUM ROADMAP 0→N1</span>
         </div>
-        <h1 className="text-3xl sm:text-4xl font-bold font-serif-jp text-[#1c1917] dark:text-[#f4f4f5] tracking-tight mb-2">
+        <h1 className="text-3xl sm:text-4xl font-bold font-jp text-[#1c1917] dark:text-[#f4f4f5] tracking-tight mb-2">
           Peta Jalan: Dari Nol Hingga Mahir N1
         </h1>
         <p className="text-[#78716c] dark:text-[#a1a1aa] text-sm max-w-xl mx-auto leading-relaxed">
@@ -137,7 +137,7 @@ export const RoadmapView: React.FC<RoadmapViewProps> = ({ onNavigate }) => {
           >
             {/* Hanko Stamp Level Indicator */}
             <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-lg bg-white dark:bg-[#1f1f23] border border-[#d6d3d1] dark:border-[#3f3f46] flex flex-col items-center justify-center text-[#1c1917] dark:text-[#f4f4f5] shrink-0 shadow-xs group-hover:border-[#c84b31] transition-colors">
-              <span className="font-serif-jp font-bold text-base leading-none text-[#c84b31] dark:text-[#e05d44]">
+              <span className="font-jp font-bold text-base leading-none text-[#c84b31] dark:text-[#e05d44]">
                 {step.kanjiBadge}
               </span>
               <span className="font-mono text-[10px] font-semibold text-[#78716c] dark:text-[#a1a1aa] mt-0.5">
@@ -148,7 +148,7 @@ export const RoadmapView: React.FC<RoadmapViewProps> = ({ onNavigate }) => {
             {/* Content Card */}
             <div className="flex-1 bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] hover:border-[#d6d3d1] dark:hover:border-[#3f3f46] rounded-xl p-5 sm:p-6 transition-all duration-150 shadow-xs">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
-                <h3 className="text-base sm:text-lg font-bold font-serif-jp text-[#1c1917] dark:text-[#f4f4f5]">
+                <h3 className="text-base sm:text-lg font-bold font-jp text-[#1c1917] dark:text-[#f4f4f5]">
                   {step.title}
                 </h3>
                 <span className={`px-2 py-0.5 rounded text-[11px] font-mono border ${step.badgeBorder} self-start sm:self-auto`}>

@@ -68,7 +68,7 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
   }, []);
 
   const navItems: { id: ActiveModule; label: string; jp: string; icon: React.ReactNode; badge?: string }[] = [
-    { id: 'kana', label: 'Kana Matrix', jp: '仮名', icon: <span className="font-serif-jp text-sm font-bold">あ</span>, badge: '50音' },
+    { id: 'kana', label: 'Kana Matrix', jp: '仮名', icon: <span className="font-jp text-sm font-bold">あ</span>, badge: '50音' },
     { id: 'kanji', label: 'Joyō Kanji', jp: '漢字', icon: <BookOpen className="w-4 h-4" />, badge: '2.167' },
     { id: 'vocab', label: 'Kosakata', jp: '語彙', icon: <Layers className="w-4 h-4" />, badge: '9.177' },
     { id: 'grammar', label: 'Tata Bahasa', jp: '文法', icon: <Award className="w-4 h-4" /> },
@@ -96,12 +96,12 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
               title="NihongoMaster — Kembali ke Beranda Kana"
             >
               {/* Hanko Stamp */}
-              <div className="w-10 h-10 rounded-md bg-[#c84b31] dark:bg-[#e05d44] border border-[#a63a23] dark:border-[#c84b31] flex items-center justify-center text-white font-serif-jp font-black text-xl shadow-xs shrink-0 group-hover:scale-105 transition-transform">
+              <div className="w-10 h-10 rounded-md bg-[#c84b31] dark:bg-[#e05d44] border border-[#a63a23] dark:border-[#c84b31] flex items-center justify-center text-white font-jp font-black text-xl shadow-xs shrink-0 group-hover:scale-105 transition-transform">
                 日
               </div>
               {!isCollapsed && (
                 <div className="truncate">
-                  <div className="font-serif-jp font-bold text-sm text-[#1c1917] dark:text-[#f4f4f5] tracking-tight">
+                  <div className="font-jp font-bold text-sm text-[#1c1917] dark:text-[#f4f4f5] tracking-tight">
                     日本語マスター
                   </div>
                   <div className="text-[10px] font-mono text-[#78716c] dark:text-[#a1a1aa]">
@@ -198,7 +198,7 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
                           {item.badge}
                         </span>
                       )}
-                      <span className="font-serif-jp text-xs opacity-60">{item.jp}</span>
+                      <span className="font-jp text-xs opacity-60">{item.jp}</span>
                     </div>
                   )}
                 </button>
@@ -266,10 +266,10 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
             onClick={() => onSelectModule('kana')}
             className="flex items-center gap-2.5 cursor-pointer"
           >
-            <div className="w-7 h-7 rounded bg-[#c84b31] dark:bg-[#e05d44] flex items-center justify-center text-white font-serif-jp font-bold text-sm">
+            <div className="w-7 h-7 rounded bg-[#c84b31] dark:bg-[#e05d44] flex items-center justify-center text-white font-jp font-bold text-sm">
               日
             </div>
-            <span className="font-serif-jp font-bold text-sm text-[#1c1917] dark:text-[#f4f4f5]">
+            <span className="font-jp font-bold text-sm text-[#1c1917] dark:text-[#f4f4f5]">
               日本語マスター
             </span>
           </div>

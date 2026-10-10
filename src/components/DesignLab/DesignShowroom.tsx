@@ -330,7 +330,7 @@ export const DesignShowroom: React.FC<DesignShowroomProps> = ({ onBackToApp }) =
                   <span className="px-2 py-0.5 rounded text-xs font-semibold tracking-wider bg-stone-100 dark:bg-zinc-800 border border-stone-300 dark:border-zinc-700 text-stone-700 dark:text-zinc-300">
                     JLPT N5
                   </span>
-                  <span className="text-xs font-serif-jp text-stone-500">問題四 • 文脈規定</span>
+                  <span className="text-xs font-jp text-stone-500">問題四 • 文脈規定</span>
                 </div>
                 <div className="text-xs text-stone-500 font-mono">
                   04 / 15
@@ -342,7 +342,7 @@ export const DesignShowroom: React.FC<DesignShowroomProps> = ({ onBackToApp }) =
                 <div className="text-xs text-stone-500 dark:text-stone-400 mb-2 font-medium">
                   次の文の（　）に入れるのに最もよいものを、1・2・3・4から一つえらびなさい。
                 </div>
-                <div className="text-xl sm:text-2xl font-serif-jp font-bold text-stone-900 dark:text-stone-100 leading-relaxed tracking-wide">
+                <div className="text-xl sm:text-2xl font-jp font-bold text-stone-900 dark:text-stone-100 leading-relaxed tracking-wide">
                   田中さんは　明日【　　】へ　行きます。
                 </div>
                 <div className="text-xs text-stone-500 dark:text-stone-400 mt-2 italic">
@@ -395,7 +395,7 @@ export const DesignShowroom: React.FC<DesignShowroomProps> = ({ onBackToApp }) =
                         <span className="w-5 h-5 rounded border border-current/30 flex items-center justify-center text-xs font-mono">
                           {option.id}
                         </span>
-                        <span className="font-serif-jp text-base font-semibold">{option.text}</span>
+                        <span className="font-jp text-base font-semibold">{option.text}</span>
                         <span className="text-xs text-stone-400 hidden sm:inline">({option.label})</span>
                       </div>
                       {isSubmitted && option.correct && (
@@ -462,7 +462,7 @@ export const DesignShowroom: React.FC<DesignShowroomProps> = ({ onBackToApp }) =
                   Pilihlah jawaban yang paling tepat untuk melengkapi kalimat:
                 </div>
                 <div className="p-4 sm:p-5 rounded-xl border border-stone-200/80 dark:border-zinc-800 bg-stone-50/60 dark:bg-zinc-900/60">
-                  <div className="text-xl sm:text-2xl font-serif-jp font-bold text-stone-900 dark:text-stone-100 leading-relaxed">
+                  <div className="text-xl sm:text-2xl font-jp font-bold text-stone-900 dark:text-stone-100 leading-relaxed">
                     田中さんは　明日【　　】へ　行きます。
                   </div>
                   <div className="text-xs text-stone-500 dark:text-stone-400 mt-2">
@@ -513,7 +513,7 @@ export const DesignShowroom: React.FC<DesignShowroomProps> = ({ onBackToApp }) =
                       className={`p-4 rounded-xl text-left font-medium transition-all ${tactileClass}`}
                     >
                       <div className="flex items-center justify-between">
-                        <span className="font-serif-jp text-base font-bold">{option.text}</span>
+                        <span className="font-jp text-base font-bold">{option.text}</span>
                         <span className="text-xs font-mono opacity-50 px-1.5 py-0.5 rounded bg-black/5 dark:bg-white/5">
                           #{option.id}
                         </span>
@@ -613,25 +613,25 @@ export const DesignShowroom: React.FC<DesignShowroomProps> = ({ onBackToApp }) =
                 </span>
               </div>
               <div className="my-4 text-center">
-                <div className="font-serif-jp text-6xl font-bold text-stone-900 dark:text-stone-100 tracking-normal">
+                <div className="font-jp text-6xl font-bold text-stone-900 dark:text-stone-100 tracking-normal">
                   桜
                 </div>
                 <div className="text-xs text-stone-400 font-mono mt-1">10 Strokes • 木 (Pohon)</div>
               </div>
               <div className="text-center mb-4">
-                <div className="font-serif-jp font-semibold text-stone-800 dark:text-stone-200">
+                <div className="font-jp font-semibold text-stone-800 dark:text-stone-200">
                   Bunga Sakura
                 </div>
                 <div className="text-xs text-stone-500 italic">Cherry Blossom</div>
               </div>
               <div className="space-y-1.5 text-xs border-t border-stone-100 dark:border-zinc-800/80 pt-3">
                 <div className="flex justify-between">
-                  <span className="text-stone-400 font-serif-jp">音読み:</span>
+                  <span className="text-stone-400 font-jp">音読み:</span>
                   <span className="font-mono text-stone-700 dark:text-stone-300">オウ (ō)</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-stone-400 font-serif-jp">訓読み:</span>
-                  <span className="font-serif-jp text-stone-700 dark:text-stone-300">さくら</span>
+                  <span className="text-stone-400 font-jp">訓読み:</span>
+                  <span className="font-jp text-stone-700 dark:text-stone-300">さくら</span>
                 </div>
               </div>
               <button 
@@ -653,7 +653,7 @@ export const DesignShowroom: React.FC<DesignShowroomProps> = ({ onBackToApp }) =
                 </span>
               </div>
               <div className="my-4 text-center">
-                <div className="font-serif-jp text-6xl font-black text-stone-900 dark:text-stone-100 hover:scale-105 transition-transform inline-block cursor-default">
+                <div className="font-jp text-6xl font-black text-stone-900 dark:text-stone-100 hover:scale-105 transition-transform inline-block cursor-default">
                   桜
                 </div>
                 <div className="text-xs text-stone-400 font-mono mt-1">Radikal 木 • 10 Goresan</div>
@@ -670,7 +670,7 @@ export const DesignShowroom: React.FC<DesignShowroomProps> = ({ onBackToApp }) =
                 </div>
                 <div className="p-2 rounded-lg bg-stone-50 dark:bg-zinc-900 border border-stone-200/60 dark:border-zinc-800">
                   <div className="text-[10px] text-stone-400 uppercase font-bold">Kunyomi</div>
-                  <div className="font-serif-jp font-bold text-stone-700 dark:text-stone-300 mt-0.5">さくら</div>
+                  <div className="font-jp font-bold text-stone-700 dark:text-stone-300 mt-0.5">さくら</div>
                 </div>
               </div>
               <button 
@@ -720,7 +720,7 @@ export const DesignShowroom: React.FC<DesignShowroomProps> = ({ onBackToApp }) =
 
             <div className="py-6">
               <span className="text-xs text-stone-400 uppercase tracking-widest font-mono">Kosakata JLPT</span>
-              <div className="font-serif-jp text-5xl sm:text-6xl font-black my-4 text-stone-900 dark:text-stone-100">
+              <div className="font-jp text-5xl sm:text-6xl font-black my-4 text-stone-900 dark:text-stone-100">
                 約束
               </div>
               <div className="text-sm text-stone-500 dark:text-stone-400 font-jp">
@@ -749,7 +749,7 @@ export const DesignShowroom: React.FC<DesignShowroomProps> = ({ onBackToApp }) =
                   <div className="text-lg font-bold text-stone-900 dark:text-stone-100">
                     Janji / Perjanjian (Promise, Appointment)
                   </div>
-                  <div className="text-xs text-stone-500 mt-1 font-serif-jp">
+                  <div className="text-xs text-stone-500 mt-1 font-jp">
                     友達と約束があります。(Saya punya janji dengan teman.)
                   </div>
                 </div>

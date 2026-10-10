@@ -191,7 +191,7 @@ export const SrsReviewSession: React.FC<SrsReviewSessionProps> = ({ onClose }) =
               <Flame className="w-5 h-5" />
             </div>
             <div>
-              <h2 className="text-base sm:text-lg font-bold font-serif-jp text-[#1c1917] dark:text-[#f4f4f5] flex items-center gap-2">
+              <h2 className="text-base sm:text-lg font-bold font-jp text-[#1c1917] dark:text-[#f4f4f5] flex items-center gap-2">
                 SRS Spaced-Repetition Review
                 <span className="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] dark:text-[#a1a1aa]">
                   Adaptive WaniKani
@@ -244,7 +244,7 @@ export const SrsReviewSession: React.FC<SrsReviewSessionProps> = ({ onClose }) =
               </div>
 
               <div>
-                <h3 className="text-xl sm:text-2xl font-bold font-serif-jp text-[#1c1917] dark:text-[#f4f4f5]">
+                <h3 className="text-xl sm:text-2xl font-bold font-jp text-[#1c1917] dark:text-[#f4f4f5]">
                   Semua Review Hari Ini Tuntas!
                 </h3>
                 <p className="text-sm text-[#78716c] dark:text-[#a1a1aa] mt-1 font-sans">
@@ -342,7 +342,7 @@ export const SrsReviewSession: React.FC<SrsReviewSessionProps> = ({ onClose }) =
                           ) : (
                             <TrendingDown className="w-4 h-4 text-[#c84b31] shrink-0" />
                           )}
-                          <span className="font-bold font-serif-jp text-sm text-[#1c1917] dark:text-[#f4f4f5]">{res.mainText}</span>
+                          <span className="font-bold font-jp text-sm text-[#1c1917] dark:text-[#f4f4f5]">{res.mainText}</span>
                           <span className="text-[10px] px-1.5 py-0.5 rounded bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] dark:text-[#a1a1aa] uppercase font-mono">
                             {res.itemType}
                           </span>
@@ -395,20 +395,20 @@ export const SrsReviewSession: React.FC<SrsReviewSessionProps> = ({ onClose }) =
 
               {/* Main Card Prompt Box */}
               <div className="p-8 sm:p-12 rounded-xl bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] text-center relative flex flex-col items-center justify-center min-h-[220px] shadow-xs">
-                <div className="text-4xl sm:text-6xl font-bold font-serif-jp text-[#1c1917] dark:text-[#f4f4f5] tracking-wide">
+                <div className="text-4xl sm:text-6xl font-bold font-jp text-[#1c1917] dark:text-[#f4f4f5] tracking-wide">
                   {resolvedItem.mainText}
                 </div>
 
                 {isRevealed && (
                   <div className="mt-4 animate-in fade-in slide-in-from-bottom-2 duration-200">
-                    <div className="text-lg sm:text-xl font-bold text-[#c84b31] font-serif-jp">
+                    <div className="text-lg sm:text-xl font-bold text-[#c84b31] font-jp">
                       {resolvedItem.subText}
                     </div>
                     <div className="text-base sm:text-lg font-medium text-[#1c1917] dark:text-[#f4f4f5] mt-2">
                       {resolvedItem.meaning}
                     </div>
                     {resolvedItem.extraInfo && (
-                      <p className="text-xs text-[#78716c] dark:text-[#a1a1aa] max-w-md mx-auto mt-3 bg-[#faf8f5] dark:bg-[#18181b] p-3 rounded-lg border border-[#e7e5e4] dark:border-[#27272a] font-serif-jp">
+                      <p className="text-xs text-[#78716c] dark:text-[#a1a1aa] max-w-md mx-auto mt-3 bg-[#faf8f5] dark:bg-[#18181b] p-3 rounded-lg border border-[#e7e5e4] dark:border-[#27272a] font-jp">
                         {resolvedItem.extraInfo}
                       </p>
                     )}

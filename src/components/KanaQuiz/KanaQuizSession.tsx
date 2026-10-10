@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { KanaItem, QuizAttempt, QuizSummary } from '../../types';
 import { playSuccessSound, playErrorSound, speakJapanese } from '../../utils/audio';
-import { Volume2, VolumeX, Flame, X, ArrowRight, CornerDownLeft, Type, RotateCcw, Keyboard } from 'lucide-react';
+import { Volume2, VolumeX, Flame, X, ArrowRight, CornerDownLeft, RotateCcw, Keyboard } from 'lucide-react';
 
 interface KanaQuizSessionProps {
   items: KanaItem[];
@@ -39,7 +39,6 @@ export const KanaQuizSession: React.FC<KanaQuizSessionProps> = ({
   const [_maxStreak, setMaxStreak] = useState(0);
   const startTimeRef = useRef<number>(0);
   const [soundEnabled, setSoundEnabled] = useState(true);
-  const [useSerifFont, setUseSerifFont] = useState(true); // Default true for Japanese Zen Mincho
   const [retriedItemIds, setRetriedItemIds] = useState<Set<string>>(() => new Set());
 
   // Tracking attempts by kana item id
@@ -292,19 +291,6 @@ export const KanaQuizSession: React.FC<KanaQuizSessionProps> = ({
               <span>{streak}</span>
             </div>
 
-            {/* Font Style Toggle */}
-            <button
-              type="button"
-              onClick={() => setUseSerifFont(f => !f)}
-              title="Ganti font (Mincho Kuas vs Gothic Modern)"
-              className={`p-2 rounded-lg border text-xs font-medium transition cursor-pointer ${
-                useSerifFont 
-                  ? 'bg-[#1c1917] dark:bg-[#f4f4f5] text-white dark:text-[#18181b] border-transparent' 
-                  : 'bg-white dark:bg-[#1f1f23] border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] dark:text-[#a1a1aa]'
-              }`}
-            >
-              <Type className="w-3.5 h-3.5" />
-            </button>
 
             {/* Audio Toggle */}
             <button
@@ -363,9 +349,7 @@ export const KanaQuizSession: React.FC<KanaQuizSessionProps> = ({
 
         {/* Big Kana Character Display Card */}
         <div 
-          className={`w-64 h-64 sm:w-72 sm:h-72 rounded-2xl flex items-center justify-center border transition-all duration-200 shadow-sm relative select-none ${
-            useSerifFont ? 'font-serif-jp' : 'font-sans'
-          } ${
+          className={`w-64 h-64 sm:w-72 sm:h-72 rounded-2xl flex items-center justify-center border transition-all duration-200 shadow-sm relative select-none font-jp ${
             inputState === 'correct'
               ? 'bg-emerald-50 dark:bg-emerald-950/30 border-emerald-500 text-emerald-800 dark:text-emerald-300 scale-102'
               : inputState === 'wrong'

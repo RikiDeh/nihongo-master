@@ -180,7 +180,7 @@ export function App() {
           <footer className="border-t border-[#e7e5e4] dark:border-[#27272a] bg-[#faf8f5]/90 dark:bg-[#18181b]/90 py-5 text-center text-xs text-[#78716c] dark:text-[#a1a1aa] mt-auto">
             <div className="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
               <div className="flex items-center gap-2">
-                <span className="font-serif-jp font-bold text-[#1c1917] dark:text-[#f4f4f5]">日本語マスター</span>
+                <span className="font-jp font-bold text-[#1c1917] dark:text-[#f4f4f5]">日本語マスター</span>
                 <span className="text-[#a8a29e] dark:text-[#71717a]">|</span>
                 <span className="font-medium text-[#78716c] dark:text-[#a1a1aa]">NihongoMaster — Platform Belajar Bahasa Jepang 0→N1</span>
               </div>
