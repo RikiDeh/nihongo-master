@@ -73,7 +73,7 @@ export const DailySignInModal: React.FC<DailySignInModalProps> = ({
           <div className="w-24 h-24 rounded-full bg-gradient-to-t from-[#c84b31]/20 to-amber-500/10 dark:from-[#e05d44]/30 dark:to-amber-500/20 flex items-center justify-center border border-[#c84b31]/30 relative animate-pulse">
             <Flame className="w-14 h-14 text-[#c84b31] dark:text-[#e05d44] fill-current drop-shadow-md" />
             <div className="absolute -top-1 -right-1">
-              <Sparkles className="w-5 h-5 text-amber-500 animate-bounce" />
+              <Sparkles className="w-5 h-5 text-amber-500 animate-pulse" />
             </div>
           </div>
 
