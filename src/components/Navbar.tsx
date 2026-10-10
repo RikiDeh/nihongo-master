@@ -68,13 +68,13 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
   }, []);
 
   const navItems: { id: ActiveModule; label: string; jp: string; icon: React.ReactNode; badge?: string }[] = [
+    { id: 'roadmap', label: 'Peta Belajar', jp: '道程', icon: <Compass className="w-4 h-4" />, badge: 'Utama' },
     { id: 'kana', label: 'Kana Matrix', jp: '仮名', icon: <span className="font-jp text-sm font-bold">あ</span>, badge: '50音' },
     { id: 'kanji', label: 'Joyō Kanji', jp: '漢字', icon: <BookOpen className="w-4 h-4" />, badge: '2.167' },
     { id: 'vocab', label: 'Kosakata', jp: '語彙', icon: <Layers className="w-4 h-4" />, badge: '9.177' },
     { id: 'grammar', label: 'Tata Bahasa', jp: '文法', icon: <Award className="w-4 h-4" /> },
     { id: 'dojo', label: 'Dojo Konjugasi', jp: '活用', icon: <Swords className="w-4 h-4" /> },
     { id: 'quiz', label: 'Pusat Ujian JLPT', jp: '試験', icon: <Trophy className="w-4 h-4" />, badge: 'N5→N1' },
-    { id: 'roadmap', label: 'Peta Jalan 0→N1', jp: '道程', icon: <Compass className="w-4 h-4" /> },
   ];
 
   return (
@@ -91,9 +91,9 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
             isCollapsed ? 'flex-col gap-3 justify-center' : 'justify-between'
           }`}>
             <div 
-              onClick={() => onSelectModule('kana')}
+              onClick={() => onSelectModule('roadmap')}
               className="flex items-center gap-3 cursor-pointer group select-none overflow-hidden"
-              title="NihongoMaster — Kembali ke Beranda Kana"
+              title="NihongoMaster — Kembali ke Beranda Peta Belajar"
             >
               {/* Hanko Stamp */}
               <div className="w-10 h-10 rounded-md bg-[#c84b31] dark:bg-[#e05d44] border border-[#a63a23] dark:border-[#c84b31] flex items-center justify-center text-white font-jp font-black text-xl shadow-xs shrink-0 group-hover:scale-105 transition-transform">
@@ -263,7 +263,7 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
         {/* Mobile Top Header */}
         <header className="sticky top-0 z-30 bg-[#faf8f5]/95 dark:bg-[#18181b]/95 backdrop-blur-md border-b border-[#e7e5e4] dark:border-[#27272a] px-4 py-2.5 flex items-center justify-between">
           <div 
-            onClick={() => onSelectModule('kana')}
+            onClick={() => onSelectModule('roadmap')}
             className="flex items-center gap-2.5 cursor-pointer"
           >
             <div className="w-7 h-7 rounded bg-[#c84b31] dark:bg-[#e05d44] flex items-center justify-center text-white font-jp font-bold text-sm">

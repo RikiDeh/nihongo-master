@@ -1,209 +1,569 @@
-import React from 'react';
-import { ArrowUpRight } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { 
+  Flame, 
+  CheckCircle2, 
+  Lock, 
+  Play, 
+  Trophy, 
+  Clock, 
+  Target, 
+  RotateCcw,
+  ChevronRight,
+  ShieldCheck
+} from 'lucide-react';
 import { ActiveModule } from '../Navbar';
-import { JLPTLevel } from '../../types';
-import { getUserProgress } from '../../utils/storage';
-import { KANJI_DATA } from '../../data/kanjiData';
-import { VOCAB_DATA } from '../../data/vocabData';
+import { JLPTLevel, MultipleChoiceQuestion } from '../../types';
+import { ROADMAP_ARCS, RoadmapArc, RoadmapStage } from '../../data/roadmapData';
+import { 
+  getUserProgress, 
+  subscribeToStorage, 
+  checkDailySignInStatus, 
+  getDailyMissions, 
+  completeRoadmapStage,
+  reportMissionActivity
+} from '../../utils/storage';
+import { DailySignInModal } from '../DailyModal/DailySignInModal';
+import { 
+  HIRAGANA_GOJUUON_GROUPS, 
+  KATAKANA_GOJUUON_GROUPS,
+  HIRAGANA_DAKUTEN_GROUPS,
+  KATAKANA_DAKUTEN_GROUPS,
+  HIRAGANA_YOON_GROUPS,
+  KATAKANA_YOON_GROUPS
+} from '../../data/kanaData';
+import { generateDynamicMockExam } from '../../utils/quizGenerator';
 
 interface RoadmapViewProps {
   onNavigate: (module: ActiveModule, level?: JLPTLevel) => void;
+  onOpenSrs?: () => void;
+  onLaunchKanaQuiz?: (items: any[], requeue?: boolean, enter?: boolean) => void;
 }
 
-export const RoadmapView: React.FC<RoadmapViewProps> = ({ onNavigate }) => {
-  const progress = getUserProgress();
+export const RoadmapView: React.FC<RoadmapViewProps> = ({ 
+  onNavigate, 
+  onOpenSrs,
+  onLaunchKanaQuiz 
+}) => {
+  const [progress, setProgress] = useState(() => getUserProgress());
+  const [isSignInOpen, setIsSignInOpen] = useState(false);
+  const [activeArcId, setActiveArcId] = useState<string>(() => {
+    return getUserProgress().currentArcId || 'arc_0';
+  });
 
-  const calcLevelProgress = (lvl: JLPTLevel) => {
-    const levelKanji = KANJI_DATA.filter(k => k.level === lvl);
-    const levelVocab = VOCAB_DATA.filter(v => v.level === lvl);
-    const totalItems = levelKanji.length + levelVocab.length;
-    if (totalItems === 0) return 0;
+  // State untuk Stage Quiz Runner Modal
+  const [activeStageQuiz, setActiveStageQuiz] = useState<RoadmapStage | null>(null);
+  const [quizQuestions, setQuizQuestions] = useState<MultipleChoiceQuestion[]>([]);
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [userAnswers, setUserAnswers] = useState<number[]>([]);
+  const [quizTimer, setQuizTimer] = useState<number>(0);
+  const [isQuizFinished, setIsQuizFinished] = useState(false);
 
-    const masteredCount = 
-      levelKanji.filter(k => progress.masteredKanjiIds.includes(k.id)).length +
-      levelVocab.filter(v => progress.masteredVocabIds.includes(v.id)).length;
+  useEffect(() => {
+    const unsub = subscribeToStorage(() => {
+      const p = getUserProgress();
+      setProgress(p);
+      if (p.currentArcId && p.currentArcId !== activeArcId) {
+        setActiveArcId(p.currentArcId);
+      }
+    });
+    return unsub;
+  }, [activeArcId]);
 
-    return Math.round((masteredCount / totalItems) * 100);
+  // Otomatis tawarkan Sign-In jika belum hari ini
+  useEffect(() => {
+    const status = checkDailySignInStatus();
+    if (status.canClaim) {
+      // Buka otomatis dengan sedikit jeda agar tidak mengagetkan render
+      const timer = setTimeout(() => {
+        setIsSignInOpen(true);
+      }, 400);
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
+  const completedSet = new Set(progress.completedStageIds || []);
+  const dailyMissionsData = getDailyMissions();
+  const signInStatus = checkDailySignInStatus();
+
+  // Cek apakah suatu Arc terbuka atau terkunci
+  const isArcUnlocked = (arc: RoadmapArc): boolean => {
+    if (arc.arcNumber === 0) return true;
+    const prevArc = ROADMAP_ARCS[arc.arcNumber - 1];
+    if (!prevArc) return true;
+    const lastStageOfPrev = prevArc.stages[prevArc.stages.length - 1];
+    return completedSet.has(lastStageOfPrev.id);
   };
 
-  const steps = [
-    {
-      level: 'KANA',
-      kanjiBadge: '仮名',
-      title: 'Kana Gateway (Hiragana & Katakana)',
-      tag: 'Fondasi Utama (0 ke Pemula)',
-      desc: 'Kuasai 46 Hiragana + 46 Katakana beserta Dakuten dan Kombinasi (Yōon). Wajib lancar refleks sebelum melangkah ke aksara Kanji.',
-      target: '92+ Karakter (Refleks baca cepat)',
-      moduleAction: 'kana' as ActiveModule,
-      targetLevel: undefined,
-      actionLabel: 'Mulai Kuis Kana',
-      progressPercent: progress.quizHistory.some(q => q.category.toLowerCase().includes('kana')) ? 100 : 0,
-      badgeBorder: 'border-[#c84b31]/30 text-[#c84b31] dark:text-[#e05d44] bg-[#c84b31]/5',
-      items: ['Hiragana Gojūon, Dakuten & Handakuten', 'Katakana untuk serapan kata asing', 'Kombinasi Yōon (kya, sha, chu, dsb.)'],
-    },
-    {
-      level: 'N5',
-      kanjiBadge: '初級',
-      title: 'Dasar Percakapan Sehari-hari (JLPT N5)',
-      tag: 'Pemula (Beginner)',
-      desc: 'Mulai membaca kanji dasar, angka, hari, partikel (wa, ga, o, ni, de), dan bentuk sopan (~desu / ~masu).',
-      target: '~100 Kanji • ~800 Kosakata • Pola Kalimat Dasar',
-      moduleAction: 'kanji' as ActiveModule,
-      targetLevel: 'N5' as JLPTLevel,
-      actionLabel: 'Buka Materi N5',
-      progressPercent: calcLevelProgress('N5'),
-      badgeBorder: 'border-emerald-500/30 text-[#2e7d32] dark:text-[#4ade80] bg-[#2e7d32]/5',
-      items: ['Partikel esensial (は, が, を, に, で)', 'Konjugasi kata kerja dasar (bentuk-て, bentuk-ます)', 'Kanji angka, alam, keluarga, dan waktu'],
-    },
-    {
-      level: 'N4',
-      kanjiBadge: '中初',
-      title: 'Komunikasi Terapan & Pengandaian (JLPT N4)',
-      tag: 'Menengah Bawah (Elementary)',
-      desc: 'Mampu berbicara mengenai pengalaman, memberi saran, kalimat pengandaian (~tara, ~ba), bentuk pasif dan kausatif.',
-      target: '~300 Kanji • ~1,500 Kosakata • Pemahaman Bacaan Pendek',
-      moduleAction: 'kanji' as ActiveModule,
-      targetLevel: 'N4' as JLPTLevel,
-      actionLabel: 'Buka Materi N4',
-      progressPercent: calcLevelProgress('N4'),
-      badgeBorder: 'border-sky-500/30 text-sky-700 dark:text-sky-300 bg-sky-500/5',
-      items: ['Bentuk pengandaian (~tara, ~nara, ~ba)', 'Keigo dasar (bahasa sopan/hormat)', 'Pemahaman dialog kehidupan di Jepang'],
-    },
-    {
-      level: 'N3',
-      kanjiBadge: '中級',
-      title: 'Jembatan Menengah (The Intermediate Bridge)',
-      tag: 'Menengah (Intermediate)',
-      desc: 'Titik perubahan krusial: mampu memahami berita sederhana, artikel koran ringan, dan percakapan tempo alami tanpa furigana konstan.',
-      target: '~650 Kanji • ~3,500 Kosakata • Bacaan Menengah',
-      moduleAction: 'kanji' as ActiveModule,
-      targetLevel: 'N3' as JLPTLevel,
-      actionLabel: 'Buka Materi N3',
-      progressPercent: calcLevelProgress('N3'),
-      badgeBorder: 'border-[#1e3a8a]/30 text-[#1e3a8a] dark:text-[#60a5fa] bg-[#1e3a8a]/5',
-      items: ['Pembedaan transitif & intransitif', 'Tata bahasa bernuansa (~wake, ~you ni, ~hazu)', 'Percakapan natural penutur asli'],
-    },
-    {
-      level: 'N2',
-      kanjiBadge: '準上',
-      title: 'Bahasa Bisnis & Media Profesional (JLPT N2)',
-      tag: 'Mahir Bawah (Business Fluent)',
-      desc: 'Standar minimum untuk bekerja di perusahaan Jepang atau universitas Jepang. Mampu membaca editorial dan mendengar debat.',
-      target: '~1,000 Kanji • ~6,000 Kosakata • Opini & Berita',
-      moduleAction: 'kanji' as ActiveModule,
-      targetLevel: 'N2' as JLPTLevel,
-      actionLabel: 'Buka Materi N2',
-      progressPercent: calcLevelProgress('N2'),
-      badgeBorder: 'border-amber-500/30 text-amber-700 dark:text-amber-300 bg-amber-500/5',
-      items: ['Ekspresi bisnis dan keigo lanjutan', 'Membaca cepat artikel opini dan esai', 'Idiom majemuk profesional'],
-    },
-    {
-      level: 'N1',
-      kanjiBadge: '上級',
-      title: 'Puncak Kemahiran Bahasa (Native Fluency)',
-      tag: 'Mahir Penuh (Mastery)',
-      desc: 'Tingkat tertinggi: mampu memahami nuansa tulisan sastra, dokumen hukum, debat filosofis, dan idiom 4 huruf (Yojijukugo).',
-      target: '~2,000+ Kanji • ~10,000+ Kosakata • Literatur Kompleks',
-      moduleAction: 'kanji' as ActiveModule,
-      targetLevel: 'N1' as JLPTLevel,
-      actionLabel: 'Buka Materi N1',
-      progressPercent: calcLevelProgress('N1'),
-      badgeBorder: 'border-[#c84b31]/40 text-[#c84b31] dark:text-[#e05d44] bg-[#c84b31]/5 font-bold',
-      items: ['Yojijukugo (四字熟語 - Idiom 4 Karakter)', 'Tata bahasa sastra & ekspresi formal', 'Membaca artikel kritik ilmiah dan filsafat'],
-    },
-  ];
+  const currentArc = ROADMAP_ARCS.find(a => a.id === activeArcId) || ROADMAP_ARCS[0];
+
+  // Handler peluncuran stage
+  const handleStartStage = (stage: RoadmapStage) => {
+    const hiraGojuuon = HIRAGANA_GOJUUON_GROUPS.flatMap(g => g.items);
+    const kataGojuuon = KATAKANA_GOJUUON_GROUPS.flatMap(g => g.items);
+
+    if (stage.type === 'kana-drill') {
+      if (stage.id === 'arc_0_stage_1') {
+        // 46 Hiragana dasar
+        if (onLaunchKanaQuiz) {
+          onLaunchKanaQuiz(hiraGojuuon, true, false);
+          return;
+        }
+      } else if (stage.id === 'arc_0_stage_2') {
+        // 46 Katakana dasar
+        if (onLaunchKanaQuiz) {
+          onLaunchKanaQuiz(kataGojuuon, true, false);
+          return;
+        }
+      }
+      onNavigate('kana');
+      return;
+    }
+
+    if (stage.id === 'arc_0_stage_3') {
+      // Grand Exam Kana (50 soal acak campuran)
+      const allKanaPool = [
+        ...hiraGojuuon,
+        ...kataGojuuon,
+        ...HIRAGANA_DAKUTEN_GROUPS.flatMap(g => g.items),
+        ...KATAKANA_DAKUTEN_GROUPS.flatMap(g => g.items),
+        ...HIRAGANA_YOON_GROUPS.flatMap(g => g.items),
+        ...KATAKANA_YOON_GROUPS.flatMap(g => g.items),
+      ].sort(() => Math.random() - 0.5).slice(0, 50);
+
+      if (onLaunchKanaQuiz) {
+        onLaunchKanaQuiz(allKanaPool, false, false);
+        return;
+      }
+      onNavigate('kana');
+      return;
+    }
+
+    // Untuk checkpoint-quiz & grand-exam N5+
+    const questions = generateDynamicMockExam(stage.targetLevel || 'N5', stage.targetCount);
+    setQuizQuestions(questions);
+    setCurrentQuestionIndex(0);
+    setUserAnswers([]);
+    setQuizTimer(stage.timeLimitMinutes * 60);
+    setIsQuizFinished(false);
+    setActiveStageQuiz(stage);
+  };
+
+  // Timer countdown saat kuis aktif
+  useEffect(() => {
+    if (!activeStageQuiz || isQuizFinished || quizTimer <= 0) return;
+    const interval = setInterval(() => {
+      setQuizTimer(t => {
+        if (t <= 1) {
+          setIsQuizFinished(true);
+          return 0;
+        }
+        return t - 1;
+      });
+    }, 1000);
+    return () => clearInterval(interval);
+  }, [activeStageQuiz, isQuizFinished, quizTimer]);
+
+  const handleAnswerQuestion = (optionIndex: number) => {
+    const nextAnswers = [...userAnswers, optionIndex];
+    setUserAnswers(nextAnswers);
+
+    if (currentQuestionIndex + 1 < quizQuestions.length) {
+      setCurrentQuestionIndex(i => i + 1);
+    } else {
+      setIsQuizFinished(true);
+      // Evaluasi kelulusan
+      if (activeStageQuiz) {
+        let correctCount = 0;
+        quizQuestions.forEach((q, idx) => {
+          if (nextAnswers[idx] === q.correctIndex) {
+            correctCount++;
+          }
+        });
+        const score = Math.round((correctCount / quizQuestions.length) * 100);
+        if (score >= activeStageQuiz.passingScore) {
+          // LULUS! Tentukan arc berikutnya jika stage ini adalah stage terakhir
+          const arcStages = currentArc.stages;
+          const isLast = arcStages[arcStages.length - 1].id === activeStageQuiz.id;
+          let nextArcId: string | undefined = undefined;
+          if (isLast && currentArc.arcNumber + 1 < ROADMAP_ARCS.length) {
+            nextArcId = ROADMAP_ARCS[currentArc.arcNumber + 1].id;
+          }
+          completeRoadmapStage(activeStageQuiz.id, nextArcId);
+        }
+        reportMissionActivity('quiz');
+      }
+    }
+  };
 
   return (
-    <div className="w-full max-w-5xl mx-auto px-4 py-8 pb-24">
-      {/* Editorial Title */}
-      <div className="text-center mb-10">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded border border-[#1e3a8a]/25 bg-[#1e3a8a]/5 text-[#1e3a8a] dark:text-[#60a5fa] text-xs font-mono font-medium mb-3">
-          <span>[学修系統図] CURRICULUM ROADMAP 0→N1</span>
+    <div className="max-w-5xl mx-auto px-4 py-8">
+      {/* 1. TOP HEADER / DAILY HUB HERO */}
+      <div className="mb-8 p-6 rounded-2xl bg-gradient-to-r from-[#faf8f5] via-[#f4f0e8] to-[#faf8f5] dark:from-[#18181b] dark:via-[#1f1f23] dark:to-[#18181b] border border-[#e7e5e4] dark:border-[#27272a] shadow-xs relative overflow-hidden">
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 relative z-10">
+          <div>
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#c84b31]/10 border border-[#c84b31]/25 text-[#c84b31] dark:text-[#e05d44] text-xs font-mono font-bold uppercase mb-2">
+              <span className="w-2 h-2 rounded-full bg-[#c84b31] dark:bg-[#e05d44] animate-ping" />
+              <span>BERANDA PETUALANGAN JEPANG 0→N1</span>
+            </div>
+            <h1 className="text-2xl sm:text-3xl font-bold font-sans text-[#1c1917] dark:text-[#f4f4f5] tracking-tight">
+              Selamat Belajar, <span className="font-jp text-[#c84b31] dark:text-[#e05d44]">道場生</span>
+            </h1>
+            <p className="text-xs sm:text-sm text-[#78716c] dark:text-[#a1a1aa] mt-1 max-w-xl">
+              Setiap bab dirancang terarah memadukan bunyi Kana, tulisan Kanji, kosakata, dan tata bahasa asli JLPT.
+            </p>
+          </div>
+
+          {/* Daily Streak & Sign-in Trigger */}
+          <div className="flex items-center gap-3 w-full md:w-auto">
+            <button
+              type="button"
+              onClick={() => setIsSignInOpen(true)}
+              className="flex-1 md:flex-none p-3.5 rounded-xl border border-[#c84b31]/30 bg-white dark:bg-[#18181b] hover:bg-[#c84b31]/5 transition shadow-xs cursor-pointer flex items-center gap-3.5 group"
+            >
+              <div className="w-10 h-10 rounded-lg bg-[#c84b31]/15 dark:bg-[#e05d44]/20 flex items-center justify-center text-[#c84b31] dark:text-[#e05d44] group-hover:scale-110 transition-transform">
+                <Flame className="w-6 h-6 fill-current" />
+              </div>
+              <div className="text-left">
+                <div className="text-[10px] font-mono font-bold uppercase text-[#78716c] dark:text-[#a1a1aa]">
+                  {signInStatus.canClaim ? 'KLAIM HARI INI' : 'API AKTIF'}
+                </div>
+                <div className="text-base font-mono font-black text-[#1c1917] dark:text-[#f4f4f5] leading-none">
+                  🔥 {progress.dailyStreak || 0} Hari
+                </div>
+              </div>
+            </button>
+          </div>
         </div>
-        <h1 className="text-3xl sm:text-4xl font-bold font-jp text-[#1c1917] dark:text-[#f4f4f5] tracking-tight mb-2">
-          Peta Jalan: Dari Nol Hingga Mahir N1
-        </h1>
-        <p className="text-[#78716c] dark:text-[#a1a1aa] text-sm max-w-xl mx-auto leading-relaxed">
-          Panduan langkah demi langkah terstruktur dari pemula total tanpa bekal aksara hingga level kemahiran tertinggi standar JLPT.
+      </div>
+
+      {/* 2. THREE DYNAMIC DAILY MISSIONS (QUESTS) */}
+      <div className="mb-10">
+        <div className="flex items-center justify-between mb-3 px-1">
+          <div className="flex items-center gap-2">
+            <Target className="w-4 h-4 text-[#c84b31] dark:text-[#e05d44]" />
+            <h2 className="text-sm font-bold uppercase font-mono tracking-wider text-[#1c1917] dark:text-[#f4f4f5]">
+              Target Harian (Daily Missions)
+            </h2>
+          </div>
+          <span className="text-xs font-mono text-[#78716c] dark:text-[#a1a1aa]">
+            {dailyMissionsData.missions.filter(m => m.completed).length} / 3 Selesai
+          </span>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+          {dailyMissionsData.missions.map(mission => (
+            <div
+              key={mission.id}
+              className={`p-4 rounded-xl border transition-all ${
+                mission.completed
+                  ? 'bg-emerald-50/50 dark:bg-emerald-950/20 border-emerald-500/40 text-emerald-950 dark:text-emerald-100'
+                  : 'bg-white dark:bg-[#1f1f23] border-[#e7e5e4] dark:border-[#27272a] text-[#1c1917] dark:text-[#f4f4f5]'
+              }`}
+            >
+              <div className="flex items-start justify-between gap-2 mb-2">
+                <span className="text-xs font-bold leading-tight">
+                  {mission.title}
+                </span>
+                {mission.completed ? (
+                  <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
+                ) : (
+                  <span className="text-[10px] font-mono font-bold text-[#c84b31] dark:text-[#e05d44] shrink-0">
+                    {mission.current}/{mission.target}
+                  </span>
+                )}
+              </div>
+              <p className="text-[11px] text-[#78716c] dark:text-[#a1a1aa] mb-3 leading-relaxed">
+                {mission.description}
+              </p>
+              
+              {!mission.completed && (
+                <button
+                  type="button"
+                  onClick={() => {
+                    if (mission.id === 'srs') {
+                      if (onOpenSrs) onOpenSrs();
+                    } else if (mission.id === 'quiz') {
+                      onNavigate('quiz');
+                    }
+                  }}
+                  className="w-full py-1.5 px-3 rounded-lg border border-[#e7e5e4] dark:border-[#27272a] hover:bg-[#faf8f5] dark:hover:bg-[#18181b] text-xs font-mono font-medium transition cursor-pointer flex items-center justify-center gap-1.5"
+                >
+                  <span>Mulai Sekarang</span>
+                  <ChevronRight className="w-3.5 h-3.5" />
+                </button>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* 3. ARC TIMELINE NAVIGATION TABS */}
+      <div className="mb-6">
+        <div className="flex items-center gap-2 overflow-x-auto pb-2 border-b border-[#e7e5e4] dark:border-[#27272a] scrollbar-none">
+          {ROADMAP_ARCS.map(arc => {
+            const unlocked = isArcUnlocked(arc);
+            const isSelected = arc.id === activeArcId;
+            const isCompleted = arc.stages.every(s => completedSet.has(s.id));
+
+            return (
+              <button
+                key={arc.id}
+                type="button"
+                onClick={() => {
+                  if (unlocked) setActiveArcId(arc.id);
+                }}
+                disabled={!unlocked}
+                className={`px-4 py-2.5 rounded-xl border text-xs font-mono font-medium transition cursor-pointer whitespace-nowrap flex items-center gap-2 shrink-0 ${
+                  isSelected
+                    ? 'bg-[#1c1917] dark:bg-[#f4f4f5] text-white dark:text-[#18181b] border-[#1c1917] dark:border-[#f4f4f5] font-bold shadow-xs'
+                    : unlocked
+                    ? isCompleted
+                      ? 'bg-emerald-50 dark:bg-emerald-950/20 border-emerald-500/30 text-emerald-800 dark:text-emerald-300'
+                      : 'bg-white dark:bg-[#1f1f23] border-[#e7e5e4] dark:border-[#27272a] text-[#1c1917] dark:text-[#f4f4f5] hover:border-[#1c1917]'
+                    : 'bg-[#faf8f5] dark:bg-[#18181b] border-[#e7e5e4]/50 dark:border-[#27272a]/50 text-[#a8a29e] dark:text-[#52525b] cursor-not-allowed opacity-60'
+                }`}
+              >
+                {!unlocked ? (
+                  <Lock className="w-3.5 h-3.5" />
+                ) : isCompleted ? (
+                  <ShieldCheck className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
+                ) : (
+                  <span className="font-jp text-xs">{arc.titleJp.slice(0, 2)}</span>
+                )}
+                <span>Arc {arc.arcNumber}: {arc.badge}</span>
+              </button>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* 4. ACTIVE ARC DETAIL BANNER */}
+      <div className="mb-6 p-5 rounded-xl bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a]">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-2">
+          <div className="flex items-center gap-2.5">
+            <span className={`px-2.5 py-0.5 rounded text-[11px] font-mono font-bold tracking-wider border ${currentArc.badgeColor}`}>
+              ARC {currentArc.arcNumber} • {currentArc.badge}
+            </span>
+            <span className="font-jp font-bold text-sm text-[#78716c] dark:text-[#a1a1aa]">
+              {currentArc.titleJp}
+            </span>
+          </div>
+          <span className="text-xs font-mono text-[#78716c] dark:text-[#a1a1aa]">
+            {currentArc.stages.filter(s => completedSet.has(s.id)).length} / {currentArc.stages.length} Stage Tuntas
+          </span>
+        </div>
+        <h3 className="text-xl font-bold font-sans text-[#1c1917] dark:text-[#f4f4f5]">
+          {currentArc.title}
+        </h3>
+        <p className="text-xs text-[#78716c] dark:text-[#a1a1aa] mt-1">
+          {currentArc.summary}
         </p>
       </div>
 
-      {/* Roadmap Timeline */}
-      <div className="space-y-6 relative before:absolute before:inset-0 before:left-6 sm:before:left-7 before:w-[1px] before:bg-[#e7e5e4] dark:before:bg-[#27272a] before:-z-0">
-        {steps.map((step) => (
-          <div
-            key={step.level}
-            className="relative z-10 flex items-start gap-4 sm:gap-6 group"
-          >
-            {/* Hanko Stamp Level Indicator */}
-            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-lg bg-white dark:bg-[#1f1f23] border border-[#d6d3d1] dark:border-[#3f3f46] flex flex-col items-center justify-center text-[#1c1917] dark:text-[#f4f4f5] shrink-0 shadow-xs group-hover:border-[#c84b31] transition-colors">
-              <span className="font-jp font-bold text-base leading-none text-[#c84b31] dark:text-[#e05d44]">
-                {step.kanjiBadge}
-              </span>
-              <span className="font-mono text-[10px] font-semibold text-[#78716c] dark:text-[#a1a1aa] mt-0.5">
-                {step.level}
-              </span>
-            </div>
+      {/* 5. STAGES LIST IN CURRENT ARC */}
+      <div className="space-y-4">
+        {currentArc.stages.map((stage, idx) => {
+          const isDone = completedSet.has(stage.id);
+          // Stage terbuka jika stage pertama ATAU stage sebelumnya sudah selesai
+          const isStageAvailable = idx === 0 || completedSet.has(currentArc.stages[idx - 1].id);
 
-            {/* Content Card */}
-            <div className="flex-1 bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] hover:border-[#d6d3d1] dark:hover:border-[#3f3f46] rounded-xl p-5 sm:p-6 transition-all duration-150 shadow-xs">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
-                <h3 className="text-base sm:text-lg font-bold font-jp text-[#1c1917] dark:text-[#f4f4f5]">
-                  {step.title}
-                </h3>
-                <span className={`px-2 py-0.5 rounded text-[11px] font-mono border ${step.badgeBorder} self-start sm:self-auto`}>
-                  [{step.tag}]
-                </span>
-              </div>
-
-              <p className="text-xs sm:text-sm text-[#78716c] dark:text-[#a1a1aa] mb-4 leading-relaxed">
-                {step.desc}
-              </p>
-
-              {/* Targets & Live Mastery Bar */}
-              <div className="space-y-2 mb-4">
-                <div className="p-3 rounded-lg bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a] flex items-center justify-between text-xs font-mono">
-                  <span className="text-[#78716c] dark:text-[#a1a1aa]">
-                    Target: <strong className="text-[#1c1917] dark:text-[#f4f4f5]">{step.target}</strong>
-                  </span>
-                  <span className="text-[#2e7d32] dark:text-[#4ade80] font-bold">
-                    Penguasaan: {step.progressPercent}%
-                  </span>
-                </div>
-
-                {/* Progress bar hairline */}
-                <div className="w-full h-1 bg-[#e7e5e4] dark:bg-[#27272a] rounded-full overflow-hidden">
-                  <div 
-                    className="h-full bg-[#c84b31] dark:bg-[#e05d44] transition-all duration-500 rounded-full"
-                    style={{ width: `${Math.max(step.progressPercent, 2)}%` }}
-                  />
-                </div>
-              </div>
-
-              {/* Syllabus points */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 mb-4">
-                {step.items.map((it, idx) => (
-                  <div key={idx} className="text-[11px] font-sans text-[#78716c] dark:text-[#a1a1aa] bg-[#faf8f5] dark:bg-[#18181b] p-2 rounded border border-[#e7e5e4] dark:border-[#27272a]">
-                    • {it}
+          return (
+            <div
+              key={stage.id}
+              className={`p-5 rounded-xl border transition-all ${
+                isDone
+                  ? 'bg-emerald-50/20 dark:bg-emerald-950/10 border-emerald-500/30'
+                  : isStageAvailable
+                  ? 'bg-white dark:bg-[#1f1f23] border-[#c84b31]/40 dark:border-[#e05d44]/40 shadow-xs ring-1 ring-[#c84b31]/10'
+                  : 'bg-[#faf8f5] dark:bg-[#18181b] border-[#e7e5e4] dark:border-[#27272a] opacity-60'
+              }`}
+            >
+              <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+                <div className="flex-1">
+                  <div className="flex items-center gap-2 mb-1.5">
+                    <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-[#78716c] dark:text-[#a1a1aa]">
+                      STAGE {stage.stageNumber}
+                    </span>
+                    <span className="text-[#a8a29e] dark:text-[#71717a]">•</span>
+                    <span className="text-[10px] font-mono font-semibold text-[#c84b31] dark:text-[#e05d44]">
+                      {stage.type === 'grand-exam' ? 'GRAND GATEKEEPER EXAM' : 'CHECKPOINT DRILL'}
+                    </span>
                   </div>
-                ))}
-              </div>
 
-              {/* CTA Action */}
-              <div className="flex justify-end pt-2 border-t border-[#e7e5e4] dark:border-[#27272a]">
-                <button
-                  type="button"
-                  onClick={() => onNavigate(step.moduleAction, step.targetLevel)}
-                  className="px-4 py-2 rounded-lg bg-[#c84b31] hover:bg-[#b03d25] text-white font-semibold text-xs uppercase tracking-wider flex items-center gap-1.5 transition cursor-pointer shadow-xs active:translate-y-px"
-                >
-                  <span>{step.actionLabel}</span>
-                  <ArrowUpRight className="w-3.5 h-3.5" />
-                </button>
+                  <h4 className="text-base font-bold font-sans text-[#1c1917] dark:text-[#f4f4f5] flex items-center gap-2">
+                    <span>{stage.title}</span>
+                    <span className="font-jp text-xs text-[#78716c] dark:text-[#a1a1aa] font-normal">
+                      {stage.titleJp}
+                    </span>
+                  </h4>
+
+                  <p className="text-xs text-[#78716c] dark:text-[#a1a1aa] mt-1 leading-relaxed max-w-2xl">
+                    {stage.description}
+                  </p>
+
+                  <div className="flex flex-wrap items-center gap-3 mt-3 text-[11px] font-mono text-[#78716c] dark:text-[#a1a1aa]">
+                    <span className="flex items-center gap-1">
+                      <Target className="w-3.5 h-3.5 text-[#c84b31]" />
+                      <span>{stage.targetCount} Soal</span>
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <Clock className="w-3.5 h-3.5" />
+                      <span>{stage.timeLimitMinutes} Menit</span>
+                    </span>
+                    <span className="flex items-center gap-1 font-semibold text-[#1c1917] dark:text-[#f4f4f5]">
+                      <Trophy className="w-3.5 h-3.5 text-amber-500" />
+                      <span>Syarat Lulus: {stage.passingScore}%</span>
+                    </span>
+                  </div>
+                </div>
+
+                {/* Stage Action Button */}
+                <div className="shrink-0 w-full md:w-auto">
+                  {isDone ? (
+                    <div className="px-4 py-2 rounded-lg bg-emerald-100 dark:bg-emerald-950/40 text-emerald-800 dark:text-emerald-300 text-xs font-mono font-bold flex items-center justify-center gap-1.5">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+                      <span>Lulus [合格]</span>
+                    </div>
+                  ) : isStageAvailable ? (
+                    <button
+                      type="button"
+                      onClick={() => handleStartStage(stage)}
+                      className="w-full md:w-auto px-5 py-2.5 rounded-lg bg-[#c84b31] hover:bg-[#b03d25] text-white text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2 shadow-xs transition cursor-pointer active:translate-y-px"
+                    >
+                      <Play className="w-3.5 h-3.5 fill-current" />
+                      <span>Mulai Tantangan</span>
+                    </button>
+                  ) : (
+                    <div className="px-4 py-2 rounded-lg bg-[#e7e5e4] dark:bg-[#27272a] text-[#a8a29e] dark:text-[#71717a] text-xs font-mono flex items-center justify-center gap-1.5 cursor-not-allowed">
+                      <Lock className="w-3.5 h-3.5" />
+                      <span>Selesaikan Sebelumnya</span>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
+
+      {/* 6. MODAL STAGE QUIZ RUNNER (FOR N5+ CHECKPOINTS) */}
+      {activeStageQuiz && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-md animate-fadeIn">
+          <div className="bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a] rounded-2xl max-w-xl w-full p-6 shadow-2xl relative">
+            {!isQuizFinished ? (
+              <>
+                {/* Header Kuis */}
+                <div className="flex items-center justify-between pb-3 mb-4 border-b border-[#e7e5e4] dark:border-[#27272a]">
+                  <div>
+                    <span className="text-[10px] font-mono font-bold text-[#c84b31] uppercase">
+                      {activeStageQuiz.title}
+                    </span>
+                    <div className="text-xs font-mono text-[#78716c] dark:text-[#a1a1aa]">
+                      Soal {currentQuestionIndex + 1} dari {quizQuestions.length}
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-1.5 px-3 py-1 rounded bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] text-xs font-mono font-bold text-[#c84b31]">
+                    <Clock className="w-3.5 h-3.5" />
+                    <span>
+                      {Math.floor(quizTimer / 60)}:{String(quizTimer % 60).padStart(2, '0')}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Question */}
+                {quizQuestions[currentQuestionIndex] && (
+                  <div className="mb-6">
+                    <div className="text-lg font-bold font-jp text-[#1c1917] dark:text-[#f4f4f5] leading-relaxed mb-6">
+                      {quizQuestions[currentQuestionIndex].question}
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                      {quizQuestions[currentQuestionIndex].options.map((option, optIdx) => (
+                        <button
+                          key={optIdx}
+                          type="button"
+                          onClick={() => handleAnswerQuestion(optIdx)}
+                          className="p-3 rounded-xl border border-[#e7e5e4] dark:border-[#27272a] bg-white dark:bg-[#1f1f23] hover:border-[#c84b31] dark:hover:border-[#e05d44] hover:bg-[#c84b31]/5 transition text-left text-sm font-jp font-medium cursor-pointer active:translate-y-px"
+                        >
+                          <span className="font-mono text-xs text-[#78716c] dark:text-[#a1a1aa] mr-2">
+                            [{optIdx + 1}]
+                          </span>
+                          <span>{option}</span>
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </>
+            ) : (
+              /* Hasil Evaluasi Kelulusan Stage */
+              <div className="text-center py-4">
+                {(() => {
+                  let correct = 0;
+                  quizQuestions.forEach((q, i) => {
+                    if (userAnswers[i] === q.correctIndex) correct++;
+                  });
+                  const score = Math.round((correct / quizQuestions.length) * 100);
+                  const isPassed = score >= activeStageQuiz.passingScore;
+
+                  return (
+                    <div>
+                      <div className="w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center border-2 shadow-sm animate-pop">
+                        {isPassed ? (
+                          <div className="w-16 h-16 rounded-full bg-emerald-100 dark:bg-emerald-950/40 border-emerald-500 text-emerald-600 dark:text-emerald-400 flex items-center justify-center">
+                            <CheckCircle2 className="w-9 h-9" />
+                          </div>
+                        ) : (
+                          <div className="w-16 h-16 rounded-full bg-rose-100 dark:bg-rose-950/40 border-rose-500 text-rose-600 dark:text-rose-400 flex items-center justify-center">
+                            <RotateCcw className="w-9 h-9" />
+                          </div>
+                        )}
+                      </div>
+
+                      <h3 className="text-xl font-bold font-sans text-[#1c1917] dark:text-[#f4f4f5]">
+                        {isPassed ? 'SELAMAT, KAMU LULUS! [合格]' : 'BELUM MENCAPAI TARGET KELULUSAN'}
+                      </h3>
+
+                      <p className="text-xs text-[#78716c] dark:text-[#a1a1aa] mt-1 max-w-sm mx-auto">
+                        {isPassed 
+                          ? `Skor ${score}% telah memenuhi syarat kelulusan minimal ${activeStageQuiz.passingScore}%. Tahapan berikutnya terbuka!` 
+                          : `Kamu meraih nilai ${score}%, sedangkan syarat kelulusan minimal adalah ${activeStageQuiz.passingScore}%. Perkuat materi dan coba lagi!`}
+                      </p>
+
+                      <div className="flex items-center justify-center gap-6 my-5 p-3 rounded-xl bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] max-w-xs mx-auto">
+                        <div>
+                          <div className="text-[10px] font-mono text-[#78716c] uppercase">Nilai Akhir</div>
+                          <div className="text-2xl font-mono font-black text-[#c84b31] dark:text-[#e05d44]">{score}%</div>
+                        </div>
+                        <div className="w-px h-8 bg-[#e7e5e4] dark:border-[#27272a]" />
+                        <div>
+                          <div className="text-[10px] font-mono text-[#78716c] uppercase">Benar / Total</div>
+                          <div className="text-2xl font-mono font-black text-[#1c1917] dark:text-[#f4f4f5]">{correct}/{quizQuestions.length}</div>
+                        </div>
+                      </div>
+
+                      <button
+                        type="button"
+                        onClick={() => setActiveStageQuiz(null)}
+                        className="px-6 py-2.5 rounded-xl bg-[#1c1917] dark:bg-[#f4f4f5] text-white dark:text-[#18181b] font-semibold text-xs uppercase tracking-wider transition cursor-pointer"
+                      >
+                        Kembali ke Peta Belajar
+                      </button>
+                    </div>
+                  );
+                })()}
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+
+      {/* 7. DAILY SIGN-IN POPUP MODAL */}
+      <DailySignInModal
+        isOpen={isSignInOpen}
+        currentStreak={progress.dailyStreak || 0}
+        onClose={() => setIsSignInOpen(false)}
+      />
     </div>
   );
 };

@@ -23,7 +23,7 @@ export function App() {
         return 'design-lab';
       }
     }
-    return 'kana';
+    return 'roadmap';
   });
   const [activeLevel, setActiveLevel] = useState<JLPTLevel | 'ALL' | undefined>(undefined);
   const [isSrsOpen, setIsSrsOpen] = useState(false);
@@ -166,7 +166,14 @@ export function App() {
             )}
 
             {activeModule === 'roadmap' && (
-              <RoadmapView onNavigate={handleNavigateFromRoadmap} />
+              <RoadmapView 
+                onNavigate={handleNavigateFromRoadmap}
+                onOpenSrs={() => setIsSrsOpen(true)}
+                onLaunchKanaQuiz={(items, requeue, enter) => {
+                  setActiveModule('kana');
+                  handleStartQuiz(items, requeue, enter);
+                }}
+              />
             )}
 
             {activeModule === 'design-lab' && (

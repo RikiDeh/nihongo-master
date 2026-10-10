@@ -140,6 +140,13 @@ export interface SrsItemRecord {
   failCount: number; // Jika failCount >= 4, status menjadi 'leech'
 }
 
+export interface DailyMissionsState {
+  date: string;
+  srsReviewedCount: number;
+  roadmapStageCompleted: boolean;
+  quickQuizCompleted: boolean;
+}
+
 export interface UserProgressData {
   version: number; // Schema version (v2)
   bookmarkedKanjiIds: string[];
@@ -150,9 +157,13 @@ export interface UserProgressData {
   failedItemIds: string[]; // Daftar ID kanji/kata yang pernah salah dijawab
   dailyStreak: number; // rekor hari belajar berturut-turut
   lastActiveDate: string; // format 'YYYY-MM-DD'
+  lastClaimedSignInDate?: string; // Tanggal terakhir klaim popup sign-in
   dailyGoalTarget: number; // default: 15 kartu per hari
   dailyCardsCompleted: number; // jumlah kartu/kuis yang diselesaikan hari ini
   srsRecords: Record<string, SrsItemRecord>; // menyimpan status seluruh kartu SRS
+  currentArcId?: string; // Arc aktif saat ini ('arc_0_kana', 'arc_1_n5', dll)
+  completedStageIds?: string[]; // Daftar ID stage/bab yang sudah lulus
+  dailyMissionsState?: DailyMissionsState; // Status 3 misi harian
 }
 
 export type VerbGroup = 'godan' | 'ichidan' | 'irregular';
