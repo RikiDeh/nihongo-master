@@ -194,12 +194,12 @@ export const KanaSelector: React.FC<KanaSelectorProps> = ({ onStartQuiz }) => {
           </p>
         </div>
 
-        {/* Script Switcher: Hiragana vs Katakana */}
-        <div className="flex items-center p-1 bg-[#f4f0e8]/80 dark:bg-[#1f1f23]/80 border border-[#e7e5e4] dark:border-[#27272a] rounded-lg shrink-0">
+        {/* Script Switcher: Hiragana vs Katakana (Full-width on mobile) */}
+        <div className="flex items-center p-1 bg-[#f4f0e8]/80 dark:bg-[#1f1f23]/80 border border-[#e7e5e4] dark:border-[#27272a] rounded-xl w-full sm:w-auto shadow-xs">
           <button
             type="button"
             onClick={() => setScriptType('hiragana')}
-            className={`px-4 py-2 rounded-md text-xs font-semibold transition cursor-pointer flex items-center gap-2 ${
+            className={`flex-1 sm:flex-initial min-h-[40px] px-4 py-2 rounded-lg text-xs font-semibold transition cursor-pointer flex items-center justify-center gap-2 ${
               scriptType === 'hiragana'
                 ? 'bg-white dark:bg-[#27272a] text-[#c84b31] dark:text-[#e05d44] shadow-xs border border-[#d6d3d1] dark:border-[#3f3f46]'
                 : 'text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
@@ -214,7 +214,7 @@ export const KanaSelector: React.FC<KanaSelectorProps> = ({ onStartQuiz }) => {
           <button
             type="button"
             onClick={() => setScriptType('katakana')}
-            className={`px-4 py-2 rounded-md text-xs font-semibold transition cursor-pointer flex items-center gap-2 ${
+            className={`flex-1 sm:flex-initial min-h-[40px] px-4 py-2 rounded-lg text-xs font-semibold transition cursor-pointer flex items-center justify-center gap-2 ${
               scriptType === 'katakana'
                 ? 'bg-white dark:bg-[#27272a] text-[#1e3a8a] dark:text-[#3b82f6] shadow-xs border border-[#d6d3d1] dark:border-[#3f3f46]'
                 : 'text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
@@ -263,22 +263,22 @@ export const KanaSelector: React.FC<KanaSelectorProps> = ({ onStartQuiz }) => {
           </div>
         </div>
 
-        {/* Quick Presets Buttons with Active State Indicators */}
-        <div className="flex flex-wrap items-center gap-2">
-          <span className="text-[10px] font-mono uppercase text-[#78716c] dark:text-[#a1a1aa] mr-1">Preset:</span>
+        {/* Quick Presets Buttons (Scrollable chips on mobile, clean layout) */}
+        <div className="flex items-center gap-1.5 overflow-x-auto pb-1 no-scrollbar -mx-1 px-1">
+          <span className="text-[10px] font-mono uppercase text-[#78716c] dark:text-[#a1a1aa] mr-1 shrink-0">Preset:</span>
           
           {/* Preset: Dasar 46 Keduanya */}
           <button
             type="button"
             onClick={() => togglePresetItems(gojuuonBothItems)}
-            className={`px-2.5 py-1 rounded text-xs transition cursor-pointer flex items-center gap-1.5 border ${
+            className={`min-h-[36px] px-3 py-1.5 rounded-lg text-xs transition cursor-pointer flex items-center gap-1.5 border shrink-0 ${
               isGojuuonBothActive
-                ? 'bg-[#c84b31]/10 dark:bg-[#e05d44]/15 border-[#c84b31] dark:border-[#e05d44] text-[#c84b31] dark:text-[#e05d44] font-bold shadow-xs ring-1 ring-[#c84b31]/20'
+                ? 'bg-[#c84b31]/10 dark:bg-[#e05d44]/15 border-[#c84b31] dark:border-[#e05d44] text-[#c84b31] dark:text-[#e05d44] font-bold shadow-xs'
                 : 'bg-[#faf8f5] dark:bg-[#18181b] hover:bg-[#e7e5e4] dark:hover:bg-[#27272a] border-[#e7e5e4] dark:border-[#27272a] text-[#1c1917] dark:text-[#f4f4f5]'
             }`}
             title={isGojuuonBothActive ? 'Klik untuk membatalkan pilihan Dasar 46' : 'Klik untuk memilih Dasar 46'}
           >
-            <span className="font-mono text-[10px]">{isGojuuonBothActive ? '✓' : '+'}</span>
+            <span className="font-mono text-[10px] font-bold">{isGojuuonBothActive ? '✓' : '+'}</span>
             <span>Dasar 46 Keduanya</span>
           </button>
 
@@ -286,14 +286,14 @@ export const KanaSelector: React.FC<KanaSelectorProps> = ({ onStartQuiz }) => {
           <button
             type="button"
             onClick={() => togglePresetItems(hiraganaAllItems)}
-            className={`px-2.5 py-1 rounded text-xs transition cursor-pointer flex items-center gap-1.5 border ${
+            className={`min-h-[36px] px-3 py-1.5 rounded-lg text-xs transition cursor-pointer flex items-center gap-1.5 border shrink-0 ${
               isHiraganaAllActive
-                ? 'bg-[#c84b31]/10 dark:bg-[#e05d44]/15 border-[#c84b31] dark:border-[#e05d44] text-[#c84b31] dark:text-[#e05d44] font-bold shadow-xs ring-1 ring-[#c84b31]/20'
+                ? 'bg-[#c84b31]/10 dark:bg-[#e05d44]/15 border-[#c84b31] dark:border-[#e05d44] text-[#c84b31] dark:text-[#e05d44] font-bold shadow-xs'
                 : 'bg-[#faf8f5] dark:bg-[#18181b] hover:bg-[#e7e5e4] dark:hover:bg-[#27272a] border-[#e7e5e4] dark:border-[#27272a] text-[#1c1917] dark:text-[#f4f4f5]'
             }`}
             title={isHiraganaAllActive ? 'Klik untuk membatalkan semua Hiragana' : 'Klik untuk memilih semua Hiragana'}
           >
-            <span className="font-mono text-[10px]">{isHiraganaAllActive ? '✓' : '+'}</span>
+            <span className="font-mono text-[10px] font-bold">{isHiraganaAllActive ? '✓' : '+'}</span>
             <span>Semua Hiragana</span>
           </button>
 
@@ -301,14 +301,14 @@ export const KanaSelector: React.FC<KanaSelectorProps> = ({ onStartQuiz }) => {
           <button
             type="button"
             onClick={() => togglePresetItems(katakanaAllItems)}
-            className={`px-2.5 py-1 rounded text-xs transition cursor-pointer flex items-center gap-1.5 border ${
+            className={`min-h-[36px] px-3 py-1.5 rounded-lg text-xs transition cursor-pointer flex items-center gap-1.5 border shrink-0 ${
               isKatakanaAllActive
-                ? 'bg-[#1e3a8a]/10 dark:bg-[#3b82f6]/15 border-[#1e3a8a] dark:border-[#3b82f6] text-[#1e3a8a] dark:text-[#3b82f6] font-bold shadow-xs ring-1 ring-[#1e3a8a]/20'
+                ? 'bg-[#1e3a8a]/10 dark:bg-[#3b82f6]/15 border-[#1e3a8a] dark:border-[#3b82f6] text-[#1e3a8a] dark:text-[#3b82f6] font-bold shadow-xs'
                 : 'bg-[#faf8f5] dark:bg-[#18181b] hover:bg-[#e7e5e4] dark:hover:bg-[#27272a] border-[#e7e5e4] dark:border-[#27272a] text-[#1c1917] dark:text-[#f4f4f5]'
             }`}
             title={isKatakanaAllActive ? 'Klik untuk membatalkan semua Katakana' : 'Klik untuk memilih semua Katakana'}
           >
-            <span className="font-mono text-[10px]">{isKatakanaAllActive ? '✓' : '+'}</span>
+            <span className="font-mono text-[10px] font-bold">{isKatakanaAllActive ? '✓' : '+'}</span>
             <span>Semua Katakana</span>
           </button>
 
@@ -316,22 +316,22 @@ export const KanaSelector: React.FC<KanaSelectorProps> = ({ onStartQuiz }) => {
           <button
             type="button"
             onClick={() => togglePresetItems(allItemsList)}
-            className={`px-2.5 py-1 rounded text-xs transition cursor-pointer flex items-center gap-1.5 border ${
+            className={`min-h-[36px] px-3 py-1.5 rounded-lg text-xs transition cursor-pointer flex items-center gap-1.5 border shrink-0 ${
               isAllActive
                 ? 'bg-[#1c1917] dark:bg-[#f4f4f5] border-[#1c1917] dark:border-[#f4f4f5] text-white dark:text-[#18181b] font-bold shadow-xs'
                 : 'bg-[#faf8f5] dark:bg-[#18181b] hover:bg-[#e7e5e4] dark:hover:bg-[#27272a] border-[#e7e5e4] dark:border-[#27272a] text-[#1c1917] dark:text-[#f4f4f5]'
             }`}
             title={isAllActive ? 'Klik untuk membatalkan seluruh pilihan' : 'Klik untuk memilih seluruh Hiragana & Katakana'}
           >
-            <span className="font-mono text-[10px]">{isAllActive ? '✓' : '+'}</span>
-            <span>Pilih Seluruhnya (Hira + Kata)</span>
+            <span className="font-mono text-[10px] font-bold">{isAllActive ? '✓' : '+'}</span>
+            <span>Semua (Hira + Kata)</span>
           </button>
 
           {/* Reset button */}
           <button
             type="button"
             onClick={() => selectPreset('clear')}
-            className="px-2.5 py-1 rounded bg-transparent hover:bg-rose-500/10 border border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] hover:text-rose-600 text-xs transition cursor-pointer flex items-center gap-1 ml-auto"
+            className="min-h-[36px] px-3 py-1.5 rounded-lg bg-transparent hover:bg-rose-500/10 border border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] hover:text-rose-600 text-xs transition cursor-pointer flex items-center gap-1 shrink-0 ml-auto"
             title="Kosongkan semua pilihan"
           >
             <RotateCcw className="w-3 h-3" />
@@ -586,65 +586,101 @@ export const KanaSelector: React.FC<KanaSelectorProps> = ({ onStartQuiz }) => {
         </div>
       )}
 
-      {/* Sticky Bottom Action Dock (Offset on mobile so it doesn't collide with fixed navbar) */}
-      <div className="sticky bottom-14 md:bottom-0 bg-[#faf8f5]/95 dark:bg-[#18181b]/95 backdrop-blur-md border-t border-[#e7e5e4] dark:border-[#27272a] p-3 sm:p-4 z-20 mt-8 shadow-lg transition-colors">
-        <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-lg bg-white dark:bg-[#1f1f23] border border-[#d6d3d1] dark:border-[#3f3f46] flex items-center justify-center font-mono font-bold text-[#c84b31] dark:text-[#e05d44]">
-              {selectedTotal}
-            </div>
-            <div>
-              <div className="text-sm font-semibold text-[#1c1917] dark:text-[#f4f4f5]">
-                {selectedTotal > 0 ? `${selectedTotal} Karakter Dipilih` : 'Belum Ada Huruf Terpilih'}
+      {/* Sticky Bottom Action Dock (Clean Ergonomic Floating Card) */}
+      <div className="sticky bottom-16 md:bottom-2 z-20 mt-8 transition-all">
+        <div className="max-w-4xl mx-auto px-2 sm:px-4">
+          <div className="bg-[#faf8f5]/95 dark:bg-[#18181b]/95 backdrop-blur-md border border-[#e7e5e4] dark:border-[#27272a] p-3.5 sm:p-4 rounded-2xl shadow-xl transition-colors">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 sm:gap-4">
+              
+              {/* Left: Selected Counter & State Info */}
+              <div className="flex items-center justify-between sm:justify-start gap-3">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-white dark:bg-[#1f1f23] border border-[#d6d3d1] dark:border-[#3f3f46] flex items-center justify-center font-mono font-bold text-[#c84b31] dark:text-[#e05d44] shadow-xs shrink-0">
+                    {selectedTotal}
+                  </div>
+                  <div>
+                    <div className="text-sm font-bold text-[#1c1917] dark:text-[#f4f4f5] leading-tight">
+                      {selectedTotal > 0 ? `${selectedTotal} Karakter Terpilih` : 'Belum Ada Karakter'}
+                    </div>
+                    <div className="text-[11px] text-[#78716c] dark:text-[#a1a1aa] leading-tight mt-0.5">
+                      {selectedTotal === 0 ? 'Pilih minimal 1 huruf' : 'Siap untuk uji memori'}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Mobile-only compact mode toggle */}
+                <div className="sm:hidden flex items-center gap-1 bg-[#f4f0e8] dark:bg-[#27272a] p-0.5 rounded-lg border border-[#e7e5e4] dark:border-[#3f3f46] text-xs">
+                  <button
+                    type="button"
+                    onClick={() => setRequeueMistakes(true)}
+                    className={`px-2 py-1 rounded-md text-[11px] font-medium transition cursor-pointer ${
+                      requeueMistakes
+                        ? 'bg-[#c84b31] text-white font-bold shadow-xs'
+                        : 'text-[#78716c] dark:text-[#a1a1aa]'
+                    }`}
+                  >
+                    Ulangi
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setRequeueMistakes(false)}
+                    className={`px-2 py-1 rounded-md text-[11px] font-medium transition cursor-pointer ${
+                      !requeueMistakes
+                        ? 'bg-[#1c1917] dark:bg-[#f4f4f5] text-white dark:text-[#18181b] font-bold shadow-xs'
+                        : 'text-[#78716c] dark:text-[#a1a1aa]'
+                    }`}
+                  >
+                    1x
+                  </button>
+                </div>
               </div>
-              <div className="text-xs text-[#78716c] dark:text-[#a1a1aa]">
-                {selectedTotal === 0 ? 'Pilih minimal 1 huruf untuk memulai' : 'Siap untuk sesi kuis'}
+
+              {/* Right: Controls & CTA Action */}
+              <div className="flex items-center gap-2 sm:gap-3">
+                {/* Desktop mode switchers */}
+                <div className="hidden sm:flex items-center gap-1 bg-white dark:bg-[#1f1f23] p-1 rounded-xl border border-[#e7e5e4] dark:border-[#27272a] text-xs shadow-xs">
+                  <button
+                    type="button"
+                    onClick={() => setRequeueMistakes(true)}
+                    className={`px-3 py-1.5 rounded-lg font-medium transition cursor-pointer ${
+                      requeueMistakes
+                        ? 'bg-[#c84b31] text-white font-bold shadow-xs'
+                        : 'text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
+                    }`}
+                  >
+                    Ulangi Salah
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setRequeueMistakes(false)}
+                    className={`px-3 py-1.5 rounded-lg font-medium transition cursor-pointer ${
+                      !requeueMistakes
+                        ? 'bg-[#1c1917] dark:bg-[#f4f4f5] text-white dark:text-[#18181b] font-bold shadow-xs'
+                        : 'text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
+                    }`}
+                  >
+                    1x Putaran
+                  </button>
+                </div>
+
+                {/* Primary CTA (Full width on mobile, sleek, thumb-friendly min 46px) */}
+                <button
+                  type="button"
+                  onClick={handleStart}
+                  disabled={selectedTotal === 0}
+                  className={`w-full sm:w-auto min-h-[46px] px-6 py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition cursor-pointer shadow-xs active:scale-[0.98] ${
+                    selectedTotal > 0
+                      ? 'bg-[#c84b31] hover:bg-[#b03d25] text-white'
+                      : 'bg-[#e7e5e4] dark:bg-[#27272a] text-[#a8a29e] dark:text-[#71717a] cursor-not-allowed'
+                  }`}
+                >
+                  <Play className="w-3.5 h-3.5 fill-current" />
+                  <span>Mulai Sesi Kuis</span>
+                </button>
               </div>
+
             </div>
           </div>
-
-          {/* Mode Switchers */}
-          <div className="flex flex-wrap items-center gap-2">
-
-            <div className="flex items-center gap-1 bg-white dark:bg-[#1f1f23] p-1 rounded-lg border border-[#e7e5e4] dark:border-[#27272a] text-xs">
-              <button
-                type="button"
-                onClick={() => setRequeueMistakes(true)}
-                className={`px-3 py-1.5 rounded-md font-medium transition cursor-pointer ${
-                  requeueMistakes
-                    ? 'bg-[#c84b31] text-white font-bold shadow-xs'
-                    : 'text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
-                }`}
-              >
-                Ulangi Salah
-              </button>
-              <button
-                type="button"
-                onClick={() => setRequeueMistakes(false)}
-                className={`px-3 py-1.5 rounded-md font-medium transition cursor-pointer ${
-                  !requeueMistakes
-                    ? 'bg-[#1c1917] dark:bg-[#f4f4f5] text-white dark:text-[#18181b] font-bold shadow-xs'
-                    : 'text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
-                }`}
-              >
-                1x Putaran
-              </button>
-            </div>
-          </div>
-
-          <button
-            type="button"
-            onClick={handleStart}
-            disabled={selectedTotal === 0}
-            className={`px-6 py-2.5 rounded-lg font-semibold text-xs uppercase tracking-wider flex items-center gap-2 transition cursor-pointer ${
-              selectedTotal > 0
-                ? 'bg-[#c84b31] hover:bg-[#b03d25] text-white shadow-xs active:translate-y-px'
-                : 'bg-[#e7e5e4] dark:bg-[#27272a] text-[#a8a29e] dark:text-[#71717a] cursor-not-allowed'
-            }`}
-          >
-            <Play className="w-3.5 h-3.5 fill-current" />
-            <span>Mulai Sesi Kuis</span>
-          </button>
         </div>
       </div>
     </div>

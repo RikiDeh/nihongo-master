@@ -184,9 +184,9 @@ export function App() {
           </Suspense>
         </main>
 
-        {/* Minimal Editorial Footer */}
+        {/* Minimal Editorial Footer (Added pb-20 on mobile so floating bottom bar never covers it) */}
         {!isFullFocusMode && (
-          <footer className="border-t border-[#e7e5e4] dark:border-[#27272a] bg-[#faf8f5]/90 dark:bg-[#18181b]/90 py-5 text-center text-xs text-[#78716c] dark:text-[#a1a1aa] mt-auto">
+          <footer className="border-t border-[#e7e5e4] dark:border-[#27272a] bg-[#faf8f5]/90 dark:bg-[#18181b]/90 py-5 pb-24 md:pb-5 text-center text-xs text-[#78716c] dark:text-[#a1a1aa] mt-auto">
             <div className="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
               <div className="flex items-center gap-2">
                 <span className="font-jp font-bold text-[#1c1917] dark:text-[#f4f4f5]">日本語マスター</span>
