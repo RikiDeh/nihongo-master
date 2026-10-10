@@ -4,6 +4,7 @@ import {
   recordSrsReviewResult, 
   getDueSrsItems, 
   getSrsOverviewStats,
+  seedInitialSrsItems,
   SRS_INTERVAL_HOURS 
 } from '../src/utils/srsEngine';
 import { 
@@ -209,6 +210,23 @@ describe('SRS Spaced-Repetition Core Engine & Daily Habit Tracker (SPK #21)', ()
       expect(progress.dailyStreak).toBe(1);
       expect(progress.dailyCardsCompleted).toBe(1);
       expect(progress.lastActiveDate).toBe('2026-10-05');
+    });
+
+    it('mendukung seedInitialSrsItems dan memperbarui progress misi harian SRS', () => {
+      const itemsToSeed = [
+        { id: 'vocab-1', itemType: 'vocab' as const, level: 'N5' as const },
+        { id: 'vocab-2', itemType: 'vocab' as const, level: 'N5' as const },
+      ];
+
+      const seeded = seedInitialSrsItems(itemsToSeed);
+      expect(seeded.length).toBe(2);
+      expect(seeded[0].stage).toBe(1);
+      expect(seeded[0].nextReviewTimestamp).toBeLessThanOrEqual(Date.now());
+
+      // Review kartu pertama
+      recordSrsReviewResult('vocab-1', true);
+      const afterReview = getUserProgress();
+      expect(afterReview.dailyMissionsState?.srsReviewedCount).toBe(1);
     });
   });
 });

@@ -1,5 +1,5 @@
 import { SrsStage, SrsItemRecord, JLPTLevel } from '../types';
-import { getUserProgress, saveUserProgress, evaluateDailyStreak } from './storage';
+import { getUserProgress, saveUserProgress, evaluateDailyStreak, reportMissionActivity } from './storage';
 
 /**
  * Durasi interval peninjauan SRS dalam hitungan jam
@@ -134,10 +134,56 @@ export function recordSrsReviewResult(
     },
   });
 
-  // Perbarui habit streak belajar harian
+  // Perbarui habit streak belajar harian & target harian
   evaluateDailyStreak();
+  reportMissionActivity('srs', 1);
 
   return updatedRecord;
+}
+
+/**
+ * Mendaftarkan kumpulan materi awal (misal 10 kosakata N5) untuk langsung dipelajari di SRS.
+ * Jatuh tempo diset ke waktu sekarang agar dapat langsung diulas.
+ */
+export function seedInitialSrsItems(
+  itemsToSeed: Array<{ id: string; itemType: 'kanji' | 'vocab' | 'grammar'; level: JLPTLevel }>
+): SrsItemRecord[] {
+  const data = getUserProgress();
+  const records = { ...data.srsRecords };
+  const seeded: SrsItemRecord[] = [];
+  const now = Date.now();
+
+  for (const item of itemsToSeed) {
+    if (!records[item.id]) {
+      const newRec: SrsItemRecord = {
+        id: item.id,
+        itemType: item.itemType,
+        level: item.level,
+        stage: 1,
+        nextReviewTimestamp: now,
+        lastReviewedTimestamp: now,
+        streak: 0,
+        failCount: 0,
+      };
+      records[item.id] = newRec;
+      seeded.push(newRec);
+    }
+  }
+
+  saveUserProgress({
+    ...data,
+    srsRecords: records,
+  });
+
+  return seeded;
+}
+
+/**
+ * Mengambil semua kartu SRS aktif (stage 1 s/d 6)
+ */
+export function getAllActiveSrsItems(): SrsItemRecord[] {
+  const data = getUserProgress();
+  return Object.values(data.srsRecords).filter(item => item.stage > 0 && item.stage < 7);
 }
 
 /**

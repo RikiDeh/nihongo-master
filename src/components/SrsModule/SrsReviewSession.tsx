@@ -4,6 +4,8 @@ import {
   getDueSrsItems, 
   recordSrsReviewResult, 
   getSrsOverviewStats,
+  seedInitialSrsItems,
+  getAllActiveSrsItems,
   SRS_INTERVAL_HOURS 
 } from '../../utils/srsEngine';
 import { getUserProgress } from '../../utils/storage';
@@ -105,7 +107,7 @@ function resolveSrsItem(record: SrsItemRecord): ResolvedItem {
 }
 
 export const SrsReviewSession: React.FC<SrsReviewSessionProps> = ({ onClose }) => {
-  const [dueRecords] = useState<SrsItemRecord[]>(() => getDueSrsItems());
+  const [dueRecords, setDueRecords] = useState<SrsItemRecord[]>(() => getDueSrsItems());
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isRevealed, setIsRevealed] = useState(false);
   const [isCompleted, setIsCompleted] = useState<boolean>(() => dueRecords.length === 0);
@@ -120,6 +122,38 @@ export const SrsReviewSession: React.FC<SrsReviewSessionProps> = ({ onClose }) =
     newStage: number;
     isLeech: boolean;
   }[]>([]);
+
+  // Mendaftarkan 10 materi baru N5 ke antrean SRS dan langsung memulai ulasan
+  const handleSeedNewItems = () => {
+    const existingIds = new Set(Object.keys(getUserProgress().srsRecords));
+    const unseededVocab = VOCAB_DATA.filter(v => v.level === 'N5' && !existingIds.has(v.id)).slice(0, 10);
+    
+    let seeded: SrsItemRecord[] = [];
+    if (unseededVocab.length > 0) {
+      seeded = seedInitialSrsItems(unseededVocab.map(v => ({ id: v.id, itemType: 'vocab', level: 'N5' })));
+    } else {
+      const unseededKanji = KANJI_DATA.filter(k => k.level === 'N5' && !existingIds.has(k.id)).slice(0, 10);
+      seeded = seedInitialSrsItems(unseededKanji.map(k => ({ id: k.id, itemType: 'kanji', level: 'N5' })));
+    }
+
+    if (seeded.length > 0) {
+      setDueRecords(seeded);
+      setCurrentIndex(0);
+      setIsCompleted(false);
+      setIsRevealed(false);
+    }
+  };
+
+  // Memulai review kilat seluruh kartu aktif tanpa menunggu timer
+  const handleReviewAllActive = () => {
+    const all = getAllActiveSrsItems();
+    if (all.length > 0) {
+      setDueRecords(all);
+      setCurrentIndex(0);
+      setIsCompleted(false);
+      setIsRevealed(false);
+    }
+  };
 
   const currentRecord = dueRecords[currentIndex];
   const resolvedItem = currentRecord ? resolveSrsItem(currentRecord) : null;
@@ -239,47 +273,134 @@ export const SrsReviewSession: React.FC<SrsReviewSessionProps> = ({ onClose }) =
           {isCompleted ? (
             /* Results & Overview View */
             <div className="space-y-6 text-center py-4">
-              <div className="inline-flex p-4 rounded-xl bg-[#2e7d32]/10 border border-[#2e7d32]/20 text-[#2e7d32] mb-2">
-                <CheckCircle2 className="w-10 h-10" />
-              </div>
-
-              <div>
-                <h3 className="text-xl sm:text-2xl font-bold font-jp text-[#1c1917] dark:text-[#f4f4f5]">
-                  Semua Review Hari Ini Tuntas!
-                </h3>
-                <p className="text-sm text-[#78716c] dark:text-[#a1a1aa] mt-1 font-sans">
-                  Kartu memori Anda telah diperbarui ke jadwal pengulangan optimal berikutnya.
-                </p>
-              </div>
-
-              {/* Session Summary Numbers */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-lg mx-auto">
-                <div className="p-3 rounded-lg bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a]">
-                  <div className="text-xl font-bold font-mono text-[#1c1917] dark:text-[#f4f4f5]">{sessionResults.length}</div>
-                  <div className="text-[11px] text-[#78716c] dark:text-[#a1a1aa] font-medium font-sans">Ditinjau Hari Ini</div>
-                </div>
-
-                <div className="p-3 rounded-lg bg-[#2e7d32]/5 border border-[#2e7d32]/20">
-                  <div className="text-xl font-bold font-mono text-[#2e7d32]">
-                    {sessionResults.filter(r => r.isSuccess).length}
+              {sessionResults.length === 0 ? (
+                /* Empty state: No reviews done yet in this session */
+                stats.totalLearned === 0 ? (
+                  <div className="p-6 rounded-2xl bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] text-center max-w-lg mx-auto shadow-xs">
+                    <div className="w-14 h-14 rounded-2xl bg-[#c84b31]/10 text-[#c84b31] dark:text-[#e05d44] mx-auto flex items-center justify-center mb-4">
+                      <Flame className="w-8 h-8 fill-current" />
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold font-sans text-[#1c1917] dark:text-[#f4f4f5] mb-2">
+                      Pusat Memori SRS (Spaced Repetition)
+                    </h3>
+                    <p className="text-xs text-[#78716c] dark:text-[#a1a1aa] leading-relaxed mb-4">
+                      SRS adalah metode pengulangan berjarak ilmiah (seperti sistem WaniKani & Anki) untuk mengunci kosakata dan kanji ke memori jangka panjang agar tidak mudah lupa.
+                    </p>
+                    <div className="p-3.5 rounded-xl bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a] text-left text-xs text-[#78716c] dark:text-[#a1a1aa] mb-5 space-y-1.5 font-mono">
+                      <div className="flex items-center gap-2">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#c84b31]" />
+                        <span>Stage 1 (Pemula): Ulasan 4 jam & 8 jam</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#2e7d32]" />
+                        <span>Stage 3-4 (Guru): Ulasan 1 hari & 3 hari</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#1e3a8a]" />
+                        <span>Stage 5-7 (Burned): Ulasan mingguan hingga permanen</span>
+                      </div>
+                    </div>
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+                      <button
+                        type="button"
+                        onClick={handleSeedNewItems}
+                        className="w-full sm:w-auto px-6 py-3 rounded-xl bg-[#c84b31] hover:bg-[#b03f27] text-white font-bold text-xs uppercase tracking-wider shadow-sm transition cursor-pointer flex items-center justify-center gap-2 active:scale-98"
+                      >
+                        <Flame className="w-4 h-4 fill-current" />
+                        <span>Mulai Belajar 10 Kosakata N5 (+10 Kartu)</span>
+                      </button>
+                      <button
+                        type="button"
+                        onClick={onClose}
+                        className="w-full sm:w-auto px-5 py-3 rounded-xl border border-[#e7e5e4] dark:border-[#27272a] text-xs font-mono text-[#78716c] dark:text-[#a1a1aa] hover:bg-black/5 dark:hover:bg-white/5 transition cursor-pointer"
+                      >
+                        Tutup
+                      </button>
+                    </div>
                   </div>
-                  <div className="text-[11px] text-[#2e7d32] font-medium font-sans">Naik Stage</div>
-                </div>
-
-                <div className="p-3 rounded-lg bg-[#c84b31]/5 border border-[#c84b31]/20">
-                  <div className="text-xl font-bold font-mono text-[#c84b31]">
-                    {sessionResults.filter(r => !r.isSuccess).length}
+                ) : (
+                  <div className="p-6 rounded-2xl bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] text-center max-w-lg mx-auto shadow-xs">
+                    <div className="w-14 h-14 rounded-2xl bg-emerald-50 dark:bg-emerald-950/30 text-emerald-600 dark:text-emerald-400 mx-auto flex items-center justify-center mb-4">
+                      <CheckCircle2 className="w-8 h-8" />
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold font-sans text-[#1c1917] dark:text-[#f4f4f5] mb-2">
+                      Belum Ada Kartu Jatuh Tempo!
+                    </h3>
+                    <p className="text-xs text-[#78716c] dark:text-[#a1a1aa] leading-relaxed mb-5">
+                      Seluruh <strong>{stats.totalLearned} kartu</strong> yang terdaftar saat ini masih dalam interval ingatan aman. Kamu bisa menambah kosakata baru untuk dipelajari atau review kilat seluruh kartumu.
+                    </p>
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-2.5">
+                      <button
+                        type="button"
+                        onClick={handleSeedNewItems}
+                        className="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-[#c84b31] hover:bg-[#b03f27] text-white font-bold text-xs uppercase tracking-wider shadow-sm transition cursor-pointer flex items-center justify-center gap-2"
+                      >
+                        <Flame className="w-4 h-4 fill-current" />
+                        <span>Tambah 10 Materi Baru</span>
+                      </button>
+                      <button
+                        type="button"
+                        onClick={handleReviewAllActive}
+                        className="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-white dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a] text-[#1c1917] dark:text-[#f4f4f5] hover:border-[#1c1917] font-semibold text-xs transition cursor-pointer"
+                      >
+                        Review Kilat ({stats.totalLearned} Kartu)
+                      </button>
+                      <button
+                        type="button"
+                        onClick={onClose}
+                        className="w-full sm:w-auto px-4 py-2.5 rounded-xl border border-[#e7e5e4] dark:border-[#27272a] text-xs font-mono text-[#78716c] dark:text-[#a1a1aa] hover:bg-black/5 dark:hover:bg-white/5 transition cursor-pointer"
+                      >
+                        Tutup
+                      </button>
+                    </div>
                   </div>
-                  <div className="text-[11px] text-[#c84b31] font-medium font-sans">Turun / Remedial</div>
-                </div>
-
-                <div className="p-3 rounded-lg bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a]">
-                  <div className="text-xl font-bold font-mono text-[#c84b31]">
-                    {userProgress.dailyStreak} d
+                )
+              ) : (
+                /* Completed after review session */
+                <>
+                  <div className="inline-flex p-4 rounded-xl bg-[#2e7d32]/10 border border-[#2e7d32]/20 text-[#2e7d32] mb-2">
+                    <CheckCircle2 className="w-10 h-10" />
                   </div>
-                  <div className="text-[11px] text-[#78716c] dark:text-[#a1a1aa] font-medium font-sans">Daily Streak</div>
-                </div>
-              </div>
+
+                  <div>
+                    <h3 className="text-xl sm:text-2xl font-bold font-jp text-[#1c1917] dark:text-[#f4f4f5]">
+                      Semua Review Hari Ini Tuntas!
+                    </h3>
+                    <p className="text-sm text-[#78716c] dark:text-[#a1a1aa] mt-1 font-sans">
+                      Kartu memori Anda telah diperbarui ke jadwal pengulangan optimal berikutnya.
+                    </p>
+                  </div>
+
+                  {/* Session Summary Numbers */}
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-lg mx-auto">
+                    <div className="p-3 rounded-lg bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a]">
+                      <div className="text-xl font-bold font-mono text-[#1c1917] dark:text-[#f4f4f5]">{sessionResults.length}</div>
+                      <div className="text-[11px] text-[#78716c] dark:text-[#a1a1aa] font-medium font-sans">Ditinjau Hari Ini</div>
+                    </div>
+
+                    <div className="p-3 rounded-lg bg-[#2e7d32]/5 border border-[#2e7d32]/20">
+                      <div className="text-xl font-bold font-mono text-[#2e7d32]">
+                        {sessionResults.filter(r => r.isSuccess).length}
+                      </div>
+                      <div className="text-[11px] text-[#2e7d32] font-medium font-sans">Naik Stage</div>
+                    </div>
+
+                    <div className="p-3 rounded-lg bg-[#c84b31]/5 border border-[#c84b31]/20">
+                      <div className="text-xl font-bold font-mono text-[#c84b31]">
+                        {sessionResults.filter(r => !r.isSuccess).length}
+                      </div>
+                      <div className="text-[11px] text-[#c84b31] font-medium font-sans">Turun / Remedial</div>
+                    </div>
+
+                    <div className="p-3 rounded-lg bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a]">
+                      <div className="text-xl font-bold font-mono text-[#c84b31]">
+                        {userProgress.dailyStreak} d
+                      </div>
+                      <div className="text-[11px] text-[#78716c] dark:text-[#a1a1aa] font-medium font-sans">Daily Streak</div>
+                    </div>
+                  </div>
+                </>
+              )}
 
               {/* Overall SRS Mastery Distribution */}
               <div className="p-4 rounded-xl bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] text-left max-w-lg mx-auto">
@@ -362,14 +483,25 @@ export const SrsReviewSession: React.FC<SrsReviewSessionProps> = ({ onClose }) =
                 </div>
               )}
 
-              <div className="pt-2">
-                <button
-                  onClick={onClose}
-                  className="px-6 py-2.5 rounded-lg bg-[#c84b31] hover:bg-[#b03f27] text-white font-bold text-sm shadow-xs transition cursor-pointer"
-                >
-                  Tutup & Kembali Belajar
-                </button>
-              </div>
+              {sessionResults.length > 0 && (
+                <div className="pt-2 flex flex-wrap items-center justify-center gap-3">
+                  <button
+                    type="button"
+                    onClick={handleSeedNewItems}
+                    className="px-5 py-2.5 rounded-xl bg-[#c84b31] hover:bg-[#b03f27] text-white font-bold text-xs uppercase tracking-wider shadow-xs transition cursor-pointer flex items-center gap-2"
+                  >
+                    <Flame className="w-4 h-4 fill-current" />
+                    <span>Pelajari 10 Materi Baru (+10 Kartu)</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={onClose}
+                    className="px-5 py-2.5 rounded-xl bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] text-[#1c1917] dark:text-[#f4f4f5] font-semibold text-xs uppercase tracking-wider transition cursor-pointer"
+                  >
+                    Tutup & Kembali Belajar
+                  </button>
+                </div>
+              )}
             </div>
           ) : resolvedItem ? (
             /* Active SRS Card Flashcard View */

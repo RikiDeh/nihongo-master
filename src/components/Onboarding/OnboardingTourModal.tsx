@@ -49,11 +49,10 @@ const TOUR_STEPS: TourStep[] = [
     badge: 'FONDASI AKSARA',
     description: 'Menu ini berisi Matriks 50 Bunyi (Gojūon), Dakuten, dan Yoon. Di mobile, kamu akan melihat tampilan kartu 5-kolom yang pas di layar ponsel tanpa slider geser yang merepotkan.',
     actionHint: 'Klik tab Kana untuk melihat tabel huruf dan mulai latihan refleks membaca.',
-    moduleToActivate: 'kana',
     tip: 'Di desktop, kamu bisa gunakan tombol angka 1–4 di keyboard saat sesi kuis berlangsung.',
   },
   {
-    targetIdDesktop: 'tour-header-romaji',
+    targetIdDesktop: 'tour-desktop-romaji',
     targetIdMobile: 'tour-header-romaji',
     title: '3. Tombol Bantuan Romaji [Aa / あ]',
     badge: 'BANTUAN CEPAT',
@@ -62,7 +61,7 @@ const TOUR_STEPS: TourStep[] = [
     tip: 'Tersedia di bilah header atas mobile dan di bagian bawah sidebar desktop.',
   },
   {
-    targetIdDesktop: 'tour-header-srs',
+    targetIdDesktop: 'tour-desktop-srs',
     targetIdMobile: 'tour-header-srs',
     title: '4. Indikator SRS & Habit Api (🔥)',
     badge: 'SISTEM ANTI-LUPA',
@@ -77,7 +76,6 @@ const TOUR_STEPS: TourStep[] = [
     badge: 'DRILL REFLEKS',
     description: 'Pusat latihan intensif yang mencakup Dojo Konjugasi (perubahan bentuk Te, Masu, Nai, Ta, Potensial, Pasif) serta Simulasi Ujian JLPT berwaktu lengkap dengan pembahasan.',
     actionHint: 'Pilih menu ini saat kamu ingin menguji pemahaman dan kecepatan refleks tata bahasa.',
-    moduleToActivate: 'dojo',
     tip: 'Jika ada soal yang salah, gunakan fitur Ghost Engine untuk melatih kembali hanya soal-soal yang salah.',
   },
   {
@@ -87,7 +85,6 @@ const TOUR_STEPS: TourStep[] = [
     badge: 'KAMUS PINTAR',
     description: 'Akses ke 2.167 Joyō Kanji dan 9.177 Kosakata berkalimat contoh. Di mobile, mengetuk kartu kanji/kosakata akan langsung memunculkan drawer lembar detail dari bawah layar tanpa perlu scroll ke bawah.',
     actionHint: 'Klik kartu kata atau kanji apa saja untuk melihat arti, pelafalan audio, dan contoh kalimatnya.',
-    moduleToActivate: 'kanji',
     tip: 'Gunakan fitur pencarian dan filter level (N5→N1) untuk mencari kosakata spesifik.',
   },
 ];
@@ -135,12 +132,14 @@ export const OnboardingTourModal: React.FC<InteractiveTourProps> = ({
       setTargetRect(null);
     };
 
-    const timer = setTimeout(updatePosition, 150);
+    const timer1 = setTimeout(updatePosition, 50);
+    const timer2 = setTimeout(updatePosition, 200);
     window.addEventListener('resize', updatePosition);
     window.addEventListener('scroll', updatePosition, true);
 
     return () => {
-      clearTimeout(timer);
+      clearTimeout(timer1);
+      clearTimeout(timer2);
       window.removeEventListener('resize', updatePosition);
       window.removeEventListener('scroll', updatePosition, true);
     };
@@ -159,6 +158,57 @@ export const OnboardingTourModal: React.FC<InteractiveTourProps> = ({
   const handlePrev = () => {
     if (!isFirst) {
       setCurrentStep(prev => prev - 1);
+    }
+  };
+
+  // Posisi adaptif kartu tour agar tidak menutupi elemen target di desktop
+  const getCardStyle = (): React.CSSProperties => {
+    if (typeof window === 'undefined') return {};
+    const isMobile = window.innerWidth < 640;
+
+    if (isMobile) {
+      return {};
+    }
+
+    if (!targetRect) {
+      return {
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        maxWidth: '28rem',
+      };
+    }
+
+    // Jika elemen target berada di Sidebar kiri (left < 320px)
+    if (targetRect.left < 320) {
+      const cardTop = Math.max(24, Math.min(window.innerHeight - 380, targetRect.top - 20));
+      const cardLeft = Math.min(window.innerWidth - 470, Math.max(280, targetRect.right + 28));
+      return {
+        top: `${cardTop}px`,
+        left: `${cardLeft}px`,
+        maxWidth: '28rem',
+      };
+    }
+
+    // Jika elemen target berada di Main Canvas tengah/kanan (seperti hero CTA)
+    const cardWidth = 440;
+    const cardHeight = 360;
+    const fitsBelow = targetRect.bottom + cardHeight + 24 <= window.innerHeight;
+    const cardLeft = Math.max(280, Math.min(window.innerWidth - cardWidth - 24, targetRect.left - 40));
+
+    if (fitsBelow) {
+      return {
+        top: `${targetRect.bottom + 16}px`,
+        left: `${cardLeft}px`,
+        maxWidth: '28rem',
+      };
+    } else {
+      const cardTop = Math.max(24, targetRect.top - cardHeight - 16);
+      return {
+        top: `${cardTop}px`,
+        left: `${cardLeft}px`,
+        maxWidth: '28rem',
+      };
     }
   };
 
@@ -189,8 +239,11 @@ export const OnboardingTourModal: React.FC<InteractiveTourProps> = ({
         </div>
       )}
 
-      {/* 3. Floating Interactive Guide Card (Centered on mobile, positioned smart) */}
-      <div className="fixed inset-x-4 bottom-24 sm:bottom-auto sm:top-1/2 sm:left-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2 sm:max-w-md z-[60] pointer-events-auto">
+      {/* 3. Floating Interactive Guide Card (Smart Adaptive Placement) */}
+      <div 
+        className="fixed inset-x-4 bottom-24 sm:inset-x-auto sm:bottom-auto z-[60] pointer-events-auto transition-all duration-300"
+        style={getCardStyle()}
+      >
         <div className="bg-[#faf8f5] dark:bg-[#18181b] border-2 border-[#c84b31]/40 dark:border-[#e05d44]/40 rounded-2xl p-5 sm:p-6 shadow-2xl relative text-left overflow-hidden animate-slideUp">
           {/* Glow ambient background accents */}
           <div className="absolute -top-16 -left-16 w-32 h-32 bg-[#c84b31]/15 rounded-full blur-2xl pointer-events-none" />

@@ -139,6 +139,7 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
               </div>
               {onOpenSrsReview && (
                 <button
+                  id="tour-desktop-srs"
                   type="button"
                   onClick={onOpenSrsReview}
                   className={`w-full py-1.5 px-2.5 rounded-md text-xs font-medium flex items-center justify-between transition cursor-pointer ${
@@ -159,6 +160,7 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
             <div className="p-2 flex justify-center mt-2">
               {onOpenSrsReview && (
                 <button
+                  id="tour-desktop-srs"
                   type="button"
                   onClick={onOpenSrsReview}
                   className={`p-2 rounded-lg border text-xs font-mono font-bold transition cursor-pointer ${
@@ -218,6 +220,7 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
           {/* Romaji toggle */}
           {!isCollapsed ? (
             <button
+              id="tour-desktop-romaji"
               type="button"
               onClick={toggleShowRomaji}
               className={`w-full py-2 px-3 rounded-lg border text-xs font-medium transition cursor-pointer flex items-center justify-between ${
@@ -231,6 +234,7 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
             </button>
           ) : (
             <button
+              id="tour-desktop-romaji"
               type="button"
               onClick={toggleShowRomaji}
               className="w-full p-2 rounded-lg border border-[#e7e5e4] dark:border-[#27272a] text-center text-xs font-mono font-bold"

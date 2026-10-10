@@ -15,6 +15,12 @@ import {
 
 interface KanaResultsProps {
   summary: QuizSummary;
+  stageEvaluation?: {
+    stage: { id: string; title: string; passingScore: number };
+    isPassed: boolean;
+    score: number;
+  } | null;
+  onReturnToRoadmap?: () => void;
   onRetryMissed: (missedItems: KanaItem[]) => void;
   onRetryAll: () => void;
   onBackToSelector: () => void;
@@ -23,6 +29,8 @@ interface KanaResultsProps {
 
 export const KanaResults: React.FC<KanaResultsProps> = ({
   summary,
+  stageEvaluation,
+  onReturnToRoadmap,
   onRetryMissed,
   onRetryAll,
   onBackToSelector,
@@ -56,6 +64,55 @@ export const KanaResults: React.FC<KanaResultsProps> = ({
 
   return (
     <div className="w-full max-w-4xl mx-auto px-4 py-8 pb-24">
+      {/* 0. Roadmap Stage Completion Banner (Jika diluncurkan dari Misi Peta Belajar) */}
+      {stageEvaluation && (
+        <div className={`mb-6 p-4 sm:p-5 rounded-2xl border shadow-xs flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 ${
+          stageEvaluation.isPassed
+            ? 'bg-emerald-50 dark:bg-emerald-950/30 border-emerald-500/40 text-emerald-950 dark:text-emerald-100'
+            : 'bg-rose-50 dark:bg-rose-950/30 border-rose-500/40 text-rose-950 dark:text-rose-100'
+        }`}>
+          <div className="flex items-center gap-3.5">
+            <div className={`w-12 h-12 rounded-xl flex items-center justify-center shrink-0 ${
+              stageEvaluation.isPassed
+                ? 'bg-emerald-100 dark:bg-emerald-900/50 text-emerald-600 dark:text-emerald-400'
+                : 'bg-rose-100 dark:bg-rose-900/50 text-rose-600 dark:text-rose-400'
+            }`}>
+              {stageEvaluation.isPassed ? <CheckCircle2 className="w-7 h-7" /> : <RotateCcw className="w-7 h-7" />}
+            </div>
+            <div>
+              <div className="flex items-center gap-2 mb-1">
+                <span className={`px-2 py-0.5 rounded text-[10px] font-mono font-bold uppercase tracking-wider ${
+                  stageEvaluation.isPassed
+                    ? 'bg-emerald-200/60 dark:bg-emerald-900/60 text-emerald-800 dark:text-emerald-300'
+                    : 'bg-rose-200/60 dark:bg-rose-900/60 text-rose-800 dark:text-rose-300'
+                }`}>
+                  {stageEvaluation.isPassed ? 'STAGE TUNTAS [合格]' : 'BELUM MEMENUHI SYARAT'}
+                </span>
+                <span className="text-xs font-mono font-semibold">
+                  {stageEvaluation.stage.title}
+                </span>
+              </div>
+              <p className="text-xs text-stone-600 dark:text-stone-300 leading-relaxed">
+                {stageEvaluation.isPassed
+                  ? `Lulus dengan nilai ${stageEvaluation.score}% (target minimal ${stageEvaluation.stage.passingScore}%). Progres peta belajar berhasil disimpan dan stage berikutnya terbuka!`
+                  : `Nilai kamu ${stageEvaluation.score}%, sedangkan target kelulusan minimal adalah ${stageEvaluation.stage.passingScore}%. Lakukan drill ulang untuk membuka misi berikutnya!`}
+              </p>
+            </div>
+          </div>
+
+          {stageEvaluation.isPassed && onReturnToRoadmap && (
+            <button
+              type="button"
+              onClick={onReturnToRoadmap}
+              className="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs uppercase tracking-wider transition shrink-0 flex items-center justify-center gap-2 cursor-pointer shadow-xs active:scale-98"
+            >
+              <span>Lanjut ke Peta Belajar</span>
+              <ArrowRight className="w-4 h-4" />
+            </button>
+          )}
+        </div>
+      )}
+
       {/* Header Result Card — Japanese Editorial Certificate */}
       <div className="bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] rounded-xl p-6 sm:p-8 text-center shadow-xs mb-8">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded border border-[#c84b31]/30 bg-[#c84b31]/5 text-[#c84b31] dark:text-[#e05d44] text-xs font-mono font-medium mb-3">

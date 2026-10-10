@@ -6,6 +6,8 @@ import { KanaResults } from './components/KanaQuiz/KanaResults';
 import { KanaItem, QuizSummary, JLPTLevel } from './types';
 import { SrsReviewSession } from './components/SrsModule/SrsReviewSession';
 import { OnboardingTourModal } from './components/Onboarding/OnboardingTourModal';
+import { RoadmapStage, ROADMAP_ARCS } from './data/roadmapData';
+import { completeRoadmapStage, reportMissionActivity } from './utils/storage';
 
 // Lazy-loaded components for optimal bundle size
 const KanjiExplorer = lazy(() => import('./components/KanjiModule/KanjiExplorer').then(m => ({ default: m.KanjiExplorer })));
@@ -63,9 +65,16 @@ export function App() {
   const [activeQuizItems, setActiveQuizItems] = useState<KanaItem[]>([]);
   const [quizSummary, setQuizSummary] = useState<QuizSummary | null>(null);
   const [requeueMistakes, setRequeueMistakes] = useState(true);
+  const [activeRoadmapStage, setActiveRoadmapStage] = useState<RoadmapStage | null>(null);
+  const [stageEvaluation, setStageEvaluation] = useState<{
+    stage: RoadmapStage;
+    isPassed: boolean;
+    score: number;
+  } | null>(null);
 
-  // Start quiz with selected items
-  const handleStartQuiz = (items: KanaItem[], requeue: boolean = true) => {
+  // Start quiz with selected items (optional roadmap stage)
+  const handleStartQuiz = (items: KanaItem[], requeue: boolean = true, stage?: RoadmapStage) => {
+    setActiveRoadmapStage(stage || null);
     setActiveQuizItems(items);
     setRequeueMistakes(requeue);
     setKanaStage('quiz');
@@ -74,6 +83,51 @@ export function App() {
   // Quiz completed
   const handleFinishQuiz = (summary: QuizSummary) => {
     setQuizSummary(summary);
+
+    // Laporkan misi harian kuis refleks
+    reportMissionActivity('quiz');
+
+    // Evaluasi kelulusan jika kuis diluncurkan dari Misi Peta Belajar
+    let evalResult: { stage: RoadmapStage; isPassed: boolean; score: number } | null = null;
+    const stageToEvaluate = activeRoadmapStage;
+
+    if (stageToEvaluate) {
+      const isPassed = summary.accuracy >= stageToEvaluate.passingScore;
+      evalResult = {
+        stage: stageToEvaluate,
+        isPassed,
+        score: summary.accuracy,
+      };
+
+      if (isPassed) {
+        // Cari arc pemilik stage ini
+        const arc = ROADMAP_ARCS.find(a => a.stages.some(s => s.id === stageToEvaluate.id));
+        let nextArcId: string | undefined = undefined;
+        if (arc) {
+          const isLastStageOfArc = arc.stages[arc.stages.length - 1].id === stageToEvaluate.id;
+          if (isLastStageOfArc && arc.arcNumber + 1 < ROADMAP_ARCS.length) {
+            nextArcId = ROADMAP_ARCS[arc.arcNumber + 1].id;
+          }
+        }
+        completeRoadmapStage(stageToEvaluate.id, nextArcId);
+      }
+    } else {
+      // Auto-unlock Hiragana / Katakana dasar jika user latihan manual dari Kana Matrix
+      if (summary.totalQuestions >= 46 && summary.accuracy >= 95) {
+        const isAllHiragana = activeQuizItems.every(i => i.type === 'hiragana');
+        if (isAllHiragana) {
+          completeRoadmapStage('arc_0_stage_1');
+        }
+      }
+      if (summary.totalQuestions >= 46 && summary.accuracy >= 90) {
+        const isAllKatakana = activeQuizItems.every(i => i.type === 'katakana');
+        if (isAllKatakana) {
+          completeRoadmapStage('arc_0_stage_2');
+        }
+      }
+    }
+
+    setStageEvaluation(evalResult);
     setKanaStage('results');
   };
 
@@ -147,13 +201,26 @@ export function App() {
                 {kanaStage === 'results' && quizSummary && (
                   <KanaResults
                     summary={quizSummary}
+                    stageEvaluation={stageEvaluation}
+                    onReturnToRoadmap={() => {
+                      setActiveModule('roadmap');
+                      setKanaStage('selector');
+                      setStageEvaluation(null);
+                      setActiveRoadmapStage(null);
+                    }}
                     onRetryMissed={handleRetryMissed}
                     onRetryAll={handleRetryAll}
-                    onBackToSelector={handleBackToSelector}
+                    onBackToSelector={() => {
+                      handleBackToSelector();
+                      setStageEvaluation(null);
+                      setActiveRoadmapStage(null);
+                    }}
                     onGoToKanji={() => {
                       setActiveModule('kanji');
                       setActiveLevel('N5');
                       setKanaStage('selector');
+                      setStageEvaluation(null);
+                      setActiveRoadmapStage(null);
                     }}
                   />
                 )}
@@ -202,9 +269,9 @@ export function App() {
               <RoadmapView 
                 onNavigate={handleNavigateFromRoadmap}
                 onOpenSrs={() => setIsSrsOpen(true)}
-                onLaunchKanaQuiz={(items, requeue) => {
+                onLaunchKanaQuiz={(items, requeue, stage) => {
                   setActiveModule('kana');
-                  handleStartQuiz(items, requeue);
+                  handleStartQuiz(items, requeue ?? true, stage);
                 }}
               />
             )}

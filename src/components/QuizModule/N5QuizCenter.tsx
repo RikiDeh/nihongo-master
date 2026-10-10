@@ -14,7 +14,8 @@ import {
   getUserProgress, 
   recordFailedItem, 
   recordSuccessItem, 
-  subscribeToStorage 
+  subscribeToStorage,
+  reportMissionActivity
 } from '../../utils/storage';
 import { 
   BookOpen, 
@@ -414,6 +415,8 @@ export const N5QuizCenter: React.FC<QuizCenterProps> = ({ initialLevel, onSwitch
                 }
               }
             });
+
+            reportMissionActivity('quiz');
 
             setQuizResults(result);
             setStage('results');
