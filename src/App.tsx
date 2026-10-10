@@ -1,4 +1,4 @@
-import React, { useState, lazy, Suspense } from 'react';
+import React, { useState, useEffect, lazy, Suspense } from 'react';
 import { Navbar, ActiveModule } from './components/Navbar';
 import { KanaSelector } from './components/KanaQuiz/KanaSelector';
 import { KanaQuizSession } from './components/KanaQuiz/KanaQuizSession';
@@ -35,6 +35,14 @@ export function App() {
     }
     return false;
   });
+
+  useEffect(() => {
+    const handleTourReset = () => {
+      setIsTourOpen(true);
+    };
+    window.addEventListener('nihongo_tour_reset', handleTourReset);
+    return () => window.removeEventListener('nihongo_tour_reset', handleTourReset);
+  }, []);
 
   const handleCloseTour = () => {
     setIsTourOpen(false);

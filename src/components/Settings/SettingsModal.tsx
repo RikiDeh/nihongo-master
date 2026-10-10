@@ -8,15 +8,17 @@ import {
   CheckCircle2, 
   AlertTriangle, 
   Database,
-  FileJson
+  FileJson,
+  HelpCircle
 } from 'lucide-react';
 
 interface SettingsModalProps {
   isOpen: boolean;
   onClose: () => void;
+  onOpenTour?: () => void;
 }
 
-export const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, onClose }) => {
+export const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, onClose, onOpenTour }) => {
   const [statusMessage, setStatusMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
   const [isConfirmingReset, setIsConfirmingReset] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -83,13 +85,15 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, onClose })
   // 3. Reset All Data via inline UI
   const handleExecuteReset = () => {
     localStorage.removeItem('nihongo_master_progress_v1');
+    localStorage.removeItem('nihongo_tour_seen');
     if (typeof window !== 'undefined') {
       window.dispatchEvent(new Event('nihongo_storage_updated'));
+      window.dispatchEvent(new Event('nihongo_tour_reset'));
     }
     setIsConfirmingReset(false);
     setStatusMessage({
       type: 'success',
-      text: 'Semua progres belajar telah berhasil direset ke kondisi awal.',
+      text: 'Semua progres belajar dan panduan pemula telah direset ke kondisi awal.',
     });
   };
 
@@ -150,6 +154,24 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, onClose })
 
         {/* Actions */}
         <div className="space-y-2.5">
+          {/* Action 0: Manual Trigger Tour */}
+          {onOpenTour && (
+            <button
+              type="button"
+              onClick={() => {
+                onClose();
+                onOpenTour();
+              }}
+              className="w-full p-3 rounded-lg bg-[#c84b31]/10 dark:bg-[#e05d44]/15 hover:bg-[#c84b31]/20 text-[#c84b31] dark:text-[#e05d44] font-bold text-xs flex items-center justify-between transition cursor-pointer border border-[#c84b31]/30"
+            >
+              <div className="flex items-center gap-2.5">
+                <HelpCircle className="w-4 h-4" />
+                <span>Mulai Tur Panduan Fitur Interaktif</span>
+              </div>
+              <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-black/5 dark:bg-white/10">Buka Tur</span>
+            </button>
+          )}
+
           {/* Action 1: Download */}
           <button
             type="button"

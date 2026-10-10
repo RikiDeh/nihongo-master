@@ -558,6 +558,7 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
       <SettingsModal 
         isOpen={isSettingsOpen} 
         onClose={() => setIsSettingsOpen(false)} 
+        onOpenTour={onOpenTour}
       />
     </>
   );
