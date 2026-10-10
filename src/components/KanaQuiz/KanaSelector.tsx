@@ -499,7 +499,7 @@ export const KanaSelector: React.FC<KanaSelectorProps> = ({ onStartQuiz }) => {
       )}
 
       {/* Floating Bottom Action Dock */}
-      <div className="fixed bottom-0 left-0 right-0 bg-[#faf8f5]/95 dark:bg-[#18181b]/95 backdrop-blur-md border-t border-[#e7e5e4] dark:border-[#27272a] p-4 z-40 transition-colors">
+      <div className="fixed bottom-0 left-0 right-0 md:left-64 bg-[#faf8f5]/95 dark:bg-[#18181b]/95 backdrop-blur-md border-t border-[#e7e5e4] dark:border-[#27272a] p-3 sm:p-4 z-40 transition-colors">
         <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-lg bg-white dark:bg-[#1f1f23] border border-[#d6d3d1] dark:border-[#3f3f46] flex items-center justify-center font-mono font-bold text-[#c84b31] dark:text-[#e05d44]">

@@ -87,13 +87,16 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
       >
         {/* Top Branding Section */}
         <div>
-          <div className="p-4 flex items-center justify-between border-b border-[#e7e5e4] dark:border-[#27272a]">
+          <div className={`p-4 flex items-center border-b border-[#e7e5e4] dark:border-[#27272a] ${
+            isCollapsed ? 'flex-col gap-3 justify-center' : 'justify-between'
+          }`}>
             <div 
               onClick={() => onSelectModule('kana')}
-              className="flex items-center gap-3 cursor-pointer group overflow-hidden select-none"
+              className="flex items-center gap-3 cursor-pointer group select-none overflow-hidden"
+              title="NihongoMaster — Kembali ke Beranda Kana"
             >
               {/* Hanko Stamp */}
-              <div className="w-9 h-9 rounded-md bg-[#c84b31] dark:bg-[#e05d44] border border-[#a63a23] dark:border-[#c84b31] flex items-center justify-center text-white font-serif-jp font-black text-xl shadow-xs shrink-0 group-hover:scale-105 transition-transform">
+              <div className="w-10 h-10 rounded-md bg-[#c84b31] dark:bg-[#e05d44] border border-[#a63a23] dark:border-[#c84b31] flex items-center justify-center text-white font-serif-jp font-black text-xl shadow-xs shrink-0 group-hover:scale-105 transition-transform">
                 日
               </div>
               {!isCollapsed && (

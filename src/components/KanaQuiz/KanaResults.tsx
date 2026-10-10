@@ -43,8 +43,9 @@ export const KanaResults: React.FC<KanaResultsProps> = ({
     }
   }, [summary.accuracy]);
 
-  const wrongCount = summary.wrongItems.length;
-  const missedKanaList = summary.wrongItems.map(w => w.kana);
+  const wrongItemsList = summary.wrongItems || [];
+  const wrongCount = wrongItemsList.length;
+  const missedKanaList = wrongItemsList.map(w => w.kana);
 
   const getScoreMessage = (acc: number) => {
     if (acc === 100) return 'Luar Biasa Sempurna (完璧 - Kanpeki)';
@@ -168,7 +169,7 @@ export const KanaResults: React.FC<KanaResultsProps> = ({
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
-            {summary.wrongItems.map((attempt) => {
+            {wrongItemsList.map((attempt) => {
               const wrongInputs = attempt.userInputs.filter(
                 inp => inp.toLowerCase() !== attempt.kana.romaji.toLowerCase() && 
                        !attempt.kana.aliases.includes(inp.toLowerCase())
@@ -224,12 +225,12 @@ export const KanaResults: React.FC<KanaResultsProps> = ({
             </h2>
           </div>
           <span className="text-xs font-mono text-[#78716c] dark:text-[#a1a1aa]">
-            {summary.allAttempts.length} Karakter
+            {(summary.allAttempts || []).length} Karakter
           </span>
         </div>
 
         <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-2">
-          {summary.allAttempts.map((attempt) => {
+          {(summary.allAttempts || []).map((attempt) => {
             const isCorrect = attempt.isCorrectFirstTry;
             return (
               <div
