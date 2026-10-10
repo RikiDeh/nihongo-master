@@ -2,6 +2,10 @@
 
 Aplikasi belajar bahasa Jepang interaktif modern yang menyempurnakan konsep **Tofugu Kana Quiz** serta dilengkapi jalur kurikulum terstruktur dari pemula total (Kana) hingga tingkat mahir (**JLPT N1**).
 
+> [!NOTE]
+> ### 🤖 Pemberitahuan Proyek (100% AI-Driven Development)
+> Repositori ini adalah proyek eksperimen rekayasa perangkat lunak otonom di mana **100% kode sumber, basis data kurikulum, sistem pengujian, dan arsitekturnya dibangun secara mandiri oleh AI** (menggunakan ekosistem agentic Google Antigravity) di bawah supervisi mandor auditor independen dan Big Boss. Seluruh siklus rilis dikawal dengan protokol audit forensik 4-lapis untuk membuktikan bahwa AI mampu membangun platform belajar berstandar tinggi tanpa kompromi kualitas.
+
 ---
 
 ## ✨ Fitur Unggulan yang Ditingkatkan dari Tofugu
