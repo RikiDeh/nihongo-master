@@ -1,12 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { KanaItem, QuizAttempt, QuizSummary } from '../../types';
 import { playSuccessSound, playErrorSound, speakJapanese } from '../../utils/audio';
-import { Volume2, VolumeX, Flame, X, ArrowRight, CornerDownLeft, RotateCcw, Keyboard } from 'lucide-react';
+import { Volume2, VolumeX, Flame, X, ArrowRight, CornerDownLeft, RotateCcw } from 'lucide-react';
 
 interface KanaQuizSessionProps {
   items: KanaItem[];
   requeueMistakes?: boolean;
-  requireEnter?: boolean;
   onFinishQuiz: (summary: QuizSummary) => void;
   onExit: () => void;
 }
@@ -14,7 +13,6 @@ interface KanaQuizSessionProps {
 export const KanaQuizSession: React.FC<KanaQuizSessionProps> = ({ 
   items, 
   requeueMistakes = true, 
-  requireEnter = true,
   onFinishQuiz, 
   onExit 
 }) => {
@@ -27,9 +25,7 @@ export const KanaQuizSession: React.FC<KanaQuizSessionProps> = ({
   const [userInput, setUserInput] = useState('');
   const [inputState, setInputState] = useState<'idle' | 'correct' | 'wrong'>('idle');
   const [revealedAnswer, setRevealedAnswer] = useState<string | null>(null);
-
-  // Mode: Wajib tekan Enter (Anti-tebak) vs Auto-submit
-  const [requireEnterMode, setRequireEnterMode] = useState<boolean>(requireEnter);
+  const [autoAdvanceCountdown, setAutoAdvanceCountdown] = useState<number>(3);
 
   // Transition & debouncing lock to prevent rapid double-processing
   const isTransitioningRef = useRef(false);
@@ -77,11 +73,32 @@ export const KanaQuizSession: React.FC<KanaQuizSessionProps> = ({
     setUserInput('');
     setInputState('idle');
     setRevealedAnswer(null);
+    setAutoAdvanceCountdown(3);
     isTransitioningRef.current = false;
     setTimeout(() => {
       inputRef.current?.focus();
     }, 10);
   }, [currentItem, soundEnabled]);
+
+  const finishSession = React.useCallback(() => {
+    const attempts = Array.from(attemptsMapRef.current.values());
+    const totalQuestions = attempts.length;
+    const correctFirstTryCount = attempts.filter(a => a.isCorrectFirstTry).length;
+    const wrongItems = attempts.filter(a => !a.isCorrectFirstTry);
+    const accuracy = totalQuestions > 0 ? Math.round((correctFirstTryCount / totalQuestions) * 100) : 0;
+    const timeSpentSeconds = Math.round((Date.now() - startTimeRef.current) / 1000);
+
+    const summary: QuizSummary = {
+      totalQuestions,
+      correctFirstTryCount,
+      accuracy,
+      timeSpentSeconds,
+      wrongItems,
+      allAttempts: attempts,
+    };
+
+    onFinishQuiz(summary);
+  }, [onFinishQuiz]);
 
   const handleCorrectAnswer = () => {
     if (isTransitioningRef.current) return;
@@ -118,6 +135,7 @@ export const KanaQuizSession: React.FC<KanaQuizSessionProps> = ({
     setInputState('wrong');
     if (soundEnabled) playErrorSound();
     setStreak(0);
+    setAutoAdvanceCountdown(3);
 
     const attempt = attemptsMapRef.current.get(currentItem.id);
     if (attempt) {
@@ -130,7 +148,7 @@ export const KanaQuizSession: React.FC<KanaQuizSessionProps> = ({
     setRevealedAnswer(currentItem.romaji);
   };
 
-  const proceedAfterMistake = () => {
+  const proceedAfterMistake = React.useCallback(() => {
     if (isTransitioningRef.current) return;
     isTransitioningRef.current = true;
 
@@ -151,27 +169,25 @@ export const KanaQuizSession: React.FC<KanaQuizSessionProps> = ({
         return nextQueue;
       });
     }
-  };
+  }, [requeueMistakes, finishSession]);
 
-  const finishSession = () => {
-    const attempts = Array.from(attemptsMapRef.current.values());
-    const totalQuestions = attempts.length;
-    const correctFirstTryCount = attempts.filter(a => a.isCorrectFirstTry).length;
-    const wrongItems = attempts.filter(a => !a.isCorrectFirstTry);
-    const accuracy = totalQuestions > 0 ? Math.round((correctFirstTryCount / totalQuestions) * 100) : 0;
-    const timeSpentSeconds = Math.round((Date.now() - startTimeRef.current) / 1000);
+  // Auto-advance countdown on incorrect answer (3 seconds)
+  useEffect(() => {
+    if (inputState !== 'wrong') return;
 
-    const summary: QuizSummary = {
-      totalQuestions,
-      correctFirstTryCount,
-      accuracy,
-      timeSpentSeconds,
-      wrongItems,
-      allAttempts: attempts,
-    };
+    const timer = setInterval(() => {
+      setAutoAdvanceCountdown(prev => {
+        if (prev <= 1) {
+          clearInterval(timer);
+          proceedAfterMistake();
+          return 0;
+        }
+        return prev - 1;
+      });
+    }, 1000);
 
-    onFinishQuiz(summary);
-  };
+    return () => clearInterval(timer);
+  }, [inputState, proceedAfterMistake]);
 
   const checkAnswerStrict = (val: string): boolean => {
     const clean = val.trim().toLowerCase();
@@ -208,12 +224,6 @@ export const KanaQuizSession: React.FC<KanaQuizSessionProps> = ({
     const val = e.target.value;
     if (inputState === 'wrong' || isTransitioningRef.current) return;
     setUserInput(val);
-
-    if (!requireEnterMode && val.trim().length > 0) {
-      if (checkAnswerStrict(val)) {
-        handleCorrectAnswer();
-      }
-    }
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -267,20 +277,6 @@ export const KanaQuizSession: React.FC<KanaQuizSessionProps> = ({
           </button>
 
           <div className="flex items-center gap-2">
-            <button
-              type="button"
-              onClick={() => setRequireEnterMode(m => !m)}
-              title={requireEnterMode ? 'Mode Anti-Tebak Aktif: Wajib Enter' : 'Mode Auto-Submit Aktif'}
-              className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg border text-xs font-mono font-semibold transition cursor-pointer ${
-                requireEnterMode
-                  ? 'bg-white dark:bg-[#1f1f23] border-[#d6d3d1] dark:border-[#3f3f46] text-[#1c1917] dark:text-[#f4f4f5]'
-                  : 'bg-[#f4f0e8] dark:bg-[#27272a] border-[#e7e5e4] dark:border-[#3f3f46] text-[#78716c] dark:text-[#a1a1aa]'
-              }`}
-            >
-              <Keyboard className="w-3.5 h-3.5" />
-              <span>{requireEnterMode ? 'Enter: ON' : 'Auto: ON'}</span>
-            </button>
-
             {/* Streak Counter */}
             <div className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-mono font-bold border transition ${
               streak > 0 
@@ -290,7 +286,6 @@ export const KanaQuizSession: React.FC<KanaQuizSessionProps> = ({
               <Flame className={`w-3.5 h-3.5 ${streak > 0 ? 'fill-current' : ''}`} />
               <span>{streak}</span>
             </div>
-
 
             {/* Audio Toggle */}
             <button
@@ -362,28 +357,41 @@ export const KanaQuizSession: React.FC<KanaQuizSessionProps> = ({
           </span>
         </div>
 
-        {/* Revealed correct answer on mistake */}
+        {/* Revealed correct answer on mistake + Continue button */}
         {inputState === 'wrong' && revealedAnswer && (
-          <div className="mt-4 px-5 py-2.5 rounded-lg bg-rose-50 dark:bg-rose-950/30 border border-rose-300 dark:border-rose-900 text-center animate-pop">
-            <span className="text-xs text-rose-700 dark:text-rose-300 font-medium block">Jawaban yang benar:</span>
-            <span className="text-xl font-mono font-bold text-rose-900 dark:text-white tracking-widest uppercase">
-              {revealedAnswer}
-            </span>
-            <span className="text-[11px] text-rose-600 dark:text-rose-300/80 block mt-1">
-              Tekan <kbd className="px-1.5 py-0.5 bg-white dark:bg-rose-900/50 rounded border border-rose-300 dark:border-rose-800 font-mono text-xs">Enter</kbd> untuk melanjutkan
+          <div className="mt-4 w-full max-w-xs px-5 py-3.5 rounded-xl bg-rose-50 dark:bg-rose-950/30 border border-rose-300 dark:border-rose-900 text-center animate-pop flex flex-col items-center gap-2.5">
+            <div>
+              <span className="text-xs text-rose-700 dark:text-rose-300 font-medium block">Jawaban yang benar:</span>
+              <span className="text-2xl font-mono font-bold text-rose-900 dark:text-white tracking-widest uppercase">
+                {revealedAnswer}
+              </span>
+            </div>
+            
+            <button
+              type="button"
+              onClick={proceedAfterMistake}
+              className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-[#c84b31] hover:bg-[#b03d25] text-white text-sm font-semibold tracking-wide transition shadow-sm cursor-pointer"
+            >
+              <span>Lanjut Soal Berikutnya</span>
+              <span className="text-xs opacity-80 font-mono">({autoAdvanceCountdown}s)</span>
+              <ArrowRight className="w-4 h-4" />
+            </button>
+
+            <span className="text-[11px] text-rose-600 dark:text-rose-300/80 block">
+              Atau tekan <kbd className="px-1.5 py-0.5 bg-white dark:bg-rose-900/50 rounded border border-rose-300 dark:border-rose-800 font-mono text-[11px]">Enter</kbd> untuk langsung lanjut
             </span>
           </div>
         )}
 
         {/* Fast Romaji Typing Input */}
-        <div className="mt-8 w-full max-w-xs relative">
+        <div className="mt-6 w-full max-w-xs relative">
           <input
             ref={inputRef}
             type="text"
             value={userInput}
             onChange={handleInputChange}
             onKeyDown={handleKeyDown}
-            disabled={inputState === 'correct'}
+            disabled={inputState === 'correct' || inputState === 'wrong'}
             autoFocus
             autoComplete="off"
             autoCorrect="off"
@@ -391,16 +399,14 @@ export const KanaQuizSession: React.FC<KanaQuizSessionProps> = ({
             spellCheck="false"
             placeholder={
               inputState === 'wrong'
-                ? 'Tekan Enter...'
-                : requireEnterMode
-                ? 'Ketik romaji lalu Enter...'
-                : 'Ketik romaji...'
+                ? 'Tekan Enter / tombol di atas...'
+                : 'Ketik romaji lalu Enter...'
             }
             className={`w-full pl-5 pr-12 py-3 rounded-xl text-center text-xl font-mono font-semibold tracking-wider transition-all duration-150 outline-none border ${
               inputState === 'correct'
                 ? 'bg-emerald-50 dark:bg-emerald-950/20 border-emerald-500 text-emerald-900 dark:text-emerald-200 ring-2 ring-emerald-500/20'
                 : inputState === 'wrong'
-                ? 'bg-rose-50 dark:bg-rose-950/20 border-rose-500 text-rose-900 dark:text-rose-200 ring-2 ring-rose-500/20'
+                ? 'bg-rose-50 dark:bg-rose-950/20 border-rose-500 text-rose-900 dark:text-rose-200 ring-2 ring-rose-500/20 opacity-75 cursor-not-allowed'
                 : 'bg-white dark:bg-[#1f1f23] border-[#d6d3d1] dark:border-[#3f3f46] text-[#1c1917] dark:text-[#f4f4f5] focus:border-[#c84b31] dark:focus:border-[#e05d44] focus:ring-2 focus:ring-[#c84b31]/10'
             }`}
           />
@@ -408,7 +414,7 @@ export const KanaQuizSession: React.FC<KanaQuizSessionProps> = ({
           {/* Submit / Next Button */}
           <button
             type="button"
-            onClick={handleSubmitAnswer}
+            onClick={inputState === 'wrong' ? proceedAfterMistake : handleSubmitAnswer}
             disabled={inputState === 'idle' && userInput.trim().length === 0}
             className={`absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-lg transition cursor-pointer ${
               inputState === 'wrong'
@@ -417,7 +423,7 @@ export const KanaQuizSession: React.FC<KanaQuizSessionProps> = ({
                 ? 'bg-[#c84b31] hover:bg-[#b03d25] text-white shadow-xs'
                 : 'text-[#a8a29e] dark:text-[#71717a] cursor-not-allowed'
             }`}
-            title={inputState === 'wrong' ? 'Lanjut (Enter)' : 'Kirim Jawaban (Enter)'}
+            title={inputState === 'wrong' ? 'Lanjut ke Soal Berikutnya (Enter)' : 'Kirim Jawaban (Enter)'}
           >
             {inputState === 'wrong' ? (
               <ArrowRight className="w-4 h-4" />
@@ -427,16 +433,10 @@ export const KanaQuizSession: React.FC<KanaQuizSessionProps> = ({
           </button>
         </div>
 
-        <p className="mt-3 text-xs text-[#78716c] dark:text-[#a1a1aa]">
-          {requireEnterMode ? (
-            <span>
-              Ketik jawaban lalu tekan <kbd className="px-1.5 py-0.5 bg-white dark:bg-[#27272a] rounded border border-[#d6d3d1] dark:border-[#3f3f46] font-mono text-[11px]">Enter</kbd> (Anti-Tebak)
-            </span>
-          ) : (
-            <span>
-              Auto-Submit: Jawaban langsung dinilai saat karakter cocok
-            </span>
-          )}
+        <p className="mt-3 text-xs text-[#78716c] dark:text-[#a1a1aa] text-center">
+          <span>
+            Ketik jawaban lalu tekan <kbd className="px-1.5 py-0.5 bg-white dark:bg-[#27272a] rounded border border-[#d6d3d1] dark:border-[#3f3f46] font-mono text-[11px]">Enter</kbd> atau panah di kanan
+          </span>
         </p>
       </div>
 

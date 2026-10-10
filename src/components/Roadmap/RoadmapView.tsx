@@ -36,7 +36,7 @@ import { generateDynamicMockExam } from '../../utils/quizGenerator';
 interface RoadmapViewProps {
   onNavigate: (module: ActiveModule, level?: JLPTLevel) => void;
   onOpenSrs?: () => void;
-  onLaunchKanaQuiz?: (items: any[], requeue?: boolean, enter?: boolean) => void;
+  onLaunchKanaQuiz?: (items: any[], requeue?: boolean) => void;
 }
 
 export const RoadmapView: React.FC<RoadmapViewProps> = ({ 
@@ -105,13 +105,13 @@ export const RoadmapView: React.FC<RoadmapViewProps> = ({
       if (stage.id === 'arc_0_stage_1') {
         // 46 Hiragana dasar
         if (onLaunchKanaQuiz) {
-          onLaunchKanaQuiz(hiraGojuuon, true, false);
+          onLaunchKanaQuiz(hiraGojuuon, true);
           return;
         }
       } else if (stage.id === 'arc_0_stage_2') {
         // 46 Katakana dasar
         if (onLaunchKanaQuiz) {
-          onLaunchKanaQuiz(kataGojuuon, true, false);
+          onLaunchKanaQuiz(kataGojuuon, true);
           return;
         }
       }
@@ -131,7 +131,7 @@ export const RoadmapView: React.FC<RoadmapViewProps> = ({
       ].sort(() => Math.random() - 0.5).slice(0, 50);
 
       if (onLaunchKanaQuiz) {
-        onLaunchKanaQuiz(allKanaPool, false, false);
+        onLaunchKanaQuiz(allKanaPool, false);
         return;
       }
       onNavigate('kana');

@@ -11,7 +11,7 @@ import { KanaItem } from '../../types';
 import { Play, RotateCcw, CheckSquare, Square, Sparkles } from 'lucide-react';
 
 interface KanaSelectorProps {
-  onStartQuiz: (selectedItems: KanaItem[], requeueMistakes: boolean, requireEnter: boolean) => void;
+  onStartQuiz: (selectedItems: KanaItem[], requeueMistakes?: boolean) => void;
 }
 
 // 10 baris standar Gojuuon (A-I-U-E-O columns)
@@ -30,7 +30,6 @@ const GOJUUON_ROW_CONFIG = [
 
 export const KanaSelector: React.FC<KanaSelectorProps> = ({ onStartQuiz }) => {
   const [requeueMistakes, setRequeueMistakes] = useState(true);
-  const [requireEnter, setRequireEnter] = useState(true);
 
   // Store selected item IDs
   const [selectedItemIds, setSelectedItemIds] = useState<Set<string>>(() => {
@@ -116,7 +115,7 @@ export const KanaSelector: React.FC<KanaSelectorProps> = ({ onStartQuiz }) => {
   const handleStart = () => {
     const items = getAllKanaItems();
     if (items.length === 0) return;
-    onStartQuiz(items, requeueMistakes, requireEnter);
+    onStartQuiz(items, requeueMistakes);
   };
 
   // Map items for Gojuuon table lookup
@@ -606,32 +605,6 @@ export const KanaSelector: React.FC<KanaSelectorProps> = ({ onStartQuiz }) => {
 
           {/* Mode Switchers */}
           <div className="flex flex-wrap items-center gap-2">
-            <div className="flex items-center gap-1 bg-white dark:bg-[#1f1f23] p-1 rounded-lg border border-[#e7e5e4] dark:border-[#27272a] text-xs">
-              <button
-                type="button"
-                onClick={() => setRequireEnter(true)}
-                title="Wajib tekan Enter untuk mengirim jawaban (anti-tebak)."
-                className={`px-3 py-1.5 rounded-md font-medium transition cursor-pointer ${
-                  requireEnter
-                    ? 'bg-[#1c1917] dark:bg-[#f4f4f5] text-white dark:text-[#18181b] font-bold shadow-xs'
-                    : 'text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
-                }`}
-              >
-                Wajib Enter
-              </button>
-              <button
-                type="button"
-                onClick={() => setRequireEnter(false)}
-                title="Jawaban langsung dinilai otomatis saat huruf cocok."
-                className={`px-3 py-1.5 rounded-md font-medium transition cursor-pointer ${
-                  !requireEnter
-                    ? 'bg-[#1c1917] dark:bg-[#f4f4f5] text-white dark:text-[#18181b] font-bold shadow-xs'
-                    : 'text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
-                }`}
-              >
-                Auto-Submit
-              </button>
-            </div>
 
             <div className="flex items-center gap-1 bg-white dark:bg-[#1f1f23] p-1 rounded-lg border border-[#e7e5e4] dark:border-[#27272a] text-xs">
               <button

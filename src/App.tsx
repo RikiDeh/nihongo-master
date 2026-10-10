@@ -33,13 +33,11 @@ export function App() {
   const [activeQuizItems, setActiveQuizItems] = useState<KanaItem[]>([]);
   const [quizSummary, setQuizSummary] = useState<QuizSummary | null>(null);
   const [requeueMistakes, setRequeueMistakes] = useState(true);
-  const [requireEnter, setRequireEnter] = useState(true);
 
   // Start quiz with selected items
-  const handleStartQuiz = (items: KanaItem[], requeue: boolean = true, enterRequired: boolean = true) => {
+  const handleStartQuiz = (items: KanaItem[], requeue: boolean = true) => {
     setActiveQuizItems(items);
     setRequeueMistakes(requeue);
-    setRequireEnter(enterRequired);
     setKanaStage('quiz');
   };
 
@@ -110,7 +108,6 @@ export function App() {
                   <KanaQuizSession
                     items={activeQuizItems}
                     requeueMistakes={requeueMistakes}
-                    requireEnter={requireEnter}
                     onFinishQuiz={handleFinishQuiz}
                     onExit={handleBackToSelector}
                   />
@@ -169,9 +166,9 @@ export function App() {
               <RoadmapView 
                 onNavigate={handleNavigateFromRoadmap}
                 onOpenSrs={() => setIsSrsOpen(true)}
-                onLaunchKanaQuiz={(items, requeue, enter) => {
+                onLaunchKanaQuiz={(items, requeue) => {
                   setActiveModule('kana');
-                  handleStartQuiz(items, requeue, enter);
+                  handleStartQuiz(items, requeue);
                 }}
               />
             )}
