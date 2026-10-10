@@ -233,18 +233,18 @@ export const KanaSelector: React.FC<KanaSelectorProps> = ({ onStartQuiz }) => {
       <div className="bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] rounded-xl p-4 mb-6 shadow-xs">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-3 pb-3 border-b border-[#e7e5e4] dark:border-[#27272a]">
           {/* Category Tabs */}
-          <div className="flex items-center gap-1.5">
-            <span className="text-[11px] font-mono uppercase text-[#78716c] dark:text-[#a1a1aa] mr-1">Tabel:</span>
+          <div className="flex items-center gap-1.5 overflow-x-auto w-full sm:w-auto pb-1 sm:pb-0 scrollbar-none">
+            <span className="text-[11px] font-mono uppercase text-[#78716c] dark:text-[#a1a1aa] mr-1 shrink-0">Tabel:</span>
             {[
               { id: 'gojuuon', label: '50 Bunyi Dasar (Gojūon)' },
-              { id: 'dakuten', label: 'Bunyi Keruh (Dakuten / Handakuten)' },
+              { id: 'dakuten', label: 'Bunyi Keruh (Dakuten)' },
               { id: 'yoon', label: 'Bunyi Kombinasi (Yōon)' },
             ].map(tab => (
               <button
                 key={tab.id}
                 type="button"
                 onClick={() => setCategoryView(tab.id as any)}
-                className={`px-3 py-1.5 rounded-lg text-xs font-medium transition cursor-pointer border ${
+                className={`px-3 py-1.5 rounded-lg text-xs font-medium transition cursor-pointer border whitespace-nowrap shrink-0 ${
                   categoryView === tab.id
                     ? 'bg-[#1c1917] dark:bg-[#f4f4f5] text-white dark:text-[#18181b] border-transparent font-bold shadow-xs'
                     : 'bg-[#faf8f5] dark:bg-[#18181b] border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
