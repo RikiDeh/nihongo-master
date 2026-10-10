@@ -34,6 +34,7 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [showRomaji, , toggleShowRomaji] = useShowRomaji();
   const [isCollapsed, setIsCollapsed] = useState(false);
+  const [mobileMenuType, setMobileMenuType] = useState<'latihan' | 'pustaka' | null>(null);
 
   const [isDark, setIsDark] = useState<boolean>(() => {
     if (typeof document !== 'undefined') {
@@ -288,27 +289,156 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
             <button
               type="button"
               onClick={toggleTheme}
-              className="p-1.5 rounded border border-[#e7e5e4] dark:border-[#27272a] text-[#78716c]"
+              className="p-2 rounded-lg border border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5] transition cursor-pointer"
+              aria-label={isDark ? 'Ganti ke tema terang Washi' : 'Ganti ke tema gelap Sumi'}
             >
-              {isDark ? <Sun className="w-3.5 h-3.5 text-amber-400" /> : <Moon className="w-3.5 h-3.5" />}
+              {isDark ? <Sun className="w-4 h-4 text-amber-400" /> : <Moon className="w-4 h-4" />}
             </button>
 
             <button
               type="button"
               onClick={() => setIsSettingsOpen(true)}
-              className="p-1.5 rounded border border-[#e7e5e4] dark:border-[#27272a] text-[#78716c]"
+              className="p-2 rounded-lg border border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5] transition cursor-pointer"
+              aria-label="Buka Pengaturan"
             >
-              <Settings className="w-3.5 h-3.5" />
+              <Settings className="w-4 h-4" />
             </button>
           </div>
         </header>
+
+        {/* Mobile Submenu Sheet (Modal/Drawer for Latihan & Pustaka) */}
+        {mobileMenuType && (
+          <div className="fixed inset-0 z-40 flex flex-col justify-end">
+            <div 
+              className="fixed inset-0 bg-black/40 backdrop-blur-xs transition-opacity animate-fadeIn"
+              onClick={() => setMobileMenuType(null)}
+            />
+            <div className="relative bg-[#faf8f5] dark:bg-[#18181b] border-t border-[#e7e5e4] dark:border-[#27272a] rounded-t-2xl p-4 shadow-2xl z-50 mb-16 animate-slideUp">
+              <div className="w-12 h-1 bg-[#d6d3d1] dark:bg-[#3f3f46] rounded-full mx-auto mb-3" />
+              <div className="flex items-center justify-between mb-3 px-1">
+                <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#78716c] dark:text-[#a1a1aa]">
+                  {mobileMenuType === 'latihan' ? '⚔️ Pilih Mode Latihan' : '📚 Pilih Modul Pustaka'}
+                </span>
+                <button
+                  type="button"
+                  onClick={() => setMobileMenuType(null)}
+                  className="text-xs font-mono px-2 py-0.5 rounded text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]"
+                >
+                  Tutup
+                </button>
+              </div>
+
+              {mobileMenuType === 'latihan' && (
+                <div className="grid grid-cols-2 gap-2.5">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      onSelectModule('quiz');
+                      setMobileMenuType(null);
+                    }}
+                    className={`p-3 rounded-xl border text-left flex flex-col gap-1 transition cursor-pointer ${
+                      activeModule === 'quiz'
+                        ? 'bg-[#c84b31]/10 dark:bg-[#e05d44]/15 border-[#c84b31] dark:border-[#e05d44] text-[#c84b31] dark:text-[#e05d44] font-bold'
+                        : 'bg-white dark:bg-[#1f1f23] border-[#e7e5e4] dark:border-[#27272a] text-[#1c1917] dark:text-[#f4f4f5]'
+                    }`}
+                  >
+                    <div className="flex items-center justify-between">
+                      <Trophy className="w-5 h-5 text-[#c84b31] dark:text-[#e05d44]" />
+                      <span className="font-mono text-[10px] px-1.5 py-0.5 rounded bg-black/5 dark:bg-white/10">N5→N1</span>
+                    </div>
+                    <span className="font-bold text-sm">Pusat Ujian JLPT</span>
+                    <span className="text-[11px] text-[#78716c] dark:text-[#a1a1aa] font-normal">Simulasi mondai & kuis adaptif</span>
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={() => {
+                      onSelectModule('dojo');
+                      setMobileMenuType(null);
+                    }}
+                    className={`p-3 rounded-xl border text-left flex flex-col gap-1 transition cursor-pointer ${
+                      activeModule === 'dojo'
+                        ? 'bg-[#c84b31]/10 dark:bg-[#e05d44]/15 border-[#c84b31] dark:border-[#e05d44] text-[#c84b31] dark:text-[#e05d44] font-bold'
+                        : 'bg-white dark:bg-[#1f1f23] border-[#e7e5e4] dark:border-[#27272a] text-[#1c1917] dark:text-[#f4f4f5]'
+                    }`}
+                  >
+                    <div className="flex items-center justify-between">
+                      <Swords className="w-5 h-5 text-[#c84b31] dark:text-[#e05d44]" />
+                      <span className="font-mono text-[10px] px-1.5 py-0.5 rounded bg-black/5 dark:bg-white/10">活用</span>
+                    </div>
+                    <span className="font-bold text-sm">Dojo Konjugasi</span>
+                    <span className="text-[11px] text-[#78716c] dark:text-[#a1a1aa] font-normal">Drill bentuk Te, Masu, Nai dll</span>
+                  </button>
+                </div>
+              )}
+
+              {mobileMenuType === 'pustaka' && (
+                <div className="grid grid-cols-3 gap-2">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      onSelectModule('kanji');
+                      setMobileMenuType(null);
+                    }}
+                    className={`p-2.5 rounded-xl border text-center flex flex-col items-center gap-1 transition cursor-pointer ${
+                      activeModule === 'kanji'
+                        ? 'bg-[#c84b31]/10 dark:bg-[#e05d44]/15 border-[#c84b31] dark:border-[#e05d44] text-[#c84b31] dark:text-[#e05d44] font-bold'
+                        : 'bg-white dark:bg-[#1f1f23] border-[#e7e5e4] dark:border-[#27272a] text-[#1c1917] dark:text-[#f4f4f5]'
+                    }`}
+                  >
+                    <BookOpen className="w-5 h-5 text-[#c84b31] dark:text-[#e05d44]" />
+                    <span className="font-bold text-xs">Joyō Kanji</span>
+                    <span className="font-mono text-[10px] text-[#78716c] dark:text-[#a1a1aa]">2.167 Kanji</span>
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={() => {
+                      onSelectModule('vocab');
+                      setMobileMenuType(null);
+                    }}
+                    className={`p-2.5 rounded-xl border text-center flex flex-col items-center gap-1 transition cursor-pointer ${
+                      activeModule === 'vocab'
+                        ? 'bg-[#c84b31]/10 dark:bg-[#e05d44]/15 border-[#c84b31] dark:border-[#e05d44] text-[#c84b31] dark:text-[#e05d44] font-bold'
+                        : 'bg-white dark:bg-[#1f1f23] border-[#e7e5e4] dark:border-[#27272a] text-[#1c1917] dark:text-[#f4f4f5]'
+                    }`}
+                  >
+                    <Layers className="w-5 h-5 text-[#c84b31] dark:text-[#e05d44]" />
+                    <span className="font-bold text-xs">Kosakata</span>
+                    <span className="font-mono text-[10px] text-[#78716c] dark:text-[#a1a1aa]">9.177 Kata</span>
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={() => {
+                      onSelectModule('grammar');
+                      setMobileMenuType(null);
+                    }}
+                    className={`p-2.5 rounded-xl border text-center flex flex-col items-center gap-1 transition cursor-pointer ${
+                      activeModule === 'grammar'
+                        ? 'bg-[#c84b31]/10 dark:bg-[#e05d44]/15 border-[#c84b31] dark:border-[#e05d44] text-[#c84b31] dark:text-[#e05d44] font-bold'
+                        : 'bg-white dark:bg-[#1f1f23] border-[#e7e5e4] dark:border-[#27272a] text-[#1c1917] dark:text-[#f4f4f5]'
+                    }`}
+                  >
+                    <Award className="w-5 h-5 text-[#c84b31] dark:text-[#e05d44]" />
+                    <span className="font-bold text-xs">Tata Bahasa</span>
+                    <span className="font-mono text-[10px] text-[#78716c] dark:text-[#a1a1aa]">N5 & N4</span>
+                  </button>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
 
         {/* Mobile Floating Bottom Bar - 4 Ergonomic Primary Pillars */}
         <nav className="fixed bottom-0 left-0 right-0 z-30 bg-[#faf8f5]/95 dark:bg-[#18181b]/95 backdrop-blur-md border-t border-[#e7e5e4] dark:border-[#27272a] px-3 py-2 flex items-center justify-around text-xs shadow-lg">
           {/* Tab 1: Belajar (Roadmap) */}
           <button
             type="button"
-            onClick={() => onSelectModule('roadmap')}
+            onClick={() => {
+              setMobileMenuType(null);
+              onSelectModule('roadmap');
+            }}
             className={`flex-1 flex flex-col items-center py-1 transition cursor-pointer ${
               activeModule === 'roadmap' 
                 ? 'text-[#c84b31] dark:text-[#e05d44] font-bold' 
@@ -322,7 +452,10 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
           {/* Tab 2: Kana (Fondasi Aksara) */}
           <button
             type="button"
-            onClick={() => onSelectModule('kana')}
+            onClick={() => {
+              setMobileMenuType(null);
+              onSelectModule('kana');
+            }}
             className={`flex-1 flex flex-col items-center py-1 transition cursor-pointer ${
               activeModule === 'kana' 
                 ? 'text-[#c84b31] dark:text-[#e05d44] font-bold' 
@@ -333,54 +466,37 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
             <span className="text-[11px] font-sans">Kana</span>
           </button>
 
-          {/* Tab 3: Latihan (Drill, Dojo, Quiz) */}
+          {/* Tab 3: Latihan (Ujian JLPT & Dojo Konjugasi) */}
           <button
             type="button"
-            onClick={() => {
-              // Jika sedang tidak di latihan, arahkan ke quiz atau dojo
-              if (activeModule !== 'quiz' && activeModule !== 'dojo') {
-                onSelectModule('quiz');
-              } else if (activeModule === 'quiz') {
-                onSelectModule('dojo');
-              } else {
-                onSelectModule('quiz');
-              }
-            }}
+            onClick={() => setMobileMenuType(prev => prev === 'latihan' ? null : 'latihan')}
             className={`flex-1 flex flex-col items-center py-1 transition cursor-pointer ${
-              activeModule === 'quiz' || activeModule === 'dojo'
+              activeModule === 'quiz' || activeModule === 'dojo' || mobileMenuType === 'latihan'
                 ? 'text-[#c84b31] dark:text-[#e05d44] font-bold' 
                 : 'text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917]'
             }`}
           >
             <Swords className="w-5 h-5 mb-1" />
-            <span className="text-[11px] font-sans">
-              {activeModule === 'dojo' ? 'Dojo' : 'Latihan'}
+            <span className="text-[11px] font-sans flex items-center gap-0.5">
+              <span>{activeModule === 'dojo' ? 'Dojo' : 'Latihan'}</span>
+              <span className="text-[9px] opacity-70">▾</span>
             </span>
           </button>
 
           {/* Tab 4: Pustaka (Kamus Kanji, Kosakata, Tata Bahasa) */}
           <button
             type="button"
-            onClick={() => {
-              if (activeModule !== 'kanji' && activeModule !== 'vocab' && activeModule !== 'grammar') {
-                onSelectModule('kanji');
-              } else if (activeModule === 'kanji') {
-                onSelectModule('vocab');
-              } else if (activeModule === 'vocab') {
-                onSelectModule('grammar');
-              } else {
-                onSelectModule('kanji');
-              }
-            }}
+            onClick={() => setMobileMenuType(prev => prev === 'pustaka' ? null : 'pustaka')}
             className={`flex-1 flex flex-col items-center py-1 transition cursor-pointer ${
-              activeModule === 'kanji' || activeModule === 'vocab' || activeModule === 'grammar'
+              activeModule === 'kanji' || activeModule === 'vocab' || activeModule === 'grammar' || mobileMenuType === 'pustaka'
                 ? 'text-[#c84b31] dark:text-[#e05d44] font-bold' 
                 : 'text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917]'
             }`}
           >
             <BookOpen className="w-5 h-5 mb-1" />
-            <span className="text-[11px] font-sans">
-              {activeModule === 'kanji' ? 'Kanji' : activeModule === 'vocab' ? 'Kosakata' : activeModule === 'grammar' ? 'Tata Bahasa' : 'Pustaka'}
+            <span className="text-[11px] font-sans flex items-center gap-0.5">
+              <span>{activeModule === 'kanji' ? 'Kanji' : activeModule === 'vocab' ? 'Kosakata' : activeModule === 'grammar' ? 'Tata Bahasa' : 'Pustaka'}</span>
+              <span className="text-[9px] opacity-70">▾</span>
             </span>
           </button>
         </nav>

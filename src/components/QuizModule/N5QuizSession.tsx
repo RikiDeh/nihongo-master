@@ -106,6 +106,34 @@ export const N5QuizSession: React.FC<N5QuizSessionProps> = ({
     }
   };
 
+  // Keyboard shortcut listener (1-4 to select option, Enter/Space to proceed)
+  React.useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // Don't intercept if user is typing in an input/textarea
+      if (['INPUT', 'TEXTAREA'].includes((e.target as HTMLElement)?.tagName)) {
+        return;
+      }
+
+      if (!isAnswered) {
+        if (['1', '2', '3', '4'].includes(e.key)) {
+          const idx = parseInt(e.key, 10) - 1;
+          if (idx >= 0 && idx < currentQ.options.length) {
+            e.preventDefault();
+            handleSelectOption(idx);
+          }
+        }
+      } else {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          handleNext();
+        }
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isAnswered, currentQ, currentIndex, questions.length, correctCount, userAnswers]);
+
   if (!currentQ) return null;
 
   const isCurrentCorrect = selectedOption === currentQ.correctIndex;
@@ -271,6 +299,7 @@ export const N5QuizSession: React.FC<N5QuizSessionProps> = ({
               className="px-5 py-2.5 rounded-lg bg-[#c84b31] dark:bg-[#e05d44] hover:bg-[#b03f27] text-white font-medium text-xs sm:text-sm flex items-center gap-2 shadow-xs transition cursor-pointer active:translate-y-px"
             >
               <span>{currentIndex + 1 < questions.length ? 'Soal Berikutnya' : 'Rangkuman Ujian'}</span>
+              <kbd className="hidden sm:inline-block px-1.5 py-0.5 rounded bg-black/20 text-[10px] font-mono">Enter ↵</kbd>
               <ArrowRight className="w-4 h-4" />
             </button>
           </div>

@@ -342,8 +342,17 @@ export const KanaSelector: React.FC<KanaSelectorProps> = ({ onStartQuiz }) => {
 
       {/* VIEW 1: GOJUUON 50-SOUND ORTHODOX MATRIX TABLE */}
       {categoryView === 'gojuuon' && (
-        <div className="bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] rounded-xl p-4 sm:p-6 shadow-xs mb-8 overflow-x-auto">
-          <div className="min-w-[620px]">
+        <div className="bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] rounded-xl p-3 sm:p-6 shadow-xs mb-8 overflow-hidden">
+          {/* Mobile scroll hint */}
+          <div className="flex sm:hidden items-center justify-between pb-2 mb-2 border-b border-[#e7e5e4]/60 dark:border-[#27272a]/60 text-[11px] font-mono text-[#78716c] dark:text-[#a1a1aa]">
+            <span>Tabel 50 Bunyi (五十音図)</span>
+            <span className="flex items-center gap-1 text-[#c84b31] dark:text-[#e05d44] font-medium">
+              Geser ⟷
+            </span>
+          </div>
+
+          <div className="overflow-x-auto pb-2 -mx-1 px-1">
+            <div className="min-w-[560px] sm:min-w-[620px]">
             {/* Table Header: Vowel Columns [A, I, U, E, O] */}
             <div className="grid grid-cols-6 gap-2 mb-2 pb-2 border-b border-[#e7e5e4] dark:border-[#27272a] text-center font-mono text-xs font-bold text-[#78716c] dark:text-[#a1a1aa]">
               <div className="text-left font-jp text-xs uppercase text-[#1c1917] dark:text-[#f4f4f5] flex items-center">
@@ -482,6 +491,7 @@ export const KanaSelector: React.FC<KanaSelectorProps> = ({ onStartQuiz }) => {
                 </div>
               )}
             </div>
+          </div>
           </div>
         </div>
       )}
