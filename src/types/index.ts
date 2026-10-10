@@ -107,6 +107,7 @@ export interface MultipleChoiceQuestion {
   explanation: string;
   itemId?: string; // ID item sumber (Kanji/Vocab) untuk pelacakan titik lemah
   vectorType?: 'phonetic' | 'semantic' | 'symbol' | 'listening';
+  mondaiType?: 'kanji-yomi' | 'hyouki' | 'bunmyaku-kitei' | 'bunpou' | 'choukai';
 }
 
 export interface QuizHistoryEntry {

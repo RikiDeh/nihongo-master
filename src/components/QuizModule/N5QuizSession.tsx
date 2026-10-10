@@ -7,6 +7,7 @@ interface N5QuizSessionProps {
   title: string;
   categoryBadge: string;
   questions: MultipleChoiceQuestion[];
+  durationMinutes?: number;
   onFinishQuiz: (score: { total: number; correct: number; questions: MultipleChoiceQuestion[]; userAnswers: (number | null)[] }) => void;
   onExit: () => void;
 }
@@ -15,6 +16,7 @@ export const N5QuizSession: React.FC<N5QuizSessionProps> = ({
   title,
   categoryBadge,
   questions,
+  durationMinutes,
   onFinishQuiz,
   onExit,
 }) => {
@@ -23,9 +25,55 @@ export const N5QuizSession: React.FC<N5QuizSessionProps> = ({
   const [isAnswered, setIsAnswered] = useState(false);
   const [correctCount, setCorrectCount] = useState(0);
   const [userAnswers, setUserAnswers] = useState<(number | null)[]>([]);
+  const [timeLeft, setTimeLeft] = useState<number | null>(
+    durationMinutes ? durationMinutes * 60 : null
+  );
+
+  // Timer countdown
+  React.useEffect(() => {
+    if (timeLeft === null) return;
+    if (timeLeft <= 0) {
+      // Time is up, finish quiz automatically
+      const filledAnswers = [...userAnswers];
+      while (filledAnswers.length < questions.length) {
+        filledAnswers.push(null);
+      }
+      onFinishQuiz({
+        total: questions.length,
+        correct: correctCount,
+        questions,
+        userAnswers: filledAnswers,
+      });
+      return;
+    }
+
+    const timer = setInterval(() => {
+      setTimeLeft(prev => (prev !== null && prev > 0 ? prev - 1 : 0));
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, [timeLeft, questions, correctCount, userAnswers, onFinishQuiz]);
 
   const currentQ = questions[currentIndex];
   const progressPercent = Math.round(((currentIndex) / questions.length) * 100);
+
+  const getMondaiBadge = (q: MultipleChoiceQuestion) => {
+    if (q.mondaiType) {
+      switch (q.mondaiType) {
+        case 'kanji-yomi': return { label: 'Mondai 1: Kanji Yomi', color: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30' };
+        case 'hyouki': return { label: 'Mondai 2: Hyouki', color: 'bg-indigo-500/20 text-indigo-300 border-indigo-500/30' };
+        case 'bunmyaku-kitei': return { label: 'Mondai 3: Kosakata Rumpang', color: 'bg-amber-500/20 text-amber-300 border-amber-500/30' };
+        case 'bunpou': return { label: 'Mondai 4: Tata Bahasa', color: 'bg-purple-500/20 text-purple-300 border-purple-500/30' };
+        case 'choukai': return { label: 'Mondai 5: Choukai', color: 'bg-cyan-500/20 text-cyan-300 border-cyan-500/30' };
+      }
+    }
+    if (q.vectorType === 'listening') {
+      return { label: 'Mondai 5: Choukai', color: 'bg-cyan-500/20 text-cyan-300 border-cyan-500/30' };
+    }
+    return null;
+  };
+
+  const mondaiBadge = currentQ ? getMondaiBadge(currentQ) : null;
 
   const handleSelectOption = (index: number) => {
     if (isAnswered) return;
@@ -70,22 +118,38 @@ export const N5QuizSession: React.FC<N5QuizSessionProps> = ({
     <div className="w-full max-w-3xl mx-auto px-4 py-8 animate-fadeIn">
       {/* Top Header Bar */}
       <div className="flex items-center justify-between mb-4">
-        <div className="flex items-center gap-2">
+        <div className="flex flex-wrap items-center gap-2">
           <span className="px-3 py-1 rounded-xl bg-slate-800 text-rose-400 font-bold text-xs border border-slate-700">
             {categoryBadge}
           </span>
+          {mondaiBadge && (
+            <span className={`px-2.5 py-1 rounded-xl font-bold text-xs border animate-pop ${mondaiBadge.color}`}>
+              {mondaiBadge.label}
+            </span>
+          )}
           <span className="text-sm font-semibold text-slate-300">
             Soal {currentIndex + 1} dari {questions.length}
           </span>
           {title && <span className="text-xs text-slate-400 font-medium hidden sm:inline">• {title}</span>}
         </div>
 
-        <button
-          onClick={onExit}
-          className="text-xs text-slate-400 hover:text-rose-400 transition cursor-pointer font-medium"
-        >
-          Keluar Kuis ✕
-        </button>
+        <div className="flex items-center gap-3">
+          {timeLeft !== null && (
+            <div className={`px-3 py-1 rounded-xl border text-xs font-mono font-bold flex items-center gap-1.5 ${
+              timeLeft < 300 
+                ? 'bg-rose-500/20 text-rose-300 border-rose-500/40 animate-pulse' 
+                : 'bg-slate-900 text-amber-300 border-slate-800'
+            }`}>
+              <span>⏱️ {Math.floor(timeLeft / 60)}:{(timeLeft % 60).toString().padStart(2, '0')}</span>
+            </div>
+          )}
+          <button
+            onClick={onExit}
+            className="text-xs text-slate-400 hover:text-rose-400 transition cursor-pointer font-medium"
+          >
+            Keluar Kuis ✕
+          </button>
+        </div>
       </div>
 
       {/* Progress Bar */}
@@ -100,6 +164,13 @@ export const N5QuizSession: React.FC<N5QuizSessionProps> = ({
       <div className="bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8 shadow-xl mb-6 relative overflow-hidden">
         {/* Category Accent */}
         <div className="text-center mb-6">
+          {mondaiBadge && (
+            <div className="inline-block mb-3">
+              <span className={`px-3 py-1 rounded-xl text-xs font-bold border ${mondaiBadge.color}`}>
+                [{mondaiBadge.label}]
+              </span>
+            </div>
+          )}
           {currentQ.vectorType === 'listening' ? (
             <div className="mb-4">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs font-bold mb-3">

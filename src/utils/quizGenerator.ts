@@ -576,7 +576,221 @@ export function generateQuestionFromItem(
 }
 
 // ============================================================================
-// 4. GENERATORS BY CATEGORY
+// 4. AUTHENTIC JEES JLPT IN-CONTEXT QUESTION GENERATORS (SPK #20)
+// ============================================================================
+
+/**
+ * Mondai 1: Kanji Yomi (Bacaan Kanji dalam Kalimat)
+ * Format Soal: Ambil kalimat exampleSentence.jp. Bungkus kata kanji target dengan tanda kurung tebal: 【漢字】
+ * Prompt: __ の言葉（漢字）の読み方として最も適切なものを一つ選んでください。
+ * Opsi: 4 bacaan kana unik diproteksi jebakan fonetik (dakuten, vokal panjang, sokuon).
+ */
+export function createMondai1KanjiYomiQuestion(
+  v: VocabItem,
+  level: JLPTLevel
+): MultipleChoiceQuestion {
+  const sameLevelVocab = VOCAB_DATA.filter(item => item.level === level && item.id !== v.id);
+  const globalVocab = VOCAB_DATA.filter(item => item.id !== v.id);
+
+  const word = v.kanji && v.kanji !== v.kana ? v.kanji : v.kana;
+  const sentenceJp = v.exampleSentence?.jp || `${word}について考えています。`;
+
+  // Bungkus target dengan 【...】
+  const sentenceWithTarget = sentenceJp.includes(word)
+    ? sentenceJp.replace(word, `【${word}】`)
+    : `【${word}】`;
+
+  const prompt = `${sentenceWithTarget}\n__ の言葉（漢字）の読み方として最も適切なものを一つ選んでください。`;
+  const correctAnswer = v.kana;
+  const phoneticTraps = generatePhoneticTraps(correctAnswer);
+
+  const candidateDistractors = [
+    ...phoneticTraps,
+    ...sameLevelVocab.map(item => item.kana)
+  ];
+  const fallbackDistractors = globalVocab.map(item => item.kana);
+
+  const { options, correctIndex } = buildOptions(correctAnswer, candidateDistractors, fallbackDistractors);
+
+  return {
+    id: `jlpt-m1-${v.id}-${Date.now()}-${Math.random().toString(36).substr(2, 4)}`,
+    category: 'vocab',
+    level,
+    itemId: v.id,
+    vectorType: 'phonetic',
+    mondaiType: 'kanji-yomi',
+    question: prompt,
+    audioText: sentenceJp,
+    options,
+    correctIndex,
+    explanation: `Kata 【${word}】 dibaca 「${v.kana}」 (${v.romaji}) yang berarti "${sanitizeIndonesianMeaning(v.meaningId)}".\nKalimat: ${v.exampleSentence ? `"${v.exampleSentence.jp}" (${sanitizeIndonesianMeaning(v.exampleSentence.id)})` : `"${sentenceJp}"`}`,
+  };
+}
+
+/**
+ * Mondai 2: Hyouki / Notasi (Ejaan Kanji dalam Kalimat)
+ * Format Soal: Kalimat contoh dengan kata target ditulis dalam kana: 【かな】
+ * Prompt: __ の言葉を漢字で書くとき、最も適切なものを一つ選んでください。
+ * Opsi: 4 kanji berlevel sama / berkarakter mirip.
+ */
+export function createMondai2HyoukiQuestion(
+  v: VocabItem,
+  level: JLPTLevel
+): MultipleChoiceQuestion {
+  const sameLevelVocabWithKanji = VOCAB_DATA.filter(
+    item => item.level === level && item.id !== v.id && !!item.kanji && item.kanji !== item.kana
+  );
+  const globalVocabWithKanji = VOCAB_DATA.filter(
+    item => item.id !== v.id && !!item.kanji && item.kanji !== item.kana
+  );
+
+  const kanjiTarget = v.kanji || v.kana;
+  const sentenceJp = v.exampleSentence?.jp || `${kanjiTarget}について考えています。`;
+
+  // Kalimat contoh dengan target ditulis dalam kana dibungkus kurung tebal
+  const sentenceWithKana = sentenceJp.includes(kanjiTarget)
+    ? sentenceJp.replace(kanjiTarget, `【${v.kana}】`)
+    : sentenceJp.includes(v.kana)
+      ? sentenceJp.replace(v.kana, `【${v.kana}】`)
+      : `【${v.kana}】`;
+
+  const prompt = `${sentenceWithKana}\n__ の言葉を漢字で書くとき、最も適切なものを一つ選んでください。`;
+  const correctAnswer = kanjiTarget;
+
+  const candidateDistractors = sameLevelVocabWithKanji.map(item => item.kanji!);
+  const fallbackDistractors = globalVocabWithKanji.map(item => item.kanji!);
+
+  const { options, correctIndex } = buildOptions(correctAnswer, candidateDistractors, fallbackDistractors);
+
+  return {
+    id: `jlpt-m2-${v.id}-${Date.now()}-${Math.random().toString(36).substr(2, 4)}`,
+    category: 'kanji',
+    level,
+    itemId: v.id,
+    vectorType: 'symbol',
+    mondaiType: 'hyouki',
+    question: prompt,
+    audioText: sentenceJp,
+    options,
+    correctIndex,
+    explanation: `Kata 「${v.kana}」 ditulis dengan Kanji 【${kanjiTarget}】 yang berarti "${sanitizeIndonesianMeaning(v.meaningId)}".\nKalimat: ${v.exampleSentence ? `"${v.exampleSentence.jp}" (${sanitizeIndonesianMeaning(v.exampleSentence.id)})` : `"${sentenceJp}"`}`,
+  };
+}
+
+/**
+ * Mondai 3: Bunmyaku Kitei (Kosakata Rumpang Kontekstual - Cloze Sentence)
+ * Format Soal: Kosongkan kata target di dalam kalimat contoh menjadi tanda rumpang
+ * Prompt: Pilihlah kata yang paling tepat untuk mengisi tanda kurung rumpang.
+ * Opsi: 4 kosakata selevel yang gramatikal namun berbeda nuansa/arti.
+ */
+export function createMondai3BunmyakuKiteiQuestion(
+  v: VocabItem,
+  level: JLPTLevel
+): MultipleChoiceQuestion {
+  const sameLevelVocab = VOCAB_DATA.filter(item => item.level === level && item.id !== v.id);
+  const globalVocab = VOCAB_DATA.filter(item => item.id !== v.id);
+
+  const word = v.kanji || v.kana;
+  const sentenceJp = v.exampleSentence?.jp || `${word}について考えています。`;
+
+  const clozeSentence = sentenceJp.includes(word)
+    ? sentenceJp.replace(word, '【　　】')
+    : sentenceJp.includes(v.kana)
+      ? sentenceJp.replace(v.kana, '【　　】')
+      : `【　　】`;
+
+  const prompt = `${clozeSentence}\n（　）に入れるのに最も適切な言葉を一つ選んでください。`;
+  const correctAnswer = word;
+
+  const candidateDistractors = sameLevelVocab.map(item => item.kanji || item.kana);
+  const fallbackDistractors = globalVocab.map(item => item.kanji || item.kana);
+
+  const { options, correctIndex } = buildOptions(correctAnswer, candidateDistractors, fallbackDistractors);
+
+  return {
+    id: `jlpt-m3-${v.id}-${Date.now()}-${Math.random().toString(36).substr(2, 4)}`,
+    category: 'vocab',
+    level,
+    itemId: v.id,
+    vectorType: 'semantic',
+    mondaiType: 'bunmyaku-kitei',
+    question: prompt,
+    audioText: sentenceJp,
+    options,
+    correctIndex,
+    explanation: `Jawaban tepat: 【${word}】 (${v.kana}).\nArti kalimat: "${v.exampleSentence ? sanitizeIndonesianMeaning(v.exampleSentence.id) : sanitizeIndonesianMeaning(v.meaningId)}".`,
+  };
+}
+
+/**
+ * Mondai 4: Bunpou Cloze (Tata Bahasa & Partikel Rumpang)
+ * Format Soal: Kalimat rumpang dari kumpulan kurikulum tata bahasa / curated grammar
+ * Prompt: Pilihlah pola tata bahasa/konjugasi yang paling tepat.
+ * Opsi: 4 variasi konjugasi / partikel pembeda nuansa.
+ */
+export function createMondai4BunpouClozeQuestion(
+  level: JLPTLevel
+): MultipleChoiceQuestion {
+  // Ambil dari curated pool yang sesuai level
+  let curatedList: MultipleChoiceQuestion[] = [];
+  switch (level) {
+    case 'N5': curatedList = [...CURATED_GRAMMAR_QUIZ]; break;
+    case 'N4': curatedList = [...CURATED_N4_GRAMMAR_QUIZ]; break;
+    case 'N3': curatedList = [...CURATED_N3_GRAMMAR_QUIZ]; break;
+    case 'N2': curatedList = [...CURATED_N2_GRAMMAR_QUIZ]; break;
+    case 'N1': curatedList = [...CURATED_N1_GRAMMAR_QUIZ]; break;
+  }
+
+  // Jika curated list ada, adaptasikan ke format standar rumpang
+  if (curatedList.length > 0) {
+    const raw = curatedList[Math.floor(Math.random() * curatedList.length)];
+    const cleanPrompt = raw.question
+      .replace(/【_+】/g, '【　　】')
+      .replace(/Pilihlah partikel yang tepat:\s*/gi, '')
+      .replace(/Pilihlah yang tepat:\s*/gi, '');
+
+    const finalQuestion = cleanPrompt.includes('【　　】')
+      ? `${cleanPrompt}\n（　）に入れるのに最も適切な文法・活用を選んでください。`
+      : `【　　】\n${cleanPrompt}`;
+
+    return {
+      ...raw,
+      id: `jlpt-m4-${raw.id}-${Date.now()}-${Math.random().toString(36).substr(2, 4)}`,
+      mondaiType: 'bunpou',
+      question: finalQuestion,
+    };
+  }
+
+  // Procedural fallback dari GRAMMAR_DATA
+  const grammarItems = GRAMMAR_DATA.filter(g => g.level === level);
+  const g = grammarItems[Math.floor(Math.random() * grammarItems.length)] || GRAMMAR_DATA[0];
+  const ex = g.examples[0] || { jp: '雨が降ったら、行きません。', romaji: '', id: 'Jika hujan, tidak pergi.' };
+  
+  const titleClean = g.title.replace(/[~〜()a-zA-Z\s]/g, '').trim() || 'たら';
+  const cloze = ex.jp.includes(titleClean)
+    ? ex.jp.replace(titleClean, '【　　】')
+    : `雨が【　　】、出かけません。`;
+
+  const otherGrammar = GRAMMAR_DATA.filter(o => o.level === level && o.id !== g.id);
+  const candidateDistractors = otherGrammar.map(o => o.title.replace(/[~〜()a-zA-Z\s]/g, '').trim()).filter(Boolean);
+  const { options, correctIndex } = buildOptions(titleClean, candidateDistractors, ['たら', 'なら', 'ば', 'と']);
+
+  return {
+    id: `jlpt-m4-${g.id}-${Date.now()}-${Math.random().toString(36).substr(2, 4)}`,
+    category: 'grammar',
+    level,
+    itemId: g.id,
+    mondaiType: 'bunpou',
+    question: `${cloze}\n（　）に入れるのに最も適切な文法・活用を選んでください。`,
+    audioText: ex.jp,
+    options,
+    correctIndex,
+    explanation: `Pola: 【${g.title}】 (${g.structure}). Makna: "${g.meaningId}". ${g.explanationId}`,
+  };
+}
+
+// ============================================================================
+// 5. GENERATORS BY CATEGORY
 // ============================================================================
 
 export function generateDynamicKanjiQuiz(
@@ -633,7 +847,6 @@ export function generateDynamicGrammarQuiz(
   level: JLPTLevel,
   count: number = 10
 ): MultipleChoiceQuestion[] {
-  // Use curated grammar pool as base, supplemented with procedural grammar questions
   let curatedList: MultipleChoiceQuestion[] = [];
   switch (level) {
     case 'N5': curatedList = [...CURATED_GRAMMAR_QUIZ]; break;
@@ -643,7 +856,6 @@ export function generateDynamicGrammarQuiz(
     case 'N1': curatedList = [...CURATED_N1_GRAMMAR_QUIZ]; break;
   }
 
-  // Also build procedural questions from GRAMMAR_DATA for this level
   const grammarItems = GRAMMAR_DATA.filter(g => g.level === level);
   const otherGrammar = GRAMMAR_DATA.filter(g => g.level === level);
 
@@ -658,6 +870,7 @@ export function generateDynamicGrammarQuiz(
       category: 'grammar',
       level,
       itemId: g.id,
+      mondaiType: 'bunpou',
       question: `Pola tata bahasa 【${g.title}】 digunakan untuk menyatakan fungsi apa?`,
       options,
       correctIndex,
@@ -675,36 +888,97 @@ export function generateDynamicGrammarQuiz(
   return result;
 }
 
+/**
+ * Simulasi Ujian Resmi JLPT Berbasis Kalimat In-Context (TIKET 20.1 & TIKET 20.3)
+ * Menjamin 100% soal berakar dari format kalimat utuh (In-Context Cloze Test)
+ */
 export function generateDynamicMockExam(
   level: JLPTLevel,
-  count: number = 15
+  count: number = 20
 ): MultipleChoiceQuestion[] {
-  // Balanced mock exam distribution:
-  // ~35% Kanji, ~35% Vocab (including Listening), ~30% Grammar
-  const kanjiCount = Math.max(2, Math.round(count * 0.35));
-  const vocabCount = Math.max(2, Math.round(count * 0.35));
-  const grammarCount = Math.max(1, count - kanjiCount - vocabCount);
+  // Ambil vocabulary ber-exampleSentence untuk Mondai 1, 2, 3
+  const vocabPool = VOCAB_DATA.filter(
+    v => v.level === level && !!v.exampleSentence?.jp && !!v.kanji && v.kanji !== v.kana
+  );
+  const fallbackVocabPool = VOCAB_DATA.filter(v => v.level === level && !!v.exampleSentence?.jp);
+  const finalPool = vocabPool.length >= 10 ? vocabPool : fallbackVocabPool;
+  const shuffledVocab = fisherYatesShuffle(finalPool.length > 0 ? finalPool : VOCAB_DATA.filter(v => v.level === level));
 
-  const kanjiQuestions = generateDynamicKanjiQuiz(level, kanjiCount);
-  const vocabQuestions = generateDynamicVocabQuiz(level, vocabCount);
-  const grammarQuestions = generateDynamicGrammarQuiz(level, grammarCount);
+  let m1Count: number;
+  let m2Count: number;
+  let m3Count: number;
+  let m4Count: number;
 
-  return fisherYatesShuffle([...kanjiQuestions, ...vocabQuestions, ...grammarQuestions]);
+  if (count <= 10) {
+    // ⚡ Mini Mock (10 Soal): 3 M1, 3 M2, 2 M3, 2 M4
+    m1Count = 3;
+    m2Count = 3;
+    m3Count = 2;
+    m4Count = 2;
+  } else if (count <= 20) {
+    // 📝 Standar JLPT (20 Soal): 5 M1, 5 M2, 5 M3, 5 M4
+    m1Count = 5;
+    m2Count = 5;
+    m3Count = 5;
+    m4Count = count - 15;
+  } else {
+    // 🏆 Tryout Penuh (25 Soal atau lebih): Pembagian proporsional
+    m1Count = Math.round(count * 0.28);
+    m2Count = Math.round(count * 0.24);
+    m3Count = Math.round(count * 0.24);
+    m4Count = count - (m1Count + m2Count + m3Count);
+  }
+
+  const questions: MultipleChoiceQuestion[] = [];
+  let vocabIdx = 0;
+
+  // Mondai 1: Kanji Yomi
+  for (let i = 0; i < m1Count; i++) {
+    const v = shuffledVocab[vocabIdx % shuffledVocab.length];
+    vocabIdx++;
+    questions.push(createMondai1KanjiYomiQuestion(v, level));
+  }
+
+  // Mondai 2: Hyouki
+  for (let i = 0; i < m2Count; i++) {
+    const v = shuffledVocab[vocabIdx % shuffledVocab.length];
+    vocabIdx++;
+    questions.push(createMondai2HyoukiQuestion(v, level));
+  }
+
+  // Mondai 3: Bunmyaku Kitei
+  for (let i = 0; i < m3Count; i++) {
+    const v = shuffledVocab[vocabIdx % shuffledVocab.length];
+    vocabIdx++;
+    questions.push(createMondai3BunmyakuKiteiQuestion(v, level));
+  }
+
+  // Mondai 4: Bunpou Cloze
+  for (let i = 0; i < m4Count; i++) {
+    questions.push(createMondai4BunpouClozeQuestion(level));
+  }
+
+  // Pastikan tepat count soal
+  return questions.slice(0, count);
 }
 
 // ============================================================================
-// 5. GHOST / WEAK ITEMS REVIEW ENGINE
+// 6. GHOST / WEAK ITEMS REVIEW ENGINE (TIKET 20.2)
 // ============================================================================
 
 export function generateWeakPointsQuiz(
-  count: number = 10
+  count: number = 10,
+  specificFailedIds?: string[]
 ): MultipleChoiceQuestion[] {
-  const failedIds = getFailedItemIds();
-  if (failedIds.length === 0) return [];
+  const targetIds = specificFailedIds && specificFailedIds.length > 0 
+    ? specificFailedIds 
+    : getFailedItemIds();
 
-  // Find all items in KANJI_DATA and VOCAB_DATA that match failedIds
-  const matchedKanji = KANJI_DATA.filter(k => failedIds.includes(k.id));
-  const matchedVocab = VOCAB_DATA.filter(v => failedIds.includes(v.id));
+  if (targetIds.length === 0) return [];
+
+  // Find all items in KANJI_DATA and VOCAB_DATA that match targetIds
+  const matchedKanji = KANJI_DATA.filter(k => targetIds.includes(k.id));
+  const matchedVocab = VOCAB_DATA.filter(v => targetIds.includes(v.id));
 
   const allMatched: (KanjiItem | VocabItem)[] = [
     ...matchedKanji,
@@ -712,7 +986,6 @@ export function generateWeakPointsQuiz(
   ];
 
   if (allMatched.length === 0) {
-    // If IDs were from another source, fallback
     return [];
   }
 
@@ -726,7 +999,7 @@ export function generateWeakPointsQuiz(
   ];
 
   for (let i = 0; i < Math.min(count, allMatched.length * 4); i++) {
-    const item = shuffledMatched[i % shuffledMatched.length] as (KanjiItem | VocabItem);
+    const item = shuffledMatched[i % shuffledMatched.length];
     const vector = vectors[i % vectors.length];
     questions.push(generateQuestionFromItem(item, item.level, vector));
   }

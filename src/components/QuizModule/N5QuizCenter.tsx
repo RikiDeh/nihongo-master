@@ -53,25 +53,34 @@ export const N5QuizCenter: React.FC<QuizCenterProps> = ({ initialLevel }) => {
     return unsubscribe;
   }, []);
 
-  const startQuiz = (category: N5QuizCategory) => {
+  const [sessionDurationMinutes, setSessionDurationMinutes] = useState<number | undefined>(undefined);
+
+  const startQuiz = (category: N5QuizCategory, countOverride?: number) => {
     setSelectedCategory(category);
+    const count = countOverride || questionCount;
     let questions: MultipleChoiceQuestion[] = [];
 
     switch (category) {
       case 'kanji':
-        questions = generateDynamicKanjiQuiz(selectedLevel, questionCount);
+        questions = generateDynamicKanjiQuiz(selectedLevel, count);
+        setSessionDurationMinutes(undefined);
         break;
       case 'vocab':
-        questions = generateDynamicVocabQuiz(selectedLevel, questionCount);
+        questions = generateDynamicVocabQuiz(selectedLevel, count);
+        setSessionDurationMinutes(undefined);
         break;
       case 'grammar':
-        questions = generateDynamicGrammarQuiz(selectedLevel, questionCount);
+        questions = generateDynamicGrammarQuiz(selectedLevel, count);
+        setSessionDurationMinutes(undefined);
         break;
       case 'mock-exam':
-        questions = generateDynamicMockExam(selectedLevel, questionCount);
+        questions = generateDynamicMockExam(selectedLevel, count);
+        // Countdown timer aktif pada mode Simulasi Ujian (misal: 25 menit untuk 25 soal)
+        setSessionDurationMinutes(count >= 25 ? 25 : count === 20 ? 20 : 10);
         break;
       case 'weak-points':
-        questions = generateWeakPointsQuiz(questionCount);
+        questions = generateWeakPointsQuiz(count);
+        setSessionDurationMinutes(undefined);
         break;
     }
 
@@ -80,6 +89,14 @@ export const N5QuizCenter: React.FC<QuizCenterProps> = ({ initialLevel }) => {
     }
 
     setActiveQuestions(questions);
+    setStage('session');
+  };
+
+  const startRemediationSession = (failedQuestions: MultipleChoiceQuestion[]) => {
+    setSelectedCategory('weak-points');
+    setSessionDurationMinutes(undefined);
+    // Langsung buat sesi kuis baru dari butir-butir soal yang tadi salah
+    setActiveQuestions(failedQuestions);
     setStage('session');
   };
 
@@ -182,13 +199,13 @@ export const N5QuizCenter: React.FC<QuizCenterProps> = ({ initialLevel }) => {
               </button>
             </div>
 
-            {/* Question Count Selector (Tiket 9.3) */}
+            {/* Question Count & Simulation Mode Selector (Tiket 20.3) */}
             <div className="flex flex-wrap items-center justify-center gap-2 mb-2">
-              <span className="text-xs font-bold text-slate-500 mr-1 uppercase tracking-wider">Durasi Sesi:</span>
+              <span className="text-xs font-bold text-slate-500 mr-1 uppercase tracking-wider">Mode & Durasi:</span>
               {[
-                { count: 10, label: '⚡ 10 Soal (Latihan Kilat)' },
-                { count: 25, label: '📝 25 Soal (Standar Ujian)' },
-                { count: 50, label: '🏆 50 Soal (Maraton / Tryout Penuh)' },
+                { count: 10, label: '⚡ Mini Mock (10 Soal)' },
+                { count: 20, label: '📝 Standar JLPT (20 Soal)' },
+                { count: 25, label: '🏆 Tryout Penuh (25 Soal • 25 Menit)' },
               ].map(({ count, label }) => (
                 <button
                   key={count}
@@ -411,6 +428,7 @@ export const N5QuizCenter: React.FC<QuizCenterProps> = ({ initialLevel }) => {
           title={getCategoryTitle(selectedCategory)}
           categoryBadge={getCategoryBadge(selectedCategory)}
           questions={activeQuestions}
+          durationMinutes={sessionDurationMinutes}
           onFinishQuiz={(result) => {
             // Simpan riwayat kuis
             saveQuizHistory({
@@ -445,8 +463,10 @@ export const N5QuizCenter: React.FC<QuizCenterProps> = ({ initialLevel }) => {
           correct={quizResults.correct}
           questions={quizResults.questions}
           userAnswers={quizResults.userAnswers}
+          level={selectedLevel}
           onRetry={() => startQuiz(selectedCategory)}
           onBackToMenu={() => setStage('menu')}
+          onDrillFailedItems={(failedQuestions) => startRemediationSession(failedQuestions)}
         />
       )}
     </div>

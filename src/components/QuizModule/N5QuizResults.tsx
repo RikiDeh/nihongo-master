@@ -1,6 +1,6 @@
 import React from 'react';
-import { MultipleChoiceQuestion } from '../../types';
-import { Award, RotateCw, BookOpen, Volume2, ArrowLeft } from 'lucide-react';
+import { MultipleChoiceQuestion, JLPTLevel } from '../../types';
+import { Award, RotateCw, BookOpen, Volume2, ArrowLeft, Flame } from 'lucide-react';
 import { speakJapanese } from '../../utils/audio';
 
 interface N5QuizResultsProps {
@@ -9,8 +9,10 @@ interface N5QuizResultsProps {
   correct: number;
   questions: MultipleChoiceQuestion[];
   userAnswers: (number | null)[];
+  level?: JLPTLevel;
   onRetry: () => void;
   onBackToMenu: () => void;
+  onDrillFailedItems?: (failedQuestions: MultipleChoiceQuestion[]) => void;
 }
 
 export const N5QuizResults: React.FC<N5QuizResultsProps> = ({
@@ -19,11 +21,15 @@ export const N5QuizResults: React.FC<N5QuizResultsProps> = ({
   correct,
   questions,
   userAnswers,
+  level = 'N5',
   onRetry,
   onBackToMenu,
+  onDrillFailedItems,
 }) => {
   const percentage = Math.round((correct / total) * 100);
   const isPassed = percentage >= 70;
+  const failedCount = total - correct;
+  const failedQuestions = questions.filter((q, idx) => userAnswers[idx] !== q.correctIndex);
 
   return (
     <div className="w-full max-w-4xl mx-auto px-4 py-8 animate-fadeIn">
@@ -44,7 +50,7 @@ export const N5QuizResults: React.FC<N5QuizResultsProps> = ({
         <div className="inline-block px-4 py-2 rounded-2xl text-xs font-bold border mb-6">
           {isPassed ? (
             <span className="text-emerald-300 bg-emerald-500/10 border-emerald-500/30 px-3 py-1 rounded-xl">
-              🎉 Luar Biasa! Kamu Memenuhi Standar Kelulusan JLPT N5
+              🎉 Luar Biasa! Kamu Memenuhi Standar Kelulusan JLPT {level}
             </span>
           ) : (
             <span className="text-amber-300 bg-amber-500/10 border-amber-500/30 px-3 py-1 rounded-xl">
@@ -55,6 +61,16 @@ export const N5QuizResults: React.FC<N5QuizResultsProps> = ({
 
         {/* Buttons */}
         <div className="flex flex-wrap items-center justify-center gap-3">
+          {failedCount > 0 && onDrillFailedItems && (
+            <button
+              onClick={() => onDrillFailedItems(failedQuestions)}
+              className="px-5 py-2.5 rounded-2xl bg-gradient-to-r from-amber-500 to-rose-600 hover:from-amber-600 hover:to-rose-700 text-white font-bold text-xs flex items-center gap-2 shadow-lg shadow-amber-500/25 transition cursor-pointer animate-pop"
+            >
+              <Flame className="w-4 h-4 fill-amber-300 text-amber-200" />
+              <span>🔥 Drill Ulang {failedCount} Soal yang Salah</span>
+            </button>
+          )}
+
           <button
             onClick={onRetry}
             className="px-5 py-2.5 rounded-2xl bg-gradient-to-r from-rose-500 to-indigo-600 hover:from-rose-600 hover:to-indigo-700 text-white font-bold text-xs flex items-center gap-2 shadow-lg shadow-rose-500/25 transition cursor-pointer"
