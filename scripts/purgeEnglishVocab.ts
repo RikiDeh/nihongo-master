@@ -1346,6 +1346,14 @@ async function main() {
           item.mnemonic = `Karakter ${item.kanji} (${item.meaningId}) memiliki ${item.strokes} goresan, tersusun dari elemen (${item.radicals.join(', ')}) yang melambangkan konsep intinya.`;
         }
       }
+
+      if (item.examples) {
+        for (const ex of item.examples) {
+          if (ex.meaning.includes('melakukan ') || /^[a-z]/.test(ex.meaning)) {
+            ex.meaning = cleanMeaningString(ex.meaning);
+          }
+        }
+      }
     }
 
     const content = serializeKanjiFile(task.exportName, task.items);

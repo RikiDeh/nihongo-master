@@ -14,7 +14,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["一","亅"],
     mnemonic: 'Karakter 丁 (Street / ward) memiliki 2 goresan, tersusun dari elemen (一, 亅) yang melambangkan konsep intinya.',
     examples: [
-      { word: '丁度', reading: 'ちょうど', meaning: 'just / right / exactly' },
+      { word: '丁度', reading: 'ちょうど', meaning: 'Just / right / exactly' },
       { word: '丁寧', reading: 'ていねい', meaning: 'Sopan / Teliti' },
       { word: '～丁目', reading: '～ちょうめ', meaning: '~ district (of a town / city / block)' },
     ],
@@ -32,8 +32,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["且"],
     mnemonic: 'Karakter 且 (Moreover / also) memiliki 5 goresan, tersusun dari elemen (且) yang melambangkan konsep intinya.',
     examples: [
-      { word: '且つ', reading: 'かつ', meaning: 'yet / and' },
-      { word: '尚且つ', reading: 'なおかつ', meaning: 'besides' },
+      { word: '且つ', reading: 'かつ', meaning: 'Yet / and' },
+      { word: '尚且つ', reading: 'なおかつ', meaning: 'Besides' },
     ],
   },
   {
@@ -49,9 +49,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["世"],
     mnemonic: 'Karakter 世 (Generation / world) memiliki 5 goresan, tersusun dari elemen (世) yang melambangkan konsep intinya.',
     examples: [
-      { word: '世紀', reading: 'せいき', meaning: 'century' },
-      { word: '世間', reading: 'せけん', meaning: 'dunia / masyarakat' },
-      { word: '世の中', reading: 'よのなか', meaning: 'masyarakat / the world' },
+      { word: '世紀', reading: 'せいき', meaning: 'Century' },
+      { word: '世間', reading: 'せけん', meaning: 'Dunia / masyarakat' },
+      { word: '世の中', reading: 'よのなか', meaning: 'Masyarakat / the world' },
     ],
   },
   {
@@ -67,9 +67,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["丘"],
     mnemonic: 'Karakter 丘 (Hill / knoll) memiliki 5 goresan, tersusun dari elemen (丘) yang melambangkan konsep intinya.',
     examples: [
-      { word: '丘', reading: 'おか', meaning: 'hill / height' },
-      { word: '丘陵', reading: 'きゅうりょう', meaning: 'hill' },
-      { word: '砂丘', reading: 'さきゅう', meaning: 'sand dune' },
+      { word: '丘', reading: 'おか', meaning: 'Hill / height' },
+      { word: '丘陵', reading: 'きゅうりょう', meaning: 'Hill' },
+      { word: '砂丘', reading: 'さきゅう', meaning: 'Sand dune' },
     ],
   },
   {
@@ -119,8 +119,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["丹"],
     mnemonic: 'Karakter 丹 (Rust-colored / red) memiliki 4 goresan, tersusun dari elemen (丹) yang melambangkan konsep intinya.',
     examples: [
-      { word: '丹念', reading: 'たんねん', meaning: 'painstaking' },
-      { word: '丹精', reading: 'たんせい', meaning: 'working earnestly' },
+      { word: '丹念', reading: 'たんねん', meaning: 'Painstaking' },
+      { word: '丹精', reading: 'たんせい', meaning: 'Working earnestly' },
       { word: '切支丹', reading: 'キリシタン', meaning: 'Christianity (in feudal Japan)' },
     ],
   },
@@ -137,9 +137,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["亠","土"],
     mnemonic: 'Karakter 主 (Lord / chief) memiliki 5 goresan, tersusun dari elemen (亠, 土) yang melambangkan konsep intinya.',
     examples: [
-      { word: '主義', reading: 'しゅぎ', meaning: 'doctrine / cause / principle' },
-      { word: '主張', reading: 'しゅちょう', meaning: 'claim / insistence / assertion' },
-      { word: '主婦', reading: 'しゅふ', meaning: 'housewife' },
+      { word: '主義', reading: 'しゅぎ', meaning: 'Doktrin / Prinsip / Asas' },
+      { word: '主張', reading: 'しゅちょう', meaning: 'Claim / insistence / assertion' },
+      { word: '主婦', reading: 'しゅふ', meaning: 'Housewife' },
     ],
   },
   {
@@ -155,8 +155,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["井","丶"],
     mnemonic: 'Karakter 丼 (Mangkuk / Semangkuk nasi lauk) memiliki 5 goresan, tersusun dari elemen (井, 丶) yang melambangkan konsep intinya.',
     examples: [
-      { word: '丼', reading: 'どんぶり', meaning: 'porcelain bowl / bowl of rice with food on top' },
-      { word: '牛丼', reading: 'ぎゅうどん', meaning: 'gyudon' },
+      { word: '丼', reading: 'どんぶり', meaning: 'Porcelain bowl / bowl of rice with food on top' },
+      { word: '牛丼', reading: 'ぎゅうどん', meaning: 'Gyudon' },
     ],
   },
   {
@@ -172,9 +172,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["丿","之"],
     mnemonic: 'Karakter 乏 (Destitution / scarce) memiliki 4 goresan, tersusun dari elemen (丿, 之) yang melambangkan konsep intinya.',
     examples: [
-      { word: '欠乏', reading: 'けつぼう', meaning: 'shortage' },
-      { word: '乏しい', reading: 'とぼしい', meaning: 'meager / scarce / hard up' },
-      { word: '窮乏', reading: 'きゅうぼう', meaning: 'poverty' },
+      { word: '欠乏', reading: 'けつぼう', meaning: 'Shortage' },
+      { word: '乏しい', reading: 'とぼしい', meaning: 'Meager / scarce / hard up' },
+      { word: '窮乏', reading: 'きゅうぼう', meaning: 'Poverty' },
     ],
   },
   {
@@ -192,7 +192,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     examples: [
       { word: '乙', reading: 'おつ', meaning: '2nd in rank' },
       { word: '乙女', reading: 'おとめ', meaning: '(young) girl' },
-      { word: '早乙女', reading: 'さおとめ', meaning: 'young female rice planter' },
+      { word: '早乙女', reading: 'さおとめ', meaning: 'Young female rice planter' },
     ],
   },
   {
@@ -208,7 +208,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["𠂉","乙"],
     mnemonic: 'Karakter 乞 (Memohon / Meminta / Mengemis) memiliki 3 goresan, tersusun dari elemen (𠂉, 乙) yang melambangkan konsep intinya.',
     examples: [
-      { word: '乞食', reading: 'こじき', meaning: 'beggar' },
+      { word: '乞食', reading: 'こじき', meaning: 'Beggar' },
       { word: '乞う', reading: 'こう', meaning: 'Memohon / Meminta' },
     ],
   },
@@ -225,7 +225,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["𠂊","日","电"],
     mnemonic: 'Karakter 亀 (Kura-kura / Penyu) memiliki 11 goresan, tersusun dari elemen (𠂊, 日, 电) yang melambangkan konsep intinya.',
     examples: [
-      { word: '亀裂', reading: 'きれつ', meaning: 'crack' },
+      { word: '亀裂', reading: 'きれつ', meaning: 'Crack' },
       { word: '亀', reading: 'かめ', meaning: 'Kura-kura' },
       { word: '海亀', reading: 'うみがめ', meaning: 'Penyu laut' },
     ],
@@ -243,9 +243,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["井"],
     mnemonic: 'Karakter 井 (Well / well crib) memiliki 4 goresan, tersusun dari elemen (井) yang melambangkan konsep intinya.',
     examples: [
-      { word: '井戸', reading: 'いど', meaning: 'water well' },
-      { word: '天井', reading: 'てんじょう', meaning: 'ceiling' },
-      { word: '油井', reading: 'ゆせい', meaning: 'oil well' },
+      { word: '井戸', reading: 'いど', meaning: 'Water well' },
+      { word: '天井', reading: 'てんじょう', meaning: 'Ceiling' },
+      { word: '油井', reading: 'ゆせい', meaning: 'Oil well' },
     ],
   },
   {
@@ -261,9 +261,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["亜"],
     mnemonic: 'Karakter 亜 (Asia) memiliki 7 goresan, tersusun dari elemen (亜) yang melambangkan konsep intinya.',
     examples: [
-      { word: '亜熱帯', reading: 'あねったい', meaning: 'subtropics' },
-      { word: '亜爾加里', reading: 'アルカリ', meaning: 'alkali' },
-      { word: '亜科', reading: 'あか', meaning: 'subfamily' },
+      { word: '亜熱帯', reading: 'あねったい', meaning: 'Subtropics' },
+      { word: '亜爾加里', reading: 'アルカリ', meaning: 'Alkali' },
+      { word: '亜科', reading: 'あか', meaning: 'Subfamily' },
     ],
   },
   {
@@ -279,7 +279,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["亠","口","子"],
     mnemonic: 'Karakter 享 (Enjoy / receive) memiliki 8 goresan, tersusun dari elemen (亠, 口, 子) yang melambangkan konsep intinya.',
     examples: [
-      { word: '享受', reading: 'きょうじゅ', meaning: 'enjoyment / being given' },
+      { word: '享受', reading: 'きょうじゅ', meaning: 'Enjoyment / being given' },
       { word: '享語', reading: 'キョウご', meaning: 'Istilah / kosakata terkait Enjoy / receive' },
     ],
   },
@@ -296,8 +296,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["亠","口","冖","丁"],
     mnemonic: 'Karakter 亭 (Pavilion / restaurant) memiliki 9 goresan, tersusun dari elemen (亠, 口, 冖) yang melambangkan konsep intinya.',
     examples: [
-      { word: '亭主', reading: 'ていしゅ', meaning: 'household head' },
-      { word: '料亭', reading: 'りょうてい', meaning: 'ryotei' },
+      { word: '亭主', reading: 'ていしゅ', meaning: 'Household head' },
+      { word: '料亭', reading: 'りょうてい', meaning: 'Ryotei' },
     ],
   },
   {
@@ -313,8 +313,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["亻","二"],
     mnemonic: 'Karakter 仁 (Humanity / virtue) memiliki 4 goresan, tersusun dari elemen (亻, 二) yang melambangkan konsep intinya.',
     examples: [
-      { word: '仁王', reading: 'におう', meaning: 'two Deva kings' },
-      { word: '仁義', reading: 'じんぎ', meaning: 'humanity and justice (esp. in Confucianism)' },
+      { word: '仁王', reading: 'におう', meaning: 'Two Deva kings' },
+      { word: '仁義', reading: 'じんぎ', meaning: 'Humanity and justice (esp. in Confucianism)' },
     ],
   },
   {
@@ -330,9 +330,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["亻","士"],
     mnemonic: 'Karakter 仕 (Melayani / Bekerja resmi) memiliki 5 goresan, tersusun dari elemen (亻, 士) yang melambangkan konsep intinya.',
     examples: [
-      { word: '仕事', reading: 'しごと', meaning: 'work / job / occupation' },
-      { word: '仕様', reading: 'しよう', meaning: 'way / method / specification' },
-      { word: '仕方', reading: 'しかた', meaning: 'way (of doing something)' },
+      { word: '仕事', reading: 'しごと', meaning: 'Work / job / occupation' },
+      { word: '仕様', reading: 'しよう', meaning: 'Way / method / specification' },
+      { word: '仕方', reading: 'しかた', meaning: 'Way (of doing something)' },
     ],
   },
   {
@@ -348,9 +348,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["亻","山"],
     mnemonic: 'Karakter 仙 (Hermit / wizard) memiliki 5 goresan, tersusun dari elemen (亻, 山) yang melambangkan konsep intinya.',
     examples: [
-      { word: '仙人', reading: 'せんにん', meaning: 'immortal mountain wizard (in Taoism)' },
+      { word: '仙人', reading: 'せんにん', meaning: 'Immortal mountain wizard (in Taoism)' },
       { word: '仙台', reading: 'せんだい', meaning: 'Sendai (city in Miyagi)' },
-      { word: '水仙', reading: 'すいせん', meaning: 'daffodil (esp. Narcissus tazetta var. chinensis)' },
+      { word: '水仙', reading: 'すいせん', meaning: 'Daffodil (esp. Narcissus tazetta var. chinensis)' },
     ],
   },
   {
@@ -366,9 +366,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["以"],
     mnemonic: 'Karakter 以 (Dengan cara / Karena / Mulai dari) memiliki 5 goresan, tersusun dari elemen (以) yang melambangkan konsep intinya.',
     examples: [
-      { word: '以前', reading: 'いぜん', meaning: 'in the past / before' },
-      { word: '以来', reading: 'いらい', meaning: 'since / henceforth' },
-      { word: '以下', reading: 'いか', meaning: 'less than / below' },
+      { word: '以前', reading: 'いぜん', meaning: 'In the past / before' },
+      { word: '以来', reading: 'いらい', meaning: 'Since / henceforth' },
+      { word: '以下', reading: 'いか', meaning: 'Less than / below' },
     ],
   },
   {
@@ -384,9 +384,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["亻","反"],
     mnemonic: 'Karakter 仮 (Sham / temporary) memiliki 6 goresan, tersusun dari elemen (亻, 反) yang melambangkan konsep intinya.',
     examples: [
-      { word: '片仮名', reading: 'かたかな', meaning: 'katakana' },
-      { word: '平仮名', reading: 'ひらがな', meaning: 'hiragana' },
-      { word: '仮定', reading: 'かてい', meaning: 'assumption / supposition / hypothesis' },
+      { word: '片仮名', reading: 'かたかな', meaning: 'Katakana' },
+      { word: '平仮名', reading: 'ひらがな', meaning: 'Hiragana' },
+      { word: '仮定', reading: 'かてい', meaning: 'Assumption / supposition / hypothesis' },
     ],
   },
   {
@@ -403,8 +403,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 仰 (Face-up / look up) memiliki 6 goresan, tersusun dari elemen (亻, 卬) yang melambangkan konsep intinya.',
     examples: [
       { word: '信仰', reading: 'しんこう', meaning: '(religious) faith / belief' },
-      { word: '仰ぐ', reading: 'あおぐ', meaning: 'melakukan look up (to) / melakukan respect / melakukan ask for' },
-      { word: '仰向け', reading: 'あおむけ', meaning: 'facing upward' },
+      { word: '仰ぐ', reading: 'あおぐ', meaning: 'Melihat (up (to)) / Respect / Bertanya (for)' },
+      { word: '仰向け', reading: 'あおむけ', meaning: 'Facing upward' },
     ],
   },
   {
@@ -420,7 +420,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["亻","支"],
     mnemonic: 'Karakter 伎 (Deed / skill) memiliki 6 goresan, tersusun dari elemen (亻, 支) yang melambangkan konsep intinya.',
     examples: [
-      { word: '歌舞伎', reading: 'かぶき', meaning: 'kabuki' },
+      { word: '歌舞伎', reading: 'かぶき', meaning: 'Kabuki' },
       { word: '伎能', reading: 'ぎのう', meaning: 'Kemahiran seni' },
     ],
   },
@@ -437,9 +437,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["亻","犬"],
     mnemonic: 'Karakter 伏 (Prostrated / bend down) memiliki 6 goresan, tersusun dari elemen (亻, 犬) yang melambangkan konsep intinya.',
     examples: [
-      { word: '降伏', reading: 'こうふく', meaning: 'capitulation / surrender / submission' },
-      { word: '起伏', reading: 'きふく', meaning: 'undulation' },
-      { word: '伏兵', reading: 'ふくへい', meaning: 'ambush' },
+      { word: '降伏', reading: 'こうふく', meaning: 'Capitulation / surrender / submission' },
+      { word: '起伏', reading: 'きふく', meaning: 'Undulation' },
+      { word: '伏兵', reading: 'ふくへい', meaning: 'Ambush' },
     ],
   },
   {
@@ -455,8 +455,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["亻","戈"],
     mnemonic: 'Karakter 伐 (Fell / strike) memiliki 6 goresan, tersusun dari elemen (亻, 戈) yang melambangkan konsep intinya.',
     examples: [
-      { word: '伐採', reading: 'ばっさい', meaning: 'felling timber' },
-      { word: '間伐', reading: 'かんばつ', meaning: 'periodic thinning (e.g. forest)' },
+      { word: '伐採', reading: 'ばっさい', meaning: 'Felling timber' },
+      { word: '間伐', reading: 'かんばつ', meaning: 'Periodic thinning (e.g. forest)' },
     ],
   },
   {
@@ -472,8 +472,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["亻","白"],
     mnemonic: 'Karakter 伯 (Chief / count) memiliki 7 goresan, tersusun dari elemen (亻, 白) yang melambangkan konsep intinya.',
     examples: [
-      { word: '伯父', reading: 'おじさん', meaning: 'uncle / middle-aged man' },
-      { word: '伯母さん', reading: 'おばさん', meaning: 'aunt' },
+      { word: '伯父', reading: 'おじさん', meaning: 'Uncle / middle-aged man' },
+      { word: '伯母さん', reading: 'おばさん', meaning: 'Aunt' },
       { word: '伯父さん', reading: 'おじさん', meaning: '(hon.) middle-aged gentleman / uncle' },
     ],
   },
@@ -490,9 +490,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["亻","半"],
     mnemonic: 'Karakter 伴 (Consort / accompany) memiliki 7 goresan, tersusun dari elemen (亻, 半) yang melambangkan konsep intinya.',
     examples: [
-      { word: '伴う', reading: 'ともなう', meaning: 'melakukan accompany / melakukan bring with' },
-      { word: '伴侶', reading: 'はんりょ', meaning: 'companion' },
-      { word: '伴奏', reading: 'ばんそう', meaning: 'accompaniment' },
+      { word: '伴う', reading: 'ともなう', meaning: 'Accompany / Membawa (with)' },
+      { word: '伴侶', reading: 'はんりょ', meaning: 'Companion' },
+      { word: '伴奏', reading: 'ばんそう', meaning: 'Accompaniment' },
     ],
   },
   {
@@ -508,7 +508,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["亻","旦"],
     mnemonic: 'Karakter 但 (However / but) memiliki 7 goresan, tersusun dari elemen (亻, 旦) yang melambangkan konsep intinya.',
     examples: [
-      { word: '但し', reading: 'ただし', meaning: 'but / however / provided that' },
+      { word: '但し', reading: 'ただし', meaning: 'But / however / provided that' },
       { word: '但し書き', reading: 'ただしがき', meaning: 'Klausul catatan tambahan' },
     ],
   },
@@ -525,9 +525,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["亻","左"],
     mnemonic: 'Karakter 佐 (Assistant / help) memiliki 7 goresan, tersusun dari elemen (亻, 左) yang melambangkan konsep intinya.',
     examples: [
-      { word: '中佐', reading: 'ちゅうさ', meaning: 'lieutenant colonel' },
-      { word: '大佐', reading: 'たいさ', meaning: 'colonel' },
-      { word: '少佐', reading: 'しょうさ', meaning: 'major' },
+      { word: '中佐', reading: 'ちゅうさ', meaning: 'Lieutenant colonel' },
+      { word: '大佐', reading: 'たいさ', meaning: 'Colonel' },
+      { word: '少佐', reading: 'しょうさ', meaning: 'Major' },
     ],
   },
   {
@@ -544,8 +544,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 体 (Body / substance) memiliki 7 goresan, tersusun dari elemen (亻, 本) yang melambangkan konsep intinya.',
     examples: [
       { word: '三位一体', reading: 'さんみいったい', meaning: 'Tiga unsur yang menyatu menjadi satu kesatuan tak terpisahkan' },
-      { word: '体', reading: 'からだ', meaning: 'body / kesehatan' },
-      { word: '重体', reading: 'じゅうたい', meaning: 'seriously ill / critical state' },
+      { word: '体', reading: 'からだ', meaning: 'Body / kesehatan' },
+      { word: '重体', reading: 'じゅうたい', meaning: 'Seriously ill / critical state' },
     ],
   },
   {
@@ -561,9 +561,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["亻","可"],
     mnemonic: 'Karakter 何 (Apa / Berapa) memiliki 7 goresan, tersusun dari elemen (亻, 可) yang melambangkan konsep intinya.',
     examples: [
-      { word: '何', reading: 'なん', meaning: 'what' },
-      { word: '何～', reading: 'なん～', meaning: 'what sort of ~' },
-      { word: '何か', reading: 'なにか', meaning: 'something' },
+      { word: '何', reading: 'なん', meaning: 'What' },
+      { word: '何～', reading: 'なん～', meaning: 'What sort of ~' },
+      { word: '何か', reading: 'なにか', meaning: 'Something' },
     ],
   },
   {
@@ -579,9 +579,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["亻","圭"],
     mnemonic: 'Karakter 佳 (Excellent / beautiful) memiliki 8 goresan, tersusun dari elemen (亻, 圭) yang melambangkan konsep intinya.',
     examples: [
-      { word: '佳作', reading: 'かさく', meaning: 'fine (piece of) work' },
-      { word: '佳句', reading: 'かく', meaning: 'beautiful passage of literature' },
-      { word: '佳境', reading: 'かきょう', meaning: 'most interesting part (of a story)' },
+      { word: '佳作', reading: 'かさく', meaning: 'Fine (piece of) work' },
+      { word: '佳句', reading: 'かく', meaning: 'Beautiful passage of literature' },
+      { word: '佳境', reading: 'かきょう', meaning: 'Most interesting part (of a story)' },
     ],
   },
   {
@@ -598,8 +598,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 併 (Menggabungkan / Menyatukan bersama) memiliki 8 goresan, tersusun dari elemen (亻, 并) yang melambangkan konsep intinya.',
     examples: [
       { word: '合併', reading: 'がっぺい', meaning: 'Merger / Penggabungan usaha' },
-      { word: '併合', reading: 'へいごう', meaning: 'merger' },
-      { word: '併殺', reading: 'へいさつ', meaning: 'double play' },
+      { word: '併合', reading: 'へいごう', meaning: 'Merger' },
+      { word: '併殺', reading: 'へいさつ', meaning: 'Double play' },
     ],
   },
   {
@@ -615,9 +615,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["亻","寺"],
     mnemonic: 'Karakter 侍 (Waiter / samurai) memiliki 8 goresan, tersusun dari elemen (亻, 寺) yang melambangkan konsep intinya.',
     examples: [
-      { word: '侍', reading: 'さむらい', meaning: 'samurai' },
-      { word: '侍医', reading: 'じい', meaning: 'court physician' },
-      { word: '侍女', reading: 'じじょ', meaning: 'lady attendant' },
+      { word: '侍', reading: 'さむらい', meaning: 'Samurai' },
+      { word: '侍医', reading: 'じい', meaning: 'Court physician' },
+      { word: '侍女', reading: 'じじょ', meaning: 'Lady attendant' },
     ],
   },
   {
@@ -633,8 +633,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["亻","每"],
     mnemonic: 'Karakter 侮 (Scorn / despise) memiliki 8 goresan, tersusun dari elemen (亻, 每) yang melambangkan konsep intinya.',
     examples: [
-      { word: '侮辱', reading: 'ぶじょく', meaning: 'insult / contempt / slight' },
-      { word: '侮蔑', reading: 'ぶべつ', meaning: 'scorn' },
+      { word: '侮辱', reading: 'ぶじょく', meaning: 'Hinaan / Pelecehan / Meremehkan' },
+      { word: '侮蔑', reading: 'ぶべつ', meaning: 'Scorn' },
     ],
   },
   {
@@ -650,8 +650,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["亻","ユ","矢"],
     mnemonic: 'Karakter 侯 (Marquis / lord) memiliki 9 goresan, tersusun dari elemen (亻, ユ, 矢) yang melambangkan konsep intinya.',
     examples: [
-      { word: '侯爵', reading: 'こうしゃく', meaning: 'marquis' },
-      { word: '王侯', reading: 'おうこう', meaning: 'the king and his feudal lords' },
+      { word: '侯爵', reading: 'こうしゃく', meaning: 'Marquis' },
+      { word: '王侯', reading: 'おうこう', meaning: 'The king and his feudal lords' },
     ],
   },
   {
@@ -668,8 +668,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 侵 (Menyerang / Merambah / Menginvasi) memiliki 9 goresan, tersusun dari elemen (亻, 𠬶) yang melambangkan konsep intinya.',
     examples: [
       { word: '侵害', reading: 'しんがい', meaning: 'Pelanggaran hak cipta / Perambahan batas' },
-      { word: '侵す', reading: 'おかす', meaning: 'melakukan invade / melakukan raid / melakukan trespass' },
-      { word: '侵略', reading: 'しんりゃく', meaning: 'aggression / invasion / raid' },
+      { word: '侵す', reading: 'おかす', meaning: 'Invade / Raid / Trespass' },
+      { word: '侵略', reading: 'しんりゃく', meaning: 'Aggression / invasion / raid' },
     ],
   },
   {
@@ -685,8 +685,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["亻","呂"],
     mnemonic: 'Karakter 侶 (Companion / follower) memiliki 9 goresan, tersusun dari elemen (亻, 呂) yang melambangkan konsep intinya.',
     examples: [
-      { word: '伴侶', reading: 'はんりょ', meaning: 'companion' },
-      { word: '僧侶', reading: 'そうりょ', meaning: 'priest' },
+      { word: '伴侶', reading: 'はんりょ', meaning: 'Companion' },
+      { word: '僧侶', reading: 'そうりょ', meaning: 'Priest' },
     ],
   },
   {
@@ -702,8 +702,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["亻","夋"],
     mnemonic: 'Karakter 俊 (Sagacious / genius) memiliki 9 goresan, tersusun dari elemen (亻, 夋) yang melambangkan konsep intinya.',
     examples: [
-      { word: '俊英', reading: 'しゅんえい', meaning: 'excellence' },
-      { word: '俊足', reading: 'しゅんそく', meaning: 'swiftness of foot' },
+      { word: '俊英', reading: 'しゅんえい', meaning: 'Excellence' },
+      { word: '俊足', reading: 'しゅんそく', meaning: 'Swiftness of foot' },
     ],
   },
   {
@@ -719,9 +719,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["亻","谷"],
     mnemonic: 'Karakter 俗 (Umum / Adat istiadat / Vulgar) memiliki 9 goresan, tersusun dari elemen (亻, 谷) yang melambangkan konsep intinya.',
     examples: [
-      { word: '風俗', reading: 'ふうぞく', meaning: 'manners / customs / sex industry' },
-      { word: '民俗', reading: 'みんぞく', meaning: 'folk customs' },
-      { word: '俗語', reading: 'ぞくご', meaning: 'colloquialism' },
+      { word: '風俗', reading: 'ふうぞく', meaning: 'Manners / customs / sex industry' },
+      { word: '民俗', reading: 'みんぞく', meaning: 'Folk customs' },
+      { word: '俗語', reading: 'ぞくご', meaning: 'Colloquialism' },
     ],
   },
   {
@@ -738,8 +738,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 保 (Protect / guarantee) memiliki 9 goresan, tersusun dari elemen (亻, 呆) yang melambangkan konsep intinya.',
     examples: [
       { word: '保釈', reading: 'ほしゃく', meaning: 'Penjaminan pembebasan bersyarat' },
-      { word: '保証', reading: 'ほしょう', meaning: 'guarantee / assurance / warranty' },
-      { word: '保存', reading: 'ほぞん', meaning: 'preservation / conservation' },
+      { word: '保証', reading: 'ほしょう', meaning: 'Guarantee / assurance / warranty' },
+      { word: '保存', reading: 'ほぞん', meaning: 'Preservation / conservation' },
     ],
   },
   {
@@ -755,9 +755,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["亻","丨","夂","彡"],
     mnemonic: 'Karakter 修 (Discipline / conduct oneself well) memiliki 10 goresan, tersusun dari elemen (亻, 丨, 夂) yang melambangkan konsep intinya.',
     examples: [
-      { word: '修正', reading: 'しゅうせい', meaning: 'amendment / correction' },
-      { word: '修理', reading: 'しゅうり', meaning: 'repairing / mending' },
-      { word: '修飾', reading: 'しゅうしょく', meaning: 'ornamentation / modification (gram)' },
+      { word: '修正', reading: 'しゅうせい', meaning: 'Amendment / correction' },
+      { word: '修理', reading: 'しゅうり', meaning: 'Repairing / mending' },
+      { word: '修飾', reading: 'しゅうしょく', meaning: 'Ornamentation / modification (gram)' },
     ],
   },
   {
@@ -773,9 +773,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["亻","非"],
     mnemonic: 'Karakter 俳 (Haiku / actor) memiliki 10 goresan, tersusun dari elemen (亻, 非) yang melambangkan konsep intinya.',
     examples: [
-      { word: '俳優', reading: 'はいゆう', meaning: 'actor / actress / performer' },
-      { word: '俳句', reading: 'はいく', meaning: 'haiku poetry' },
-      { word: '俳人', reading: 'はいじん', meaning: 'haiku poet' },
+      { word: '俳優', reading: 'はいゆう', meaning: 'Actor / actress / performer' },
+      { word: '俳句', reading: 'はいく', meaning: 'Haiku poetry' },
+      { word: '俳人', reading: 'はいじん', meaning: 'Haiku poet' },
     ],
   },
   {
@@ -791,8 +791,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["亻","表"],
     mnemonic: 'Karakter 俵 (Bag / bale) memiliki 10 goresan, tersusun dari elemen (亻, 表) yang melambangkan konsep intinya.',
     examples: [
-      { word: '土俵', reading: 'どひょう', meaning: 'arena' },
-      { word: '土俵際', reading: 'どひょうぎわ', meaning: 'edge of the ring' },
+      { word: '土俵', reading: 'どひょう', meaning: 'Arena' },
+      { word: '土俵際', reading: 'どひょうぎわ', meaning: 'Edge of the ring' },
     ],
   },
   {
@@ -808,9 +808,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["亻","奉"],
     mnemonic: 'Karakter 俸 (Stipend / salary) memiliki 10 goresan, tersusun dari elemen (亻, 奉) yang melambangkan konsep intinya.',
     examples: [
-      { word: '俸給', reading: 'ほうきゅう', meaning: 'salary (esp. public employees)' },
-      { word: '年俸', reading: 'ねんぽう', meaning: 'annual salary' },
-      { word: '減俸', reading: 'げんぽう', meaning: 'salary reduction' },
+      { word: '俸給', reading: 'ほうきゅう', meaning: 'Salary (esp. public employees)' },
+      { word: '年俸', reading: 'ねんぽう', meaning: 'Annual salary' },
+      { word: '減俸', reading: 'げんぽう', meaning: 'Salary reduction' },
     ],
   },
   {
@@ -826,8 +826,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["亻","奄"],
     mnemonic: 'Karakter 俺 (I / myself) memiliki 10 goresan, tersusun dari elemen (亻, 奄) yang melambangkan konsep intinya.',
     examples: [
-      { word: '俺', reading: 'おれ', meaning: 'i (ego) (boastful first-person pronoun)' },
-      { word: '満俺', reading: 'マンガン', meaning: 'manganese (Mn)' },
+      { word: '俺', reading: 'おれ', meaning: 'I (ego) (boastful first-person pronoun)' },
+      { word: '満俺', reading: 'マンガン', meaning: 'Manganese (Mn)' },
     ],
   },
   {
@@ -843,9 +843,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["亽","尸","一","口"],
     mnemonic: 'Karakter 倉 (Godown / warehouse) memiliki 10 goresan, tersusun dari elemen (亽, 尸, 一) yang melambangkan konsep intinya.',
     examples: [
-      { word: '倉庫', reading: 'そうこ', meaning: 'storehouse / warehouse' },
+      { word: '倉庫', reading: 'そうこ', meaning: 'Storehouse / warehouse' },
       { word: '倉敷', reading: 'くらしき', meaning: 'Kurashiki (city)' },
-      { word: '穀倉', reading: 'こくそう', meaning: 'granary' },
+      { word: '穀倉', reading: 'こくそう', meaning: 'Granary' },
     ],
   },
   {
@@ -861,8 +861,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["亻","放"],
     mnemonic: 'Karakter 倣 (Emulate / imitate) memiliki 10 goresan, tersusun dari elemen (亻, 放) yang melambangkan konsep intinya.',
     examples: [
-      { word: '模倣', reading: 'もほう', meaning: 'imitation / copying' },
-      { word: '倣う', reading: 'ならう', meaning: 'melakukan imitate / melakukan follow / melakukan emulate' },
+      { word: '模倣', reading: 'もほう', meaning: 'Imitation / copying' },
+      { word: '倣う', reading: 'ならう', meaning: 'Imitate / Mengikuti / Emulate' },
     ],
   },
   {
@@ -878,9 +878,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["亻","侖"],
     mnemonic: 'Karakter 倫 (Ethics / companion) memiliki 10 goresan, tersusun dari elemen (亻, 侖) yang melambangkan konsep intinya.',
     examples: [
-      { word: '不倫', reading: 'ふりん', meaning: 'adultery' },
+      { word: '不倫', reading: 'ふりん', meaning: 'Adultery' },
       { word: '倫敦', reading: 'ロンドン', meaning: 'London (UK)' },
-      { word: '倫理', reading: 'りんり', meaning: 'ethics' },
+      { word: '倫理', reading: 'りんり', meaning: 'Ethics' },
     ],
   },
   {
@@ -896,7 +896,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["亻","㑒"],
     mnemonic: 'Karakter 倹 (Frugal / ekonomi) memiliki 10 goresan, tersusun dari elemen (亻, 㑒) yang melambangkan konsep intinya.',
     examples: [
-      { word: '倹約', reading: 'けんやく', meaning: 'hemat / penghematan / ekonomi / efisiensi / kesederhanaan' },
+      { word: '倹約', reading: 'けんやく', meaning: 'Hemat / penghematan / ekonomi / efisiensi / kesederhanaan' },
       { word: '倹語', reading: 'ケンご', meaning: 'Istilah / kosakata terkait Frugal / ekonomi' },
     ],
   },
@@ -913,9 +913,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["亻","韋"],
     mnemonic: 'Karakter 偉 (Hebat / Agung / Megah) memiliki 12 goresan, tersusun dari elemen (亻, 韋) yang melambangkan konsep intinya.',
     examples: [
-      { word: '偉大', reading: 'いだい', meaning: 'greatness' },
-      { word: '偉い', reading: 'えらい', meaning: 'great / celebrated / remarkable' },
-      { word: '偉人', reading: 'いじん', meaning: 'great person' },
+      { word: '偉大', reading: 'いだい', meaning: 'Greatness' },
+      { word: '偉い', reading: 'えらい', meaning: 'Great / celebrated / remarkable' },
+      { word: '偉人', reading: 'いじん', meaning: 'Great person' },
     ],
   },
   {
@@ -931,9 +931,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["亻","建"],
     mnemonic: 'Karakter 健 (Healthy / health) memiliki 11 goresan, tersusun dari elemen (亻, 建) yang melambangkan konsep intinya.',
     examples: [
-      { word: '健康', reading: 'けんこう', meaning: 'health(y)' },
+      { word: '健康', reading: 'けんこう', meaning: 'Health(y)' },
       { word: '健康保険', reading: 'けんこうほけん', meaning: 'Asuransi kesehatan' },
-      { word: '健在', reading: 'けんざい', meaning: 'in good health / well' },
+      { word: '健在', reading: 'けんざい', meaning: 'In good health / well' },
     ],
   },
   {
@@ -949,9 +949,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["亻","貞"],
     mnemonic: 'Karakter 偵 (Spy) memiliki 11 goresan, tersusun dari elemen (亻, 貞) yang melambangkan konsep intinya.',
     examples: [
-      { word: '偵察', reading: 'ていさつ', meaning: 'scouting' },
-      { word: '内偵', reading: 'ないてい', meaning: 'secret investigation' },
-      { word: '探偵', reading: 'たんてい', meaning: 'detective' },
+      { word: '偵察', reading: 'ていさつ', meaning: 'Scouting' },
+      { word: '内偵', reading: 'ないてい', meaning: 'Secret investigation' },
+      { word: '探偵', reading: 'たんてい', meaning: 'Detective' },
     ],
   },
   {
@@ -968,8 +968,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 偶 (Accidentally / even number) memiliki 11 goresan, tersusun dari elemen (亻, 禺) yang melambangkan konsep intinya.',
     examples: [
       { word: '偶然', reading: 'ぐうぜん', meaning: '(by) chance / unexpectedly' },
-      { word: '偶', reading: 'たま', meaning: 'even number / couple / friend' },
-      { word: '偶々', reading: 'たまたま', meaning: 'unexpectedly / accidentally / by chance' },
+      { word: '偶', reading: 'たま', meaning: 'Even number / couple / friend' },
+      { word: '偶々', reading: 'たまたま', meaning: 'Unexpectedly / accidentally / by chance' },
     ],
   },
   {
@@ -985,9 +985,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["亻","旁"],
     mnemonic: 'Karakter 傍 (Bystander / side) memiliki 12 goresan, tersusun dari elemen (亻, 旁) yang melambangkan konsep intinya.',
     examples: [
-      { word: '傍ら', reading: 'かたわら', meaning: 'beside(s / while / nearby' },
-      { word: '傍受', reading: 'ぼうじゅ', meaning: 'interception' },
-      { word: '傍聴', reading: 'ぼうちょう', meaning: 'listening (to a lecture, hearing, parliament session, etc.)' },
+      { word: '傍ら', reading: 'かたわら', meaning: 'Beside(s / while / nearby' },
+      { word: '傍受', reading: 'ぼうじゅ', meaning: 'Interception' },
+      { word: '傍聴', reading: 'ぼうちょう', meaning: 'Listening (to a lecture, hearing, parliament session, etc.)' },
     ],
   },
   {
@@ -1003,9 +1003,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["亻","桀"],
     mnemonic: 'Karakter 傑 (Unggul / Hebat / Luar biasa) memiliki 13 goresan, tersusun dari elemen (亻, 桀) yang melambangkan konsep intinya.',
     examples: [
-      { word: '傑作', reading: 'けっさく', meaning: 'masterpiece / best work' },
-      { word: '傑出', reading: 'けっしゅつ', meaning: 'being outstanding' },
-      { word: '豪傑', reading: 'ごうけつ', meaning: 'hero' },
+      { word: '傑作', reading: 'けっさく', meaning: 'Masterpiece / best work' },
+      { word: '傑出', reading: 'けっしゅつ', meaning: 'Being outstanding' },
+      { word: '豪傑', reading: 'ごうけつ', meaning: 'Hero' },
     ],
   },
   {
@@ -1021,9 +1021,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["人","十","𠈌"],
     mnemonic: 'Karakter 傘 (Payung) memiliki 12 goresan, tersusun dari elemen (人, 十, 𠈌) yang melambangkan konsep intinya.',
     examples: [
-      { word: '傘', reading: 'かさ', meaning: 'umbrella / parasol' },
-      { word: '傘下', reading: 'さんか', meaning: 'affiliated with' },
-      { word: '日傘', reading: 'ひがさ', meaning: 'parasol (esp. one carried in the hand)' },
+      { word: '傘', reading: 'かさ', meaning: 'Umbrella / parasol' },
+      { word: '傘下', reading: 'さんか', meaning: 'Affiliated with' },
+      { word: '日傘', reading: 'ひがさ', meaning: 'Parasol (esp. one carried in the hand)' },
     ],
   },
   {
@@ -1039,9 +1039,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["亻","責"],
     mnemonic: 'Karakter 債 (Bond / loan) memiliki 13 goresan, tersusun dari elemen (亻, 責) yang melambangkan konsep intinya.',
     examples: [
-      { word: '負債', reading: 'ふさい', meaning: 'debt / liabilities' },
-      { word: '債券', reading: 'さいけん', meaning: 'bond' },
-      { word: '債務', reading: 'さいむ', meaning: 'debt' },
+      { word: '負債', reading: 'ふさい', meaning: 'Debt / liabilities' },
+      { word: '債券', reading: 'さいけん', meaning: 'Bond' },
+      { word: '債務', reading: 'さいむ', meaning: 'Debt' },
     ],
   },
   {
@@ -1057,7 +1057,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["亻","堇"],
     mnemonic: 'Karakter 僅 (A wee bit) memiliki 12 goresan, tersusun dari elemen (亻, 堇) yang melambangkan konsep intinya.',
     examples: [
-      { word: '僅か', reading: 'わずか', meaning: 'only / merely / a little' },
+      { word: '僅か', reading: 'わずか', meaning: 'Only / merely / a little' },
       { word: '僅少', reading: 'きんしょう', meaning: 'Sangat minim' },
     ],
   },
@@ -1074,7 +1074,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["亻","菐"],
     mnemonic: 'Karakter 僕 (Me / i (male)) memiliki 14 goresan, tersusun dari elemen (亻, 菐) yang melambangkan konsep intinya.',
     examples: [
-      { word: '僕', reading: 'ぼく', meaning: 'i (used by men towards those of equal or lower status)' },
+      { word: '僕', reading: 'ぼく', meaning: 'I (used by men towards those of equal or lower status)' },
       { word: '下僕', reading: 'げぼく', meaning: 'Pelayan / Pesuruh' },
     ],
   },
@@ -1091,9 +1091,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["亻","曾"],
     mnemonic: 'Karakter 僧 (Buddhist priest / monk) memiliki 13 goresan, tersusun dari elemen (亻, 曾) yang melambangkan konsep intinya.',
     examples: [
-      { word: '僧', reading: 'そう', meaning: 'monk / priest' },
-      { word: '僧侶', reading: 'そうりょ', meaning: 'priest' },
-      { word: '僧院', reading: 'そういん', meaning: 'monastery' },
+      { word: '僧', reading: 'そう', meaning: 'Monk / priest' },
+      { word: '僧侶', reading: 'そうりょ', meaning: 'Priest' },
+      { word: '僧院', reading: 'そういん', meaning: 'Monastery' },
     ],
   },
   {
@@ -1111,7 +1111,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     examples: [
       { word: '儒学', reading: 'じゅがく', meaning: 'Confucianism' },
       { word: '儒教', reading: 'じゅきょう', meaning: 'Confucianism' },
-      { word: '儒艮', reading: 'ジュゴン', meaning: 'dugong (Dugong dugon)' },
+      { word: '儒艮', reading: 'ジュゴン', meaning: 'Dugong (Dugong dugon)' },
     ],
   },
   {
@@ -1127,9 +1127,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["亻","賞"],
     mnemonic: 'Karakter 償 (Reparation / make up for) memiliki 17 goresan, tersusun dari elemen (亻, 賞) yang melambangkan konsep intinya.',
     examples: [
-      { word: '補償', reading: 'ほしょう', meaning: 'compensation / reparation' },
+      { word: '補償', reading: 'ほしょう', meaning: 'Compensation / reparation' },
       { word: '賠償', reading: 'ばいしょう', meaning: 'Ganti rugi / Kompensasi hukum' },
-      { word: '弁償', reading: 'べんしょう', meaning: 'compensation / reparation / reimbursement' },
+      { word: '弁償', reading: 'べんしょう', meaning: 'Compensation / reparation / reimbursement' },
     ],
   },
   {
@@ -1145,9 +1145,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["一","兀"],
     mnemonic: 'Karakter 元 (Beginning / former time) memiliki 4 goresan, tersusun dari elemen (一, 兀) yang melambangkan konsep intinya.',
     examples: [
-      { word: '元気', reading: 'げんき', meaning: 'health(y) / energetic' },
-      { word: '元', reading: 'もと', meaning: 'origin / original / former' },
-      { word: '元首', reading: 'げんしゅ', meaning: 'ruler / sovereign' },
+      { word: '元気', reading: 'げんき', meaning: 'Health(y) / energetic' },
+      { word: '元', reading: 'もと', meaning: 'Asal mula / Semula / Mantan' },
+      { word: '元首', reading: 'げんしゅ', meaning: 'Ruler / sovereign' },
     ],
   },
   {
@@ -1163,9 +1163,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["𠫓","儿"],
     mnemonic: 'Karakter 充 (Allot / fill) memiliki 6 goresan, tersusun dari elemen (𠫓, 儿) yang melambangkan konsep intinya.',
     examples: [
-      { word: '充実', reading: 'じゅうじつ', meaning: 'fullness / perfection' },
-      { word: '補充', reading: 'ほじゅう', meaning: 'supplementation / replenishment / replenishing' },
-      { word: '拡充', reading: 'かくじゅう', meaning: 'expansion' },
+      { word: '充実', reading: 'じゅうじつ', meaning: 'Fullness / perfection' },
+      { word: '補充', reading: 'ほじゅう', meaning: 'Supplementation / replenishment / replenishing' },
+      { word: '拡充', reading: 'かくじゅう', meaning: 'Expansion' },
     ],
   },
   {
@@ -1182,7 +1182,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 免 (Excuse / dismissal) memiliki 8 goresan, tersusun dari elemen (𠂊) yang melambangkan konsep intinya.',
     examples: [
       { word: '免疫', reading: 'めんえき', meaning: 'Kekebalan tubuh / Imunitas biologis' },
-      { word: '免許', reading: 'めんきょ', meaning: 'license / permit / certificate' },
+      { word: '免許', reading: 'めんきょ', meaning: 'License / permit / certificate' },
       { word: '免除', reading: 'めんじょ', meaning: 'Pembebasan kewajiban / Dispensasi pajak' },
     ],
   },
@@ -1199,9 +1199,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["八"],
     mnemonic: 'Karakter 典 (Code / ceremony) memiliki 8 goresan, tersusun dari elemen (八) yang melambangkan konsep intinya.',
     examples: [
-      { word: '典型', reading: 'てんけい', meaning: 'type / pattern / archetypal' },
-      { word: '辞典', reading: 'じてん', meaning: 'encyclopedia / reference book' },
-      { word: '原典', reading: 'げんてん', meaning: 'original / source' },
+      { word: '典型', reading: 'てんけい', meaning: 'Type / pattern / archetypal' },
+      { word: '辞典', reading: 'じてん', meaning: 'Encyclopedia / reference book' },
+      { word: '原典', reading: 'げんてん', meaning: 'Naskah asli / Sumber' },
     ],
   },
   {
@@ -1217,9 +1217,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["䒑","コ","一"],
     mnemonic: 'Karakter 兼 (Concurrently / and) memiliki 10 goresan, tersusun dari elemen (䒑, コ, 一) yang melambangkan konsep intinya.',
     examples: [
-      { word: '兼用', reading: 'けんよう', meaning: 'kegunaan ganda / combined use' },
-      { word: '兼業', reading: 'けんぎょう', meaning: 'holding two jobs at the same time' },
-      { word: '気兼ね', reading: 'きがね', meaning: 'hesitance / diffidence / feeling constraint' },
+      { word: '兼用', reading: 'けんよう', meaning: 'Kegunaan ganda / combined use' },
+      { word: '兼業', reading: 'けんぎょう', meaning: 'Holding two jobs at the same time' },
+      { word: '気兼ね', reading: 'きがね', meaning: 'Hesitance / diffidence / feeling constraint' },
     ],
   },
   {
@@ -1235,8 +1235,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["冃","目"],
     mnemonic: 'Karakter 冒 (Risk / face) memiliki 9 goresan, tersusun dari elemen (冃, 目) yang melambangkan konsep intinya.',
     examples: [
-      { word: '冒険', reading: 'ぼうけん', meaning: 'risk / venture / adventure' },
-      { word: '冒頭', reading: 'ぼうとう', meaning: 'beginning / start / outset' },
+      { word: '冒険', reading: 'ぼうけん', meaning: 'Risk / venture / adventure' },
+      { word: '冒頭', reading: 'ぼうとう', meaning: 'Beginning / start / outset' },
     ],
   },
   {
@@ -1252,7 +1252,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["冖","几"],
     mnemonic: 'Karakter 冗 (Superfluous / uselessness) memiliki 4 goresan, tersusun dari elemen (冖, 几) yang melambangkan konsep intinya.',
     examples: [
-      { word: '冗談', reading: 'じょうだん', meaning: 'a joke' },
+      { word: '冗談', reading: 'じょうだん', meaning: 'A joke' },
       { word: '冗語', reading: 'ジョウご', meaning: 'Istilah / kosakata terkait Superfluous / uselessness' },
     ],
   },
@@ -1269,9 +1269,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["冖","㝴"],
     mnemonic: 'Karakter 冠 (Crown / best) memiliki 9 goresan, tersusun dari elemen (冖, 㝴) yang melambangkan konsep intinya.',
     examples: [
-      { word: '冠', reading: 'かんむり', meaning: 'crown / wreath' },
-      { word: '三冠馬', reading: 'さんかんば', meaning: 'winner of Japan\'s three main horse races' },
-      { word: '冠婚葬祭', reading: 'かんこんそうさい', meaning: 'important ceremonial occasions in family relationships' },
+      { word: '冠', reading: 'かんむり', meaning: 'Crown / wreath' },
+      { word: '三冠馬', reading: 'さんかんば', meaning: 'Winner of Japan\'s three main horse races' },
+      { word: '冠婚葬祭', reading: 'かんこんそうさい', meaning: 'Important ceremonial occasions in family relationships' },
     ],
   },
   {
@@ -1287,7 +1287,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["冖","昗"],
     mnemonic: 'Karakter 冥 (Gelap) memiliki 10 goresan, tersusun dari elemen (冖, 昗) yang melambangkan konsep intinya.',
     examples: [
-      { word: '冥福', reading: 'めいふく', meaning: 'happiness in the next world' },
+      { word: '冥福', reading: 'めいふく', meaning: 'Happiness in the next world' },
       { word: '冥界', reading: 'めいかい', meaning: 'Dunia arwah' },
     ],
   },
@@ -1321,8 +1321,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["冫","妻"],
     mnemonic: 'Karakter 凄 (Uncanny / weird) memiliki 10 goresan, tersusun dari elemen (冫, 妻) yang melambangkan konsep intinya.',
     examples: [
-      { word: '凄い', reading: 'すごい', meaning: 'terrific / great' },
-      { word: '物凄い', reading: 'ものすごい', meaning: 'earth-shattering / staggering / melakukan a very great extent' },
+      { word: '凄い', reading: 'すごい', meaning: 'Terrific / great' },
+      { word: '物凄い', reading: 'ものすごい', meaning: 'Earth-shattering / staggering / Very great extent' },
     ],
   },
   {
@@ -1338,9 +1338,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["冫","疑"],
     mnemonic: 'Karakter 凝 (Congeal / freeze) memiliki 16 goresan, tersusun dari elemen (冫, 疑) yang melambangkan konsep intinya.',
     examples: [
-      { word: '凝らす', reading: 'こらす', meaning: 'melakukan concentrate / melakukan devote / melakukan peer into' },
-      { word: '凝る', reading: 'こる', meaning: 'melakukan stiffen / melakukan harden' },
-      { word: '凝り性', reading: 'こりしょう', meaning: 'tendency to become totally absorbed in something' },
+      { word: '凝らす', reading: 'こらす', meaning: 'Concentrate / Devote / Peer into' },
+      { word: '凝る', reading: 'こる', meaning: 'Stiffen / Harden' },
+      { word: '凝り性', reading: 'こりしょう', meaning: 'Tendency to become totally absorbed in something' },
     ],
   },
   {
@@ -1356,9 +1356,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["几","丶"],
     mnemonic: 'Karakter 凡 (Commonplace / ordinary) memiliki 3 goresan, tersusun dari elemen (几, 丶) yang melambangkan konsep intinya.',
     examples: [
-      { word: '大凡', reading: 'おおよそ', meaning: 'about / approximately' },
-      { word: '平凡', reading: 'へいぼん', meaning: 'common / ordinary' },
-      { word: '凡人', reading: 'ぼんじん', meaning: 'ordinary person' },
+      { word: '大凡', reading: 'おおよそ', meaning: 'About / approximately' },
+      { word: '平凡', reading: 'へいぼん', meaning: 'Common / ordinary' },
+      { word: '凡人', reading: 'ぼんじん', meaning: 'Ordinary person' },
     ],
   },
   {
@@ -1374,9 +1374,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["凵","㐅"],
     mnemonic: 'Karakter 凶 (Villain / evil) memiliki 4 goresan, tersusun dari elemen (凵, 㐅) yang melambangkan konsep intinya.',
     examples: [
-      { word: '凶作', reading: 'きょうさく', meaning: 'bad harvest / poor crop' },
-      { word: '元凶', reading: 'げんきょう', meaning: 'ringleader' },
-      { word: '凶器', reading: 'きょうき', meaning: 'dangerous weapon' },
+      { word: '凶作', reading: 'きょうさく', meaning: 'Bad harvest / poor crop' },
+      { word: '元凶', reading: 'げんきょう', meaning: 'Ringleader' },
+      { word: '凶器', reading: 'きょうき', meaning: 'Dangerous weapon' },
     ],
   },
   {
@@ -1392,9 +1392,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["凸"],
     mnemonic: 'Karakter 凸 (Convex / beetle brow) memiliki 5 goresan, tersusun dari elemen (凸) yang melambangkan konsep intinya.',
     examples: [
-      { word: '凸凹', reading: 'でこぼこ', meaning: 'unevenness / roughness / ruggedness' },
-      { word: '凸版', reading: 'とっぱん', meaning: 'letterpress' },
-      { word: '凸版印刷', reading: 'とっぱんいんさつ', meaning: 'letterpress' },
+      { word: '凸凹', reading: 'でこぼこ', meaning: 'Unevenness / roughness / ruggedness' },
+      { word: '凸版', reading: 'とっぱん', meaning: 'Letterpress' },
+      { word: '凸版印刷', reading: 'とっぱんいんさつ', meaning: 'Letterpress' },
     ],
   },
   {
@@ -1410,9 +1410,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["凹"],
     mnemonic: 'Karakter 凹 (Concave / hollow) memiliki 5 goresan, tersusun dari elemen (凹) yang melambangkan konsep intinya.',
     examples: [
-      { word: '凸凹', reading: 'でこぼこ', meaning: 'unevenness / roughness / ruggedness' },
-      { word: '凹む', reading: 'へこむ', meaning: 'melakukan be dented / melakukan be indented' },
-      { word: '凹凸', reading: 'おうとつ', meaning: 'unevenness' },
+      { word: '凸凹', reading: 'でこぼこ', meaning: 'Unevenness / roughness / ruggedness' },
+      { word: '凹む', reading: 'へこむ', meaning: 'Menjadi dented / Menjadi indented' },
+      { word: '凹凸', reading: 'おうとつ', meaning: 'Unevenness' },
     ],
   },
   {
@@ -1428,9 +1428,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["𠃌","丿"],
     mnemonic: 'Karakter 刀 (Sword / saber) memiliki 2 goresan, tersusun dari elemen (𠃌, 丿) yang melambangkan konsep intinya.',
     examples: [
-      { word: '刀', reading: 'かたな', meaning: 'sword / saber' },
-      { word: '剃刀', reading: 'かみそり', meaning: 'razor' },
-      { word: '刀剣', reading: 'とうけん', meaning: 'sword' },
+      { word: '刀', reading: 'かたな', meaning: 'Sword / saber' },
+      { word: '剃刀', reading: 'かみそり', meaning: 'Razor' },
+      { word: '刀剣', reading: 'とうけん', meaning: 'Sword' },
     ],
   },
   {
@@ -1446,9 +1446,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["刀","丿"],
     mnemonic: 'Karakter 刃 (Blade / sword) memiliki 3 goresan, tersusun dari elemen (刀, 丿) yang melambangkan konsep intinya.',
     examples: [
-      { word: '刃', reading: 'は', meaning: 'blade / sword' },
-      { word: '刃先', reading: 'はさき', meaning: 'edge of blade' },
-      { word: '刃渡り', reading: 'はわたり', meaning: 'length of a blade' },
+      { word: '刃', reading: 'は', meaning: 'Blade / sword' },
+      { word: '刃先', reading: 'はさき', meaning: 'Edge of blade' },
+      { word: '刃渡り', reading: 'はわたり', meaning: 'Length of a blade' },
     ],
   },
   {
@@ -1464,9 +1464,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["㐅","刂"],
     mnemonic: 'Karakter 刈 (Reap / cut) memiliki 4 goresan, tersusun dari elemen (㐅, 刂) yang melambangkan konsep intinya.',
     examples: [
-      { word: '刈る', reading: 'かる', meaning: 'melakukan cut (hair) / melakukan mow (grass) / melakukan harvest' },
-      { word: '丸刈り', reading: 'まるがり', meaning: 'buzz cut' },
-      { word: '刈り入れ', reading: 'かりいれ', meaning: 'harvest' },
+      { word: '刈る', reading: 'かる', meaning: 'Memotong ((hair)) / Mow (grass) / Memanen' },
+      { word: '丸刈り', reading: 'まるがり', meaning: 'Buzz cut' },
+      { word: '刈り入れ', reading: 'かりいれ', meaning: 'Harvest' },
     ],
   },
   {
@@ -1482,9 +1482,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["开","刂"],
     mnemonic: 'Karakter 刑 (Punish / penalty) memiliki 6 goresan, tersusun dari elemen (开, 刂) yang melambangkan konsep intinya.',
     examples: [
-      { word: '刑事', reading: 'けいじ', meaning: 'criminal case / (police) detective' },
-      { word: '刑', reading: 'けい', meaning: 'penalty / sentence / punishment' },
-      { word: '刑罰', reading: 'けいばつ', meaning: 'judgment / penalty / punishment' },
+      { word: '刑事', reading: 'けいじ', meaning: 'Criminal case / (police) detective' },
+      { word: '刑', reading: 'けい', meaning: 'Penalty / sentence / punishment' },
+      { word: '刑罰', reading: 'けいばつ', meaning: 'Judgment / penalty / punishment' },
     ],
   },
   {
@@ -1500,7 +1500,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["杀","刂"],
     mnemonic: 'Karakter 刹 (Temple) memiliki 8 goresan, tersusun dari elemen (杀, 刂) yang melambangkan konsep intinya.',
     examples: [
-      { word: '刹那', reading: 'せつな', meaning: 'moment' },
+      { word: '刹那', reading: 'せつな', meaning: 'Moment' },
       { word: '名刹', reading: 'めいさつ: ', meaning: 'Kuil bersejarah termasyhur' },
     ],
   },
@@ -1517,9 +1517,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["肖","刂"],
     mnemonic: 'Karakter 削 (Plane / sharpen) memiliki 9 goresan, tersusun dari elemen (肖, 刂) yang melambangkan konsep intinya.',
     examples: [
-      { word: '削減', reading: 'さくげん', meaning: 'cut / reduction' },
-      { word: '削る', reading: 'けずる', meaning: 'melakukan cut down little by little / melakukan take a percentage' },
-      { word: '削除', reading: 'さくじょ', meaning: 'elimination / deletion' },
+      { word: '削減', reading: 'さくげん', meaning: 'Cut / reduction' },
+      { word: '削る', reading: 'けずる', meaning: 'Memotong (down little by little) / Mengambil (a percentage)' },
+      { word: '削除', reading: 'さくじょ', meaning: 'Elimination / deletion' },
     ],
   },
   {
@@ -1535,8 +1535,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["咅","刂"],
     mnemonic: 'Karakter 剖 (Divide) memiliki 10 goresan, tersusun dari elemen (咅, 刂) yang melambangkan konsep intinya.',
     examples: [
-      { word: '解剖', reading: 'かいぼう', meaning: 'dissection / autopsy' },
-      { word: '解剖学', reading: 'かいぼうがく', meaning: 'anatomy' },
+      { word: '解剖', reading: 'かいぼう', meaning: 'Dissection / autopsy' },
+      { word: '解剖学', reading: 'かいぼうがく', meaning: 'Anatomy' },
     ],
   },
   {
@@ -1552,7 +1552,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["岡","刂"],
     mnemonic: 'Karakter 剛 (Sturdy / strength) memiliki 10 goresan, tersusun dari elemen (岡, 刂) yang melambangkan konsep intinya.',
     examples: [
-      { word: '剛健', reading: 'ごうけん', meaning: 'vigour' },
+      { word: '剛健', reading: 'ごうけん', meaning: 'Vigour' },
       { word: '剛胆', reading: 'ごうたん', meaning: 'Pemberani tak kenal takut' },
     ],
   },
@@ -1569,9 +1569,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["㑒","刂"],
     mnemonic: 'Karakter 剣 (Pedang bilah panjang) memiliki 10 goresan, tersusun dari elemen (㑒, 刂) yang melambangkan konsep intinya.',
     examples: [
-      { word: '真剣', reading: 'しんけん', meaning: 'seriousness / earnestness' },
-      { word: '刀剣', reading: 'とうけん', meaning: 'sword' },
-      { word: '剣劇', reading: 'けんげき', meaning: 'sword play' },
+      { word: '真剣', reading: 'しんけん', meaning: 'Seriousness / earnestness' },
+      { word: '刀剣', reading: 'とうけん', meaning: 'Sword' },
+      { word: '剣劇', reading: 'けんげき', meaning: 'Sword play' },
     ],
   },
   {
@@ -1587,9 +1587,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["斉","刂"],
     mnemonic: 'Karakter 剤 (Dose / medicine) memiliki 10 goresan, tersusun dari elemen (斉, 刂) yang melambangkan konsep intinya.',
     examples: [
-      { word: '洗剤', reading: 'せんざい', meaning: 'detergent' },
+      { word: '洗剤', reading: 'せんざい', meaning: 'Detergent' },
       { word: '錠剤', reading: 'じょうざい', meaning: 'Obat bentuk tablet' },
-      { word: '合成洗剤', reading: 'ごうせいせんざい', meaning: 'synthetic detergent' },
+      { word: '合成洗剤', reading: 'ごうせいせんざい', meaning: 'Synthetic detergent' },
     ],
   },
   {
@@ -1605,9 +1605,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["录","刂"],
     mnemonic: 'Karakter 剥 (Come off / peel) memiliki 10 goresan, tersusun dari elemen (录, 刂) yang melambangkan konsep intinya.',
     examples: [
-      { word: '剥く', reading: 'むく', meaning: 'melakukan peel / melakukan skin' },
-      { word: '剥ぐ', reading: 'はぐ', meaning: 'melakukan tear off / melakukan peel off / melakukan rip off' },
-      { word: '剥げる', reading: 'はげる', meaning: 'melakukan come off / melakukan be worn off / melakukan fade' },
+      { word: '剥く', reading: 'むく', meaning: 'Peel / Skin' },
+      { word: '剥ぐ', reading: 'はぐ', meaning: 'Merobek (off) / Peel off / Rip off' },
+      { word: '剥げる', reading: 'はげる', meaning: 'Come off / Menjadi worn off / Fade' },
     ],
   },
   {
@@ -1623,9 +1623,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["乗","刂"],
     mnemonic: 'Karakter 剰 (Surplus / besides) memiliki 11 goresan, tersusun dari elemen (乗, 刂) yang melambangkan konsep intinya.',
     examples: [
-      { word: '過剰', reading: 'かじょう', meaning: 'excess / over-' },
-      { word: '余剰', reading: 'よじょう', meaning: 'surplus' },
-      { word: '剰余金', reading: 'じょうよきん', meaning: 'surplus' },
+      { word: '過剰', reading: 'かじょう', meaning: 'Excess / over-' },
+      { word: '余剰', reading: 'よじょう', meaning: 'Surplus' },
+      { word: '剰余金', reading: 'じょうよきん', meaning: 'Surplus' },
     ],
   },
   {
@@ -1641,9 +1641,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["倉","刂"],
     mnemonic: 'Karakter 創 (Menciptakan / Memulai karya) memiliki 12 goresan, tersusun dari elemen (倉, 刂) yang melambangkan konsep intinya.',
     examples: [
-      { word: '創造', reading: 'そうぞう', meaning: 'creation' },
+      { word: '創造', reading: 'そうぞう', meaning: 'Creation' },
       { word: '絆創膏', reading: 'ばんそうこう', meaning: 'Plester luka / hansaplast' },
-      { word: '独創', reading: 'どくそう', meaning: 'originality' },
+      { word: '独創', reading: 'どくそう', meaning: 'Originality' },
     ],
   },
   {
@@ -1659,9 +1659,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["丿","𠃌"],
     mnemonic: 'Karakter 力 (Kekuatan / daya / strength) memiliki 2 goresan, tersusun dari elemen (丿, 𠃌) yang melambangkan konsep intinya.',
     examples: [
-      { word: '実力', reading: 'じつりょく', meaning: 'ability / force' },
-      { word: '協力', reading: 'きょうりょく', meaning: 'cooperation / collaboration' },
-      { word: '強力', reading: 'きょうりょく', meaning: 'powerful / strong' },
+      { word: '実力', reading: 'じつりょく', meaning: 'Ability / force' },
+      { word: '協力', reading: 'きょうりょく', meaning: 'Cooperation / collaboration' },
+      { word: '強力', reading: 'きょうりょく', meaning: 'Powerful / strong' },
     ],
   },
   {
@@ -1677,9 +1677,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["厉","力"],
     mnemonic: 'Karakter 励 (Encourage / be diligent) memiliki 7 goresan, tersusun dari elemen (厉, 力) yang melambangkan konsep intinya.',
     examples: [
-      { word: '激励', reading: 'げきれい', meaning: 'encouragement' },
-      { word: '奨励', reading: 'しょうれい', meaning: 'encouragement / promotion' },
-      { word: '励ます', reading: 'はげます', meaning: 'melakukan encourage / melakukan cheer / melakukan raise (the voice)' },
+      { word: '激励', reading: 'げきれい', meaning: 'Encouragement' },
+      { word: '奨励', reading: 'しょうれい', meaning: 'Encouragement / promotion' },
+      { word: '励ます', reading: 'はげます', meaning: 'Encourage / Cheer / Raise (the voice)' },
     ],
   },
   {
@@ -1696,7 +1696,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 勃 (Suddenness / rise) memiliki 9 goresan, tersusun dari elemen (孛, 力) yang melambangkan konsep intinya.',
     examples: [
       { word: '勃牙利', reading: 'ブルガリア', meaning: 'Bulgaria' },
-      { word: '勃起', reading: 'ぼっき', meaning: 'erection (of the penis)' },
+      { word: '勃起', reading: 'ぼっき', meaning: 'Erection (of the penis)' },
     ],
   },
   {
@@ -1729,9 +1729,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["甚","力"],
     mnemonic: 'Karakter 勘 (Intuition / perception) memiliki 11 goresan, tersusun dari elemen (甚, 力) yang melambangkan konsep intinya.',
     examples: [
-      { word: '勘', reading: 'かん', meaning: 'perception / intuition / the sixth sense' },
-      { word: '勘定', reading: 'かんじょう', meaning: 'calculation / counting / consideration' },
-      { word: '勘弁', reading: 'かんべん', meaning: 'pardon / forgiveness / forbearance' },
+      { word: '勘', reading: 'かん', meaning: 'Perception / intuition / the sixth sense' },
+      { word: '勘定', reading: 'かんじょう', meaning: 'Calculation / counting / consideration' },
+      { word: '勘弁', reading: 'かんべん', meaning: 'Pardon / forgiveness / forbearance' },
     ],
   },
   {
@@ -1747,8 +1747,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["動","灬"],
     mnemonic: 'Karakter 勲 (Meritorious deed / merit) memiliki 15 goresan, tersusun dari elemen (動, 灬) yang melambangkan konsep intinya.',
     examples: [
-      { word: '勲章', reading: 'くんしょう', meaning: 'decoration' },
-      { word: '叙勲', reading: 'じょくん', meaning: 'conferring of decorations' },
+      { word: '勲章', reading: 'くんしょう', meaning: 'Decoration' },
+      { word: '叙勲', reading: 'じょくん', meaning: 'Conferring of decorations' },
       { word: '文化勲章', reading: 'ぶんかくんしょう', meaning: 'Order of Culture (Japan)' },
     ],
   },
@@ -1765,7 +1765,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["勹","厶"],
     mnemonic: 'Karakter 勾 (Be bent / slope) memiliki 4 goresan, tersusun dari elemen (勹, 厶) yang melambangkan konsep intinya.',
     examples: [
-      { word: '勾配', reading: 'こうばい', meaning: 'slope' },
+      { word: '勾配', reading: 'こうばい', meaning: 'Slope' },
       { word: '勾引', reading: 'こういん', meaning: 'Penahanan / Penangkapan hukum' },
     ],
   },
@@ -1782,8 +1782,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["勹","匕"],
     mnemonic: 'Karakter 匂 (Fragrant / stink) memiliki 4 goresan, tersusun dari elemen (勹, 匕) yang melambangkan konsep intinya.',
     examples: [
-      { word: '匂い', reading: 'におい', meaning: 'odor / smell' },
-      { word: '匂う', reading: 'におう', meaning: 'melakukan be fragrant / melakukan smell' },
+      { word: '匂い', reading: 'におい', meaning: 'Odor / smell' },
+      { word: '匂う', reading: 'におう', meaning: 'Menjadi fragrant / Smell' },
     ],
   },
   {
@@ -1799,9 +1799,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["匚","斤"],
     mnemonic: 'Karakter 匠 (Artisan / workman) memiliki 6 goresan, tersusun dari elemen (匚, 斤) yang melambangkan konsep intinya.',
     examples: [
-      { word: '巨匠', reading: 'きょしょう', meaning: 'master' },
-      { word: '師匠', reading: 'ししょう', meaning: 'master' },
-      { word: '意匠', reading: 'いしょう', meaning: 'design' },
+      { word: '巨匠', reading: 'きょしょう', meaning: 'Master' },
+      { word: '師匠', reading: 'ししょう', meaning: 'Master' },
+      { word: '意匠', reading: 'いしょう', meaning: 'Design' },
     ],
   },
   {
@@ -1818,7 +1818,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 匿 (Hide / shelter) memiliki 10 goresan, tersusun dari elemen (匚, 若) yang melambangkan konsep intinya.',
     examples: [
       { word: '隠匿', reading: 'いんとく', meaning: 'Penyembunyian aset secara ilegal' },
-      { word: '匿名', reading: 'とくめい', meaning: 'anonymity' },
+      { word: '匿名', reading: 'とくめい', meaning: 'Anonymity' },
     ],
   },
   {
@@ -1851,9 +1851,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["𠂉","十"],
     mnemonic: 'Karakter 午 (Noon / sign of the horse) memiliki 4 goresan, tersusun dari elemen (𠂉, 十) yang melambangkan konsep intinya.',
     examples: [
-      { word: '午後', reading: 'ごご', meaning: 'afternoon / p.m.' },
-      { word: '午前', reading: 'ごぜん', meaning: 'pagi hari / a.m.' },
-      { word: '正午', reading: 'しょうご', meaning: 'noon / mid-day' },
+      { word: '午後', reading: 'ごご', meaning: 'Afternoon / p.m.' },
+      { word: '午前', reading: 'ごぜん', meaning: 'Pagi hari / a.m.' },
+      { word: '正午', reading: 'しょうご', meaning: 'Noon / mid-day' },
     ],
   },
   {
@@ -1869,9 +1869,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["白","丿","十"],
     mnemonic: 'Karakter 卑 (Hina / Rendah diri / Licik) memiliki 9 goresan, tersusun dari elemen (白, 丿, 十) yang melambangkan konsep intinya.',
     examples: [
-      { word: '卑しい', reading: 'いやしい', meaning: 'greedy / vulgar / shabby' },
-      { word: '卑怯', reading: 'ひきょう', meaning: 'cowardice / meanness / unfairness' },
-      { word: '卑劣', reading: 'ひれつ', meaning: 'mean' },
+      { word: '卑しい', reading: 'いやしい', meaning: 'Greedy / vulgar / shabby' },
+      { word: '卑怯', reading: 'ひきょう', meaning: 'Cowardice / meanness / unfairness' },
+      { word: '卑劣', reading: 'ひれつ', meaning: 'Mean' },
     ],
   },
   {
@@ -1887,9 +1887,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["⺊","早"],
     mnemonic: 'Karakter 卓 (Meja / Terkemuka unggul) memiliki 8 goresan, tersusun dari elemen (⺊, 早) yang melambangkan konsep intinya.',
     examples: [
-      { word: '食卓', reading: 'しょくたく', meaning: 'dining table' },
-      { word: '円卓', reading: 'えんたく', meaning: 'round table' },
-      { word: '卓上', reading: 'たくじょう', meaning: 'desktop' },
+      { word: '食卓', reading: 'しょくたく', meaning: 'Dining table' },
+      { word: '円卓', reading: 'えんたく', meaning: 'Round table' },
+      { word: '卓上', reading: 'たくじょう', meaning: 'Desktop' },
     ],
   },
   {
@@ -1905,8 +1905,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["十","尃"],
     mnemonic: 'Karakter 博 (Luas berilmu / Ekshibisi pameran) memiliki 12 goresan, tersusun dari elemen (十, 尃) yang melambangkan konsep intinya.',
     examples: [
-      { word: '博士', reading: 'はかせ', meaning: 'doctorate / phd. / doctor' },
-      { word: '博物館', reading: 'はくぶつかん', meaning: 'museum' },
+      { word: '博士', reading: 'はかせ', meaning: 'Doctorate / phd. / doctor' },
+      { word: '博物館', reading: 'はくぶつかん', meaning: 'Museum' },
       { word: '博多', reading: 'はかた', meaning: 'Hakata (old but still commonly used name for Fukuoka)' },
     ],
   },
@@ -1924,8 +1924,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 即 (Instant / namely) memiliki 7 goresan, tersusun dari elemen (卩) yang melambangkan konsep intinya.',
     examples: [
       { word: '即ち', reading: 'すなわち', meaning: 'Yaitu / Dengan kata lain' },
-      { word: '即座に', reading: 'そくざに', meaning: 'immediately / right away' },
-      { word: '即する', reading: 'そくする', meaning: 'melakukan conform to / melakukan agree with / melakukan be adapted to' },
+      { word: '即座に', reading: 'そくざに', meaning: 'Immediately / right away' },
+      { word: '即する', reading: 'そくする', meaning: 'Conform to / Menyetujui (with) / Menjadi adapted to' },
     ],
   },
   {
@@ -1942,8 +1942,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 却 (Instead / on the contrary) memiliki 7 goresan, tersusun dari elemen (去, 卩) yang melambangkan konsep intinya.',
     examples: [
       { word: '棄却', reading: 'ききゃく', meaning: 'Penolakan perkara oleh majelis hakim' },
-      { word: '却って', reading: 'かえって', meaning: 'on the contrary / rather' },
-      { word: '償却', reading: 'しょうきゃく', meaning: 'repayment' },
+      { word: '却って', reading: 'かえって', meaning: 'On the contrary / rather' },
+      { word: '償却', reading: 'しょうきゃく', meaning: 'Repayment' },
     ],
   },
   {
@@ -1959,9 +1959,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["𦈢","卩"],
     mnemonic: 'Karakter 卸 (Wholesale) memiliki 9 goresan, tersusun dari elemen (𦈢, 卩) yang melambangkan konsep intinya.',
     examples: [
-      { word: '卸す', reading: 'おろす', meaning: 'melakukan sell wholesale / grated (vegetables)' },
-      { word: '卸値', reading: 'おろしね', meaning: 'wholesale price' },
-      { word: '卸売', reading: 'おろしうり', meaning: 'wholesale' },
+      { word: '卸す', reading: 'おろす', meaning: 'Menjual (wholesale) / grated (vegetables)' },
+      { word: '卸値', reading: 'おろしね', meaning: 'Wholesale price' },
+      { word: '卸売', reading: 'おろしうり', meaning: 'Wholesale' },
     ],
   },
   {
@@ -1977,8 +1977,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["厂","㔾"],
     mnemonic: 'Karakter 厄 (Unlucky / misfortune) memiliki 4 goresan, tersusun dari elemen (厂, 㔾) yang melambangkan konsep intinya.',
     examples: [
-      { word: '厄介', reading: 'やっかい', meaning: 'trouble / burden / care' },
-      { word: '厄年', reading: 'やくどし', meaning: 'unlucky year' },
+      { word: '厄介', reading: 'やっかい', meaning: 'Masalah / Gangguan / burden / care' },
+      { word: '厄年', reading: 'やくどし', meaning: 'Unlucky year' },
       { word: '厄瓜多', reading: 'エクアドル', meaning: 'Ecuador' },
     ],
   },
@@ -2013,8 +2013,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 厳 (Stern / strictness) memiliki 17 goresan, tersusun dari elemen (𭕄, 𠪚) yang melambangkan konsep intinya.',
     examples: [
       { word: '謹厳実直', reading: 'きんげんじっちょく', meaning: 'Karakter sangat disiplin, saleh, jujur, dan berprinsip lurus' },
-      { word: '厳しい', reading: 'きびしい', meaning: 'hard / rigorous / strict' },
-      { word: '厳密', reading: 'げんみつ', meaning: 'strict / close' },
+      { word: '厳しい', reading: 'きびしい', meaning: 'Keras / Ketat / Disiplin' },
+      { word: '厳密', reading: 'げんみつ', meaning: 'Ketat / Akurat / Rinci' },
     ],
   },
   {
@@ -2030,9 +2030,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["土","厶"],
     mnemonic: 'Karakter 去 (Gone / past) memiliki 5 goresan, tersusun dari elemen (土, 厶) yang melambangkan konsep intinya.',
     examples: [
-      { word: '去年', reading: 'きょねん', meaning: 'last year' },
-      { word: '去る', reading: 'さる', meaning: 'melakukan leave / melakukan go away' },
-      { word: '過去', reading: 'かこ', meaning: 'past' },
+      { word: '去年', reading: 'きょねん', meaning: 'Last year' },
+      { word: '去る', reading: 'さる', meaning: 'Meninggalkan / Berangkat / Go away' },
+      { word: '過去', reading: 'かこ', meaning: 'Past' },
     ],
   },
   {
@@ -2066,8 +2066,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 及 (Reach out / exert) memiliki 3 goresan, tersusun dari elemen (及) yang melambangkan konsep intinya.',
     examples: [
       { word: '追及', reading: 'ついきゅう', meaning: 'Pengusutan pertanggungjawaban' },
-      { word: '及ぼす', reading: 'およぼす', meaning: 'melakukan exert / melakukan cause / melakukan exercise' },
-      { word: '及び', reading: 'および', meaning: 'and / as well as' },
+      { word: '及ぼす', reading: 'およぼす', meaning: 'Exert / Cause / Berolahraga' },
+      { word: '及び', reading: 'および', meaning: 'And / as well as' },
     ],
   },
   {
@@ -2101,9 +2101,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["余","又"],
     mnemonic: 'Karakter 叙 (Confer / relate) memiliki 9 goresan, tersusun dari elemen (余, 又) yang melambangkan konsep intinya.',
     examples: [
-      { word: '叙事詩', reading: 'じょじし', meaning: 'epic (poem)' },
+      { word: '叙事詩', reading: 'じょじし', meaning: 'Epic (poem)' },
       { word: '叙利亜', reading: 'シリア', meaning: 'Syria' },
-      { word: '叙勲', reading: 'じょくん', meaning: 'conferring of decorations' },
+      { word: '叙勲', reading: 'じょくん', meaning: 'Conferring of decorations' },
     ],
   },
   {
@@ -2119,9 +2119,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["勹","口"],
     mnemonic: 'Karakter 句 (Phrase / clause) memiliki 5 goresan, tersusun dari elemen (勹, 口) yang melambangkan konsep intinya.',
     examples: [
-      { word: '句', reading: 'く', meaning: 'phrase' },
-      { word: '文句', reading: 'もんく', meaning: 'a complaint' },
-      { word: '語句', reading: 'ごく', meaning: 'words / phrases' },
+      { word: '句', reading: 'く', meaning: 'Phrase' },
+      { word: '文句', reading: 'もんく', meaning: 'A complaint' },
+      { word: '語句', reading: 'ごく', meaning: 'Words / phrases' },
     ],
   },
   {
@@ -2137,7 +2137,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["口","𠤎"],
     mnemonic: 'Karakter 叱 (Scold / reprove) memiliki 5 goresan, tersusun dari elemen (口, 𠤎) yang melambangkan konsep intinya.',
     examples: [
-      { word: '叱る', reading: 'しかる', meaning: 'melakukan scold' },
+      { word: '叱る', reading: 'しかる', meaning: 'Memarahi' },
       { word: '叱責', reading: 'しっせき', meaning: 'Teguran keras / Memarahi' },
     ],
   },
@@ -2154,9 +2154,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["𠃌","𠮛"],
     mnemonic: 'Karakter 司 (Director / official) memiliki 5 goresan, tersusun dari elemen (𠃌, 𠮛) yang melambangkan konsep intinya.',
     examples: [
-      { word: '上司', reading: 'じょうし', meaning: 'one\\' },
-      { word: '司る', reading: 'つかさどる', meaning: 'aturan / tata tertib / melakukan govern / melakukan administer' },
-      { word: '司法', reading: 'しほう', meaning: 'administration of justice' },
+      { word: '上司', reading: 'じょうし', meaning: 'One\\' },
+      { word: '司る', reading: 'つかさどる', meaning: 'Aturan / tata tertib / Govern / Administer' },
+      { word: '司法', reading: 'しほう', meaning: 'Administration of justice' },
     ],
   },
   {
@@ -2172,9 +2172,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["士","口"],
     mnemonic: 'Karakter 吉 (Baik luck / kegembiraan) memiliki 6 goresan, tersusun dari elemen (士, 口) yang melambangkan konsep intinya.',
     examples: [
-      { word: '不吉', reading: 'ふきつ', meaning: 'ominous / sinister / bad luck' },
-      { word: '吉兆', reading: 'きっちょう', meaning: 'lucky omen' },
-      { word: '吉報', reading: 'きっぽう', meaning: 'good news' },
+      { word: '不吉', reading: 'ふきつ', meaning: 'Ominous / sinister / bad luck' },
+      { word: '吉兆', reading: 'きっちょう', meaning: 'Lucky omen' },
+      { word: '吉報', reading: 'きっぽう', meaning: 'Good news' },
     ],
   },
   {
@@ -2190,7 +2190,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["𠂋","口"],
     mnemonic: 'Karakter 后 (Empress / queen) memiliki 6 goresan, tersusun dari elemen (𠂋, 口) yang melambangkan konsep intinya.',
     examples: [
-      { word: '皇后', reading: 'こうごう', meaning: 'empress (consort)' },
+      { word: '皇后', reading: 'こうごう', meaning: 'Empress (consort)' },
       { word: '皇太后', reading: 'こうたいごう', meaning: 'Empress Dowager' },
     ],
   },
@@ -2207,9 +2207,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["一","史"],
     mnemonic: 'Karakter 吏 (Officer / an official) memiliki 6 goresan, tersusun dari elemen (一, 史) yang melambangkan konsep intinya.',
     examples: [
-      { word: '下吏', reading: 'かり', meaning: 'lower official' },
-      { word: '官吏', reading: 'かんり', meaning: 'government official' },
-      { word: '捕吏', reading: 'ほり', meaning: 'constable' },
+      { word: '下吏', reading: 'かり', meaning: 'Lower official' },
+      { word: '官吏', reading: 'かんり', meaning: 'Government official' },
+      { word: '捕吏', reading: 'ほり', meaning: 'Constable' },
     ],
   },
   {
@@ -2225,9 +2225,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["口","土"],
     mnemonic: 'Karakter 吐 (Spit / vomit) memiliki 6 goresan, tersusun dari elemen (口, 土) yang melambangkan konsep intinya.',
     examples: [
-      { word: '吐く', reading: 'はく', meaning: 'melakukan throw up / melakukan vomit' },
-      { word: '吐き気', reading: 'はきけ', meaning: 'nausea / sickness in the stomach' },
-      { word: '吐き出す', reading: 'はきだす', meaning: 'to vomit' },
+      { word: '吐く', reading: 'はく', meaning: 'Throw up / Vomit' },
+      { word: '吐き気', reading: 'はきけ', meaning: 'Nausea / sickness in the stomach' },
+      { word: '吐き出す', reading: 'はきだす', meaning: 'To vomit' },
     ],
   },
   {
@@ -2243,8 +2243,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["口","今"],
     mnemonic: 'Karakter 吟 (Melantunkan syair / Meratapi lagu) memiliki 7 goresan, tersusun dari elemen (口, 今) yang melambangkan konsep intinya.',
     examples: [
-      { word: '吟味', reading: 'ぎんみ', meaning: 'examination / careful investigation' },
-      { word: '口吟む', reading: 'くちずさむ', meaning: 'melakukan humble' },
+      { word: '吟味', reading: 'ぎんみ', meaning: 'Examination / careful investigation' },
+      { word: '口吟む', reading: 'くちずさむ', meaning: 'Humble' },
     ],
   },
   {
@@ -2260,9 +2260,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["口","丿","口"],
     mnemonic: 'Karakter 呂 (Spine / backbone) memiliki 7 goresan, tersusun dari elemen (口, 丿, 口) yang melambangkan konsep intinya.',
     examples: [
-      { word: 'お風呂', reading: 'おふろ', meaning: 'a bath' },
-      { word: '風呂敷', reading: 'ふろしき', meaning: 'wrapping cloth / cloth wrapper' },
-      { word: '伊呂波', reading: 'いろは', meaning: 'traditional ordering of the Japanese syllabary' },
+      { word: 'お風呂', reading: 'おふろ', meaning: 'A bath' },
+      { word: '風呂敷', reading: 'ふろしき', meaning: 'Wrapping cloth / cloth wrapper' },
+      { word: '伊呂波', reading: 'いろは', meaning: 'Traditional ordering of the Japanese syllabary' },
     ],
   },
   {
@@ -2278,9 +2278,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["口","王"],
     mnemonic: 'Karakter 呈 (Display / offer) memiliki 7 goresan, tersusun dari elemen (口, 王) yang melambangkan konsep intinya.',
     examples: [
-      { word: '進呈', reading: 'しんてい', meaning: 'presentation' },
-      { word: '贈呈', reading: 'ぞうてい', meaning: 'presentation (of a gift, prize, etc.)' },
-      { word: '露呈', reading: 'ろてい', meaning: 'exposure' },
+      { word: '進呈', reading: 'しんてい', meaning: 'Presentation' },
+      { word: '贈呈', reading: 'ぞうてい', meaning: 'Presentation (of a gift, prize, etc.)' },
+      { word: '露呈', reading: 'ろてい', meaning: 'Exposure' },
     ],
   },
   {
@@ -2297,8 +2297,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 呉 (Give / do something for) memiliki 7 goresan, tersusun dari elemen (𠃑, 口, 一) yang melambangkan konsep intinya.',
     examples: [
       { word: '呉越同舟', reading: 'ごえつどうしゅう', meaning: 'Dua pihak yang saling bermusuhan terpaksa bersatu demi menghadapi bahaya bersama' },
-      { word: '呉れ呉れも', reading: 'くれぐれも', meaning: 'sincerely' },
-      { word: '呉服', reading: 'ごふく', meaning: 'cloth (for Japanese clothes)' },
+      { word: '呉れ呉れも', reading: 'くれぐれも', meaning: 'Sincerely' },
+      { word: '呉服', reading: 'ごふく', meaning: 'Cloth (for Japanese clothes)' },
     ],
   },
   {
@@ -2348,9 +2348,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["亠","口","𧘇"],
     mnemonic: 'Karakter 哀 (Menyedihkan / Haru) memiliki 9 goresan, tersusun dari elemen (亠, 口, 𧘇) yang melambangkan konsep intinya.',
     examples: [
-      { word: '哀れ', reading: 'あわれ', meaning: 'helpless / pity / pathetic' },
-      { word: '可哀想', reading: 'かわいそう', meaning: 'poor' },
-      { word: '哀悼', reading: 'あいとう', meaning: 'condolence' },
+      { word: '哀れ', reading: 'あわれ', meaning: 'Helpless / pity / pathetic' },
+      { word: '可哀想', reading: 'かわいそう', meaning: 'Poor' },
+      { word: '哀悼', reading: 'あいとう', meaning: 'Condolence' },
     ],
   },
   {
@@ -2366,8 +2366,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["折","口"],
     mnemonic: 'Karakter 哲 (Philosophy / clear) memiliki 10 goresan, tersusun dari elemen (折, 口) yang melambangkan konsep intinya.',
     examples: [
-      { word: '哲学', reading: 'てつがく', meaning: 'philosophy' },
-      { word: '哲人', reading: 'てつじん', meaning: 'wise man' },
+      { word: '哲学', reading: 'てつがく', meaning: 'Philosophy' },
+      { word: '哲人', reading: 'てつじん', meaning: 'Wise man' },
     ],
   },
   {
@@ -2400,8 +2400,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["口","貝"],
     mnemonic: 'Karakter 唄 (Song / ballad) memiliki 10 goresan, tersusun dari elemen (口, 貝) yang melambangkan konsep intinya.',
     examples: [
-      { word: '子守唄', reading: 'こもりうた', meaning: 'lullaby' },
-      { word: '長唄', reading: 'ながうた', meaning: 'long epic song with shamisen accompaniment (developed in Edo in the early 17th century)' },
+      { word: '子守唄', reading: 'こもりうた', meaning: 'Lullaby' },
+      { word: '長唄', reading: 'ながうた', meaning: 'Long epic song with shamisen accompaniment (developed in Edo in the early 17th century)' },
     ],
   },
   {
@@ -2417,9 +2417,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["辰","口"],
     mnemonic: 'Karakter 唇 (Lips) memiliki 10 goresan, tersusun dari elemen (辰, 口) yang melambangkan konsep intinya.',
     examples: [
-      { word: '唇', reading: 'くちびる', meaning: 'lip' },
-      { word: '上唇', reading: 'うわくちびる', meaning: 'upper lip' },
-      { word: '下唇', reading: 'したくちびる', meaning: 'lower lip' },
+      { word: '唇', reading: 'くちびる', meaning: 'Lip' },
+      { word: '上唇', reading: 'うわくちびる', meaning: 'Upper lip' },
+      { word: '下唇', reading: 'したくちびる', meaning: 'Lower lip' },
     ],
   },
   {
@@ -2435,9 +2435,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["广","肀","口"],
     mnemonic: 'Karakter 唐 (T\'ang / china) memiliki 10 goresan, tersusun dari elemen (广, 肀, 口) yang melambangkan konsep intinya.',
     examples: [
-      { word: '唐突', reading: 'とうとつ', meaning: 'abrupt' },
-      { word: '唐辛子', reading: 'とうがらし', meaning: 'capsicum (Capsicum annuum, esp. the cultivated chili peppers)' },
-      { word: '遣唐使', reading: 'けんとうし', meaning: 'envoy to Tang China' },
+      { word: '唐突', reading: 'とうとつ', meaning: 'Abrupt' },
+      { word: '唐辛子', reading: 'とうがらし', meaning: 'Capsicum (Capsicum annuum, esp. the cultivated chili peppers)' },
+      { word: '遣唐使', reading: 'けんとうし', meaning: 'Envoy to Tang China' },
     ],
   },
   {
@@ -2454,8 +2454,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 唯 (Solely / only) memiliki 11 goresan, tersusun dari elemen (口, 隹) yang melambangkan konsep intinya.',
     examples: [
       { word: '唯我独尊', reading: 'ゆいがどくそん', meaning: 'Merasa diri paling hebat / Menganggap diri nomor satu tanpa memedulikan orang lain' },
-      { word: '唯一', reading: 'ゆいいつ', meaning: 'only / sole / unique' },
-      { word: '唯', reading: 'ただ', meaning: 'mere / sole / plain' },
+      { word: '唯一', reading: 'ゆいいつ', meaning: 'Only / sole / unique' },
+      { word: '唯', reading: 'ただ', meaning: 'Mere / sole / plain' },
     ],
   },
   {
@@ -2471,7 +2471,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["口","垂"],
     mnemonic: 'Karakter 唾 (Saliva / sputum) memiliki 11 goresan, tersusun dari elemen (口, 垂) yang melambangkan konsep intinya.',
     examples: [
-      { word: '唾', reading: 'つば', meaning: 'saliva / spit / sputum' },
+      { word: '唾', reading: 'つば', meaning: 'Saliva / spit / sputum' },
       { word: '唾液', reading: 'だえき', meaning: 'Air liur / Saliva' },
     ],
   },
@@ -2489,7 +2489,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 啓 (Disclose / open) memiliki 11 goresan, tersusun dari elemen (𢼄, 口) yang melambangkan konsep intinya.',
     examples: [
       { word: '拝啓', reading: 'はいけい', meaning: '-- a formal greeting used at the beginning of a letter --' },
-      { word: '啓発', reading: 'けいはつ', meaning: 'enlightenment' },
+      { word: '啓発', reading: 'けいはつ', meaning: 'Enlightenment' },
       { word: '啓示', reading: 'けいじ', meaning: '(divine) revelation' },
     ],
   },
@@ -2506,9 +2506,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["羊","䒑","口"],
     mnemonic: 'Karakter 善 (Virtuous / baik) memiliki 12 goresan, tersusun dari elemen (羊, 䒑, 口) yang melambangkan konsep intinya.',
     examples: [
-      { word: '改善', reading: 'かいぜん', meaning: 'betterment / improvement' },
-      { word: '善', reading: 'ぜん', meaning: 'good / virtue' },
-      { word: '最善', reading: 'さいぜん', meaning: 'the very best' },
+      { word: '改善', reading: 'かいぜん', meaning: 'Betterment / improvement' },
+      { word: '善', reading: 'ぜん', meaning: 'Good / virtue' },
+      { word: '最善', reading: 'さいぜん', meaning: 'The very best' },
     ],
   },
   {
@@ -2541,9 +2541,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["口","奐"],
     mnemonic: 'Karakter 喚 (Yell / cry) memiliki 12 goresan, tersusun dari elemen (口, 奐) yang melambangkan konsep intinya.',
     examples: [
-      { word: '召喚', reading: 'しょうかん', meaning: 'summons' },
-      { word: '喚問', reading: 'かんもん', meaning: 'summons' },
-      { word: '喚起', reading: 'かんき', meaning: 'arousal' },
+      { word: '召喚', reading: 'しょうかん', meaning: 'Summons' },
+      { word: '喚問', reading: 'かんもん', meaning: 'Summons' },
+      { word: '喚起', reading: 'かんき', meaning: 'Arousal' },
     ],
   },
   {
@@ -2559,8 +2559,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["口","曷"],
     mnemonic: 'Karakter 喝 (Membentak / Berteriak lantang) memiliki 11 goresan, tersusun dari elemen (口, 曷) yang melambangkan konsep intinya.',
     examples: [
-      { word: '喝破', reading: 'かっぱ', meaning: 'arguing (someone) down' },
-      { word: '恐喝', reading: 'きょうかつ', meaning: 'blackmail' },
+      { word: '喝破', reading: 'かっぱ', meaning: 'Arguing (someone) down' },
+      { word: '恐喝', reading: 'きょうかつ', meaning: 'Blackmail' },
     ],
   },
   {
@@ -2576,7 +2576,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["口","兪"],
     mnemonic: 'Karakter 喩 (Metaphor / compare) memiliki 12 goresan, tersusun dari elemen (口, 兪) yang melambangkan konsep intinya.',
     examples: [
-      { word: '比喩', reading: 'ひゆ', meaning: 'simile' },
+      { word: '比喩', reading: 'ひゆ', meaning: 'Simile' },
       { word: '直喩', reading: 'ちょくゆ', meaning: 'Simile / Perumpamaan langsung' },
     ],
   },
@@ -2593,9 +2593,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["土","吅","𠄌","乀","丿"],
     mnemonic: 'Karakter 喪 (Miss / mourning) memiliki 12 goresan, tersusun dari elemen (土, 吅, 𠄌) yang melambangkan konsep intinya.',
     examples: [
-      { word: '喪主', reading: 'もしゅ', meaning: 'chief mourner' },
-      { word: '喪失', reading: 'そうしつ', meaning: 'loss' },
-      { word: '喪服', reading: 'もふく', meaning: 'mourning clothes' },
+      { word: '喪主', reading: 'もしゅ', meaning: 'Chief mourner' },
+      { word: '喪失', reading: 'そうしつ', meaning: 'Loss' },
+      { word: '喪服', reading: 'もふく', meaning: 'Mourning clothes' },
     ],
   },
   {
@@ -2611,7 +2611,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["口","臭"],
     mnemonic: 'Karakter 嗅 (Mencium bau / Mengendus) memiliki 13 goresan, tersusun dari elemen (口, 臭) yang melambangkan konsep intinya.',
     examples: [
-      { word: '嗅ぐ', reading: 'かぐ', meaning: 'melakukan sniff / melakukan smell' },
+      { word: '嗅ぐ', reading: 'かぐ', meaning: 'Sniff / Smell' },
       { word: '嗅覚', reading: 'きゅうかく', meaning: 'Indra penciuman' },
     ],
   },
@@ -2645,9 +2645,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["口","属"],
     mnemonic: 'Karakter 嘱 (Entrust / request) memiliki 15 goresan, tersusun dari elemen (口, 属) yang melambangkan konsep intinya.',
     examples: [
-      { word: '嘱望', reading: 'しょくぼう', meaning: 'having great hopes for (someone\'s future)' },
-      { word: '嘱託', reading: 'しょくたく', meaning: 'commission' },
-      { word: '委嘱', reading: 'いしょく', meaning: 'commissioning' },
+      { word: '嘱望', reading: 'しょくぼう', meaning: 'Having great hopes for (someone\'s future)' },
+      { word: '嘱託', reading: 'しょくたく', meaning: 'Commission' },
+      { word: '委嘱', reading: 'いしょく', meaning: 'Commissioning' },
     ],
   },
   {
@@ -2663,9 +2663,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["吅","犬","吅"],
     mnemonic: 'Karakter 器 (Utensil / vessel) memiliki 15 goresan, tersusun dari elemen (吅, 犬, 吅) yang melambangkan konsep intinya.',
     examples: [
-      { word: '楽器', reading: 'がっき', meaning: 'musical instrument' },
-      { word: '器械', reading: 'きかい', meaning: 'instrument' },
-      { word: '器用', reading: 'きよう', meaning: 'skillful / handy' },
+      { word: '楽器', reading: 'がっき', meaning: 'Musical instrument' },
+      { word: '器械', reading: 'きかい', meaning: 'Instrument' },
+      { word: '器用', reading: 'きよう', meaning: 'Skillful / handy' },
     ],
   },
   {
@@ -2681,9 +2681,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["口","賁"],
     mnemonic: 'Karakter 噴 (Erupt / spout) memiliki 15 goresan, tersusun dari elemen (口, 賁) yang melambangkan konsep intinya.',
     examples: [
-      { word: '噴出', reading: 'ふんしゅつ', meaning: 'spewing / gushing / spouting' },
-      { word: '噴火', reading: 'ふんか', meaning: 'eruption' },
-      { word: '噴水', reading: 'ふんすい', meaning: 'water fountain' },
+      { word: '噴出', reading: 'ふんしゅつ', meaning: 'Spewing / gushing / spouting' },
+      { word: '噴火', reading: 'ふんか', meaning: 'Eruption' },
+      { word: '噴水', reading: 'ふんすい', meaning: 'Water fountain' },
     ],
   },
   {
@@ -2699,7 +2699,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["口","赫"],
     mnemonic: 'Karakter 嚇 (Menacing / dignity) memiliki 17 goresan, tersusun dari elemen (口, 赫) yang melambangkan konsep intinya.',
     examples: [
-      { word: '威嚇', reading: 'いかく', meaning: 'threat' },
+      { word: '威嚇', reading: 'いかく', meaning: 'Threat' },
       { word: '恐嚇', reading: 'きょうかく', meaning: 'Pemerasan teror' },
     ],
   },
@@ -2716,8 +2716,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["囗","人"],
     mnemonic: 'Karakter 囚 (Captured / criminal) memiliki 5 goresan, tersusun dari elemen (囗, 人) yang melambangkan konsep intinya.',
     examples: [
-      { word: '囚人', reading: 'しゅうじん', meaning: 'prisoner' },
-      { word: '死刑囚', reading: 'しけいしゅう', meaning: 'criminal condemned to death' },
+      { word: '囚人', reading: 'しゅうじん', meaning: 'Prisoner' },
+      { word: '死刑囚', reading: 'しけいしゅう', meaning: 'Criminal condemned to death' },
     ],
   },
   {
@@ -2733,9 +2733,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["囗","⺀","乂"],
     mnemonic: 'Karakter 図 (Map / drawing) memiliki 7 goresan, tersusun dari elemen (囗, ⺀, 乂) yang melambangkan konsep intinya.',
     examples: [
-      { word: '地図', reading: 'ちず', meaning: 'a map' },
-      { word: '図書館', reading: 'としょかん', meaning: 'library' },
-      { word: '図', reading: 'ず', meaning: 'figure / drawing / illustration' },
+      { word: '地図', reading: 'ちず', meaning: 'A map' },
+      { word: '図書館', reading: 'としょかん', meaning: 'Library' },
+      { word: '図', reading: 'ず', meaning: 'Figure / drawing / illustration' },
     ],
   },
   {
@@ -2751,9 +2751,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["囗","巻"],
     mnemonic: 'Karakter 圏 (Sphere / circle) memiliki 12 goresan, tersusun dari elemen (囗, 巻) yang melambangkan konsep intinya.',
     examples: [
-      { word: '～圏', reading: '～けん', meaning: 'bloc / sphere / area' },
+      { word: '～圏', reading: '～けん', meaning: 'Bloc / sphere / area' },
       { word: '北極圏', reading: 'ほっきょくけん', meaning: 'Arctic Circle' },
-      { word: '圏内', reading: 'けんない', meaning: 'inside (a region, area, etc.)' },
+      { word: '圏内', reading: 'けんない', meaning: 'Inside (a region, area, etc.)' },
     ],
   },
   {
@@ -2769,8 +2769,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["土","亢"],
     mnemonic: 'Karakter 坑 (Pit / hole) memiliki 7 goresan, tersusun dari elemen (土, 亢) yang melambangkan konsep intinya.',
     examples: [
-      { word: '坑道', reading: 'こうどう', meaning: 'tunnel' },
-      { word: '廃坑', reading: 'はいこう', meaning: 'closure of a mine' },
+      { word: '坑道', reading: 'こうどう', meaning: 'Tunnel' },
+      { word: '廃坑', reading: 'はいこう', meaning: 'Closure of a mine' },
     ],
   },
   {
@@ -2803,9 +2803,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["丿","一"],
     mnemonic: 'Karakter 垂 (Droop / suspend) memiliki 8 goresan, tersusun dari elemen (丿, 一) yang melambangkan konsep intinya.',
     examples: [
-      { word: '垂れる', reading: 'たれる', meaning: 'melakukan hang / melakukan droop / melakukan drip' },
-      { word: '垂直', reading: 'すいちょく', meaning: 'vertical / perpendicular' },
-      { word: '垂れ幕', reading: 'たれまく', meaning: 'hanging banner' },
+      { word: '垂れる', reading: 'たれる', meaning: 'Menggantung / Droop / Drip' },
+      { word: '垂直', reading: 'すいちょく', meaning: 'Vertical / perpendicular' },
+      { word: '垂れ幕', reading: 'たれまく', meaning: 'Hanging banner' },
     ],
   },
   {
@@ -2821,9 +2821,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["土","亘"],
     mnemonic: 'Karakter 垣 (Hedge / fence) memiliki 9 goresan, tersusun dari elemen (土, 亘) yang melambangkan konsep intinya.',
     examples: [
-      { word: '垣根', reading: 'かきね', meaning: 'hedge' },
-      { word: '垣間見る', reading: 'かいまみる', meaning: 'to take a peep at' },
-      { word: '生垣', reading: 'いけがき', meaning: 'hedge' },
+      { word: '垣根', reading: 'かきね', meaning: 'Hedge' },
+      { word: '垣間見る', reading: 'かいまみる', meaning: 'To take a peep at' },
+      { word: '生垣', reading: 'いけがき', meaning: 'Hedge' },
     ],
   },
   {
@@ -2841,7 +2841,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     examples: [
       { word: '執行', reading: 'しっこう', meaning: 'Eksekusi putusan hukum / Penyelenggaraan dinas' },
       { word: '固執', reading: 'こしつ', meaning: 'Bersikukuh / Bertahan secara keras kepala pada pendirian' },
-      { word: '執着', reading: 'しゅうじゃく', meaning: 'attachment / adhesion / tenacity' },
+      { word: '執着', reading: 'しゅうじゃく', meaning: 'Attachment / adhesion / tenacity' },
     ],
   },
   {
@@ -2857,8 +2857,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["土","咅"],
     mnemonic: 'Karakter 培 (Cultivate / foster) memiliki 11 goresan, tersusun dari elemen (土, 咅) yang melambangkan konsep intinya.',
     examples: [
-      { word: '栽培', reading: 'さいばい', meaning: 'cultivation' },
-      { word: '培養', reading: 'ばいよう', meaning: 'culture' },
+      { word: '栽培', reading: 'さいばい', meaning: 'Cultivation' },
+      { word: '培養', reading: 'ばいよう', meaning: 'Culture' },
     ],
   },
   {
@@ -2874,9 +2874,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["其","土"],
     mnemonic: 'Karakter 基 (Fundamentals / radical (chem)) memiliki 11 goresan, tersusun dari elemen (其, 土) yang melambangkan konsep intinya.',
     examples: [
-      { word: '基本', reading: 'きほん', meaning: 'basic / basis' },
-      { word: '基', reading: 'もと', meaning: 'basis' },
-      { word: '基づく', reading: 'もとづく', meaning: 'melakukan be grounded on / melakukan be based on' },
+      { word: '基本', reading: 'きほん', meaning: 'Basic / basis' },
+      { word: '基', reading: 'もと', meaning: 'Basis' },
+      { word: '基づく', reading: 'もとづく', meaning: 'Menjadi grounded on / Menjadi based on' },
     ],
   },
   {
@@ -2910,9 +2910,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["土","屈"],
     mnemonic: 'Karakter 堀 (Ditch / moat) memiliki 11 goresan, tersusun dari elemen (土, 屈) yang melambangkan konsep intinya.',
     examples: [
-      { word: '堀', reading: 'ほり', meaning: 'moat / canal' },
-      { word: '内堀', reading: 'うちぼり', meaning: 'inner moat' },
-      { word: '堀川', reading: 'ほりかわ', meaning: 'canal' },
+      { word: '堀', reading: 'ほり', meaning: 'Moat / canal' },
+      { word: '内堀', reading: 'うちぼり', meaning: 'Inner moat' },
+      { word: '堀川', reading: 'ほりかわ', meaning: 'Canal' },
     ],
   },
   {
@@ -2928,9 +2928,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["臤","土"],
     mnemonic: 'Karakter 堅 (Strict / hard) memiliki 12 goresan, tersusun dari elemen (臤, 土) yang melambangkan konsep intinya.',
     examples: [
-      { word: '堅い', reading: 'かたい', meaning: 'hard / firm / solid' },
-      { word: '堅', reading: 'かたい', meaning: 'solid / hard / firm' },
-      { word: '中堅', reading: 'ちゅうけん', meaning: 'nucleus' },
+      { word: '堅い', reading: 'かたい', meaning: 'Hard / firm / solid' },
+      { word: '堅', reading: 'かたい', meaning: 'Solid / hard / firm' },
+      { word: '中堅', reading: 'ちゅうけん', meaning: 'Nucleus' },
     ],
   },
   {
@@ -2946,8 +2946,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["土","隹"],
     mnemonic: 'Karakter 堆 (Piled tinggi) memiliki 11 goresan, tersusun dari elemen (土, 隹) yang melambangkan konsep intinya.',
     examples: [
-      { word: '堆積', reading: 'たいせき', meaning: 'accumulation' },
-      { word: '堆肥', reading: 'たいひ', meaning: 'compost' },
+      { word: '堆積', reading: 'たいせき', meaning: 'Accumulation' },
+      { word: '堆肥', reading: 'たいひ', meaning: 'Compost' },
     ],
   },
   {
@@ -2963,8 +2963,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["土","是"],
     mnemonic: 'Karakter 堤 (Tanggul pembatas air) memiliki 12 goresan, tersusun dari elemen (土, 是) yang melambangkan konsep intinya.',
     examples: [
-      { word: '堤防', reading: 'ていぼう', meaning: 'bank / weir' },
-      { word: '防波堤', reading: 'ぼうはてい', meaning: 'breakwater' },
+      { word: '堤防', reading: 'ていぼう', meaning: 'Bank / weir' },
+      { word: '防波堤', reading: 'ぼうはてい', meaning: 'Breakwater' },
     ],
   },
   {
@@ -2980,8 +2980,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["土","甚"],
     mnemonic: 'Karakter 堪 (Withstand / endure) memiliki 12 goresan, tersusun dari elemen (土, 甚) yang melambangkan konsep intinya.',
     examples: [
-      { word: '堪える', reading: 'たえる', meaning: 'melakukan endure / melakukan put up with' },
-      { word: '堪能', reading: 'たんのう', meaning: 'proficient' },
+      { word: '堪える', reading: 'たえる', meaning: 'Endure / Menaruh (up with)' },
+      { word: '堪能', reading: 'たんのう', meaning: 'Proficient' },
     ],
   },
   {
@@ -2997,8 +2997,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["土","屏"],
     mnemonic: 'Karakter 塀 (Fence / wall) memiliki 12 goresan, tersusun dari elemen (土, 屏) yang melambangkan konsep intinya.',
     examples: [
-      { word: '塀', reading: 'へい', meaning: 'wall / fence' },
-      { word: '土塀', reading: 'どべい', meaning: 'mud wall' },
+      { word: '塀', reading: 'へい', meaning: 'Wall / fence' },
+      { word: '土塀', reading: 'どべい', meaning: 'Mud wall' },
     ],
   },
   {
@@ -3014,9 +3014,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["田","丷","八","土"],
     mnemonic: 'Karakter 塁 (Bases / fort) memiliki 12 goresan, tersusun dari elemen (田, 丷, 八) yang melambangkan konsep intinya.',
     examples: [
-      { word: '一塁', reading: 'いちるい', meaning: 'first base' },
-      { word: '三塁', reading: 'さんるい', meaning: 'third base' },
-      { word: '三塁手', reading: 'さんるいしゅ', meaning: 'third baseman' },
+      { word: '一塁', reading: 'いちるい', meaning: 'First base' },
+      { word: '三塁', reading: 'さんるい', meaning: 'Third base' },
+      { word: '三塁手', reading: 'さんるいしゅ', meaning: 'Third baseman' },
     ],
   },
   {
@@ -3032,9 +3032,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["土","鬼"],
     mnemonic: 'Karakter 塊 (Clod / lump) memiliki 13 goresan, tersusun dari elemen (土, 鬼) yang melambangkan konsep intinya.',
     examples: [
-      { word: '塊', reading: 'かたまり', meaning: 'lump / mass / cluster' },
-      { word: '団塊', reading: 'だんかい', meaning: 'mass' },
-      { word: '金塊', reading: 'きんかい', meaning: 'gold nugget' },
+      { word: '塊', reading: 'かたまり', meaning: 'Lump / mass / cluster' },
+      { word: '団塊', reading: 'だんかい', meaning: 'Mass' },
+      { word: '金塊', reading: 'きんかい', meaning: 'Gold nugget' },
     ],
   },
   {
@@ -3050,7 +3050,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["土","冢"],
     mnemonic: 'Karakter 塚 (Gundukan tanah / Makam pusara) memiliki 12 goresan, tersusun dari elemen (土, 冢) yang melambangkan konsep intinya.',
     examples: [
-      { word: '一里塚', reading: 'いちりづか', meaning: 'milestone (1 ri apart)' },
+      { word: '一里塚', reading: 'いちりづか', meaning: 'Milestone (1 ri apart)' },
       { word: '貝塚', reading: 'かいづか', meaning: 'Gundukan sisa kerang purba' },
     ],
   },
@@ -3068,8 +3068,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 塞 (Close / shut) memiliki 13 goresan, tersusun dari elemen (𡨄, 土) yang melambangkan konsep intinya.',
     examples: [
       { word: '塞翁が馬', reading: 'さいおうがうま', meaning: 'Roda nasib kehidupan yang tak terduga (kemalangan bisa membawa berkah)' },
-      { word: '塞がる', reading: 'ふさがる', meaning: 'melakukan be plugged up / melakukan be shut up' },
-      { word: '塞ぐ', reading: 'ふさぐ', meaning: 'melakukan stuff / melakukan close up / melakukan block (up)' },
+      { word: '塞がる', reading: 'ふさがる', meaning: 'Menjadi plugged up / Menjadi shut up' },
+      { word: '塞ぐ', reading: 'ふさぐ', meaning: 'Stuff / Menutup (up) / Block (up)' },
     ],
   },
   {
@@ -3102,9 +3102,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["孰","土"],
     mnemonic: 'Karakter 塾 (Cram school / pribadi school) memiliki 14 goresan, tersusun dari elemen (孰, 土) yang melambangkan konsep intinya.',
     examples: [
-      { word: '塾', reading: 'じゅく', meaning: 'after-school (cram) school' },
-      { word: '塾生', reading: 'じゅくせい', meaning: 'cram school student' },
-      { word: '塾長', reading: 'じゅくちょう', meaning: 'principal of a private school' },
+      { word: '塾', reading: 'じゅく', meaning: 'After-school (cram) school' },
+      { word: '塾生', reading: 'じゅくせい', meaning: 'Cram school student' },
+      { word: '塾長', reading: 'じゅくちょう', meaning: 'Principal of a private school' },
     ],
   },
   {
@@ -3120,9 +3120,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["莫","土"],
     mnemonic: 'Karakter 墓 (Grave / tomb) memiliki 13 goresan, tersusun dari elemen (莫, 土) yang melambangkan konsep intinya.',
     examples: [
-      { word: '墓', reading: 'はか', meaning: 'grave / tomb' },
-      { word: '墓地', reading: 'ぼち', meaning: 'cemetery / graveyard' },
-      { word: '墓参り', reading: 'はかまいり', meaning: 'visit to a grave' },
+      { word: '墓', reading: 'はか', meaning: 'Grave / tomb' },
+      { word: '墓地', reading: 'ぼち', meaning: 'Cemetery / graveyard' },
+      { word: '墓参り', reading: 'はかまいり', meaning: 'Visit to a grave' },
     ],
   },
   {
@@ -3138,9 +3138,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["隊","土"],
     mnemonic: 'Karakter 墜 (Crash / fall (down)) memiliki 15 goresan, tersusun dari elemen (隊, 土) yang melambangkan konsep intinya.',
     examples: [
-      { word: '墜落', reading: 'ついらく', meaning: 'falling / crashing' },
-      { word: '失墜', reading: 'しっつい', meaning: 'abasement' },
-      { word: '撃墜', reading: 'げきつい', meaning: 'shooting down (an aircraft)' },
+      { word: '墜落', reading: 'ついらく', meaning: 'Falling / crashing' },
+      { word: '失墜', reading: 'しっつい', meaning: 'Abasement' },
+      { word: '撃墜', reading: 'げきつい', meaning: 'Shooting down (an aircraft)' },
     ],
   },
   {
@@ -3156,9 +3156,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["黑","土"],
     mnemonic: 'Karakter 墨 (Tinta hitam kaligrafi) memiliki 14 goresan, tersusun dari elemen (黑, 土) yang melambangkan konsep intinya.',
     examples: [
-      { word: '墨', reading: 'すみ', meaning: 'ink' },
-      { word: 'お墨付き', reading: 'おすみつき', meaning: 'certificate' },
-      { word: '入れ墨', reading: 'いれずみ', meaning: 'tattoo (esp. a traditional Japanese one)' },
+      { word: '墨', reading: 'すみ', meaning: 'Ink' },
+      { word: 'お墨付き', reading: 'おすみつき', meaning: 'Certificate' },
+      { word: '入れ墨', reading: 'いれずみ', meaning: 'Tattoo (esp. a traditional Japanese one)' },
     ],
   },
   {
@@ -3174,8 +3174,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["土","賁"],
     mnemonic: 'Karakter 墳 (Tomb / mound) memiliki 15 goresan, tersusun dari elemen (土, 賁) yang melambangkan konsep intinya.',
     examples: [
-      { word: '古墳', reading: 'こふん', meaning: 'ancient burial mound' },
-      { word: '墳墓', reading: 'ふんぼ', meaning: 'grave' },
+      { word: '古墳', reading: 'こふん', meaning: 'Ancient burial mound' },
+      { word: '墳墓', reading: 'ふんぼ', meaning: 'Grave' },
     ],
   },
   {
@@ -3191,7 +3191,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["貇","土"],
     mnemonic: 'Karakter 墾 (Ground-breaking / open up farmland) memiliki 16 goresan, tersusun dari elemen (貇, 土) yang melambangkan konsep intinya.',
     examples: [
-      { word: '開墾', reading: 'かいこん', meaning: 'cultivating new land' },
+      { word: '開墾', reading: 'かいこん', meaning: 'Cultivating new land' },
       { word: '開墾地', reading: 'かいこんち', meaning: 'Lahan hasil pembukaan hutan' },
     ],
   },
@@ -3209,8 +3209,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 壁 (Dinding tembok rintangan) memiliki 16 goresan, tersusun dari elemen (辟, 土) yang melambangkan konsep intinya.',
     examples: [
       { word: '壁', reading: 'かべ', meaning: 'Dinding / tembok' },
-      { word: '壁画', reading: 'へきが', meaning: 'fresco' },
-      { word: '壁紙', reading: 'かべがみ', meaning: 'wallpaper' },
+      { word: '壁画', reading: 'へきが', meaning: 'Fresco' },
+      { word: '壁紙', reading: 'かべがみ', meaning: 'Wallpaper' },
     ],
   },
   {
@@ -3226,9 +3226,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["土","亶"],
     mnemonic: 'Karakter 壇 (Mimbar podium / Panggung kehormatan) memiliki 16 goresan, tersusun dari elemen (土, 亶) yang melambangkan konsep intinya.',
     examples: [
-      { word: '花壇', reading: 'かだん', meaning: 'flower bed' },
+      { word: '花壇', reading: 'かだん', meaning: 'Flower bed' },
       { word: '仏壇', reading: 'ぶつだん', meaning: 'Buddhist (household) altar' },
-      { word: '土壇場', reading: 'どたんば', meaning: 'last moment' },
+      { word: '土壇場', reading: 'どたんば', meaning: 'Last moment' },
     ],
   },
   {
@@ -3246,7 +3246,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     examples: [
       { word: '壊す', reading: 'こわす', meaning: 'Merusak / Memecahkan' },
       { word: '壊れる', reading: 'こわれる', meaning: 'Rusak' },
-      { word: '破壊', reading: 'はかい', meaning: 'destruction' },
+      { word: '破壊', reading: 'はかい', meaning: 'Destruction' },
     ],
   },
   {
@@ -3262,7 +3262,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["土","㐮"],
     mnemonic: 'Karakter 壌 (Lot / tanah) memiliki 16 goresan, tersusun dari elemen (土, 㐮) yang melambangkan konsep intinya.',
     examples: [
-      { word: '土壌', reading: 'どじょう', meaning: 'soil' },
+      { word: '土壌', reading: 'どじょう', meaning: 'Soil' },
       { word: '平壌', reading: 'ピョンヤン', meaning: 'Pyongyang (North Korea)' },
     ],
   },
@@ -3279,9 +3279,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["十","一"],
     mnemonic: 'Karakter 士 (Gentleman / scholar) memiliki 3 goresan, tersusun dari elemen (十, 一) yang melambangkan konsep intinya.',
     examples: [
-      { word: '博士', reading: 'はかせ', meaning: 'doctorate / phd. / doctor' },
-      { word: '同士', reading: 'どうし', meaning: 'one another / companion / comrade' },
-      { word: '学士', reading: 'がくし', meaning: 'university graduate' },
+      { word: '博士', reading: 'はかせ', meaning: 'Doctorate / phd. / doctor' },
+      { word: '同士', reading: 'どうし', meaning: 'One another / companion / comrade' },
+      { word: '学士', reading: 'がくし', meaning: 'University graduate' },
     ],
   },
   {
@@ -3297,9 +3297,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["丬","士"],
     mnemonic: 'Karakter 壮 (Robust / manhood) memiliki 6 goresan, tersusun dari elemen (丬, 士) yang melambangkan konsep intinya.',
     examples: [
-      { word: '壮大', reading: 'そうだい', meaning: 'magnificent / grand / majestic' },
-      { word: '壮年', reading: 'そうねん', meaning: 'prime of life' },
-      { word: '壮烈', reading: 'そうれつ', meaning: 'heroic' },
+      { word: '壮大', reading: 'そうだい', meaning: 'Magnificent / grand / majestic' },
+      { word: '壮年', reading: 'そうねん', meaning: 'Prime of life' },
+      { word: '壮烈', reading: 'そうれつ', meaning: 'Heroic' },
     ],
   },
   {
@@ -3332,8 +3332,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["大","可"],
     mnemonic: 'Karakter 奇 (Strange / strangeness) memiliki 8 goresan, tersusun dari elemen (大, 可) yang melambangkan konsep intinya.',
     examples: [
-      { word: '奇妙', reading: 'きみょう', meaning: 'strange / queer / curious' },
-      { word: '奇怪', reading: 'きかい', meaning: 'strange' },
+      { word: '奇妙', reading: 'きみょう', meaning: 'Strange / queer / curious' },
+      { word: '奇怪', reading: 'きかい', meaning: 'Strange' },
       { word: '奇抜', reading: 'きばつ', meaning: '(very) unusual' },
     ],
   },
@@ -3368,9 +3368,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["𡗗","二","丨"],
     mnemonic: 'Karakter 奉 (Observance / offer) memiliki 8 goresan, tersusun dari elemen (𡗗, 二, 丨) yang melambangkan konsep intinya.',
     examples: [
-      { word: '奉る', reading: 'たてまつる', meaning: 'melakukan offer / melakukan do respectfully' },
-      { word: '奉仕', reading: 'ほうし', meaning: 'attendance / service' },
-      { word: '信奉', reading: 'しんぽう', meaning: 'belief' },
+      { word: '奉る', reading: 'たてまつる', meaning: 'Offer / Do respectfully' },
+      { word: '奉仕', reading: 'ほうし', meaning: 'Attendance / service' },
+      { word: '信奉', reading: 'しんぽう', meaning: 'Belief' },
     ],
   },
   {
@@ -3387,8 +3387,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 奏 (Play music / berbicara to a ruler) memiliki 9 goresan, tersusun dari elemen (𡗗, 天) yang melambangkan konsep intinya.',
     examples: [
       { word: '演奏', reading: 'えんそう', meaning: 'Pertunjukan musik / Permainan alat musik' },
-      { word: '吹奏', reading: 'すいそう', meaning: 'playing wind instruments' },
-      { word: '二重奏', reading: 'にじゅうそう', meaning: 'instrumental duet' },
+      { word: '吹奏', reading: 'すいそう', meaning: 'Playing wind instruments' },
+      { word: '二重奏', reading: 'にじゅうそう', meaning: 'Instrumental duet' },
     ],
   },
   {
@@ -3404,9 +3404,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["大","卉"],
     mnemonic: 'Karakter 奔 (Berlari / bustle) memiliki 8 goresan, tersusun dari elemen (大, 卉) yang melambangkan konsep intinya.',
     examples: [
-      { word: '奔放', reading: 'ほんぽう', meaning: 'wild' },
-      { word: '奔走', reading: 'ほんそう', meaning: 'running about' },
-      { word: '狂奔', reading: 'きょうほん', meaning: 'rushing around' },
+      { word: '奔放', reading: 'ほんぽう', meaning: 'Wild' },
+      { word: '奔走', reading: 'ほんそう', meaning: 'Running about' },
+      { word: '狂奔', reading: 'きょうほん', meaning: 'Rushing around' },
     ],
   },
   {
@@ -3422,9 +3422,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["将","大"],
     mnemonic: 'Karakter 奨 (Mendorong motivasi / Menganjurkan) memiliki 13 goresan, tersusun dari elemen (将, 大) yang melambangkan konsep intinya.',
     examples: [
-      { word: '奨学金', reading: 'しょうがくきん', meaning: 'scholarship' },
-      { word: '奨励', reading: 'しょうれい', meaning: 'encouragement / promotion' },
-      { word: '勧奨', reading: 'かんしょう', meaning: 'encouragement' },
+      { word: '奨学金', reading: 'しょうがくきん', meaning: 'Beasiswa / Studi ilmiah' },
+      { word: '奨励', reading: 'しょうれい', meaning: 'Encouragement / promotion' },
+      { word: '勧奨', reading: 'かんしょう', meaning: 'Encouragement' },
     ],
   },
   {
@@ -3441,8 +3441,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 奪 (Rob / take by force) memiliki 14 goresan, tersusun dari elemen (奞, 寸) yang melambangkan konsep intinya.',
     examples: [
       { word: '換骨奪胎', reading: 'かんこつだったい', meaning: 'Mengubah karya klasik menjadi wujud karya baru dengan adaptasi kreatif' },
-      { word: '奪う', reading: 'うばう', meaning: 'melakukan rob / melakukan deprive' },
-      { word: '略奪', reading: 'りゃくだつ', meaning: 'pillage / looting / robbery' },
+      { word: '奪う', reading: 'うばう', meaning: 'Rob / Deprive' },
+      { word: '略奪', reading: 'りゃくだつ', meaning: 'Pillage / looting / robbery' },
     ],
   },
   {
@@ -3459,8 +3459,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 奮 (Stirred up / be invigorated) memiliki 16 goresan, tersusun dari elemen (奞, 田) yang melambangkan konsep intinya.',
     examples: [
       { word: '孤軍奮闘', reading: 'こぐんふんとう', meaning: 'Berjuang sendirian dengan sekuat tenaga tanpa bantuan siapapun' },
-      { word: '興奮', reading: 'こうふん', meaning: 'excitement / stimulation' },
-      { word: '奮闘', reading: 'ふんとう', meaning: 'hard struggle / strenuous effort' },
+      { word: '興奮', reading: 'こうふん', meaning: 'Excitement / stimulation' },
+      { word: '奮闘', reading: 'ふんとう', meaning: 'Hard struggle / strenuous effort' },
     ],
   },
   {
@@ -3477,8 +3477,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 奴 (Guy / slave) memiliki 5 goresan, tersusun dari elemen (女, 又) yang melambangkan konsep intinya.',
     examples: [
       { word: '奴', reading: 'やつ', meaning: '(vulg.) fellow / guy / chap' },
-      { word: '其奴', reading: 'そいつ', meaning: 'he' },
-      { word: '売国奴', reading: 'ばいこくど', meaning: 'traitor (to one\'s country)' },
+      { word: '其奴', reading: 'そいつ', meaning: 'He' },
+      { word: '売国奴', reading: 'ばいこくど', meaning: 'Traitor (to one\'s country)' },
     ],
   },
   {
@@ -3494,9 +3494,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["女","口"],
     mnemonic: 'Karakter 如 (Likeness / like) memiliki 6 goresan, tersusun dari elemen (女, 口) yang melambangkan konsep intinya.',
     examples: [
-      { word: '突如', reading: 'とつじょ', meaning: 'suddenly / all of a sudden' },
-      { word: 'か如何か', reading: 'かどうか', meaning: 'whether (or not)' },
-      { word: '如何', reading: 'どう', meaning: 'how' },
+      { word: '突如', reading: 'とつじょ', meaning: 'Suddenly / all of a sudden' },
+      { word: 'か如何か', reading: 'かどうか', meaning: 'Whether (or not)' },
+      { word: '如何', reading: 'どう', meaning: 'How' },
     ],
   },
   {
@@ -3512,9 +3512,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["女","己"],
     mnemonic: 'Karakter 妃 (Permaisuri / Ratu istri pangeran) memiliki 6 goresan, tersusun dari elemen (女, 己) yang melambangkan konsep intinya.',
     examples: [
-      { word: '妃殿下', reading: 'ひでんか', meaning: 'princess' },
-      { word: '王妃', reading: 'おうひ', meaning: 'queen (consort)' },
-      { word: '皇太子妃', reading: 'こうたいしひ', meaning: 'crown princess' },
+      { word: '妃殿下', reading: 'ひでんか', meaning: 'Princess' },
+      { word: '王妃', reading: 'おうひ', meaning: 'Queen (consort)' },
+      { word: '皇太子妃', reading: 'こうたいしひ', meaning: 'Crown princess' },
     ],
   },
   {
@@ -3530,9 +3530,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["女","壬"],
     mnemonic: 'Karakter 妊 (Pregnancy) memiliki 7 goresan, tersusun dari elemen (女, 壬) yang melambangkan konsep intinya.',
     examples: [
-      { word: '妊娠', reading: 'にんしん', meaning: 'conception / pregnancy' },
-      { word: '不妊', reading: 'ふにん', meaning: 'infertility' },
-      { word: '妊婦', reading: 'にんぷ', meaning: 'pregnant woman' },
+      { word: '妊娠', reading: 'にんしん', meaning: 'Conception / pregnancy' },
+      { word: '不妊', reading: 'ふにん', meaning: 'Infertility' },
+      { word: '妊婦', reading: 'にんぷ', meaning: 'Pregnant woman' },
     ],
   },
   {
@@ -3548,8 +3548,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["女","夭"],
     mnemonic: 'Karakter 妖 (Attractive / bewitching) memiliki 7 goresan, tersusun dari elemen (女, 夭) yang melambangkan konsep intinya.',
     examples: [
-      { word: '妖怪', reading: 'ようかい', meaning: 'ghost' },
-      { word: '妖精', reading: 'ようせい', meaning: 'fairy' },
+      { word: '妖怪', reading: 'ようかい', meaning: 'Ghost' },
+      { word: '妖精', reading: 'ようせい', meaning: 'Fairy' },
     ],
   },
   {
@@ -3565,9 +3565,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["女","少"],
     mnemonic: 'Karakter 妙 (Exquisite / strange) memiliki 7 goresan, tersusun dari elemen (女, 少) yang melambangkan konsep intinya.',
     examples: [
-      { word: '奇妙', reading: 'きみょう', meaning: 'strange / queer / curious' },
-      { word: '妙', reading: 'みょう', meaning: 'strange / unusual' },
-      { word: '微妙', reading: 'びみょう', meaning: 'delicate / subtle' },
+      { word: '奇妙', reading: 'きみょう', meaning: 'Strange / queer / curious' },
+      { word: '妙', reading: 'みょう', meaning: 'Strange / unusual' },
+      { word: '微妙', reading: 'びみょう', meaning: 'Delicate / subtle' },
     ],
   },
   {
@@ -3583,8 +3583,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["女","方"],
     mnemonic: 'Karakter 妨 (Disturb / prevent) memiliki 7 goresan, tersusun dari elemen (女, 方) yang melambangkan konsep intinya.',
     examples: [
-      { word: '妨害', reading: 'ぼうがい', meaning: 'gangguan keributan / obstruction / interference' },
-      { word: '妨げる', reading: 'さまたげる', meaning: 'melakukan disturb / melakukan prevent' },
+      { word: '妨害', reading: 'ぼうがい', meaning: 'Gangguan keributan / obstruction / interference' },
+      { word: '妨げる', reading: 'さまたげる', meaning: 'Disturb / Mencegah' },
     ],
   },
   {
@@ -3600,9 +3600,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["女","臣"],
     mnemonic: 'Karakter 姫 (Princess) memiliki 10 goresan, tersusun dari elemen (女, 臣) yang melambangkan konsep intinya.',
     examples: [
-      { word: '姫君', reading: 'ひめぎみ', meaning: 'daughter of a person of high rank (esp. eldest daughter)' },
-      { word: '歌姫', reading: 'うたひめ', meaning: 'songstress' },
-      { word: '舞姫', reading: 'まいひめ', meaning: 'female dancer' },
+      { word: '姫君', reading: 'ひめぎみ', meaning: 'Daughter of a person of high rank (esp. eldest daughter)' },
+      { word: '歌姫', reading: 'うたひめ', meaning: 'Songstress' },
+      { word: '舞姫', reading: 'まいひめ', meaning: 'Female dancer' },
     ],
   },
   {
@@ -3618,7 +3618,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["女","因"],
     mnemonic: 'Karakter 姻 (Matrimony / marry) memiliki 9 goresan, tersusun dari elemen (女, 因) yang melambangkan konsep intinya.',
     examples: [
-      { word: '婚姻', reading: 'こんいん', meaning: 'marriage' },
+      { word: '婚姻', reading: 'こんいん', meaning: 'Marriage' },
       { word: '姻族', reading: 'いんぞく', meaning: 'Keluarga kerabat semenda' },
     ],
   },
@@ -3635,8 +3635,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["次","女"],
     mnemonic: 'Karakter 姿 (Figure / form) memiliki 9 goresan, tersusun dari elemen (次, 女) yang melambangkan konsep intinya.',
     examples: [
-      { word: '姿', reading: 'すがた', meaning: 'figure / shape / appearance' },
-      { word: '姿勢', reading: 'しせい', meaning: 'attitude / posture' },
+      { word: '姿', reading: 'すがた', meaning: 'Figure / shape / Penampilan / Pemuatan' },
+      { word: '姿勢', reading: 'しせい', meaning: 'Attitude / posture' },
       { word: '容姿', reading: 'ようし', meaning: '(physical) appearance (of a person)' },
     ],
   },
@@ -3653,9 +3653,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["戌","女"],
     mnemonic: 'Karakter 威 (Intimidate / dignity) memiliki 9 goresan, tersusun dari elemen (戌, 女) yang melambangkan konsep intinya.',
     examples: [
-      { word: '権威', reading: 'けんい', meaning: 'kewenangan / otoritas / kekuasaan / daya / pengaruh' },
-      { word: '威力', reading: 'いりょく', meaning: 'kekuasaan / daya / might / kewenangan / otoritas' },
-      { word: '威張る', reading: 'いばる', meaning: 'melakukan be proud / melakukan swagger' },
+      { word: '権威', reading: 'けんい', meaning: 'Kewenangan / otoritas / kekuasaan / daya / pengaruh' },
+      { word: '威力', reading: 'いりょく', meaning: 'Kekuasaan / daya / might / kewenangan / otoritas' },
+      { word: '威張る', reading: 'いばる', meaning: 'Menjadi proud / Swagger' },
     ],
   },
   {
@@ -3671,7 +3671,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["女","辰"],
     mnemonic: 'Karakter 娠 (With anak / pregnancy) memiliki 10 goresan, tersusun dari elemen (女, 辰) yang melambangkan konsep intinya.',
     examples: [
-      { word: '妊娠', reading: 'にんしん', meaning: 'conception / pregnancy' },
+      { word: '妊娠', reading: 'にんしん', meaning: 'Conception / pregnancy' },
       { word: '娠語', reading: 'シンご', meaning: 'Istilah / kosakata terkait With anak / pregnancy' },
     ],
   },
@@ -3688,7 +3688,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["女","呉"],
     mnemonic: 'Karakter 娯 (Recreation / pleasure) memiliki 10 goresan, tersusun dari elemen (女, 呉) yang melambangkan konsep intinya.',
     examples: [
-      { word: '娯楽', reading: 'ごらく', meaning: 'pleasure / amusement / recreation' },
+      { word: '娯楽', reading: 'ごらく', meaning: 'Pleasure / amusement / recreation' },
       { word: '娯語', reading: 'ゴご', meaning: 'Istilah / kosakata terkait Recreation / pleasure' },
     ],
   },
@@ -3705,7 +3705,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["波","女"],
     mnemonic: 'Karakter 婆 (Lama / tua wanita / grandma) memiliki 11 goresan, tersusun dari elemen (波, 女) yang melambangkan konsep intinya.',
     examples: [
-      { word: '老婆', reading: 'ろうば', meaning: 'old woman' },
+      { word: '老婆', reading: 'ろうば', meaning: 'Old woman' },
       { word: '産婆', reading: 'さんば', meaning: 'Bidan tradisional' },
     ],
   },
@@ -3722,9 +3722,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["女","胥"],
     mnemonic: 'Karakter 婿 (Bridegroom / son-in-hukum) memiliki 12 goresan, tersusun dari elemen (女, 胥) yang melambangkan konsep intinya.',
     examples: [
-      { word: '婿', reading: 'むこ', meaning: 'son-in-law' },
-      { word: '娘婿', reading: 'むすめむこ', meaning: 'son-in-law' },
-      { word: '花婿', reading: 'はなむこ', meaning: 'bridegroom' },
+      { word: '婿', reading: 'むこ', meaning: 'Son-in-law' },
+      { word: '娘婿', reading: 'むすめむこ', meaning: 'Son-in-law' },
+      { word: '花婿', reading: 'はなむこ', meaning: 'Bridegroom' },
     ],
   },
   {
@@ -3740,9 +3740,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["女","某"],
     mnemonic: 'Karakter 媒 (Mediator / go-between) memiliki 12 goresan, tersusun dari elemen (女, 某) yang melambangkan konsep intinya.',
     examples: [
-      { word: '媒介', reading: 'ばいかい', meaning: 'mediation' },
-      { word: '媒体', reading: 'ばいたい', meaning: 'medium' },
-      { word: '媒酌', reading: 'ばいしゃく', meaning: 'matchmaking' },
+      { word: '媒介', reading: 'ばいかい', meaning: 'Mediation' },
+      { word: '媒体', reading: 'ばいたい', meaning: 'Medium' },
+      { word: '媒酌', reading: 'ばいしゃく', meaning: 'Matchmaking' },
     ],
   },
   {
@@ -3775,9 +3775,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["女","家"],
     mnemonic: 'Karakter 嫁 (Marry into / bride) memiliki 13 goresan, tersusun dari elemen (女, 家) yang melambangkan konsep intinya.',
     examples: [
-      { word: '嫁', reading: 'よめ', meaning: 'bride / daughter-in-law' },
-      { word: '花嫁', reading: 'はなよめ', meaning: 'bride' },
-      { word: '嫁入り', reading: 'よめいり', meaning: 'marriage' },
+      { word: '嫁', reading: 'よめ', meaning: 'Bride / daughter-in-law' },
+      { word: '花嫁', reading: 'はなよめ', meaning: 'Bride' },
+      { word: '嫁入り', reading: 'よめいり', meaning: 'Marriage' },
     ],
   },
   {
@@ -3793,9 +3793,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["女","兼"],
     mnemonic: 'Karakter 嫌 (Dislike / detest) memiliki 13 goresan, tersusun dari elemen (女, 兼) yang melambangkan konsep intinya.',
     examples: [
-      { word: '嫌', reading: 'いや', meaning: 'disagreeable / detestable / unpleasant' },
-      { word: '嫌い', reading: 'きらい', meaning: 'dislike' },
-      { word: '機嫌', reading: 'きげん', meaning: 'humor / temper / mood' },
+      { word: '嫌', reading: 'いや', meaning: 'Disagreeable / detestable / unpleasant' },
+      { word: '嫌い', reading: 'きらい', meaning: 'Dislike' },
+      { word: '機嫌', reading: 'きげん', meaning: 'Humor / temper / mood' },
     ],
   },
   {
@@ -3811,8 +3811,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["女","啇"],
     mnemonic: 'Karakter 嫡 (Legitimate wife / direct descent (non-bastard)) memiliki 14 goresan, tersusun dari elemen (女, 啇) yang melambangkan konsep intinya.',
     examples: [
-      { word: '嫡出', reading: 'ちゃくしゅつ', meaning: 'legitimate birth' },
-      { word: '嫡子', reading: 'ちゃくし', meaning: 'heir' },
+      { word: '嫡出', reading: 'ちゃくしゅつ', meaning: 'Legitimate birth' },
+      { word: '嫡子', reading: 'ちゃくし', meaning: 'Heir' },
     ],
   },
   {
@@ -3829,7 +3829,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 嬢 (Lass / girl) memiliki 16 goresan, tersusun dari elemen (女, 㐮) yang melambangkan konsep intinya.',
     examples: [
       { word: 'お嬢さん', reading: 'おじょうさん', meaning: '(someone\\' },
-      { word: '～嬢', reading: '～じょう', meaning: 'young woman' },
+      { word: '～嬢', reading: '～じょう', meaning: 'Young woman' },
       { word: '令嬢', reading: 'れいじょう', meaning: '(your) daughter' },
     ],
   },
@@ -3863,9 +3863,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["宀","子"],
     mnemonic: 'Karakter 字 (Character / surat / huruf) memiliki 6 goresan, tersusun dari elemen (宀, 子) yang melambangkan konsep intinya.',
     examples: [
-      { word: '漢字', reading: 'かんじ', meaning: 'kanji / chinese character' },
-      { word: '字引', reading: 'じびき', meaning: 'dictionary' },
-      { word: '数字', reading: 'すうじ', meaning: 'numeral / figure' },
+      { word: '漢字', reading: 'かんじ', meaning: 'Kanji / chinese character' },
+      { word: '字引', reading: 'じびき', meaning: 'Dictionary' },
+      { word: '数字', reading: 'すうじ', meaning: 'Numeral / figure' },
     ],
   },
   {
@@ -3881,9 +3881,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["耂","子"],
     mnemonic: 'Karakter 孝 (Filial piety / anak\'s respect) memiliki 7 goresan, tersusun dari elemen (耂, 子) yang melambangkan konsep intinya.',
     examples: [
-      { word: '孝行', reading: 'こうこう', meaning: 'filial piety' },
-      { word: '不孝', reading: 'ふこう', meaning: 'undutifulness to one\'s parents' },
-      { word: '親不孝', reading: 'おやふこう', meaning: 'lack of filial piety' },
+      { word: '孝行', reading: 'こうこう', meaning: 'Filial piety' },
+      { word: '不孝', reading: 'ふこう', meaning: 'Undutifulness to one\'s parents' },
+      { word: '親不孝', reading: 'おやふこう', meaning: 'Lack of filial piety' },
     ],
   },
   {
@@ -3901,7 +3901,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     examples: [
       { word: '孤立無援', reading: 'こりつむえん', meaning: 'Terpencil sebatang kara tanpa bantuan / Berjuang sendirian' },
       { word: '孤軍奮闘', reading: 'こぐんふんとう', meaning: 'Berjuang sendirian dengan sekuat tenaga tanpa bantuan siapapun' },
-      { word: '孤児', reading: 'こじ', meaning: 'orphan' },
+      { word: '孤児', reading: 'こじ', meaning: 'Orphan' },
     ],
   },
   {
@@ -3917,9 +3917,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["宀","示"],
     mnemonic: 'Karakter 宗 (Religion / sect) memiliki 8 goresan, tersusun dari elemen (宀, 示) yang melambangkan konsep intinya.',
     examples: [
-      { word: '宗教', reading: 'しゅうきょう', meaning: 'religion' },
-      { word: '～宗', reading: '～しゅう', meaning: 'sect' },
-      { word: '宗家', reading: 'そうけ', meaning: 'head of family' },
+      { word: '宗教', reading: 'しゅうきょう', meaning: 'Religion' },
+      { word: '～宗', reading: '～しゅう', meaning: 'Sect' },
+      { word: '宗家', reading: 'そうけ', meaning: 'Head of family' },
     ],
   },
   {
@@ -3935,9 +3935,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["宀","由"],
     mnemonic: 'Karakter 宙 (Ruang angkasa / Abadi) memiliki 8 goresan, tersusun dari elemen (宀, 由) yang melambangkan konsep intinya.',
     examples: [
-      { word: '宇宙', reading: 'うちゅう', meaning: 'universe / cosmos / space' },
-      { word: '宙返り', reading: 'ちゅうがえり', meaning: 'somersault / looping-the-loop' },
-      { word: '大宇宙', reading: 'だいうちゅう', meaning: 'macrocosmos' },
+      { word: '宇宙', reading: 'うちゅう', meaning: 'Universe / cosmos / space' },
+      { word: '宙返り', reading: 'ちゅうがえり', meaning: 'Somersault / looping-the-loop' },
+      { word: '大宇宙', reading: 'だいうちゅう', meaning: 'Macrocosmos' },
     ],
   },
   {
@@ -3953,9 +3953,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["宀","夗"],
     mnemonic: 'Karakter 宛 (Address / just like) memiliki 8 goresan, tersusun dari elemen (宀, 夗) yang melambangkan konsep intinya.',
     examples: [
-      { word: '宛てる', reading: 'あてる', meaning: 'melakukan address / menaruh' },
-      { word: '～宛', reading: '～あて', meaning: 'for…(e.g. / in a letter)' },
-      { word: '宛名', reading: 'あてな', meaning: 'address / direction' },
+      { word: '宛てる', reading: 'あてる', meaning: 'Address / menaruh' },
+      { word: '～宛', reading: '～あて', meaning: 'For…(e.g. / in a letter)' },
+      { word: '宛名', reading: 'あてな', meaning: 'Address / direction' },
     ],
   },
   {
@@ -3971,9 +3971,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["宀","且"],
     mnemonic: 'Karakter 宜 (Best regards / baik) memiliki 8 goresan, tersusun dari elemen (宀, 且) yang melambangkan konsep intinya.',
     examples: [
-      { word: '適宜', reading: 'てきぎ', meaning: 'suitability' },
-      { word: '便宜', reading: 'べんぎ', meaning: 'convenience / accommodation' },
-      { word: '時宜', reading: 'じぎ', meaning: 'right time' },
+      { word: '適宜', reading: 'てきぎ', meaning: 'Suitability' },
+      { word: '便宜', reading: 'べんぎ', meaning: 'Convenience / accommodation' },
+      { word: '時宜', reading: 'じぎ', meaning: 'Right time' },
     ],
   },
   {
@@ -3989,9 +3989,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["宀","亘"],
     mnemonic: 'Karakter 宣 (Mengumumkan / Memproklamasikan) memiliki 9 goresan, tersusun dari elemen (宀, 亘) yang melambangkan konsep intinya.',
     examples: [
-      { word: '宣伝', reading: 'せんでん', meaning: 'advertisement / publicity' },
-      { word: '宣教', reading: 'せんきょう', meaning: 'religious mission' },
-      { word: '宣言', reading: 'せんげん', meaning: 'declaration / proclamation / announcement' },
+      { word: '宣伝', reading: 'せんでん', meaning: 'Advertisement / publicity' },
+      { word: '宣教', reading: 'せんきょう', meaning: 'Religious mission' },
+      { word: '宣言', reading: 'せんげん', meaning: 'Declaration / proclamation / announcement' },
     ],
   },
   {
@@ -4007,9 +4007,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["宀","呂"],
     mnemonic: 'Karakter 宮 (Shinto shrine / constellations) memiliki 10 goresan, tersusun dari elemen (宀, 呂) yang melambangkan konsep intinya.',
     examples: [
-      { word: 'お宮', reading: 'おみや', meaning: 'shinto shrine' },
-      { word: '宮殿', reading: 'きゅうでん', meaning: 'palace' },
-      { word: '二宮', reading: 'にぐう', meaning: 'the Two Ise Shrines' },
+      { word: 'お宮', reading: 'おみや', meaning: 'Shinto shrine' },
+      { word: '宮殿', reading: 'きゅうでん', meaning: 'Palace' },
+      { word: '二宮', reading: 'にぐう', meaning: 'The Two Ise Shrines' },
     ],
   },
   {
@@ -4025,8 +4025,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["宀","辛"],
     mnemonic: 'Karakter 宰 (Superintend / manager) memiliki 10 goresan, tersusun dari elemen (宀, 辛) yang melambangkan konsep intinya.',
     examples: [
-      { word: '主宰', reading: 'しゅさい', meaning: 'chairmanship' },
-      { word: '宰相', reading: 'さいしょう', meaning: 'prime minister' },
+      { word: '主宰', reading: 'しゅさい', meaning: 'Chairmanship' },
+      { word: '宰相', reading: 'さいしょう', meaning: 'Prime minister' },
     ],
   },
   {
@@ -4042,9 +4042,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["宀","妟"],
     mnemonic: 'Karakter 宴 (Banquet / feast) memiliki 10 goresan, tersusun dari elemen (宀, 妟) yang melambangkan konsep intinya.',
     examples: [
-      { word: '宴会', reading: 'えんかい', meaning: 'party / banquet' },
-      { word: '宴席', reading: 'えんせき', meaning: 'banquet' },
-      { word: '披露宴', reading: 'ひろうえん', meaning: 'reception (e.g. wedding)' },
+      { word: '宴会', reading: 'えんかい', meaning: 'Party / banquet' },
+      { word: '宴席', reading: 'えんせき', meaning: 'Banquet' },
+      { word: '披露宴', reading: 'ひろうえん', meaning: 'Reception (e.g. wedding)' },
     ],
   },
   {
@@ -4060,7 +4060,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["宀","肖"],
     mnemonic: 'Karakter 宵 (Wee hours / evening) memiliki 10 goresan, tersusun dari elemen (宀, 肖) yang melambangkan konsep intinya.',
     examples: [
-      { word: '今宵', reading: 'こよい', meaning: 'this evening' },
+      { word: '今宵', reading: 'こよい', meaning: 'This evening' },
       { word: '宵', reading: 'よい', meaning: 'Awal malam / Senja' },
       { word: '宵の口', reading: 'よいのくち', meaning: 'Awal mula malam tiba' },
     ],
@@ -4078,9 +4078,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["宀","豕"],
     mnemonic: 'Karakter 家 (Rumah / home) memiliki 10 goresan, tersusun dari elemen (宀, 豕) yang melambangkan konsep intinya.',
     examples: [
-      { word: '家', reading: 'いえ', meaning: 'house / home' },
-      { word: '家族', reading: 'かぞく', meaning: 'keluarga / members of a family' },
-      { word: '家庭', reading: 'かてい', meaning: 'home / keluarga' },
+      { word: '家', reading: 'いえ', meaning: 'House / home' },
+      { word: '家族', reading: 'かぞく', meaning: 'Keluarga / members of a family' },
+      { word: '家庭', reading: 'かてい', meaning: 'Home / keluarga' },
     ],
   },
   {
@@ -4096,9 +4096,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["宀","叔"],
     mnemonic: 'Karakter 寂 (Loneliness / quietly) memiliki 11 goresan, tersusun dari elemen (宀, 叔) yang melambangkan konsep intinya.',
     examples: [
-      { word: '寂しい', reading: 'さびしい', meaning: 'lonely / lonesome' },
-      { word: '寂然', reading: 'せきぜん', meaning: 'lonely' },
-      { word: '静寂', reading: 'せいじゃく', meaning: 'silence' },
+      { word: '寂しい', reading: 'さびしい', meaning: 'Lonely / lonesome' },
+      { word: '寂然', reading: 'せきぜん', meaning: 'Lonely' },
+      { word: '静寂', reading: 'せいじゃく', meaning: 'Silence' },
     ],
   },
   {
@@ -4115,8 +4115,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 密 (Secrecy / density (pop)) memiliki 11 goresan, tersusun dari elemen (宓, 山) yang melambangkan konsep intinya.',
     examples: [
       { word: '緻密', reading: 'ちみつ', meaning: 'Sangat teliti / Rinci / Cermat mendalam' },
-      { word: '密', reading: 'みつ', meaning: 'thick / close' },
-      { word: '秘密', reading: 'ひみつ', meaning: 'secret / secrecy' },
+      { word: '密', reading: 'みつ', meaning: 'Thick / close' },
+      { word: '秘密', reading: 'ひみつ', meaning: 'Secret / secrecy' },
     ],
   },
   {
@@ -4132,8 +4132,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["宀","莧"],
     mnemonic: 'Karakter 寛 (Tolerant / leniency) memiliki 13 goresan, tersusun dari elemen (宀, 莧) yang melambangkan konsep intinya.',
     examples: [
-      { word: '寛容', reading: 'かんよう', meaning: 'forbearance / tolerance / generosity' },
-      { word: '寛大', reading: 'かんだい', meaning: 'tolerant' },
+      { word: '寛容', reading: 'かんよう', meaning: 'Forbearance / tolerance / generosity' },
+      { word: '寛大', reading: 'かんだい', meaning: 'Tolerant' },
     ],
   },
   {
@@ -4149,9 +4149,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["宀","丆","且","分"],
     mnemonic: 'Karakter 寡 (Janda / Minoritas) memiliki 14 goresan, tersusun dari elemen (宀, 丆, 且) yang melambangkan konsep intinya.',
     examples: [
-      { word: '多寡', reading: 'たか', meaning: 'degree (of something)' },
-      { word: '寡占', reading: 'かせん', meaning: 'oligopoly' },
-      { word: '寡婦', reading: 'かふ', meaning: 'widow' },
+      { word: '多寡', reading: 'たか', meaning: 'Degree (of something)' },
+      { word: '寡占', reading: 'かせん', meaning: 'Oligopoly' },
+      { word: '寡婦', reading: 'かふ', meaning: 'Widow' },
     ],
   },
   {
@@ -4167,7 +4167,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["寍","丁"],
     mnemonic: 'Karakter 寧 (Rather / preferably) memiliki 14 goresan, tersusun dari elemen (寍, 丁) yang melambangkan konsep intinya.',
     examples: [
-      { word: '寧ろ', reading: 'むしろ', meaning: 'rather / better / instead' },
+      { word: '寧ろ', reading: 'むしろ', meaning: 'Rather / better / instead' },
       { word: '丁寧', reading: 'ていねい', meaning: 'Sopan / Teliti' },
     ],
   },
@@ -4184,7 +4184,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["宀","番"],
     mnemonic: 'Karakter 審 (Hearing / judge) memiliki 15 goresan, tersusun dari elemen (宀, 番) yang melambangkan konsep intinya.',
     examples: [
-      { word: '審判', reading: 'しんぱん', meaning: 'umpire / referee / judgment' },
+      { word: '審判', reading: 'しんぱん', meaning: 'Umpire / referee / judgment' },
       { word: '審議', reading: 'しんぎ', meaning: 'Musyawarah formal / Perundingan legislatif' },
       { word: '審理', reading: 'しんり', meaning: 'Persidangan peradilan / Pemeriksaan perkara' },
     ],
@@ -4202,8 +4202,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["宀","尞"],
     mnemonic: 'Karakter 寮 (Asrama pondokan) memiliki 15 goresan, tersusun dari elemen (宀, 尞) yang melambangkan konsep intinya.',
     examples: [
-      { word: '寮', reading: 'りょう', meaning: 'hostel / dormitory' },
-      { word: '寮生', reading: 'りょうせい', meaning: 'boarder' },
+      { word: '寮', reading: 'りょう', meaning: 'Hostel / dormitory' },
+      { word: '寮生', reading: 'りょうせい', meaning: 'Boarder' },
     ],
   },
   {
@@ -4219,9 +4219,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["寸"],
     mnemonic: 'Karakter 寸 (Measurement / tenth of a shaku) memiliki 3 goresan, tersusun dari elemen (寸) yang melambangkan konsep intinya.',
     examples: [
-      { word: '寸法', reading: 'すんぽう', meaning: 'measurement / size / dimension' },
-      { word: '一寸', reading: 'ちょっと', meaning: 'a little' },
-      { word: '寸前', reading: 'すんぜん', meaning: 'just before' },
+      { word: '寸法', reading: 'すんぽう', meaning: 'Measurement / size / dimension' },
+      { word: '一寸', reading: 'ちょっと', meaning: 'A little' },
+      { word: '寸前', reading: 'すんぜん', meaning: 'Just before' },
     ],
   },
   {
@@ -4237,8 +4237,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["身","寸"],
     mnemonic: 'Karakter 射 (Menembak / Memancarkan sinar) memiliki 10 goresan, tersusun dari elemen (身, 寸) yang melambangkan konsep intinya.',
     examples: [
-      { word: '射す', reading: 'さす', meaning: 'melakukan shine / melakukan strike' },
-      { word: '発射', reading: 'はっしゃ', meaning: 'firing / shooting / discharge' },
+      { word: '射す', reading: 'さす', meaning: 'Bersinar / Berkilau / Memukul / Menyerang' },
+      { word: '発射', reading: 'はっしゃ', meaning: 'Firing / shooting / discharge' },
       { word: '注射', reading: 'ちゅうしゃ', meaning: 'Suntikan / injeksi' },
     ],
   },
@@ -4255,9 +4255,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["𫵖","寸"],
     mnemonic: 'Karakter 尉 (Perwira militer) memiliki 11 goresan, tersusun dari elemen (𫵖, 寸) yang melambangkan konsep intinya.',
     examples: [
-      { word: '中尉', reading: 'ちゅうい', meaning: 'first lieutenant' },
-      { word: '大尉', reading: 'たいい', meaning: 'captain (Army, US Marine Corps, USAF)' },
-      { word: '少尉', reading: 'しょうい', meaning: 'second lieutenant' },
+      { word: '中尉', reading: 'ちゅうい', meaning: 'First lieutenant' },
+      { word: '大尉', reading: 'たいい', meaning: 'Captain (Army, US Marine Corps, USAF)' },
+      { word: '少尉', reading: 'しょうい', meaning: 'Second lieutenant' },
     ],
   },
   {
@@ -4273,9 +4273,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["彐","工","口","寸"],
     mnemonic: 'Karakter 尋 (Menanyakan / Mencari jejak) memiliki 12 goresan, tersusun dari elemen (彐, 工, 口, 寸) yang melambangkan konsep intinya.',
     examples: [
-      { word: '尋ねる', reading: 'たずねる', meaning: 'melakukan inquire (same as 質問する)' },
-      { word: '尋ね人', reading: 'たずねびと', meaning: 'missing person' },
-      { word: '尋問', reading: 'じんもん', meaning: 'questioning' },
+      { word: '尋ねる', reading: 'たずねる', meaning: 'Inquire (same as 質問する)' },
+      { word: '尋ね人', reading: 'たずねびと', meaning: 'Missing person' },
+      { word: '尋問', reading: 'じんもん', meaning: 'Questioning' },
     ],
   },
   {
@@ -4291,9 +4291,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["⺌","冋"],
     mnemonic: 'Karakter 尚 (Esteem / furthermore) memiliki 8 goresan, tersusun dari elemen (⺌, 冋) yang melambangkan konsep intinya.',
     examples: [
-      { word: '高尚', reading: 'こうしょう', meaning: 'high / noble / refined' },
-      { word: '和尚', reading: 'おしょう', meaning: 'priestly teacher' },
-      { word: '尚且つ', reading: 'なおかつ', meaning: 'besides' },
+      { word: '高尚', reading: 'こうしょう', meaning: 'High / noble / refined' },
+      { word: '和尚', reading: 'おしょう', meaning: 'Priestly teacher' },
+      { word: '尚且つ', reading: 'なおかつ', meaning: 'Besides' },
     ],
   },
   {
@@ -4309,9 +4309,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["京","尤"],
     mnemonic: 'Karakter 就 (Concerning / settle) memiliki 12 goresan, tersusun dari elemen (京, 尤) yang melambangkan konsep intinya.',
     examples: [
-      { word: '就職', reading: 'しゅうしょく', meaning: 'finding employment' },
-      { word: '就く', reading: 'つく', meaning: 'melakukan settle in (place) / melakukan take (seat position) / melakukan study (under teacher)' },
-      { word: '就業', reading: 'しゅうぎょう', meaning: 'employment / starting work' },
+      { word: '就職', reading: 'しゅうしょく', meaning: 'Finding employment' },
+      { word: '就く', reading: 'つく', meaning: 'Settle in (place) / Mengambil ((seat position)) / Belajar ((under teacher))' },
+      { word: '就業', reading: 'しゅうぎょう', meaning: 'Employment / starting work' },
     ],
   },
   {
@@ -4327,9 +4327,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["尺"],
     mnemonic: 'Karakter 尺 (Shaku / japanese kaki) memiliki 4 goresan, tersusun dari elemen (尺) yang melambangkan konsep intinya.',
     examples: [
-      { word: '尺八', reading: 'しゃくはち', meaning: 'shakuhachi' },
-      { word: '尺度', reading: 'しゃくど', meaning: 'gauge' },
-      { word: '巻尺', reading: 'まきじゃく', meaning: 'tape measure' },
+      { word: '尺八', reading: 'しゃくはち', meaning: 'Shakuhachi' },
+      { word: '尺度', reading: 'しゃくど', meaning: 'Gauge' },
+      { word: '巻尺', reading: 'まきじゃく', meaning: 'Tape measure' },
     ],
   },
   {
@@ -4346,7 +4346,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 尼 (Nun) memiliki 5 goresan, tersusun dari elemen (尸, 匕) yang melambangkan konsep intinya.',
     examples: [
       { word: '印度尼西亜', reading: 'インドネシア', meaning: 'Indonesia' },
-      { word: '安母尼亜', reading: 'アンモニア', meaning: 'ammonia' },
+      { word: '安母尼亜', reading: 'アンモニア', meaning: 'Ammonia' },
       { word: '尼僧', reading: 'にそう', meaning: 'Buddhist nun' },
     ],
   },
@@ -4363,9 +4363,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["尺","⺀"],
     mnemonic: 'Karakter 尽 (Exhaust / use up) memiliki 6 goresan, tersusun dari elemen (尺, ⺀) yang melambangkan konsep intinya.',
     examples: [
-      { word: '尽きる', reading: 'つきる', meaning: 'melakukan be used up / melakukan be run out' },
-      { word: '尽くす', reading: 'つくす', meaning: 'melakukan exhaust / melakukan run out / melakukan devote' },
-      { word: '尽力', reading: 'じんりょく', meaning: 'efforts' },
+      { word: '尽きる', reading: 'つきる', meaning: 'Menjadi used up / Menjadi run out' },
+      { word: '尽くす', reading: 'つくす', meaning: 'Exhaust / Berlari (out) / Devote' },
+      { word: '尽力', reading: 'じんりょく', meaning: 'Efforts' },
     ],
   },
   {
@@ -4382,8 +4382,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 尾 (Tail / end) memiliki 7 goresan, tersusun dari elemen (尸, 毛) yang melambangkan konsep intinya.',
     examples: [
       { word: '竜頭蛇尾', reading: 'りゅうとうだび', meaning: 'Awalnya megah menggelegar namun akhirnya berakhir melempem mengecewakan' },
-      { word: '尾', reading: 'お', meaning: 'tail / ridge' },
-      { word: '尻尾', reading: 'しっぽ', meaning: 'tail (of an animal)' },
+      { word: '尾', reading: 'お', meaning: 'Tail / ridge' },
+      { word: '尻尾', reading: 'しっぽ', meaning: 'Tail (of an animal)' },
     ],
   },
   {
@@ -4399,9 +4399,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["尸","水"],
     mnemonic: 'Karakter 尿 (Urine) memiliki 7 goresan, tersusun dari elemen (尸, 水) yang melambangkan konsep intinya.',
     examples: [
-      { word: '尿', reading: 'にょう', meaning: 'urine' },
-      { word: '屎尿', reading: 'しにょう', meaning: 'human waste' },
-      { word: '尿酸', reading: 'にょうさん', meaning: 'uric acid' },
+      { word: '尿', reading: 'にょう', meaning: 'Urine' },
+      { word: '屎尿', reading: 'しにょう', meaning: 'Human waste' },
+      { word: '尿酸', reading: 'にょうさん', meaning: 'Uric acid' },
     ],
   },
   {
@@ -4417,9 +4417,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["尸","出"],
     mnemonic: 'Karakter 屈 (Yield / bend) memiliki 8 goresan, tersusun dari elemen (尸, 出) yang melambangkan konsep intinya.',
     examples: [
-      { word: '退屈', reading: 'たいくつ', meaning: 'tedium / membosankan' },
-      { word: '窮屈', reading: 'きゅうくつ', meaning: 'narrow / tight / formal' },
-      { word: '屈折', reading: 'くっせつ', meaning: 'bending / indentation / refraction' },
+      { word: '退屈', reading: 'たいくつ', meaning: 'Tedium / membosankan' },
+      { word: '窮屈', reading: 'きゅうくつ', meaning: 'Narrow / tight / formal' },
+      { word: '屈折', reading: 'くっせつ', meaning: 'Bending / indentation / refraction' },
     ],
   },
   {
@@ -4435,9 +4435,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["尸","禹"],
     mnemonic: 'Karakter 属 (Belong / genus) memiliki 12 goresan, tersusun dari elemen (尸, 禹) yang melambangkan konsep intinya.',
     examples: [
-      { word: '金属', reading: 'きんぞく', meaning: 'metal' },
-      { word: '所属', reading: 'しょぞく', meaning: 'attached to / belong to' },
-      { word: '属する', reading: 'ぞくする', meaning: 'melakukan belong to / melakukan come under' },
+      { word: '金属', reading: 'きんぞく', meaning: 'Metal' },
+      { word: '所属', reading: 'しょぞく', meaning: 'Attached to / belong to' },
+      { word: '属する', reading: 'ぞくする', meaning: 'Belong to / Come under' },
     ],
   },
   {
@@ -4453,8 +4453,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["尸","復"],
     mnemonic: 'Karakter 履 (Perform / complete) memiliki 15 goresan, tersusun dari elemen (尸, 復) yang melambangkan konsep intinya.',
     examples: [
-      { word: '履歴', reading: 'りれき', meaning: 'personal history / background / log' },
-      { word: '草履', reading: 'ぞうり', meaning: 'japanese sandals (footwear)' },
+      { word: '履歴', reading: 'りれき', meaning: 'Personal history / background / log' },
+      { word: '草履', reading: 'ぞうり', meaning: 'Japanese sandals (footwear)' },
       { word: '履歴書', reading: 'りれきしょ', meaning: 'Daftar riwayat hidup / Dokumen CV' },
     ],
   },
@@ -4471,7 +4471,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["丿","𡳾"],
     mnemonic: 'Karakter 屯 (Garnisun pos militer) memiliki 4 goresan, tersusun dari elemen (丿, 𡳾) yang melambangkan konsep intinya.',
     examples: [
-      { word: '駐屯', reading: 'ちゅうとん', meaning: 'stationing (troops)' },
+      { word: '駐屯', reading: 'ちゅうとん', meaning: 'Stationing (troops)' },
       { word: '屯田兵', reading: 'とんでんへい', meaning: 'Prajurit perintis lahan tani' },
     ],
   },
@@ -4488,9 +4488,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["山","支"],
     mnemonic: 'Karakter 岐 (Branch off / fork in jalan raya) memiliki 7 goresan, tersusun dari elemen (山, 支) yang melambangkan konsep intinya.',
     examples: [
-      { word: '分岐', reading: 'ぶんき', meaning: 'divergence' },
-      { word: '分岐点', reading: 'ぶんきてん', meaning: 'fork' },
-      { word: '多岐', reading: 'たき', meaning: 'diverse' },
+      { word: '分岐', reading: 'ぶんき', meaning: 'Divergence' },
+      { word: '分岐点', reading: 'ぶんきてん', meaning: 'Fork' },
+      { word: '多岐', reading: 'たき', meaning: 'Diverse' },
     ],
   },
   {
@@ -4523,7 +4523,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["山","甲"],
     mnemonic: 'Karakter 岬 (Headland / cape) memiliki 8 goresan, tersusun dari elemen (山, 甲) yang melambangkan konsep intinya.',
     examples: [
-      { word: '岬', reading: 'みさき', meaning: 'cape (on coast)' },
+      { word: '岬', reading: 'みさき', meaning: 'Cape (on coast)' },
       { word: '喜望峰岬', reading: 'きぼうほうみさき', meaning: 'Tanjung Harapan Afrika' },
     ],
   },
@@ -4540,7 +4540,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["丘","山"],
     mnemonic: 'Karakter 岳 (Point / peak) memiliki 8 goresan, tersusun dari elemen (丘, 山) yang melambangkan konsep intinya.',
     examples: [
-      { word: '山岳', reading: 'さんがく', meaning: 'mountains' },
+      { word: '山岳', reading: 'さんがく', meaning: 'Mountains' },
       { word: '岳語', reading: 'ガクご', meaning: 'Istilah / kosakata terkait Point / peak' },
     ],
   },
@@ -4557,7 +4557,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["山","𠧗"],
     mnemonic: 'Karakter 峠 (Gunung peak / gunung pass) memiliki 9 goresan, tersusun dari elemen (山, 𠧗) yang melambangkan konsep intinya.',
     examples: [
-      { word: '峠', reading: 'とうげ', meaning: 'ridge / (mountain) pass / difficult part' },
+      { word: '峠', reading: 'とうげ', meaning: 'Ridge / (mountain) pass / difficult part' },
       { word: '峠越え', reading: 'とうげごえ', meaning: 'Melewati puncak jalan lereng' },
     ],
   },
@@ -4574,8 +4574,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["山","夹"],
     mnemonic: 'Karakter 峡 (Gorge / ravine) memiliki 9 goresan, tersusun dari elemen (山, 夹) yang melambangkan konsep intinya.',
     examples: [
-      { word: '海峡', reading: 'かいきょう', meaning: 'channel' },
-      { word: '峡谷', reading: 'きょうこく', meaning: 'gorge' },
+      { word: '海峡', reading: 'かいきょう', meaning: 'Channel' },
+      { word: '峡谷', reading: 'きょうこく', meaning: 'Gorge' },
     ],
   },
   {
@@ -4591,9 +4591,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["山","夆"],
     mnemonic: 'Karakter 峰 (Summit / peak) memiliki 10 goresan, tersusun dari elemen (山, 夆) yang melambangkan konsep intinya.',
     examples: [
-      { word: '峰', reading: 'みね', meaning: 'peak / ridge' },
-      { word: '最高峰', reading: 'さいこうほう', meaning: 'highest peak' },
-      { word: '連峰', reading: 'れんぽう', meaning: 'mountain range' },
+      { word: '峰', reading: 'みね', meaning: 'Peak / ridge' },
+      { word: '最高峰', reading: 'さいこうほう', meaning: 'Highest peak' },
+      { word: '連峰', reading: 'れんぽう', meaning: 'Mountain range' },
     ],
   },
   {
@@ -4609,8 +4609,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["山","宗"],
     mnemonic: 'Karakter 崇 (Adore / respect) memiliki 11 goresan, tersusun dari elemen (山, 宗) yang melambangkan konsep intinya.',
     examples: [
-      { word: '崇拝', reading: 'すうはい', meaning: 'worship / adoration' },
-      { word: '崇高', reading: 'すうこう', meaning: 'lofty' },
+      { word: '崇拝', reading: 'すうはい', meaning: 'Worship / adoration' },
+      { word: '崇高', reading: 'すうこう', meaning: 'Lofty' },
     ],
   },
   {
@@ -4643,7 +4643,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["山","厓"],
     mnemonic: 'Karakter 崖 (Cliff / bluff) memiliki 11 goresan, tersusun dari elemen (山, 厓) yang melambangkan konsep intinya.',
     examples: [
-      { word: '崖', reading: 'がけ', meaning: 'cliff' },
+      { word: '崖', reading: 'がけ', meaning: 'Cliff' },
       { word: '断崖', reading: 'だんがい', meaning: 'Tebing tebing karang terjal' },
     ],
   },
@@ -4660,9 +4660,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["山","朋"],
     mnemonic: 'Karakter 崩 (Crumble / die) memiliki 11 goresan, tersusun dari elemen (山, 朋) yang melambangkan konsep intinya.',
     examples: [
-      { word: '雪崩', reading: 'なだれ', meaning: 'avalanche' },
-      { word: '崩壊', reading: 'ほうかい', meaning: 'collapse / decay (physics) / crumbling' },
-      { word: '崩す', reading: 'くずす', meaning: 'melakukan destroy / melakukan make change (money)' },
+      { word: '雪崩', reading: 'なだれ', meaning: 'Avalanche' },
+      { word: '崩壊', reading: 'ほうかい', meaning: 'Collapse / decay (physics) / crumbling' },
+      { word: '崩す', reading: 'くずす', meaning: 'Menghancurkan / Membuat (change (money))' },
     ],
   },
   {
@@ -4678,7 +4678,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["山","風"],
     mnemonic: 'Karakter 嵐 (Storm / tempest) memiliki 12 goresan, tersusun dari elemen (山, 風) yang melambangkan konsep intinya.',
     examples: [
-      { word: '嵐', reading: 'あらし', meaning: 'storm' },
+      { word: '嵐', reading: 'あらし', meaning: 'Storm' },
       { word: '砂嵐', reading: 'すなあらし', meaning: 'Badai pasir padang gurun' },
     ],
   },
@@ -4696,8 +4696,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 巡 (Berkeliling patroli / Ziarah) memiliki 6 goresan, tersusun dari elemen (辶, 巛) yang melambangkan konsep intinya.',
     examples: [
       { word: '逡巡', reading: 'しゅんじゅん', meaning: 'Keraguan bimbang untuk melangkah maju' },
-      { word: '巡査', reading: 'じゅんさ', meaning: 'policeman' },
-      { word: '巡る', reading: 'めぐる', meaning: 'melakukan go around' },
+      { word: '巡査', reading: 'じゅんさ', meaning: 'Policeman' },
+      { word: '巡る', reading: 'めぐる', meaning: 'Go around' },
     ],
   },
   {
@@ -4713,9 +4713,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["𭕄","果"],
     mnemonic: 'Karakter 巣 (Nest / rookery) memiliki 11 goresan, tersusun dari elemen (𭕄, 果) yang melambangkan konsep intinya.',
     examples: [
-      { word: '巣', reading: 'す', meaning: 'nest / breeding place' },
-      { word: '卵巣', reading: 'らんそう', meaning: 'ovary' },
-      { word: '古巣', reading: 'ふるす', meaning: 'old haunts' },
+      { word: '巣', reading: 'す', meaning: 'Nest / breeding place' },
+      { word: '卵巣', reading: 'らんそう', meaning: 'Ovary' },
+      { word: '古巣', reading: 'ふるす', meaning: 'Old haunts' },
     ],
   },
   {
@@ -4731,9 +4731,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["己"],
     mnemonic: 'Karakter 己 (Self) memiliki 3 goresan, tersusun dari elemen (己) yang melambangkan konsep intinya.',
     examples: [
-      { word: '自己', reading: 'じこ', meaning: 'self / oneself' },
-      { word: '利己', reading: 'りこ', meaning: 'self-interest' },
-      { word: '利己主義', reading: 'りこしゅぎ', meaning: 'egoism' },
+      { word: '自己', reading: 'じこ', meaning: 'Self / oneself' },
+      { word: '利己', reading: 'りこ', meaning: 'Self-interest' },
+      { word: '利己主義', reading: 'りこしゅぎ', meaning: 'Egoism' },
     ],
   },
   {
@@ -4749,8 +4749,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["巾"],
     mnemonic: 'Karakter 巾 (Towel / hanging scroll) memiliki 3 goresan, tersusun dari elemen (巾) yang melambangkan konsep intinya.',
     examples: [
-      { word: '布巾', reading: 'ふきん', meaning: 'dish cloth' },
-      { word: '雑巾', reading: 'ぞうきん', meaning: 'house-cloth / dust cloth' },
+      { word: '布巾', reading: 'ふきん', meaning: 'Dish cloth' },
+      { word: '雑巾', reading: 'ぞうきん', meaning: 'House-cloth / dust cloth' },
     ],
   },
   {
@@ -4766,8 +4766,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["巾","凡"],
     mnemonic: 'Karakter 帆 (Sail) memiliki 6 goresan, tersusun dari elemen (巾, 凡) yang melambangkan konsep intinya.',
     examples: [
-      { word: '帆船', reading: 'はんせん', meaning: 'sailing ship' },
-      { word: '帆走', reading: 'はんそう', meaning: 'sailing' },
+      { word: '帆船', reading: 'はんせん', meaning: 'Sailing ship' },
+      { word: '帆走', reading: 'はんそう', meaning: 'Sailing' },
     ],
   },
   {
@@ -4783,9 +4783,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["亠","丷","冖","巾"],
     mnemonic: 'Karakter 帝 (Sovereign / the emperor) memiliki 9 goresan, tersusun dari elemen (亠, 丷, 冖) yang melambangkan konsep intinya.',
     examples: [
-      { word: '帝国', reading: 'ていこく', meaning: 'empire' },
-      { word: '帝国主義', reading: 'ていこくしゅぎ', meaning: 'imperialism' },
-      { word: '帝政', reading: 'ていせい', meaning: 'imperial government' },
+      { word: '帝国', reading: 'ていこく', meaning: 'Empire' },
+      { word: '帝国主義', reading: 'ていこくしゅぎ', meaning: 'Imperialism' },
+      { word: '帝政', reading: 'ていせい', meaning: 'Imperial government' },
     ],
   },
   {
@@ -4802,8 +4802,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 帥 (Commander / leading troops) memiliki 9 goresan, tersusun dari elemen (𠂤, 巾) yang melambangkan konsep intinya.',
     examples: [
       { word: '元帥', reading: 'げんすい', meaning: '(field) marshal' },
-      { word: '統帥', reading: 'とうすい', meaning: 'supreme command' },
-      { word: '総帥', reading: 'そうすい', meaning: 'commander-in-chief' },
+      { word: '統帥', reading: 'とうすい', meaning: 'Supreme command' },
+      { word: '総帥', reading: 'そうすい', meaning: 'Commander-in-chief' },
     ],
   },
   {
@@ -4819,9 +4819,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["巾","長"],
     mnemonic: 'Karakter 帳 (Buku catatan / Tirai pembatas) memiliki 11 goresan, tersusun dari elemen (巾, 長) yang melambangkan konsep intinya.',
     examples: [
-      { word: '几帳面', reading: 'きちょうめん', meaning: 'methodical / punctual / steady' },
+      { word: '几帳面', reading: 'きちょうめん', meaning: 'Methodical / punctual / steady' },
       { word: '～帳', reading: '～ちょう', meaning: '~ book / notebook' },
-      { word: '通帳', reading: 'つうちょう', meaning: 'bankbook' },
+      { word: '通帳', reading: 'つうちょう', meaning: 'Bankbook' },
     ],
   },
   {
@@ -4837,9 +4837,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["莫","巾"],
     mnemonic: 'Karakter 幕 (Curtain / bunting) memiliki 13 goresan, tersusun dari elemen (莫, 巾) yang melambangkan konsep intinya.',
     examples: [
-      { word: '幕', reading: 'まく', meaning: 'curtain / act (in play)' },
-      { word: '一幕', reading: 'ひとまく', meaning: 'one act (of a play)' },
-      { word: '入幕', reading: 'にゅうまく', meaning: 'advancing to the first grade' },
+      { word: '幕', reading: 'まく', meaning: 'Curtain / act (in play)' },
+      { word: '一幕', reading: 'ひとまく', meaning: 'One act (of a play)' },
+      { word: '入幕', reading: 'にゅうまく', meaning: 'Advancing to the first grade' },
     ],
   },
   {
@@ -4855,9 +4855,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["敝","巾"],
     mnemonic: 'Karakter 幣 (Uang kertas mata uang / Persembahan) memiliki 15 goresan, tersusun dari elemen (敝, 巾) yang melambangkan konsep intinya.',
     examples: [
-      { word: '貨幣', reading: 'かへい', meaning: 'uang / currency / coinage' },
-      { word: '紙幣', reading: 'しへい', meaning: 'paper money / notes / bills' },
-      { word: '貨幣価値', reading: 'かへいかち', meaning: 'currency value' },
+      { word: '貨幣', reading: 'かへい', meaning: 'Uang / currency / coinage' },
+      { word: '紙幣', reading: 'しへい', meaning: 'Paper money / notes / bills' },
+      { word: '貨幣価値', reading: 'かへいかち', meaning: 'Currency value' },
     ],
   },
   {
@@ -4874,8 +4874,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 幹 (Pohon trunk / main part) memiliki 13 goresan, tersusun dari elemen (𠦝, 𫢉) yang melambangkan konsep intinya.',
     examples: [
       { word: '新幹線', reading: 'しんかんせん', meaning: 'Kereta cepat Shinkansen' },
-      { word: '幹線', reading: 'かんせん', meaning: 'main line / trunk line' },
-      { word: '幹部', reading: 'かんぶ', meaning: 'management / executive' },
+      { word: '幹線', reading: 'かんせん', meaning: 'Main line / trunk line' },
+      { word: '幹部', reading: 'かんぶ', meaning: 'Management / executive' },
     ],
   },
   {
@@ -4891,9 +4891,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["幺","𠃌"],
     mnemonic: 'Karakter 幻 (Phantasm / vision) memiliki 4 goresan, tersusun dari elemen (幺, 𠃌) yang melambangkan konsep intinya.',
     examples: [
-      { word: '夢幻', reading: 'むげん', meaning: 'dreams' },
-      { word: '幻影', reading: 'げんえい', meaning: 'phantom' },
-      { word: '幻想', reading: 'げんそう', meaning: 'fantasy' },
+      { word: '夢幻', reading: 'むげん', meaning: 'Dreams' },
+      { word: '幻影', reading: 'げんえい', meaning: 'Phantom' },
+      { word: '幻想', reading: 'げんそう', meaning: 'Fantasy' },
     ],
   },
   {
@@ -4909,8 +4909,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["山","𢆶"],
     mnemonic: 'Karakter 幽 (Seclude / confine to a ruangan) memiliki 9 goresan, tersusun dari elemen (山, 𢆶) yang melambangkan konsep intinya.',
     examples: [
-      { word: '幽霊', reading: 'ゆうれい', meaning: 'ghost / specter / phantom' },
-      { word: '幽閉', reading: 'ゆうへい', meaning: 'confinement' },
+      { word: '幽霊', reading: 'ゆうれい', meaning: 'Ghost / specter / phantom' },
+      { word: '幽閉', reading: 'ゆうへい', meaning: 'Confinement' },
     ],
   },
   {
@@ -4926,9 +4926,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["戈","𢆶","人"],
     mnemonic: 'Karakter 幾 (How many / how much) memiliki 12 goresan, tersusun dari elemen (戈, 𢆶, 人) yang melambangkan konsep intinya.',
     examples: [
-      { word: '幾多', reading: 'いくた', meaning: 'many / numerous' },
-      { word: '幾～', reading: 'いく～', meaning: 'several ~' },
-      { word: '幾分', reading: 'いくぶん', meaning: 'somewhat' },
+      { word: '幾多', reading: 'いくた', meaning: 'Many / numerous' },
+      { word: '幾～', reading: 'いく～', meaning: 'Several ~' },
+      { word: '幾分', reading: 'いくぶん', meaning: 'Somewhat' },
     ],
   },
   {
@@ -4944,9 +4944,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["广","予"],
     mnemonic: 'Karakter 序 (Preface / beginning) memiliki 7 goresan, tersusun dari elemen (广, 予) yang melambangkan konsep intinya.',
     examples: [
-      { word: '秩序', reading: 'ちつじょ', meaning: 'order / regularity' },
-      { word: '順序', reading: 'じゅんじょ', meaning: 'order / sequence / procedure' },
-      { word: '公序良俗', reading: 'こうじょりょうぞく', meaning: 'public order and morals' },
+      { word: '秩序', reading: 'ちつじょ', meaning: 'Order / regularity' },
+      { word: '順序', reading: 'じゅんじょ', meaning: 'Order / sequence / procedure' },
+      { word: '公序良俗', reading: 'こうじょりょうぞく', meaning: 'Public order and morals' },
     ],
   },
   {
@@ -4962,9 +4962,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["广","廿","灬"],
     mnemonic: 'Karakter 庶 (Commoner / all) memiliki 11 goresan, tersusun dari elemen (广, 廿, 灬) yang melambangkan konsep intinya.',
     examples: [
-      { word: '庶民', reading: 'しょみん', meaning: 'masses / common people' },
-      { word: '庶務', reading: 'しょむ', meaning: 'general affairs' },
-      { word: '庶民的', reading: 'しょみんてき', meaning: 'popular' },
+      { word: '庶民', reading: 'しょみん', meaning: 'Masses / common people' },
+      { word: '庶務', reading: 'しょむ', meaning: 'General affairs' },
+      { word: '庶民的', reading: 'しょみんてき', meaning: 'Popular' },
     ],
   },
   {
@@ -4980,9 +4980,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["广","隶"],
     mnemonic: 'Karakter 康 (Ease / kedamaian) memiliki 11 goresan, tersusun dari elemen (广, 隶) yang melambangkan konsep intinya.',
     examples: [
-      { word: '健康', reading: 'けんこう', meaning: 'health(y)' },
+      { word: '健康', reading: 'けんこう', meaning: 'Health(y)' },
       { word: '健康保険', reading: 'けんこうほけん', meaning: 'Asuransi kesehatan' },
-      { word: '不健康', reading: 'ふけんこう', meaning: 'poor health' },
+      { word: '不健康', reading: 'ふけんこう', meaning: 'Poor health' },
     ],
   },
   {
@@ -4998,7 +4998,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["广","𬎾"],
     mnemonic: 'Karakter 庸 (Commonplace / ordinary) memiliki 11 goresan, tersusun dari elemen (广, 𬎾) yang melambangkan konsep intinya.',
     examples: [
-      { word: '凡庸', reading: 'ぼんよう', meaning: 'mediocre' },
+      { word: '凡庸', reading: 'ぼんよう', meaning: 'Mediocre' },
       { word: '中庸', reading: 'ちゅうよう', meaning: 'Jalan tengah / Moderasi seimbang' },
     ],
   },
@@ -5015,9 +5015,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["广","兼"],
     mnemonic: 'Karakter 廉 (Bargain / alasan / nalar) memiliki 13 goresan, tersusun dari elemen (广, 兼) yang melambangkan konsep intinya.',
     examples: [
-      { word: '廉価', reading: 'れんか', meaning: 'low price' },
-      { word: '廉売', reading: 'れんばい', meaning: 'bargain sale' },
-      { word: '清廉', reading: 'せいれん', meaning: 'honest' },
+      { word: '廉価', reading: 'れんか', meaning: 'Low price' },
+      { word: '廉売', reading: 'れんばい', meaning: 'Bargain sale' },
+      { word: '清廉', reading: 'せいれん', meaning: 'Honest' },
     ],
   },
   {
@@ -5033,9 +5033,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["广","郎"],
     mnemonic: 'Karakter 廊 (Corridor / hall) memiliki 12 goresan, tersusun dari elemen (广, 郎) yang melambangkan konsep intinya.',
     examples: [
-      { word: '廊下', reading: 'ろうか', meaning: 'corridor' },
-      { word: '回廊', reading: 'かいろう', meaning: 'corridor' },
-      { word: '画廊', reading: 'がろう', meaning: 'art gallery (esp. artworks for sale)' },
+      { word: '廊下', reading: 'ろうか', meaning: 'Corridor' },
+      { word: '回廊', reading: 'かいろう', meaning: 'Corridor' },
+      { word: '画廊', reading: 'がろう', meaning: 'Art gallery (esp. artworks for sale)' },
     ],
   },
   {
@@ -5051,9 +5051,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["廴","壬"],
     mnemonic: 'Karakter 廷 (Courts / imperial court) memiliki 7 goresan, tersusun dari elemen (廴, 壬) yang melambangkan konsep intinya.',
     examples: [
-      { word: '法廷', reading: 'ほうてい', meaning: 'courtroom' },
-      { word: '出廷', reading: 'しゅってい', meaning: 'appearance in court' },
-      { word: '宮廷', reading: 'きゅうてい', meaning: 'imperial court' },
+      { word: '法廷', reading: 'ほうてい', meaning: 'Courtroom' },
+      { word: '出廷', reading: 'しゅってい', meaning: 'Appearance in court' },
+      { word: '宮廷', reading: 'きゅうてい', meaning: 'Imperial court' },
     ],
   },
   {
@@ -5069,9 +5069,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["厶","廾"],
     mnemonic: 'Karakter 弁 (Berbicara / Dialek / Katup) memiliki 5 goresan, tersusun dari elemen (厶, 廾) yang melambangkan konsep intinya.',
     examples: [
-      { word: 'お弁当', reading: 'おべんとう', meaning: 'a boxed lunch' },
-      { word: '弁当', reading: 'べんとう', meaning: 'box lunch' },
-      { word: '勘弁', reading: 'かんべん', meaning: 'pardon / forgiveness / forbearance' },
+      { word: 'お弁当', reading: 'おべんとう', meaning: 'A boxed lunch' },
+      { word: '弁当', reading: 'べんとう', meaning: 'Box lunch' },
+      { word: '勘弁', reading: 'かんべん', meaning: 'Pardon / forgiveness / forbearance' },
     ],
   },
   {
@@ -5104,9 +5104,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["弓"],
     mnemonic: 'Karakter 弓 (Bow / bow (archery, violin)) memiliki 3 goresan, tersusun dari elemen (弓) yang melambangkan konsep intinya.',
     examples: [
-      { word: '弓', reading: 'ゆみ', meaning: 'bow' },
-      { word: '弓矢', reading: 'ゆみや', meaning: 'bow and arrow' },
-      { word: '弓道', reading: 'きゅうどう', meaning: 'kyudo' },
+      { word: '弓', reading: 'ゆみ', meaning: 'Bow' },
+      { word: '弓矢', reading: 'ゆみや', meaning: 'Bow and arrow' },
+      { word: '弓道', reading: 'きゅうどう', meaning: 'Kyudo' },
     ],
   },
   {
@@ -5122,9 +5122,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["弓","丨"],
     mnemonic: 'Karakter 弔 (Condolences / mourning) memiliki 4 goresan, tersusun dari elemen (弓, 丨) yang melambangkan konsep intinya.',
     examples: [
-      { word: '弔問', reading: 'ちょうもん', meaning: 'condolence call' },
-      { word: '弔意', reading: 'ちょうい', meaning: 'condolence' },
-      { word: '弔辞', reading: 'ちょうじ', meaning: 'memorial address' },
+      { word: '弔問', reading: 'ちょうもん', meaning: 'Condolence call' },
+      { word: '弔意', reading: 'ちょうい', meaning: 'Condolence' },
+      { word: '弔辞', reading: 'ちょうじ', meaning: 'Memorial address' },
     ],
   },
   {
@@ -5141,7 +5141,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 弥 (All the more / increasingly) memiliki 8 goresan, tersusun dari elemen (弓, 尔) yang melambangkan konsep intinya.',
     examples: [
       { word: '弥撒', reading: 'ミサ', meaning: '(Catholic) Mass' },
-      { word: '弥生', reading: 'やよい', meaning: 'third month of the lunar calendar' },
+      { word: '弥生', reading: 'やよい', meaning: 'Third month of the lunar calendar' },
       { word: '阿弥陀', reading: 'あみだ', meaning: 'Amitabha (Buddha)' },
     ],
   },
@@ -5158,9 +5158,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["弓","玄"],
     mnemonic: 'Karakter 弦 (Senar dawai alat musik / Tali busur) memiliki 8 goresan, tersusun dari elemen (弓, 玄) yang melambangkan konsep intinya.',
     examples: [
-      { word: '弦楽', reading: 'げんがく', meaning: 'music for strings' },
-      { word: '弦楽器', reading: 'げんがっき', meaning: 'string instrument' },
-      { word: '管弦楽', reading: 'かんげんがく', meaning: 'orchestral music' },
+      { word: '弦楽', reading: 'げんがく', meaning: 'Music for strings' },
+      { word: '弦楽器', reading: 'げんがっき', meaning: 'String instrument' },
+      { word: '管弦楽', reading: 'かんげんがく', meaning: 'Orchestral music' },
     ],
   },
   {
@@ -5176,8 +5176,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["弓","瓜"],
     mnemonic: 'Karakter 弧 (Busur panah / Lengkungan busur) memiliki 9 goresan, tersusun dari elemen (弓, 瓜) yang melambangkan konsep intinya.',
     examples: [
-      { word: '括弧', reading: 'かっこ', meaning: 'parenthesis / brackets' },
-      { word: '円弧', reading: 'えんこ', meaning: 'arc' },
+      { word: '括弧', reading: 'かっこ', meaning: 'Parenthesis / brackets' },
+      { word: '円弧', reading: 'えんこ', meaning: 'Arc' },
     ],
   },
   {
@@ -5193,7 +5193,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["彑","冖","果"],
     mnemonic: 'Karakter 彙 (Same kind / collect) memiliki 13 goresan, tersusun dari elemen (彑, 冖, 果) yang melambangkan konsep intinya.',
     examples: [
-      { word: '語彙', reading: 'ごい', meaning: 'vocabulary / glossary' },
+      { word: '語彙', reading: 'ごい', meaning: 'Vocabulary / glossary' },
       { word: '彙語', reading: 'イご', meaning: 'Istilah / kosakata terkait Same kind / collect' },
     ],
   },
@@ -5210,9 +5210,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["采","彡"],
     mnemonic: 'Karakter 彩 (Coloring / paint) memiliki 11 goresan, tersusun dari elemen (采, 彡) yang melambangkan konsep intinya.',
     examples: [
-      { word: '色彩', reading: 'しきさい', meaning: 'color' },
-      { word: '光彩', reading: 'こうさい', meaning: 'brilliance' },
-      { word: '多彩', reading: 'たさい', meaning: 'colourful' },
+      { word: '色彩', reading: 'しきさい', meaning: 'Color' },
+      { word: '光彩', reading: 'こうさい', meaning: 'Brilliance' },
+      { word: '多彩', reading: 'たさい', meaning: 'Colourful' },
     ],
   },
   {
@@ -5228,8 +5228,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["周","彡"],
     mnemonic: 'Karakter 彫 (Carve / engrave) memiliki 11 goresan, tersusun dari elemen (周, 彡) yang melambangkan konsep intinya.',
     examples: [
-      { word: '彫刻', reading: 'ちょうこく', meaning: 'carving / engraving / sculpture' },
-      { word: '彫る', reading: 'ほる', meaning: 'melakukan carve / melakukan chisel' },
+      { word: '彫刻', reading: 'ちょうこく', meaning: 'Carving / engraving / sculpture' },
+      { word: '彫る', reading: 'ほる', meaning: 'Carve / Chisel' },
       { word: '彫像', reading: 'ちょうぞう', meaning: '(carved) statue' },
     ],
   },
@@ -5247,8 +5247,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 彰 (Patent / clear) memiliki 14 goresan, tersusun dari elemen (章, 彡) yang melambangkan konsep intinya.',
     examples: [
       { word: '表彰', reading: 'ひょうしょう', meaning: '(official) commendation' },
-      { word: '表彰状', reading: 'ひょうしょうじょう', meaning: 'testimonial' },
-      { word: '顕彰', reading: 'けんしょう', meaning: 'honouring (publicly)' },
+      { word: '表彰状', reading: 'ひょうしょうじょう', meaning: 'Testimonial' },
+      { word: '顕彰', reading: 'けんしょう', meaning: 'Honouring (publicly)' },
     ],
   },
   {
@@ -5264,9 +5264,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["景","彡"],
     mnemonic: 'Karakter 影 (Shadow / silhouette) memiliki 15 goresan, tersusun dari elemen (景, 彡) yang melambangkan konsep intinya.',
     examples: [
-      { word: '影響', reading: 'えいきょう', meaning: 'pengaruh / effect' },
-      { word: '影', reading: 'かげ', meaning: 'shade / shadow / other side' },
-      { word: '人影', reading: 'ひとかげ', meaning: 'man\\' },
+      { word: '影響', reading: 'えいきょう', meaning: 'Pengaruh / effect' },
+      { word: '影', reading: 'かげ', meaning: 'Shade / shadow / other side' },
+      { word: '人影', reading: 'ひとかげ', meaning: 'Man\\' },
     ],
   },
   {
@@ -5283,8 +5283,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 往 (Journey / travel) memiliki 8 goresan, tersusun dari elemen (彳, 主) yang melambangkan konsep intinya.',
     examples: [
       { word: '往復', reading: 'おうふく', meaning: 'Perjalanan pulang pergi (PP)' },
-      { word: '往診', reading: 'おうしん', meaning: 'doctor\\' },
-      { word: '右往左往', reading: 'うおうさおう', meaning: 'moving about in confusion' },
+      { word: '往診', reading: 'おうしん', meaning: 'Doctor\\' },
+      { word: '右往左往', reading: 'うおうさおう', meaning: 'Moving about in confusion' },
     ],
   },
   {
@@ -5300,8 +5300,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["彳","正"],
     mnemonic: 'Karakter 征 (Subjugate / attack the rebellious) memiliki 8 goresan, tersusun dari elemen (彳, 正) yang melambangkan konsep intinya.',
     examples: [
-      { word: '征服', reading: 'せいふく', meaning: 'conquest / subjugation / overcoming' },
-      { word: '出征', reading: 'しゅっせい', meaning: 'going to war' },
+      { word: '征服', reading: 'せいふく', meaning: 'Conquest / subjugation / overcoming' },
+      { word: '出征', reading: 'しゅっせい', meaning: 'Going to war' },
       { word: '遠征', reading: 'えんせい', meaning: '(military) expedition' },
     ],
   },
@@ -5318,9 +5318,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["彳","𢀖"],
     mnemonic: 'Karakter 径 (Diameter / path) memiliki 8 goresan, tersusun dari elemen (彳, 𢀖) yang melambangkan konsep intinya.',
     examples: [
-      { word: '直径', reading: 'ちょっけい', meaning: 'diameter' },
-      { word: '半径', reading: 'はんけい', meaning: 'radius' },
-      { word: '口径', reading: 'こうけい', meaning: 'aperture' },
+      { word: '直径', reading: 'ちょっけい', meaning: 'Diameter' },
+      { word: '半径', reading: 'はんけい', meaning: 'Radius' },
+      { word: '口径', reading: 'こうけい', meaning: 'Aperture' },
     ],
   },
   {
@@ -5336,8 +5336,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["彳","余"],
     mnemonic: 'Karakter 徐 (Gradually / slowly) memiliki 10 goresan, tersusun dari elemen (彳, 余) yang melambangkan konsep intinya.',
     examples: [
-      { word: '徐々に', reading: 'じょじょに', meaning: 'slowly / little by little' },
-      { word: '徐行', reading: 'じょこう', meaning: 'going slowly' },
+      { word: '徐々に', reading: 'じょじょに', meaning: 'Slowly / little by little' },
+      { word: '徐行', reading: 'じょこう', meaning: 'Going slowly' },
     ],
   },
   {
@@ -5353,9 +5353,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["彳","丷","𤴓"],
     mnemonic: 'Karakter 従 (Mengikuti / Menaati / Sekunder) memiliki 10 goresan, tersusun dari elemen (彳, 丷, 𤴓) yang melambangkan konsep intinya.',
     examples: [
-      { word: '従う', reading: 'したがう', meaning: 'melakukan abide (by the rules) / melakukan obey' },
-      { word: '従兄弟', reading: 'いとこ', meaning: 'cousin (male)' },
-      { word: '従姉妹', reading: 'いとこ', meaning: 'cousin (female)' },
+      { word: '従う', reading: 'したがう', meaning: 'Abide (by the rules) / Obey' },
+      { word: '従兄弟', reading: 'いとこ', meaning: 'Cousin (male)' },
+      { word: '従姉妹', reading: 'いとこ', meaning: 'Cousin (female)' },
     ],
   },
   {
@@ -5371,9 +5371,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["彳","盾"],
     mnemonic: 'Karakter 循 (Sequential / follow) memiliki 12 goresan, tersusun dari elemen (彳, 盾) yang melambangkan konsep intinya.',
     examples: [
-      { word: '循環', reading: 'じゅんかん', meaning: 'circulation / rotation / cycle' },
-      { word: '循環器', reading: 'じゅんかんき', meaning: 'circulatory organ' },
-      { word: '悪循環', reading: 'あくじゅんかん', meaning: 'vicious circle' },
+      { word: '循環', reading: 'じゅんかん', meaning: 'Circulation / rotation / cycle' },
+      { word: '循環器', reading: 'じゅんかんき', meaning: 'Circulatory organ' },
+      { word: '悪循環', reading: 'あくじゅんかん', meaning: 'Vicious circle' },
     ],
   },
   {
@@ -5389,9 +5389,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["彳","𢼸"],
     mnemonic: 'Karakter 微 (Delicate / minuteness) memiliki 13 goresan, tersusun dari elemen (彳, 𢼸) yang melambangkan konsep intinya.',
     examples: [
-      { word: '微妙', reading: 'びみょう', meaning: 'delicate / subtle' },
-      { word: '微笑む', reading: 'ほほえむ', meaning: 'melakukan smile' },
-      { word: '微か', reading: 'かすか', meaning: 'faint / dim / weak' },
+      { word: '微妙', reading: 'びみょう', meaning: 'Delicate / subtle' },
+      { word: '微笑む', reading: 'ほほえむ', meaning: 'Tersenyum' },
+      { word: '微か', reading: 'かすか', meaning: 'Faint / dim / weak' },
     ],
   },
   {
@@ -5407,9 +5407,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["彳","十","罒","心"],
     mnemonic: 'Karakter 徳 (Kebajikan / Moral luhur) memiliki 14 goresan, tersusun dari elemen (彳, 十, 罒, 心) yang melambangkan konsep intinya.',
     examples: [
-      { word: '道徳', reading: 'どうとく', meaning: 'morals' },
-      { word: '不徳', reading: 'ふとく', meaning: 'lack of virtue' },
-      { word: '悪徳', reading: 'あくとく', meaning: 'vice' },
+      { word: '道徳', reading: 'どうとく', meaning: 'Morals' },
+      { word: '不徳', reading: 'ふとく', meaning: 'Lack of virtue' },
+      { word: '悪徳', reading: 'あくとく', meaning: 'Vice' },
     ],
   },
   {
@@ -5425,9 +5425,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["彳","育","攵"],
     mnemonic: 'Karakter 徹 (Penetrate / clear) memiliki 15 goresan, tersusun dari elemen (彳, 育, 攵) yang melambangkan konsep intinya.',
     examples: [
-      { word: '徹底', reading: 'てってい', meaning: 'thoroughness / completeness' },
-      { word: '徹夜', reading: 'てつや', meaning: 'staying up all night / sleepless night' },
-      { word: '徹する', reading: 'てっする', meaning: 'melakukan devote oneself / melakukan believe in' },
+      { word: '徹底', reading: 'てってい', meaning: 'Thoroughness / completeness' },
+      { word: '徹夜', reading: 'てつや', meaning: 'Staying up all night / sleepless night' },
+      { word: '徹する', reading: 'てっする', meaning: 'Devote oneself / Percaya (in)' },
     ],
   },
   {
@@ -5444,7 +5444,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 忌 (Berkabung duka / Pantangan tabu) memiliki 7 goresan, tersusun dari elemen (己, 心) yang melambangkan konsep intinya.',
     examples: [
       { word: '忌避', reading: 'きひ', meaning: 'Penghindaran / Keengganan / Menolak' },
-      { word: '回忌', reading: 'かいき', meaning: 'death anniversary' },
+      { word: '回忌', reading: 'かいき', meaning: 'Death anniversary' },
     ],
   },
   {
@@ -5461,8 +5461,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 忍 (Endure / bear) memiliki 7 goresan, tersusun dari elemen (刃, 心) yang melambangkan konsep intinya.',
     examples: [
       { word: '隠忍自重', reading: 'いんにんじちょう', meaning: 'Bersabar menahan diri menunggu saat yang tepat' },
-      { word: '忍者', reading: 'にんじゃ', meaning: 'ninja' },
-      { word: '忍耐', reading: 'にんたい', meaning: 'endurance' },
+      { word: '忍者', reading: 'にんじゃ', meaning: 'Ninja' },
+      { word: '忍耐', reading: 'にんたい', meaning: 'Endurance' },
     ],
   },
   {
@@ -5478,9 +5478,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["士","心"],
     mnemonic: 'Karakter 志 (Aspirasi / Cita-cita luhur) memiliki 7 goresan, tersusun dari elemen (士, 心) yang melambangkan konsep intinya.',
     examples: [
-      { word: '意志', reading: 'いし', meaning: 'will / volition' },
-      { word: '志望', reading: 'しぼう', meaning: 'wish / desire / ambition' },
-      { word: '同志', reading: 'どうし', meaning: 'same mind / comrade / kindred soul' },
+      { word: '意志', reading: 'いし', meaning: 'Will / volition' },
+      { word: '志望', reading: 'しぼう', meaning: 'Wish / desire / ambition' },
+      { word: '同志', reading: 'どうし', meaning: 'Same mind / comrade / kindred soul' },
     ],
   },
   {
@@ -5496,8 +5496,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["广","心"],
     mnemonic: 'Karakter 応 (Merespons / Menyesuaikan diri) memiliki 7 goresan, tersusun dari elemen (广, 心) yang melambangkan konsep intinya.',
     examples: [
-      { word: '応援', reading: 'おうえん', meaning: 'aid / assistance / help' },
-      { word: '応じる', reading: 'おうじる', meaning: 'melakukan adapt / melakukan respond / melakukan comply with' },
+      { word: '応援', reading: 'おうえん', meaning: 'Aid / assistance / help' },
+      { word: '応じる', reading: 'おうじる', meaning: 'Adapt / Respond / Comply with' },
       { word: '臨機応変', reading: 'りんきおうへん', meaning: 'Fleksibel beradaptasi sesuai situasi kondisi' },
     ],
   },
@@ -5514,9 +5514,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["中","心"],
     mnemonic: 'Karakter 忠 (Loyalty / fidelity) memiliki 8 goresan, tersusun dari elemen (中, 心) yang melambangkan konsep intinya.',
     examples: [
-      { word: '忠告', reading: 'ちゅうこく', meaning: 'advice / warning' },
-      { word: '忠実', reading: 'ちゅうじつ', meaning: 'faithful' },
-      { word: '忠義', reading: 'ちゅうぎ', meaning: 'loyalty' },
+      { word: '忠告', reading: 'ちゅうこく', meaning: 'Advice / warning' },
+      { word: '忠実', reading: 'ちゅうじつ', meaning: 'Faithful' },
+      { word: '忠義', reading: 'ちゅうぎ', meaning: 'Loyalty' },
     ],
   },
   {
@@ -5532,9 +5532,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["台","心"],
     mnemonic: 'Karakter 怠 (Neglect / laziness) memiliki 9 goresan, tersusun dari elemen (台, 心) yang melambangkan konsep intinya.',
     examples: [
-      { word: '怠ける', reading: 'なまける', meaning: 'melakukan be idle / melakukan neglect' },
-      { word: '怠慢', reading: 'たいまん', meaning: 'negligence / carelessness' },
-      { word: '怠る', reading: 'おこたる', meaning: 'melakukan neglect / melakukan fail' },
+      { word: '怠ける', reading: 'なまける', meaning: 'Menjadi idle / Neglect' },
+      { word: '怠慢', reading: 'たいまん', meaning: 'Negligence / carelessness' },
+      { word: '怠る', reading: 'おこたる', meaning: 'Neglect / Gagal' },
     ],
   },
   {
@@ -5568,8 +5568,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 怪 (Suspicious / mystery) memiliki 8 goresan, tersusun dari elemen (忄, 圣) yang melambangkan konsep intinya.',
     examples: [
       { word: '怪我', reading: 'けが', meaning: 'Luka / cedera' },
-      { word: '怪獣', reading: 'かいじゅう', meaning: 'monster' },
-      { word: '怪しい', reading: 'あやしい', meaning: 'suspicious / dubious / doubtful' },
+      { word: '怪獣', reading: 'かいじゅう', meaning: 'Monster' },
+      { word: '怪しい', reading: 'あやしい', meaning: 'Suspicious / dubious / doubtful' },
     ],
   },
   {
@@ -5586,8 +5586,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 恒 (Constancy / always) memiliki 9 goresan, tersusun dari elemen (忄, 亘) yang melambangkan konsep intinya.',
     examples: [
       { word: '士篤恒', reading: 'ストックホルム', meaning: 'Stockholm (Sweden)' },
-      { word: '恒久', reading: 'こうきゅう', meaning: 'permanence' },
-      { word: '恒例', reading: 'こうれい', meaning: 'established practice' },
+      { word: '恒久', reading: 'こうきゅう', meaning: 'Permanence' },
+      { word: '恒例', reading: 'こうれい', meaning: 'Established practice' },
     ],
   },
   {
@@ -5603,9 +5603,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["因","心"],
     mnemonic: 'Karakter 恩 (Budi kebaikan / Rahmat) memiliki 10 goresan, tersusun dari elemen (因, 心) yang melambangkan konsep intinya.',
     examples: [
-      { word: '恩', reading: 'おん', meaning: 'favor / obligation / debt of gratitude' },
-      { word: '恩恵', reading: 'おんけい', meaning: 'blessing / benefit' },
-      { word: '恩人', reading: 'おんじん', meaning: 'benefactor' },
+      { word: '恩', reading: 'おん', meaning: 'Favor / obligation / debt of gratitude' },
+      { word: '恩恵', reading: 'おんけい', meaning: 'Blessing / benefit' },
+      { word: '恩人', reading: 'おんじん', meaning: 'Benefactor' },
     ],
   },
   {
@@ -5638,9 +5638,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["𤰔","心"],
     mnemonic: 'Karakter 恵 (Favor / blessing) memiliki 10 goresan, tersusun dari elemen (𤰔, 心) yang melambangkan konsep intinya.',
     examples: [
-      { word: '知恵', reading: 'ちえ', meaning: 'kebijaksanaan / wit / kecerdasan' },
-      { word: '恵み', reading: 'めぐみ', meaning: 'blessing' },
-      { word: '恵む', reading: 'めぐむ', meaning: 'melakukan bless / melakukan show mercy to' },
+      { word: '知恵', reading: 'ちえ', meaning: 'Kebijaksanaan / wit / kecerdasan' },
+      { word: '恵み', reading: 'めぐみ', meaning: 'Blessing' },
+      { word: '恵む', reading: 'めぐむ', meaning: 'Bless / Menunjukkan (mercy to)' },
     ],
   },
   {
@@ -5656,8 +5656,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["忄","吾"],
     mnemonic: 'Karakter 悟 (Enlightenment / perceive) memiliki 10 goresan, tersusun dari elemen (忄, 吾) yang melambangkan konsep intinya.',
     examples: [
-      { word: '覚悟', reading: 'かくご', meaning: 'resolution / resignation / readiness' },
-      { word: '悟る', reading: 'さとる', meaning: 'melakukan attain enlightenment / memahami' },
+      { word: '覚悟', reading: 'かくご', meaning: 'Resolution / resignation / readiness' },
+      { word: '悟る', reading: 'さとる', meaning: 'Attain enlightenment / memahami' },
     ],
   },
   {
@@ -5673,7 +5673,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["忄","兑"],
     mnemonic: 'Karakter 悦 (Ecstasy / kegembiraan) memiliki 10 goresan, tersusun dari elemen (忄, 兑) yang melambangkan konsep intinya.',
     examples: [
-      { word: '満悦', reading: 'まんえつ', meaning: 'great delight' },
+      { word: '満悦', reading: 'まんえつ', meaning: 'Great delight' },
       { word: '悦楽', reading: 'えつらく', meaning: 'Kesenangan sukacita' },
     ],
   },
@@ -5690,8 +5690,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["忄","卓"],
     mnemonic: 'Karakter 悼 (Lament / grieve over) memiliki 11 goresan, tersusun dari elemen (忄, 卓) yang melambangkan konsep intinya.',
     examples: [
-      { word: '哀悼', reading: 'あいとう', meaning: 'condolence' },
-      { word: '追悼', reading: 'ついとう', meaning: 'mourning' },
+      { word: '哀悼', reading: 'あいとう', meaning: 'Condolence' },
+      { word: '追悼', reading: 'ついとう', meaning: 'Mourning' },
     ],
   },
   {
@@ -5707,9 +5707,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["忄","昔"],
     mnemonic: 'Karakter 惜 (Rasa kasihan / Iba) memiliki 11 goresan, tersusun dari elemen (忄, 昔) yang melambangkan konsep intinya.',
     examples: [
-      { word: '惜しむ', reading: 'おしむ', meaning: 'melakukan be frugal / melakukan value / melakukan regret' },
-      { word: '惜しい', reading: 'おしい', meaning: 'regrettable / disappointing' },
-      { word: '名残惜しい', reading: 'なごりおしい', meaning: 'reluctant (to part)' },
+      { word: '惜しむ', reading: 'おしむ', meaning: 'Menjadi frugal / Value / Regret' },
+      { word: '惜しい', reading: 'おしい', meaning: 'Regrettable / disappointing' },
+      { word: '名残惜しい', reading: 'なごりおしい', meaning: 'Reluctant (to part)' },
     ],
   },
   {
@@ -5725,7 +5725,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["忄","具"],
     mnemonic: 'Karakter 惧 (Ketakutan / be afraid of) memiliki 11 goresan, tersusun dari elemen (忄, 具) yang melambangkan konsep intinya.',
     examples: [
-      { word: '危惧', reading: 'きぐ', meaning: 'apprehension' },
+      { word: '危惧', reading: 'きぐ', meaning: 'Apprehension' },
       { word: '恐惧', reading: 'きょうぐ', meaning: 'Ketakutan dengan rasa hormat' },
     ],
   },
@@ -5742,9 +5742,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["忄","参"],
     mnemonic: 'Karakter 惨 (Wretched / disaster) memiliki 11 goresan, tersusun dari elemen (忄, 参) yang melambangkan konsep intinya.',
     examples: [
-      { word: '悲惨', reading: 'ひさん', meaning: 'tragedy / disaster / misery' },
-      { word: '惨めな', reading: 'みじめな', meaning: 'miserable / wretched / unhappy' },
-      { word: '惨事', reading: 'さんじ', meaning: 'disaster' },
+      { word: '悲惨', reading: 'ひさん', meaning: 'Tragedy / disaster / misery' },
+      { word: '惨めな', reading: 'みじめな', meaning: 'Miserable / wretched / unhappy' },
+      { word: '惨事', reading: 'さんじ', meaning: 'Disaster' },
     ],
   },
   {
@@ -5760,8 +5760,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["忄","左","月"],
     mnemonic: 'Karakter 惰 (Lazy / laziness) memiliki 12 goresan, tersusun dari elemen (忄, 左, 月) yang melambangkan konsep intinya.',
     examples: [
-      { word: '怠惰', reading: 'たいだ', meaning: 'lazy' },
-      { word: '惰性', reading: 'だせい', meaning: 'force of habit' },
+      { word: '怠惰', reading: 'たいだ', meaning: 'Lazy' },
+      { word: '惰性', reading: 'だせい', meaning: 'Force of habit' },
     ],
   },
   {
@@ -5777,8 +5777,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["忄","俞"],
     mnemonic: 'Karakter 愉 (Pleasure / happy) memiliki 12 goresan, tersusun dari elemen (忄, 俞) yang melambangkan konsep intinya.',
     examples: [
-      { word: '愉快', reading: 'ゆかい', meaning: 'pleasant / happy' },
-      { word: '不愉快', reading: 'ふゆかい', meaning: 'unpleasant' },
+      { word: '愉快', reading: 'ゆかい', meaning: 'Pleasant / happy' },
+      { word: '不愉快', reading: 'ふゆかい', meaning: 'Unpleasant' },
     ],
   },
   {
@@ -5794,9 +5794,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["禺","心"],
     mnemonic: 'Karakter 愚 (Foolish / folly) memiliki 13 goresan, tersusun dari elemen (禺, 心) yang melambangkan konsep intinya.',
     examples: [
-      { word: '愚か', reading: 'おろか', meaning: 'foolish / stupid' },
-      { word: '愚痴', reading: 'ぐち', meaning: 'idle complaint / grumble' },
-      { word: '愚図愚図', reading: 'ぐずぐず', meaning: 'slowly' },
+      { word: '愚か', reading: 'おろか', meaning: 'Foolish / stupid' },
+      { word: '愚痴', reading: 'ぐち', meaning: 'Idle complaint / grumble' },
+      { word: '愚図愚図', reading: 'ぐずぐず', meaning: 'Slowly' },
     ],
   },
   {
@@ -5812,9 +5812,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["兹","心"],
     mnemonic: 'Karakter 慈 (Mercy) memiliki 13 goresan, tersusun dari elemen (兹, 心) yang melambangkan konsep intinya.',
     examples: [
-      { word: '慈善', reading: 'じぜん', meaning: 'charity' },
-      { word: '慈悲', reading: 'じひ', meaning: 'mercy' },
-      { word: '慈愛', reading: 'じあい', meaning: 'affection (esp. parental)' },
+      { word: '慈善', reading: 'じぜん', meaning: 'Charity' },
+      { word: '慈悲', reading: 'じひ', meaning: 'Mercy' },
+      { word: '慈愛', reading: 'じあい', meaning: 'Affection (esp. parental)' },
     ],
   },
   {
@@ -5830,9 +5830,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["忄","荒"],
     mnemonic: 'Karakter 慌 (Disconcerted / be confused) memiliki 12 goresan, tersusun dari elemen (忄, 荒) yang melambangkan konsep intinya.',
     examples: [
-      { word: '慌てる', reading: 'あわてる', meaning: 'melakukan become confused、to panic' },
-      { word: '慌ただしい', reading: 'あわただしい', meaning: 'busy / hurried' },
-      { word: '恐慌', reading: 'きょうこう', meaning: 'panic' },
+      { word: '慌てる', reading: 'あわてる', meaning: 'Become confused、to panic' },
+      { word: '慌ただしい', reading: 'あわただしい', meaning: 'Busy / hurried' },
+      { word: '恐慌', reading: 'きょうこう', meaning: 'Panic' },
     ],
   },
   {
@@ -5848,8 +5848,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["忄","真"],
     mnemonic: 'Karakter 慎 (Humility / be careful) memiliki 13 goresan, tersusun dari elemen (忄, 真) yang melambangkan konsep intinya.',
     examples: [
-      { word: '慎重', reading: 'しんちょう', meaning: 'careful / prudent / cautious' },
-      { word: '謹慎', reading: 'きんしん', meaning: 'self restraint' },
+      { word: '慎重', reading: 'しんちょう', meaning: 'Careful / prudent / cautious' },
+      { word: '謹慎', reading: 'きんしん', meaning: 'Self restraint' },
     ],
   },
   {
@@ -5865,8 +5865,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["莫","㣺"],
     mnemonic: 'Karakter 慕 (Pining / yearn for) memiliki 14 goresan, tersusun dari elemen (莫, 㣺) yang melambangkan konsep intinya.',
     examples: [
-      { word: '慕う', reading: 'したう', meaning: 'melakukan yearn to adore' },
-      { word: '思慕', reading: 'しぼ', meaning: 'yearning' },
+      { word: '慕う', reading: 'したう', meaning: 'Yearn to adore' },
+      { word: '思慕', reading: 'しぼ', meaning: 'Yearning' },
     ],
   },
   {
@@ -5883,8 +5883,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 慮 (Prudence / thought) memiliki 15 goresan, tersusun dari elemen (虍, 思) yang melambangkan konsep intinya.',
     examples: [
       { word: '熟慮断行', reading: 'じゅくりょだんこう', meaning: 'Mempertimbangkan segala risiko masak-masak lalu mengeksekusinya tanpa ragu' },
-      { word: '考慮', reading: 'こうりょ', meaning: 'consideration / taking into account' },
-      { word: '遠慮', reading: 'えんりょする', meaning: 'restraint / reserve / hesitate' },
+      { word: '考慮', reading: 'こうりょ', meaning: 'Consideration / taking into account' },
+      { word: '遠慮', reading: 'えんりょする', meaning: 'Restraint / reserve / hesitate' },
     ],
   },
   {
@@ -5900,9 +5900,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["尉","心"],
     mnemonic: 'Karakter 慰 (Consolation / amusement) memiliki 15 goresan, tersusun dari elemen (尉, 心) yang melambangkan konsep intinya.',
     examples: [
-      { word: '慰める', reading: 'なぐさめる', meaning: 'melakukan comfort / melakukan console' },
-      { word: '慰問', reading: 'いもん', meaning: 'visit to console someone' },
-      { word: '慰安', reading: 'いあん', meaning: 'solace' },
+      { word: '慰める', reading: 'なぐさめる', meaning: 'Comfort / Console' },
+      { word: '慰問', reading: 'いもん', meaning: 'Visit to console someone' },
+      { word: '慰安', reading: 'いあん', meaning: 'Solace' },
     ],
   },
   {
@@ -5918,9 +5918,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["广","コ","丨","丨","乛","𢖻"],
     mnemonic: 'Karakter 慶 (Jubilation / congratulate) memiliki 15 goresan, tersusun dari elemen (广, コ, 丨) yang melambangkan konsep intinya.',
     examples: [
-      { word: '慶ぶ', reading: 'よろこぶ', meaning: 'melakukan be delighted / melakukan be glad' },
-      { word: '国慶節', reading: 'こっけいせつ', meaning: 'anniversary of founding (of PRC)' },
-      { word: '弁慶', reading: 'べんけい', meaning: 'strong person' },
+      { word: '慶ぶ', reading: 'よろこぶ', meaning: 'Menjadi delighted / Menjadi glad' },
+      { word: '国慶節', reading: 'こっけいせつ', meaning: 'Anniversary of founding (of PRC)' },
+      { word: '弁慶', reading: 'べんけい', meaning: 'Strong person' },
     ],
   },
   {
@@ -5936,9 +5936,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["忄","童"],
     mnemonic: 'Karakter 憧 (Yearn after / panjang for) memiliki 15 goresan, tersusun dari elemen (忄, 童) yang melambangkan konsep intinya.',
     examples: [
-      { word: '憧れ', reading: 'あこがれ', meaning: 'yearning / longing / aspiration' },
-      { word: '憧れる', reading: 'あこがれる', meaning: 'melakukan long for / melakukan yearn after' },
-      { word: '憧れの的', reading: 'あこがれのまと', meaning: 'object of adoration, longing' },
+      { word: '憧れ', reading: 'あこがれ', meaning: 'Yearning / longing / aspiration' },
+      { word: '憧れる', reading: 'あこがれる', meaning: 'Long for / Yearn after' },
+      { word: '憧れの的', reading: 'あこがれのまと', meaning: 'Object of adoration, longing' },
     ],
   },
   {
@@ -5954,9 +5954,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["舌","自","心"],
     mnemonic: 'Karakter 憩 (Recess / rest) memiliki 16 goresan, tersusun dari elemen (舌, 自, 心) yang melambangkan konsep intinya.',
     examples: [
-      { word: '休憩', reading: 'きゅうけい', meaning: 'rest / break / intermission' },
-      { word: '休憩所', reading: 'きゅうけいじょ', meaning: 'rest area' },
-      { word: '休憩時間', reading: 'きゅうけいじかん', meaning: 'rest period' },
+      { word: '休憩', reading: 'きゅうけい', meaning: 'Rest / break / intermission' },
+      { word: '休憩所', reading: 'きゅうけいじょ', meaning: 'Rest area' },
+      { word: '休憩時間', reading: 'きゅうけいじかん', meaning: 'Rest period' },
     ],
   },
   {
@@ -5989,8 +5989,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["忄","意"],
     mnemonic: 'Karakter 憶 (Recollection / think) memiliki 16 goresan, tersusun dari elemen (忄, 意) yang melambangkan konsep intinya.',
     examples: [
-      { word: '記憶', reading: 'きおく', meaning: 'memory / recollection / remembrance' },
-      { word: '憶測', reading: 'おくそく', meaning: 'guess' },
+      { word: '記憶', reading: 'きおく', meaning: 'Memory / recollection / remembrance' },
+      { word: '憶測', reading: 'おくそく', meaning: 'Guess' },
     ],
   },
   {
@@ -6023,9 +6023,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["貇","心"],
     mnemonic: 'Karakter 懇 (Sociable / kind) memiliki 17 goresan, tersusun dari elemen (貇, 心) yang melambangkan konsep intinya.',
     examples: [
-      { word: '懇切', reading: 'こんせつ', meaning: 'kind and careful (instruction, explanation, etc.)' },
-      { word: '懇意', reading: 'こんい', meaning: 'friendship' },
-      { word: '懇親', reading: 'こんしん', meaning: 'friendship' },
+      { word: '懇切', reading: 'こんせつ', meaning: 'Kind and careful (instruction, explanation, etc.)' },
+      { word: '懇意', reading: 'こんい', meaning: 'Friendship' },
+      { word: '懇親', reading: 'こんしん', meaning: 'Friendship' },
     ],
   },
   {
@@ -6041,9 +6041,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["徵","心"],
     mnemonic: 'Karakter 懲 (Penal / chastise) memiliki 18 goresan, tersusun dari elemen (徵, 心) yang melambangkan konsep intinya.',
     examples: [
-      { word: '懲りる', reading: 'こりる', meaning: 'melakukan learn by experience / melakukan be disgusted with' },
-      { word: '勧善懲悪', reading: 'かんぜんちょうあく', meaning: 'rewarding good and punishing evil' },
-      { word: '懲役', reading: 'ちょうえき', meaning: 'penal servitude' },
+      { word: '懲りる', reading: 'こりる', meaning: 'Mempelajari (by experience) / Menjadi disgusted with' },
+      { word: '勧善懲悪', reading: 'かんぜんちょうあく', meaning: 'Rewarding good and punishing evil' },
+      { word: '懲役', reading: 'ちょうえき', meaning: 'Penal servitude' },
     ],
   },
   {
@@ -6059,9 +6059,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["縣","心"],
     mnemonic: 'Karakter 懸 (State of suspension / hang) memiliki 20 goresan, tersusun dari elemen (縣, 心) yang melambangkan konsep intinya.',
     examples: [
-      { word: '一生懸命', reading: 'いっしょうけんめい', meaning: 'very hard (as in "to work hard") / with utmost effort' },
+      { word: '一生懸命', reading: 'いっしょうけんめい', meaning: 'Very hard (as in "to work hard") / with utmost effort' },
       { word: '懸念', reading: 'けねん', meaning: 'Kekhawatiran mendalam / Kecemasan serius' },
-      { word: '懸賞', reading: 'けんしょう', meaning: 'offering prizes / winning / reward' },
+      { word: '懸賞', reading: 'けんしょう', meaning: 'Offering prizes / winning / reward' },
     ],
   },
   {
@@ -6078,8 +6078,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 我 (Ego / i) memiliki 7 goresan, tersusun dari elemen (我) yang melambangkan konsep intinya.',
     examples: [
       { word: '唯我独尊', reading: 'ゆいがどくそん', meaning: 'Merasa diri paling hebat / Menganggap diri nomor satu tanpa memedulikan orang lain' },
-      { word: '我慢', reading: 'がまん', meaning: 'patience / endurance / perseverance' },
-      { word: '我々', reading: 'われわれ', meaning: 'we' },
+      { word: '我慢', reading: 'がまん', meaning: 'Patience / endurance / perseverance' },
+      { word: '我々', reading: 'われわれ', meaning: 'We' },
     ],
   },
   {
@@ -6095,9 +6095,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["戈","廾"],
     mnemonic: 'Karakter 戒 (Commandment) memiliki 7 goresan, tersusun dari elemen (戈, 廾) yang melambangkan konsep intinya.',
     examples: [
-      { word: '警戒', reading: 'けいかい', meaning: 'warning / admonition / vigilance' },
-      { word: '厳戒', reading: 'げんかい', meaning: 'strict guard' },
-      { word: '懲戒', reading: 'ちょうかい', meaning: 'discipline' },
+      { word: '警戒', reading: 'けいかい', meaning: 'Warning / admonition / vigilance' },
+      { word: '厳戒', reading: 'げんかい', meaning: 'Strict guard' },
+      { word: '懲戒', reading: 'ちょうかい', meaning: 'Discipline' },
     ],
   },
   {
@@ -6113,7 +6113,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["戊","尗"],
     mnemonic: 'Karakter 戚 (Grieve / relatives) memiliki 11 goresan, tersusun dari elemen (戊, 尗) yang melambangkan konsep intinya.',
     examples: [
-      { word: '親戚', reading: 'しんせき', meaning: 'relative(s)' },
+      { word: '親戚', reading: 'しんせき', meaning: 'Relative(s)' },
       { word: '戚語', reading: 'ソクご', meaning: 'Istilah / kosakata terkait Grieve / relatives' },
     ],
   },
@@ -6130,9 +6130,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["虚","戈"],
     mnemonic: 'Karakter 戯 (Frolic / play) memiliki 15 goresan, tersusun dari elemen (虚, 戈) yang melambangkan konsep intinya.',
     examples: [
-      { word: '戯曲', reading: 'ぎきょく', meaning: 'play / drama' },
-      { word: '巫山戯る', reading: 'ふざける', meaning: 'to joke' },
-      { word: '悪戯', reading: 'いたずら', meaning: 'mischief' },
+      { word: '戯曲', reading: 'ぎきょく', meaning: 'Play / drama' },
+      { word: '巫山戯る', reading: 'ふざける', meaning: 'To joke' },
+      { word: '悪戯', reading: 'いたずら', meaning: 'Mischief' },
     ],
   },
   {
@@ -6148,7 +6148,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["𢦏","異"],
     mnemonic: 'Karakter 戴 (Be crowned with / live under (a ruler)) memiliki 17 goresan, tersusun dari elemen (𢦏, 異) yang melambangkan konsep intinya.',
     examples: [
-      { word: '頂戴', reading: 'ちょうだい', meaning: 'receiving' },
+      { word: '頂戴', reading: 'ちょうだい', meaning: 'Receiving' },
       { word: '戴冠', reading: 'たいかん', meaning: 'Pemahkotaan penobatan raja' },
     ],
   },
@@ -6165,9 +6165,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["户","方"],
     mnemonic: 'Karakter 房 (Tassel / tuft) memiliki 8 goresan, tersusun dari elemen (户, 方) yang melambangkan konsep intinya.',
     examples: [
-      { word: '冷房', reading: 'れいぼう', meaning: 'cooling / air conditioning' },
-      { word: '暖房', reading: 'だんぼう', meaning: 'heating' },
-      { word: '女房', reading: 'にょうぼう', meaning: 'wife' },
+      { word: '冷房', reading: 'れいぼう', meaning: 'Cooling / air conditioning' },
+      { word: '暖房', reading: 'だんぼう', meaning: 'Heating' },
+      { word: '女房', reading: 'にょうぼう', meaning: 'Wife' },
     ],
   },
   {
@@ -6183,9 +6183,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["户","羽"],
     mnemonic: 'Karakter 扇 (Fan / folding fan) memiliki 10 goresan, tersusun dari elemen (户, 羽) yang melambangkan konsep intinya.',
     examples: [
-      { word: '団扇', reading: 'うちわ', meaning: 'fan' },
-      { word: '扇ぐ', reading: 'あおぐ', meaning: 'melakukan fan / melakukan flap' },
-      { word: '扇子', reading: 'せんす', meaning: 'folding fan' },
+      { word: '団扇', reading: 'うちわ', meaning: 'Fan' },
+      { word: '扇ぐ', reading: 'あおぐ', meaning: 'Fan / Flap' },
+      { word: '扇子', reading: 'せんす', meaning: 'Folding fan' },
     ],
   },
   {
@@ -6201,8 +6201,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["户","非"],
     mnemonic: 'Karakter 扉 (Front door / title page) memiliki 12 goresan, tersusun dari elemen (户, 非) yang melambangkan konsep intinya.',
     examples: [
-      { word: '扉', reading: 'とびら', meaning: 'door / opening' },
-      { word: '門扉', reading: 'もんぴ', meaning: 'door(s) of a gate' },
+      { word: '扉', reading: 'とびら', meaning: 'Door / opening' },
+      { word: '門扉', reading: 'もんぴ', meaning: 'Door(s) of a gate' },
     ],
   },
   {
@@ -6218,9 +6218,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["扌","及"],
     mnemonic: 'Karakter 扱 (Handle / entertain) memiliki 6 goresan, tersusun dari elemen (扌, 及) yang melambangkan konsep intinya.',
     examples: [
-      { word: '扱う', reading: 'あつかう', meaning: 'melakukan treat / melakukan handle / melakukan deal with' },
-      { word: '取扱', reading: 'とりあつかい', meaning: 'treatment / handling / management' },
-      { word: '取り扱う', reading: 'とりあつかう', meaning: 'melakukan treat / melakukan handle / melakukan deal in' },
+      { word: '扱う', reading: 'あつかう', meaning: 'Merawat / Memperlakukan / Handle / Deal with' },
+      { word: '取扱', reading: 'とりあつかい', meaning: 'Treatment / handling / management' },
+      { word: '取り扱う', reading: 'とりあつかう', meaning: 'Merawat / Memperlakukan / Handle / Deal in' },
     ],
   },
   {
@@ -6236,9 +6236,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["扌","夫"],
     mnemonic: 'Karakter 扶 (Aid / help) memiliki 7 goresan, tersusun dari elemen (扌, 夫) yang melambangkan konsep intinya.',
     examples: [
-      { word: '扶養', reading: 'ふよう', meaning: 'support / maintenance' },
-      { word: '扶助', reading: 'ふじょ', meaning: 'aid' },
-      { word: '窒扶斯', reading: 'チフス', meaning: 'typhoid' },
+      { word: '扶養', reading: 'ふよう', meaning: 'Support / maintenance' },
+      { word: '扶助', reading: 'ふじょ', meaning: 'Aid' },
+      { word: '窒扶斯', reading: 'チフス', meaning: 'Typhoid' },
     ],
   },
   {
@@ -6254,8 +6254,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["扌","少"],
     mnemonic: 'Karakter 抄 (Extract / selection) memiliki 7 goresan, tersusun dari elemen (扌, 少) yang melambangkan konsep intinya.',
     examples: [
-      { word: '抄本', reading: 'しょうほん', meaning: 'excerpt' },
-      { word: '抄録', reading: 'しょうろく', meaning: 'quotation' },
+      { word: '抄本', reading: 'しょうほん', meaning: 'Excerpt' },
+      { word: '抄録', reading: 'しょうろく', meaning: 'Quotation' },
     ],
   },
   {
@@ -6272,7 +6272,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 把 (Grasp / faggot) memiliki 7 goresan, tersusun dari elemen (扌, 巴) yang melambangkan konsep intinya.',
     examples: [
       { word: '把握', reading: 'はあく', meaning: 'Memahami sepenuhnya / Menguasai situasi' },
-      { word: '大雑把', reading: 'おおざっぱ', meaning: 'rough (estimate, summary, etc.)' },
+      { word: '大雑把', reading: 'おおざっぱ', meaning: 'Rough (estimate, summary, etc.)' },
     ],
   },
   {
@@ -6289,8 +6289,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 抑 (Repress / well) memiliki 7 goresan, tersusun dari elemen (扌, 卬) yang melambangkan konsep intinya.',
     examples: [
       { word: '抑制', reading: 'よくせい', meaning: 'Pengendalian inflasi / Pembendungan tekanan' },
-      { word: '抑圧', reading: 'よくあつ', meaning: 'restraint / oppression / suppression' },
-      { word: '抑揚', reading: 'よくよう', meaning: 'intonation' },
+      { word: '抑圧', reading: 'よくあつ', meaning: 'Restraint / oppression / suppression' },
+      { word: '抑揚', reading: 'よくよう', meaning: 'Intonation' },
     ],
   },
   {
@@ -6306,9 +6306,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["扌","亢"],
     mnemonic: 'Karakter 抗 (Confront / resist) memiliki 7 goresan, tersusun dari elemen (扌, 亢) yang melambangkan konsep intinya.',
     examples: [
-      { word: '抵抗', reading: 'ていこう', meaning: 'resistance / opposition' },
-      { word: '反抗', reading: 'はんこう', meaning: 'opposition / resistance' },
-      { word: '抗議', reading: 'こうぎ', meaning: 'protest / objection' },
+      { word: '抵抗', reading: 'ていこう', meaning: 'Resistance / opposition' },
+      { word: '反抗', reading: 'はんこう', meaning: 'Opposition / resistance' },
+      { word: '抗議', reading: 'こうぎ', meaning: 'Protest / objection' },
     ],
   },
   {
@@ -6324,9 +6324,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["扌","尺"],
     mnemonic: 'Karakter 択 (Choose / select) memiliki 7 goresan, tersusun dari elemen (扌, 尺) yang melambangkan konsep intinya.',
     examples: [
-      { word: '選択', reading: 'せんたく', meaning: 'selection / choice' },
-      { word: '採択', reading: 'さいたく', meaning: 'adoption / selection / choice' },
-      { word: '二者択一', reading: 'にしゃたくいつ', meaning: 'choosing between two things' },
+      { word: '選択', reading: 'せんたく', meaning: 'Selection / choice' },
+      { word: '採択', reading: 'さいたく', meaning: 'Adoption / selection / choice' },
+      { word: '二者択一', reading: 'にしゃたくいつ', meaning: 'Choosing between two things' },
     ],
   },
   {
@@ -6342,9 +6342,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["扌","皮"],
     mnemonic: 'Karakter 披 (Expose / open) memiliki 8 goresan, tersusun dari elemen (扌, 皮) yang melambangkan konsep intinya.',
     examples: [
-      { word: '披瀝', reading: 'ひれき', meaning: 'expressing one\'s opinion' },
-      { word: '披露', reading: 'ひろう', meaning: 'announcement' },
-      { word: '披露宴', reading: 'ひろうえん', meaning: 'reception (e.g. wedding)' },
+      { word: '披瀝', reading: 'ひれき', meaning: 'Expressing one\'s opinion' },
+      { word: '披露', reading: 'ひろう', meaning: 'Announcement' },
+      { word: '披露宴', reading: 'ひろうえん', meaning: 'Reception (e.g. wedding)' },
     ],
   },
   {
@@ -6360,9 +6360,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["扌","氐"],
     mnemonic: 'Karakter 抵 (Resist / reach) memiliki 8 goresan, tersusun dari elemen (扌, 氐) yang melambangkan konsep intinya.',
     examples: [
-      { word: '抵抗', reading: 'ていこう', meaning: 'resistance / opposition' },
-      { word: '大抵', reading: 'たいてい', meaning: 'generally / usually' },
-      { word: '抵当', reading: 'ていとう', meaning: 'mortgage' },
+      { word: '抵抗', reading: 'ていこう', meaning: 'Resistance / opposition' },
+      { word: '大抵', reading: 'たいてい', meaning: 'Generally / usually' },
+      { word: '抵当', reading: 'ていとう', meaning: 'Mortgage' },
     ],
   },
   {
@@ -6378,9 +6378,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["扌","末"],
     mnemonic: 'Karakter 抹 (Rub / paint) memiliki 8 goresan, tersusun dari elemen (扌, 末) yang melambangkan konsep intinya.',
     examples: [
-      { word: '一抹', reading: 'いちまつ', meaning: 'a touch (of sadness, unease, etc.)' },
-      { word: '抹殺', reading: 'まっさつ', meaning: 'erasure' },
-      { word: '抹消', reading: 'まっしょう', meaning: 'erasure' },
+      { word: '一抹', reading: 'いちまつ', meaning: 'A touch (of sadness, unease, etc.)' },
+      { word: '抹殺', reading: 'まっさつ', meaning: 'Erasure' },
+      { word: '抹消', reading: 'まっしょう', meaning: 'Erasure' },
     ],
   },
   {
@@ -6396,9 +6396,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["扌","由"],
     mnemonic: 'Karakter 抽 (Pluck / pull) memiliki 8 goresan, tersusun dari elemen (扌, 由) yang melambangkan konsep intinya.',
     examples: [
-      { word: '抽選', reading: 'ちゅうせん', meaning: 'lottery / raffle / drawing (of lots)' },
-      { word: '抽象', reading: 'ちゅうしょう', meaning: 'abstract' },
-      { word: '抽出', reading: 'ちゅうしゅつ', meaning: 'extraction' },
+      { word: '抽選', reading: 'ちゅうせん', meaning: 'Lottery / raffle / drawing (of lots)' },
+      { word: '抽象', reading: 'ちゅうしょう', meaning: 'Abstract' },
+      { word: '抽出', reading: 'ちゅうしゅつ', meaning: 'Extraction' },
     ],
   },
   {
@@ -6432,9 +6432,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["扌","白"],
     mnemonic: 'Karakter 拍 (Clap / beat (music)) memiliki 8 goresan, tersusun dari elemen (扌, 白) yang melambangkan konsep intinya.',
     examples: [
-      { word: '拍手', reading: 'はくしゅ', meaning: 'clapping hands / applause' },
+      { word: '拍手', reading: 'はくしゅ', meaning: 'Clapping hands / applause' },
       { word: '脈拍', reading: 'みゃくはく', meaning: 'Denyut nadi' },
-      { word: '拍子', reading: 'ひょうし', meaning: 'time' },
+      { word: '拍子', reading: 'ひょうし', meaning: 'Waktu / Kali' },
     ],
   },
   {
@@ -6450,9 +6450,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["扌","石"],
     mnemonic: 'Karakter 拓 (Clear (the land) / open) memiliki 8 goresan, tersusun dari elemen (扌, 石) yang melambangkan konsep intinya.',
     examples: [
-      { word: '開拓', reading: 'かいたく', meaning: 'cultivation / pioneer' },
-      { word: '干拓', reading: 'かんたく', meaning: 'land reclamation (from sea)' },
-      { word: '拓本', reading: 'たくほん', meaning: 'rubbing' },
+      { word: '開拓', reading: 'かいたく', meaning: 'Cultivation / pioneer' },
+      { word: '干拓', reading: 'かんたく', meaning: 'Land reclamation (from sea)' },
+      { word: '拓本', reading: 'たくほん', meaning: 'Rubbing' },
     ],
   },
   {
@@ -6468,9 +6468,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["扌","句"],
     mnemonic: 'Karakter 拘 (Arrest / seize) memiliki 8 goresan, tersusun dari elemen (扌, 句) yang melambangkan konsep intinya.',
     examples: [
-      { word: '拘束', reading: 'こうそく', meaning: 'restriction / restraint' },
+      { word: '拘束', reading: 'こうそく', meaning: 'Restriction / restraint' },
       { word: 'それにも拘らず', reading: 'それにもかかわらず', meaning: 'Meskipun demikian / Walaupun begitu' },
-      { word: '拘留', reading: 'こうりゅう', meaning: 'custody' },
+      { word: '拘留', reading: 'こうりゅう', meaning: 'Custody' },
     ],
   },
   {
@@ -6486,9 +6486,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["扌","舌"],
     mnemonic: 'Karakter 括 (Fasten / tie up) memiliki 9 goresan, tersusun dari elemen (扌, 舌) yang melambangkan konsep intinya.',
     examples: [
-      { word: '一括', reading: 'いっかつ', meaning: 'all together / batch' },
-      { word: '括弧', reading: 'かっこ', meaning: 'parenthesis / brackets' },
-      { word: '包括', reading: 'ほうかつ', meaning: 'inclusion' },
+      { word: '一括', reading: 'いっかつ', meaning: 'All together / batch' },
+      { word: '括弧', reading: 'かっこ', meaning: 'Parenthesis / brackets' },
+      { word: '包括', reading: 'ほうかつ', meaning: 'Inclusion' },
     ],
   },
   {
@@ -6504,9 +6504,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["扌","式"],
     mnemonic: 'Karakter 拭 (Wipe / mop) memiliki 9 goresan, tersusun dari elemen (扌, 式) yang melambangkan konsep intinya.',
     examples: [
-      { word: '拭く', reading: 'ふく', meaning: 'melakukan wipe / melakukan dry' },
+      { word: '拭く', reading: 'ふく', meaning: 'Wipe / Dry' },
       { word: '手拭い', reading: 'てぬぐい', meaning: '(hand) towel' },
-      { word: '払拭', reading: 'ふっしょく', meaning: 'wiping out' },
+      { word: '払拭', reading: 'ふっしょく', meaning: 'Wiping out' },
     ],
   },
   {
@@ -6522,7 +6522,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["龹","手"],
     mnemonic: 'Karakter 拳 (Fist) memiliki 10 goresan, tersusun dari elemen (龹, 手) yang melambangkan konsep intinya.',
     examples: [
-      { word: '拳銃', reading: 'けんじゅう', meaning: 'pistol' },
+      { word: '拳銃', reading: 'けんじゅう', meaning: 'Pistol' },
       { word: '拳骨', reading: 'げんこつ', meaning: '(clenched) fist' },
     ],
   },
@@ -6539,7 +6539,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["扌","𡿪"],
     mnemonic: 'Karakter 拶 (Be imminent / draw close) memiliki 9 goresan, tersusun dari elemen (扌, 𡿪) yang melambangkan konsep intinya.',
     examples: [
-      { word: '挨拶', reading: 'あいさつする', meaning: 'greet(ing)' },
+      { word: '挨拶', reading: 'あいさつする', meaning: 'Greet(ing)' },
       { word: '拶語', reading: 'サツご', meaning: 'Istilah / kosakata terkait Be imminent / draw close' },
     ],
   },
@@ -6556,7 +6556,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["扌","考"],
     mnemonic: 'Karakter 拷 (Torture / beat) memiliki 9 goresan, tersusun dari elemen (扌, 考) yang melambangkan konsep intinya.',
     examples: [
-      { word: '拷問', reading: 'ごうもん', meaning: 'torture' },
+      { word: '拷問', reading: 'ごうもん', meaning: 'Torture' },
       { word: '拷訊', reading: 'ごうしん', meaning: 'Interogasi dengan kekerasan' },
     ],
   },
@@ -6573,9 +6573,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["扌","寺"],
     mnemonic: 'Karakter 持 (Hold / have) memiliki 9 goresan, tersusun dari elemen (扌, 寺) yang melambangkan konsep intinya.',
     examples: [
-      { word: '持つ', reading: 'もつ', meaning: 'memegang / melakukan carry / melakukan possess' },
-      { word: '維持', reading: 'いじ', meaning: 'maintenance / preservation' },
-      { word: '持ち上げる', reading: 'もちあげる', meaning: 'menaikkan / mengangkat / melakukan lift up / melakukan flatter' },
+      { word: '持つ', reading: 'もつ', meaning: 'Memegang / Mengangkut / Membawa / Possess' },
+      { word: '維持', reading: 'いじ', meaning: 'Maintenance / preservation' },
+      { word: '持ち上げる', reading: 'もちあげる', meaning: 'Menaikkan / mengangkat / Lift up / Flatter' },
     ],
   },
   {
@@ -6591,9 +6591,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["扌","兆"],
     mnemonic: 'Karakter 挑 (Menantang / Memancing provokasi) memiliki 9 goresan, tersusun dari elemen (扌, 兆) yang melambangkan konsep intinya.',
     examples: [
-      { word: '挑戦', reading: 'ちょうせん', meaning: 'challenge / defiance' },
-      { word: '挑む', reading: 'いどむ', meaning: 'melakukan challenge' },
-      { word: '初挑戦', reading: 'はつちょうせん', meaning: 'first challenge' },
+      { word: '挑戦', reading: 'ちょうせん', meaning: 'Challenge / defiance' },
+      { word: '挑む', reading: 'いどむ', meaning: 'Challenge' },
+      { word: '初挑戦', reading: 'はつちょうせん', meaning: 'First challenge' },
     ],
   },
   {
@@ -6609,7 +6609,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["扌","矣"],
     mnemonic: 'Karakter 挨 (Approach / draw near) memiliki 10 goresan, tersusun dari elemen (扌, 矣) yang melambangkan konsep intinya.',
     examples: [
-      { word: '挨拶', reading: 'あいさつする', meaning: 'greet(ing)' },
+      { word: '挨拶', reading: 'あいさつする', meaning: 'Greet(ing)' },
       { word: '挨語', reading: 'アイご', meaning: 'Istilah / kosakata terkait Approach / draw near' },
     ],
   },
@@ -6626,8 +6626,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["扌","坐"],
     mnemonic: 'Karakter 挫 (Crush / mematahkan / rusak) memiliki 10 goresan, tersusun dari elemen (扌, 坐) yang melambangkan konsep intinya.',
     examples: [
-      { word: '挫折', reading: 'ざせつ', meaning: 'setback' },
-      { word: '捻挫', reading: 'ねんざ', meaning: 'sprain' },
+      { word: '挫折', reading: 'ざせつ', meaning: 'Setback' },
+      { word: '捻挫', reading: 'ねんざ', meaning: 'Sprain' },
     ],
   },
   {
@@ -6643,9 +6643,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["扌","辰"],
     mnemonic: 'Karakter 振 (Shake / wave) memiliki 10 goresan, tersusun dari elemen (扌, 辰) yang melambangkan konsep intinya.',
     examples: [
-      { word: '振る', reading: 'ふる', meaning: 'melakukan wave / melakukan shake / melakukan sprinkle' },
-      { word: '振興', reading: 'しんこう', meaning: 'promotion / encouragement' },
-      { word: '振り', reading: 'ふり', meaning: 'style / manner' },
+      { word: '振る', reading: 'ふる', meaning: 'Wave / Mengguncang / Sprinkle' },
+      { word: '振興', reading: 'しんこう', meaning: 'Promotion / encouragement' },
+      { word: '振り', reading: 'ふり', meaning: 'Style / manner' },
     ],
   },
   {
@@ -6661,9 +6661,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["扌","𢆍"],
     mnemonic: 'Karakter 挿 (Insert / put in) memiliki 10 goresan, tersusun dari elemen (扌, 𢆍) yang melambangkan konsep intinya.',
     examples: [
-      { word: '挿す', reading: 'さす', meaning: 'melakukan insert / melakukan put in / melakukan graft' },
-      { word: '挿入', reading: 'そうにゅう', meaning: 'insertion' },
-      { word: '挿絵', reading: 'さしえ', meaning: 'illustration (in a book, newspaper, etc.)' },
+      { word: '挿す', reading: 'さす', meaning: 'Insert / Menaruh (in) / Graft' },
+      { word: '挿入', reading: 'そうにゅう', meaning: 'Insertion' },
+      { word: '挿絵', reading: 'さしえ', meaning: 'Illustration (in a book, newspaper, etc.)' },
     ],
   },
   {
@@ -6696,8 +6696,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["扌","步"],
     mnemonic: 'Karakter 捗 (Make progress) memiliki 10 goresan, tersusun dari elemen (扌, 步) yang melambangkan konsep intinya.',
     examples: [
-      { word: '捗る', reading: 'はかどる', meaning: 'melakukan make progress / melakukan move right ahead (with the work) / melakukan advance' },
-      { word: '進捗', reading: 'しんちょく', meaning: 'progress' },
+      { word: '捗る', reading: 'はかどる', meaning: 'Membuat (progress) / Bergerak (right ahead (with the work)) / Advance' },
+      { word: '進捗', reading: 'しんちょく', meaning: 'Progress' },
     ],
   },
   {
@@ -6713,9 +6713,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["扌","居"],
     mnemonic: 'Karakter 据 (Memasang fondasi / Menetapkan posisi) memiliki 11 goresan, tersusun dari elemen (扌, 居) yang melambangkan konsep intinya.',
     examples: [
-      { word: '据え付ける', reading: 'すえつける', meaning: 'melakukan install / melakukan equip / melakukan mount' },
-      { word: '据える', reading: 'すえる', meaning: 'melakukan set / melakukan lay / melakukan place' },
-      { word: '据え置き', reading: 'すえおき', meaning: 'deferment (e.g. of savings)' },
+      { word: '据え付ける', reading: 'すえつける', meaning: 'Install / Equip / Mount' },
+      { word: '据える', reading: 'すえる', meaning: 'Menyetel / Menetapkan / Lay / Place' },
+      { word: '据え置き', reading: 'すえおき', meaning: 'Deferment (e.g. of savings)' },
     ],
   },
   {
@@ -6731,8 +6731,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["扌","念"],
     mnemonic: 'Karakter 捻 (Twirl / twist) memiliki 11 goresan, tersusun dari elemen (扌, 念) yang melambangkan konsep intinya.',
     examples: [
-      { word: '捻る', reading: 'ひねる', meaning: 'melakukan twist / melakukan turn' },
-      { word: '捻挫', reading: 'ねんざ', meaning: 'sprain' },
+      { word: '捻る', reading: 'ひねる', meaning: 'Twist / Turn' },
+      { word: '捻挫', reading: 'ねんざ', meaning: 'Sprain' },
     ],
   },
   {
@@ -6748,9 +6748,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["扌","受"],
     mnemonic: 'Karakter 授 (Memberikan / Mengajarkan) memiliki 11 goresan, tersusun dari elemen (扌, 受) yang melambangkan konsep intinya.',
     examples: [
-      { word: '授業', reading: 'じゅぎょう', meaning: 'a class (of school)' },
-      { word: '教授', reading: 'きょうじゅ', meaning: 'teaching / instruction / professor' },
-      { word: '授ける', reading: 'さずける', meaning: 'melakukan grant / melakukan award / mengajar' },
+      { word: '授業', reading: 'じゅぎょう', meaning: 'A class (of school)' },
+      { word: '教授', reading: 'きょうじゅ', meaning: 'Teaching / instruction / professor' },
+      { word: '授ける', reading: 'さずける', meaning: 'Grant / Award / mengajar' },
     ],
   },
   {
@@ -6767,7 +6767,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 掌 (Telapak tangan / Mengendalikan wewenang) memiliki 12 goresan, tersusun dari elemen (𫩠, 手) yang melambangkan konsep intinya.',
     examples: [
       { word: '掌握', reading: 'しょうあく', meaning: 'Penguasaan / Memegang kendali penuh' },
-      { word: '掌', reading: 'てのひら', meaning: 'the palm' },
+      { word: '掌', reading: 'てのひら', meaning: 'The palm' },
       { word: '車掌', reading: 'しゃしょう', meaning: '(train) conductor' },
     ],
   },
@@ -6784,9 +6784,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["扌","隹"],
     mnemonic: 'Karakter 推 (Conjecture / infer) memiliki 11 goresan, tersusun dari elemen (扌, 隹) yang melambangkan konsep intinya.',
     examples: [
-      { word: '推薦', reading: 'すいせん', meaning: 'recommendation' },
+      { word: '推薦', reading: 'すいせん', meaning: 'Recommendation' },
       { word: '推進', reading: 'すいしん', meaning: 'Penggalakan / Pendorongan program kerja' },
-      { word: '推測', reading: 'すいそく', meaning: 'guess / conjecture' },
+      { word: '推測', reading: 'すいそく', meaning: 'Guess / conjecture' },
     ],
   },
   {
@@ -6819,9 +6819,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["扌","日","匂"],
     mnemonic: 'Karakter 掲 (Put up (a notice) / put up) memiliki 11 goresan, tersusun dari elemen (扌, 日, 匂) yang melambangkan konsep intinya.',
     examples: [
-      { word: '掲示', reading: 'けいじ', meaning: 'notice / bulletin' },
+      { word: '掲示', reading: 'けいじ', meaning: 'Notice / bulletin' },
       { word: '掲示板', reading: 'けいじばん', meaning: 'Papan pengumuman' },
-      { word: '掲げる', reading: 'かかげる', meaning: 'melakukan hoist / melakukan fly (a sail) / melakukan float (a flag)' },
+      { word: '掲げる', reading: 'かかげる', meaning: 'Hoist / Terbang ((a sail)) / Mengapung ((a flag))' },
     ],
   },
   {
@@ -6837,9 +6837,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["扌","苗"],
     mnemonic: 'Karakter 描 (Sketch / compose) memiliki 11 goresan, tersusun dari elemen (扌, 苗) yang melambangkan konsep intinya.',
     examples: [
-      { word: '描く', reading: 'えがく', meaning: 'melakukan draw / melakukan depict / melakukan describe' },
-      { word: '描写', reading: 'びょうしゃ', meaning: 'depiction / description / portrayal' },
-      { word: '思い描く', reading: 'おもいえがく', meaning: 'to imagine' },
+      { word: '描く', reading: 'えがく', meaning: 'Draw / Depict / Menggambarkan' },
+      { word: '描写', reading: 'びょうしゃ', meaning: 'Depiction / description / portrayal' },
+      { word: '思い描く', reading: 'おもいえがく', meaning: 'To imagine' },
     ],
   },
   {
@@ -6873,9 +6873,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["扌","昜"],
     mnemonic: 'Karakter 揚 (Raise / elevate) memiliki 12 goresan, tersusun dari elemen (扌, 昜) yang melambangkan konsep intinya.',
     examples: [
-      { word: '揚げる', reading: 'あげる', meaning: 'mengangkat / melakukan fry' },
-      { word: '引揚者', reading: 'ひきあげしゃ', meaning: 'returnee (esp. Japanese person repatriated to Japan proper from its former colonies after WWII)' },
-      { word: '抑揚', reading: 'よくよう', meaning: 'intonation' },
+      { word: '揚げる', reading: 'あげる', meaning: 'Mengangkat / Fry' },
+      { word: '引揚者', reading: 'ひきあげしゃ', meaning: 'Returnee (esp. Japanese person repatriated to Japan proper from its former colonies after WWII)' },
+      { word: '抑揚', reading: 'よくよう', meaning: 'Intonation' },
     ],
   },
   {
@@ -6893,7 +6893,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     examples: [
       { word: '把握', reading: 'はあく', meaning: 'Memahami sepenuhnya / Menguasai situasi' },
       { word: '掌握', reading: 'しょうあく', meaning: 'Penguasaan / Memegang kendali penuh' },
-      { word: '握手', reading: 'あくしゅ', meaning: 'handshake' },
+      { word: '握手', reading: 'あくしゅ', meaning: 'Handshake' },
     ],
   },
   {
@@ -6909,8 +6909,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["扌","軍"],
     mnemonic: 'Karakter 揮 (Brandish / wave) memiliki 12 goresan, tersusun dari elemen (扌, 軍) yang melambangkan konsep intinya.',
     examples: [
-      { word: '指揮', reading: 'しき', meaning: 'command / direction' },
-      { word: '発揮', reading: 'はっき', meaning: 'exhibition / demonstration / display' },
+      { word: '指揮', reading: 'しき', meaning: 'Command / direction' },
+      { word: '発揮', reading: 'はっき', meaning: 'Exhibition / demonstration / display' },
       { word: '指揮者', reading: 'しきしゃ', meaning: '(musical) conductor' },
     ],
   },
@@ -6927,9 +6927,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["扌","爫","𠙻"],
     mnemonic: 'Karakter 揺 (Swing / shake) memiliki 12 goresan, tersusun dari elemen (扌, 爫, 𠙻) yang melambangkan konsep intinya.',
     examples: [
-      { word: '動揺', reading: 'どうよう', meaning: 'gangguan keributan / flutter shock' },
-      { word: '揺れる', reading: 'ゆれる', meaning: 'melakukan shake / melakukan sway' },
-      { word: '揺さぶる', reading: 'ゆさぶる', meaning: 'melakukan shake / melakukan jolt / melakukan rock' },
+      { word: '動揺', reading: 'どうよう', meaning: 'Gangguan keributan / flutter shock' },
+      { word: '揺れる', reading: 'ゆれる', meaning: 'Mengguncang / Sway' },
+      { word: '揺さぶる', reading: 'ゆさぶる', meaning: 'Mengguncang / Jolt / Rock' },
     ],
   },
   {
@@ -6945,9 +6945,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["扌","般"],
     mnemonic: 'Karakter 搬 (Conveyor / carry) memiliki 13 goresan, tersusun dari elemen (扌, 般) yang melambangkan konsep intinya.',
     examples: [
-      { word: '運搬', reading: 'うんぱん', meaning: 'transport / carriage' },
-      { word: '搬入', reading: 'はんにゅう', meaning: 'carrying in (esp. heavy objects, artwork, furniture)' },
-      { word: '搬出', reading: 'はんしゅつ', meaning: 'carrying out (esp. heavy objects, artwork, furniture)' },
+      { word: '運搬', reading: 'うんぱん', meaning: 'Transport / carriage' },
+      { word: '搬入', reading: 'はんにゅう', meaning: 'Carrying in (esp. heavy objects, artwork, furniture)' },
+      { word: '搬出', reading: 'はんしゅつ', meaning: 'Carrying out (esp. heavy objects, artwork, furniture)' },
     ],
   },
   {
@@ -6963,8 +6963,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["扌","荅"],
     mnemonic: 'Karakter 搭 (Board / load (a vehicle)) memiliki 12 goresan, tersusun dari elemen (扌, 荅) yang melambangkan konsep intinya.',
     examples: [
-      { word: '搭乗', reading: 'とうじょう', meaning: 'embarkation' },
-      { word: '搭載', reading: 'とうさい', meaning: 'loading (on a ship)' },
+      { word: '搭乗', reading: 'とうじょう', meaning: 'Embarkation' },
+      { word: '搭載', reading: 'とうさい', meaning: 'Loading (on a ship)' },
     ],
   },
   {
@@ -6980,9 +6980,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["扌","隽"],
     mnemonic: 'Karakter 携 (Portable / carry (in tangan)) memiliki 13 goresan, tersusun dari elemen (扌, 隽) yang melambangkan konsep intinya.',
     examples: [
-      { word: '携帯', reading: 'けいたい', meaning: 'carrying something / mobile telephone' },
+      { word: '携帯', reading: 'けいたい', meaning: 'Carrying something / mobile telephone' },
       { word: '提携', reading: 'ていけい', meaning: 'Kemitraan / Aliansi bisnis' },
-      { word: '携わる', reading: 'たずさわる', meaning: 'melakukan engage / melakukan involve' },
+      { word: '携わる', reading: 'たずさわる', meaning: 'Engage / Involve' },
     ],
   },
   {
@@ -6998,8 +6998,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["扌","窄"],
     mnemonic: 'Karakter 搾 (Squeeze) memiliki 13 goresan, tersusun dari elemen (扌, 窄) yang melambangkan konsep intinya.',
     examples: [
-      { word: '搾乳', reading: 'さくにゅう', meaning: 'milking (a cow, goat, etc.)' },
-      { word: '搾取', reading: 'さくしゅ', meaning: 'exploitation' },
+      { word: '搾乳', reading: 'さくにゅう', meaning: 'Milking (a cow, goat, etc.)' },
+      { word: '搾取', reading: 'さくしゅ', meaning: 'Exploitation' },
     ],
   },
   {
@@ -7015,9 +7015,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["扌","耳","丷","八"],
     mnemonic: 'Karakter 摂 (Vicarious / surrogate) memiliki 13 goresan, tersusun dari elemen (扌, 耳, 丷) yang melambangkan konsep intinya.',
     examples: [
-      { word: '摂取', reading: 'せっしゅ', meaning: 'intake (e.g. of salt)' },
+      { word: '摂取', reading: 'せっしゅ', meaning: 'Intake (e.g. of salt)' },
       { word: '摂氏', reading: 'せっし', meaning: 'Celsius' },
-      { word: '摂理', reading: 'せつり', meaning: 'laws (of nature)' },
+      { word: '摂理', reading: 'せつり', meaning: 'Laws (of nature)' },
     ],
   },
   {
@@ -7034,8 +7034,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 摘 (Pinch / pick) memiliki 14 goresan, tersusun dari elemen (扌, 啇) yang melambangkan konsep intinya.',
     examples: [
       { word: '摘発', reading: 'てきはつ', meaning: 'Pembongkaran penyingkapan kejahatan' },
-      { word: '摘む', reading: 'つむ', meaning: 'melakukan pluck / melakukan pick / melakukan trim' },
-      { word: '指摘', reading: 'してき', meaning: 'pointing out / identification' },
+      { word: '摘む', reading: 'つむ', meaning: 'Pluck / Pick / Trim' },
+      { word: '指摘', reading: 'してき', meaning: 'Pointing out / identification' },
     ],
   },
   {
@@ -7051,9 +7051,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["麻","手"],
     mnemonic: 'Karakter 摩 (Chafe / rub) memiliki 15 goresan, tersusun dari elemen (麻, 手) yang melambangkan konsep intinya.',
     examples: [
-      { word: '摩する', reading: 'さする', meaning: 'melakukan rub / melakukan stroke' },
-      { word: '摩擦', reading: 'まさつ', meaning: 'friction / rubbing / chafe' },
-      { word: '摩天楼', reading: 'まてんろう', meaning: 'skyscraper' },
+      { word: '摩する', reading: 'さする', meaning: 'Menggosok / Mengusap / Stroke' },
+      { word: '摩擦', reading: 'まさつ', meaning: 'Friction / rubbing / chafe' },
+      { word: '摩天楼', reading: 'まてんろう', meaning: 'Skyscraper' },
     ],
   },
   {
@@ -7069,9 +7069,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["軗","手"],
     mnemonic: 'Karakter 撃 (Beat / attack) memiliki 15 goresan, tersusun dari elemen (軗, 手) yang melambangkan konsep intinya.',
     examples: [
-      { word: '撃つ', reading: 'うつ', meaning: 'melakukan attack / melakukan shoot' },
-      { word: '攻撃', reading: 'こうげき', meaning: 'attack / strike / offensive' },
-      { word: '衝撃', reading: 'しょうげき', meaning: 'shock / crash / impact' },
+      { word: '撃つ', reading: 'うつ', meaning: 'Menyerang / Shoot' },
+      { word: '攻撃', reading: 'こうげき', meaning: 'Attack / strike / offensive' },
+      { word: '衝撃', reading: 'しょうげき', meaning: 'Shock / crash / impact' },
     ],
   },
   {
@@ -7087,9 +7087,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["扌","最"],
     mnemonic: 'Karakter 撮 (Snapshot / take pictures) memiliki 15 goresan, tersusun dari elemen (扌, 最) yang melambangkan konsep intinya.',
     examples: [
-      { word: '撮る', reading: 'とる', meaning: 'melakukan take (a photo) / melakukan make (a film)' },
-      { word: '撮影', reading: 'さつえい', meaning: 'photographing' },
-      { word: '写真撮影', reading: 'しゃしんさつえい', meaning: 'photography' },
+      { word: '撮る', reading: 'とる', meaning: 'Mengambil ((a photo)) / Membuat ((a film))' },
+      { word: '撮影', reading: 'さつえい', meaning: 'Photographing' },
+      { word: '写真撮影', reading: 'しゃしんさつえい', meaning: 'Photography' },
     ],
   },
   {
@@ -7105,9 +7105,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["扌","菐"],
     mnemonic: 'Karakter 撲 (Slap / strike) memiliki 15 goresan, tersusun dari elemen (扌, 菐) yang melambangkan konsep intinya.',
     examples: [
-      { word: '相撲', reading: 'すもう', meaning: 'sumo wrestling' },
-      { word: '大相撲', reading: 'おおずもう', meaning: 'professional sumo wrestling' },
-      { word: '打撲', reading: 'だぼく', meaning: 'blow' },
+      { word: '相撲', reading: 'すもう', meaning: 'Sumo wrestling' },
+      { word: '大相撲', reading: 'おおずもう', meaning: 'Professional sumo wrestling' },
+      { word: '打撲', reading: 'だぼく', meaning: 'Blow' },
     ],
   },
   {
@@ -7123,9 +7123,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["扌","雍"],
     mnemonic: 'Karakter 擁 (Hug / embrace) memiliki 16 goresan, tersusun dari elemen (扌, 雍) yang melambangkan konsep intinya.',
     examples: [
-      { word: '人権擁護', reading: 'じんけんようご', meaning: 'protection of human rights' },
-      { word: '抱擁', reading: 'ほうよう', meaning: 'embrace' },
-      { word: '擁立', reading: 'ようりつ', meaning: 'backing (for a position)' },
+      { word: '人権擁護', reading: 'じんけんようご', meaning: 'Protection of human rights' },
+      { word: '抱擁', reading: 'ほうよう', meaning: 'Embrace' },
+      { word: '擁立', reading: 'ようりつ', meaning: 'Backing (for a position)' },
     ],
   },
   {
@@ -7141,9 +7141,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["扌","喿"],
     mnemonic: 'Karakter 操 (Maneuver / manipulate) memiliki 16 goresan, tersusun dari elemen (扌, 喿) yang melambangkan konsep intinya.',
     examples: [
-      { word: '操作', reading: 'そうさ', meaning: 'operation / management / processing' },
-      { word: '操縦', reading: 'そうじゅう', meaning: 'management / control / manipulation' },
-      { word: '操る', reading: 'あやつる', meaning: 'melakukan manipulate / melakukan operate / melakukan pull strings' },
+      { word: '操作', reading: 'そうさ', meaning: 'Operation / management / processing' },
+      { word: '操縦', reading: 'そうじゅう', meaning: 'Management / control / manipulation' },
+      { word: '操る', reading: 'あやつる', meaning: 'Manipulate / Operate / Menarik (strings)' },
     ],
   },
   {
@@ -7159,9 +7159,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["扌","察"],
     mnemonic: 'Karakter 擦 (Grate / rub) memiliki 17 goresan, tersusun dari elemen (扌, 察) yang melambangkan konsep intinya.',
     examples: [
-      { word: '擦る', reading: 'する', meaning: 'melakukan rub / melakukan chafe' },
-      { word: '擦れる', reading: 'すれる', meaning: 'melakukan rub / melakukan chafe' },
-      { word: '摩擦', reading: 'まさつ', meaning: 'friction / rubbing / chafe' },
+      { word: '擦る', reading: 'する', meaning: 'Menggosok / Mengusap / Chafe' },
+      { word: '擦れる', reading: 'すれる', meaning: 'Menggosok / Mengusap / Chafe' },
+      { word: '摩擦', reading: 'まさつ', meaning: 'Friction / rubbing / chafe' },
     ],
   },
   {
@@ -7177,8 +7177,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["扌","疑"],
     mnemonic: 'Karakter 擬 (Meniru / Menyerupai tiruan) memiliki 17 goresan, tersusun dari elemen (扌, 疑) yang melambangkan konsep intinya.',
     examples: [
-      { word: '模擬', reading: 'もぎ', meaning: 'imitation' },
-      { word: '模擬試験', reading: 'もぎしけん', meaning: 'mock exam' },
+      { word: '模擬', reading: 'もぎ', meaning: 'Imitation' },
+      { word: '模擬試験', reading: 'もぎしけん', meaning: 'Mock exam' },
     ],
   },
   {
@@ -7194,9 +7194,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["工","攵"],
     mnemonic: 'Karakter 攻 (Aggression / attack) memiliki 7 goresan, tersusun dari elemen (工, 攵) yang melambangkan konsep intinya.',
     examples: [
-      { word: '攻撃', reading: 'こうげき', meaning: 'attack / strike / offensive' },
-      { word: '攻める', reading: 'せめる', meaning: 'melakukan attack / melakukan assault' },
-      { word: '専攻', reading: 'せんこう', meaning: 'major subject / special study' },
+      { word: '攻撃', reading: 'こうげき', meaning: 'Attack / strike / offensive' },
+      { word: '攻める', reading: 'せめる', meaning: 'Menyerang / Assault' },
+      { word: '専攻', reading: 'せんこう', meaning: 'Major subject / special study' },
     ],
   },
   {
@@ -7212,9 +7212,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["古","攵"],
     mnemonic: 'Karakter 故 (Happenstance / especially) memiliki 9 goresan, tersusun dari elemen (古, 攵) yang melambangkan konsep intinya.',
     examples: [
-      { word: '故郷', reading: 'こきょう', meaning: 'hometown' },
-      { word: '故人', reading: 'こじん', meaning: 'the deceased' },
-      { word: '故障', reading: 'こしょうする', meaning: 'breakdown' },
+      { word: '故郷', reading: 'こきょう', meaning: 'Hometown' },
+      { word: '故人', reading: 'こじん', meaning: 'The deceased' },
+      { word: '故障', reading: 'こしょうする', meaning: 'Breakdown' },
     ],
   },
   {
@@ -7230,9 +7230,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["每","攵"],
     mnemonic: 'Karakter 敏 (Cleverness / agile) memiliki 10 goresan, tersusun dari elemen (每, 攵) yang melambangkan konsep intinya.',
     examples: [
-      { word: '敏感', reading: 'びんかん', meaning: 'sensibility / susceptibility / sensitive (to)' },
-      { word: '敏腕', reading: 'びんわん', meaning: 'ability' },
-      { word: '敏速', reading: 'びんそく', meaning: 'quickness' },
+      { word: '敏感', reading: 'びんかん', meaning: 'Sensibility / susceptibility / sensitive (to)' },
+      { word: '敏腕', reading: 'びんわん', meaning: 'Ability' },
+      { word: '敏速', reading: 'びんそく', meaning: 'Quickness' },
     ],
   },
   {
@@ -7248,9 +7248,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["乛","耳","攵"],
     mnemonic: 'Karakter 敢 (Daring / brave) memiliki 12 goresan, tersusun dari elemen (乛, 耳, 攵) yang melambangkan konsep intinya.',
     examples: [
-      { word: '敢えて', reading: 'あえて', meaning: 'dare (to do) / venture (to do) / challenge (to do)' },
-      { word: '勇敢', reading: 'ゆうかん', meaning: 'bravery / heroism / gallantry' },
-      { word: '敢然', reading: 'かんぜん', meaning: 'boldly' },
+      { word: '敢えて', reading: 'あえて', meaning: 'Dare (to do) / venture (to do) / challenge (to do)' },
+      { word: '勇敢', reading: 'ゆうかん', meaning: 'Bravery / heroism / gallantry' },
+      { word: '敢然', reading: 'かんぜん', meaning: 'Boldly' },
     ],
   },
   {
@@ -7266,9 +7266,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["敕","正"],
     mnemonic: 'Karakter 整 (Merapikan / Mengatur susunan) memiliki 16 goresan, tersusun dari elemen (敕, 正) yang melambangkan konsep intinya.',
     examples: [
-      { word: '整理', reading: 'せいり', meaning: 'sorting / arrangement' },
+      { word: '整理', reading: 'せいり', meaning: 'Sorting / arrangement' },
       { word: '整理する', reading: 'せいりする', meaning: 'Merapikan / menertibkan susunan' },
-      { word: '整える', reading: 'ととのえる', meaning: 'melakukan put in order / melakukan arrange / melakukan adjust' },
+      { word: '整える', reading: 'ととのえる', meaning: 'Merapikan / Membereskan / Arrange / Adjust' },
     ],
   },
   {
@@ -7284,9 +7284,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["啇","攵"],
     mnemonic: 'Karakter 敵 (Musuh / foe) memiliki 15 goresan, tersusun dari elemen (啇, 攵) yang melambangkan konsep intinya.',
     examples: [
-      { word: '敵', reading: 'てき', meaning: 'enemy / rival' },
-      { word: '匹敵', reading: 'ひってき', meaning: 'comparing with / rival / equal' },
-      { word: '不敵', reading: 'ふてき', meaning: 'daring' },
+      { word: '敵', reading: 'てき', meaning: 'Enemy / rival' },
+      { word: '匹敵', reading: 'ひってき', meaning: 'Comparing with / rival / equal' },
+      { word: '不敵', reading: 'ふてき', meaning: 'Daring' },
     ],
   },
   {
@@ -7302,9 +7302,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["旉","攵"],
     mnemonic: 'Karakter 敷 (Spread / pave) memiliki 15 goresan, tersusun dari elemen (旉, 攵) yang melambangkan konsep intinya.',
     examples: [
-      { word: '屋敷', reading: 'やしき', meaning: 'mansion' },
-      { word: '座敷', reading: 'ざしき', meaning: 'tatami room' },
-      { word: '敷地', reading: 'しきち', meaning: 'site' },
+      { word: '屋敷', reading: 'やしき', meaning: 'Mansion' },
+      { word: '座敷', reading: 'ざしき', meaning: 'Tatami room' },
+      { word: '敷地', reading: 'しきち', meaning: 'Site' },
     ],
   },
   {
@@ -7320,9 +7320,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["亠","乂"],
     mnemonic: 'Karakter 文 (Sentence / literature) memiliki 4 goresan, tersusun dari elemen (亠, 乂) yang melambangkan konsep intinya.',
     examples: [
-      { word: '作文', reading: 'さくぶん', meaning: 'essay / composition' },
-      { word: '文章', reading: 'ぶんしょう', meaning: 'sentence / text' },
-      { word: '文字', reading: 'もじ', meaning: 'letter (of alphabet) / character' },
+      { word: '作文', reading: 'さくぶん', meaning: 'Essay / composition' },
+      { word: '文章', reading: 'ぶんしょう', meaning: 'Sentence / text' },
+      { word: '文字', reading: 'もじ', meaning: 'Letter (of alphabet) / character' },
     ],
   },
   {
@@ -7338,9 +7338,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["文","丿","二","丨"],
     mnemonic: 'Karakter 斉 (Adjusted / alike) memiliki 8 goresan, tersusun dari elemen (文, 丿, 二) yang melambangkan konsep intinya.',
     examples: [
-      { word: '一斉', reading: 'いっせい', meaning: 'simultaneous / all at once' },
-      { word: '一斉に', reading: 'いっせいに', meaning: 'simultaneously' },
-      { word: '斉唱', reading: 'せいしょう', meaning: 'singing in unison' },
+      { word: '一斉', reading: 'いっせい', meaning: 'Simultaneous / all at once' },
+      { word: '一斉に', reading: 'いっせいに', meaning: 'Simultaneously' },
+      { word: '斉唱', reading: 'せいしょう', meaning: 'Singing in unison' },
     ],
   },
   {
@@ -7356,8 +7356,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["齐","示"],
     mnemonic: 'Karakter 斎 (Purification / buddhist makanan) memiliki 11 goresan, tersusun dari elemen (齐, 示) yang melambangkan konsep intinya.',
     examples: [
-      { word: '書斎', reading: 'しょさい', meaning: 'study / den' },
-      { word: '斎場', reading: 'さいじょう', meaning: 'funeral hall' },
+      { word: '書斎', reading: 'しょさい', meaning: 'Study / den' },
+      { word: '斎場', reading: 'さいじょう', meaning: 'Funeral hall' },
     ],
   },
   {
@@ -7373,7 +7373,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["王","文","王"],
     mnemonic: 'Karakter 斑 (Bintik totol / Belang bercak) memiliki 12 goresan, tersusun dari elemen (王, 文, 王) yang melambangkan konsep intinya.',
     examples: [
-      { word: '斑', reading: 'むら', meaning: 'unevenness / inconsistency / irregularity' },
+      { word: '斑', reading: 'むら', meaning: 'Unevenness / inconsistency / irregularity' },
       { word: '斑点', reading: 'はんてん', meaning: 'Bercak bintik totol' },
     ],
   },
@@ -7407,9 +7407,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["余","斗"],
     mnemonic: 'Karakter 斜 (Diagonal / slanting) memiliki 11 goresan, tersusun dari elemen (余, 斗) yang melambangkan konsep intinya.',
     examples: [
-      { word: '傾斜', reading: 'けいしゃ', meaning: 'inclination / slope / dip' },
-      { word: '斜面', reading: 'しゃめん', meaning: 'slope / slanting surface / bevel' },
-      { word: '斜め', reading: 'ななめ', meaning: 'diagonal / oblique' },
+      { word: '傾斜', reading: 'けいしゃ', meaning: 'Inclination / slope / dip' },
+      { word: '斜面', reading: 'しゃめん', meaning: 'Slope / slanting surface / bevel' },
+      { word: '斜め', reading: 'ななめ', meaning: 'Diagonal / oblique' },
     ],
   },
   {
@@ -7442,7 +7442,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["斤","丶"],
     mnemonic: 'Karakter 斥 (Reject / retreat) memiliki 5 goresan, tersusun dari elemen (斤, 丶) yang melambangkan konsep intinya.',
     examples: [
-      { word: '排斥', reading: 'はいせき', meaning: 'rejection' },
+      { word: '排斥', reading: 'はいせき', meaning: 'Rejection' },
       { word: '斥候', reading: 'せっこう', meaning: 'Prajurit pengintai patroli' },
     ],
   },
@@ -7460,8 +7460,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 方 (Direction / orang) memiliki 4 goresan, tersusun dari elemen (亠, 丿, 𠃌) yang melambangkan konsep intinya.',
     examples: [
       { word: '方', reading: 'かた', meaning: '-- honorific form for 人 (ひと) -- / way of doing' },
-      { word: '夕方', reading: 'ゆうがた', meaning: 'late afternoon (typically just before dinner time) / evening' },
-      { word: '一方', reading: 'いっぽう', meaning: 'on the other hand / meanwhile' },
+      { word: '夕方', reading: 'ゆうがた', meaning: 'Late afternoon (typically just before dinner time) / evening' },
+      { word: '一方', reading: 'いっぽう', meaning: 'On the other hand / meanwhile' },
     ],
   },
   {
@@ -7477,9 +7477,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["方","㐌"],
     mnemonic: 'Karakter 施 (Give / bestow) memiliki 9 goresan, tersusun dari elemen (方, 㐌) yang melambangkan konsep intinya.',
     examples: [
-      { word: '実施', reading: 'じっし', meaning: 'enforcement / carry out / operation' },
+      { word: '実施', reading: 'じっし', meaning: 'Enforcement / carry out / operation' },
       { word: '施行', reading: 'しこう', meaning: 'Pemberlakuan regulasi / Pengundangan hukum' },
-      { word: '施設', reading: 'しせつ', meaning: 'establishment / facility' },
+      { word: '施設', reading: 'しせつ', meaning: 'Establishment / facility' },
     ],
   },
   {
@@ -7495,9 +7495,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["方","𭻾"],
     mnemonic: 'Karakter 旋 (Rotation / go around) memiliki 11 goresan, tersusun dari elemen (方, 𭻾) yang melambangkan konsep intinya.',
     examples: [
-      { word: '斡旋', reading: 'あっせん', meaning: 'kind offices / mediation' },
-      { word: '旋回', reading: 'せんかい', meaning: 'revolution' },
-      { word: '旋律', reading: 'せんりつ', meaning: 'melody' },
+      { word: '斡旋', reading: 'あっせん', meaning: 'Kind offices / mediation' },
+      { word: '旋回', reading: 'せんかい', meaning: 'Revolution' },
+      { word: '旋律', reading: 'せんりつ', meaning: 'Melody' },
     ],
   },
   {
@@ -7513,9 +7513,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["方","𠂉","其"],
     mnemonic: 'Karakter 旗 (National flag / banner) memiliki 14 goresan, tersusun dari elemen (方, 𠂉, 其) yang melambangkan konsep intinya.',
     examples: [
-      { word: '旗', reading: 'はた', meaning: 'flag' },
-      { word: '反旗', reading: 'はんき', meaning: 'standard of revolt' },
-      { word: '国旗', reading: 'こっき', meaning: 'national flag' },
+      { word: '旗', reading: 'はた', meaning: 'Flag' },
+      { word: '反旗', reading: 'はんき', meaning: 'Standard of revolt' },
+      { word: '国旗', reading: 'こっき', meaning: 'National flag' },
     ],
   },
   {
@@ -7531,9 +7531,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["旡"],
     mnemonic: 'Karakter 既 (Previously / already) memiliki 10 goresan, tersusun dari elemen (旡) yang melambangkan konsep intinya.',
     examples: [
-      { word: '既に', reading: 'すでに', meaning: 'already (same as もう)' },
-      { word: '既婚', reading: 'きこん', meaning: 'married' },
-      { word: '既存', reading: 'きそん', meaning: 'existing' },
+      { word: '既に', reading: 'すでに', meaning: 'Already (same as もう)' },
+      { word: '既婚', reading: 'きこん', meaning: 'Married' },
+      { word: '既存', reading: 'きそん', meaning: 'Existing' },
     ],
   },
   {
@@ -7549,8 +7549,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["日","一"],
     mnemonic: 'Karakter 旦 (Daybreak / dawn) memiliki 5 goresan, tersusun dari elemen (日, 一) yang melambangkan konsep intinya.',
     examples: [
-      { word: '旦那', reading: 'だんな', meaning: 'master (of house) / husband (informal)' },
-      { word: '一旦', reading: 'いったん', meaning: 'once / for a moment' },
+      { word: '旦那', reading: 'だんな', meaning: 'Master (of house) / husband (informal)' },
+      { word: '一旦', reading: 'いったん', meaning: 'Once / for a moment' },
       { word: '元旦', reading: 'がんたん', meaning: 'New Year\'s Day' },
     ],
   },
@@ -7567,9 +7567,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["匕","日"],
     mnemonic: 'Karakter 旨 (Delicious / relish) memiliki 6 goresan, tersusun dari elemen (匕, 日) yang melambangkan konsep intinya.',
     examples: [
-      { word: '趣旨', reading: 'しゅし', meaning: 'object / meaning' },
-      { word: '要旨', reading: 'ようし', meaning: 'gist / essentials / summary' },
-      { word: '本旨', reading: 'ほんし', meaning: 'main object' },
+      { word: '趣旨', reading: 'しゅし', meaning: 'Object / meaning' },
+      { word: '要旨', reading: 'ようし', meaning: 'Gist / essentials / summary' },
+      { word: '本旨', reading: 'ほんし', meaning: 'Main object' },
     ],
   },
   {
@@ -7585,9 +7585,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["勹","日"],
     mnemonic: 'Karakter 旬 (Decameron / ten-day period) memiliki 6 goresan, tersusun dari elemen (勹, 日) yang melambangkan konsep intinya.',
     examples: [
-      { word: '下旬', reading: 'げじゅん', meaning: 'month (last third of)' },
-      { word: '上旬', reading: 'じょうじゅん', meaning: 'first 10 days of month' },
-      { word: '初旬', reading: 'しょじゅん', meaning: 'first 10 days of the month' },
+      { word: '下旬', reading: 'げじゅん', meaning: 'Month (last third of)' },
+      { word: '上旬', reading: 'じょうじゅん', meaning: 'First 10 days of month' },
+      { word: '初旬', reading: 'しょじゅん', meaning: 'First 10 days of the month' },
     ],
   },
   {
@@ -7603,7 +7603,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["日","王"],
     mnemonic: 'Karakter 旺 (Bersemangat menggelora / Prima gairah) memiliki 8 goresan, tersusun dari elemen (日, 王) yang melambangkan konsep intinya.',
     examples: [
-      { word: '旺盛', reading: 'おうせい', meaning: 'lively' },
+      { word: '旺盛', reading: 'おうせい', meaning: 'Lively' },
       { word: '食欲旺盛', reading: 'しょくよくおうせい', meaning: 'Nafsu makan sangat prima' },
     ],
   },
@@ -7620,8 +7620,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["日","比"],
     mnemonic: 'Karakter 昆 (Descendants / elder brother) memiliki 8 goresan, tersusun dari elemen (日, 比) yang melambangkan konsep intinya.',
     examples: [
-      { word: '昆虫', reading: 'こんちゅう', meaning: 'insect / bug' },
-      { word: '昆布', reading: 'こんぶ', meaning: 'kombu (usu. Saccharina japonica)' },
+      { word: '昆虫', reading: 'こんちゅう', meaning: 'Insect / bug' },
+      { word: '昆布', reading: 'こんぶ', meaning: 'Kombu (usu. Saccharina japonica)' },
     ],
   },
   {
@@ -7654,9 +7654,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["日","𤴓"],
     mnemonic: 'Karakter 是 (Just so / this) memiliki 9 goresan, tersusun dari elemen (日, 𤴓) yang melambangkan konsep intinya.',
     examples: [
-      { word: '是非', reading: 'ぜひ', meaning: 'certainly / by all means / without fail' },
+      { word: '是非', reading: 'ぜひ', meaning: 'Certainly / by all means / without fail' },
       { word: '是正', reading: 'ぜせい', meaning: 'Perbaikan kekeliruan / Koreksi ketidakadilan' },
-      { word: '国是', reading: 'こくぜ', meaning: 'national policy' },
+      { word: '国是', reading: 'こくぜ', meaning: 'National policy' },
     ],
   },
   {
@@ -7672,9 +7672,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["日","昍"],
     mnemonic: 'Karakter 晶 (Kristal berkilau / Bersih jernih) memiliki 12 goresan, tersusun dari elemen (日, 昍) yang melambangkan konsep intinya.',
     examples: [
-      { word: '結晶', reading: 'けっしょう', meaning: 'crystal / crystallization' },
+      { word: '結晶', reading: 'けっしょう', meaning: 'Crystal / crystallization' },
       { word: '水晶', reading: 'すいしょう', meaning: '(rock) crystal' },
-      { word: '液晶', reading: 'えきしょう', meaning: 'liquid crystal' },
+      { word: '液晶', reading: 'えきしょう', meaning: 'Liquid crystal' },
     ],
   },
   {
@@ -7690,7 +7690,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["日","尭"],
     mnemonic: 'Karakter 暁 (Daybreak / dawn) memiliki 12 goresan, tersusun dari elemen (日, 尭) yang melambangkan konsep intinya.',
     examples: [
-      { word: '暁星', reading: 'ぎょうせい', meaning: 'morning star' },
+      { word: '暁星', reading: 'ぎょうせい', meaning: 'Morning star' },
       { word: '暁', reading: 'あかつき', meaning: 'Fajar menyingsing / Saat keberhasilan tiba' },
       { word: '春暁', reading: 'しゅんぎょう', meaning: 'Fajar di musim semi' },
     ],
@@ -7708,9 +7708,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["日","叚"],
     mnemonic: 'Karakter 暇 (Spare time / rest) memiliki 13 goresan, tersusun dari elemen (日, 叚) yang melambangkan konsep intinya.',
     examples: [
-      { word: '暇', reading: 'ひま', meaning: 'free time / leisure' },
-      { word: '休暇', reading: 'きゅうか', meaning: 'vacation / holiday / day off' },
-      { word: '余暇', reading: 'よか', meaning: 'leisure / leisure time / spare time' },
+      { word: '暇', reading: 'ひま', meaning: 'Free time / leisure' },
+      { word: '休暇', reading: 'きゅうか', meaning: 'Vacation / holiday / day off' },
+      { word: '余暇', reading: 'よか', meaning: 'Leisure / leisure time / spare time' },
     ],
   },
   {
@@ -7726,9 +7726,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["𠩵","日"],
     mnemonic: 'Karakter 暦 (Calendar / almanac) memiliki 14 goresan, tersusun dari elemen (𠩵, 日) yang melambangkan konsep intinya.',
     examples: [
-      { word: '暦', reading: 'こよみ', meaning: 'calendar / almanac' },
+      { word: '暦', reading: 'こよみ', meaning: 'Calendar / almanac' },
       { word: '還暦', reading: 'かんれき', meaning: '60th birthday' },
-      { word: '西暦', reading: 'せいれき', meaning: 'christian era / after (christ’s) death (a.d.)' },
+      { word: '西暦', reading: 'せいれき', meaning: 'Christian era / after (christ’s) death (a.d.)' },
     ],
   },
   {
@@ -7744,7 +7744,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["斬","日"],
     mnemonic: 'Karakter 暫 (Temporarily / a while) memiliki 15 goresan, tersusun dari elemen (斬, 日) yang melambangkan konsep intinya.',
     examples: [
-      { word: '暫定', reading: 'ざんてい', meaning: 'provisional' },
+      { word: '暫定', reading: 'ざんてい', meaning: 'Provisional' },
       { word: '暫く', reading: 'しばらく', meaning: 'Beberapa saat sejenak' },
     ],
   },
@@ -7761,8 +7761,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["一","曲","日"],
     mnemonic: 'Karakter 曹 (Kolega pejabat / Kopral pangkat) memiliki 11 goresan, tersusun dari elemen (一, 曲, 日) yang melambangkan konsep intinya.',
     examples: [
-      { word: '法曹', reading: 'ほうそう', meaning: 'legal profession' },
-      { word: '法曹界', reading: 'ほうそうかい', meaning: 'legal circles' },
+      { word: '法曹', reading: 'ほうそう', meaning: 'Legal profession' },
+      { word: '法曹界', reading: 'ほうそうかい', meaning: 'Legal circles' },
     ],
   },
   {
@@ -7795,9 +7795,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["𠂇","月"],
     mnemonic: 'Karakter 有 (Possess / have) memiliki 6 goresan, tersusun dari elemen (𠂇, 月) yang melambangkan konsep intinya.',
     examples: [
-      { word: '有る', reading: 'ある', meaning: 'melakukan be / melakukan have' },
-      { word: '有名', reading: 'ゆうめい', meaning: 'famous' },
-      { word: '有無', reading: 'うむ', meaning: 'yes or no / presence or absence' },
+      { word: '有る', reading: 'ある', meaning: 'Be / Have' },
+      { word: '有名', reading: 'ゆうめい', meaning: 'Famous' },
+      { word: '有無', reading: 'うむ', meaning: 'Yes or no / presence or absence' },
     ],
   },
   {
@@ -7830,9 +7830,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["丶","月"],
     mnemonic: 'Karakter 朗 (Melodious / clear) memiliki 10 goresan, tersusun dari elemen (丶, 月) yang melambangkan konsep intinya.',
     examples: [
-      { word: '朗読', reading: 'ろうどく', meaning: 'reading aloud / recitation' },
-      { word: '明朗', reading: 'めいろう', meaning: 'bright / clear / cheerful' },
-      { word: '朗らか', reading: 'ほがらか', meaning: 'bright / cheerful / melodious' },
+      { word: '朗読', reading: 'ろうどく', meaning: 'Reading aloud / recitation' },
+      { word: '明朗', reading: 'めいろう', meaning: 'Bright / clear / cheerful' },
+      { word: '朗らか', reading: 'ほがらか', meaning: 'Bright / cheerful / melodious' },
     ],
   },
   {
@@ -7848,7 +7848,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["朱"],
     mnemonic: 'Karakter 朱 (Vermilion / cinnabar) memiliki 6 goresan, tersusun dari elemen (朱) yang melambangkan konsep intinya.',
     examples: [
-      { word: '朱印', reading: 'しゅいん', meaning: 'red seal' },
+      { word: '朱印', reading: 'しゅいん', meaning: 'Red seal' },
       { word: '朱色', reading: 'しゅいろ', meaning: 'Warna merah vermilion cemerlang' },
       { word: '朱肉', reading: 'しゅにく', meaning: 'Bantalan tinta merah cap stempel' },
     ],
@@ -7866,7 +7866,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["木","卜"],
     mnemonic: 'Karakter 朴 (Crude / simple) memiliki 6 goresan, tersusun dari elemen (木, 卜) yang melambangkan konsep intinya.',
     examples: [
-      { word: '素朴', reading: 'そぼく', meaning: 'simplicity / artlessness / naivety' },
+      { word: '素朴', reading: 'そぼく', meaning: 'Simplicity / artlessness / naivety' },
       { word: '朴語', reading: 'ボクご', meaning: 'Istilah / kosakata terkait Crude / simple' },
     ],
   },
@@ -7883,9 +7883,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["木","丂"],
     mnemonic: 'Karakter 朽 (Decay / rot) memiliki 6 goresan, tersusun dari elemen (木, 丂) yang melambangkan konsep intinya.',
     examples: [
-      { word: '朽ちる', reading: 'くちる', meaning: 'melakukan rot' },
-      { word: '不朽', reading: 'ふきゅう', meaning: 'everlasting' },
-      { word: '老朽', reading: 'ろうきゅう', meaning: 'infirmity (due to old age)' },
+      { word: '朽ちる', reading: 'くちる', meaning: 'Rot' },
+      { word: '不朽', reading: 'ふきゅう', meaning: 'Everlasting' },
+      { word: '老朽', reading: 'ろうきゅう', meaning: 'Infirmity (due to old age)' },
     ],
   },
   {
@@ -7901,7 +7901,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["木","彡"],
     mnemonic: 'Karakter 杉 (Cedar / cryptomeria) memiliki 7 goresan, tersusun dari elemen (木, 彡) yang melambangkan konsep intinya.',
     examples: [
-      { word: '杉', reading: 'すぎ', meaning: 'japanese cedar' },
+      { word: '杉', reading: 'すぎ', meaning: 'Japanese cedar' },
       { word: '杉林', reading: 'すぎばやし', meaning: 'Hutan pohon cemara' },
     ],
   },
@@ -7918,8 +7918,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["木","公"],
     mnemonic: 'Karakter 松 (Pine pohon) memiliki 8 goresan, tersusun dari elemen (木, 公) yang melambangkan konsep intinya.',
     examples: [
-      { word: '松', reading: 'まつ', meaning: 'pine tree' },
-      { word: '松林', reading: 'まつばやし', meaning: 'pine forest' },
+      { word: '松', reading: 'まつ', meaning: 'Pine tree' },
+      { word: '松林', reading: 'まつばやし', meaning: 'Pine forest' },
       { word: '浜松', reading: 'はままつ', meaning: 'Hamamatsu (city)' },
     ],
   },
@@ -7936,9 +7936,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["木","斤"],
     mnemonic: 'Karakter 析 (Chop / divide) memiliki 8 goresan, tersusun dari elemen (木, 斤) yang melambangkan konsep intinya.',
     examples: [
-      { word: '分析', reading: 'ぶんせき', meaning: 'analysis' },
-      { word: '解析', reading: 'かいせき', meaning: 'analysis' },
-      { word: '透析', reading: 'とうせき', meaning: 'dialysis' },
+      { word: '分析', reading: 'ぶんせき', meaning: 'Analysis' },
+      { word: '解析', reading: 'かいせき', meaning: 'Analysis' },
+      { word: '透析', reading: 'とうせき', meaning: 'Dialysis' },
     ],
   },
   {
@@ -7971,8 +7971,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["木","卆"],
     mnemonic: 'Karakter 枠 (Frame / framework) memiliki 8 goresan, tersusun dari elemen (木, 卆) yang melambangkan konsep intinya.',
     examples: [
-      { word: '枠', reading: 'わく', meaning: 'frame / slide' },
-      { word: '枠内', reading: 'わくない', meaning: 'within the limits (framework, boundaries, price, etc.)' },
+      { word: '枠', reading: 'わく', meaning: 'Frame / slide' },
+      { word: '枠内', reading: 'わくない', meaning: 'Within the limits (framework, boundaries, price, etc.)' },
       { word: '枠外', reading: 'わくがい', meaning: '(beyond the) limits' },
     ],
   },
@@ -7989,8 +7989,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["木","区"],
     mnemonic: 'Karakter 枢 (Hinge / pivot) memiliki 8 goresan, tersusun dari elemen (木, 区) yang melambangkan konsep intinya.',
     examples: [
-      { word: '中枢', reading: 'ちゅうすう', meaning: 'center / mainstay / nucleus' },
-      { word: '枢軸', reading: 'すうじく', meaning: 'axle' },
+      { word: '中枢', reading: 'ちゅうすう', meaning: 'Center / mainstay / nucleus' },
+      { word: '枢軸', reading: 'すうじく', meaning: 'Axle' },
     ],
   },
   {
@@ -8006,9 +8006,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["加","木"],
     mnemonic: 'Karakter 架 (Erect / frame) memiliki 9 goresan, tersusun dari elemen (加, 木) yang melambangkan konsep intinya.',
     examples: [
-      { word: '担架', reading: 'たんか', meaning: 'stretcher / litter' },
-      { word: '架空', reading: 'かくう', meaning: 'imaginary / fiction / fanciful' },
-      { word: '十字架', reading: 'じゅうじか', meaning: 'cross (for crucifixion)' },
+      { word: '担架', reading: 'たんか', meaning: 'Stretcher / litter' },
+      { word: '架空', reading: 'かくう', meaning: 'Imaginary / fiction / fanciful' },
+      { word: '十字架', reading: 'じゅうじか', meaning: 'Cross (for crucifixion)' },
     ],
   },
   {
@@ -8024,9 +8024,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["木","丙"],
     mnemonic: 'Karakter 柄 (Design / pattern) memiliki 9 goresan, tersusun dari elemen (木, 丙) yang melambangkan konsep intinya.',
     examples: [
-      { word: '柄', reading: 'え', meaning: 'handle (of a sword / dagger / etc.)' },
-      { word: '小柄', reading: 'こがら', meaning: 'small / diminutive' },
-      { word: '事柄', reading: 'ことがら', meaning: 'matter / thing / affair' },
+      { word: '柄', reading: 'え', meaning: 'Handle (of a sword / dagger / etc.)' },
+      { word: '小柄', reading: 'こがら', meaning: 'Small / diminutive' },
+      { word: '事柄', reading: 'ことがら', meaning: 'Matter / thing / affair' },
     ],
   },
   {
@@ -8060,8 +8060,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 柳 (Willow) memiliki 9 goresan, tersusun dari elemen (木, 卯) yang melambangkan konsep intinya.',
     examples: [
       { word: '宇柳貝', reading: 'ウルグアイ', meaning: 'Uruguay' },
-      { word: '川柳', reading: 'せんりゅう', meaning: 'senryū' },
-      { word: '花柳', reading: 'かりゅう', meaning: 'red-light district' },
+      { word: '川柳', reading: 'せんりゅう', meaning: 'Senryū' },
+      { word: '花柳', reading: 'かりゅう', meaning: 'Red-light district' },
     ],
   },
   {
@@ -8077,7 +8077,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["木","冊"],
     mnemonic: 'Karakter 柵 (Stockade / fence) memiliki 9 goresan, tersusun dari elemen (木, 冊) yang melambangkan konsep intinya.',
     examples: [
-      { word: '柵', reading: 'さく', meaning: 'fence / paling' },
+      { word: '柵', reading: 'さく', meaning: 'Fence / paling' },
       { word: '鉄柵', reading: 'てっさく', meaning: 'Pagar teralis besi' },
     ],
   },
@@ -8128,8 +8128,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["木","全"],
     mnemonic: 'Karakter 栓 (Plug / bolt) memiliki 10 goresan, tersusun dari elemen (木, 全) yang melambangkan konsep intinya.',
     examples: [
-      { word: '栓', reading: 'せん', meaning: 'stopper / cork / stopcock' },
-      { word: '栓抜き', reading: 'せんぬき', meaning: 'bottle opener' },
+      { word: '栓', reading: 'せん', meaning: 'Stopper / cork / stopcock' },
+      { word: '栓抜き', reading: 'せんぬき', meaning: 'Bottle opener' },
     ],
   },
   {
@@ -8145,9 +8145,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["木","朱"],
     mnemonic: 'Karakter 株 (Stocks / stump) memiliki 10 goresan, tersusun dari elemen (木, 朱) yang melambangkan konsep intinya.',
     examples: [
-      { word: '株', reading: 'かぶ', meaning: 'stock / stump (of tree)' },
+      { word: '株', reading: 'かぶ', meaning: 'Stock / stump (of tree)' },
       { word: '株式', reading: 'かぶしき', meaning: 'Saham' },
-      { word: '持ち株', reading: 'もちかぶ', meaning: 'stock holdings' },
+      { word: '持ち株', reading: 'もちかぶ', meaning: 'Stock holdings' },
     ],
   },
   {
@@ -8163,9 +8163,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["木","亥"],
     mnemonic: 'Karakter 核 (Nucleus / core) memiliki 10 goresan, tersusun dari elemen (木, 亥) yang melambangkan konsep intinya.',
     examples: [
-      { word: '核', reading: 'かく', meaning: 'nucleus / kernel' },
-      { word: '結核', reading: 'けっかく', meaning: 'tuberculosis' },
-      { word: '中核', reading: 'ちゅうかく', meaning: 'kernel' },
+      { word: '核', reading: 'かく', meaning: 'Nucleus / kernel' },
+      { word: '結核', reading: 'けっかく', meaning: 'Tuberculosis' },
+      { word: '中核', reading: 'ちゅうかく', meaning: 'Kernel' },
     ],
   },
   {
@@ -8181,8 +8181,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["𢦏","木"],
     mnemonic: 'Karakter 栽 (Plantation / planting) memiliki 10 goresan, tersusun dari elemen (𢦏, 木) yang melambangkan konsep intinya.',
     examples: [
-      { word: '栽培', reading: 'さいばい', meaning: 'cultivation' },
-      { word: '盆栽', reading: 'ぼんさい', meaning: 'bonsai' },
+      { word: '栽培', reading: 'さいばい', meaning: 'Cultivation' },
+      { word: '盆栽', reading: 'ぼんさい', meaning: 'Bonsai' },
     ],
   },
   {
@@ -8198,7 +8198,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["木","行"],
     mnemonic: 'Karakter 桁 (Beam / girder) memiliki 10 goresan, tersusun dari elemen (木, 行) yang melambangkan konsep intinya.',
     examples: [
-      { word: '桁', reading: 'けた', meaning: 'column / beam / digit' },
+      { word: '桁', reading: 'けた', meaning: 'Column / beam / digit' },
       { word: '桁違い', reading: 'けたちがい', meaning: 'Berbeda jauh skala mutunya' },
     ],
   },
@@ -8215,8 +8215,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["木","兆"],
     mnemonic: 'Karakter 桃 (Peach) memiliki 10 goresan, tersusun dari elemen (木, 兆) yang melambangkan konsep intinya.',
     examples: [
-      { word: '桃色', reading: 'ももいろ', meaning: 'pink (colour, color)' },
-      { word: '胡桃', reading: 'くるみ', meaning: 'walnut (Juglans spp., esp. Juglans regia)' },
+      { word: '桃色', reading: 'ももいろ', meaning: 'Pink (colour, color)' },
+      { word: '胡桃', reading: 'くるみ', meaning: 'Walnut (Juglans spp., esp. Juglans regia)' },
     ],
   },
   {
@@ -8232,9 +8232,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["叒","木"],
     mnemonic: 'Karakter 桑 (Mulberry) memiliki 10 goresan, tersusun dari elemen (叒, 木) yang melambangkan konsep intinya.',
     examples: [
-      { word: '桑原', reading: 'くわばら', meaning: 'mulberry field' },
-      { word: '桑田', reading: 'そうでん', meaning: 'mulberry plantation' },
-      { word: '桑畑', reading: 'くわばたけ', meaning: 'mulberry field' },
+      { word: '桑原', reading: 'くわばら', meaning: 'Mulberry field' },
+      { word: '桑田', reading: 'そうでん', meaning: 'Mulberry plantation' },
+      { word: '桑畑', reading: 'くわばたけ', meaning: 'Mulberry field' },
     ],
   },
   {
@@ -8250,9 +8250,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["木","𭕄","女"],
     mnemonic: 'Karakter 桜 (Cherry) memiliki 10 goresan, tersusun dari elemen (木, 𭕄, 女) yang melambangkan konsep intinya.',
     examples: [
-      { word: '桜', reading: 'さくら', meaning: 'cherry blossom / cherry tree' },
-      { word: '八重桜', reading: 'やえざくら', meaning: 'double-flowered cherry tree' },
-      { word: '桜花', reading: 'おうか', meaning: 'cherry blossom' },
+      { word: '桜', reading: 'さくら', meaning: 'Cherry blossom / cherry tree' },
+      { word: '八重桜', reading: 'やえざくら', meaning: 'Double-flowered cherry tree' },
+      { word: '桜花', reading: 'おうか', meaning: 'Cherry blossom' },
     ],
   },
   {
@@ -8268,7 +8268,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["木","㦮"],
     mnemonic: 'Karakter 桟 (Scaffold / cleat) memiliki 10 goresan, tersusun dari elemen (木, 㦮) yang melambangkan konsep intinya.',
     examples: [
-      { word: '桟橋', reading: 'さんばし', meaning: 'wharf / jetty / pier' },
+      { word: '桟橋', reading: 'さんばし', meaning: 'Wharf / jetty / pier' },
       { word: '桟語', reading: 'サンご', meaning: 'Istilah / kosakata terkait Scaffold / cleat' },
     ],
   },
@@ -8285,9 +8285,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["木","每"],
     mnemonic: 'Karakter 梅 (Plum) memiliki 10 goresan, tersusun dari elemen (木, 每) yang melambangkan konsep intinya.',
     examples: [
-      { word: '梅', reading: 'うめ', meaning: 'plum / lowest (of a three-tier ranking system)' },
-      { word: '梅雨', reading: 'つゆ', meaning: 'rainy season' },
-      { word: '梅干し', reading: 'うめぼし', meaning: 'dried plum' },
+      { word: '梅', reading: 'うめ', meaning: 'Plum / lowest (of a three-tier ranking system)' },
+      { word: '梅雨', reading: 'つゆ', meaning: 'Rainy season' },
+      { word: '梅干し', reading: 'うめぼし', meaning: 'Dried plum' },
     ],
   },
   {
@@ -8303,7 +8303,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["木","更"],
     mnemonic: 'Karakter 梗 (For the most part / close up) memiliki 11 goresan, tersusun dari elemen (木, 更) yang melambangkan konsep intinya.',
     examples: [
-      { word: '梗塞', reading: 'こうそく', meaning: 'stoppage' },
+      { word: '梗塞', reading: 'こうそく', meaning: 'Stoppage' },
       { word: '脳梗塞', reading: 'のうこうそく', meaning: 'Stroke penyumbatan otak infark' },
       { word: '心筋梗塞', reading: 'しんきんこうそく', meaning: 'Serangan infark otot jantung' },
     ],
@@ -8339,8 +8339,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 棄 (Abandon / throw away) memiliki 13 goresan, tersusun dari elemen (𠫓, 廿, 木) yang melambangkan konsep intinya.',
     examples: [
       { word: '棄却', reading: 'ききゃく', meaning: 'Penolakan perkara oleh majelis hakim' },
-      { word: '廃棄', reading: 'はいき', meaning: 'disposal / abandon / discarding' },
-      { word: '棄権', reading: 'きけん', meaning: 'abstain from voting / renunciation of a right' },
+      { word: '廃棄', reading: 'はいき', meaning: 'Disposal / abandon / discarding' },
+      { word: '棄権', reading: 'きけん', meaning: 'Abstain from voting / renunciation of a right' },
     ],
   },
   {
@@ -8356,9 +8356,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["木","其"],
     mnemonic: 'Karakter 棋 (Permainan catur shogi / Papan bidak) memiliki 12 goresan, tersusun dari elemen (木, 其) yang melambangkan konsep intinya.',
     examples: [
-      { word: '将棋', reading: 'しょうぎ', meaning: 'japanese chess' },
-      { word: '将棋倒し', reading: 'しょうぎだおし', meaning: 'falling down one after another (like dominoes)' },
-      { word: '棋士', reading: 'きし', meaning: 'professional shogi player' },
+      { word: '将棋', reading: 'しょうぎ', meaning: 'Japanese chess' },
+      { word: '将棋倒し', reading: 'しょうぎだおし', meaning: 'Falling down one after another (like dominoes)' },
+      { word: '棋士', reading: 'きし', meaning: 'Professional shogi player' },
     ],
   },
   {
@@ -8374,9 +8374,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["木","朋"],
     mnemonic: 'Karakter 棚 (Shelf / ledge) memiliki 12 goresan, tersusun dari elemen (木, 朋) yang melambangkan konsep intinya.',
     examples: [
-      { word: '本棚', reading: 'ほんだな', meaning: 'bookshelf' },
-      { word: '棚', reading: 'たな', meaning: 'shelves / rack' },
-      { word: '戸棚', reading: 'とだな', meaning: 'cupboard / cabinet' },
+      { word: '本棚', reading: 'ほんだな', meaning: 'Bookshelf' },
+      { word: '棚', reading: 'たな', meaning: 'Shelves / rack' },
+      { word: '戸棚', reading: 'とだな', meaning: 'Cupboard / cabinet' },
     ],
   },
   {
@@ -8392,8 +8392,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["木","東"],
     mnemonic: 'Karakter 棟 (Ridgepole / ridge) memiliki 12 goresan, tersusun dari elemen (木, 東) yang melambangkan konsep intinya.',
     examples: [
-      { word: '棟', reading: 'とう', meaning: 'ridge (of roof' },
-      { word: '別棟', reading: 'べつむね', meaning: 'separate building' },
+      { word: '棟', reading: 'とう', meaning: 'Ridge (of roof' },
+      { word: '別棟', reading: 'べつむね', meaning: 'Separate building' },
       { word: '病棟', reading: 'びょうとう', meaning: '(hospital) ward' },
     ],
   },
@@ -8410,7 +8410,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["木","官"],
     mnemonic: 'Karakter 棺 (Peti mati jenazah) memiliki 12 goresan, tersusun dari elemen (木, 官) yang melambangkan konsep intinya.',
     examples: [
-      { word: '石棺', reading: 'せっかん', meaning: 'sarcophagus' },
+      { word: '石棺', reading: 'せっかん', meaning: 'Sarcophagus' },
       { word: '棺', reading: 'ひつぎ', meaning: 'Peti mati jenazah' },
       { word: '棺桶', reading: 'かんおけ', meaning: 'Peti mati kayu jenazah' },
     ],
@@ -8428,8 +8428,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["木","奇"],
     mnemonic: 'Karakter 椅 (Chair) memiliki 12 goresan, tersusun dari elemen (木, 奇) yang melambangkan konsep intinya.',
     examples: [
-      { word: '椅子', reading: 'いす', meaning: 'chair' },
-      { word: '車椅子', reading: 'くるまいす', meaning: 'wheelchair' },
+      { word: '椅子', reading: 'いす', meaning: 'Chair' },
+      { word: '車椅子', reading: 'くるまいす', meaning: 'Wheelchair' },
     ],
   },
   {
@@ -8445,7 +8445,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["木","隹"],
     mnemonic: 'Karakter 椎 (Chinquapin / mallet) memiliki 12 goresan, tersusun dari elemen (木, 隹) yang melambangkan konsep intinya.',
     examples: [
-      { word: '椎茸', reading: 'しいたけ', meaning: 'shiitake mushroom (Lentinula edodes)' },
+      { word: '椎茸', reading: 'しいたけ', meaning: 'Shiitake mushroom (Lentinula edodes)' },
       { word: '脊椎', reading: 'せきつい', meaning: 'Tulang belakang vertebra' },
     ],
   },
@@ -8462,7 +8462,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["木","皆"],
     mnemonic: 'Karakter 楷 (Square character style / correctness) memiliki 13 goresan, tersusun dari elemen (木, 皆) yang melambangkan konsep intinya.',
     examples: [
-      { word: '楷書', reading: 'かいしょ', meaning: 'printed style (of writing Chinese characters)' },
+      { word: '楷書', reading: 'かいしょ', meaning: 'Printed style (of writing Chinese characters)' },
       { word: '楷体', reading: 'かいたい', meaning: 'Bentuk huruf kaligrafi standar' },
     ],
   },
@@ -8479,9 +8479,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["木","娄"],
     mnemonic: 'Karakter 楼 (Watchtower / lookout) memiliki 13 goresan, tersusun dari elemen (木, 娄) yang melambangkan konsep intinya.',
     examples: [
-      { word: '摩天楼', reading: 'まてんろう', meaning: 'skyscraper' },
-      { word: '楼閣', reading: 'ろうかく', meaning: 'multistoried building' },
-      { word: '鐘楼', reading: 'しょうろう', meaning: 'belfry' },
+      { word: '摩天楼', reading: 'まてんろう', meaning: 'Skyscraper' },
+      { word: '楼閣', reading: 'ろうかく', meaning: 'Multistoried building' },
+      { word: '鐘楼', reading: 'しょうろう', meaning: 'Belfry' },
     ],
   },
   {
@@ -8497,9 +8497,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["木","既"],
     mnemonic: 'Karakter 概 (Garis besar / Gambaran umum) memiliki 14 goresan, tersusun dari elemen (木, 既) yang melambangkan konsep intinya.',
     examples: [
-      { word: '一概に', reading: 'いちがいに', meaning: 'unconditionally / necessarily' },
-      { word: '概説', reading: 'がいせつ', meaning: 'general statement / outline' },
-      { word: '概念', reading: 'がいねん', meaning: 'general idea / concept / notion' },
+      { word: '一概に', reading: 'いちがいに', meaning: 'Unconditionally / necessarily' },
+      { word: '概説', reading: 'がいせつ', meaning: 'General statement / outline' },
+      { word: '概念', reading: 'がいねん', meaning: 'General idea / concept / notion' },
     ],
   },
   {
@@ -8515,9 +8515,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["木","曹"],
     mnemonic: 'Karakter 槽 (Bak penampungan / Tangki cairan) memiliki 15 goresan, tersusun dari elemen (木, 曹) yang melambangkan konsep intinya.',
     examples: [
-      { word: '水槽', reading: 'すいそう', meaning: 'water tank' },
-      { word: '浄化槽', reading: 'じょうかそう', meaning: 'water-purification tank' },
-      { word: '浴槽', reading: 'よくそう', meaning: 'bathtub' },
+      { word: '水槽', reading: 'すいそう', meaning: 'Water tank' },
+      { word: '浄化槽', reading: 'じょうかそう', meaning: 'Water-purification tank' },
+      { word: '浴槽', reading: 'よくそう', meaning: 'Bathtub' },
     ],
   },
   {
@@ -8533,9 +8533,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["木","尌"],
     mnemonic: 'Karakter 樹 (Timber / trees) memiliki 16 goresan, tersusun dari elemen (木, 尌) yang melambangkan konsep intinya.',
     examples: [
-      { word: '樹木', reading: 'じゅもく', meaning: 'trees and shrubs / arbor' },
-      { word: '樹立', reading: 'じゅりつ', meaning: 'establish / create' },
-      { word: '広葉樹', reading: 'こうようじゅ', meaning: 'broadleaf tree' },
+      { word: '樹木', reading: 'じゅもく', meaning: 'Trees and shrubs / arbor' },
+      { word: '樹立', reading: 'じゅりつ', meaning: 'Establish / create' },
+      { word: '広葉樹', reading: 'こうようじゅ', meaning: 'Broadleaf tree' },
     ],
   },
   {
@@ -8551,9 +8551,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["木","闌"],
     mnemonic: 'Karakter 欄 (Column / handrail) memiliki 20 goresan, tersusun dari elemen (木, 闌) yang melambangkan konsep intinya.',
     examples: [
-      { word: '欄', reading: 'らん', meaning: 'column of text (e.g. / as in a newspaper)' },
-      { word: '本欄', reading: 'ほんらん', meaning: 'this column' },
-      { word: '欄外', reading: 'らんがい', meaning: 'margin' },
+      { word: '欄', reading: 'らん', meaning: 'Column of text (e.g. / as in a newspaper)' },
+      { word: '本欄', reading: 'ほんらん', meaning: 'This column' },
+      { word: '欄外', reading: 'らんがい', meaning: 'Margin' },
     ],
   },
   {
@@ -8569,9 +8569,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["士","示","欠"],
     mnemonic: 'Karakter 款 (Goodwill / article) memiliki 12 goresan, tersusun dari elemen (士, 示, 欠) yang melambangkan konsep intinya.',
     examples: [
-      { word: '借款', reading: 'しゃっかん', meaning: 'loan (esp. between governments)' },
-      { word: '定款', reading: 'ていかん', meaning: 'articles of incorporation' },
-      { word: '約款', reading: 'やっかん', meaning: 'agreement' },
+      { word: '借款', reading: 'しゃっかん', meaning: 'Loan (esp. between governments)' },
+      { word: '定款', reading: 'ていかん', meaning: 'Articles of incorporation' },
+      { word: '約款', reading: 'やっかん', meaning: 'Agreement' },
     ],
   },
   {
@@ -8587,9 +8587,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["𮥶","欠"],
     mnemonic: 'Karakter 歓 (Sukacita gembira ria) memiliki 15 goresan, tersusun dari elemen (𮥶, 欠) yang melambangkan konsep intinya.',
     examples: [
-      { word: '歓迎', reading: 'かんげい', meaning: 'welcome / reception' },
-      { word: '歓声', reading: 'かんせい', meaning: 'cheer / shout of joy' },
-      { word: '大歓迎', reading: 'だいかんげい', meaning: 'big welcome' },
+      { word: '歓迎', reading: 'かんげい', meaning: 'Welcome / reception' },
+      { word: '歓声', reading: 'かんせい', meaning: 'Cheer / shout of joy' },
+      { word: '大歓迎', reading: 'だいかんげい', meaning: 'Big welcome' },
     ],
   },
   {
@@ -8605,8 +8605,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["歹","旬"],
     mnemonic: 'Karakter 殉 (Martyrdom / follow by resigning) memiliki 10 goresan, tersusun dari elemen (歹, 旬) yang melambangkan konsep intinya.',
     examples: [
-      { word: '殉職', reading: 'じゅんしょく', meaning: 'dying at one\'s post' },
-      { word: '殉難', reading: 'じゅんなん', meaning: 'martyrdom' },
+      { word: '殉職', reading: 'じゅんしょく', meaning: 'Dying at one\'s post' },
+      { word: '殉難', reading: 'じゅんなん', meaning: 'Martyrdom' },
     ],
   },
   {
@@ -8622,9 +8622,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["歹","朱"],
     mnemonic: 'Karakter 殊 (Particularly / especially) memiliki 10 goresan, tersusun dari elemen (歹, 朱) yang melambangkan konsep intinya.',
     examples: [
-      { word: '殊に', reading: 'ことに', meaning: 'especially / above all' },
-      { word: '特殊', reading: 'とくしゅ', meaning: 'special / unique' },
-      { word: '殊勝', reading: 'しゅしょう', meaning: 'admirable' },
+      { word: '殊に', reading: 'ことに', meaning: 'Especially / above all' },
+      { word: '特殊', reading: 'とくしゅ', meaning: 'Special / unique' },
+      { word: '殊勝', reading: 'しゅしょう', meaning: 'Admirable' },
     ],
   },
   {
@@ -8640,9 +8640,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["歹","直"],
     mnemonic: 'Karakter 殖 (Berkembang biak / Melipatgandakan aset) memiliki 12 goresan, tersusun dari elemen (歹, 直) yang melambangkan konsep intinya.',
     examples: [
-      { word: '殖やす', reading: 'ふやす', meaning: 'melakukan increase / melakukan add to' },
-      { word: '繁殖', reading: 'はんしょく', meaning: 'breed / multiply / propagation' },
-      { word: '利殖', reading: 'りしょく', meaning: 'money-making' },
+      { word: '殖やす', reading: 'ふやす', meaning: 'Meningkat / Bertambah / Add to' },
+      { word: '繁殖', reading: 'はんしょく', meaning: 'Breed / multiply / propagation' },
+      { word: '利殖', reading: 'りしょく', meaning: 'Money-making' },
     ],
   },
   {
@@ -8658,9 +8658,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["区","殳"],
     mnemonic: 'Karakter 殴 (Assault / hit) memiliki 8 goresan, tersusun dari elemen (区, 殳) yang melambangkan konsep intinya.',
     examples: [
-      { word: '殴る', reading: 'なぐる', meaning: 'melakukan strike / melakukan hit / melakukan punch' },
-      { word: '殴り込み', reading: 'なぐりこみ', meaning: 'raid' },
-      { word: '殴打', reading: 'おうだ', meaning: 'hit' },
+      { word: '殴る', reading: 'なぐる', meaning: 'Memukul / Menyerang / Memukul / Mengenai / Punch' },
+      { word: '殴り込み', reading: 'なぐりこみ', meaning: 'Raid' },
+      { word: '殴打', reading: 'おうだ', meaning: 'Hit' },
     ],
   },
   {
@@ -8676,9 +8676,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["壳","殳"],
     mnemonic: 'Karakter 殻 (Husk / nut shell) memiliki 11 goresan, tersusun dari elemen (壳, 殳) yang melambangkan konsep intinya.',
     examples: [
-      { word: '殻', reading: 'から', meaning: 'shell / husk / hull' },
-      { word: '貝殻', reading: 'かいがら', meaning: 'shell' },
-      { word: '吸い殻', reading: 'すいがら', meaning: 'cigarette end' },
+      { word: '殻', reading: 'から', meaning: 'Shell / husk / hull' },
+      { word: '貝殻', reading: 'かいがら', meaning: 'Shell' },
+      { word: '吸い殻', reading: 'すいがら', meaning: 'Cigarette end' },
     ],
   },
   {
@@ -8694,9 +8694,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["氏"],
     mnemonic: 'Karakter 氏 (Keluarga name / surname) memiliki 4 goresan, tersusun dari elemen (氏) yang melambangkan konsep intinya.',
     examples: [
-      { word: '氏', reading: 'し', meaning: 'family name / lineage' },
-      { word: '氏名', reading: 'しめい', meaning: 'full name' },
-      { word: '両氏', reading: 'りょうし', meaning: 'both persons' },
+      { word: '氏', reading: 'し', meaning: 'Family name / lineage' },
+      { word: '氏名', reading: 'しめい', meaning: 'Full name' },
+      { word: '両氏', reading: 'りょうし', meaning: 'Both persons' },
     ],
   },
   {
@@ -8712,9 +8712,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["氵","十"],
     mnemonic: 'Karakter 汁 (Soup / juice) memiliki 5 goresan, tersusun dari elemen (氵, 十) yang melambangkan konsep intinya.',
     examples: [
-      { word: '汁', reading: 'しる', meaning: 'juice / soup' },
-      { word: '味噌汁', reading: 'みそしる', meaning: 'miso soup' },
-      { word: '果汁', reading: 'かじゅう', meaning: 'fruit juice' },
+      { word: '汁', reading: 'しる', meaning: 'Juice / soup' },
+      { word: '味噌汁', reading: 'みそしる', meaning: 'Miso soup' },
+      { word: '果汁', reading: 'かじゅう', meaning: 'Fruit juice' },
     ],
   },
   {
@@ -8730,7 +8730,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["氵","凡"],
     mnemonic: 'Karakter 汎 (Pan-) memiliki 6 goresan, tersusun dari elemen (氵, 凡) yang melambangkan konsep intinya.',
     examples: [
-      { word: '汎用', reading: 'はんよう', meaning: 'generic' },
+      { word: '汎用', reading: 'はんよう', meaning: 'Generic' },
       { word: '汎用性', reading: 'はんようせい', meaning: 'Fleksibilitas keserbagunaan' },
     ],
   },
@@ -8747,7 +8747,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["氵","工"],
     mnemonic: 'Karakter 江 (Creek / inlet) memiliki 6 goresan, tersusun dari elemen (氵, 工) yang melambangkan konsep intinya.',
     examples: [
-      { word: '堀江', reading: 'ほりえ', meaning: 'canal' },
+      { word: '堀江', reading: 'ほりえ', meaning: 'Canal' },
       { word: '江戸', reading: 'えど', meaning: 'Edo (shogunate capital; former name of Tokyo)' },
       { word: '江戸っ子', reading: 'えどっこ', meaning: '(true) Tokyoite' },
     ],
@@ -8766,8 +8766,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 汰 (Washing / sieving) memiliki 7 goresan, tersusun dari elemen (氵, 太) yang melambangkan konsep intinya.',
     examples: [
       { word: '淘汰', reading: 'とうた', meaning: 'Seleksi alamiah / Eliminasi / Penyaringan' },
-      { word: '御無沙汰', reading: 'ごぶさた', meaning: 'not writing or contacting for a while' },
-      { word: '無沙汰', reading: 'ぶさた', meaning: 'neglecting to stay in contact' },
+      { word: '御無沙汰', reading: 'ごぶさた', meaning: 'Not writing or contacting for a while' },
+      { word: '無沙汰', reading: 'ぶさた', meaning: 'Neglecting to stay in contact' },
     ],
   },
   {
@@ -8783,9 +8783,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["氵","气"],
     mnemonic: 'Karakter 汽 (Vapor / steam) memiliki 7 goresan, tersusun dari elemen (氵, 气) yang melambangkan konsep intinya.',
     examples: [
-      { word: '汽車', reading: 'きしゃ', meaning: 'train (steam)' },
-      { word: '汽船', reading: 'きせん', meaning: 'steamship' },
-      { word: '汽笛', reading: 'きてき', meaning: 'steam whistle' },
+      { word: '汽車', reading: 'きしゃ', meaning: 'Train (steam)' },
+      { word: '汽船', reading: 'きせん', meaning: 'Steamship' },
+      { word: '汽笛', reading: 'きてき', meaning: 'Steam whistle' },
     ],
   },
   {
@@ -8818,8 +8818,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["氵","中"],
     mnemonic: 'Karakter 沖 (Open sea / offing) memiliki 7 goresan, tersusun dari elemen (氵, 中) yang melambangkan konsep intinya.',
     examples: [
-      { word: '沖', reading: 'おき', meaning: 'open sea' },
-      { word: '沖合', reading: 'おきあい', meaning: 'off the coast' },
+      { word: '沖', reading: 'おき', meaning: 'Open sea' },
+      { word: '沖合', reading: 'おきあい', meaning: 'Off the coast' },
       { word: '沖縄', reading: 'おきなわ', meaning: 'Okinawa (city, prefecture)' },
     ],
   },
@@ -8836,9 +8836,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["氵","少"],
     mnemonic: 'Karakter 沙 (Sand) memiliki 7 goresan, tersusun dari elemen (氵, 少) yang melambangkan konsep intinya.',
     examples: [
-      { word: '御無沙汰', reading: 'ごぶさた', meaning: 'not writing or contacting for a while' },
-      { word: '無沙汰', reading: 'ぶさた', meaning: 'neglecting to stay in contact' },
-      { word: 'ご無沙汰', reading: 'ごぶさた', meaning: 'not writing or contacting for a while' },
+      { word: '御無沙汰', reading: 'ごぶさた', meaning: 'Not writing or contacting for a while' },
+      { word: '無沙汰', reading: 'ぶさた', meaning: 'Neglecting to stay in contact' },
+      { word: 'ご無沙汰', reading: 'ごぶさた', meaning: 'Not writing or contacting for a while' },
     ],
   },
   {
@@ -8855,8 +8855,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 没 (Drown / sink) memiliki 7 goresan, tersusun dari elemen (氵, 殳) yang melambangkan konsep intinya.',
     examples: [
       { word: '陥没', reading: 'かんぼつ', meaning: 'Ambles / Runtuh ke dalam / Amblas' },
-      { word: '沈没', reading: 'ちんぼつ', meaning: 'sinking / foundering' },
-      { word: '没収', reading: 'ぼっしゅう', meaning: 'forfeited' },
+      { word: '沈没', reading: 'ちんぼつ', meaning: 'Sinking / foundering' },
+      { word: '没収', reading: 'ぼっしゅう', meaning: 'Forfeited' },
     ],
   },
   {
@@ -8872,9 +8872,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["氵","尺"],
     mnemonic: 'Karakter 沢 (Swamp / marsh) memiliki 7 goresan, tersusun dari elemen (氵, 尺) yang melambangkan konsep intinya.',
     examples: [
-      { word: '沢山', reading: 'たくさん', meaning: 'many / much' },
-      { word: '贅沢', reading: 'ぜいたく', meaning: 'luxury / extravagance' },
-      { word: '光沢', reading: 'こうたく', meaning: 'luster / glossy finish (of photographs)' },
+      { word: '沢山', reading: 'たくさん', meaning: 'Many / much' },
+      { word: '贅沢', reading: 'ぜいたく', meaning: 'Luxury / extravagance' },
+      { word: '光沢', reading: 'こうたく', meaning: 'Luster / glossy finish (of photographs)' },
     ],
   },
   {
@@ -8890,9 +8890,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["氵","召"],
     mnemonic: 'Karakter 沼 (Marsh / lake) memiliki 8 goresan, tersusun dari elemen (氵, 召) yang melambangkan konsep intinya.',
     examples: [
-      { word: '沼', reading: 'ぬま', meaning: 'swamp / bog / pond' },
-      { word: '沼地', reading: 'ぬまち', meaning: 'marshland' },
-      { word: '沼沢', reading: 'しょうたく', meaning: 'marsh' },
+      { word: '沼', reading: 'ぬま', meaning: 'Swamp / bog / pond' },
+      { word: '沼地', reading: 'ぬまち', meaning: 'Marshland' },
+      { word: '沼沢', reading: 'しょうたく', meaning: 'Marsh' },
     ],
   },
   {
@@ -8908,9 +8908,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["氵","几","口"],
     mnemonic: 'Karakter 沿 (Berlari alongside / follow along) memiliki 8 goresan, tersusun dari elemen (氵, 几, 口) yang melambangkan konsep intinya.',
     examples: [
-      { word: '沿う', reading: 'そう', meaning: 'melakukan run along / melakukan follow' },
-      { word: '沿岸', reading: 'えんがん', meaning: 'coast / shore' },
-      { word: '沿線', reading: 'えんせん', meaning: 'along railway line' },
+      { word: '沿う', reading: 'そう', meaning: 'Berlari (along) / Mengikuti' },
+      { word: '沿岸', reading: 'えんがん', meaning: 'Coast / shore' },
+      { word: '沿線', reading: 'えんせん', meaning: 'Along railway line' },
     ],
   },
   {
@@ -8926,9 +8926,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["氵","必"],
     mnemonic: 'Karakter 泌 (Ooze / flow) memiliki 8 goresan, tersusun dari elemen (氵, 必) yang melambangkan konsep intinya.',
     examples: [
-      { word: '内分泌', reading: 'ないぶんぴつ', meaning: 'endocrine' },
-      { word: '分泌', reading: 'ぶんぴつ', meaning: 'secretion' },
-      { word: '泌尿器', reading: 'ひにょうき', meaning: 'urinary organs' },
+      { word: '内分泌', reading: 'ないぶんぴつ', meaning: 'Endocrine' },
+      { word: '分泌', reading: 'ぶんぴつ', meaning: 'Secretion' },
+      { word: '泌尿器', reading: 'ひにょうき', meaning: 'Urinary organs' },
     ],
   },
   {
@@ -8944,9 +8944,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["氵","包"],
     mnemonic: 'Karakter 泡 (Bubbles / foam) memiliki 8 goresan, tersusun dari elemen (氵, 包) yang melambangkan konsep intinya.',
     examples: [
-      { word: '泡', reading: 'あわ', meaning: 'bubble / foam' },
+      { word: '泡', reading: 'あわ', meaning: 'Bubble / foam' },
       { word: '気泡', reading: 'きほう', meaning: '(air) bubble (esp. in a liquid)' },
-      { word: '水泡', reading: 'すいほう', meaning: 'foam' },
+      { word: '水泡', reading: 'すいほう', meaning: 'Foam' },
     ],
   },
   {
@@ -8963,7 +8963,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 泰 (Tenang damai sentosa / Megah agung) memiliki 10 goresan, tersusun dari elemen (𡗗, 氺) yang melambangkan konsep intinya.',
     examples: [
       { word: '泰然自若', reading: 'たいぜんじじゃく', meaning: 'Tetap bersikap tenang tidak gentar meski diterpa guncangan dahsyat' },
-      { word: '安泰', reading: 'あんたい', meaning: 'security' },
+      { word: '安泰', reading: 'あんたい', meaning: 'Security' },
     ],
   },
   {
@@ -8979,9 +8979,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["氵","同"],
     mnemonic: 'Karakter 洞 (Den / cave) memiliki 9 goresan, tersusun dari elemen (氵, 同) yang melambangkan konsep intinya.',
     examples: [
-      { word: '洞察', reading: 'どうさつ', meaning: 'discernment' },
-      { word: '洞穴', reading: 'ほらあな', meaning: 'cave' },
-      { word: '洞窟', reading: 'どうくつ', meaning: 'cave' },
+      { word: '洞察', reading: 'どうさつ', meaning: 'Discernment' },
+      { word: '洞穴', reading: 'ほらあな', meaning: 'Cave' },
+      { word: '洞窟', reading: 'どうくつ', meaning: 'Cave' },
     ],
   },
   {
@@ -8997,8 +8997,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["氵","聿"],
     mnemonic: 'Karakter 津 (Haven / port) memiliki 9 goresan, tersusun dari elemen (氵, 聿) yang melambangkan konsep intinya.',
     examples: [
-      { word: '津波', reading: 'つなみ', meaning: 'tsunami / tidal wave' },
-      { word: '天津', reading: 'あまつ', meaning: 'heavenly' },
+      { word: '津波', reading: 'つなみ', meaning: 'Tsunami / tidal wave' },
+      { word: '天津', reading: 'あまつ', meaning: 'Heavenly' },
       { word: '牛津', reading: 'オックスフォード', meaning: 'Oxford' },
     ],
   },
@@ -9015,7 +9015,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["氵","共"],
     mnemonic: 'Karakter 洪 (Deluge / flood) memiliki 9 goresan, tersusun dari elemen (氵, 共) yang melambangkan konsep intinya.',
     examples: [
-      { word: '洪水', reading: 'こうずい', meaning: 'flood' },
+      { word: '洪水', reading: 'こうずい', meaning: 'Flood' },
       { word: '洪語', reading: 'コウご', meaning: 'Istilah / kosakata terkait Deluge / flood' },
     ],
   },
@@ -9032,9 +9032,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["氵","𠂢"],
     mnemonic: 'Karakter 派 (Faction / group) memiliki 9 goresan, tersusun dari elemen (氵, 𠂢) yang melambangkan konsep intinya.',
     examples: [
-      { word: '派手', reading: 'はで', meaning: 'showy / flashy / gaudy' },
-      { word: '特派', reading: 'とくは', meaning: 'send specially / special envoy' },
-      { word: '～派', reading: '～は', meaning: 'kelompok / grup / party / section (mil)' },
+      { word: '派手', reading: 'はで', meaning: 'Showy / flashy / gaudy' },
+      { word: '特派', reading: 'とくは', meaning: 'Send specially / special envoy' },
+      { word: '～派', reading: '～は', meaning: 'Kelompok / grup / party / section (mil)' },
     ],
   },
   {
@@ -9050,8 +9050,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["氵","兵"],
     mnemonic: 'Karakter 浜 (Seacoast / beach) memiliki 10 goresan, tersusun dari elemen (氵, 兵) yang melambangkan konsep intinya.',
     examples: [
-      { word: '浜', reading: 'はま', meaning: 'beach / seashore' },
-      { word: '浜辺', reading: 'はまべ', meaning: 'beach / foreshore' },
+      { word: '浜', reading: 'はま', meaning: 'Beach / seashore' },
+      { word: '浜辺', reading: 'はまべ', meaning: 'Beach / foreshore' },
       { word: '横浜', reading: 'よこはま', meaning: 'Yokohama (city)' },
     ],
   },
@@ -9085,9 +9085,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["氵","良"],
     mnemonic: 'Karakter 浪 (Wandering / waves) memiliki 10 goresan, tersusun dari elemen (氵, 良) yang melambangkan konsep intinya.',
     examples: [
-      { word: '浪費', reading: 'ろうひ', meaning: 'waste / extravagance' },
-      { word: '放浪', reading: 'ほうろう', meaning: 'wandering' },
-      { word: '波浪', reading: 'はろう', meaning: 'waves' },
+      { word: '浪費', reading: 'ろうひ', meaning: 'Waste / extravagance' },
+      { word: '放浪', reading: 'ほうろう', meaning: 'Wandering' },
+      { word: '波浪', reading: 'はろう', meaning: 'Waves' },
     ],
   },
   {
@@ -9103,9 +9103,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["氵","𠬶"],
     mnemonic: 'Karakter 浸 (Immersed / soak) memiliki 10 goresan, tersusun dari elemen (氵, 𠬶) yang melambangkan konsep intinya.',
     examples: [
-      { word: '浸す', reading: 'ひたす', meaning: 'melakukan soak / melakukan dip / melakukan drench' },
-      { word: '水浸し', reading: 'みずびたし', meaning: 'submersion' },
-      { word: '浸水', reading: 'しんすい', meaning: 'inundation' },
+      { word: '浸す', reading: 'ひたす', meaning: 'Soak / Dip / Drench' },
+      { word: '水浸し', reading: 'みずびたし', meaning: 'Submersion' },
+      { word: '浸水', reading: 'しんすい', meaning: 'Inundation' },
     ],
   },
   {
@@ -9121,8 +9121,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["氵","厓"],
     mnemonic: 'Karakter 涯 (Cakrawala / Ujung batas) memiliki 11 goresan, tersusun dari elemen (氵, 厓) yang melambangkan konsep intinya.',
     examples: [
-      { word: '生涯', reading: 'しょうがい', meaning: 'one\\' },
-      { word: '生涯教育', reading: 'しょうがいきょういく', meaning: 'lifelong education' },
+      { word: '生涯', reading: 'しょうがい', meaning: 'One\\' },
+      { word: '生涯教育', reading: 'しょうがいきょういく', meaning: 'Lifelong education' },
     ],
   },
   {
@@ -9138,9 +9138,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["氵","叔"],
     mnemonic: 'Karakter 淑 (Anggun santun berbudi luhur) memiliki 11 goresan, tersusun dari elemen (氵, 叔) yang melambangkan konsep intinya.',
     examples: [
-      { word: '淑やか', reading: 'しとやか', meaning: 'graceful' },
-      { word: '淑女', reading: 'しゅくじょ', meaning: 'lady' },
-      { word: '淑徳', reading: 'しゅくとく', meaning: 'womanly virtues' },
+      { word: '淑やか', reading: 'しとやか', meaning: 'Graceful' },
+      { word: '淑女', reading: 'しゅくじょ', meaning: 'Lady' },
+      { word: '淑徳', reading: 'しゅくとく', meaning: 'Womanly virtues' },
     ],
   },
   {
@@ -9156,9 +9156,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["氵","炎"],
     mnemonic: 'Karakter 淡 (Hambar tipis / Ringan samar) memiliki 11 goresan, tersusun dari elemen (氵, 炎) yang melambangkan konsep intinya.',
     examples: [
-      { word: '冷淡', reading: 'れいたん', meaning: 'coolness / indifference' },
-      { word: '淡水', reading: 'たんすい', meaning: 'fresh water' },
-      { word: '淡白', reading: 'たんぱく', meaning: 'light (flavor, color, etc.)' },
+      { word: '冷淡', reading: 'れいたん', meaning: 'Coolness / indifference' },
+      { word: '淡水', reading: 'たんすい', meaning: 'Fresh water' },
+      { word: '淡白', reading: 'たんぱく', meaning: 'Light (flavor, color, etc.)' },
     ],
   },
   {
@@ -9191,9 +9191,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["氵","忝"],
     mnemonic: 'Karakter 添 (Annexed / accompany) memiliki 11 goresan, tersusun dari elemen (氵, 忝) yang melambangkan konsep intinya.',
     examples: [
-      { word: '添う', reading: 'そう', meaning: 'melakukan accompany / melakukan comply with' },
-      { word: '添える', reading: 'そえる', meaning: 'melakukan add to / melakukan attach / melakukan accompany' },
-      { word: '付き添い', reading: 'つきそい', meaning: 'attendance (on)' },
+      { word: '添う', reading: 'そう', meaning: 'Accompany / Comply with' },
+      { word: '添える', reading: 'そえる', meaning: 'Add to / Attach / Accompany' },
+      { word: '付き添い', reading: 'つきそい', meaning: 'Attendance (on)' },
     ],
   },
   {
@@ -9209,9 +9209,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["氵","歩"],
     mnemonic: 'Karakter 渉 (Ford / go cross) memiliki 11 goresan, tersusun dari elemen (氵, 歩) yang melambangkan konsep intinya.',
     examples: [
-      { word: '交渉', reading: 'こうしょう', meaning: 'negotiation' },
-      { word: '干渉', reading: 'かんしょう', meaning: 'interference / intervention' },
-      { word: '渉外', reading: 'しょうがい', meaning: 'public relations' },
+      { word: '交渉', reading: 'こうしょう', meaning: 'Negotiation' },
+      { word: '干渉', reading: 'かんしょう', meaning: 'Interference / intervention' },
+      { word: '渉外', reading: 'しょうがい', meaning: 'Public relations' },
     ],
   },
   {
@@ -9227,9 +9227,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["氵","止","丷","八"],
     mnemonic: 'Karakter 渋 (Astringent / hesitate) memiliki 11 goresan, tersusun dari elemen (氵, 止, 丷) yang melambangkan konsep intinya.',
     examples: [
-      { word: '渋滞', reading: 'じゅうたい', meaning: 'congestion (e.g. / traffic) / delay' },
+      { word: '渋滞', reading: 'じゅうたい', meaning: 'Congestion (e.g. / traffic) / delay' },
       { word: '渋谷', reading: 'しぶや', meaning: 'Shibuya City (special ward of Tokyo)' },
-      { word: '渋面', reading: 'じゅうめん', meaning: 'grimace' },
+      { word: '渋面', reading: 'じゅうめん', meaning: 'Grimace' },
     ],
   },
   {
@@ -9245,9 +9245,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["氵","爫","夫"],
     mnemonic: 'Karakter 渓 (Gunung stream / valley) memiliki 11 goresan, tersusun dari elemen (氵, 爫, 夫) yang melambangkan konsep intinya.',
     examples: [
-      { word: '渓流', reading: 'けいりゅう', meaning: 'mountain stream' },
-      { word: '渓谷', reading: 'けいこく', meaning: 'valley (with a river running through it)' },
-      { word: '雪渓', reading: 'せっけい', meaning: 'snowy valley' },
+      { word: '渓流', reading: 'けいりゅう', meaning: 'Mountain stream' },
+      { word: '渓谷', reading: 'けいこく', meaning: 'Valley (with a river running through it)' },
+      { word: '雪渓', reading: 'せっけい', meaning: 'Snowy valley' },
     ],
   },
   {
@@ -9263,9 +9263,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["氵","咼"],
     mnemonic: 'Karakter 渦 (Whirlpool / eddy) memiliki 12 goresan, tersusun dari elemen (氵, 咼) yang melambangkan konsep intinya.',
     examples: [
-      { word: '渦', reading: 'うず', meaning: 'swirl' },
-      { word: '渦中', reading: 'かちゅう', meaning: 'vortex' },
-      { word: '渦巻き', reading: 'うずまき', meaning: 'whirlpool' },
+      { word: '渦', reading: 'うず', meaning: 'Swirl' },
+      { word: '渦中', reading: 'かちゅう', meaning: 'Vortex' },
+      { word: '渦巻き', reading: 'うずまき', meaning: 'Whirlpool' },
     ],
   },
   {
@@ -9281,8 +9281,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["氵","勇"],
     mnemonic: 'Karakter 湧 (Boil / ferment) memiliki 12 goresan, tersusun dari elemen (氵, 勇) yang melambangkan konsep intinya.',
     examples: [
-      { word: '湧く', reading: 'わく', meaning: 'mendidih / menjadi panas' },
-      { word: '湧水', reading: 'ゆうすい', meaning: 'welling of water' },
+      { word: '湧く', reading: 'わく', meaning: 'Mendidih / menjadi panas' },
+      { word: '湧水', reading: 'ゆうすい', meaning: 'Welling of water' },
     ],
   },
   {
@@ -9298,9 +9298,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["氵","原"],
     mnemonic: 'Karakter 源 (Source / origin) memiliki 13 goresan, tersusun dari elemen (氵, 原) yang melambangkan konsep intinya.',
     examples: [
-      { word: '資源', reading: 'しげん', meaning: 'resources' },
-      { word: '起源', reading: 'きげん', meaning: 'origin / beginning / rise' },
-      { word: '語源', reading: 'ごげん', meaning: 'word root / word derivation / etymology' },
+      { word: '資源', reading: 'しげん', meaning: 'Resources' },
+      { word: '起源', reading: 'きげん', meaning: 'Asal-usul / Awal mula / Bangkit' },
+      { word: '語源', reading: 'ごげん', meaning: 'Word root / word derivation / etymology' },
     ],
   },
   {
@@ -9316,8 +9316,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["氵","冓"],
     mnemonic: 'Karakter 溝 (Gutter / ditch) memiliki 13 goresan, tersusun dari elemen (氵, 冓) yang melambangkan konsep intinya.',
     examples: [
-      { word: '溝', reading: 'どぶ', meaning: 'ditch / drain / gap' },
-      { word: '海溝', reading: 'かいこう', meaning: 'oceanic trench' },
+      { word: '溝', reading: 'どぶ', meaning: 'Ditch / drain / gap' },
+      { word: '海溝', reading: 'かいこう', meaning: 'Oceanic trench' },
     ],
   },
   {
@@ -9333,9 +9333,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["氵","烕"],
     mnemonic: 'Karakter 滅 (Musnah padam / Kehancuran) memiliki 13 goresan, tersusun dari elemen (氵, 烕) yang melambangkan konsep intinya.',
     examples: [
-      { word: '滅多に', reading: 'めったに', meaning: 'rarely (with neg. verb) / seldom' },
-      { word: '絶滅', reading: 'ぜつめつ', meaning: 'destruction / extinction' },
-      { word: '全滅', reading: 'ぜんめつ', meaning: 'annihilation' },
+      { word: '滅多に', reading: 'めったに', meaning: 'Rarely (with neg. verb) / seldom' },
+      { word: '絶滅', reading: 'ぜつめつ', meaning: 'Destruction / extinction' },
+      { word: '全滅', reading: 'ぜんめつ', meaning: 'Annihilation' },
     ],
   },
   {
@@ -9351,7 +9351,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["氵","兹"],
     mnemonic: 'Karakter 滋 (Gizi nutrisi penambah tenaga) memiliki 12 goresan, tersusun dari elemen (氵, 兹) yang melambangkan konsep intinya.',
     examples: [
-      { word: '滋養', reading: 'じよう', meaning: 'nourishment' },
+      { word: '滋養', reading: 'じよう', meaning: 'Nourishment' },
       { word: '滋賀県', reading: 'しがけん', meaning: 'Prefektur Shiga' },
     ],
   },
@@ -9368,9 +9368,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["氵","骨"],
     mnemonic: 'Karakter 滑 (Slippery / slide) memiliki 13 goresan, tersusun dari elemen (氵, 骨) yang melambangkan konsep intinya.',
     examples: [
-      { word: '滑る', reading: 'すべる', meaning: 'melakukan slide / melakukan slip' },
-      { word: '滑稽', reading: 'こっけい', meaning: 'funny / humorous / comical' },
-      { word: '滑らか', reading: 'なめらか', meaning: 'smoothness / glassiness' },
+      { word: '滑る', reading: 'すべる', meaning: 'Slide / Slip' },
+      { word: '滑稽', reading: 'こっけい', meaning: 'Funny / humorous / comical' },
+      { word: '滑らか', reading: 'なめらか', meaning: 'Smoothness / glassiness' },
     ],
   },
   {
@@ -9386,9 +9386,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["氵","竜"],
     mnemonic: 'Karakter 滝 (Waterfall / rapids) memiliki 13 goresan, tersusun dari elemen (氵, 竜) yang melambangkan konsep intinya.',
     examples: [
-      { word: '滝', reading: 'たき', meaning: 'waterfall' },
-      { word: '滝口', reading: 'たきぐち', meaning: 'top of a waterfall' },
-      { word: '滝川', reading: 'たきがわ', meaning: 'rapids' },
+      { word: '滝', reading: 'たき', meaning: 'Waterfall' },
+      { word: '滝口', reading: 'たきぐち', meaning: 'Top of a waterfall' },
+      { word: '滝川', reading: 'たきがわ', meaning: 'Rapids' },
     ],
   },
   {
@@ -9404,9 +9404,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["氵","票"],
     mnemonic: 'Karakter 漂 (Drift / float (on liquid)) memiliki 14 goresan, tersusun dari elemen (氵, 票) yang melambangkan konsep intinya.',
     examples: [
-      { word: '漂う', reading: 'ただよう', meaning: 'melakukan drift about / melakukan float / melakukan hang in air' },
-      { word: '漂流', reading: 'ひょうりゅう', meaning: 'drifting' },
-      { word: '漂白', reading: 'ひょうはく', meaning: 'blanching' },
+      { word: '漂う', reading: 'ただよう', meaning: 'Drift about / Mengapung / Melayang / Menggantung (in air)' },
+      { word: '漂流', reading: 'ひょうりゅう', meaning: 'Drifting' },
+      { word: '漂白', reading: 'ひょうはく', meaning: 'Blanching' },
     ],
   },
   {
@@ -9422,9 +9422,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["氵","桼"],
     mnemonic: 'Karakter 漆 (Lacquer / varnish) memiliki 14 goresan, tersusun dari elemen (氵, 桼) yang melambangkan konsep intinya.',
     examples: [
-      { word: '漆器', reading: 'しっき', meaning: 'lacquer ware' },
-      { word: '漆塗り', reading: 'うるしぬり', meaning: 'lacquering' },
-      { word: '漆黒', reading: 'しっこく', meaning: 'jet-black' },
+      { word: '漆器', reading: 'しっき', meaning: 'Lacquer ware' },
+      { word: '漆塗り', reading: 'うるしぬり', meaning: 'Lacquering' },
+      { word: '漆黒', reading: 'しっこく', meaning: 'Jet-black' },
     ],
   },
   {
@@ -9440,9 +9440,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["氵","屚"],
     mnemonic: 'Karakter 漏 (Leak / escape) memiliki 14 goresan, tersusun dari elemen (氵, 屚) yang melambangkan konsep intinya.',
     examples: [
-      { word: '漏らす', reading: 'もらす', meaning: 'melakukan let leak / melakukan reveal' },
-      { word: '漏る', reading: 'もる', meaning: 'melakukan leak / melakukan run out' },
-      { word: '漏れる', reading: 'もれる', meaning: 'melakukan leak out / melakukan escape / melakukan filter out' },
+      { word: '漏らす', reading: 'もらす', meaning: 'Let leak / Reveal' },
+      { word: '漏る', reading: 'もる', meaning: 'Leak / Berlari (out)' },
+      { word: '漏れる', reading: 'もれる', meaning: 'Leak out / Melarikan diri / Filter out' },
     ],
   },
   {
@@ -9458,9 +9458,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["氵","曼"],
     mnemonic: 'Karakter 漫 (Cartoon / involuntarily) memiliki 14 goresan, tersusun dari elemen (氵, 曼) yang melambangkan konsep intinya.',
     examples: [
-      { word: '漫画', reading: 'まんが', meaning: 'comic (book) / kartun animasi' },
-      { word: '散漫', reading: 'さんまん', meaning: 'vague' },
-      { word: '浪漫', reading: 'ロマン', meaning: 'romance (e.g. Arthurian romances)' },
+      { word: '漫画', reading: 'まんが', meaning: 'Comic (book) / kartun animasi' },
+      { word: '散漫', reading: 'さんまん', meaning: 'Vague' },
+      { word: '浪漫', reading: 'ロマン', meaning: 'Romance (e.g. Arthurian romances)' },
     ],
   },
   {
@@ -9476,8 +9476,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["氵","責"],
     mnemonic: 'Karakter 漬 (Pickling / soak) memiliki 14 goresan, tersusun dari elemen (氵, 責) yang melambangkan konsep intinya.',
     examples: [
-      { word: '漬ける', reading: 'つける', meaning: 'melakukan soak / melakukan moisten / melakukan pickle' },
-      { word: '漬物', reading: 'つけもの', meaning: 'tsukemono (pickled vegetables)' },
+      { word: '漬ける', reading: 'つける', meaning: 'Soak / Moisten / Pickle' },
+      { word: '漬物', reading: 'つけもの', meaning: 'Tsukemono (pickled vegetables)' },
     ],
   },
   {
@@ -9493,9 +9493,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["氵","斬"],
     mnemonic: 'Karakter 漸 (Steadily / gradually advancing) memiliki 14 goresan, tersusun dari elemen (氵, 斬) yang melambangkan konsep intinya.',
     examples: [
-      { word: '漸く', reading: 'ようやく', meaning: 'at last / finally / hardly' },
-      { word: '漸次', reading: 'ぜんじ', meaning: 'gradually' },
-      { word: '漸減', reading: 'ぜんげん', meaning: 'gradual decrease' },
+      { word: '漸く', reading: 'ようやく', meaning: 'At last / finally / hardly' },
+      { word: '漸次', reading: 'ぜんじ', meaning: 'Gradually' },
+      { word: '漸減', reading: 'ぜんげん', meaning: 'Gradual decrease' },
     ],
   },
   {
@@ -9511,9 +9511,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["氵","絜"],
     mnemonic: 'Karakter 潔 (Undefiled / pure) memiliki 15 goresan, tersusun dari elemen (氵, 絜) yang melambangkan konsep intinya.',
     examples: [
-      { word: '清潔', reading: 'せいけつ', meaning: 'clean' },
-      { word: '簡潔', reading: 'かんけつ', meaning: 'brevity / concise / sederhana' },
-      { word: '不潔', reading: 'ふけつ', meaning: 'unclean / dirty' },
+      { word: '清潔', reading: 'せいけつ', meaning: 'Clean' },
+      { word: '簡潔', reading: 'かんけつ', meaning: 'Brevity / concise / sederhana' },
+      { word: '不潔', reading: 'ふけつ', meaning: 'Unclean / dirty' },
     ],
   },
   {
@@ -9529,7 +9529,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["氵","舄"],
     mnemonic: 'Karakter 潟 (Lagoon) memiliki 15 goresan, tersusun dari elemen (氵, 舄) yang melambangkan konsep intinya.',
     examples: [
-      { word: '干潟', reading: 'ひがた', meaning: 'tidal flat' },
+      { word: '干潟', reading: 'ひがた', meaning: 'Tidal flat' },
       { word: '新潟', reading: 'にいがた', meaning: 'Niigata (city, prefecture)' },
     ],
   },
@@ -9546,9 +9546,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["氵","閏"],
     mnemonic: 'Karakter 潤 (Wet / be watered) memiliki 15 goresan, tersusun dari elemen (氵, 閏) yang melambangkan konsep intinya.',
     examples: [
-      { word: '潤う', reading: 'うるおう', meaning: 'melakukan be moist / melakukan profit by' },
-      { word: '利潤', reading: 'りじゅん', meaning: 'profit / returns' },
-      { word: '潤滑油', reading: 'じゅんかつゆ', meaning: 'lubricating oil' },
+      { word: '潤う', reading: 'うるおう', meaning: 'Menjadi moist / Profit by' },
+      { word: '利潤', reading: 'りじゅん', meaning: 'Profit / returns' },
+      { word: '潤滑油', reading: 'じゅんかつゆ', meaning: 'Lubricating oil' },
     ],
   },
   {
@@ -9564,9 +9564,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["氵","朝"],
     mnemonic: 'Karakter 潮 (Pasang surut laut / Gelombang arus) memiliki 15 goresan, tersusun dari elemen (氵, 朝) yang melambangkan konsep intinya.',
     examples: [
-      { word: '潮', reading: 'しお', meaning: 'tide' },
-      { word: '満潮', reading: 'まんちょう', meaning: 'high tide' },
-      { word: '潮時', reading: 'しおどき', meaning: 'tidal hour' },
+      { word: '潮', reading: 'しお', meaning: 'Tide' },
+      { word: '満潮', reading: 'まんちょう', meaning: 'High tide' },
+      { word: '潮時', reading: 'しおどき', meaning: 'Tidal hour' },
     ],
   },
   {
@@ -9582,9 +9582,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["氵","貴"],
     mnemonic: 'Karakter 潰 (Crush / smash) memiliki 15 goresan, tersusun dari elemen (氵, 貴) yang melambangkan konsep intinya.',
     examples: [
-      { word: '潰す', reading: 'つぶす', meaning: 'melakukan smash / melakukan waste' },
-      { word: '潰れる', reading: 'つぶれる', meaning: 'melakukan be smashed / melakukan go bankrupt' },
-      { word: '顔を潰す', reading: 'かおをつぶす', meaning: 'to make someone lose face' },
+      { word: '潰す', reading: 'つぶす', meaning: 'Smash / Menyia-nyiakan' },
+      { word: '潰れる', reading: 'つぶれる', meaning: 'Menjadi smashed / Go bankrupt' },
+      { word: '顔を潰す', reading: 'かおをつぶす', meaning: 'To make someone lose face' },
     ],
   },
   {
@@ -9600,9 +9600,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["氵","敫"],
     mnemonic: 'Karakter 激 (Violent / get excited) memiliki 16 goresan, tersusun dari elemen (氵, 敫) yang melambangkan konsep intinya.',
     examples: [
-      { word: '刺激', reading: 'しげき', meaning: 'stimulus / impetus / incentive' },
-      { word: '急激', reading: 'きゅうげき', meaning: 'sudden / precipitous / radical' },
-      { word: '激しい', reading: 'はげしい', meaning: 'violent / vehement / intense' },
+      { word: '刺激', reading: 'しげき', meaning: 'Stimulus / impetus / incentive' },
+      { word: '急激', reading: 'きゅうげき', meaning: 'Sudden / precipitous / radical' },
+      { word: '激しい', reading: 'はげしい', meaning: 'Violent / vehement / intense' },
     ],
   },
   {
@@ -9618,9 +9618,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["氵","頼"],
     mnemonic: 'Karakter 瀬 (Rapids / current) memiliki 19 goresan, tersusun dari elemen (氵, 頼) yang melambangkan konsep intinya.',
     examples: [
-      { word: '瀬戸物', reading: 'せともの', meaning: 'earthenware / crockery / china' },
-      { word: '早瀬', reading: 'はやせ', meaning: 'swift current' },
-      { word: '浅瀬', reading: 'あさせ', meaning: 'shoal' },
+      { word: '瀬戸物', reading: 'せともの', meaning: 'Earthenware / crockery / china' },
+      { word: '早瀬', reading: 'はやせ', meaning: 'Swift current' },
+      { word: '浅瀬', reading: 'あさせ', meaning: 'Shoal' },
     ],
   },
   {
@@ -9637,8 +9637,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 災 (Disaster / calamity) memiliki 7 goresan, tersusun dari elemen (巛, 火) yang melambangkan konsep intinya.',
     examples: [
       { word: '災禍', reading: 'さいか', meaning: 'Malapetaka / Bencana besar / Musibah' },
-      { word: '火災', reading: 'かさい', meaning: 'conflagration / kebakaran / api' },
-      { word: '災害', reading: 'さいがい', meaning: 'calamity / disaster / misfortune' },
+      { word: '火災', reading: 'かさい', meaning: 'Conflagration / kebakaran / api' },
+      { word: '災害', reading: 'さいがい', meaning: 'Calamity / disaster / misfortune' },
     ],
   },
   {
@@ -9654,9 +9654,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["火","户"],
     mnemonic: 'Karakter 炉 (Tungku peleburan perapian) memiliki 8 goresan, tersusun dari elemen (火, 户) yang melambangkan konsep intinya.',
     examples: [
-      { word: '原子炉', reading: 'げんしろ', meaning: 'atomic reactor' },
-      { word: '暖炉', reading: 'だんろ', meaning: 'fireplace' },
-      { word: '溶鉱炉', reading: 'ようこうろ', meaning: 'smelting furnace' },
+      { word: '原子炉', reading: 'げんしろ', meaning: 'Atomic reactor' },
+      { word: '暖炉', reading: 'だんろ', meaning: 'Fireplace' },
+      { word: '溶鉱炉', reading: 'ようこうろ', meaning: 'Smelting furnace' },
     ],
   },
   {
@@ -9672,9 +9672,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["火","欠"],
     mnemonic: 'Karakter 炊 (Cook / boil) memiliki 8 goresan, tersusun dari elemen (火, 欠) yang melambangkan konsep intinya.',
     examples: [
-      { word: '炊く', reading: 'たく', meaning: 'mendidih / melakukan cook' },
+      { word: '炊く', reading: 'たく', meaning: 'Mendidih / Memasak' },
       { word: '炊飯器', reading: 'すいはんき', meaning: 'Penanak nasi elektrik' },
-      { word: '炊事', reading: 'すいじ', meaning: 'cooking' },
+      { word: '炊事', reading: 'すいじ', meaning: 'Cooking' },
     ],
   },
   {
@@ -9690,8 +9690,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["火","火"],
     mnemonic: 'Karakter 炎 (Inflammation / flame) memiliki 8 goresan, tersusun dari elemen (火, 火) yang melambangkan konsep intinya.',
     examples: [
-      { word: '炎', reading: 'ほのお', meaning: 'flame' },
-      { word: '中耳炎', reading: 'ちゅうじえん', meaning: 'otitis media' },
+      { word: '炎', reading: 'ほのお', meaning: 'Flame' },
+      { word: '中耳炎', reading: 'ちゅうじえん', meaning: 'Otitis media' },
       { word: '火炎瓶', reading: 'かえんびん', meaning: 'Molotov cocktail' },
     ],
   },
@@ -9708,9 +9708,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["為"],
     mnemonic: 'Karakter 為 (Do / perubahan) memiliki 9 goresan, tersusun dari elemen (為) yang melambangkan konsep intinya.',
     examples: [
-      { word: '為る', reading: 'する', meaning: 'melakukan do / melakukan attempt' },
-      { word: '所為', reading: 'せい', meaning: 'cause / alasan / sebab / fault' },
-      { word: '為', reading: 'ため', meaning: 'good / advantage / in order to' },
+      { word: '為る', reading: 'する', meaning: 'Do / Berusaha / Mencoba' },
+      { word: '所為', reading: 'せい', meaning: 'Cause / alasan / sebab / fault' },
+      { word: '為', reading: 'ため', meaning: 'Good / advantage / in order to' },
     ],
   },
   {
@@ -9726,9 +9726,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["列","灬"],
     mnemonic: 'Karakter 烈 (Ardent / violent) memiliki 10 goresan, tersusun dari elemen (列, 灬) yang melambangkan konsep intinya.',
     examples: [
-      { word: '強烈', reading: 'きょうれつ', meaning: 'strong / intense / severe' },
-      { word: '猛烈', reading: 'もうれつ', meaning: 'violent / vehement / rage' },
-      { word: '壮烈', reading: 'そうれつ', meaning: 'heroic' },
+      { word: '強烈', reading: 'きょうれつ', meaning: 'Strong / intense / severe' },
+      { word: '猛烈', reading: 'もうれつ', meaning: 'Violent / vehement / rage' },
+      { word: '壮烈', reading: 'そうれつ', meaning: 'Heroic' },
     ],
   },
   {
@@ -9745,8 +9745,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 無 (Nothingness / none) memiliki 12 goresan, tersusun dari elemen (𠂉, 卌, 一) yang melambangkan konsep intinya.',
     examples: [
       { word: '孤立無援', reading: 'こりつむえん', meaning: 'Terpencil sebatang kara tanpa bantuan / Berjuang sendirian' },
-      { word: '無くす', reading: 'なくす', meaning: 'melakukan lose something' },
-      { word: '有無', reading: 'うむ', meaning: 'yes or no / presence or absence' },
+      { word: '無くす', reading: 'なくす', meaning: 'Kehilangan (something)' },
+      { word: '有無', reading: 'うむ', meaning: 'Yes or no / presence or absence' },
     ],
   },
   {
@@ -9762,9 +9762,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["隹","灬"],
     mnemonic: 'Karakter 焦 (Char / hurry) memiliki 12 goresan, tersusun dari elemen (隹, 灬) yang melambangkan konsep intinya.',
     examples: [
-      { word: '焦げ茶', reading: 'こげちゃ', meaning: 'dark brown' },
-      { word: '焦る', reading: 'あせる', meaning: 'melakukan be in a hurry / melakukan be impatient' },
-      { word: '焦がす', reading: 'こがす', meaning: 'melakukan burn / melakukan scorch' },
+      { word: '焦げ茶', reading: 'こげちゃ', meaning: 'Dark brown' },
+      { word: '焦る', reading: 'あせる', meaning: 'Menjadi in a hurry / Menjadi impatient' },
+      { word: '焦がす', reading: 'こがす', meaning: 'Membakar / Hangus / Scorch' },
     ],
   },
   {
@@ -9780,7 +9780,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["前","灬"],
     mnemonic: 'Karakter 煎 (Broil / parch) memiliki 13 goresan, tersusun dari elemen (前, 灬) yang melambangkan konsep intinya.',
     examples: [
-      { word: '煎る', reading: 'いる', meaning: 'melakukan roast' },
+      { word: '煎る', reading: 'いる', meaning: 'Roast' },
       { word: '煎餅', reading: 'せんべい', meaning: '(Japanese) rice cracker' },
     ],
   },
@@ -9797,9 +9797,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["火","頁"],
     mnemonic: 'Karakter 煩 (Anxiety / trouble) memiliki 13 goresan, tersusun dari elemen (火, 頁) yang melambangkan konsep intinya.',
     examples: [
-      { word: '煩わしい', reading: 'わずらわしい', meaning: 'burdensome / troublesome / complicated' },
-      { word: '煩悩', reading: 'ぼんのう', meaning: 'worldly desires' },
-      { word: '煩雑', reading: 'はんざつ', meaning: 'complex' },
+      { word: '煩わしい', reading: 'わずらわしい', meaning: 'Burdensome / troublesome / complicated' },
+      { word: '煩悩', reading: 'ぼんのう', meaning: 'Worldly desires' },
+      { word: '煩雑', reading: 'はんざつ', meaning: 'Complex' },
     ],
   },
   {
@@ -9815,9 +9815,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["者","灬"],
     mnemonic: 'Karakter 煮 (Boil / cook) memiliki 12 goresan, tersusun dari elemen (者, 灬) yang melambangkan konsep intinya.',
     examples: [
-      { word: '煮える', reading: 'にえる', meaning: 'mendidih / melakukan cook / melakukan be cooked' },
-      { word: '煮る', reading: 'にる', meaning: 'mendidih / melakukan cook' },
-      { word: '煮物', reading: 'にもの', meaning: 'nimono' },
+      { word: '煮える', reading: 'にえる', meaning: 'Mendidih / Memasak / Menjadi cooked' },
+      { word: '煮る', reading: 'にる', meaning: 'Mendidih / Memasak' },
+      { word: '煮物', reading: 'にもの', meaning: 'Nimono' },
     ],
   },
   {
@@ -9833,7 +9833,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["能","灬"],
     mnemonic: 'Karakter 熊 (Bear) memiliki 14 goresan, tersusun dari elemen (能, 灬) yang melambangkan konsep intinya.',
     examples: [
-      { word: '白熊', reading: 'しろくま', meaning: 'polar bear (Ursus maritimus)' },
+      { word: '白熊', reading: 'しろくま', meaning: 'Polar bear (Ursus maritimus)' },
       { word: '熊', reading: 'くま', meaning: 'Beruang' },
     ],
   },
@@ -9851,8 +9851,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 熟 (Mellow / ripen) memiliki 15 goresan, tersusun dari elemen (孰, 灬) yang melambangkan konsep intinya.',
     examples: [
       { word: '熟慮断行', reading: 'じゅくりょだんこう', meaning: 'Mempertimbangkan segala risiko masak-masak lalu mengeksekusinya tanpa ragu' },
-      { word: '成熟', reading: 'せいじゅく', meaning: 'maturity / ripeness' },
-      { word: '未熟', reading: 'みじゅく', meaning: 'inexperience / unskilled / immature' },
+      { word: '成熟', reading: 'せいじゅく', meaning: 'Maturity / ripeness' },
+      { word: '未熟', reading: 'みじゅく', meaning: 'Inexperience / unskilled / immature' },
     ],
   },
   {
@@ -9868,9 +9868,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["爪"],
     mnemonic: 'Karakter 爪 (Claw / nail) memiliki 4 goresan, tersusun dari elemen (爪) yang melambangkan konsep intinya.',
     examples: [
-      { word: '爪', reading: 'つめ', meaning: 'fingernail or toenail' },
-      { word: '爪切り', reading: 'つめきり', meaning: 'nail clippers' },
-      { word: '爪楊枝', reading: 'つまようじ', meaning: 'toothpick' },
+      { word: '爪', reading: 'つめ', meaning: 'Fingernail or toenail' },
+      { word: '爪切り', reading: 'つめきり', meaning: 'Nail clippers' },
+      { word: '爪楊枝', reading: 'つまようじ', meaning: 'Toothpick' },
     ],
   },
   {
@@ -9886,9 +9886,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["爫","罒","𡬠"],
     mnemonic: 'Karakter 爵 (Gelar bangsawan ningrat) memiliki 17 goresan, tersusun dari elemen (爫, 罒, 𡬠) yang melambangkan konsep intinya.',
     examples: [
-      { word: '伯爵', reading: 'はくしゃく', meaning: 'count' },
-      { word: '侯爵', reading: 'こうしゃく', meaning: 'marquis' },
-      { word: '公爵', reading: 'こうしゃく', meaning: 'prince' },
+      { word: '伯爵', reading: 'はくしゃく', meaning: 'Count' },
+      { word: '侯爵', reading: 'こうしゃく', meaning: 'Marquis' },
+      { word: '公爵', reading: 'こうしゃく', meaning: 'Prince' },
     ],
   },
   {
@@ -9904,7 +9904,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["大","㸚"],
     mnemonic: 'Karakter 爽 (Refreshing / bracing) memiliki 11 goresan, tersusun dari elemen (大, 㸚) yang melambangkan konsep intinya.',
     examples: [
-      { word: '爽快', reading: 'そうかい', meaning: 'refreshing' },
+      { word: '爽快', reading: 'そうかい', meaning: 'Refreshing' },
       { word: '爽やか', reading: 'さわやか', meaning: 'Sejuk menyegarkan semilir' },
     ],
   },
@@ -9939,9 +9939,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["牛","攵"],
     mnemonic: 'Karakter 牧 (Breed / care for) memiliki 8 goresan, tersusun dari elemen (牛, 攵) yang melambangkan konsep intinya.',
     examples: [
-      { word: '牧師', reading: 'ぼくし', meaning: 'pastor / minister / clergyman' },
-      { word: '遊牧', reading: 'ゆうぼく', meaning: 'nomadism' },
-      { word: '牧場', reading: 'ぼくじょう', meaning: 'farm (livestock) / pasture land' },
+      { word: '牧師', reading: 'ぼくし', meaning: 'Pastor / minister / clergyman' },
+      { word: '遊牧', reading: 'ゆうぼく', meaning: 'Nomadism' },
+      { word: '牧場', reading: 'ぼくじょう', meaning: 'Farm (livestock) / pasture land' },
     ],
   },
   {
@@ -9957,8 +9957,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["牛","生"],
     mnemonic: 'Karakter 牲 (Animal sacrifice / offering) memiliki 9 goresan, tersusun dari elemen (牛, 生) yang melambangkan konsep intinya.',
     examples: [
-      { word: '犠牲', reading: 'ぎせい', meaning: 'sacrifice' },
-      { word: '犠牲者', reading: 'ぎせいしゃ', meaning: 'victim (esp. someone killed)' },
+      { word: '犠牲', reading: 'ぎせい', meaning: 'Sacrifice' },
+      { word: '犠牲者', reading: 'ぎせいしゃ', meaning: 'Victim (esp. someone killed)' },
     ],
   },
   {
@@ -9974,9 +9974,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["牛","義"],
     mnemonic: 'Karakter 犠 (Sacrifice) memiliki 17 goresan, tersusun dari elemen (牛, 義) yang melambangkan konsep intinya.',
     examples: [
-      { word: '犠牲', reading: 'ぎせい', meaning: 'sacrifice' },
-      { word: '犠打', reading: 'ぎだ', meaning: 'sacrifice (bunt or fly)' },
-      { word: '犠牲者', reading: 'ぎせいしゃ', meaning: 'victim (esp. someone killed)' },
+      { word: '犠牲', reading: 'ぎせい', meaning: 'Sacrifice' },
+      { word: '犠打', reading: 'ぎだ', meaning: 'Sacrifice (bunt or fly)' },
+      { word: '犠牲者', reading: 'ぎせいしゃ', meaning: 'Victim (esp. someone killed)' },
     ],
   },
   {
@@ -9992,9 +9992,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["犭","守"],
     mnemonic: 'Karakter 狩 (Hunt / raid) memiliki 9 goresan, tersusun dari elemen (犭, 守) yang melambangkan konsep intinya.',
     examples: [
-      { word: '狩り', reading: 'かり', meaning: 'hunting' },
-      { word: '狩人', reading: 'かりゅうど', meaning: 'hunter' },
-      { word: '狩場', reading: 'かりば', meaning: 'hunting ground' },
+      { word: '狩り', reading: 'かり', meaning: 'Hunting' },
+      { word: '狩人', reading: 'かりゅうど', meaning: 'Hunter' },
+      { word: '狩場', reading: 'かりば', meaning: 'Hunting ground' },
     ],
   },
   {
@@ -10011,8 +10011,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 独 (Single / alone) memiliki 9 goresan, tersusun dari elemen (犭, 虫) yang melambangkan konsep intinya.',
     examples: [
       { word: '唯我独尊', reading: 'ゆいがどくそん', meaning: 'Merasa diri paling hebat / Menganggap diri nomor satu tanpa memedulikan orang lain' },
-      { word: '独身', reading: 'どくしん', meaning: 'single / unmarried' },
-      { word: '独特', reading: 'どくとく', meaning: 'peculiarity / uniqueness / characteristic' },
+      { word: '独身', reading: 'どくしん', meaning: 'Single / unmarried' },
+      { word: '独特', reading: 'どくとく', meaning: 'Peculiarity / uniqueness / characteristic' },
     ],
   },
   {
@@ -10029,8 +10029,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 狭 (Cramped / narrow) memiliki 9 goresan, tersusun dari elemen (犭, 夹) yang melambangkan konsep intinya.',
     examples: [
       { word: '狭隘', reading: 'きょうあい', meaning: 'Kesempitan ruang pandang atau wilayah terjal' },
-      { word: '狭い', reading: 'せまい', meaning: 'narrow / not spacious' },
-      { word: '偏狭', reading: 'へんきょう', meaning: 'narrow-mindedness' },
+      { word: '狭い', reading: 'せまい', meaning: 'Narrow / not spacious' },
+      { word: '偏狭', reading: 'へんきょう', meaning: 'Narrow-mindedness' },
     ],
   },
   {
@@ -10046,9 +10046,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["犭","孟"],
     mnemonic: 'Karakter 猛 (Fierce / rave) memiliki 11 goresan, tersusun dari elemen (犭, 孟) yang melambangkan konsep intinya.',
     examples: [
-      { word: '猛烈', reading: 'もうれつ', meaning: 'violent / vehement / rage' },
-      { word: '猛威', reading: 'もうい', meaning: 'fury' },
-      { word: '猛打', reading: 'もうだ', meaning: 'heavy blow' },
+      { word: '猛烈', reading: 'もうれつ', meaning: 'Violent / vehement / rage' },
+      { word: '猛威', reading: 'もうい', meaning: 'Fury' },
+      { word: '猛打', reading: 'もうだ', meaning: 'Heavy blow' },
     ],
   },
   {
@@ -10064,9 +10064,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["犭","鼡"],
     mnemonic: 'Karakter 猟 (Berburu binatang mangsa) memiliki 11 goresan, tersusun dari elemen (犭, 鼡) yang melambangkan konsep intinya.',
     examples: [
-      { word: '密猟', reading: 'みつりょう', meaning: 'poaching' },
-      { word: '狩猟', reading: 'しゅりょう', meaning: 'hunting' },
-      { word: '猟師', reading: 'りょうし', meaning: 'hunter' },
+      { word: '密猟', reading: 'みつりょう', meaning: 'Poaching' },
+      { word: '狩猟', reading: 'しゅりょう', meaning: 'Hunting' },
+      { word: '猟師', reading: 'りょうし', meaning: 'Hunter' },
     ],
   },
   {
@@ -10082,9 +10082,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["犭","苗"],
     mnemonic: 'Karakter 猫 (Cat) memiliki 11 goresan, tersusun dari elemen (犭, 苗) yang melambangkan konsep intinya.',
     examples: [
-      { word: '猫', reading: 'ねこ', meaning: 'cat' },
-      { word: '子猫', reading: 'こねこ', meaning: 'kitten' },
-      { word: '山猫', reading: 'やまねこ', meaning: 'wildcat (European wildcat, Iriomote cat, Tsushima cat, etc.)' },
+      { word: '猫', reading: 'ねこ', meaning: 'Cat' },
+      { word: '子猫', reading: 'こねこ', meaning: 'Kitten' },
+      { word: '山猫', reading: 'やまねこ', meaning: 'Wildcat (European wildcat, Iriomote cat, Tsushima cat, etc.)' },
     ],
   },
   {
@@ -10101,8 +10101,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 献 (Offering / counter for drinks) memiliki 13 goresan, tersusun dari elemen (南, 犬) yang melambangkan konsep intinya.',
     examples: [
       { word: '貢献', reading: 'こうけん', meaning: 'Kontribusi / Jasa sumbangsih' },
-      { word: '献立', reading: 'こんだて', meaning: 'menu' },
-      { word: '文献', reading: 'ぶんけん', meaning: 'literature / books (reference)' },
+      { word: '献立', reading: 'こんだて', meaning: 'Menu' },
+      { word: '文献', reading: 'ぶんけん', meaning: 'Literature / books (reference)' },
     ],
   },
   {
@@ -10119,7 +10119,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 猶 (Furthermore / still) memiliki 12 goresan, tersusun dari elemen (犭, 酋) yang melambangkan konsep intinya.',
     examples: [
       { word: '猶予', reading: 'ゆうよ', meaning: 'Penundaan masa eksekusi hukuman' },
-      { word: '執行猶予', reading: 'しっこうゆうよ', meaning: 'stay of execution' },
+      { word: '執行猶予', reading: 'しっこうゆうよ', meaning: 'Stay of execution' },
       { word: '猶太', reading: 'ユダヤ', meaning: 'Judea (southern Palestine)' },
     ],
   },
@@ -10136,9 +10136,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["犭","袁"],
     mnemonic: 'Karakter 猿 (Monkey) memiliki 13 goresan, tersusun dari elemen (犭, 袁) yang melambangkan konsep intinya.',
     examples: [
-      { word: '猿', reading: 'さる', meaning: 'monyet / kera' },
-      { word: '犬猿の仲', reading: 'けんえんのなか', meaning: 'like cats and dogs' },
-      { word: '類人猿', reading: 'るいじんえん', meaning: 'anthropoid ape' },
+      { word: '猿', reading: 'さる', meaning: 'Monyet / kera' },
+      { word: '犬猿の仲', reading: 'けんえんのなか', meaning: 'Like cats and dogs' },
+      { word: '類人猿', reading: 'るいじんえん', meaning: 'Anthropoid ape' },
     ],
   },
   {
@@ -10154,9 +10154,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["犭","言","犬"],
     mnemonic: 'Karakter 獄 (Prison / jail) memiliki 14 goresan, tersusun dari elemen (犭, 言, 犬) yang melambangkan konsep intinya.',
     examples: [
-      { word: '地獄', reading: 'じごく', meaning: 'hell' },
-      { word: '出獄', reading: 'しゅつごく', meaning: 'release (from prison)' },
-      { word: '獄中', reading: 'ごくちゅう', meaning: 'during imprisonment' },
+      { word: '地獄', reading: 'じごく', meaning: 'Hell' },
+      { word: '出獄', reading: 'しゅつごく', meaning: 'Release (from prison)' },
+      { word: '獄中', reading: 'ごくちゅう', meaning: 'During imprisonment' },
     ],
   },
   {
@@ -10172,9 +10172,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["畄","一","口","犬"],
     mnemonic: 'Karakter 獣 (Animal / beast) memiliki 16 goresan, tersusun dari elemen (畄, 一, 口) yang melambangkan konsep intinya.',
     examples: [
-      { word: '獣', reading: 'けだもの', meaning: 'beast / brute' },
-      { word: '怪獣', reading: 'かいじゅう', meaning: 'monster' },
-      { word: '猛獣', reading: 'もうじゅう', meaning: 'fierce animal' },
+      { word: '獣', reading: 'けだもの', meaning: 'Beast / brute' },
+      { word: '怪獣', reading: 'かいじゅう', meaning: 'Monster' },
+      { word: '猛獣', reading: 'もうじゅう', meaning: 'Fierce animal' },
     ],
   },
   {
@@ -10190,9 +10190,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["犭","蒦"],
     mnemonic: 'Karakter 獲 (Seize / get) memiliki 16 goresan, tersusun dari elemen (犭, 蒦) yang melambangkan konsep intinya.',
     examples: [
-      { word: '獲物', reading: 'えもの', meaning: 'game / spoils / trophy' },
-      { word: '獲得', reading: 'かくとく', meaning: 'acquisition / possession' },
-      { word: '捕獲', reading: 'ほかく', meaning: 'capture / seizure' },
+      { word: '獲物', reading: 'えもの', meaning: 'Game / spoils / trophy' },
+      { word: '獲得', reading: 'かくとく', meaning: 'Acquisition / possession' },
+      { word: '捕獲', reading: 'ほかく', meaning: 'Capture / seizure' },
     ],
   },
   {
@@ -10208,9 +10208,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["亠","幺"],
     mnemonic: 'Karakter 玄 (Mysterious / occultness) memiliki 5 goresan, tersusun dari elemen (亠, 幺) yang melambangkan konsep intinya.',
     examples: [
-      { word: '玄関', reading: 'げんかん', meaning: 'entrance (to a house or a building)' },
-      { word: '玄人', reading: 'くろうと', meaning: 'expert / professional' },
-      { word: '玄米', reading: 'げんまい', meaning: 'unpolished rice' },
+      { word: '玄関', reading: 'げんかん', meaning: 'Entrance (to a house or a building)' },
+      { word: '玄人', reading: 'くろうと', meaning: 'Expert / professional' },
+      { word: '玄米', reading: 'げんまい', meaning: 'Unpolished rice' },
     ],
   },
   {
@@ -10226,7 +10226,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["王","元"],
     mnemonic: 'Karakter 玩 (Mempermainkan mainan / Menikmati hobi) memiliki 8 goresan, tersusun dari elemen (王, 元) yang melambangkan konsep intinya.',
     examples: [
-      { word: '玩具', reading: 'がんぐ', meaning: 'toy' },
+      { word: '玩具', reading: 'がんぐ', meaning: 'Toy' },
       { word: '玩語', reading: 'ガンご', meaning: 'Istilah / kosakata terkait Play / take pleasure in' },
     ],
   },
@@ -10243,9 +10243,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["王","朱"],
     mnemonic: 'Karakter 珠 (Pearl / gem) memiliki 10 goresan, tersusun dari elemen (王, 朱) yang melambangkan konsep intinya.',
     examples: [
-      { word: '真珠', reading: 'しんじゅ', meaning: 'pearl' },
-      { word: '数珠', reading: 'じゅず', meaning: 'rosary' },
-      { word: '珠玉', reading: 'しゅぎょく', meaning: 'jewel' },
+      { word: '真珠', reading: 'しんじゅ', meaning: 'Pearl' },
+      { word: '数珠', reading: 'じゅず', meaning: 'Rosary' },
+      { word: '珠玉', reading: 'しゅぎょく', meaning: 'Jewel' },
     ],
   },
   {
@@ -10261,8 +10261,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["王","王"],
     mnemonic: 'Karakter 班 (Squad / corps) memiliki 10 goresan, tersusun dari elemen (王, 王) yang melambangkan konsep intinya.',
     examples: [
-      { word: '班', reading: 'はん', meaning: 'kelompok / grup / party / section (mil)' },
-      { word: '班長', reading: 'はんちょう', meaning: 'squad leader' },
+      { word: '班', reading: 'はん', meaning: 'Kelompok / grup / party / section (mil)' },
+      { word: '班長', reading: 'はんちょう', meaning: 'Squad leader' },
       { word: '西班牙', reading: 'スペイン', meaning: 'Spain' },
     ],
   },
@@ -10279,7 +10279,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["玨","今"],
     mnemonic: 'Karakter 琴 (Harp / koto) memiliki 12 goresan, tersusun dari elemen (玨, 今) yang melambangkan konsep intinya.',
     examples: [
-      { word: '琴', reading: 'こと', meaning: 'japanese harp' },
+      { word: '琴', reading: 'こと', meaning: 'Japanese harp' },
       { word: '琴語', reading: 'キンご', meaning: 'Istilah / kosakata terkait Harp / koto' },
     ],
   },
@@ -10296,7 +10296,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["王","留"],
     mnemonic: 'Karakter 瑠 (Batu permata lapis lazuli) memiliki 14 goresan, tersusun dari elemen (王, 留) yang melambangkan konsep intinya.',
     examples: [
-      { word: '瑠璃', reading: 'るり', meaning: 'lapis lazuli' },
+      { word: '瑠璃', reading: 'るり', meaning: 'Lapis lazuli' },
       { word: '瑠璃色', reading: 'るりいろ', meaning: 'Warna biru tua laut permata' },
     ],
   },
@@ -10313,7 +10313,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["王","离"],
     mnemonic: 'Karakter 璃 (Batu mulia kaca bening) memiliki 15 goresan, tersusun dari elemen (王, 离) yang melambangkan konsep intinya.',
     examples: [
-      { word: '瑠璃', reading: 'るり', meaning: 'lapis lazuli' },
+      { word: '瑠璃', reading: 'るり', meaning: 'Lapis lazuli' },
       { word: '浄瑠璃', reading: 'じょうるり', meaning: 'Teater boneka tradisional bunraku' },
     ],
   },
@@ -10330,7 +10330,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["辟","玉"],
     mnemonic: 'Karakter 璧 (Sphere / ball) memiliki 18 goresan, tersusun dari elemen (辟, 玉) yang melambangkan konsep intinya.',
     examples: [
-      { word: '完璧', reading: 'かんぺき', meaning: 'perfect' },
+      { word: '完璧', reading: 'かんぺき', meaning: 'Perfect' },
       { word: '双璧', reading: 'そうへき', meaning: 'Dua sosok tandingan seimbang' },
     ],
   },
@@ -10348,8 +10348,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 環 (Ring / circle) memiliki 17 goresan, tersusun dari elemen (王, 睘) yang melambangkan konsep intinya.',
     examples: [
       { word: '衆人環視', reading: 'しゅうじんかんし', meaning: 'Di bawah sorotan tatapan mata orang banyak di tempat umum' },
-      { word: '環境', reading: 'かんきょう', meaning: 'lingkungan / circumstance' },
-      { word: '循環', reading: 'じゅんかん', meaning: 'circulation / rotation / cycle' },
+      { word: '環境', reading: 'かんきょう', meaning: 'Lingkungan / circumstance' },
+      { word: '循環', reading: 'じゅんかん', meaning: 'Circulation / rotation / cycle' },
     ],
   },
   {
@@ -10382,8 +10382,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["瓦"],
     mnemonic: 'Karakter 瓦 (Genteng atap tanah liat) memiliki 5 goresan, tersusun dari elemen (瓦) yang melambangkan konsep intinya.',
     examples: [
-      { word: '瓦', reading: 'かわら', meaning: 'roof tile' },
-      { word: '煉瓦', reading: 'れんが', meaning: 'brick' },
+      { word: '瓦', reading: 'かわら', meaning: 'Roof tile' },
+      { word: '煉瓦', reading: 'れんが', meaning: 'Brick' },
       { word: '尼加拉瓦', reading: 'ニカラグア', meaning: 'Nicaragua' },
     ],
   },
@@ -10400,9 +10400,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["匹"],
     mnemonic: 'Karakter 甚 (Sangat luar biasa dahsyat) memiliki 9 goresan, tersusun dari elemen (匹) yang melambangkan konsep intinya.',
     examples: [
-      { word: '甚だ', reading: 'はなはだ', meaning: 'very / greatly / exceedingly' },
-      { word: '甚だしい', reading: 'はなはだしい', meaning: 'extreme / excessive / terrible' },
-      { word: '激甚', reading: 'げきじん', meaning: 'intense' },
+      { word: '甚だ', reading: 'はなはだ', meaning: 'Very / greatly / exceedingly' },
+      { word: '甚だしい', reading: 'はなはだしい', meaning: 'Extreme / excessive / terrible' },
+      { word: '激甚', reading: 'げきじん', meaning: 'Intense' },
     ],
   },
   {
@@ -10418,9 +10418,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["冂","二","丨"],
     mnemonic: 'Karakter 用 (Utilize / business) memiliki 5 goresan, tersusun dari elemen (冂, 二, 丨) yang melambangkan konsep intinya.',
     examples: [
-      { word: '使用', reading: 'しよう', meaning: 'use (same as 使うこと (つかうこと)) / application / employment' },
-      { word: '信用', reading: 'しんよう', meaning: 'confidence / dependence' },
-      { word: '引用', reading: 'いんよう', meaning: 'quotation / citation' },
+      { word: '使用', reading: 'しよう', meaning: 'Use (same as 使うこと (つかうこと)) / application / employment' },
+      { word: '信用', reading: 'しんよう', meaning: 'Confidence / dependence' },
+      { word: '引用', reading: 'いんよう', meaning: 'Quotation / citation' },
     ],
   },
   {
@@ -10436,7 +10436,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["田"],
     mnemonic: 'Karakter 田 (Rice field / rice paddy) memiliki 5 goresan, tersusun dari elemen (田) yang melambangkan konsep intinya.',
     examples: [
-      { word: '田', reading: 'た', meaning: 'rice field' },
+      { word: '田', reading: 'た', meaning: 'Rice field' },
       { word: '田舎', reading: 'いなか', meaning: 'Pedesaan / kampung halaman' },
       { word: '水田', reading: 'すいでん', meaning: '(water-filled) paddy field' },
     ],
@@ -10455,8 +10455,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 甲 (Armor / tinggi (voice)) memiliki 5 goresan, tersusun dari elemen (甲) yang melambangkan konsep intinya.',
     examples: [
       { word: '甲', reading: 'こう', meaning: '1st in rank / shell' },
-      { word: '生き甲斐', reading: 'いきがい', meaning: 'something one lives for / very important' },
-      { word: '甲乙', reading: 'こうおつ', meaning: 'first and second' },
+      { word: '生き甲斐', reading: 'いきがい', meaning: 'Something one lives for / very important' },
+      { word: '甲乙', reading: 'こうおつ', meaning: 'First and second' },
     ],
   },
   {
@@ -10472,8 +10472,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["田","半"],
     mnemonic: 'Karakter 畔 (Paddy ridge / levee) memiliki 10 goresan, tersusun dari elemen (田, 半) yang melambangkan konsep intinya.',
     examples: [
-      { word: '河畔', reading: 'かはん', meaning: 'riverside' },
-      { word: '湖畔', reading: 'こはん', meaning: 'lakeside' },
+      { word: '河畔', reading: 'かはん', meaning: 'Riverside' },
+      { word: '湖畔', reading: 'こはん', meaning: 'Lakeside' },
     ],
   },
   {
@@ -10507,8 +10507,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 異 (Uncommon / different) memiliki 11 goresan, tersusun dari elemen (田, 共) yang melambangkan konsep intinya.',
     examples: [
       { word: '異口同音', reading: 'いくどうおん', meaning: 'Kompak seia sekata / Bersuara serempak menyepakati' },
-      { word: '異常', reading: 'いじょう', meaning: 'strangeness / abnormality / disorder' },
-      { word: '異なる', reading: 'ことなる', meaning: 'melakukan differ / melakukan vary' },
+      { word: '異常', reading: 'いじょう', meaning: 'Strangeness / abnormality / disorder' },
+      { word: '異なる', reading: 'ことなる', meaning: 'Differ / Vary' },
     ],
   },
   {
@@ -10541,9 +10541,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["𤴔","束"],
     mnemonic: 'Karakter 疎 (Alienate / rough) memiliki 12 goresan, tersusun dari elemen (𤴔, 束) yang melambangkan konsep intinya.',
     examples: [
-      { word: '過疎', reading: 'かそ', meaning: 'depopulation' },
+      { word: '過疎', reading: 'かそ', meaning: 'Depopulation' },
       { word: '意思疎通', reading: 'いしそつう', meaning: '(reciprocal) communication' },
-      { word: '疎外', reading: 'そがい', meaning: 'alienation' },
+      { word: '疎外', reading: 'そがい', meaning: 'Alienation' },
     ],
   },
   {
@@ -10559,9 +10559,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["疒","矢"],
     mnemonic: 'Karakter 疾 (Penyakit mendadak / Cepat kilat) memiliki 10 goresan, tersusun dari elemen (疒, 矢) yang melambangkan konsep intinya.',
     examples: [
-      { word: '疾患', reading: 'しっかん', meaning: 'disease' },
-      { word: '疾病', reading: 'しっぺい', meaning: 'illness' },
-      { word: '疾走', reading: 'しっそう', meaning: 'sprint' },
+      { word: '疾患', reading: 'しっかん', meaning: 'Disease' },
+      { word: '疾病', reading: 'しっぺい', meaning: 'Illness' },
+      { word: '疾走', reading: 'しっそう', meaning: 'Sprint' },
     ],
   },
   {
@@ -10577,8 +10577,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["疒","艮"],
     mnemonic: 'Karakter 痕 (Mark / kaki print) memiliki 11 goresan, tersusun dari elemen (疒, 艮) yang melambangkan konsep intinya.',
     examples: [
-      { word: '痕跡', reading: 'こんせき', meaning: 'trace' },
-      { word: '血痕', reading: 'けっこん', meaning: 'bloodstain' },
+      { word: '痕跡', reading: 'こんせき', meaning: 'Trace' },
+      { word: '血痕', reading: 'けっこん', meaning: 'Bloodstain' },
     ],
   },
   {
@@ -10594,8 +10594,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["疒","豆"],
     mnemonic: 'Karakter 痘 (Penyakit cacar) memiliki 12 goresan, tersusun dari elemen (疒, 豆) yang melambangkan konsep intinya.',
     examples: [
-      { word: '天然痘', reading: 'てんねんとう', meaning: 'smallpox' },
-      { word: '種痘', reading: 'しゅとう', meaning: 'smallpox vaccination' },
+      { word: '天然痘', reading: 'てんねんとう', meaning: 'Smallpox' },
+      { word: '種痘', reading: 'しゅとう', meaning: 'Smallpox vaccination' },
     ],
   },
   {
@@ -10611,8 +10611,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["疒","利"],
     mnemonic: 'Karakter 痢 (Diarrhea) memiliki 12 goresan, tersusun dari elemen (疒, 利) yang melambangkan konsep intinya.',
     examples: [
-      { word: '下痢', reading: 'げり', meaning: 'diarrhea' },
-      { word: '赤痢', reading: 'せきり', meaning: 'dysentery' },
+      { word: '下痢', reading: 'げり', meaning: 'Diarrhea' },
+      { word: '赤痢', reading: 'せきり', meaning: 'Dysentery' },
     ],
   },
   {
@@ -10628,8 +10628,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["疒","叟"],
     mnemonic: 'Karakter 痩 (Get thin) memiliki 12 goresan, tersusun dari elemen (疒, 叟) yang melambangkan konsep intinya.',
     examples: [
-      { word: '痩せる', reading: 'やせる', meaning: 'melakukan lose weight' },
-      { word: '痩身', reading: 'そうしん', meaning: 'slim figure' },
+      { word: '痩せる', reading: 'やせる', meaning: 'Kehilangan (weight)' },
+      { word: '痩身', reading: 'そうしん', meaning: 'Slim figure' },
     ],
   },
   {
@@ -10645,9 +10645,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["疒","知"],
     mnemonic: 'Karakter 痴 (Stupid / foolish) memiliki 13 goresan, tersusun dari elemen (疒, 知) yang melambangkan konsep intinya.',
     examples: [
-      { word: '愚痴', reading: 'ぐち', meaning: 'idle complaint / grumble' },
+      { word: '愚痴', reading: 'ぐち', meaning: 'Idle complaint / grumble' },
       { word: '方向音痴', reading: 'ほうこうおんち', meaning: '(person with) no sense of direction' },
-      { word: '痴呆', reading: 'ちほう', meaning: 'dementia' },
+      { word: '痴呆', reading: 'ちほう', meaning: 'Dementia' },
     ],
   },
   {
@@ -10663,7 +10663,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["疒","昜"],
     mnemonic: 'Karakter 瘍 (Swelling / boil) memiliki 14 goresan, tersusun dari elemen (疒, 昜) yang melambangkan konsep intinya.',
     examples: [
-      { word: '腫瘍', reading: 'しゅよう', meaning: 'tumor' },
+      { word: '腫瘍', reading: 'しゅよう', meaning: 'Tumor' },
       { word: '潰瘍', reading: 'かいよう', meaning: 'Tukak borok lambung luka dalam' },
     ],
   },
@@ -10680,8 +10680,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["疒","愈"],
     mnemonic: 'Karakter 癒 (Sembuh pulih dari luka batin) memiliki 18 goresan, tersusun dari elemen (疒, 愈) yang melambangkan konsep intinya.',
     examples: [
-      { word: '治癒', reading: 'ちゆ', meaning: 'healing' },
-      { word: '癒着', reading: 'ゆちゃく', meaning: 'adhesion' },
+      { word: '治癒', reading: 'ちゆ', meaning: 'Healing' },
+      { word: '癒着', reading: 'ゆちゃく', meaning: 'Adhesion' },
     ],
   },
   {
@@ -10697,9 +10697,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["疒","辟"],
     mnemonic: 'Karakter 癖 (Kebiasaan unik / Tabiat aneh) memiliki 18 goresan, tersusun dari elemen (疒, 辟) yang melambangkan konsep intinya.',
     examples: [
-      { word: '癖', reading: 'くせ', meaning: 'a habit (often a bad habit) / peculiarity' },
-      { word: '口癖', reading: 'くちぐせ', meaning: 'pet saying' },
-      { word: '性癖', reading: 'せいへき', meaning: 'disposition' },
+      { word: '癖', reading: 'くせ', meaning: 'A habit (often a bad habit) / peculiarity' },
+      { word: '口癖', reading: 'くちぐせ', meaning: 'Pet saying' },
+      { word: '性癖', reading: 'せいへき', meaning: 'Disposition' },
     ],
   },
   {
@@ -10716,8 +10716,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 発 (Departure / discharge) memiliki 9 goresan, tersusun dari elemen (癶, 二, 儿) yang melambangkan konsep intinya.',
     examples: [
       { word: '摘発', reading: 'てきはつ', meaning: 'Pembongkaran penyingkapan kejahatan' },
-      { word: '爆発', reading: 'ばくはつ', meaning: 'explosion / detonation / eruption' },
-      { word: '発見', reading: 'はっけん', meaning: 'discovery / detection / finding' },
+      { word: '爆発', reading: 'ばくはつ', meaning: 'Explosion / detonation / eruption' },
+      { word: '発見', reading: 'はっけん', meaning: 'Discovery / detection / finding' },
     ],
   },
   {
@@ -10733,9 +10733,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["白","王"],
     mnemonic: 'Karakter 皇 (Kaisar) memiliki 9 goresan, tersusun dari elemen (白, 王) yang melambangkan konsep intinya.',
     examples: [
-      { word: '皇居', reading: 'こうきょ', meaning: 'imperial palace' },
-      { word: '天皇', reading: 'てんのう', meaning: 'emperor of japan' },
-      { word: '上皇', reading: 'じょうこう', meaning: 'retired emperor' },
+      { word: '皇居', reading: 'こうきょ', meaning: 'Istana kaisar' },
+      { word: '天皇', reading: 'てんのう', meaning: 'Emperor of japan' },
+      { word: '上皇', reading: 'じょうこう', meaning: 'Retired emperor' },
     ],
   },
   {
@@ -10751,9 +10751,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["分","皿"],
     mnemonic: 'Karakter 盆 (Basin / lantern festival) memiliki 9 goresan, tersusun dari elemen (分, 皿) yang melambangkan konsep intinya.',
     examples: [
-      { word: '盆', reading: 'ぼん', meaning: 'festival of the dead / tray' },
-      { word: '盆地', reading: 'ぼんち', meaning: 'basin (e.g. / between mountains)' },
-      { word: '盆栽', reading: 'ぼんさい', meaning: 'bonsai' },
+      { word: '盆', reading: 'ぼん', meaning: 'Festival of the dead / tray' },
+      { word: '盆地', reading: 'ぼんち', meaning: 'Basin (e.g. / between mountains)' },
+      { word: '盆栽', reading: 'ぼんさい', meaning: 'Bonsai' },
     ],
   },
   {
@@ -10769,9 +10769,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["成","皿"],
     mnemonic: 'Karakter 盛 (Boom / prosper) memiliki 11 goresan, tersusun dari elemen (成, 皿) yang melambangkan konsep intinya.',
     examples: [
-      { word: '盛り', reading: 'さかり', meaning: 'helping / serving' },
-      { word: '盛ん', reading: 'さかん', meaning: 'prosperous / active / thriving' },
-      { word: '盛装', reading: 'せいそう', meaning: 'be dressed up / wear rich clothes' },
+      { word: '盛り', reading: 'さかり', meaning: 'Helping / serving' },
+      { word: '盛ん', reading: 'さかん', meaning: 'Prosperous / active / thriving' },
+      { word: '盛装', reading: 'せいそう', meaning: 'Be dressed up / wear rich clothes' },
     ],
   },
   {
@@ -10787,9 +10787,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["明","皿"],
     mnemonic: 'Karakter 盟 (Alliance / oath) memiliki 13 goresan, tersusun dari elemen (明, 皿) yang melambangkan konsep intinya.',
     examples: [
-      { word: '同盟', reading: 'どうめい', meaning: 'alliance / union / league' },
-      { word: '連盟', reading: 'れんめい', meaning: 'league / union / alliance' },
-      { word: '加盟', reading: 'かめい', meaning: 'joining (an association, agreement, etc.)' },
+      { word: '同盟', reading: 'どうめい', meaning: 'Alliance / union / league' },
+      { word: '連盟', reading: 'れんめい', meaning: 'League / union / alliance' },
+      { word: '加盟', reading: 'かめい', meaning: 'Joining (an association, agreement, etc.)' },
     ],
   },
   {
@@ -10805,8 +10805,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["般","皿"],
     mnemonic: 'Karakter 盤 (Tray / dangkal bowl) memiliki 15 goresan, tersusun dari elemen (般, 皿) yang melambangkan konsep intinya.',
     examples: [
-      { word: '碁盤', reading: 'ごばん', meaning: 'go board' },
-      { word: '基盤', reading: 'きばん', meaning: 'foundation / basis' },
+      { word: '碁盤', reading: 'ごばん', meaning: 'Go board' },
+      { word: '基盤', reading: 'きばん', meaning: 'Foundation / basis' },
       { word: '地盤', reading: 'じばん', meaning: '(the) ground' },
     ],
   },
@@ -10823,9 +10823,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["亡","目"],
     mnemonic: 'Karakter 盲 (Tunanetra buta / Membabi buta) memiliki 8 goresan, tersusun dari elemen (亡, 目) yang melambangkan konsep intinya.',
     examples: [
-      { word: '盲点', reading: 'もうてん', meaning: 'blind spot' },
-      { word: '盲人', reading: 'もうじん', meaning: 'blind person' },
-      { word: '盲学校', reading: 'もうがっこう', meaning: 'school for the blind' },
+      { word: '盲点', reading: 'もうてん', meaning: 'Blind spot' },
+      { word: '盲人', reading: 'もうじん', meaning: 'Blind person' },
+      { word: '盲学校', reading: 'もうがっこう', meaning: 'School for the blind' },
     ],
   },
   {
@@ -10841,9 +10841,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["𠂆","𥃭"],
     mnemonic: 'Karakter 盾 (Perisai pelindung tameng) memiliki 9 goresan, tersusun dari elemen (𠂆, 𥃭) yang melambangkan konsep intinya.',
     examples: [
-      { word: '盾', reading: 'たて', meaning: 'shield' },
-      { word: '矛盾', reading: 'むじゅん', meaning: 'contradiction / inconsistency' },
-      { word: '後ろ盾', reading: 'うしろだて', meaning: 'backing' },
+      { word: '盾', reading: 'たて', meaning: 'Shield' },
+      { word: '矛盾', reading: 'むじゅん', meaning: 'Contradiction / inconsistency' },
+      { word: '後ろ盾', reading: 'うしろだて', meaning: 'Backing' },
     ],
   },
   {
@@ -10859,8 +10859,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["𠃜","目"],
     mnemonic: 'Karakter 眉 (Eyebrow) memiliki 9 goresan, tersusun dari elemen (𠃜, 目) yang melambangkan konsep intinya.',
     examples: [
-      { word: '眉', reading: 'まゆ', meaning: 'eyebrow' },
-      { word: '眉毛', reading: 'まゆげ', meaning: 'eyebrow' },
+      { word: '眉', reading: 'まゆ', meaning: 'Eyebrow' },
+      { word: '眉毛', reading: 'まゆげ', meaning: 'Eyebrow' },
     ],
   },
   {
@@ -10878,7 +10878,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     examples: [
       { word: '看護婦', reading: 'かんごふ', meaning: '(female) nurse' },
       { word: '看護師', reading: 'かんごし', meaning: 'Perawat / suster medis' },
-      { word: '看護', reading: 'かんご', meaning: 'nursing' },
+      { word: '看護', reading: 'かんご', meaning: 'Nursing' },
     ],
   },
   {
@@ -10894,9 +10894,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["目","兆"],
     mnemonic: 'Karakter 眺 (Stare / watch) memiliki 11 goresan, tersusun dari elemen (目, 兆) yang melambangkan konsep intinya.',
     examples: [
-      { word: '眺め', reading: 'ながめ', meaning: 'scene / pandangan / prospect' },
-      { word: '眺める', reading: 'ながめる', meaning: 'pandangan / melakukan gaze at' },
-      { word: '眺望', reading: 'ちょうぼう', meaning: 'view' },
+      { word: '眺め', reading: 'ながめ', meaning: 'Scene / pandangan / prospect' },
+      { word: '眺める', reading: 'ながめる', meaning: 'Pandangan / Gaze at' },
+      { word: '眺望', reading: 'ちょうぼう', meaning: 'View' },
     ],
   },
   {
@@ -10912,9 +10912,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["目","艮"],
     mnemonic: 'Karakter 眼 (Eyeball) memiliki 11 goresan, tersusun dari elemen (目, 艮) yang melambangkan konsep intinya.',
     examples: [
-      { word: '眼鏡', reading: 'めがね', meaning: 'eye glasses' },
-      { word: '眼科', reading: 'がんか', meaning: 'ophthalmology' },
-      { word: '眼球', reading: 'がんきゅう', meaning: 'eyeball' },
+      { word: '眼鏡', reading: 'めがね', meaning: 'Eye glasses' },
+      { word: '眼科', reading: 'がんか', meaning: 'Ophthalmology' },
+      { word: '眼球', reading: 'がんきゅう', meaning: 'Eyeball' },
     ],
   },
   {
@@ -10930,9 +10930,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["目","垂"],
     mnemonic: 'Karakter 睡 (Drowsy / sleep) memiliki 13 goresan, tersusun dari elemen (目, 垂) yang melambangkan konsep intinya.',
     examples: [
-      { word: '睡眠', reading: 'すいみん', meaning: 'sleep' },
-      { word: '昏睡', reading: 'こんすい', meaning: 'coma' },
-      { word: '熟睡', reading: 'じゅくすい', meaning: 'deep sleep' },
+      { word: '睡眠', reading: 'すいみん', meaning: 'Sleep' },
+      { word: '昏睡', reading: 'こんすい', meaning: 'Coma' },
+      { word: '熟睡', reading: 'じゅくすい', meaning: 'Deep sleep' },
     ],
   },
   {
@@ -10948,7 +10948,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["目","坴"],
     mnemonic: 'Karakter 睦 (Intimate / friendly) memiliki 13 goresan, tersusun dari elemen (目, 坴) yang melambangkan konsep intinya.',
     examples: [
-      { word: '親睦', reading: 'しんぼく', meaning: 'friendship' },
+      { word: '親睦', reading: 'しんぼく', meaning: 'Friendship' },
       { word: '和睦', reading: 'わぼく', meaning: 'Perdamaian rukun damai' },
     ],
   },
@@ -10965,7 +10965,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["目","童"],
     mnemonic: 'Karakter 瞳 (Pupil biji mata pupil) memiliki 17 goresan, tersusun dari elemen (目, 童) yang melambangkan konsep intinya.',
     examples: [
-      { word: '瞳', reading: 'ひとみ', meaning: 'pupil (of eye)' },
+      { word: '瞳', reading: 'ひとみ', meaning: 'Pupil (of eye)' },
       { word: '瞳孔', reading: 'どうこう', meaning: 'Pupil bola mata' },
     ],
   },
@@ -10982,8 +10982,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["龴","𠄐","丿"],
     mnemonic: 'Karakter 矛 (Halberd / arms) memiliki 5 goresan, tersusun dari elemen (龴, 𠄐, 丿) yang melambangkan konsep intinya.',
     examples: [
-      { word: '矛盾', reading: 'むじゅん', meaning: 'contradiction / inconsistency' },
-      { word: '矛先', reading: 'ほこさき', meaning: 'point of a spear' },
+      { word: '矛盾', reading: 'むじゅん', meaning: 'Contradiction / inconsistency' },
+      { word: '矛先', reading: 'ほこさき', meaning: 'Point of a spear' },
     ],
   },
   {
@@ -10999,9 +10999,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["𠂉","大"],
     mnemonic: 'Karakter 矢 (Dart / arrow) memiliki 5 goresan, tersusun dari elemen (𠂉, 大) yang melambangkan konsep intinya.',
     examples: [
-      { word: '矢', reading: 'や', meaning: 'arrow' },
-      { word: '矢印', reading: 'やじるし', meaning: 'directing arrow' },
-      { word: '弓矢', reading: 'ゆみや', meaning: 'bow and arrow' },
+      { word: '矢', reading: 'や', meaning: 'Arrow' },
+      { word: '矢印', reading: 'やじるし', meaning: 'Directing arrow' },
+      { word: '弓矢', reading: 'ゆみや', meaning: 'Bow and arrow' },
     ],
   },
   {
@@ -11018,8 +11018,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 知 (Know / wisdom) memiliki 8 goresan, tersusun dari elemen (矢, 口) yang melambangkan konsep intinya.',
     examples: [
       { word: '承知', reading: 'しょうち', meaning: 'Pemahaman persetujuan / Mengetahui dan menyetujui' },
-      { word: '知る', reading: 'しる', meaning: 'mengetahui / memahami' },
-      { word: '知らせ', reading: 'しらせ', meaning: 'notice' },
+      { word: '知る', reading: 'しる', meaning: 'Mengetahui / memahami' },
+      { word: '知らせ', reading: 'しらせ', meaning: 'Notice' },
     ],
   },
   {
@@ -11035,7 +11035,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["矢","喬"],
     mnemonic: 'Karakter 矯 (Rectify / straighten) memiliki 17 goresan, tersusun dari elemen (矢, 喬) yang melambangkan konsep intinya.',
     examples: [
-      { word: '矯正', reading: 'きょうせい', meaning: 'correction (of a fault, defect, flaw, etc.)' },
+      { word: '矯正', reading: 'きょうせい', meaning: 'Correction (of a fault, defect, flaw, etc.)' },
       { word: '矯風', reading: 'きょうふう', meaning: 'Reformasi moralitas adat' },
     ],
   },
@@ -11052,9 +11052,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["石","卆"],
     mnemonic: 'Karakter 砕 (Smash / mematahkan / rusak) memiliki 9 goresan, tersusun dari elemen (石, 卆) yang melambangkan konsep intinya.',
     examples: [
-      { word: '砕く', reading: 'くだく', meaning: 'melakukan break / melakukan smash' },
-      { word: '砕ける', reading: 'くだける', meaning: 'melakukan break / melakukan be broken' },
-      { word: '火砕流', reading: 'かさいりゅう', meaning: 'pyroclastic flow' },
+      { word: '砕く', reading: 'くだく', meaning: 'Memecahkan / Merusak / Beristirahat / Smash' },
+      { word: '砕ける', reading: 'くだける', meaning: 'Memecahkan / Merusak / Beristirahat / Menjadi broken' },
+      { word: '火砕流', reading: 'かさいりゅう', meaning: 'Pyroclastic flow' },
     ],
   },
   {
@@ -11070,8 +11070,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["石","包"],
     mnemonic: 'Karakter 砲 (Meriam senjata artileri) memiliki 10 goresan, tersusun dari elemen (石, 包) yang melambangkan konsep intinya.',
     examples: [
-      { word: '鉄砲', reading: 'てっぽう', meaning: 'gun' },
-      { word: '主砲', reading: 'しゅほう', meaning: 'main battery' },
+      { word: '鉄砲', reading: 'てっぽう', meaning: 'Gun' },
+      { word: '主砲', reading: 'しゅほう', meaning: 'Main battery' },
       { word: '大砲', reading: 'たいほう', meaning: '(large) gun' },
     ],
   },
@@ -11088,9 +11088,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["石","肖"],
     mnemonic: 'Karakter 硝 (Nitrate / saltpeter) memiliki 12 goresan, tersusun dari elemen (石, 肖) yang melambangkan konsep intinya.',
     examples: [
-      { word: '硝子', reading: 'ガラス', meaning: 'glass' },
-      { word: '硝煙', reading: 'しょうえん', meaning: 'gunpowder smoke' },
-      { word: '硝酸', reading: 'しょうさん', meaning: 'nitric acid' },
+      { word: '硝子', reading: 'ガラス', meaning: 'Glass' },
+      { word: '硝煙', reading: 'しょうえん', meaning: 'Gunpowder smoke' },
+      { word: '硝酸', reading: 'しょうさん', meaning: 'Nitric acid' },
     ],
   },
   {
@@ -11106,9 +11106,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["石","㐬"],
     mnemonic: 'Karakter 硫 (Sulphur) memiliki 12 goresan, tersusun dari elemen (石, 㐬) yang melambangkan konsep intinya.',
     examples: [
-      { word: '硫酸', reading: 'りゅうさん', meaning: 'sulfuric acid' },
-      { word: '硫黄', reading: 'いおう', meaning: 'sulfur (S)' },
-      { word: '脱硫', reading: 'だつりゅう', meaning: 'desulfurization' },
+      { word: '硫酸', reading: 'りゅうさん', meaning: 'Sulfuric acid' },
+      { word: '硫黄', reading: 'いおう', meaning: 'Sulfur (S)' },
+      { word: '脱硫', reading: 'だつりゅう', meaning: 'Desulfurization' },
     ],
   },
   {
@@ -11124,9 +11124,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["其","石"],
     mnemonic: 'Karakter 碁 (Go) memiliki 13 goresan, tersusun dari elemen (其, 石) yang melambangkan konsep intinya.',
     examples: [
-      { word: '碁', reading: 'ご', meaning: 'go (board game of capturing territory)' },
-      { word: '碁盤', reading: 'ごばん', meaning: 'go board' },
-      { word: '囲碁', reading: 'いご', meaning: 'go (board game)' },
+      { word: '碁', reading: 'ご', meaning: 'Go (board game of capturing territory)' },
+      { word: '碁盤', reading: 'ごばん', meaning: 'Go board' },
+      { word: '囲碁', reading: 'いご', meaning: 'Go (board game)' },
     ],
   },
   {
@@ -11142,9 +11142,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["石","卑"],
     mnemonic: 'Karakter 碑 (Prasasti monumen batu penanda) memiliki 14 goresan, tersusun dari elemen (石, 卑) yang melambangkan konsep intinya.',
     examples: [
-      { word: '碑', reading: 'ひ', meaning: 'stone monument bearing an inscription' },
-      { word: '石碑', reading: 'せきひ', meaning: 'stone monument' },
-      { word: '碑文', reading: 'ひぶん', meaning: 'inscription' },
+      { word: '碑', reading: 'ひ', meaning: 'Stone monument bearing an inscription' },
+      { word: '石碑', reading: 'せきひ', meaning: 'Stone monument' },
+      { word: '碑文', reading: 'ひぶん', meaning: 'Inscription' },
     ],
   },
   {
@@ -11160,9 +11160,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["石","兹"],
     mnemonic: 'Karakter 磁 (Magnet / porcelain) memiliki 14 goresan, tersusun dari elemen (石, 兹) yang melambangkan konsep intinya.',
     examples: [
-      { word: '磁気', reading: 'じき', meaning: 'magnetism' },
-      { word: '磁器', reading: 'じき', meaning: 'porcelain / china' },
-      { word: '磁石', reading: 'じしゃく', meaning: 'magnet' },
+      { word: '磁気', reading: 'じき', meaning: 'Magnetism' },
+      { word: '磁器', reading: 'じき', meaning: 'Porcelain / china' },
+      { word: '磁石', reading: 'じしゃく', meaning: 'Magnet' },
     ],
   },
   {
@@ -11178,9 +11178,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["石","焦"],
     mnemonic: 'Karakter 礁 (Reef / sunken rock) memiliki 17 goresan, tersusun dari elemen (石, 焦) yang melambangkan konsep intinya.',
     examples: [
-      { word: '岩礁', reading: 'がんしょう', meaning: 'reef' },
-      { word: '暗礁', reading: 'あんしょう', meaning: 'reef' },
-      { word: '環礁', reading: 'かんしょう', meaning: 'atoll' },
+      { word: '岩礁', reading: 'がんしょう', meaning: 'Reef' },
+      { word: '暗礁', reading: 'あんしょう', meaning: 'Reef' },
+      { word: '環礁', reading: 'かんしょう', meaning: 'Atoll' },
     ],
   },
   {
@@ -11196,8 +11196,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["石","楚"],
     mnemonic: 'Karakter 礎 (Cornerstone / foundation stone) memiliki 18 goresan, tersusun dari elemen (石, 楚) yang melambangkan konsep intinya.',
     examples: [
-      { word: '基礎', reading: 'きそ', meaning: 'foundation / basis' },
-      { word: '礎石', reading: 'そせき', meaning: 'foundation stone' },
+      { word: '基礎', reading: 'きそ', meaning: 'Foundation / basis' },
+      { word: '礎石', reading: 'そせき', meaning: 'Foundation stone' },
     ],
   },
   {
@@ -11213,9 +11213,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["礻","止"],
     mnemonic: 'Karakter 祉 (Welfare / happiness) memiliki 8 goresan, tersusun dari elemen (礻, 止) yang melambangkan konsep intinya.',
     examples: [
-      { word: '福祉', reading: 'ふくし', meaning: 'welfare / well-being' },
-      { word: '社会福祉', reading: 'しゃかいふくし', meaning: 'social welfare' },
-      { word: '老人福祉', reading: 'ろうじんふくし', meaning: 'welfare for the aged' },
+      { word: '福祉', reading: 'ふくし', meaning: 'Welfare / well-being' },
+      { word: '社会福祉', reading: 'しゃかいふくし', meaning: 'Social welfare' },
+      { word: '老人福祉', reading: 'ろうじんふくし', meaning: 'Welfare for the aged' },
     ],
   },
   {
@@ -11231,9 +11231,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["礻","羊"],
     mnemonic: 'Karakter 祥 (Auspicious / happiness) memiliki 10 goresan, tersusun dari elemen (礻, 羊) yang melambangkan konsep intinya.',
     examples: [
-      { word: '不祥事', reading: 'ふしょうじ', meaning: 'scandal' },
-      { word: '発祥', reading: 'はっしょう', meaning: 'origin' },
-      { word: '発祥地', reading: 'はっしょうち', meaning: 'birthplace (e.g. of jazz, Buddhism)' },
+      { word: '不祥事', reading: 'ふしょうじ', meaning: 'Scandal' },
+      { word: '発祥', reading: 'はっしょう', meaning: 'Origin' },
+      { word: '発祥地', reading: 'はっしょうち', meaning: 'Birthplace (e.g. of jazz, Buddhism)' },
     ],
   },
   {
@@ -11249,8 +11249,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["礻","单"],
     mnemonic: 'Karakter 禅 (Zen / silent meditation) memiliki 13 goresan, tersusun dari elemen (礻, 单) yang melambangkan konsep intinya.',
     examples: [
-      { word: '禅', reading: 'ぜん', meaning: 'zen (buddhism)' },
-      { word: '座禅', reading: 'ざぜん', meaning: 'zazen (seated Zen meditation, usu. in a cross-legged position)' },
+      { word: '禅', reading: 'ぜん', meaning: 'Zen (buddhism)' },
+      { word: '座禅', reading: 'ざぜん', meaning: 'Zazen (seated Zen meditation, usu. in a cross-legged position)' },
       { word: '禅僧', reading: 'ぜんそう', meaning: 'Zen priest' },
     ],
   },
@@ -11268,8 +11268,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 秀 (Unggul / Cemerlang / Istimewa) memiliki 7 goresan, tersusun dari elemen (禾, 乃) yang melambangkan konsep intinya.',
     examples: [
       { word: '優秀', reading: 'ゆうしゅう', meaning: 'Luar biasa unggul / Cemerlang / Berprestasi tinggi' },
-      { word: '秀作', reading: 'しゅうさく', meaning: 'excellent (piece of) work' },
-      { word: '秀才', reading: 'しゅうさい', meaning: 'bright person' },
+      { word: '秀作', reading: 'しゅうさく', meaning: 'Excellent (piece of) work' },
+      { word: '秀才', reading: 'しゅうさい', meaning: 'Bright person' },
     ],
   },
   {
@@ -11285,8 +11285,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["禾","必"],
     mnemonic: 'Karakter 秘 (Rahasia / conceal) memiliki 10 goresan, tersusun dari elemen (禾, 必) yang melambangkan konsep intinya.',
     examples: [
-      { word: '秘密', reading: 'ひみつ', meaning: 'secret / secrecy' },
-      { word: '神秘', reading: 'しんぴ', meaning: 'mystery' },
+      { word: '秘密', reading: 'ひみつ', meaning: 'Secret / secrecy' },
+      { word: '神秘', reading: 'しんぴ', meaning: 'Mystery' },
       { word: '秘書', reading: 'ひしょ', meaning: '(private) secretary' },
     ],
   },
@@ -11304,7 +11304,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 租 (Tariff / crop tax) memiliki 10 goresan, tersusun dari elemen (禾, 且) yang melambangkan konsep intinya.',
     examples: [
       { word: '租界', reading: 'そかい', meaning: '(foreign) concession (in China)' },
-      { word: '租税', reading: 'そぜい', meaning: 'taxes' },
+      { word: '租税', reading: 'そぜい', meaning: 'Taxes' },
     ],
   },
   {
@@ -11320,8 +11320,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["禾","失"],
     mnemonic: 'Karakter 秩 (Regularity / salary) memiliki 10 goresan, tersusun dari elemen (禾, 失) yang melambangkan konsep intinya.',
     examples: [
-      { word: '秩序', reading: 'ちつじょ', meaning: 'order / regularity' },
-      { word: '無秩序', reading: 'むちつじょ', meaning: 'disorder' },
+      { word: '秩序', reading: 'ちつじょ', meaning: 'Order / regularity' },
+      { word: '無秩序', reading: 'むちつじょ', meaning: 'Disorder' },
     ],
   },
   {
@@ -11337,9 +11337,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["禾","尔"],
     mnemonic: 'Karakter 称 (Appellation / praise) memiliki 10 goresan, tersusun dari elemen (禾, 尔) yang melambangkan konsep intinya.',
     examples: [
-      { word: '称する', reading: 'しょうする', meaning: 'melakukan take the name of / melakukan call oneself' },
-      { word: '名称', reading: 'めいしょう', meaning: 'name' },
-      { word: '仮称', reading: 'かしょう', meaning: 'temporary name' },
+      { word: '称する', reading: 'しょうする', meaning: 'Mengambil (the name of) / Memanggil (oneself)' },
+      { word: '名称', reading: 'めいしょう', meaning: 'Name' },
+      { word: '仮称', reading: 'かしょう', meaning: 'Temporary name' },
     ],
   },
   {
@@ -11356,8 +11356,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 稚 (Immature / young) memiliki 13 goresan, tersusun dari elemen (禾, 隹) yang melambangkan konsep intinya.',
     examples: [
       { word: '幼稚園', reading: 'ようちえん', meaning: 'Taman kanak-kanak (TK)' },
-      { word: '幼稚', reading: 'ようち', meaning: 'infancy / childish / infantile' },
-      { word: '稚拙', reading: 'ちせつ', meaning: 'unskillful' },
+      { word: '幼稚', reading: 'ようち', meaning: 'Infancy / childish / infantile' },
+      { word: '稚拙', reading: 'ちせつ', meaning: 'Unskillful' },
     ],
   },
   {
@@ -11373,9 +11373,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["禾","爫","旧"],
     mnemonic: 'Karakter 稲 (Rice plant) memiliki 14 goresan, tersusun dari elemen (禾, 爫, 旧) yang melambangkan konsep intinya.',
     examples: [
-      { word: '稲', reading: 'いね', meaning: 'rice-plant' },
+      { word: '稲', reading: 'いね', meaning: 'Rice-plant' },
       { word: '稲光', reading: 'いなびかり', meaning: '(flash of) lightning' },
-      { word: '水稲', reading: 'すいとう', meaning: 'wet-land rice' },
+      { word: '水稲', reading: 'すいとう', meaning: 'Wet-land rice' },
     ],
   },
   {
@@ -11391,9 +11391,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["禾","家"],
     mnemonic: 'Karakter 稼 (Pendapatan / Upah kerja) memiliki 15 goresan, tersusun dari elemen (禾, 家) yang melambangkan konsep intinya.',
     examples: [
-      { word: '稼ぐ', reading: 'かせぐ', meaning: 'melakukan earn income / melakukan labor' },
-      { word: '共稼ぎ', reading: 'ともかせぎ', meaning: 'working together / (husband and wife) earning a living together' },
-      { word: '出稼ぎ', reading: 'でかせぎ', meaning: 'working away from home (esp. abroad)' },
+      { word: '稼ぐ', reading: 'かせぐ', meaning: 'Menghasilkan uang (income) / Labor' },
+      { word: '共稼ぎ', reading: 'ともかせぎ', meaning: 'Working together / (husband and wife) earning a living together' },
+      { word: '出稼ぎ', reading: 'でかせぎ', meaning: 'Working away from home (esp. abroad)' },
     ],
   },
   {
@@ -11409,8 +11409,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["禾","尤","旨"],
     mnemonic: 'Karakter 稽 (Berlatih meneliti / Menunduk hormat) memiliki 16 goresan, tersusun dari elemen (禾, 尤, 旨) yang melambangkan konsep intinya.',
     examples: [
-      { word: '滑稽', reading: 'こっけい', meaning: 'funny / humorous / comical' },
-      { word: '稽古', reading: 'けいこ', meaning: 'practice / training / study' },
+      { word: '滑稽', reading: 'こっけい', meaning: 'Funny / humorous / comical' },
+      { word: '稽古', reading: 'けいこ', meaning: 'Practice / training / study' },
     ],
   },
   {
@@ -11426,9 +11426,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["禾","高"],
     mnemonic: 'Karakter 稿 (Draft / copy) memiliki 15 goresan, tersusun dari elemen (禾, 高) yang melambangkan konsep intinya.',
     examples: [
-      { word: '原稿', reading: 'げんこう', meaning: 'manuscript / copy' },
+      { word: '原稿', reading: 'げんこう', meaning: 'Manuscript / copy' },
       { word: '原稿用紙', reading: 'げんこうようし', meaning: 'Japanese writing paper (lined with a square grid, one square per character)' },
-      { word: '投稿', reading: 'とうこう', meaning: 'contribution (to a newspaper, magazine, etc.)' },
+      { word: '投稿', reading: 'とうこう', meaning: 'Contribution (to a newspaper, magazine, etc.)' },
     ],
   },
   {
@@ -11444,9 +11444,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["𥞤","殳"],
     mnemonic: 'Karakter 穀 (Cereals / grain) memiliki 14 goresan, tersusun dari elemen (𥞤, 殳) yang melambangkan konsep intinya.',
     examples: [
-      { word: '穀物', reading: 'こくもつ', meaning: 'grain / cereal / corn' },
-      { word: '穀倉', reading: 'こくそう', meaning: 'granary' },
-      { word: '穀類', reading: 'こくるい', meaning: 'grains' },
+      { word: '穀物', reading: 'こくもつ', meaning: 'Grain / cereal / corn' },
+      { word: '穀倉', reading: 'こくそう', meaning: 'Granary' },
+      { word: '穀類', reading: 'こくるい', meaning: 'Grains' },
     ],
   },
   {
@@ -11462,8 +11462,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["禾","恵"],
     mnemonic: 'Karakter 穂 (Ear / ear (grain)) memiliki 15 goresan, tersusun dari elemen (禾, 恵) yang melambangkan konsep intinya.',
     examples: [
-      { word: '穂', reading: 'ほ', meaning: 'ear (of plant) / head (of plant)' },
-      { word: '稲穂', reading: 'いなほ', meaning: 'ear (head) of rice' },
+      { word: '穂', reading: 'ほ', meaning: 'Ear (of plant) / head (of plant)' },
+      { word: '稲穂', reading: 'いなほ', meaning: 'Ear (head) of rice' },
     ],
   },
   {
@@ -11479,9 +11479,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["禾","𢚩"],
     mnemonic: 'Karakter 穏 (Calm / quiet) memiliki 16 goresan, tersusun dari elemen (禾, 𢚩) yang melambangkan konsep intinya.',
     examples: [
-      { word: '穏やか', reading: 'おだやか', meaning: 'calm / gentle / quiet' },
-      { word: '不穏', reading: 'ふおん', meaning: 'disquieting' },
-      { word: '平穏', reading: 'へいおん', meaning: 'tranquil' },
+      { word: '穏やか', reading: 'おだやか', meaning: 'Calm / gentle / quiet' },
+      { word: '不穏', reading: 'ふおん', meaning: 'Disquieting' },
+      { word: '平穏', reading: 'へいおん', meaning: 'Tranquil' },
     ],
   },
   {
@@ -11497,7 +11497,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["禾","蒦"],
     mnemonic: 'Karakter 穫 (Harvest / reap) memiliki 18 goresan, tersusun dari elemen (禾, 蒦) yang melambangkan konsep intinya.',
     examples: [
-      { word: '収穫', reading: 'しゅうかく', meaning: 'harvest / crop / ingathering' },
+      { word: '収穫', reading: 'しゅうかく', meaning: 'Harvest / crop / ingathering' },
       { word: '穫語', reading: 'カクご', meaning: 'Istilah / kosakata terkait Harvest / reap' },
     ],
   },
@@ -11514,9 +11514,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["宀","八"],
     mnemonic: 'Karakter 穴 (Hole / aperture) memiliki 5 goresan, tersusun dari elemen (宀, 八) yang melambangkan konsep intinya.',
     examples: [
-      { word: '穴', reading: 'あな', meaning: 'hole' },
-      { word: '墓穴', reading: 'ぼけつ', meaning: 'grave (pit)' },
-      { word: '洞穴', reading: 'ほらあな', meaning: 'cave' },
+      { word: '穴', reading: 'あな', meaning: 'Hole' },
+      { word: '墓穴', reading: 'ぼけつ', meaning: 'Grave (pit)' },
+      { word: '洞穴', reading: 'ほらあな', meaning: 'Cave' },
     ],
   },
   {
@@ -11532,7 +11532,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["穴","切"],
     mnemonic: 'Karakter 窃 (Stealth / steal) memiliki 9 goresan, tersusun dari elemen (穴, 切) yang melambangkan konsep intinya.',
     examples: [
-      { word: '窃盗', reading: 'せっとう', meaning: 'theft' },
+      { word: '窃盗', reading: 'せっとう', meaning: 'Theft' },
       { word: '剽窃', reading: 'ひょうせつ', meaning: 'Plagiarisme penjiplakan karya' },
     ],
   },
@@ -11549,9 +11549,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["穴","至"],
     mnemonic: 'Karakter 窒 (Plug up / obstruct) memiliki 11 goresan, tersusun dari elemen (穴, 至) yang melambangkan konsep intinya.',
     examples: [
-      { word: '窒息', reading: 'ちっそく', meaning: 'suffocation' },
-      { word: '窒扶斯', reading: 'チフス', meaning: 'typhoid' },
-      { word: '窒素', reading: 'ちっそ', meaning: 'nitrogen (N)' },
+      { word: '窒息', reading: 'ちっそく', meaning: 'Suffocation' },
+      { word: '窒扶斯', reading: 'チフス', meaning: 'Typhoid' },
+      { word: '窒素', reading: 'ちっそ', meaning: 'Nitrogen (N)' },
     ],
   },
   {
@@ -11567,7 +11567,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["穴","屈"],
     mnemonic: 'Karakter 窟 (Gua lubang sarang persembunyian) memiliki 13 goresan, tersusun dari elemen (穴, 屈) yang melambangkan konsep intinya.',
     examples: [
-      { word: '洞窟', reading: 'どうくつ', meaning: 'cave' },
+      { word: '洞窟', reading: 'どうくつ', meaning: 'Cave' },
       { word: '巣窟', reading: 'そうくつ', meaning: 'Sarang tempat persembunyian kejahatan' },
     ],
   },
@@ -11584,9 +11584,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["穴","躬"],
     mnemonic: 'Karakter 窮 (Hard up / destitute) memiliki 15 goresan, tersusun dari elemen (穴, 躬) yang melambangkan konsep intinya.',
     examples: [
-      { word: '窮屈', reading: 'きゅうくつ', meaning: 'narrow / tight / formal' },
-      { word: '窮乏', reading: 'きゅうぼう', meaning: 'poverty' },
-      { word: '困窮', reading: 'こんきゅう', meaning: 'poverty' },
+      { word: '窮屈', reading: 'きゅうくつ', meaning: 'Narrow / tight / formal' },
+      { word: '窮乏', reading: 'きゅうぼう', meaning: 'Poverty' },
+      { word: '困窮', reading: 'こんきゅう', meaning: 'Poverty' },
     ],
   },
   {
@@ -11602,8 +11602,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["穴","羔"],
     mnemonic: 'Karakter 窯 (Kiln / oven) memiliki 15 goresan, tersusun dari elemen (穴, 羔) yang melambangkan konsep intinya.',
     examples: [
-      { word: '窯元', reading: 'かまもと', meaning: 'pottery (i.e. the place)' },
-      { word: '窯業', reading: 'ようぎょう', meaning: 'ceramics' },
+      { word: '窯元', reading: 'かまもと', meaning: 'Pottery (i.e. the place)' },
+      { word: '窯業', reading: 'ようぎょう', meaning: 'Ceramics' },
     ],
   },
   {
@@ -11620,8 +11620,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 竜 (Dragon / imperial) memiliki 10 goresan, tersusun dari elemen (立, 日, 乚) yang melambangkan konsep intinya.',
     examples: [
       { word: '竜頭蛇尾', reading: 'りゅうとうだび', meaning: 'Awalnya megah menggelegar namun akhirnya berakhir melempem mengecewakan' },
-      { word: '恐竜', reading: 'きょうりゅう', meaning: 'dinosaur' },
-      { word: '登竜門', reading: 'とうりゅうもん', meaning: 'gateway to success' },
+      { word: '恐竜', reading: 'きょうりゅう', meaning: 'Dinosaur' },
+      { word: '登竜門', reading: 'とうりゅうもん', meaning: 'Gateway to success' },
     ],
   },
   {
@@ -11637,9 +11637,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["立","耑"],
     mnemonic: 'Karakter 端 (Edge / origin) memiliki 14 goresan, tersusun dari elemen (立, 耑) yang melambangkan konsep intinya.',
     examples: [
-      { word: '途端', reading: 'とたん', meaning: 'just (now / at the moment / etc.)' },
-      { word: '端', reading: 'はし', meaning: 'end (e.g. / of street) / edge' },
-      { word: '極端', reading: 'きょくたん', meaning: 'extreme / extremity' },
+      { word: '途端', reading: 'とたん', meaning: 'Just (now / at the moment / etc.)' },
+      { word: '端', reading: 'はし', meaning: 'End (e.g. / of street) / edge' },
+      { word: '極端', reading: 'きょくたん', meaning: 'Extreme / extremity' },
     ],
   },
   {
@@ -11655,9 +11655,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["竹","由"],
     mnemonic: 'Karakter 笛 (Flute / clarinet) memiliki 11 goresan, tersusun dari elemen (竹, 由) yang melambangkan konsep intinya.',
     examples: [
-      { word: '笛', reading: 'ふえ', meaning: 'flute / whistle' },
-      { word: '口笛', reading: 'くちぶえ', meaning: 'whistle (sound made with the lips)' },
-      { word: '汽笛', reading: 'きてき', meaning: 'steam whistle' },
+      { word: '笛', reading: 'ふえ', meaning: 'Flute / whistle' },
+      { word: '口笛', reading: 'くちぶえ', meaning: 'Whistle (sound made with the lips)' },
+      { word: '汽笛', reading: 'きてき', meaning: 'Steam whistle' },
     ],
   },
   {
@@ -11673,9 +11673,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["竹","𢎨"],
     mnemonic: 'Karakter 第 (No. / residence) memiliki 11 goresan, tersusun dari elemen (竹, 𢎨) yang melambangkan konsep intinya.',
     examples: [
-      { word: '次第', reading: 'しだい', meaning: 'order / circumstances / immediate(ly)' },
+      { word: '次第', reading: 'しだい', meaning: 'Order / circumstances / immediate(ly)' },
       { word: '第～', reading: 'だい～', meaning: '~th' },
-      { word: '落第', reading: 'らくだい', meaning: 'kegagalan / dropping out of a class' },
+      { word: '落第', reading: 'らくだい', meaning: 'Kegagalan / dropping out of a class' },
     ],
   },
   {
@@ -11691,9 +11691,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["竹","肋"],
     mnemonic: 'Karakter 筋 (Muscle / sinew) memiliki 12 goresan, tersusun dari elemen (竹, 肋) yang melambangkan konsep intinya.',
     examples: [
-      { word: '筋', reading: 'すじ', meaning: 'muscle / string / line' },
-      { word: '筋肉', reading: 'きんにく', meaning: 'muscle / sinews' },
-      { word: '大筋', reading: 'おおすじ', meaning: 'outline / summary' },
+      { word: '筋', reading: 'すじ', meaning: 'Muscle / string / line' },
+      { word: '筋肉', reading: 'きんにく', meaning: 'Muscle / sinews' },
+      { word: '大筋', reading: 'おおすじ', meaning: 'Outline / summary' },
     ],
   },
   {
@@ -11709,9 +11709,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["竹","固"],
     mnemonic: 'Karakter 箇 (Counter for articles) memiliki 14 goresan, tersusun dari elemen (竹, 固) yang melambangkan konsep intinya.',
     examples: [
-      { word: '箇条書', reading: 'かじょうがき', meaning: 'itemized form / itemization' },
-      { word: '箇所', reading: 'かしょ', meaning: 'place / point / part' },
-      { word: '箇条書き', reading: 'かじょうがき', meaning: 'itemized form' },
+      { word: '箇条書', reading: 'かじょうがき', meaning: 'Itemized form / itemization' },
+      { word: '箇所', reading: 'かしょ', meaning: 'Place / point / part' },
+      { word: '箇条書き', reading: 'かじょうがき', meaning: 'Itemized form' },
     ],
   },
   {
@@ -11728,7 +11728,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 箋 (Paper / label) memiliki 14 goresan, tersusun dari elemen (竹, 戔) yang melambangkan konsep intinya.',
     examples: [
       { word: '処方箋', reading: 'しょほうせん', meaning: 'Resep obat dari dokter' },
-      { word: '便箋', reading: 'びんせん', meaning: 'writing paper / stationery' },
+      { word: '便箋', reading: 'びんせん', meaning: 'Writing paper / stationery' },
     ],
   },
   {
@@ -11744,8 +11744,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["竹","者"],
     mnemonic: 'Karakter 箸 (Chopsticks) memiliki 15 goresan, tersusun dari elemen (竹, 者) yang melambangkan konsep intinya.',
     examples: [
-      { word: '箸', reading: 'はし', meaning: 'chopsticks' },
-      { word: '割り箸', reading: 'わりばし', meaning: 'dispensable chopsticks' },
+      { word: '箸', reading: 'はし', meaning: 'Chopsticks' },
+      { word: '割り箸', reading: 'わりばし', meaning: 'Dispensable chopsticks' },
     ],
   },
   {
@@ -11761,8 +11761,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["竹","即"],
     mnemonic: 'Karakter 節 (Sendi / Musim / Penghematan) memiliki 13 goresan, tersusun dari elemen (竹, 即) yang melambangkan konsep intinya.',
     examples: [
-      { word: '節約', reading: 'せつやく', meaning: 'economizing / saving' },
-      { word: '節', reading: 'ふし', meaning: 'tune / tone / knob' },
+      { word: '節約', reading: 'せつやく', meaning: 'Economizing / saving' },
+      { word: '節', reading: 'ふし', meaning: 'Tune / tone / knob' },
       { word: '季節', reading: 'きせつ', meaning: 'Musim' },
     ],
   },
@@ -11779,9 +11779,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["竹","𨊠"],
     mnemonic: 'Karakter 範 (Pattern / example) memiliki 15 goresan, tersusun dari elemen (竹, 𨊠) yang melambangkan konsep intinya.',
     examples: [
-      { word: '範囲', reading: 'はんい', meaning: 'extent / scope / range' },
-      { word: '規範', reading: 'きはん', meaning: 'model / standard / example' },
-      { word: '模範', reading: 'もはん', meaning: 'model / example' },
+      { word: '範囲', reading: 'はんい', meaning: 'Extent / scope / range' },
+      { word: '規範', reading: 'きはん', meaning: 'Model / standard / example' },
+      { word: '模範', reading: 'もはん', meaning: 'Model / example' },
     ],
   },
   {
@@ -11797,9 +11797,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["竹","馬"],
     mnemonic: 'Karakter 篤 (Fervent / kind) memiliki 16 goresan, tersusun dari elemen (竹, 馬) yang melambangkan konsep intinya.',
     examples: [
-      { word: '危篤', reading: 'きとく', meaning: 'critical condition' },
+      { word: '危篤', reading: 'きとく', meaning: 'Critical condition' },
       { word: '士篤恒', reading: 'ストックホルム', meaning: 'Stockholm (Sweden)' },
-      { word: '篤志家', reading: 'とくしか', meaning: 'charitable person' },
+      { word: '篤志家', reading: 'とくしか', meaning: 'Charitable person' },
     ],
   },
   {
@@ -11815,9 +11815,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["竹","溥"],
     mnemonic: 'Karakter 簿 (Register / record buku) memiliki 19 goresan, tersusun dari elemen (竹, 溥) yang melambangkan konsep intinya.',
     examples: [
-      { word: '名簿', reading: 'めいぼ', meaning: 'register of names' },
-      { word: '家計簿', reading: 'かけいぼ', meaning: 'household account book' },
-      { word: '帳簿', reading: 'ちょうぼ', meaning: 'account book' },
+      { word: '名簿', reading: 'めいぼ', meaning: 'Register of names' },
+      { word: '家計簿', reading: 'かけいぼ', meaning: 'Household account book' },
+      { word: '帳簿', reading: 'ちょうぼ', meaning: 'Account book' },
     ],
   },
   {
@@ -11833,9 +11833,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["竹","龍"],
     mnemonic: 'Karakter 籠 (Basket / devote oneself) memiliki 22 goresan, tersusun dari elemen (竹, 龍) yang melambangkan konsep intinya.',
     examples: [
-      { word: '籠', reading: 'かご', meaning: 'basket / cage' },
-      { word: '籠もる', reading: 'こもる', meaning: 'melakukan seclude oneself / melakukan be confined in' },
-      { word: '揺り籠', reading: 'ゆりかご', meaning: 'cradle' },
+      { word: '籠', reading: 'かご', meaning: 'Basket / cage' },
+      { word: '籠もる', reading: 'こもる', meaning: 'Seclude oneself / Menjadi confined in' },
+      { word: '揺り籠', reading: 'ゆりかご', meaning: 'Cradle' },
     ],
   },
   {
@@ -11851,9 +11851,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["米","卆"],
     mnemonic: 'Karakter 粋 (Chic / style) memiliki 10 goresan, tersusun dari elemen (米, 卆) yang melambangkan konsep intinya.',
     examples: [
-      { word: '粋', reading: 'いき', meaning: 'chic / style / purity' },
-      { word: '純粋', reading: 'じゅんすい', meaning: 'pure / genuine / unmixed' },
-      { word: '抜粋', reading: 'ばっすい', meaning: 'extract' },
+      { word: '粋', reading: 'いき', meaning: 'Chic / style / purity' },
+      { word: '純粋', reading: 'じゅんすい', meaning: 'Pure / genuine / unmixed' },
+      { word: '抜粋', reading: 'ばっすい', meaning: 'Extract' },
     ],
   },
   {
@@ -11869,9 +11869,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["米","且"],
     mnemonic: 'Karakter 粗 (Coarse / rough) memiliki 11 goresan, tersusun dari elemen (米, 且) yang melambangkan konsep intinya.',
     examples: [
-      { word: '粗', reading: 'あら', meaning: 'defect / flaw / fault' },
-      { word: '粗末', reading: 'そまつ', meaning: 'humble / miserable / crude' },
-      { word: '粗い', reading: 'あらい', meaning: 'coarse / rough' },
+      { word: '粗', reading: 'あら', meaning: 'Cacat / Kekurangan / flaw / fault' },
+      { word: '粗末', reading: 'そまつ', meaning: 'Humble / miserable / crude' },
+      { word: '粗い', reading: 'あらい', meaning: 'Coarse / rough' },
     ],
   },
   {
@@ -11887,9 +11887,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["米","占"],
     mnemonic: 'Karakter 粘 (Sticky / glutinous) memiliki 11 goresan, tersusun dari elemen (米, 占) yang melambangkan konsep intinya.',
     examples: [
-      { word: '粘り', reading: 'ねばり', meaning: 'stickiness / viscosity' },
-      { word: '粘る', reading: 'ねばる', meaning: 'melakukan be sticky / melakukan be adhesive / melakukan persist' },
-      { word: '粘り強い', reading: 'ねばりづよい', meaning: 'tenacious' },
+      { word: '粘り', reading: 'ねばり', meaning: 'Stickiness / viscosity' },
+      { word: '粘る', reading: 'ねばる', meaning: 'Menjadi sticky / Menjadi adhesive / Bertahan / Gigih berjuang' },
+      { word: '粘り強い', reading: 'ねばりづよい', meaning: 'Tenacious' },
     ],
   },
   {
@@ -11905,9 +11905,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["粛"],
     mnemonic: 'Karakter 粛 (Solemn / quietly) memiliki 11 goresan, tersusun dari elemen (粛) yang melambangkan konsep intinya.',
     examples: [
-      { word: '厳粛', reading: 'げんしゅく', meaning: 'grave' },
+      { word: '厳粛', reading: 'げんしゅく', meaning: 'Grave' },
       { word: '粛清', reading: 'しゅくせい', meaning: '(political) purge' },
-      { word: '自粛', reading: 'じしゅく', meaning: 'self-restraint' },
+      { word: '自粛', reading: 'じしゅく', meaning: 'Self-restraint' },
     ],
   },
   {
@@ -11923,7 +11923,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["米","庄"],
     mnemonic: 'Karakter 粧 (Cosmetics / adorn (one\'s orang)) memiliki 12 goresan, tersusun dari elemen (米, 庄) yang melambangkan konsep intinya.',
     examples: [
-      { word: '化粧', reading: 'けしょう', meaning: 'make-up (cosmetic)' },
+      { word: '化粧', reading: 'けしょう', meaning: 'Make-up (cosmetic)' },
       { word: '粧語', reading: 'ショウご', meaning: 'Istilah / kosakata terkait Cosmetics / adorn (one\'s orang)' },
     ],
   },
@@ -11940,9 +11940,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["米","唐"],
     mnemonic: 'Karakter 糖 (Gula manis karbohidrat) memiliki 16 goresan, tersusun dari elemen (米, 唐) yang melambangkan konsep intinya.',
     examples: [
-      { word: '砂糖', reading: 'さとう', meaning: 'sugar' },
-      { word: '糖分', reading: 'とうぶん', meaning: 'amount of sugar' },
-      { word: '糖尿病', reading: 'とうにょうびょう', meaning: 'diabetes' },
+      { word: '砂糖', reading: 'さとう', meaning: 'Sugar' },
+      { word: '糖分', reading: 'とうぶん', meaning: 'Amount of sugar' },
+      { word: '糖尿病', reading: 'とうにょうびょう', meaning: 'Diabetes' },
     ],
   },
   {
@@ -11958,9 +11958,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["米","量"],
     mnemonic: 'Karakter 糧 (Provisions / makanan) memiliki 18 goresan, tersusun dari elemen (米, 量) yang melambangkan konsep intinya.',
     examples: [
-      { word: '食糧', reading: 'しょくりょう', meaning: 'provisions / rations' },
+      { word: '食糧', reading: 'しょくりょう', meaning: 'Provisions / rations' },
       { word: '兵糧', reading: 'ひょうろう', meaning: '(army) provisions' },
-      { word: '糧食', reading: 'りょうしょく', meaning: 'provisions' },
+      { word: '糧食', reading: 'りょうしょく', meaning: 'Provisions' },
     ],
   },
   {
@@ -11977,8 +11977,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 系 (Silsilah garis keturunan / Sistem keluarga) memiliki 7 goresan, tersusun dari elemen (丿, 糸) yang melambangkan konsep intinya.',
     examples: [
       { word: '～系', reading: '～けい', meaning: '~ system / ~ lineage / ~ group' },
-      { word: '系統', reading: 'けいとう', meaning: 'system / genealogy' },
-      { word: '体系', reading: 'たいけい', meaning: 'system / organization' },
+      { word: '系統', reading: 'けいとう', meaning: 'System / genealogy' },
+      { word: '体系', reading: 'たいけい', meaning: 'System / organization' },
     ],
   },
   {
@@ -11994,9 +11994,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["糹","己"],
     mnemonic: 'Karakter 紀 (Chronicle / account) memiliki 9 goresan, tersusun dari elemen (糹, 己) yang melambangkan konsep intinya.',
     examples: [
-      { word: '世紀', reading: 'せいき', meaning: 'century' },
-      { word: '世紀末', reading: 'せいきまつ', meaning: 'end of a century (esp. 19th)' },
-      { word: '二十世紀', reading: 'にじっせいき', meaning: 'twentieth century' },
+      { word: '世紀', reading: 'せいき', meaning: 'Century' },
+      { word: '世紀末', reading: 'せいきまつ', meaning: 'End of a century (esp. 19th)' },
+      { word: '二十世紀', reading: 'にじっせいき', meaning: 'Twentieth century' },
     ],
   },
   {
@@ -12012,9 +12012,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["糹","文"],
     mnemonic: 'Karakter 紋 (Keluarga crest / figures) memiliki 10 goresan, tersusun dari elemen (糹, 文) yang melambangkan konsep intinya.',
     examples: [
-      { word: '指紋', reading: 'しもん', meaning: 'fingerprint' },
-      { word: '波紋', reading: 'はもん', meaning: 'ripple' },
-      { word: '紋切り型', reading: 'もんきりがた', meaning: 'formulaic' },
+      { word: '指紋', reading: 'しもん', meaning: 'Fingerprint' },
+      { word: '波紋', reading: 'はもん', meaning: 'Ripple' },
+      { word: '紋切り型', reading: 'もんきりがた', meaning: 'Formulaic' },
     ],
   },
   {
@@ -12030,9 +12030,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["糹","内"],
     mnemonic: 'Karakter 納 (Settlement / obtain) memiliki 10 goresan, tersusun dari elemen (糹, 内) yang melambangkan konsep intinya.',
     examples: [
-      { word: '納める', reading: 'おさめる', meaning: 'melakukan store to pay / melakukan supply' },
-      { word: '納得', reading: 'なっとく', meaning: 'consent / assent / understanding' },
-      { word: '納入', reading: 'のうにゅう', meaning: 'payment / supply' },
+      { word: '納める', reading: 'おさめる', meaning: 'Store to pay / Supply' },
+      { word: '納得', reading: 'なっとく', meaning: 'Consent / assent / understanding' },
+      { word: '納入', reading: 'のうにゅう', meaning: 'Payment / supply' },
     ],
   },
   {
@@ -12048,8 +12048,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["糹","氏"],
     mnemonic: 'Karakter 紙 (Paper) memiliki 10 goresan, tersusun dari elemen (糹, 氏) yang melambangkan konsep intinya.',
     examples: [
-      { word: '紙', reading: 'かみ', meaning: 'paper' },
-      { word: '手紙', reading: 'てがみ', meaning: 'letter' },
+      { word: '紙', reading: 'かみ', meaning: 'Paper' },
+      { word: '手紙', reading: 'てがみ', meaning: 'Letter' },
       { word: '紙袋', reading: 'かみぶくろ', meaning: 'Kantong kertas' },
     ],
   },
@@ -12066,9 +12066,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["糹","及"],
     mnemonic: 'Karakter 級 (Class / rank) memiliki 9 goresan, tersusun dari elemen (糹, 及) yang melambangkan konsep intinya.',
     examples: [
-      { word: '級', reading: 'きゅう', meaning: 'class / grade / rank' },
-      { word: '階級', reading: 'かいきゅう', meaning: 'class / rank / grade' },
-      { word: '等級', reading: 'とうきゅう', meaning: 'grade / class' },
+      { word: '級', reading: 'きゅう', meaning: 'Class / grade / rank' },
+      { word: '階級', reading: 'かいきゅう', meaning: 'Class / rank / grade' },
+      { word: '等級', reading: 'とうきゅう', meaning: 'Grade / class' },
     ],
   },
   {
@@ -12084,9 +12084,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["糹","分"],
     mnemonic: 'Karakter 紛 (Distract / be mistaken for) memiliki 10 goresan, tersusun dari elemen (糹, 分) yang melambangkan konsep intinya.',
     examples: [
-      { word: '紛失', reading: 'ふんしつ', meaning: 'losing something' },
-      { word: '紛争', reading: 'ふんそう', meaning: 'dispute / trouble / strife' },
-      { word: '紛らわしい', reading: 'まぎらわしい', meaning: 'confusing / misleading / ambiguous' },
+      { word: '紛失', reading: 'ふんしつ', meaning: 'Losing something' },
+      { word: '紛争', reading: 'ふんそう', meaning: 'Perselisihan / Sengketa / Masalah / Gangguan / Pertikaian' },
+      { word: '紛らわしい', reading: 'まぎらわしい', meaning: 'Confusing / misleading / ambiguous' },
     ],
   },
   {
@@ -12102,9 +12102,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["龶","糸"],
     mnemonic: 'Karakter 素 (Elementary / principle) memiliki 10 goresan, tersusun dari elemen (龶, 糸) yang melambangkan konsep intinya.',
     examples: [
-      { word: '酸素', reading: 'さんそ', meaning: 'oksigen' },
-      { word: '素', reading: 'もと', meaning: 'prime' },
-      { word: '要素', reading: 'ようそ', meaning: 'element' },
+      { word: '酸素', reading: 'さんそ', meaning: 'Oksigen' },
+      { word: '素', reading: 'もと', meaning: 'Prime' },
+      { word: '要素', reading: 'ようそ', meaning: 'Element' },
     ],
   },
   {
@@ -12120,9 +12120,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["糹","方"],
     mnemonic: 'Karakter 紡 (Spinning) memiliki 10 goresan, tersusun dari elemen (糹, 方) yang melambangkan konsep intinya.',
     examples: [
-      { word: '紡績', reading: 'ぼうせき', meaning: 'spinning' },
-      { word: '混紡', reading: 'こんぼう', meaning: 'mixed yarn' },
-      { word: '紡織', reading: 'ぼうしょく', meaning: 'spinning and weaving' },
+      { word: '紡績', reading: 'ぼうせき', meaning: 'Spinning' },
+      { word: '混紡', reading: 'こんぼう', meaning: 'Mixed yarn' },
+      { word: '紡織', reading: 'ぼうしょく', meaning: 'Spinning and weaving' },
     ],
   },
   {
@@ -12138,9 +12138,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["此","糸"],
     mnemonic: 'Karakter 紫 (Purple / violet) memiliki 12 goresan, tersusun dari elemen (此, 糸) yang melambangkan konsep intinya.',
     examples: [
-      { word: '紫', reading: 'むらさき', meaning: 'purple color / violet' },
-      { word: '紫外線', reading: 'しがいせん', meaning: 'ultraviolet rays' },
-      { word: '紫色', reading: 'むらさきいろ', meaning: 'purple' },
+      { word: '紫', reading: 'むらさき', meaning: 'Purple color / violet' },
+      { word: '紫外線', reading: 'しがいせん', meaning: 'Ultraviolet rays' },
+      { word: '紫色', reading: 'むらさきいろ', meaning: 'Purple' },
     ],
   },
   {
@@ -12156,9 +12156,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["田","糸"],
     mnemonic: 'Karakter 累 (Accumulate / involvement) memiliki 11 goresan, tersusun dari elemen (田, 糸) yang melambangkan konsep intinya.',
     examples: [
-      { word: '累積', reading: 'るいせき', meaning: 'accumulation' },
-      { word: '累計', reading: 'るいけい', meaning: 'cumulative total' },
-      { word: '累進', reading: 'るいしん', meaning: 'successive promotion' },
+      { word: '累積', reading: 'るいせき', meaning: 'Accumulation' },
+      { word: '累計', reading: 'るいけい', meaning: 'Cumulative total' },
+      { word: '累進', reading: 'るいしん', meaning: 'Successive promotion' },
     ],
   },
   {
@@ -12174,8 +12174,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["糹","申"],
     mnemonic: 'Karakter 紳 (Sire / baik belt) memiliki 11 goresan, tersusun dari elemen (糹, 申) yang melambangkan konsep intinya.',
     examples: [
-      { word: '紳士', reading: 'しんし', meaning: 'gentleman' },
-      { word: '紳士協定', reading: 'しんしきょうてい', meaning: 'gentlemen\'s agreement' },
+      { word: '紳士', reading: 'しんし', meaning: 'Gentleman' },
+      { word: '紳士協定', reading: 'しんしきょうてい', meaning: 'Gentlemen\'s agreement' },
     ],
   },
   {
@@ -12191,9 +12191,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["糹","甘"],
     mnemonic: 'Karakter 紺 (Gelap blue / navy) memiliki 11 goresan, tersusun dari elemen (糹, 甘) yang melambangkan konsep intinya.',
     examples: [
-      { word: '紺', reading: 'こん', meaning: 'navy blue / deep blue' },
-      { word: '濃紺', reading: 'のうこん', meaning: 'dark blue' },
-      { word: '紺屋', reading: 'こうや', meaning: 'dyer' },
+      { word: '紺', reading: 'こん', meaning: 'Navy blue / deep blue' },
+      { word: '濃紺', reading: 'のうこん', meaning: 'Dark blue' },
+      { word: '紺屋', reading: 'こうや', meaning: 'Dyer' },
     ],
   },
   {
@@ -12209,9 +12209,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["糹","吉"],
     mnemonic: 'Karakter 結 (Tie / bind) memiliki 12 goresan, tersusun dari elemen (糹, 吉) yang melambangkan konsep intinya.',
     examples: [
-      { word: '結構', reading: 'けっこう', meaning: 'splendid / enough / tolerably' },
-      { word: '結婚', reading: 'けっこん (する)', meaning: 'marriage (get married)' },
-      { word: '結果', reading: 'けっか', meaning: 'result / consequence' },
+      { word: '結構', reading: 'けっこう', meaning: 'Splendid / enough / tolerably' },
+      { word: '結婚', reading: 'けっこん (する)', meaning: 'Marriage (get married)' },
+      { word: '結果', reading: 'けっか', meaning: 'Result / consequence' },
     ],
   },
   {
@@ -12227,9 +12227,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["糹","交"],
     mnemonic: 'Karakter 絞 (Strangle / constrict) memiliki 12 goresan, tersusun dari elemen (糹, 交) yang melambangkan konsep intinya.',
     examples: [
-      { word: '絞る', reading: 'しぼる', meaning: 'melakukan press / melakukan wring / melakukan squeeze' },
-      { word: '絞り込む', reading: 'しぼりこむ', meaning: 'to squeeze' },
-      { word: '絞殺', reading: 'こうさつ', meaning: 'strangling (to death)' },
+      { word: '絞る', reading: 'しぼる', meaning: 'Menekan / Wring / Squeeze' },
+      { word: '絞り込む', reading: 'しぼりこむ', meaning: 'To squeeze' },
+      { word: '絞殺', reading: 'こうさつ', meaning: 'Strangling (to death)' },
     ],
   },
   {
@@ -12245,9 +12245,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["糹","肙"],
     mnemonic: 'Karakter 絹 (Silk) memiliki 13 goresan, tersusun dari elemen (糹, 肙) yang melambangkan konsep intinya.',
     examples: [
-      { word: '絹', reading: 'きぬ', meaning: 'silk' },
-      { word: '絹布', reading: 'けんぷ', meaning: 'silk' },
-      { word: '絹糸', reading: 'きぬいと', meaning: 'silk thread' },
+      { word: '絹', reading: 'きぬ', meaning: 'Silk' },
+      { word: '絹布', reading: 'けんぷ', meaning: 'Silk' },
+      { word: '絹糸', reading: 'きぬいと', meaning: 'Silk thread' },
     ],
   },
   {
@@ -12263,9 +12263,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["糹","𠃊","米"],
     mnemonic: 'Karakter 継 (Inherit / succeed) memiliki 13 goresan, tersusun dari elemen (糹, 𠃊, 米) yang melambangkan konsep intinya.',
     examples: [
-      { word: '継ぐ', reading: 'つぐ', meaning: 'melakukan succeed (someone in a business or inheritance' },
-      { word: '受け継ぐ', reading: 'うけつぐ', meaning: 'melakukan inherit / melakukan succeed' },
-      { word: '跡継ぎ', reading: 'あとつぎ', meaning: 'heir / successor' },
+      { word: '継ぐ', reading: 'つぐ', meaning: 'Berhasil ((someone in a business or inheritance)' },
+      { word: '受け継ぐ', reading: 'うけつぐ', meaning: 'Inherit / Berhasil / Sukses' },
+      { word: '跡継ぎ', reading: 'あとつぎ', meaning: 'Heir / successor' },
     ],
   },
   {
@@ -12281,9 +12281,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["糹","隹"],
     mnemonic: 'Karakter 維 (Fiber / tie) memiliki 14 goresan, tersusun dari elemen (糹, 隹) yang melambangkan konsep intinya.',
     examples: [
-      { word: '維持', reading: 'いじ', meaning: 'maintenance / preservation' },
-      { word: '繊維', reading: 'せんい', meaning: 'fiber / textile' },
-      { word: '合成繊維', reading: 'ごうせいせんい', meaning: 'synthetic fibre' },
+      { word: '維持', reading: 'いじ', meaning: 'Maintenance / preservation' },
+      { word: '繊維', reading: 'せんい', meaning: 'Fiber / textile' },
+      { word: '合成繊維', reading: 'ごうせいせんい', meaning: 'Synthetic fibre' },
     ],
   },
   {
@@ -12299,9 +12299,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["糹","岡"],
     mnemonic: 'Karakter 綱 (Hawser / class (genus)) memiliki 14 goresan, tersusun dari elemen (糹, 岡) yang melambangkan konsep intinya.',
     examples: [
-      { word: '横綱', reading: 'よこづな', meaning: 'sumo grand champion' },
-      { word: '綱', reading: 'つな', meaning: 'rope' },
-      { word: '大綱', reading: 'たいこう', meaning: 'fundamental principles' },
+      { word: '横綱', reading: 'よこづな', meaning: 'Sumo grand champion' },
+      { word: '綱', reading: 'つな', meaning: 'Rope' },
+      { word: '大綱', reading: 'たいこう', meaning: 'Fundamental principles' },
     ],
   },
   {
@@ -12317,9 +12317,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["糹","罔"],
     mnemonic: 'Karakter 網 (Netting / network) memiliki 14 goresan, tersusun dari elemen (糹, 罔) yang melambangkan konsep intinya.',
     examples: [
-      { word: '網', reading: 'あみ', meaning: 'net' },
+      { word: '網', reading: 'あみ', meaning: 'Net' },
       { word: '～網', reading: '～もう', meaning: '~ network' },
-      { word: '交通網', reading: 'こうつうもう', meaning: 'transportation network' },
+      { word: '交通網', reading: 'こうつうもう', meaning: 'Transportation network' },
     ],
   },
   {
@@ -12336,7 +12336,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 綻 (Jahitan robek terbuka / Tersenyum) memiliki 14 goresan, tersusun dari elemen (糹, 定) yang melambangkan konsep intinya.',
     examples: [
       { word: '破綻', reading: 'はたん', meaning: 'Kebangkrutan / Keruntuhan / Kegagalan total' },
-      { word: '綻びる', reading: 'ほころびる', meaning: 'melakukan come apart at the seams / melakukan smile broadly' },
+      { word: '綻びる', reading: 'ほころびる', meaning: 'Come apart at the seams / Tersenyum (broadly)' },
     ],
   },
   {
@@ -12353,8 +12353,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 緊 (Tense / solid) memiliki 15 goresan, tersusun dari elemen (臤, 糸) yang melambangkan konsep intinya.',
     examples: [
       { word: '緊迫', reading: 'きんぱく', meaning: 'Ketegangan suasana genting' },
-      { word: '緊張', reading: 'きんちょう', meaning: 'tension / mental strain / nervousness' },
-      { word: '緊急', reading: 'きんきゅう', meaning: 'urgent / pressing / emergency' },
+      { word: '緊張', reading: 'きんちょう', meaning: 'Tension / mental strain / nervousness' },
+      { word: '緊急', reading: 'きんきゅう', meaning: 'Urgent / pressing / emergency' },
     ],
   },
   {
@@ -12370,9 +12370,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["糹","帝"],
     mnemonic: 'Karakter 締 (Tighten / tie) memiliki 15 goresan, tersusun dari elemen (糹, 帝) yang melambangkan konsep intinya.',
     examples: [
-      { word: '締める', reading: 'しめる', meaning: 'melakukan tie / melakukan fasten / melakukan tighten' },
-      { word: '戸締り', reading: 'とじまり', meaning: 'closing up / locking the doors' },
-      { word: '取締り', reading: 'とりしまり', meaning: 'control / crackdown / supervision' },
+      { word: '締める', reading: 'しめる', meaning: 'Mengikat / Fasten / Tighten' },
+      { word: '戸締り', reading: 'とじまり', meaning: 'Closing up / locking the doors' },
+      { word: '取締り', reading: 'とりしまり', meaning: 'Control / crackdown / supervision' },
     ],
   },
   {
@@ -12389,8 +12389,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 緩 (Slacken / loosen) memiliki 15 goresan, tersusun dari elemen (糹, 爰) yang melambangkan konsep intinya.',
     examples: [
       { word: '緩和', reading: 'かんわ', meaning: 'Pelonggaran regulasi / Mitigasi tensi' },
-      { word: '緩む', reading: 'ゆるむ', meaning: 'melakukan become loose / melakukan slacken' },
-      { word: '緩める', reading: 'ゆるめる', meaning: 'melakukan loosen / melakukan slow down' },
+      { word: '緩む', reading: 'ゆるむ', meaning: 'Become loose / Slacken' },
+      { word: '緩める', reading: 'ゆるめる', meaning: 'Loosen / Slow down' },
     ],
   },
   {
@@ -12406,9 +12406,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["糹","韋"],
     mnemonic: 'Karakter 緯 (Horizontal / woof) memiliki 16 goresan, tersusun dari elemen (糹, 韋) yang melambangkan konsep intinya.',
     examples: [
-      { word: '経緯', reading: 'けいい', meaning: 'sequence of events / course' },
-      { word: '緯度', reading: 'いど', meaning: 'latitude (navigation)' },
-      { word: '北緯', reading: 'ほくい', meaning: 'north latitude' },
+      { word: '経緯', reading: 'けいい', meaning: 'Sequence of events / Mata kuliah / Kursus' },
+      { word: '緯度', reading: 'いど', meaning: 'Latitude (navigation)' },
+      { word: '北緯', reading: 'ほくい', meaning: 'North latitude' },
     ],
   },
   {
@@ -12424,9 +12424,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["糹","彐","𧰨"],
     mnemonic: 'Karakter 縁 (Affinity / relation) memiliki 15 goresan, tersusun dari elemen (糹, 彐, 𧰨) yang melambangkan konsep intinya.',
     examples: [
-      { word: '縁', reading: 'えん', meaning: 'chance / tie / relationship' },
-      { word: '縁側', reading: 'えんがわ', meaning: 'veranda / porch / balcony' },
-      { word: '縁談', reading: 'えんだん', meaning: 'marriage proposal' },
+      { word: '縁', reading: 'えん', meaning: 'Chance / tie / relationship' },
+      { word: '縁側', reading: 'えんがわ', meaning: 'Veranda / porch / balcony' },
+      { word: '縁談', reading: 'えんだん', meaning: 'Marriage proposal' },
     ],
   },
   {
@@ -12442,9 +12442,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["糹","日","电"],
     mnemonic: 'Karakter 縄 (Straw rope / cord) memiliki 15 goresan, tersusun dari elemen (糹, 日, 电) yang melambangkan konsep intinya.',
     examples: [
-      { word: '縄', reading: 'なわ', meaning: 'rope' },
+      { word: '縄', reading: 'なわ', meaning: 'Rope' },
       { word: '沖縄', reading: 'おきなわ', meaning: 'Okinawa (city, prefecture)' },
-      { word: '縄張り', reading: 'なわばり', meaning: 'stretching a rope around' },
+      { word: '縄張り', reading: 'なわばり', meaning: 'Stretching a rope around' },
     ],
   },
   {
@@ -12460,8 +12460,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["糹","尃"],
     mnemonic: 'Karakter 縛 (Truss / arrest) memiliki 16 goresan, tersusun dari elemen (糹, 尃) yang melambangkan konsep intinya.',
     examples: [
-      { word: '束縛', reading: 'そくばく', meaning: 'restraint / restriction / confinement' },
-      { word: '縛る', reading: 'しばる', meaning: 'melakukan tie / melakukan bind' },
+      { word: '束縛', reading: 'そくばく', meaning: 'Restraint / restriction / confinement' },
+      { word: '縛る', reading: 'しばる', meaning: 'Mengikat / Bind' },
       { word: '縛り首', reading: 'しばりくび', meaning: '(death by) hanging' },
     ],
   },
@@ -12478,9 +12478,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["糹","従"],
     mnemonic: 'Karakter 縦 (Vertical / length) memiliki 16 goresan, tersusun dari elemen (糹, 従) yang melambangkan konsep intinya.',
     examples: [
-      { word: '操縦', reading: 'そうじゅう', meaning: 'management / control / manipulation' },
-      { word: '縦断', reading: 'じゅうだん', meaning: 'running through (north-south)' },
-      { word: '縦書き', reading: 'たてがき', meaning: 'writing vertically' },
+      { word: '操縦', reading: 'そうじゅう', meaning: 'Management / control / manipulation' },
+      { word: '縦断', reading: 'じゅうだん', meaning: 'Running through (north-south)' },
+      { word: '縦書き', reading: 'たてがき', meaning: 'Writing vertically' },
     ],
   },
   {
@@ -12496,9 +12496,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["糹","逢"],
     mnemonic: 'Karakter 縫 (Sew / stitch) memiliki 16 goresan, tersusun dari elemen (糹, 逢) yang melambangkan konsep intinya.',
     examples: [
-      { word: '裁縫', reading: 'さいほう', meaning: 'sewing' },
-      { word: '縫う', reading: 'ぬう', meaning: 'melakukan sew' },
-      { word: '縫い目', reading: 'ぬいめ', meaning: 'seam' },
+      { word: '裁縫', reading: 'さいほう', meaning: 'Sewing' },
+      { word: '縫う', reading: 'ぬう', meaning: 'Sew' },
+      { word: '縫い目', reading: 'ぬいめ', meaning: 'Seam' },
     ],
   },
   {
@@ -12514,9 +12514,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["敏","糸"],
     mnemonic: 'Karakter 繁 (Luxuriant / thick) memiliki 16 goresan, tersusun dari elemen (敏, 糸) yang melambangkan konsep intinya.',
     examples: [
-      { word: '頻繁', reading: 'ひんぱん', meaning: 'frequency' },
-      { word: '繁栄', reading: 'はんえい', meaning: 'prospering / prosperity / flourishing' },
-      { word: '繁盛', reading: 'はんじょう', meaning: 'prosperity / flourishing / thriving' },
+      { word: '頻繁', reading: 'ひんぱん', meaning: 'Frequency' },
+      { word: '繁栄', reading: 'はんえい', meaning: 'Prospering / prosperity / flourishing' },
+      { word: '繁盛', reading: 'はんじょう', meaning: 'Prosperity / flourishing / thriving' },
     ],
   },
   {
@@ -12532,9 +12532,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["糹","𢦏","业"],
     mnemonic: 'Karakter 繊 (Slender / fine) memiliki 17 goresan, tersusun dari elemen (糹, 𢦏, 业) yang melambangkan konsep intinya.',
     examples: [
-      { word: '化繊', reading: 'かせん', meaning: 'synthetic fibers' },
-      { word: '繊維', reading: 'せんい', meaning: 'fiber / textile' },
-      { word: '合成繊維', reading: 'ごうせいせんい', meaning: 'synthetic fibre' },
+      { word: '化繊', reading: 'かせん', meaning: 'Synthetic fibers' },
+      { word: '繊維', reading: 'せんい', meaning: 'Fiber / textile' },
+      { word: '合成繊維', reading: 'ごうせいせんい', meaning: 'Synthetic fibre' },
     ],
   },
   {
@@ -12550,9 +12550,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["糹","戠"],
     mnemonic: 'Karakter 織 (Menenun / Merajut kain) memiliki 18 goresan, tersusun dari elemen (糹, 戠) yang melambangkan konsep intinya.',
     examples: [
-      { word: '織る', reading: 'おる', meaning: 'melakukan weave' },
-      { word: '組織', reading: 'そしき', meaning: 'organization / structure / tissue' },
-      { word: '織物', reading: 'おりもの', meaning: 'textile / fabric' },
+      { word: '織る', reading: 'おる', meaning: 'Weave' },
+      { word: '組織', reading: 'そしき', meaning: 'Organization / structure / tissue' },
+      { word: '織物', reading: 'おりもの', meaning: 'Textile / fabric' },
     ],
   },
   {
@@ -12568,9 +12568,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["糹","善"],
     mnemonic: 'Karakter 繕 (Darning / repair) memiliki 18 goresan, tersusun dari elemen (糹, 善) yang melambangkan konsep intinya.',
     examples: [
-      { word: '繕う', reading: 'つくろう', meaning: 'melakukan mend / melakukan repair' },
-      { word: '修繕', reading: 'しゅうぜん', meaning: 'repair / mending' },
-      { word: '営繕', reading: 'えいぜん', meaning: 'maintenance and repair' },
+      { word: '繕う', reading: 'つくろう', meaning: 'Mend / Memperbaiki' },
+      { word: '修繕', reading: 'しゅうぜん', meaning: 'Repair / mending' },
+      { word: '営繕', reading: 'えいぜん', meaning: 'Maintenance and repair' },
     ],
   },
   {
@@ -12603,9 +12603,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["糹","喿"],
     mnemonic: 'Karakter 繰 (Winding / reel) memiliki 19 goresan, tersusun dari elemen (糹, 喿) yang melambangkan konsep intinya.',
     examples: [
-      { word: '繰り返す', reading: 'くりかえす', meaning: 'melakukan repeat / melakukan do something over again' },
-      { word: '引っ繰り返す', reading: 'ひっくりかえす', meaning: 'melakukan turn over / melakukan overturn / melakukan knock over' },
-      { word: '引っ繰り返る', reading: 'ひっくりかえる', meaning: 'melakukan be overturned / melakukan be upset / melakukan topple over' },
+      { word: '繰り返す', reading: 'くりかえす', meaning: 'Repeat / Do something over again' },
+      { word: '引っ繰り返す', reading: 'ひっくりかえす', meaning: 'Turn over / Overturn / Knock over' },
+      { word: '引っ繰り返る', reading: 'ひっくりかえる', meaning: 'Menjadi overturned / Menjadi upset / Topple over' },
     ],
   },
   {
@@ -12621,7 +12621,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["罒","能"],
     mnemonic: 'Karakter 罷 (Quit / berhenti) memiliki 15 goresan, tersusun dari elemen (罒, 能) yang melambangkan konsep intinya.',
     examples: [
-      { word: '罷免', reading: 'ひめん', meaning: 'dismissal (from a position)' },
+      { word: '罷免', reading: 'ひめん', meaning: 'Dismissal (from a position)' },
       { word: '罷業', reading: 'ひぎょう', meaning: 'Aksi mogok buruh kerja' },
     ],
   },
@@ -12673,9 +12673,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["𦍌","我"],
     mnemonic: 'Karakter 義 (Keadilan moral / Makna / Semu) memiliki 13 goresan, tersusun dari elemen (𦍌, 我) yang melambangkan konsep intinya.',
     examples: [
-      { word: '主義', reading: 'しゅぎ', meaning: 'doctrine / cause / principle' },
-      { word: '義務', reading: 'ぎむ', meaning: 'duty / obligation / responsibility' },
-      { word: '講義', reading: 'こうぎ', meaning: 'a lecture' },
+      { word: '主義', reading: 'しゅぎ', meaning: 'Doktrin / Prinsip / Asas' },
+      { word: '義務', reading: 'ぎむ', meaning: 'Duty / obligation / responsibility' },
+      { word: '講義', reading: 'こうぎ', meaning: 'A lecture' },
     ],
   },
   {
@@ -12709,9 +12709,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["番","羽"],
     mnemonic: 'Karakter 翻 (Flip / turn over) memiliki 18 goresan, tersusun dari elemen (番, 羽) yang melambangkan konsep intinya.',
     examples: [
-      { word: '翻訳', reading: 'ほんやく', meaning: 'translation' },
-      { word: '翻弄', reading: 'ほんろう', meaning: 'having at one\'s mercy' },
-      { word: '翻意', reading: 'ほんい', meaning: 'changing one\'s mind' },
+      { word: '翻訳', reading: 'ほんやく', meaning: 'Translation' },
+      { word: '翻弄', reading: 'ほんろう', meaning: 'Having at one\'s mercy' },
+      { word: '翻意', reading: 'ほんい', meaning: 'Changing one\'s mind' },
     ],
   },
   {
@@ -12727,9 +12727,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["羽","異"],
     mnemonic: 'Karakter 翼 (Wing / plane) memiliki 17 goresan, tersusun dari elemen (羽, 異) yang melambangkan konsep intinya.',
     examples: [
-      { word: '翼', reading: 'つばさ', meaning: 'wings' },
-      { word: '一翼', reading: 'いちよく', meaning: 'one wing' },
-      { word: '両翼', reading: 'りょうよく', meaning: 'both wings' },
+      { word: '翼', reading: 'つばさ', meaning: 'Wings' },
+      { word: '一翼', reading: 'いちよく', meaning: 'One wing' },
+      { word: '両翼', reading: 'りょうよく', meaning: 'Both wings' },
     ],
   },
   {
@@ -12745,9 +12745,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["而","寸"],
     mnemonic: 'Karakter 耐 (-proof / enduring) memiliki 9 goresan, tersusun dari elemen (而, 寸) yang melambangkan konsep intinya.',
     examples: [
-      { word: '耐える', reading: 'たえる', meaning: 'melakukan endure / melakukan put up with' },
-      { word: '忍耐', reading: 'にんたい', meaning: 'endurance' },
-      { word: '耐久', reading: 'たいきゅう', meaning: 'endurance' },
+      { word: '耐える', reading: 'たえる', meaning: 'Endure / Menaruh (up with)' },
+      { word: '忍耐', reading: 'にんたい', meaning: 'Endurance' },
+      { word: '耐久', reading: 'たいきゅう', meaning: 'Endurance' },
     ],
   },
   {
@@ -12763,9 +12763,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["耒","毛"],
     mnemonic: 'Karakter 耗 (Decrease) memiliki 10 goresan, tersusun dari elemen (耒, 毛) yang melambangkan konsep intinya.',
     examples: [
-      { word: '消耗', reading: 'しょうもう', meaning: 'exhaustion / consumption' },
-      { word: '心神耗弱', reading: 'しんしんこうじゃく', meaning: 'diminished capacity' },
-      { word: '消耗品', reading: 'しょうもうひん', meaning: 'consumable goods' },
+      { word: '消耗', reading: 'しょうもう', meaning: 'Exhaustion / consumption' },
+      { word: '心神耗弱', reading: 'しんしんこうじゃく', meaning: 'Diminished capacity' },
+      { word: '消耗品', reading: 'しょうもうひん', meaning: 'Consumable goods' },
     ],
   },
   {
@@ -12781,9 +12781,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["𦔻","王"],
     mnemonic: 'Karakter 聖 (Holy / saint) memiliki 13 goresan, tersusun dari elemen (𦔻, 王) yang melambangkan konsep intinya.',
     examples: [
-      { word: '神聖', reading: 'しんせい', meaning: 'holiness / sacredness / dignity' },
-      { word: '聖書', reading: 'せいしょ', meaning: 'bible' },
-      { word: '棋聖', reading: 'きせい', meaning: 'great master of go' },
+      { word: '神聖', reading: 'しんせい', meaning: 'Holiness / sacredness / dignity' },
+      { word: '聖書', reading: 'せいしょ', meaning: 'Bible' },
+      { word: '棋聖', reading: 'きせい', meaning: 'Great master of go' },
     ],
   },
   {
@@ -12799,9 +12799,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["耳","十","罒","心"],
     mnemonic: 'Karakter 聴 (Listen / headstrong) memiliki 17 goresan, tersusun dari elemen (耳, 十, 罒) yang melambangkan konsep intinya.',
     examples: [
-      { word: '聴覚', reading: 'ちょうかく', meaning: 'the sense of hearing' },
-      { word: '聴講', reading: 'ちょうこう', meaning: 'lecture attendance / auditing' },
-      { word: '聴診器', reading: 'ちょうしんき', meaning: 'stethoscope' },
+      { word: '聴覚', reading: 'ちょうかく', meaning: 'The sense of hearing' },
+      { word: '聴講', reading: 'ちょうこう', meaning: 'Lecture attendance / auditing' },
+      { word: '聴診器', reading: 'ちょうしんき', meaning: 'Stethoscope' },
     ],
   },
   {
@@ -12817,8 +12817,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["⺌","月"],
     mnemonic: 'Karakter 肖 (Menyerupai mirip potret) memiliki 7 goresan, tersusun dari elemen (⺌, 月) yang melambangkan konsep intinya.',
     examples: [
-      { word: '不肖', reading: 'ふしょう', meaning: 'unworthy (of one\'s father, teacher, etc.)' },
-      { word: '肖像', reading: 'しょうぞう', meaning: 'portrait' },
+      { word: '不肖', reading: 'ふしょう', meaning: 'Unworthy (of one\'s father, teacher, etc.)' },
+      { word: '肖像', reading: 'しょうぞう', meaning: 'Portrait' },
     ],
   },
   {
@@ -12834,7 +12834,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["月","寸"],
     mnemonic: 'Karakter 肘 (Elbow / arm) memiliki 7 goresan, tersusun dari elemen (月, 寸) yang melambangkan konsep intinya.',
     examples: [
-      { word: '肘', reading: 'ひじ', meaning: 'elbow' },
+      { word: '肘', reading: 'ひじ', meaning: 'Elbow' },
       { word: '肘鉄', reading: 'ひじてつ', meaning: 'Sikutan penolakan mentah-mentah' },
     ],
   },
@@ -12851,9 +12851,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["月","干"],
     mnemonic: 'Karakter 肝 (Liver / pluck) memiliki 7 goresan, tersusun dari elemen (月, 干) yang melambangkan konsep intinya.',
     examples: [
-      { word: '肝心', reading: 'かんじん', meaning: 'essential / fundamental / crucial' },
-      { word: '肝腎', reading: 'かんじん', meaning: 'essential / fundamental / crucial' },
-      { word: '肝炎', reading: 'かんえん', meaning: 'hepatitis' },
+      { word: '肝心', reading: 'かんじん', meaning: 'Essential / fundamental / crucial' },
+      { word: '肝腎', reading: 'かんじん', meaning: 'Essential / fundamental / crucial' },
+      { word: '肝炎', reading: 'かんえん', meaning: 'Hepatitis' },
     ],
   },
   {
@@ -12869,7 +12869,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["月","殳"],
     mnemonic: 'Karakter 股 (Thigh / crotch) memiliki 8 goresan, tersusun dari elemen (月, 殳) yang melambangkan konsep intinya.',
     examples: [
-      { word: '股', reading: 'また', meaning: 'thigh / crotch' },
+      { word: '股', reading: 'また', meaning: 'Thigh / crotch' },
       { word: '股語', reading: 'コご', meaning: 'Istilah / kosakata terkait Thigh / crotch' },
     ],
   },
@@ -12886,9 +12886,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["月","支"],
     mnemonic: 'Karakter 肢 (Limb / arms & legs) memiliki 8 goresan, tersusun dari elemen (月, 支) yang melambangkan konsep intinya.',
     examples: [
-      { word: '下肢', reading: 'かし', meaning: 'lower limbs' },
-      { word: '四肢', reading: 'しし', meaning: 'the (four) limbs' },
-      { word: '肢体', reading: 'したい', meaning: 'limbs' },
+      { word: '下肢', reading: 'かし', meaning: 'Lower limbs' },
+      { word: '四肢', reading: 'しし', meaning: 'The (four) limbs' },
+      { word: '肢体', reading: 'したい', meaning: 'Limbs' },
     ],
   },
   {
@@ -12904,9 +12904,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["月","巴"],
     mnemonic: 'Karakter 肥 (Fertilizer / get fat) memiliki 8 goresan, tersusun dari elemen (月, 巴) yang melambangkan konsep intinya.',
     examples: [
-      { word: '化学肥料', reading: 'かがくひりょう', meaning: 'chemical fertilizer' },
-      { word: '堆肥', reading: 'たいひ', meaning: 'compost' },
-      { word: '肥大', reading: 'ひだい', meaning: 'swelling' },
+      { word: '化学肥料', reading: 'かがくひりょう', meaning: 'Chemical fertilizer' },
+      { word: '堆肥', reading: 'たいひ', meaning: 'Compost' },
+      { word: '肥大', reading: 'ひだい', meaning: 'Swelling' },
     ],
   },
   {
@@ -12922,7 +12922,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["月","方"],
     mnemonic: 'Karakter 肪 (Obese / fat) memiliki 8 goresan, tersusun dari elemen (月, 方) yang melambangkan konsep intinya.',
     examples: [
-      { word: '脂肪', reading: 'しぼう', meaning: 'fat / grease' },
+      { word: '脂肪', reading: 'しぼう', meaning: 'Fat / grease' },
       { word: '肪語', reading: 'ボウご', meaning: 'Istilah / kosakata terkait Obese / fat' },
     ],
   },
@@ -12939,9 +12939,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["月","巿"],
     mnemonic: 'Karakter 肺 (Lungs) memiliki 9 goresan, tersusun dari elemen (月, 巿) yang melambangkan konsep intinya.',
     examples: [
-      { word: '肺', reading: 'はい', meaning: 'lung' },
-      { word: '肺炎', reading: 'はいえん', meaning: 'pneumonia' },
-      { word: '肺結核', reading: 'はいけっかく', meaning: 'pulmonary tuberculosis' },
+      { word: '肺', reading: 'はい', meaning: 'Lung' },
+      { word: '肺炎', reading: 'はいえん', meaning: 'Pneumonia' },
+      { word: '肺結核', reading: 'はいけっかく', meaning: 'Pulmonary tuberculosis' },
     ],
   },
   {
@@ -12958,8 +12958,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 胆 (Gall bladder / courage) memiliki 9 goresan, tersusun dari elemen (月, 旦) yang melambangkan konsep intinya.',
     examples: [
       { word: '臥薪嘗胆', reading: 'がしんしょうたん', meaning: 'Rela menelan penderitaan pahit demi meraih cita-cita besar' },
-      { word: '大胆', reading: 'だいたん', meaning: 'bold / daring / audacious' },
-      { word: '胆石', reading: 'たんせき', meaning: 'gallstone' },
+      { word: '大胆', reading: 'だいたん', meaning: 'Bold / daring / audacious' },
+      { word: '胆石', reading: 'たんせき', meaning: 'Gallstone' },
     ],
   },
   {
@@ -12976,8 +12976,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 胎 (Janin kandungan rahim) memiliki 9 goresan, tersusun dari elemen (月, 台) yang melambangkan konsep intinya.',
     examples: [
       { word: '換骨奪胎', reading: 'かんこつだったい', meaning: 'Mengubah karya klasik menjadi wujud karya baru dengan adaptasi kreatif' },
-      { word: '受胎', reading: 'じゅたい', meaning: 'conception' },
-      { word: '堕胎', reading: 'だたい', meaning: 'abortion' },
+      { word: '受胎', reading: 'じゅたい', meaning: 'Conception' },
+      { word: '堕胎', reading: 'だたい', meaning: 'Abortion' },
     ],
   },
   {
@@ -12993,9 +12993,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["月","包"],
     mnemonic: 'Karakter 胞 (Sel tubuh kantung ketuban) memiliki 9 goresan, tersusun dari elemen (月, 包) yang melambangkan konsep intinya.',
     examples: [
-      { word: '細胞', reading: 'さいぼう', meaning: 'cell' },
-      { word: '同胞', reading: 'どうほう', meaning: 'brethren' },
-      { word: '細胞内', reading: 'さいぼうない', meaning: 'inside the cell' },
+      { word: '細胞', reading: 'さいぼう', meaning: 'Cell' },
+      { word: '同胞', reading: 'どうほう', meaning: 'Brethren' },
+      { word: '細胞内', reading: 'さいぼうない', meaning: 'Inside the cell' },
     ],
   },
   {
@@ -13011,9 +13011,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["月","同"],
     mnemonic: 'Karakter 胴 (Trunk / torso) memiliki 10 goresan, tersusun dari elemen (月, 同) yang melambangkan konsep intinya.',
     examples: [
-      { word: '胴', reading: 'どう', meaning: 'trunk / body / frame' },
-      { word: '胴上げ', reading: 'どうあげ', meaning: 'tossing (someone) into the air (in celebration)' },
-      { word: '胴体', reading: 'どうたい', meaning: 'trunk' },
+      { word: '胴', reading: 'どう', meaning: 'Trunk / body / frame' },
+      { word: '胴上げ', reading: 'どうあげ', meaning: 'Tossing (someone) into the air (in celebration)' },
+      { word: '胴体', reading: 'どうたい', meaning: 'Trunk' },
     ],
   },
   {
@@ -13029,9 +13029,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["劦","月"],
     mnemonic: 'Karakter 脅 (Threaten / coerce) memiliki 10 goresan, tersusun dari elemen (劦, 月) yang melambangkan konsep intinya.',
     examples: [
-      { word: '脅す', reading: 'おどす', meaning: 'melakukan threaten / melakukan menace' },
-      { word: '脅かす', reading: 'おびやかす', meaning: 'melakukan threaten / melakukan coerce' },
-      { word: '脅迫', reading: 'きょうはく', meaning: 'threat / coercion' },
+      { word: '脅す', reading: 'おどす', meaning: 'Threaten / Menace' },
+      { word: '脅かす', reading: 'おびやかす', meaning: 'Threaten / Coerce' },
+      { word: '脅迫', reading: 'きょうはく', meaning: 'Threat / coercion' },
     ],
   },
   {
@@ -13048,8 +13048,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 脈 (Denyut nadi pembuluh / Aliran silsilah) memiliki 10 goresan, tersusun dari elemen (月, 𠂢) yang melambangkan konsep intinya.',
     examples: [
       { word: '脈拍', reading: 'みゃくはく', meaning: 'Denyut nadi' },
-      { word: '山脈', reading: 'さんみゃく', meaning: 'mountain range' },
-      { word: '脈', reading: 'みゃく', meaning: 'pulse' },
+      { word: '山脈', reading: 'さんみゃく', meaning: 'Mountain range' },
+      { word: '脈', reading: 'みゃく', meaning: 'Pulse' },
     ],
   },
   {
@@ -13065,7 +13065,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["人","丷","八","月"],
     mnemonic: 'Karakter 脊 (Stature / height) memiliki 10 goresan, tersusun dari elemen (人, 丷, 八) yang melambangkan konsep intinya.',
     examples: [
-      { word: '脊髄', reading: 'せきずい', meaning: 'spinal cord' },
+      { word: '脊髄', reading: 'せきずい', meaning: 'Spinal cord' },
       { word: '脊椎', reading: 'せきつい', meaning: 'Tulang belakang vertebra' },
     ],
   },
@@ -13082,9 +13082,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["月","却"],
     mnemonic: 'Karakter 脚 (Skids / leg) memiliki 11 goresan, tersusun dari elemen (月, 却) yang melambangkan konsep intinya.',
     examples: [
-      { word: '脚色', reading: 'きゃくしょく', meaning: 'dramatization (e.g. / film' },
-      { word: '脚本', reading: 'きゃくほん', meaning: 'scenario' },
-      { word: '失脚', reading: 'しっきゃく', meaning: 'losing one\\' },
+      { word: '脚色', reading: 'きゃくしょく', meaning: 'Dramatization (e.g. / film' },
+      { word: '脚本', reading: 'きゃくほん', meaning: 'Scenario' },
+      { word: '失脚', reading: 'しっきゃく', meaning: 'Losing one\\' },
     ],
   },
   {
@@ -13100,9 +13100,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["月","兑"],
     mnemonic: 'Karakter 脱 (Undress / removing) memiliki 11 goresan, tersusun dari elemen (月, 兑) yang melambangkan konsep intinya.',
     examples: [
-      { word: '脱ぐ', reading: 'ぬぐ', meaning: 'melakukan take off (clothes)' },
-      { word: '脱出', reading: 'だっしゅつ', meaning: 'escape' },
-      { word: '脱する', reading: 'だっする', meaning: 'melakukan escape from / melakukan get out' },
+      { word: '脱ぐ', reading: 'ぬぐ', meaning: 'Mengambil (off (clothes))' },
+      { word: '脱出', reading: 'だっしゅつ', meaning: 'Escape' },
+      { word: '脱する', reading: 'だっする', meaning: 'Melarikan diri (from) / Mendapatkan (out)' },
     ],
   },
   {
@@ -13118,8 +13118,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["臤","月"],
     mnemonic: 'Karakter 腎 (Kidney) memiliki 13 goresan, tersusun dari elemen (臤, 月) yang melambangkan konsep intinya.',
     examples: [
-      { word: '肝腎', reading: 'かんじん', meaning: 'essential / fundamental / crucial' },
-      { word: '腎臓', reading: 'じんぞう', meaning: 'kidney' },
+      { word: '肝腎', reading: 'かんじん', meaning: 'Essential / fundamental / crucial' },
+      { word: '腎臓', reading: 'じんぞう', meaning: 'Kidney' },
     ],
   },
   {
@@ -13135,9 +13135,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["府","肉"],
     mnemonic: 'Karakter 腐 (Rot / decay) memiliki 14 goresan, tersusun dari elemen (府, 肉) yang melambangkan konsep intinya.',
     examples: [
-      { word: '腐る', reading: 'くさる', meaning: 'melakukan rot / melakukan go bad' },
-      { word: '腐敗', reading: 'ふはい', meaning: 'decay / depravity' },
-      { word: '腐心', reading: 'ふしん', meaning: 'taking great pains (to do)' },
+      { word: '腐る', reading: 'くさる', meaning: 'Rot / Go bad' },
+      { word: '腐敗', reading: 'ふはい', meaning: 'Decay / depravity' },
+      { word: '腐心', reading: 'ふしん', meaning: 'Taking great pains (to do)' },
     ],
   },
   {
@@ -13154,8 +13154,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 腫 (Tumor / swelling) memiliki 13 goresan, tersusun dari elemen (月, 重) yang melambangkan konsep intinya.',
     examples: [
       { word: '腫れる', reading: 'はれる', meaning: 'Membengkak / bengkak' },
-      { word: '浮腫', reading: 'むくみ', meaning: 'swelling' },
-      { word: '腫瘍', reading: 'しゅよう', meaning: 'tumor' },
+      { word: '浮腫', reading: 'むくみ', meaning: 'Swelling' },
+      { word: '腫瘍', reading: 'しゅよう', meaning: 'Tumor' },
     ],
   },
   {
@@ -13171,8 +13171,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["月","昜"],
     mnemonic: 'Karakter 腸 (Intestines / guts) memiliki 13 goresan, tersusun dari elemen (月, 昜) yang melambangkan konsep intinya.',
     examples: [
-      { word: '腸', reading: 'ちょう', meaning: 'bowels / intestines' },
-      { word: '大腸', reading: 'だいちょう', meaning: 'large intestine' },
+      { word: '腸', reading: 'ちょう', meaning: 'Bowels / intestines' },
+      { word: '大腸', reading: 'だいちょう', meaning: 'Large intestine' },
       { word: '大腸菌', reading: 'だいちょうきん', meaning: 'Escherichia coli (E. coli)' },
     ],
   },
@@ -13189,7 +13189,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["月","泉"],
     mnemonic: 'Karakter 腺 (Gland) memiliki 13 goresan, tersusun dari elemen (月, 泉) yang melambangkan konsep intinya.',
     examples: [
-      { word: '甲状腺', reading: 'こうじょうせん', meaning: 'thyroid (gland)' },
+      { word: '甲状腺', reading: 'こうじょうせん', meaning: 'Thyroid (gland)' },
       { word: '扁桃腺', reading: 'へんとうせん', meaning: 'Kelenjar amandel tonsil' },
     ],
   },
@@ -13206,9 +13206,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["月","莫"],
     mnemonic: 'Karakter 膜 (Selaput membran tipis pelindung) memiliki 14 goresan, tersusun dari elemen (月, 莫) yang melambangkan konsep intinya.',
     examples: [
-      { word: '膜', reading: 'まく', meaning: 'membrane / film' },
-      { word: '粘膜', reading: 'ねんまく', meaning: 'mucous membrane' },
-      { word: '網膜', reading: 'もうまく', meaning: 'retina' },
+      { word: '膜', reading: 'まく', meaning: 'Membrane / film' },
+      { word: '粘膜', reading: 'ねんまく', meaning: 'Mucous membrane' },
+      { word: '網膜', reading: 'もうまく', meaning: 'Retina' },
     ],
   },
   {
@@ -13242,8 +13242,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["月","意"],
     mnemonic: 'Karakter 臆 (Dada isi hati / Pengecut ragu) memiliki 17 goresan, tersusun dari elemen (月, 意) yang melambangkan konsep intinya.',
     examples: [
-      { word: '臆病', reading: 'おくびょう', meaning: 'cowardice / timidity' },
-      { word: '臆病者', reading: 'おくびょうもの', meaning: 'coward' },
+      { word: '臆病', reading: 'おくびょう', meaning: 'Cowardice / timidity' },
+      { word: '臆病者', reading: 'おくびょうもの', meaning: 'Coward' },
     ],
   },
   {
@@ -13259,9 +13259,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["臣","𠂉","品"],
     mnemonic: 'Karakter 臨 (Look to / face) memiliki 18 goresan, tersusun dari elemen (臣, 𠂉, 品) yang melambangkan konsep intinya.',
     examples: [
-      { word: '臨む', reading: 'のぞむ', meaning: 'melakukan look out on / melakukan face / melakukan attend (function)' },
+      { word: '臨む', reading: 'のぞむ', meaning: 'Melihat (out on) / Menghadap / Attend (function)' },
       { word: '臨機応変', reading: 'りんきおうへん', meaning: 'Fleksibel beradaptasi sesuai situasi kondisi' },
-      { word: '臨時', reading: 'りんじ', meaning: 'temporary / special / extraordinary' },
+      { word: '臨時', reading: 'りんじ', meaning: 'Temporary / special / extraordinary' },
     ],
   },
   {
@@ -13295,9 +13295,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["自","犬"],
     mnemonic: 'Karakter 臭 (Stinking / ill-smelling) memiliki 9 goresan, tersusun dari elemen (自, 犬) yang melambangkan konsep intinya.',
     examples: [
-      { word: '臭い', reading: 'くさい', meaning: 'stinky / smelly / bad-smelling' },
-      { word: '生臭い', reading: 'なまぐさい', meaning: 'smelling of fish or blood / fish or meat' },
-      { word: '面倒臭い', reading: 'めんどうくさい', meaning: 'bother to do / tiresome' },
+      { word: '臭い', reading: 'くさい', meaning: 'Stinky / smelly / bad-smelling' },
+      { word: '生臭い', reading: 'なまぐさい', meaning: 'Smelling of fish or blood / fish or meat' },
+      { word: '面倒臭い', reading: 'めんどうくさい', meaning: 'Bother to do / tiresome' },
     ],
   },
   {
@@ -13313,9 +13313,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["𠫔","土"],
     mnemonic: 'Karakter 至 (Climax / arrive) memiliki 6 goresan, tersusun dari elemen (𠫔, 土) yang melambangkan konsep intinya.',
     examples: [
-      { word: '至急', reading: 'しきゅう', meaning: 'urgent / pressing' },
-      { word: '至る', reading: 'いたる', meaning: 'datang / melakukan arrive' },
-      { word: '乃至', reading: 'ないし', meaning: 'from...to / between...and / or' },
+      { word: '至急', reading: 'しきゅう', meaning: 'Urgent / pressing' },
+      { word: '至る', reading: 'いたる', meaning: 'Datang / Tiba / Sampai' },
+      { word: '乃至', reading: 'ないし', meaning: 'From...to / between...and / or' },
     ],
   },
   {
@@ -13332,7 +13332,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 致 (Doth / do) memiliki 10 goresan, tersusun dari elemen (至, 攵) yang melambangkan konsep intinya.',
     examples: [
       { word: '誘致', reading: 'ゆうち', meaning: 'Mengundang investasi / Daya tarik wilayah' },
-      { word: '一致', reading: 'いっち', meaning: 'kesepakatan / conformity' },
+      { word: '一致', reading: 'いっち', meaning: 'Kesepakatan / conformity' },
       { word: '致す', reading: 'いたす', meaning: '-- extra-modest expression for する --' },
     ],
   },
@@ -13366,9 +13366,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["𦥑","一","八","同"],
     mnemonic: 'Karakter 興 (Entertain / revive) memiliki 16 goresan, tersusun dari elemen (𦥑, 一, 八) yang melambangkan konsep intinya.',
     examples: [
-      { word: '興奮', reading: 'こうふん', meaning: 'excitement / stimulation' },
-      { word: '新興', reading: 'しんこう', meaning: 'rising / developing / emergent' },
-      { word: '振興', reading: 'しんこう', meaning: 'promotion / encouragement' },
+      { word: '興奮', reading: 'こうふん', meaning: 'Excitement / stimulation' },
+      { word: '新興', reading: 'しんこう', meaning: 'Rising / developing / emergent' },
+      { word: '振興', reading: 'しんこう', meaning: 'Promotion / encouragement' },
     ],
   },
   {
@@ -13384,9 +13384,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["千","口"],
     mnemonic: 'Karakter 舌 (Tongue / reed) memiliki 6 goresan, tersusun dari elemen (千, 口) yang melambangkan konsep intinya.',
     examples: [
-      { word: '舌', reading: 'した', meaning: 'tongue' },
-      { word: '二枚舌', reading: 'にまいじた', meaning: 'double-dealing' },
-      { word: '弁舌', reading: 'べんぜつ', meaning: 'speech' },
+      { word: '舌', reading: 'した', meaning: 'Tongue' },
+      { word: '二枚舌', reading: 'にまいじた', meaning: 'Double-dealing' },
+      { word: '弁舌', reading: 'べんぜつ', meaning: 'Speech' },
     ],
   },
   {
@@ -13402,9 +13402,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["人","𠮷"],
     mnemonic: 'Karakter 舎 (Cottage / inn) memiliki 8 goresan, tersusun dari elemen (人, 𠮷) yang melambangkan konsep intinya.',
     examples: [
-      { word: '校舎', reading: 'こうしゃ', meaning: 'school building' },
+      { word: '校舎', reading: 'こうしゃ', meaning: 'School building' },
       { word: '田舎', reading: 'いなか', meaning: 'Pedesaan / kampung halaman' },
-      { word: '公舎', reading: 'こうしゃ', meaning: 'official residence' },
+      { word: '公舎', reading: 'こうしゃ', meaning: 'Official residence' },
     ],
   },
   {
@@ -13420,9 +13420,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["舎","甫"],
     mnemonic: 'Karakter 舗 (Shop / store) memiliki 15 goresan, tersusun dari elemen (舎, 甫) yang melambangkan konsep intinya.',
     examples: [
-      { word: '舗装', reading: 'ほそう', meaning: 'pavement / road surface' },
-      { word: '店舗', reading: 'てんぽ', meaning: 'shop' },
-      { word: '老舗', reading: 'しにせ', meaning: 'long-established shop' },
+      { word: '舗装', reading: 'ほそう', meaning: 'Pavement / road surface' },
+      { word: '店舗', reading: 'てんぽ', meaning: 'Shop' },
+      { word: '老舗', reading: 'しにせ', meaning: 'Long-established shop' },
     ],
   },
   {
@@ -13438,8 +13438,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["舟","白"],
     mnemonic: 'Karakter 舶 (Liner / ship) memiliki 11 goresan, tersusun dari elemen (舟, 白) yang melambangkan konsep intinya.',
     examples: [
-      { word: '船舶', reading: 'せんぱく', meaning: 'ship' },
-      { word: '舶来', reading: 'はくらい', meaning: 'imported' },
+      { word: '船舶', reading: 'せんぱく', meaning: 'Ship' },
+      { word: '舶来', reading: 'はくらい', meaning: 'Imported' },
     ],
   },
   {
@@ -13472,9 +13472,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["舟","廷"],
     mnemonic: 'Karakter 艇 (Perahu kecil sekoci motor) memiliki 13 goresan, tersusun dari elemen (舟, 廷) yang melambangkan konsep intinya.',
     examples: [
-      { word: '競艇', reading: 'きょうてい', meaning: 'kyōtei' },
-      { word: '舟艇', reading: 'しゅうてい', meaning: 'boat' },
-      { word: '艦艇', reading: 'かんてい', meaning: 'naval vessels' },
+      { word: '競艇', reading: 'きょうてい', meaning: 'Kyōtei' },
+      { word: '舟艇', reading: 'しゅうてい', meaning: 'Boat' },
+      { word: '艦艇', reading: 'かんてい', meaning: 'Naval vessels' },
     ],
   },
   {
@@ -13490,9 +13490,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["舟","監"],
     mnemonic: 'Karakter 艦 (Warship) memiliki 21 goresan, tersusun dari elemen (舟, 監) yang melambangkan konsep intinya.',
     examples: [
-      { word: '軍艦', reading: 'ぐんかん', meaning: 'warship / battleship' },
-      { word: '戦艦', reading: 'せんかん', meaning: 'battleship' },
-      { word: '潜水艦', reading: 'せんすいかん', meaning: 'submarine' },
+      { word: '軍艦', reading: 'ぐんかん', meaning: 'Warship / battleship' },
+      { word: '戦艦', reading: 'せんかん', meaning: 'Battleship' },
+      { word: '潜水艦', reading: 'せんすいかん', meaning: 'Submarine' },
     ],
   },
   {
@@ -13509,8 +13509,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 色 (Color) memiliki 6 goresan, tersusun dari elemen (𠂊, 巴) yang melambangkan konsep intinya.',
     examples: [
       { word: '巧言令色', reading: 'こうげんれいしょく', meaning: 'Kata-kata manis menjilat dan senyum palsu untuk mencari muka' },
-      { word: '色', reading: 'いろ', meaning: 'color' },
-      { word: '色々', reading: 'いろいろ', meaning: 'beragam / bermacam-macam' },
+      { word: '色', reading: 'いろ', meaning: 'Color' },
+      { word: '色々', reading: 'いろいろ', meaning: 'Beragam / bermacam-macam' },
     ],
   },
   {
@@ -13526,7 +13526,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["豊","色"],
     mnemonic: 'Karakter 艶 (Glossy / luster) memiliki 19 goresan, tersusun dari elemen (豊, 色) yang melambangkan konsep intinya.',
     examples: [
-      { word: '艶', reading: 'つや', meaning: 'gloss / glaze' },
+      { word: '艶', reading: 'つや', meaning: 'Gloss / glaze' },
       { word: '妖艶', reading: 'ようえん', meaning: 'Kecantikan memikat menggoda' },
     ],
   },
@@ -13543,7 +13543,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["艹","于"],
     mnemonic: 'Karakter 芋 (Potato) memiliki 6 goresan, tersusun dari elemen (艹, 于) yang melambangkan konsep intinya.',
     examples: [
-      { word: '焼き芋', reading: 'やきいも', meaning: 'roasted sweet potato' },
+      { word: '焼き芋', reading: 'やきいも', meaning: 'Roasted sweet potato' },
       { word: '芋', reading: 'いも', meaning: 'Umbi talas kentang ubi' },
     ],
   },
@@ -13560,9 +13560,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["艹","之"],
     mnemonic: 'Karakter 芝 (Turf / lawn) memiliki 6 goresan, tersusun dari elemen (艹, 之) yang melambangkan konsep intinya.',
     examples: [
-      { word: '芝居', reading: 'しばい', meaning: 'play / drama' },
-      { word: '芝生', reading: 'しばふ', meaning: 'lawn' },
-      { word: '芝', reading: 'しば', meaning: 'lawn' },
+      { word: '芝居', reading: 'しばい', meaning: 'Play / drama' },
+      { word: '芝生', reading: 'しばふ', meaning: 'Lawn' },
+      { word: '芝', reading: 'しば', meaning: 'Lawn' },
     ],
   },
   {
@@ -13578,7 +13578,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["艹","心"],
     mnemonic: 'Karakter 芯 (Wick) memiliki 7 goresan, tersusun dari elemen (艹, 心) yang melambangkan konsep intinya.',
     examples: [
-      { word: '芯', reading: 'しん', meaning: 'core / heart / wick' },
+      { word: '芯', reading: 'しん', meaning: 'Core / heart / wick' },
       { word: '芯材', reading: 'しんざい', meaning: 'Bahan inti penguat' },
     ],
   },
@@ -13595,7 +13595,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["艹","方"],
     mnemonic: 'Karakter 芳 (Perfume / balmy) memiliki 7 goresan, tersusun dari elemen (艹, 方) yang melambangkan konsep intinya.',
     examples: [
-      { word: '芳香', reading: 'ほうこう', meaning: 'perfume' },
+      { word: '芳香', reading: 'ほうこう', meaning: 'Perfume' },
       { word: '芳名', reading: 'ほうめい', meaning: 'Nama baik terhormat tamu' },
     ],
   },
@@ -13612,9 +13612,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["艹","牙"],
     mnemonic: 'Karakter 芽 (Bud / sprout) memiliki 8 goresan, tersusun dari elemen (艹, 牙) yang melambangkan konsep intinya.',
     examples: [
-      { word: '芽', reading: 'め', meaning: 'sprout' },
-      { word: '発芽', reading: 'はつが', meaning: 'germination' },
-      { word: '新芽', reading: 'しんめ', meaning: 'sprout' },
+      { word: '芽', reading: 'め', meaning: 'Sprout' },
+      { word: '発芽', reading: 'はつが', meaning: 'Germination' },
+      { word: '新芽', reading: 'しんめ', meaning: 'Sprout' },
     ],
   },
   {
@@ -13630,9 +13630,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["艹","田"],
     mnemonic: 'Karakter 苗 (Seedling / sapling) memiliki 8 goresan, tersusun dari elemen (艹, 田) yang melambangkan konsep intinya.',
     examples: [
-      { word: '苗', reading: 'なえ', meaning: 'rice seedling' },
-      { word: '苗字', reading: 'みょうじ', meaning: 'surname' },
-      { word: '苗床', reading: 'なえどこ', meaning: 'seedbed' },
+      { word: '苗', reading: 'なえ', meaning: 'Rice seedling' },
+      { word: '苗字', reading: 'みょうじ', meaning: 'Surname' },
+      { word: '苗床', reading: 'なえどこ', meaning: 'Seedbed' },
     ],
   },
   {
@@ -13648,9 +13648,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["艹","央"],
     mnemonic: 'Karakter 英 (Unggul cemerlang / Inggris) memiliki 8 goresan, tersusun dari elemen (艹, 央) yang melambangkan konsep intinya.',
     examples: [
-      { word: '英語', reading: 'えいご', meaning: 'english (language)' },
-      { word: '英字', reading: 'えいじ', meaning: 'english letter (character)' },
-      { word: '英雄', reading: 'えいゆう', meaning: 'hero / great man' },
+      { word: '英語', reading: 'えいご', meaning: 'English (language)' },
+      { word: '英字', reading: 'えいじ', meaning: 'English letter (character)' },
+      { word: '英雄', reading: 'えいゆう', meaning: 'Hero / great man' },
     ],
   },
   {
@@ -13666,8 +13666,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["艹","戊"],
     mnemonic: 'Karakter 茂 (Overgrown / grow thick) memiliki 8 goresan, tersusun dari elemen (艹, 戊) yang melambangkan konsep intinya.',
     examples: [
-      { word: '茂る', reading: 'しげる', meaning: 'melakukan grow thick' },
-      { word: '繁茂', reading: 'はんも', meaning: 'flourishing (of plants)' },
+      { word: '茂る', reading: 'しげる', meaning: 'Tumbuh (thick)' },
+      { word: '繁茂', reading: 'はんも', meaning: 'Flourishing (of plants)' },
     ],
   },
   {
@@ -13683,7 +13683,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["艹","𢀖"],
     mnemonic: 'Karakter 茎 (Stalk / stem) memiliki 8 goresan, tersusun dari elemen (艹, 𢀖) yang melambangkan konsep intinya.',
     examples: [
-      { word: '茎', reading: 'くき', meaning: 'stalk' },
+      { word: '茎', reading: 'くき', meaning: 'Stalk' },
       { word: '根茎', reading: 'こんけい', meaning: 'Batang rimpang akar' },
     ],
   },
@@ -13717,9 +13717,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["艹","壮"],
     mnemonic: 'Karakter 荘 (Villa / inn) memiliki 9 goresan, tersusun dari elemen (艹, 壮) yang melambangkan konsep intinya.',
     examples: [
-      { word: '別荘', reading: 'べっそう', meaning: 'villa / vacation home / summer cottage' },
-      { word: '山荘', reading: 'さんそう', meaning: 'mountain villa' },
-      { word: '荘厳', reading: 'そうごん', meaning: 'solemn' },
+      { word: '別荘', reading: 'べっそう', meaning: 'Villa / vacation home / summer cottage' },
+      { word: '山荘', reading: 'さんそう', meaning: 'Mountain villa' },
+      { word: '荘厳', reading: 'そうごん', meaning: 'Solemn' },
     ],
   },
   {
@@ -13735,7 +13735,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["艹","匊"],
     mnemonic: 'Karakter 菊 (Bunga krisan seruni lambang kaisar) memiliki 11 goresan, tersusun dari elemen (艹, 匊) yang melambangkan konsep intinya.',
     examples: [
-      { word: '白菊', reading: 'しらぎく', meaning: 'white chrysanthemum' },
+      { word: '白菊', reading: 'しらぎく', meaning: 'White chrysanthemum' },
       { word: '菊', reading: 'きく', meaning: 'Bunga seruni krisan lambang kekaisaran' },
       { word: '菊花', reading: 'きくか', meaning: 'Bunga krisan mekar' },
     ],
@@ -13753,9 +13753,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["艹"],
     mnemonic: 'Karakter 華 (Splendor / bunga) memiliki 10 goresan, tersusun dari elemen (艹) yang melambangkan konsep intinya.',
     examples: [
-      { word: '豪華', reading: 'ごうか', meaning: 'luxurious / gorgeous / extravagance' },
-      { word: '華奢', reading: 'きゃしゃ', meaning: 'delicate / slender' },
-      { word: '華々しい', reading: 'はなばなしい', meaning: 'brilliant / magnificent / spectacular' },
+      { word: '豪華', reading: 'ごうか', meaning: 'Luxurious / gorgeous / extravagance' },
+      { word: '華奢', reading: 'きゃしゃ', meaning: 'Delicate / slender' },
+      { word: '華々しい', reading: 'はなばなしい', meaning: 'Brilliant / magnificent / spectacular' },
     ],
   },
   {
@@ -13771,9 +13771,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["艹","委"],
     mnemonic: 'Karakter 萎 (Wither / droop) memiliki 11 goresan, tersusun dari elemen (艹, 委) yang melambangkan konsep intinya.',
     examples: [
-      { word: '萎びる', reading: 'しなびる', meaning: 'melakukan shrivel / melakukan fade' },
-      { word: '萎む', reading: 'しぼむ', meaning: 'melakukan wither (of flowers / dreams / etc.)' },
-      { word: '萎縮', reading: 'いしゅく', meaning: 'withering' },
+      { word: '萎びる', reading: 'しなびる', meaning: 'Shrivel / Fade' },
+      { word: '萎む', reading: 'しぼむ', meaning: 'Wither (of flowers / dreams / etc.)' },
+      { word: '萎縮', reading: 'いしゅく', meaning: 'Withering' },
     ],
   },
   {
@@ -13789,7 +13789,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["艹","曷"],
     mnemonic: 'Karakter 葛 (Tanaman merambat kudzu / Perselisihan) memiliki 11 goresan, tersusun dari elemen (艹, 曷) yang melambangkan konsep intinya.',
     examples: [
-      { word: '葛藤', reading: 'かっとう', meaning: 'conflict' },
+      { word: '葛藤', reading: 'かっとう', meaning: 'Conflict' },
       { word: '葛湯', reading: 'くずゆ', meaning: 'Minuman rebusan pati kuzu hangat' },
     ],
   },
@@ -13806,9 +13806,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["艹","死","廾"],
     mnemonic: 'Karakter 葬 (Interment / bury) memiliki 12 goresan, tersusun dari elemen (艹, 死, 廾) yang melambangkan konsep intinya.',
     examples: [
-      { word: '葬る', reading: 'ほうむる', meaning: 'melakukan bury / melakukan entomb' },
-      { word: '葬式', reading: 'そうしき', meaning: 'funeral' },
-      { word: 'お葬式', reading: 'おそうしき', meaning: 'funeral' },
+      { word: '葬る', reading: 'ほうむる', meaning: 'Bury / Entomb' },
+      { word: '葬式', reading: 'そうしき', meaning: 'Funeral' },
+      { word: 'お葬式', reading: 'おそうしき', meaning: 'Funeral' },
     ],
   },
   {
@@ -13824,9 +13824,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["艹","畜"],
     mnemonic: 'Karakter 蓄 (Amass / raise) memiliki 13 goresan, tersusun dari elemen (艹, 畜) yang melambangkan konsep intinya.',
     examples: [
-      { word: '蓄積', reading: 'ちくせき', meaning: 'accumulation / accumulate / store' },
-      { word: '貯蓄', reading: 'ちょちく', meaning: 'savings' },
-      { word: '蓄える', reading: 'たくわえる', meaning: 'melakukan save / melakukan store / melakukan lay in stock' },
+      { word: '蓄積', reading: 'ちくせき', meaning: 'Accumulation / accumulate / store' },
+      { word: '貯蓄', reading: 'ちょちく', meaning: 'Savings' },
+      { word: '蓄える', reading: 'たくわえる', meaning: 'Menyelamatkan / Menyimpan / Store / Lay in stock' },
     ],
   },
   {
@@ -13842,7 +13842,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["艹","盍"],
     mnemonic: 'Karakter 蓋 (Cover / lid) memiliki 13 goresan, tersusun dari elemen (艹, 盍) yang melambangkan konsep intinya.',
     examples: [
-      { word: '蓋', reading: 'ふた', meaning: 'cover / lid / cap' },
+      { word: '蓋', reading: 'ふた', meaning: 'Cover / lid / cap' },
       { word: '天蓋', reading: 'てんがい', meaning: 'Kubah langit-langit kanopi' },
     ],
   },
@@ -13876,9 +13876,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["艹","廌"],
     mnemonic: 'Karakter 薦 (Recommend / mat) memiliki 16 goresan, tersusun dari elemen (艹, 廌) yang melambangkan konsep intinya.',
     examples: [
-      { word: '推薦', reading: 'すいせん', meaning: 'recommendation' },
-      { word: '他薦', reading: 'たせん', meaning: 'recommendation (by others)' },
-      { word: '自薦', reading: 'じせん', meaning: 'self-recommendation' },
+      { word: '推薦', reading: 'すいせん', meaning: 'Recommendation' },
+      { word: '他薦', reading: 'たせん', meaning: 'Recommendation (by others)' },
+      { word: '自薦', reading: 'じせん', meaning: 'Self-recommendation' },
     ],
   },
   {
@@ -13895,7 +13895,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 薪 (Fuel / firewood) memiliki 16 goresan, tersusun dari elemen (艹, 新) yang melambangkan konsep intinya.',
     examples: [
       { word: '臥薪嘗胆', reading: 'がしんしょうたん', meaning: 'Rela menelan penderitaan pahit demi meraih cita-cita besar' },
-      { word: '薪炭', reading: 'しんたん', meaning: 'wood and charcoal' },
+      { word: '薪炭', reading: 'しんたん', meaning: 'Wood and charcoal' },
     ],
   },
   {
@@ -13945,7 +13945,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["艹","滕"],
     mnemonic: 'Karakter 藤 (Bunga wisteria ungu merambat) memiliki 18 goresan, tersusun dari elemen (艹, 滕) yang melambangkan konsep intinya.',
     examples: [
-      { word: '葛藤', reading: 'かっとう', meaning: 'conflict' },
+      { word: '葛藤', reading: 'かっとう', meaning: 'Conflict' },
       { word: '藤', reading: 'ふじ', meaning: 'Bunga wisteria ungu menjuntai' },
       { word: '藤色', reading: 'ふじいろ', meaning: 'Warna ungu muda wisteria' },
     ],
@@ -13963,7 +13963,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["艹","潘"],
     mnemonic: 'Karakter 藩 (Clan / enclosure) memiliki 18 goresan, tersusun dari elemen (艹, 潘) yang melambangkan konsep intinya.',
     examples: [
-      { word: '藩主', reading: 'はんしゅ', meaning: 'feudal lord' },
+      { word: '藩主', reading: 'はんしゅ', meaning: 'Feudal lord' },
       { word: '藩', reading: 'はん', meaning: 'Wilayah klan feodal zaman Edo' },
     ],
   },
@@ -13980,9 +13980,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["艹","澡"],
     mnemonic: 'Karakter 藻 (Seaweed / duckweed) memiliki 19 goresan, tersusun dari elemen (艹, 澡) yang melambangkan konsep intinya.',
     examples: [
-      { word: '海藻', reading: 'かいそう', meaning: 'seaweed' },
-      { word: '藻掻く', reading: 'もがく', meaning: 'to struggle' },
-      { word: '藻類', reading: 'そうるい', meaning: 'seaweeds' },
+      { word: '海藻', reading: 'かいそう', meaning: 'Seaweed' },
+      { word: '藻掻く', reading: 'もがく', meaning: 'To struggle' },
+      { word: '藻類', reading: 'そうるい', meaning: 'Seaweeds' },
     ],
   },
   {
@@ -13999,8 +13999,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 虎 (Tiger / drunkard) memiliki 8 goresan, tersusun dari elemen (虍, 几) yang melambangkan konsep intinya.',
     examples: [
       { word: '虎視眈々', reading: 'こしたんたん', meaning: 'Mengincar peluang mangsa secara saksama dan waspada tinggi bagai harimau' },
-      { word: '虎', reading: 'とら', meaning: 'tiger' },
-      { word: '虎列刺', reading: 'コレラ', meaning: 'cholera' },
+      { word: '虎', reading: 'とら', meaning: 'Tiger' },
+      { word: '虎列刺', reading: 'コレラ', meaning: 'Cholera' },
     ],
   },
   {
@@ -14016,9 +14016,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["虍","匚","一"],
     mnemonic: 'Karakter 虐 (Tyrannize / oppress) memiliki 9 goresan, tersusun dari elemen (虍, 匚, 一) yang melambangkan konsep intinya.',
     examples: [
-      { word: '暴虐', reading: 'ぼうぎゃく', meaning: 'tyranny' },
-      { word: '残虐', reading: 'ざんぎゃく', meaning: 'cruel' },
-      { word: '虐待', reading: 'ぎゃくたい', meaning: 'abuse' },
+      { word: '暴虐', reading: 'ぼうぎゃく', meaning: 'Tyranny' },
+      { word: '残虐', reading: 'ざんぎゃく', meaning: 'Cruel' },
+      { word: '虐待', reading: 'ぎゃくたい', meaning: 'Abuse' },
     ],
   },
   {
@@ -14051,7 +14051,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["虫","工"],
     mnemonic: 'Karakter 虹 (Pelangi warna-warni lengkung) memiliki 9 goresan, tersusun dari elemen (虫, 工) yang melambangkan konsep intinya.',
     examples: [
-      { word: '虹', reading: 'にじ', meaning: 'rainbow' },
+      { word: '虹', reading: 'にじ', meaning: 'Rainbow' },
       { word: '虹彩', reading: 'こうさい', meaning: 'Iris selaput pelangi mata' },
     ],
   },
@@ -14068,8 +14068,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["虫","文"],
     mnemonic: 'Karakter 蚊 (Nyamuk serangga penghisap darah) memiliki 10 goresan, tersusun dari elemen (虫, 文) yang melambangkan konsep intinya.',
     examples: [
-      { word: '蚊', reading: 'か', meaning: 'mosquito' },
-      { word: '蚊帳', reading: 'かや', meaning: 'mosquito net' },
+      { word: '蚊', reading: 'か', meaning: 'Mosquito' },
+      { word: '蚊帳', reading: 'かや', meaning: 'Mosquito net' },
     ],
   },
   {
@@ -14085,8 +14085,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["天","虫"],
     mnemonic: 'Karakter 蚕 (Silkworm) memiliki 10 goresan, tersusun dari elemen (天, 虫) yang melambangkan konsep intinya.',
     examples: [
-      { word: '蚕糸', reading: 'さんし', meaning: 'silk thread' },
-      { word: '養蚕', reading: 'ようさん', meaning: 'sericulture' },
+      { word: '蚕糸', reading: 'さんし', meaning: 'Silk thread' },
+      { word: '養蚕', reading: 'ようさん', meaning: 'Sericulture' },
     ],
   },
   {
@@ -14103,8 +14103,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 蛇 (Snake / serpent) memiliki 11 goresan, tersusun dari elemen (虫, 它) yang melambangkan konsep intinya.',
     examples: [
       { word: '竜頭蛇尾', reading: 'りゅうとうだび', meaning: 'Awalnya megah menggelegar namun akhirnya berakhir melempem mengecewakan' },
-      { word: '蛇口', reading: 'じゃぐち', meaning: 'faucet / tap' },
-      { word: '蛇の目', reading: 'じゃのめ', meaning: 'bull\'s-eye (pattern)' },
+      { word: '蛇口', reading: 'じゃぐち', meaning: 'Faucet / tap' },
+      { word: '蛇の目', reading: 'じゃのめ', meaning: 'Bull\'s-eye (pattern)' },
     ],
   },
   {
@@ -14120,7 +14120,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["𭕄","冖","虫"],
     mnemonic: 'Karakter 蛍 (Lightning-bug / firefly) memiliki 11 goresan, tersusun dari elemen (𭕄, 冖, 虫) yang melambangkan konsep intinya.',
     examples: [
-      { word: '蛍光灯', reading: 'けいこうとう', meaning: 'fluorescent lamp' },
+      { word: '蛍光灯', reading: 'けいこうとう', meaning: 'Fluorescent lamp' },
       { word: '蛍語', reading: 'ケイご', meaning: 'Istilah / kosakata terkait Lightning-bug / firefly' },
     ],
   },
@@ -14137,9 +14137,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["亦","虫"],
     mnemonic: 'Karakter 蛮 (Barbarian) memiliki 12 goresan, tersusun dari elemen (亦, 虫) yang melambangkan konsep intinya.',
     examples: [
-      { word: '南蛮', reading: 'なんばん', meaning: 'southern barbarians (name used in ancient China for non-Chinese ethnic groups to the south)' },
-      { word: '蛮勇', reading: 'ばんゆう', meaning: 'foolhardiness' },
-      { word: '蛮行', reading: 'ばんこう', meaning: 'act of barbarity' },
+      { word: '南蛮', reading: 'なんばん', meaning: 'Southern barbarians (name used in ancient China for non-Chinese ethnic groups to the south)' },
+      { word: '蛮勇', reading: 'ばんゆう', meaning: 'Foolhardiness' },
+      { word: '蛮行', reading: 'ばんこう', meaning: 'Act of barbarity' },
     ],
   },
   {
@@ -14155,7 +14155,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["虫","夆"],
     mnemonic: 'Karakter 蜂 (Lebah madu tawon penyengat) memiliki 13 goresan, tersusun dari elemen (虫, 夆) yang melambangkan konsep intinya.',
     examples: [
-      { word: '蜂蜜', reading: 'はちみつ', meaning: 'honey' },
+      { word: '蜂蜜', reading: 'はちみつ', meaning: 'Honey' },
       { word: '蜂語', reading: 'ホウご', meaning: 'Istilah / kosakata terkait Bee / wasp' },
     ],
   },
@@ -14172,8 +14172,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["宓","虫"],
     mnemonic: 'Karakter 蜜 (Honey / nectar) memiliki 14 goresan, tersusun dari elemen (宓, 虫) yang melambangkan konsep intinya.',
     examples: [
-      { word: '蜂蜜', reading: 'はちみつ', meaning: 'honey' },
-      { word: '蜜柑', reading: 'みかん', meaning: 'mandarin (esp. the satsuma mandarin (Citrus unshiu))' },
+      { word: '蜂蜜', reading: 'はちみつ', meaning: 'Honey' },
+      { word: '蜜柑', reading: 'みかん', meaning: 'Mandarin (esp. the satsuma mandarin (Citrus unshiu))' },
     ],
   },
   {
@@ -14189,9 +14189,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["鬲","虫"],
     mnemonic: 'Karakter 融 (Dissolve / melt) memiliki 16 goresan, tersusun dari elemen (鬲, 虫) yang melambangkan konsep intinya.',
     examples: [
-      { word: '金融', reading: 'きんゆう', meaning: 'finance / money and banking' },
+      { word: '金融', reading: 'きんゆう', meaning: 'Finance / money and banking' },
       { word: '融資', reading: 'ゆうし', meaning: 'Pembiayaan / Pinjaman kredit' },
-      { word: '融通', reading: 'ゆうずう', meaning: 'adaptability / versatility / finance' },
+      { word: '融通', reading: 'ゆうずう', meaning: 'Adaptability / versatility / finance' },
     ],
   },
   {
@@ -14207,9 +14207,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["彳","圭","亍"],
     mnemonic: 'Karakter 街 (Boulevard / street) memiliki 12 goresan, tersusun dari elemen (彳, 圭, 亍) yang melambangkan konsep intinya.',
     examples: [
-      { word: '街', reading: 'まち', meaning: 'town / street / road' },
-      { word: '～街', reading: '～がい', meaning: 'town' },
-      { word: '街道', reading: 'かいどう', meaning: 'highway' },
+      { word: '街', reading: 'まち', meaning: 'Town / street / road' },
+      { word: '～街', reading: '～がい', meaning: 'Town' },
+      { word: '街道', reading: 'かいどう', meaning: 'Highway' },
     ],
   },
   {
@@ -14225,9 +14225,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["彳","重","亍"],
     mnemonic: 'Karakter 衝 (Collide / brunt) memiliki 15 goresan, tersusun dari elemen (彳, 重, 亍) yang melambangkan konsep intinya.',
     examples: [
-      { word: '衝突', reading: 'しょうとつ', meaning: 'collision / conflict' },
-      { word: '衝撃', reading: 'しょうげき', meaning: 'shock / crash / impact' },
-      { word: '折衝', reading: 'せっしょう', meaning: 'negotiation' },
+      { word: '衝突', reading: 'しょうとつ', meaning: 'Collision / conflict' },
+      { word: '衝撃', reading: 'しょうげき', meaning: 'Shock / crash / impact' },
+      { word: '折衝', reading: 'せっしょう', meaning: 'Negotiation' },
     ],
   },
   {
@@ -14243,9 +14243,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["彳","𩵋","亍"],
     mnemonic: 'Karakter 衡 (Equilibrium / measuring rod) memiliki 16 goresan, tersusun dari elemen (彳, 𩵋, 亍) yang melambangkan konsep intinya.',
     examples: [
-      { word: '均衡', reading: 'きんこう', meaning: 'equilibrium / balance' },
-      { word: '不均衡', reading: 'ふきんこう', meaning: 'imbalance' },
-      { word: '平衡', reading: 'へいこう', meaning: 'balance' },
+      { word: '均衡', reading: 'きんこう', meaning: 'Equilibrium / balance' },
+      { word: '不均衡', reading: 'ふきんこう', meaning: 'Imbalance' },
+      { word: '平衡', reading: 'へいこう', meaning: 'Balance' },
     ],
   },
   {
@@ -14261,9 +14261,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["亠","口","一","𧘇"],
     mnemonic: 'Karakter 衰 (Decline / wane) memiliki 10 goresan, tersusun dari elemen (亠, 口, 一) yang melambangkan konsep intinya.',
     examples: [
-      { word: '衰える', reading: 'おとろえる', meaning: 'melakukan become weak / melakukan decline' },
-      { word: '老衰', reading: 'ろうすい', meaning: 'senility / senile decay' },
-      { word: '盛衰', reading: 'せいすい', meaning: 'rise and fall' },
+      { word: '衰える', reading: 'おとろえる', meaning: 'Become weak / Decline' },
+      { word: '老衰', reading: 'ろうすい', meaning: 'Senility / senile decay' },
+      { word: '盛衰', reading: 'せいすい', meaning: 'Rise and fall' },
     ],
   },
   {
@@ -14279,9 +14279,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["亠","中","𧘇"],
     mnemonic: 'Karakter 衷 (Inmost / hati) memiliki 10 goresan, tersusun dari elemen (亠, 中, 𧘇) yang melambangkan konsep intinya.',
     examples: [
-      { word: '折衷', reading: 'せっちゅう', meaning: 'compromise / cross / blending' },
-      { word: '和洋折衷', reading: 'わようせっちゅう', meaning: 'blending of Japanese and Western styles' },
-      { word: '衷心', reading: 'ちゅうしん', meaning: 'innermost feelings' },
+      { word: '折衷', reading: 'せっちゅう', meaning: 'Compromise / cross / blending' },
+      { word: '和洋折衷', reading: 'わようせっちゅう', meaning: 'Blending of Japanese and Western styles' },
+      { word: '衷心', reading: 'ちゅうしん', meaning: 'Innermost feelings' },
     ],
   },
   {
@@ -14297,9 +14297,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["衤","由"],
     mnemonic: 'Karakter 袖 (Lengan baju busana pakaian) memiliki 10 goresan, tersusun dari elemen (衤, 由) yang melambangkan konsep intinya.',
     examples: [
-      { word: '袖', reading: 'そで', meaning: 'sleeve' },
-      { word: '半袖', reading: 'はんそで', meaning: 'short sleeves' },
-      { word: '長袖', reading: 'ながそで', meaning: 'long sleeves' },
+      { word: '袖', reading: 'そで', meaning: 'Sleeve' },
+      { word: '半袖', reading: 'はんそで', meaning: 'Short sleeves' },
+      { word: '長袖', reading: 'ながそで', meaning: 'Long sleeves' },
     ],
   },
   {
@@ -14315,9 +14315,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["列","衣"],
     mnemonic: 'Karakter 裂 (Split / rend) memiliki 12 goresan, tersusun dari elemen (列, 衣) yang melambangkan konsep intinya.',
     examples: [
-      { word: '裂く', reading: 'さく', meaning: 'melakukan tear / melakukan split' },
-      { word: '裂ける', reading: 'さける', meaning: 'melakukan split / melakukan tear / melakukan burst' },
-      { word: '分裂', reading: 'ぶんれつ', meaning: 'split / division / break up' },
+      { word: '裂く', reading: 'さく', meaning: 'Merobek / Menyobek / Split' },
+      { word: '裂ける', reading: 'さける', meaning: 'Split / Merobek / Menyobek / Burst' },
+      { word: '分裂', reading: 'ぶんれつ', meaning: 'Split / division / break up' },
     ],
   },
   {
@@ -14334,8 +14334,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 裕 (Abundant / rich) memiliki 12 goresan, tersusun dari elemen (衤, 谷) yang melambangkan konsep intinya.',
     examples: [
       { word: '余裕', reading: 'よゆう', meaning: 'Kelonggaran waktu/uang / Ruang luang / Keleluasaan' },
-      { word: '富裕', reading: 'ふゆう', meaning: 'wealthy' },
-      { word: '裕福', reading: 'ゆうふく', meaning: 'wealthy' },
+      { word: '富裕', reading: 'ふゆう', meaning: 'Wealthy' },
+      { word: '裕福', reading: 'ゆうふく', meaning: 'Wealthy' },
     ],
   },
   {
@@ -14351,9 +14351,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["衤","果"],
     mnemonic: 'Karakter 裸 (Naked / nude) memiliki 13 goresan, tersusun dari elemen (衤, 果) yang melambangkan konsep intinya.',
     examples: [
-      { word: '裸', reading: 'はだか', meaning: 'naked / nude' },
-      { word: '裸足', reading: 'はだし', meaning: 'barefoot' },
-      { word: '裸婦', reading: 'らふ', meaning: 'nude woman' },
+      { word: '裸', reading: 'はだか', meaning: 'Naked / nude' },
+      { word: '裸足', reading: 'はだし', meaning: 'Barefoot' },
+      { word: '裸婦', reading: 'らふ', meaning: 'Nude woman' },
     ],
   },
   {
@@ -14386,8 +14386,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["衤","曷"],
     mnemonic: 'Karakter 褐 (Brown / woollen kimono) memiliki 13 goresan, tersusun dari elemen (衤, 曷) yang melambangkan konsep intinya.',
     examples: [
-      { word: '茶褐色', reading: 'ちゃかっしょく', meaning: 'dark reddish-brown' },
-      { word: '褐色', reading: 'かっしょく', meaning: 'dark brown' },
+      { word: '茶褐色', reading: 'ちゃかっしょく', meaning: 'Dark reddish-brown' },
+      { word: '褐色', reading: 'かっしょく', meaning: 'Dark brown' },
     ],
   },
   {
@@ -14403,9 +14403,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["亠","保","𧘇"],
     mnemonic: 'Karakter 褒 (Praise / extol) memiliki 15 goresan, tersusun dari elemen (亠, 保, 𧘇) yang melambangkan konsep intinya.',
     examples: [
-      { word: '褒める', reading: 'ほめる', meaning: 'melakukan praise / melakukan say nice things' },
-      { word: '褒美', reading: 'ほうび', meaning: 'reward / prize' },
-      { word: 'ご褒美', reading: 'ごほうび', meaning: 'reward' },
+      { word: '褒める', reading: 'ほめる', meaning: 'Memuji / Mengatakan (nice things)' },
+      { word: '褒美', reading: 'ほうび', meaning: 'Reward / prize' },
+      { word: 'ご褒美', reading: 'ごほうび', meaning: 'Reward' },
     ],
   },
   {
@@ -14421,8 +14421,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["衤","禁"],
     mnemonic: 'Karakter 襟 (Collar / neck) memiliki 18 goresan, tersusun dari elemen (衤, 禁) yang melambangkan konsep intinya.',
     examples: [
-      { word: '襟', reading: 'えり', meaning: 'neck / collar' },
-      { word: '胸襟', reading: 'きょうきん', meaning: 'one\'s heart' },
+      { word: '襟', reading: 'えり', meaning: 'Neck / collar' },
+      { word: '胸襟', reading: 'きょうきん', meaning: 'One\'s heart' },
       { word: '襟元', reading: 'えりもと', meaning: '(around the) neck' },
     ],
   },
@@ -14440,8 +14440,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 襲 (Attack / advance on) memiliki 22 goresan, tersusun dari elemen (龍, 衣) yang melambangkan konsep intinya.',
     examples: [
       { word: '踏襲', reading: 'とうしゅう', meaning: 'Meneruskan (kebijakan lama) / Mengikuti jejak terdahulu' },
-      { word: '襲う', reading: 'おそう', meaning: 'melakukan attack' },
-      { word: '襲撃', reading: 'しゅうげき', meaning: 'attack / charge / raid' },
+      { word: '襲う', reading: 'おそう', meaning: 'Menyerang' },
+      { word: '襲撃', reading: 'しゅうげき', meaning: 'Attack / charge / raid' },
     ],
   },
   {
@@ -14457,9 +14457,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["覀","䩗"],
     mnemonic: 'Karakter 覇 (Kejayaan dominasi kekuasaan juara) memiliki 19 goresan, tersusun dari elemen (覀, 䩗) yang melambangkan konsep intinya.',
     examples: [
-      { word: '制覇', reading: 'せいは', meaning: 'conquest' },
-      { word: '覇権', reading: 'はけん', meaning: 'hegemony' },
-      { word: '覇気', reading: 'はき', meaning: 'spirit' },
+      { word: '制覇', reading: 'せいは', meaning: 'Conquest' },
+      { word: '覇権', reading: 'はけん', meaning: 'Hegemony' },
+      { word: '覇気', reading: 'はき', meaning: 'Spirit' },
     ],
   },
   {
@@ -14475,9 +14475,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["臣","𠂉","丶","見"],
     mnemonic: 'Karakter 覧 (Perusal / melihat) memiliki 17 goresan, tersusun dari elemen (臣, 𠂉, 丶) yang melambangkan konsep intinya.',
     examples: [
-      { word: '展覧会', reading: 'てんらんかい', meaning: 'exhibition' },
-      { word: '閲覧', reading: 'えつらん', meaning: 'inspection / referensi / rujukan / browse' },
-      { word: '回覧', reading: 'かいらん', meaning: 'circulation' },
+      { word: '展覧会', reading: 'てんらんかい', meaning: 'Exhibition' },
+      { word: '閲覧', reading: 'えつらん', meaning: 'Pemeriksaan / Inspeksi / referensi / rujukan / Meramban' },
+      { word: '回覧', reading: 'かいらん', meaning: 'Circulation' },
     ],
   },
   {
@@ -14493,9 +14493,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["言","丁"],
     mnemonic: 'Karakter 訂 (Revise / correct) memiliki 9 goresan, tersusun dari elemen (言, 丁) yang melambangkan konsep intinya.',
     examples: [
-      { word: '改訂', reading: 'かいてい', meaning: 'revision' },
-      { word: '訂正', reading: 'ていせい', meaning: 'correction / revision' },
-      { word: '改訂版', reading: 'かいていばん', meaning: 'revised edition' },
+      { word: '改訂', reading: 'かいてい', meaning: 'Revision' },
+      { word: '訂正', reading: 'ていせい', meaning: 'Correction / revision' },
+      { word: '改訂版', reading: 'かいていばん', meaning: 'Revised edition' },
     ],
   },
   {
@@ -14528,9 +14528,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["言","乇"],
     mnemonic: 'Karakter 託 (Consign / requesting) memiliki 10 goresan, tersusun dari elemen (言, 乇) yang melambangkan konsep intinya.',
     examples: [
-      { word: '委託', reading: 'いたく', meaning: 'consign (goods (for sale) to a firm) / entrust' },
-      { word: '信託', reading: 'しんたく', meaning: 'trust' },
-      { word: '受託', reading: 'じゅたく', meaning: 'being entrusted with' },
+      { word: '委託', reading: 'いたく', meaning: 'Consign (goods (for sale) to a firm) / entrust' },
+      { word: '信託', reading: 'しんたく', meaning: 'Trust' },
+      { word: '受託', reading: 'じゅたく', meaning: 'Being entrusted with' },
     ],
   },
   {
@@ -14546,9 +14546,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["言","尺"],
     mnemonic: 'Karakter 訳 (Translate / alasan / nalar) memiliki 11 goresan, tersusun dari elemen (言, 尺) yang melambangkan konsep intinya.',
     examples: [
-      { word: '申し訳', reading: 'もうしわけ', meaning: 'apology / excuse' },
-      { word: '訳', reading: 'やく', meaning: 'translation' },
-      { word: '訳す', reading: 'やくす', meaning: 'melakukan translate' },
+      { word: '申し訳', reading: 'もうしわけ', meaning: 'Apology / excuse' },
+      { word: '訳', reading: 'やく', meaning: 'Translation' },
+      { word: '訳す', reading: 'やくす', meaning: 'Translate' },
     ],
   },
   {
@@ -14565,8 +14565,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 診 (Checkup / seeing) memiliki 12 goresan, tersusun dari elemen (言, 㐱) yang melambangkan konsep intinya.',
     examples: [
       { word: '診療', reading: 'しんりょう', meaning: 'Pemeriksaan dan perawatan medis' },
-      { word: '診察', reading: 'しんさつ', meaning: 'medical examination (of a patient)' },
-      { word: '診る', reading: 'みる', meaning: 'melakukan examine (a patient)' },
+      { word: '診察', reading: 'しんさつ', meaning: 'Medical examination (of a patient)' },
+      { word: '診る', reading: 'みる', meaning: 'Examine (a patient)' },
     ],
   },
   {
@@ -14582,7 +14582,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["言","召"],
     mnemonic: 'Karakter 詔 (Imperial edict) memiliki 12 goresan, tersusun dari elemen (言, 召) yang melambangkan konsep intinya.',
     examples: [
-      { word: '詔書', reading: 'しょうしょ', meaning: 'imperial edict' },
+      { word: '詔書', reading: 'しょうしょ', meaning: 'Imperial edict' },
       { word: '詔', reading: 'みことのり', meaning: 'Titah proklamasi agung kaisar' },
       { word: '詔勅', reading: 'しょうちょく', meaning: 'Dekrit titah kekaisaran' },
     ],
@@ -14600,7 +14600,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["言","永"],
     mnemonic: 'Karakter 詠 (Recitation / poem) memiliki 12 goresan, tersusun dari elemen (言, 永) yang melambangkan konsep intinya.',
     examples: [
-      { word: '朗詠', reading: 'ろうえい', meaning: 'recitation (of Japanese or Chinese poem)' },
+      { word: '朗詠', reading: 'ろうえい', meaning: 'Recitation (of Japanese or Chinese poem)' },
       { word: '詠嘆', reading: 'えいたん', meaning: 'Kekaguman sanjungan bait puitis' },
       { word: '詠む', reading: 'よむ', meaning: 'Melantunkan menggubah bait puisi haiku' },
     ],
@@ -14618,7 +14618,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["言","旨"],
     mnemonic: 'Karakter 詣 (Visit a temple / arrive) memiliki 13 goresan, tersusun dari elemen (言, 旨) yang melambangkan konsep intinya.',
     examples: [
-      { word: '初詣', reading: 'はつもうで', meaning: 'first shrine visit of the New Year' },
+      { word: '初詣', reading: 'はつもうで', meaning: 'First shrine visit of the New Year' },
       { word: '参詣', reading: 'さんけい', meaning: 'Kunjungan ziarah beribadah' },
     ],
   },
@@ -14635,9 +14635,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["言","寺"],
     mnemonic: 'Karakter 詩 (Poem / poetry) memiliki 13 goresan, tersusun dari elemen (言, 寺) yang melambangkan konsep intinya.',
     examples: [
-      { word: '詩', reading: 'し', meaning: 'poem / poetry' },
-      { word: '詩人', reading: 'しじん', meaning: 'poet' },
-      { word: '叙事詩', reading: 'じょじし', meaning: 'epic (poem)' },
+      { word: '詩', reading: 'し', meaning: 'Poem / poetry' },
+      { word: '詩人', reading: 'しじん', meaning: 'Poet' },
+      { word: '叙事詩', reading: 'じょじし', meaning: 'Epic (poem)' },
     ],
   },
   {
@@ -14653,7 +14653,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["言","全"],
     mnemonic: 'Karakter 詮 (Discussion / methods called for) memiliki 13 goresan, tersusun dari elemen (言, 全) yang melambangkan konsep intinya.',
     examples: [
-      { word: '所詮', reading: 'しょせん', meaning: 'after all' },
+      { word: '所詮', reading: 'しょせん', meaning: 'After all' },
       { word: '詮索', reading: 'せんさく', meaning: 'Penyelidikan mengorek kepo rahasia orang' },
     ],
   },
@@ -14670,7 +14670,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["言","亥"],
     mnemonic: 'Karakter 該 (Above-stated / the said) memiliki 13 goresan, tersusun dari elemen (言, 亥) yang melambangkan konsep intinya.',
     examples: [
-      { word: '該当', reading: 'がいとう', meaning: 'corresponding / answering to / coming under' },
+      { word: '該当', reading: 'がいとう', meaning: 'Corresponding / answering to / coming under' },
       { word: '該語', reading: 'ガイご', meaning: 'Istilah / kosakata terkait Above-stated / the said' },
     ],
   },
@@ -14687,9 +14687,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["言","夸"],
     mnemonic: 'Karakter 誇 (Boast / be proud) memiliki 13 goresan, tersusun dari elemen (言, 夸) yang melambangkan konsep intinya.',
     examples: [
-      { word: '誇り', reading: 'ほこり', meaning: 'pride' },
-      { word: '誇張', reading: 'こちょう', meaning: 'exaggeration' },
-      { word: '誇る', reading: 'ほこる', meaning: 'melakukan boast of / melakukan be proud of' },
+      { word: '誇り', reading: 'ほこり', meaning: 'Pride' },
+      { word: '誇張', reading: 'こちょう', meaning: 'Exaggeration' },
+      { word: '誇る', reading: 'ほこる', meaning: 'Boast of / Menjadi proud of' },
     ],
   },
   {
@@ -14705,9 +14705,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["兴","言"],
     mnemonic: 'Karakter 誉 (Reputation / praise) memiliki 13 goresan, tersusun dari elemen (兴, 言) yang melambangkan konsep intinya.',
     examples: [
-      { word: '名誉', reading: 'めいよ', meaning: 'honor / credit / prestige' },
-      { word: '名誉職', reading: 'めいよしょく', meaning: 'honorary position' },
-      { word: '栄誉', reading: 'えいよ', meaning: 'honour' },
+      { word: '名誉', reading: 'めいよ', meaning: 'Honor / credit / prestige' },
+      { word: '名誉職', reading: 'めいよしょく', meaning: 'Honorary position' },
+      { word: '栄誉', reading: 'えいよ', meaning: 'Honour' },
     ],
   },
   {
@@ -14723,9 +14723,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["折","言"],
     mnemonic: 'Karakter 誓 (Vow / swear) memiliki 14 goresan, tersusun dari elemen (折, 言) yang melambangkan konsep intinya.',
     examples: [
-      { word: '誓う', reading: 'ちかう', meaning: 'melakukan swear / melakukan vow' },
-      { word: '宣誓', reading: 'せんせい', meaning: 'oath' },
-      { word: '誓約', reading: 'せいやく', meaning: 'oath' },
+      { word: '誓う', reading: 'ちかう', meaning: 'Swear / Vow' },
+      { word: '宣誓', reading: 'せんせい', meaning: 'Oath' },
+      { word: '誓約', reading: 'せいやく', meaning: 'Oath' },
     ],
   },
   {
@@ -14741,9 +14741,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["言","延"],
     mnemonic: 'Karakter 誕 (Nativity / be born) memiliki 15 goresan, tersusun dari elemen (言, 延) yang melambangkan konsep intinya.',
     examples: [
-      { word: '誕生日', reading: 'たんじょうび', meaning: 'birthday' },
-      { word: '誕生', reading: 'たんじょう', meaning: 'birth' },
-      { word: 'お誕生日', reading: 'おたんじょうび', meaning: 'birthday' },
+      { word: '誕生日', reading: 'たんじょうび', meaning: 'Birthday' },
+      { word: '誕生', reading: 'たんじょう', meaning: 'Birth' },
+      { word: 'お誕生日', reading: 'おたんじょうび', meaning: 'Birthday' },
     ],
   },
   {
@@ -14759,9 +14759,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["言","成"],
     mnemonic: 'Karakter 誠 (Sincerity / admonish) memiliki 13 goresan, tersusun dari elemen (言, 成) yang melambangkan konsep intinya.',
     examples: [
-      { word: '誠実', reading: 'せいじつ', meaning: 'sincere / honest / faithful' },
-      { word: '誠', reading: 'まこと', meaning: 'truth / faith / fidelity' },
-      { word: '誠に', reading: 'まことに', meaning: 'indeed / really (very polite) / absolutely' },
+      { word: '誠実', reading: 'せいじつ', meaning: 'Sincere / honest / faithful' },
+      { word: '誠', reading: 'まこと', meaning: 'Truth / faith / fidelity' },
+      { word: '誠に', reading: 'まことに', meaning: 'Indeed / really (very polite) / absolutely' },
     ],
   },
   {
@@ -14777,8 +14777,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["言","隹"],
     mnemonic: 'Karakter 誰 (Who / someone) memiliki 15 goresan, tersusun dari elemen (言, 隹) yang melambangkan konsep intinya.',
     examples: [
-      { word: '誰', reading: 'だれ', meaning: 'who' },
-      { word: '誰か', reading: 'だれか', meaning: 'someone' },
+      { word: '誰', reading: 'だれ', meaning: 'Who' },
+      { word: '誰か', reading: 'だれか', meaning: 'Someone' },
     ],
   },
   {
@@ -14794,9 +14794,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["言","青"],
     mnemonic: 'Karakter 請 (Solicit / invite) memiliki 15 goresan, tersusun dari elemen (言, 青) yang melambangkan konsep intinya.',
     examples: [
-      { word: '請求', reading: 'せいきゅう', meaning: 'claim / demand / request' },
-      { word: '要請', reading: 'ようせい', meaning: 'claim / demand / request' },
-      { word: '申請', reading: 'しんせい', meaning: 'application / request / petition' },
+      { word: '請求', reading: 'せいきゅう', meaning: 'Claim / demand / request' },
+      { word: '要請', reading: 'ようせい', meaning: 'Claim / demand / request' },
+      { word: '申請', reading: 'しんせい', meaning: 'Application / request / petition' },
     ],
   },
   {
@@ -14812,8 +14812,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["言","帝"],
     mnemonic: 'Karakter 諦 (Truth / clarity) memiliki 16 goresan, tersusun dari elemen (言, 帝) yang melambangkan konsep intinya.',
     examples: [
-      { word: '諦める', reading: 'あきらめる', meaning: 'melakukan give up / melakukan abandon' },
-      { word: '諦め', reading: 'あきらめ', meaning: 'resignation / reconciliation / consolation' },
+      { word: '諦める', reading: 'あきらめる', meaning: 'Memberikan (up) / Abandon' },
+      { word: '諦め', reading: 'あきらめ', meaning: 'Resignation / reconciliation / consolation' },
     ],
   },
   {
@@ -14846,9 +14846,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["言","若"],
     mnemonic: 'Karakter 諾 (Consent / assent) memiliki 15 goresan, tersusun dari elemen (言, 若) yang melambangkan konsep intinya.',
     examples: [
-      { word: '承諾', reading: 'しょうだく', meaning: 'consent / kesepakatan' },
-      { word: '内諾', reading: 'ないだく', meaning: 'informal consent' },
-      { word: '受諾', reading: 'じゅだく', meaning: 'acceptance' },
+      { word: '承諾', reading: 'しょうだく', meaning: 'Consent / kesepakatan' },
+      { word: '内諾', reading: 'ないだく', meaning: 'Informal consent' },
+      { word: '受諾', reading: 'じゅだく', meaning: 'Acceptance' },
     ],
   },
   {
@@ -14864,9 +14864,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["言","某"],
     mnemonic: 'Karakter 謀 (Conspire / cheat) memiliki 16 goresan, tersusun dari elemen (言, 某) yang melambangkan konsep intinya.',
     examples: [
-      { word: '共謀', reading: 'きょうぼう', meaning: 'conspiracy' },
-      { word: '参謀', reading: 'さんぼう', meaning: 'staff officer' },
-      { word: '無謀', reading: 'むぼう', meaning: 'reckless' },
+      { word: '共謀', reading: 'きょうぼう', meaning: 'Conspiracy' },
+      { word: '参謀', reading: 'さんぼう', meaning: 'Staff officer' },
+      { word: '無謀', reading: 'むぼう', meaning: 'Reckless' },
     ],
   },
   {
@@ -14899,8 +14899,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["月","誊"],
     mnemonic: 'Karakter 謄 (Mimeograph / copy) memiliki 17 goresan, tersusun dari elemen (月, 誊) yang melambangkan konsep intinya.',
     examples: [
-      { word: '戸籍謄本', reading: 'こせきとうほん', meaning: 'official copy of the family register' },
-      { word: '謄本', reading: 'とうほん', meaning: 'certified copy' },
+      { word: '戸籍謄本', reading: 'こせきとうほん', meaning: 'Official copy of the family register' },
+      { word: '謄本', reading: 'とうほん', meaning: 'Certified copy' },
     ],
   },
   {
@@ -14916,8 +14916,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["言","迷"],
     mnemonic: 'Karakter 謎 (Riddle / puzzle) memiliki 16 goresan, tersusun dari elemen (言, 迷) yang melambangkan konsep intinya.',
     examples: [
-      { word: '謎', reading: 'なぞ', meaning: 'riddle / puzzle / enigma' },
-      { word: '謎謎', reading: 'なぞなぞ', meaning: 'riddle' },
+      { word: '謎', reading: 'なぞ', meaning: 'Riddle / puzzle / enigma' },
+      { word: '謎謎', reading: 'なぞなぞ', meaning: 'Riddle' },
     ],
   },
   {
@@ -14933,8 +14933,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["言","兼"],
     mnemonic: 'Karakter 謙 (Self-effacing / humble oneself) memiliki 17 goresan, tersusun dari elemen (言, 兼) yang melambangkan konsep intinya.',
     examples: [
-      { word: '謙虚', reading: 'けんきょ', meaning: 'modesty / humble' },
-      { word: '謙遜', reading: 'けんそん', meaning: 'humble / humility / modesty' },
+      { word: '謙虚', reading: 'けんきょ', meaning: 'Modesty / humble' },
+      { word: '謙遜', reading: 'けんそん', meaning: 'Humble / humility / modesty' },
     ],
   },
   {
@@ -14950,8 +14950,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["言","射"],
     mnemonic: 'Karakter 謝 (Apologize / thank) memiliki 17 goresan, tersusun dari elemen (言, 射) yang melambangkan konsep intinya.',
     examples: [
-      { word: '感謝', reading: 'かんしゃ', meaning: 'thanks / gratitude' },
-      { word: '謝る', reading: 'あやまる', meaning: 'melakukan apologize' },
+      { word: '感謝', reading: 'かんしゃ', meaning: 'Thanks / gratitude' },
+      { word: '謝る', reading: 'あやまる', meaning: 'Meminta maaf' },
       { word: '謝罪', reading: 'しゃざい', meaning: 'Permohonan maaf resmi' },
     ],
   },
@@ -14968,9 +14968,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["言","䍃"],
     mnemonic: 'Karakter 謡 (Song / bernyanyi) memiliki 16 goresan, tersusun dari elemen (言, 䍃) yang melambangkan konsep intinya.',
     examples: [
-      { word: '歌謡', reading: 'かよう', meaning: 'lagu nyanyian / ballad' },
-      { word: '童謡', reading: 'どうよう', meaning: 'children\\' },
-      { word: '民謡', reading: 'みんよう', meaning: 'folk song / popular song' },
+      { word: '歌謡', reading: 'かよう', meaning: 'Lagu nyanyian / ballad' },
+      { word: '童謡', reading: 'どうよう', meaning: 'Children\\' },
+      { word: '民謡', reading: 'みんよう', meaning: 'Folk song / popular song' },
     ],
   },
   {
@@ -14987,8 +14987,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 謹 (Discreet / reverently) memiliki 17 goresan, tersusun dari elemen (言, 堇) yang melambangkan konsep intinya.',
     examples: [
       { word: '謹厳実直', reading: 'きんげんじっちょく', meaning: 'Karakter sangat disiplin, saleh, jujur, dan berprinsip lurus' },
-      { word: '謹む', reading: 'つつしむ', meaning: 'melakukan be careful / melakukan be chaste or discreet' },
-      { word: '謹慎', reading: 'きんしん', meaning: 'self restraint' },
+      { word: '謹む', reading: 'つつしむ', meaning: 'Menjadi careful / Menjadi chaste or discreet' },
+      { word: '謹慎', reading: 'きんしん', meaning: 'Self restraint' },
     ],
   },
   {
@@ -15004,9 +15004,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["言","普"],
     mnemonic: 'Karakter 譜 (Musical score / music) memiliki 19 goresan, tersusun dari elemen (言, 普) yang melambangkan konsep intinya.',
     examples: [
-      { word: '楽譜', reading: 'がくふ', meaning: 'score (music / sheet music)' },
-      { word: '年譜', reading: 'ねんぷ', meaning: 'chronological record' },
-      { word: '棋譜', reading: 'きふ', meaning: 'record of a game of go, shogi, chess, etc.' },
+      { word: '楽譜', reading: 'がくふ', meaning: 'Score (music / sheet music)' },
+      { word: '年譜', reading: 'ねんぷ', meaning: 'Chronological record' },
+      { word: '棋譜', reading: 'きふ', meaning: 'Record of a game of go, shogi, chess, etc.' },
     ],
   },
   {
@@ -15022,9 +15022,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["言","㐮"],
     mnemonic: 'Karakter 譲 (Defer / turnover) memiliki 20 goresan, tersusun dari elemen (言, 㐮) yang melambangkan konsep intinya.',
     examples: [
-      { word: '譲る', reading: 'ゆずる', meaning: 'melakukan turn over / melakukan assign / melakukan hand over' },
-      { word: '譲歩', reading: 'じょうほ', meaning: 'concession / conciliation / compromise' },
-      { word: '分譲', reading: 'ぶんじょう', meaning: 'selling (real-estate) lots' },
+      { word: '譲る', reading: 'ゆずる', meaning: 'Turn over / Assign / Hand over' },
+      { word: '譲歩', reading: 'じょうほ', meaning: 'Concession / conciliation / compromise' },
+      { word: '分譲', reading: 'ぶんじょう', meaning: 'Selling (real-estate) lots' },
     ],
   },
   {
@@ -15040,9 +15040,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["豆"],
     mnemonic: 'Karakter 豆 (Beans / pea) memiliki 7 goresan, tersusun dari elemen (豆) yang melambangkan konsep intinya.',
     examples: [
-      { word: '豆', reading: 'まめ', meaning: 'beans / peas' },
-      { word: '大豆', reading: 'だいず', meaning: 'soya bean (Glycine max)' },
-      { word: '小豆', reading: 'あずき', meaning: 'adzuki bean (Vigna angularis)' },
+      { word: '豆', reading: 'まめ', meaning: 'Beans / peas' },
+      { word: '大豆', reading: 'だいず', meaning: 'Soya bean (Glycine max)' },
+      { word: '小豆', reading: 'あずき', meaning: 'Adzuki bean (Vigna angularis)' },
     ],
   },
   {
@@ -15058,9 +15058,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["月","豕"],
     mnemonic: 'Karakter 豚 (Pork / pig) memiliki 11 goresan, tersusun dari elemen (月, 豕) yang melambangkan konsep intinya.',
     examples: [
-      { word: '豚肉', reading: 'ぶたにく', meaning: 'pork' },
-      { word: '海豚', reading: 'いるか', meaning: 'dolphin (or other small toothed whales, incl. porpoises, belugas, etc.)' },
-      { word: '養豚', reading: 'ようとん', meaning: 'pig-keeping' },
+      { word: '豚肉', reading: 'ぶたにく', meaning: 'Pork' },
+      { word: '海豚', reading: 'いるか', meaning: 'Dolphin (or other small toothed whales, incl. porpoises, belugas, etc.)' },
+      { word: '養豚', reading: 'ようとん', meaning: 'Pig-keeping' },
     ],
   },
   {
@@ -15076,9 +15076,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["亠","口","冖","豕"],
     mnemonic: 'Karakter 豪 (Overpowering / great) memiliki 14 goresan, tersusun dari elemen (亠, 口, 冖) yang melambangkan konsep intinya.',
     examples: [
-      { word: '豪華', reading: 'ごうか', meaning: 'luxurious / gorgeous / extravagance' },
-      { word: '富豪', reading: 'ふごう', meaning: 'wealthy person / millionaire' },
-      { word: '強豪', reading: 'きょうごう', meaning: 'overwhelming strength' },
+      { word: '豪華', reading: 'ごうか', meaning: 'Luxurious / gorgeous / extravagance' },
+      { word: '富豪', reading: 'ふごう', meaning: 'Wealthy person / millionaire' },
+      { word: '強豪', reading: 'きょうごう', meaning: 'Overwhelming strength' },
     ],
   },
   {
@@ -15094,9 +15094,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["豸","皃"],
     mnemonic: 'Karakter 貌 (Raut wajah rupa paras penampilan) memiliki 14 goresan, tersusun dari elemen (豸, 皃) yang melambangkan konsep intinya.',
     examples: [
-      { word: '全貌', reading: 'ぜんぼう', meaning: 'full view' },
-      { word: '変貌', reading: 'へんぼう', meaning: 'transfiguration' },
-      { word: '美貌', reading: 'びぼう', meaning: 'beautiful face' },
+      { word: '全貌', reading: 'ぜんぼう', meaning: 'Full view' },
+      { word: '変貌', reading: 'へんぼう', meaning: 'Transfiguration' },
+      { word: '美貌', reading: 'びぼう', meaning: 'Beautiful face' },
     ],
   },
   {
@@ -15146,9 +15146,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["毌","貝"],
     mnemonic: 'Karakter 貫 (Menembus menembus / Satuan kan (~3.75kg)) memiliki 11 goresan, tersusun dari elemen (毌, 貝) yang melambangkan konsep intinya.',
     examples: [
-      { word: '貫禄', reading: 'かんろく', meaning: 'presence / dignity' },
-      { word: '貫く', reading: 'つらぬく', meaning: 'melakukan go through' },
-      { word: '一貫', reading: 'いっかん', meaning: 'consistency' },
+      { word: '貫禄', reading: 'かんろく', meaning: 'Presence / dignity' },
+      { word: '貫く', reading: 'つらぬく', meaning: 'Go through' },
+      { word: '一貫', reading: 'いっかん', meaning: 'Consistency' },
     ],
   },
   {
@@ -15164,9 +15164,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["𠀐","貝"],
     mnemonic: 'Karakter 貴 (Mulia berharga bernilai tinggi) memiliki 12 goresan, tersusun dari elemen (𠀐, 貝) yang melambangkan konsep intinya.',
     examples: [
-      { word: '貴重', reading: 'きちょう', meaning: 'precious / valuable' },
-      { word: '貴い', reading: 'とうとい', meaning: 'precious / valuable / noble' },
-      { word: '貴族', reading: 'きぞく', meaning: 'noble / aristocrat' },
+      { word: '貴重', reading: 'きちょう', meaning: 'Precious / valuable' },
+      { word: '貴い', reading: 'とうとい', meaning: 'Precious / valuable / noble' },
+      { word: '貴族', reading: 'きぞく', meaning: 'Noble / aristocrat' },
     ],
   },
   {
@@ -15182,9 +15182,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["貝","占"],
     mnemonic: 'Karakter 貼 (Stick / paste) memiliki 12 goresan, tersusun dari elemen (貝, 占) yang melambangkan konsep intinya.',
     examples: [
-      { word: '貼る', reading: 'はる', meaning: 'melakukan post / melakukan paste / melakukan attach' },
-      { word: '貼り付ける', reading: 'はりつける', meaning: 'to paste' },
-      { word: '貼付', reading: 'ちょうふ', meaning: 'pasting' },
+      { word: '貼る', reading: 'はる', meaning: 'Post / Paste / Attach' },
+      { word: '貼り付ける', reading: 'はりつける', meaning: 'To paste' },
+      { word: '貼付', reading: 'ちょうふ', meaning: 'Pasting' },
     ],
   },
   {
@@ -15201,7 +15201,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 賀 (Congratulations / kegembiraan) memiliki 12 goresan, tersusun dari elemen (加, 貝) yang melambangkan konsep intinya.',
     examples: [
       { word: '祝賀', reading: 'しゅくが', meaning: 'Perayaan selamat / Pesta syukuran' },
-      { word: '年賀', reading: 'ねんが', meaning: 'new year\\' },
+      { word: '年賀', reading: 'ねんが', meaning: 'New year\\' },
       { word: '年賀状', reading: 'ねんがじょう', meaning: 'New Year\'s card' },
     ],
   },
@@ -15218,7 +15218,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["貝","各"],
     mnemonic: 'Karakter 賂 (Bribe) memiliki 13 goresan, tersusun dari elemen (貝, 各) yang melambangkan konsep intinya.',
     examples: [
-      { word: '賄賂', reading: 'わいろ', meaning: 'bribe' },
+      { word: '賄賂', reading: 'わいろ', meaning: 'Bribe' },
       { word: '受賂', reading: 'じゅろ', meaning: 'Penerimaan gratifikasi suap' },
     ],
   },
@@ -15235,9 +15235,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["任","貝"],
     mnemonic: 'Karakter 賃 (Fare / fee) memiliki 13 goresan, tersusun dari elemen (任, 貝) yang melambangkan konsep intinya.',
     examples: [
-      { word: '家賃', reading: 'やちん', meaning: 'rent' },
+      { word: '家賃', reading: 'やちん', meaning: 'Rent' },
       { word: '運賃', reading: 'うんちん', meaning: 'Ongkos angkutan / tarif perjalanan' },
-      { word: '賃金', reading: 'ちんぎん', meaning: 'wages' },
+      { word: '賃金', reading: 'ちんぎん', meaning: 'Wages' },
     ],
   },
   {
@@ -15255,7 +15255,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     examples: [
       { word: '収賄', reading: 'しゅうわい', meaning: 'Penerimaan suap gratifikasi' },
       { word: '贈賄', reading: 'ぞうわい', meaning: 'Penyuapan pejabat secara aktif' },
-      { word: '賄う', reading: 'まかなう', meaning: 'melakukan give board to / melakukan provide meals / melakukan pay' },
+      { word: '賄う', reading: 'まかなう', meaning: 'Memberikan (board to) / Provide meals / Membayar' },
     ],
   },
   {
@@ -15271,9 +15271,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["貝","戎"],
     mnemonic: 'Karakter 賊 (Pemberontak perampok bajak laut) memiliki 13 goresan, tersusun dari elemen (貝, 戎) yang melambangkan konsep intinya.',
     examples: [
-      { word: '山賊', reading: 'さんぞく', meaning: 'bandit' },
-      { word: '海賊', reading: 'かいぞく', meaning: 'pirate' },
-      { word: '烏賊', reading: 'イカ', meaning: 'cuttlefish' },
+      { word: '山賊', reading: 'さんぞく', meaning: 'Bandit' },
+      { word: '海賊', reading: 'かいぞく', meaning: 'Pirate' },
+      { word: '烏賊', reading: 'イカ', meaning: 'Cuttlefish' },
     ],
   },
   {
@@ -15289,8 +15289,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["宀","一","𣥂","貝"],
     mnemonic: 'Karakter 賓 (V.i.p. / guest) memiliki 15 goresan, tersusun dari elemen (宀, 一, 𣥂) yang melambangkan konsep intinya.',
     examples: [
-      { word: '国賓', reading: 'こくひん', meaning: 'state guest' },
-      { word: '来賓', reading: 'らいひん', meaning: 'guest' },
+      { word: '国賓', reading: 'こくひん', meaning: 'State guest' },
+      { word: '来賓', reading: 'らいひん', meaning: 'Guest' },
       { word: '比律賓', reading: 'フィリピン', meaning: 'Philippines' },
     ],
   },
@@ -15307,7 +15307,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["貝","易"],
     mnemonic: 'Karakter 賜 (Grant / gift) memiliki 15 goresan, tersusun dari elemen (貝, 易) yang melambangkan konsep intinya.',
     examples: [
-      { word: '賜る', reading: 'たまわる', meaning: 'melakukan grant / melakukan bestow' },
+      { word: '賜る', reading: 'たまわる', meaning: 'Grant / Bestow' },
       { word: '恩賜', reading: 'おんし', meaning: 'Imperial gift' },
       { word: '賜杯', reading: 'しはい', meaning: 'Emperor\'s cup' },
     ],
@@ -15326,8 +15326,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 賠 (Compensation / indemnify) memiliki 15 goresan, tersusun dari elemen (貝, 咅) yang melambangkan konsep intinya.',
     examples: [
       { word: '賠償', reading: 'ばいしょう', meaning: 'Ganti rugi / Kompensasi hukum' },
-      { word: '損害賠償', reading: 'そんがいばいしょう', meaning: 'restitution' },
-      { word: '賠償金', reading: 'ばいしょうきん', meaning: 'indemnities' },
+      { word: '損害賠償', reading: 'そんがいばいしょう', meaning: 'Restitution' },
+      { word: '賠償金', reading: 'ばいしょうきん', meaning: 'Indemnities' },
     ],
   },
   {
@@ -15343,8 +15343,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["貝","武"],
     mnemonic: 'Karakter 賦 (Levy / ode) memiliki 15 goresan, tersusun dari elemen (貝, 武) yang melambangkan konsep intinya.',
     examples: [
-      { word: '月賦', reading: 'げっぷ', meaning: 'monthly installment' },
-      { word: '賦課', reading: 'ふか', meaning: 'levy' },
+      { word: '月賦', reading: 'げっぷ', meaning: 'Monthly installment' },
+      { word: '賦課', reading: 'ふか', meaning: 'Levy' },
     ],
   },
   {
@@ -15360,8 +15360,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["貝","者"],
     mnemonic: 'Karakter 賭 (Gamble / wager) memiliki 15 goresan, tersusun dari elemen (貝, 者) yang melambangkan konsep intinya.',
     examples: [
-      { word: '賭ける', reading: 'かける', meaning: 'melakukan bet / melakukan risk / melakukan gamble' },
-      { word: '賭', reading: 'かけ', meaning: 'betting / gambling / a gamble' },
+      { word: '賭ける', reading: 'かける', meaning: 'Bet / Risk / Gamble' },
+      { word: '賭', reading: 'かけ', meaning: 'Betting / gambling / a gamble' },
     ],
   },
   {
@@ -15377,9 +15377,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["赤","攵"],
     mnemonic: 'Karakter 赦 (Pardon / forgiveness) memiliki 11 goresan, tersusun dari elemen (赤, 攵) yang melambangkan konsep intinya.',
     examples: [
-      { word: '容赦', reading: 'ようしゃ', meaning: 'pardon' },
-      { word: '容赦なく', reading: 'ようしゃなく', meaning: 'mercilessly' },
-      { word: '恩赦', reading: 'おんしゃ', meaning: 'amnesty' },
+      { word: '容赦', reading: 'ようしゃ', meaning: 'Pardon' },
+      { word: '容赦なく', reading: 'ようしゃなく', meaning: 'Mercilessly' },
+      { word: '恩赦', reading: 'おんしゃ', meaning: 'Amnesty' },
     ],
   },
   {
@@ -15395,7 +15395,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["走","卜"],
     mnemonic: 'Karakter 赴 (Proceed / get) memiliki 9 goresan, tersusun dari elemen (走, 卜) yang melambangkan konsep intinya.',
     examples: [
-      { word: '赴く', reading: 'おもむく', meaning: 'pergi / melakukan proceed' },
+      { word: '赴く', reading: 'おもむく', meaning: 'Pergi / Proceed' },
       { word: '赴任', reading: 'ふにん', meaning: '(proceeding to) new appointment' },
       { word: '単身赴任', reading: 'たんしんふにん', meaning: '(intra-company) job transfer away from one\'s family' },
     ],
@@ -15413,9 +15413,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["走","取"],
     mnemonic: 'Karakter 趣 (Purport / gist) memiliki 15 goresan, tersusun dari elemen (走, 取) yang melambangkan konsep intinya.',
     examples: [
-      { word: '趣味', reading: 'しゅみ', meaning: 'hobi / kegemaran / pastime' },
-      { word: '趣', reading: 'おもむき', meaning: 'flavor / appearance / quaint' },
-      { word: '趣旨', reading: 'しゅし', meaning: 'object / meaning' },
+      { word: '趣味', reading: 'しゅみ', meaning: 'Hobi / kegemaran / pastime' },
+      { word: '趣', reading: 'おもむき', meaning: 'Flavor / Penampilan / Pemuatan / quaint' },
+      { word: '趣旨', reading: 'しゅし', meaning: 'Object / meaning' },
     ],
   },
   {
@@ -15431,9 +15431,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["𧾷","巨"],
     mnemonic: 'Karakter 距 (Panjang-distance / spur) memiliki 12 goresan, tersusun dari elemen (𧾷, 巨) yang melambangkan konsep intinya.',
     examples: [
-      { word: '短距離', reading: 'たんきょり', meaning: 'short distance' },
-      { word: '距離', reading: 'きょり', meaning: 'distance' },
-      { word: '近距離', reading: 'きんきょり', meaning: 'short distance' },
+      { word: '短距離', reading: 'たんきょり', meaning: 'Short distance' },
+      { word: '距離', reading: 'きょり', meaning: 'Distance' },
+      { word: '近距離', reading: 'きんきょり', meaning: 'Short distance' },
     ],
   },
   {
@@ -15449,9 +15449,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["𧾷","兆"],
     mnemonic: 'Karakter 跳 (Hop / leap up) memiliki 13 goresan, tersusun dari elemen (𧾷, 兆) yang melambangkan konsep intinya.',
     examples: [
-      { word: '跳ねる', reading: 'はねる', meaning: 'melakukan jump / melakukan leap' },
-      { word: '縄跳び', reading: 'なわとび', meaning: 'skipping rope' },
-      { word: '走り幅跳び', reading: 'はしりはばとび', meaning: 'long jump' },
+      { word: '跳ねる', reading: 'はねる', meaning: 'Jump / Leap' },
+      { word: '縄跳び', reading: 'なわとび', meaning: 'Skipping rope' },
+      { word: '走り幅跳び', reading: 'はしりはばとび', meaning: 'Long jump' },
     ],
   },
   {
@@ -15467,7 +15467,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["𧾷","戋"],
     mnemonic: 'Karakter 践 (Tread / step on) memiliki 13 goresan, tersusun dari elemen (𧾷, 戋) yang melambangkan konsep intinya.',
     examples: [
-      { word: '実践', reading: 'じっせん', meaning: 'practice / put into practice' },
+      { word: '実践', reading: 'じっせん', meaning: 'Practice / put into practice' },
       { word: '践語', reading: 'センご', meaning: 'Istilah / kosakata terkait Tread / step on' },
     ],
   },
@@ -15485,7 +15485,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 踏 (Step / trample) memiliki 15 goresan, tersusun dari elemen (𧾷, 沓) yang melambangkan konsep intinya.',
     examples: [
       { word: '踏襲', reading: 'とうしゅう', meaning: 'Meneruskan (kebijakan lama) / Mengikuti jejak terdahulu' },
-      { word: '踏む', reading: 'ふむ', meaning: 'melakukan step on / melakukan tread on' },
+      { word: '踏む', reading: 'ふむ', meaning: 'Step on / Tread on' },
       { word: '踏切', reading: 'ふみきり', meaning: 'Perlintasan rel kereta api' },
     ],
   },
@@ -15502,7 +15502,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["𧾷","宗"],
     mnemonic: 'Karakter 踪 (Remains / clue) memiliki 15 goresan, tersusun dari elemen (𧾷, 宗) yang melambangkan konsep intinya.',
     examples: [
-      { word: '失踪', reading: 'しっそう', meaning: 'disappearance' },
+      { word: '失踪', reading: 'しっそう', meaning: 'Disappearance' },
       { word: '行踪', reading: 'こうそう', meaning: 'Jejak langkah keberadaan buronan' },
     ],
   },
@@ -15519,8 +15519,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["𧾷","就"],
     mnemonic: 'Karakter 蹴 (Menendang mendepak dengan kaki) memiliki 19 goresan, tersusun dari elemen (𧾷, 就) yang melambangkan konsep intinya.',
     examples: [
-      { word: '蹴る', reading: 'ける', meaning: 'melakukan kick' },
-      { word: '蹴飛ばす', reading: 'けとばす', meaning: 'melakukan kick away / melakukan kick (someone)' },
+      { word: '蹴る', reading: 'ける', meaning: 'Kick' },
+      { word: '蹴飛ばす', reading: 'けとばす', meaning: 'Kick away / Kick (someone)' },
     ],
   },
   {
@@ -15536,9 +15536,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["𧾷","翟"],
     mnemonic: 'Karakter 躍 (Melompat melonjak maju gembira) memiliki 21 goresan, tersusun dari elemen (𧾷, 翟) yang melambangkan konsep intinya.',
     examples: [
-      { word: '活躍', reading: 'かつやく', meaning: 'activity' },
-      { word: '一躍', reading: 'いちやく', meaning: 'suddenly (rising to fame, etc.)' },
-      { word: '跳躍', reading: 'ちょうやく', meaning: 'jump' },
+      { word: '活躍', reading: 'かつやく', meaning: 'Activity' },
+      { word: '一躍', reading: 'いちやく', meaning: 'Suddenly (rising to fame, etc.)' },
+      { word: '跳躍', reading: 'ちょうやく', meaning: 'Jump' },
     ],
   },
   {
@@ -15554,9 +15554,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["身"],
     mnemonic: 'Karakter 身 (Tubuh badan diri sendiri) memiliki 7 goresan, tersusun dari elemen (身) yang melambangkan konsep intinya.',
     examples: [
-      { word: '自身', reading: 'じしん', meaning: 'oneself' },
-      { word: '出身', reading: 'しゅっしん', meaning: 'come from' },
-      { word: '身体', reading: 'しんたい', meaning: 'the body' },
+      { word: '自身', reading: 'じしん', meaning: 'Oneself' },
+      { word: '出身', reading: 'しゅっしん', meaning: 'Come from' },
+      { word: '身体', reading: 'しんたい', meaning: 'The body' },
     ],
   },
   {
@@ -15572,9 +15572,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["車","九"],
     mnemonic: 'Karakter 軌 (Rut / wheel) memiliki 9 goresan, tersusun dari elemen (車, 九) yang melambangkan konsep intinya.',
     examples: [
-      { word: '軌道', reading: 'きどう', meaning: 'orbit / track' },
-      { word: '常軌', reading: 'じょうき', meaning: 'normal course (of action)' },
-      { word: '軌跡', reading: 'きせき', meaning: 'tire track' },
+      { word: '軌道', reading: 'きどう', meaning: 'Orbit / track' },
+      { word: '常軌', reading: 'じょうき', meaning: 'Normal course (of action)' },
+      { word: '軌跡', reading: 'きせき', meaning: 'Tire track' },
     ],
   },
   {
@@ -15590,9 +15590,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["車","由"],
     mnemonic: 'Karakter 軸 (Poros as roda sumbu perputaran) memiliki 12 goresan, tersusun dari elemen (車, 由) yang melambangkan konsep intinya.',
     examples: [
-      { word: '軸', reading: 'じく', meaning: 'axis / stem / shaft' },
-      { word: '中軸', reading: 'ちゅうじく', meaning: 'axis' },
-      { word: '主軸', reading: 'しゅじく', meaning: 'main spindle' },
+      { word: '軸', reading: 'じく', meaning: 'Axis / stem / shaft' },
+      { word: '中軸', reading: 'ちゅうじく', meaning: 'Axis' },
+      { word: '主軸', reading: 'しゅじく', meaning: 'Main spindle' },
     ],
   },
   {
@@ -15608,8 +15608,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["車","交"],
     mnemonic: 'Karakter 較 (Contrast / compare) memiliki 13 goresan, tersusun dari elemen (車, 交) yang melambangkan konsep intinya.',
     examples: [
-      { word: '比較', reading: 'ひかく', meaning: 'comparison' },
-      { word: '比較的', reading: 'ひかくてき', meaning: 'comparatively / relatively' },
+      { word: '比較', reading: 'ひかく', meaning: 'Comparison' },
+      { word: '比較的', reading: 'ひかくてき', meaning: 'Comparatively / relatively' },
     ],
   },
   {
@@ -15626,8 +15626,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 載 (Ride / board) memiliki 13 goresan, tersusun dari elemen (𢦏, 車) yang melambangkan konsep intinya.',
     examples: [
       { word: '千載一遇', reading: 'せんざいいちぐう', meaning: 'Peluang emas langka sekali seumur hidup' },
-      { word: '載せる', reading: 'のせる', meaning: 'melakukan place on (something) / melakukan publish' },
-      { word: '載る', reading: 'のる', meaning: 'melakukan appear (in print) / melakukan be recorded' },
+      { word: '載せる', reading: 'のせる', meaning: 'Place on (something) / Menerbitkan' },
+      { word: '載る', reading: 'のる', meaning: 'Muncul ((in print)) / Menjadi recorded' },
     ],
   },
   {
@@ -15643,9 +15643,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["光","軍"],
     mnemonic: 'Karakter 輝 (Radiance / shine) memiliki 15 goresan, tersusun dari elemen (光, 軍) yang melambangkan konsep intinya.',
     examples: [
-      { word: '輝く', reading: 'かがやく', meaning: 'melakukan shine / melakukan glitter / melakukan sparkle' },
-      { word: '光り輝く', reading: 'ひかりかがやく', meaning: 'to shine' },
-      { word: '光輝', reading: 'こうき', meaning: 'brightness' },
+      { word: '輝く', reading: 'かがやく', meaning: 'Bersinar / Berkilau / Glitter / Sparkle' },
+      { word: '光り輝く', reading: 'ひかりかがやく', meaning: 'To shine' },
+      { word: '光輝', reading: 'こうき', meaning: 'Brightness' },
     ],
   },
   {
@@ -15661,9 +15661,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["非","車"],
     mnemonic: 'Karakter 輩 (Comrade / fellow) memiliki 15 goresan, tersusun dari elemen (非, 車) yang melambangkan konsep intinya.',
     examples: [
-      { word: '後輩', reading: 'こうはい', meaning: 'junior members of a group' },
-      { word: '先輩', reading: 'せんぱい', meaning: 'senior members of a group' },
-      { word: '輩出', reading: 'はいしゅつ', meaning: 'producing (people) in great numbers' },
+      { word: '後輩', reading: 'こうはい', meaning: 'Junior members of a group' },
+      { word: '先輩', reading: 'せんぱい', meaning: 'Senior members of a group' },
+      { word: '輩出', reading: 'はいしゅつ', meaning: 'Producing (people) in great numbers' },
     ],
   },
   {
@@ -15679,9 +15679,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["車","害"],
     mnemonic: 'Karakter 轄 (Control / wedge) memiliki 17 goresan, tersusun dari elemen (車, 害) yang melambangkan konsep intinya.',
     examples: [
-      { word: '所轄', reading: 'しょかつ', meaning: 'jurisdiction' },
-      { word: '直轄', reading: 'ちょっかつ', meaning: 'direct control' },
-      { word: '管轄', reading: 'かんかつ', meaning: 'jurisdiction' },
+      { word: '所轄', reading: 'しょかつ', meaning: 'Jurisdiction' },
+      { word: '直轄', reading: 'ちょっかつ', meaning: 'Direct control' },
+      { word: '管轄', reading: 'かんかつ', meaning: 'Jurisdiction' },
     ],
   },
   {
@@ -15714,9 +15714,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["辰","寸"],
     mnemonic: 'Karakter 辱 (Mempermalukan aib noda hinaan) memiliki 10 goresan, tersusun dari elemen (辰, 寸) yang melambangkan konsep intinya.',
     examples: [
-      { word: '侮辱', reading: 'ぶじょく', meaning: 'insult / contempt / slight' },
-      { word: '屈辱', reading: 'くつじょく', meaning: 'disgrace' },
-      { word: '恥辱', reading: 'ちじょく', meaning: 'disgrace' },
+      { word: '侮辱', reading: 'ぶじょく', meaning: 'Hinaan / Pelecehan / Meremehkan' },
+      { word: '屈辱', reading: 'くつじょく', meaning: 'Disgrace' },
+      { word: '恥辱', reading: 'ちじょく', meaning: 'Disgrace' },
     ],
   },
   {
@@ -15732,7 +15732,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["辶","卂"],
     mnemonic: 'Karakter 迅 (Cepat kilat tanggap gesit) memiliki 6 goresan, tersusun dari elemen (辶, 卂) yang melambangkan konsep intinya.',
     examples: [
-      { word: '迅速', reading: 'じんそく', meaning: 'quick / fast / prompt' },
+      { word: '迅速', reading: 'じんそく', meaning: 'Quick / fast / prompt' },
       { word: '迅語', reading: 'ジンご', meaning: 'Istilah / kosakata terkait Swift / fast' },
     ],
   },
@@ -15749,7 +15749,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["辶","失"],
     mnemonic: 'Karakter 迭 (Transfer / alternation) memiliki 8 goresan, tersusun dari elemen (辶, 失) yang melambangkan konsep intinya.',
     examples: [
-      { word: '更迭', reading: 'こうてつ', meaning: 'change (of personnel)' },
+      { word: '更迭', reading: 'こうてつ', meaning: 'Change (of personnel)' },
       { word: '変迭', reading: 'へんてつ', meaning: 'Perubahan pergantian staf' },
     ],
   },
@@ -15766,9 +15766,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["辶","秀"],
     mnemonic: 'Karakter 透 (Transparent / permeate) memiliki 10 goresan, tersusun dari elemen (辶, 秀) yang melambangkan konsep intinya.',
     examples: [
-      { word: '透き通る', reading: 'すきとおる', meaning: 'melakukan be(come) transparent' },
-      { word: '透明', reading: 'とうめい', meaning: 'transparency / cleanness' },
-      { word: '不透明', reading: 'ふとうめい', meaning: 'opaque' },
+      { word: '透き通る', reading: 'すきとおる', meaning: 'Be(come) transparent' },
+      { word: '透明', reading: 'とうめい', meaning: 'Transparency / cleanness' },
+      { word: '不透明', reading: 'ふとうめい', meaning: 'Opaque' },
     ],
   },
   {
@@ -15784,9 +15784,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["辶","豕"],
     mnemonic: 'Karakter 逐 (Pursue / drive away) memiliki 10 goresan, tersusun dari elemen (辶, 豕) yang melambangkan konsep intinya.',
     examples: [
-      { word: '放逐', reading: 'ほうちく', meaning: 'expulsion' },
-      { word: '逐一', reading: 'ちくいち', meaning: 'one by one' },
-      { word: '逐次', reading: 'ちくじ', meaning: 'successively' },
+      { word: '放逐', reading: 'ほうちく', meaning: 'Expulsion' },
+      { word: '逐一', reading: 'ちくいち', meaning: 'One by one' },
+      { word: '逐次', reading: 'ちくじ', meaning: 'Successively' },
     ],
   },
   {
@@ -15819,8 +15819,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["辶","折"],
     mnemonic: 'Karakter 逝 (Departed / die) memiliki 10 goresan, tersusun dari elemen (辶, 折) yang melambangkan konsep intinya.',
     examples: [
-      { word: '急逝', reading: 'きゅうせい', meaning: 'sudden death' },
-      { word: '逝去', reading: 'せいきょ', meaning: 'death' },
+      { word: '急逝', reading: 'きゅうせい', meaning: 'Sudden death' },
+      { word: '逝去', reading: 'せいきょ', meaning: 'Death' },
     ],
   },
   {
@@ -15836,7 +15836,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["辶","隶"],
     mnemonic: 'Karakter 逮 (Apprehend / chase) memiliki 11 goresan, tersusun dari elemen (辶, 隶) yang melambangkan konsep intinya.',
     examples: [
-      { word: '逮捕', reading: 'たいほ', meaning: 'arrest / apprehension / capture' },
+      { word: '逮捕', reading: 'たいほ', meaning: 'Arrest / apprehension / capture' },
       { word: '逮語', reading: 'タイご', meaning: 'Istilah / kosakata terkait Apprehend / chase' },
     ],
   },
@@ -15853,9 +15853,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["辶","兔"],
     mnemonic: 'Karakter 逸 (Deviate / idleness) memiliki 11 goresan, tersusun dari elemen (辶, 兔) yang melambangkan konsep intinya.',
     examples: [
-      { word: '逸れる', reading: 'それる', meaning: 'melakukan stray (turn) from subject / melakukan go astray' },
+      { word: '逸れる', reading: 'それる', meaning: 'Stray (turn) from subject / Go astray' },
       { word: '独逸', reading: 'ドイツ', meaning: 'Germany' },
-      { word: '秀逸', reading: 'しゅういつ', meaning: 'excellent' },
+      { word: '秀逸', reading: 'しゅういつ', meaning: 'Excellent' },
     ],
   },
   {
@@ -15871,9 +15871,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["辶","㒸"],
     mnemonic: 'Karakter 遂 (Consummate / accomplish) memiliki 12 goresan, tersusun dari elemen (辶, 㒸) yang melambangkan konsep intinya.',
     examples: [
-      { word: '遂に', reading: 'ついに', meaning: 'finally / at last' },
-      { word: '遂げる', reading: 'とげる', meaning: 'melakukan accomplish / melakukan achieve / melakukan carry out' },
-      { word: '完遂', reading: 'かんすい', meaning: 'successful execution' },
+      { word: '遂に', reading: 'ついに', meaning: 'Finally / at last' },
+      { word: '遂げる', reading: 'とげる', meaning: 'Menuntaskan / Meraih keberhasilan / Achieve / Mengangkut (out)' },
+      { word: '完遂', reading: 'かんすい', meaning: 'Successful execution' },
     ],
   },
   {
@@ -15890,8 +15890,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 遇 (Meet / encounter) memiliki 12 goresan, tersusun dari elemen (辶, 禺) yang melambangkan konsep intinya.',
     examples: [
       { word: '千載一遇', reading: 'せんざいいちぐう', meaning: 'Peluang emas langka sekali seumur hidup' },
-      { word: '境遇', reading: 'きょうぐう', meaning: 'lingkungan / circumstances' },
-      { word: '待遇', reading: 'たいぐう', meaning: 'treatment / reception' },
+      { word: '境遇', reading: 'きょうぐう', meaning: 'Lingkungan / circumstances' },
+      { word: '待遇', reading: 'たいぐう', meaning: 'Treatment / reception' },
     ],
   },
   {
@@ -15907,9 +15907,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["辶","扁"],
     mnemonic: 'Karakter 遍 (Everywhere / times) memiliki 12 goresan, tersusun dari elemen (辶, 扁) yang melambangkan konsep intinya.',
     examples: [
-      { word: '普遍', reading: 'ふへん', meaning: 'universality / ubiquity / omnipresence' },
-      { word: '～遍', reading: '～へん', meaning: 'time' },
-      { word: '一遍', reading: 'いっぺん', meaning: 'once' },
+      { word: '普遍', reading: 'ふへん', meaning: 'Universality / ubiquity / omnipresence' },
+      { word: '～遍', reading: '～へん', meaning: 'Waktu / Kali' },
+      { word: '一遍', reading: 'いっぺん', meaning: 'Once' },
     ],
   },
   {
@@ -15925,7 +15925,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["辶","孫"],
     mnemonic: 'Karakter 遜 (Humble / modest) memiliki 13 goresan, tersusun dari elemen (辶, 孫) yang melambangkan konsep intinya.',
     examples: [
-      { word: '謙遜', reading: 'けんそん', meaning: 'humble / humility / modesty' },
+      { word: '謙遜', reading: 'けんそん', meaning: 'Humble / humility / modesty' },
       { word: '遜語', reading: 'ソンご', meaning: 'Istilah / kosakata terkait Humble / modest' },
     ],
   },
@@ -15942,7 +15942,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["辶","朔"],
     mnemonic: 'Karakter 遡 (Go upstream / retrace the past) memiliki 13 goresan, tersusun dari elemen (辶, 朔) yang melambangkan konsep intinya.',
     examples: [
-      { word: '遡る', reading: 'さかのぼる', meaning: 'melakukan go back / melakukan date back / ascend' },
+      { word: '遡る', reading: 'さかのぼる', meaning: 'Go back / Date back / ascend' },
       { word: '遡及', reading: 'そきゅう', meaning: 'Keberlakuan hukum surut ke masa lalu retroaktif' },
     ],
   },
@@ -15959,9 +15959,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["辶","𠳋"],
     mnemonic: 'Karakter 遣 (Dispatch / despatch) memiliki 13 goresan, tersusun dari elemen (辶, 𠳋) yang melambangkan konsep intinya.',
     examples: [
-      { word: '派遣', reading: 'はけん', meaning: 'dispatch / send' },
-      { word: '無駄遣い', reading: 'むだづかい', meaning: 'waste money on / squander money on' },
-      { word: '～遣い', reading: '～づかい', meaning: 'use of ~' },
+      { word: '派遣', reading: 'はけん', meaning: 'Dispatch / send' },
+      { word: '無駄遣い', reading: 'むだづかい', meaning: 'Waste money on / squander money on' },
+      { word: '～遣い', reading: '～づかい', meaning: 'Use of ~' },
     ],
   },
   {
@@ -15977,9 +15977,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["辶","曹"],
     mnemonic: 'Karakter 遭 (Encounter / meet) memiliki 14 goresan, tersusun dari elemen (辶, 曹) yang melambangkan konsep intinya.',
     examples: [
-      { word: '遭う', reading: 'あう', meaning: 'bertemu / melakukan encounter (undesirable nuance)' },
-      { word: '遭難', reading: 'そうなん', meaning: 'disaster / shipwreck / kecelakaan' },
-      { word: '遭遇', reading: 'そうぐう', meaning: 'encounter' },
+      { word: '遭う', reading: 'あう', meaning: 'Bertemu / Encounter (undesirable nuance)' },
+      { word: '遭難', reading: 'そうなん', meaning: 'Disaster / shipwreck / kecelakaan' },
+      { word: '遭遇', reading: 'そうぐう', meaning: 'Encounter' },
     ],
   },
   {
@@ -15995,7 +15995,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["辶","尊"],
     mnemonic: 'Karakter 遵 (Abide by / follow) memiliki 15 goresan, tersusun dari elemen (辶, 尊) yang melambangkan konsep intinya.',
     examples: [
-      { word: '遵守', reading: 'じゅんしゅ', meaning: 'observance (of laws, rules, etc.)' },
+      { word: '遵守', reading: 'じゅんしゅ', meaning: 'Observance (of laws, rules, etc.)' },
       { word: '遵法', reading: 'じゅんぽう', meaning: 'Ketaatan mematuhi hukum negara' },
     ],
   },
@@ -16012,9 +16012,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["辶","䙲","巳"],
     mnemonic: 'Karakter 遷 (Transition / move) memiliki 15 goresan, tersusun dari elemen (辶, 䙲, 巳) yang melambangkan konsep intinya.',
     examples: [
-      { word: '変遷', reading: 'へんせん', meaning: 'change / transition / vicissitudes' },
-      { word: '左遷', reading: 'させん', meaning: 'demotion' },
-      { word: '遷都', reading: 'せんと', meaning: 'relocation of the capital' },
+      { word: '変遷', reading: 'へんせん', meaning: 'Change / transition / vicissitudes' },
+      { word: '左遷', reading: 'させん', meaning: 'Demotion' },
+      { word: '遷都', reading: 'せんと', meaning: 'Relocation of the capital' },
     ],
   },
   {
@@ -16031,7 +16031,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 遺 (Bequeath / leave behind) memiliki 15 goresan, tersusun dari elemen (辶, 貴) yang melambangkan konsep intinya.',
     examples: [
       { word: '遺憾', reading: 'いかん', meaning: 'Rasa penyesalan mendalam diplomatik' },
-      { word: '遺跡', reading: 'いせき', meaning: 'historic ruins' },
+      { word: '遺跡', reading: 'いせき', meaning: 'Historic ruins' },
       { word: '世界遺産', reading: 'せかいいさん', meaning: 'World Heritage (site)' },
     ],
   },
@@ -16049,8 +16049,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 避 (Evade / avoid) memiliki 16 goresan, tersusun dari elemen (辶, 辟) yang melambangkan konsep intinya.',
     examples: [
       { word: '忌避', reading: 'きひ', meaning: 'Penghindaran / Keengganan / Menolak' },
-      { word: '避ける', reading: 'さける', meaning: 'melakukan avoid (physical contact) / melakukan ward off / melakukan avert' },
-      { word: '避難', reading: 'ひなん', meaning: 'taking refuge / finding shelter' },
+      { word: '避ける', reading: 'さける', meaning: 'Menghindari ((physical contact)) / Ward off / Avert' },
+      { word: '避難', reading: 'ひなん', meaning: 'Taking refuge / finding shelter' },
     ],
   },
   {
@@ -16066,9 +16066,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["辶","睘"],
     mnemonic: 'Karakter 還 (Send back / return) memiliki 16 goresan, tersusun dari elemen (辶, 睘) yang melambangkan konsep intinya.',
     examples: [
-      { word: '還元', reading: 'かんげん', meaning: 'resolution / reduction / return' },
+      { word: '還元', reading: 'かんげん', meaning: 'Resolution / reduction / return' },
       { word: '還暦', reading: 'かんれき', meaning: '60th birthday' },
-      { word: '返還', reading: 'へんかん', meaning: 'return / restoration' },
+      { word: '返還', reading: 'へんかん', meaning: 'Return / restoration' },
     ],
   },
   {
@@ -16084,8 +16084,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["刀","二","阝"],
     mnemonic: 'Karakter 那 (What?) memiliki 7 goresan, tersusun dari elemen (刀, 二, 阝) yang melambangkan konsep intinya.',
     examples: [
-      { word: '旦那', reading: 'だんな', meaning: 'master (of house) / husband (informal)' },
-      { word: '刹那', reading: 'せつな', meaning: 'moment' },
+      { word: '旦那', reading: 'だんな', meaning: 'Master (of house) / husband (informal)' },
+      { word: '刹那', reading: 'せつな', meaning: 'Moment' },
       { word: '印度支那', reading: 'インドシナ', meaning: 'Indochina' },
     ],
   },
@@ -16102,7 +16102,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["丰","阝"],
     mnemonic: 'Karakter 邦 (Home country / country) memiliki 7 goresan, tersusun dari elemen (丰, 阝) yang melambangkan konsep intinya.',
     examples: [
-      { word: '連邦', reading: 'れんぽう', meaning: 'commonwealth / federation of states' },
+      { word: '連邦', reading: 'れんぽう', meaning: 'Commonwealth / federation of states' },
       { word: '東邦', reading: 'とうほう', meaning: 'Oriental country' },
       { word: '邦人', reading: 'ほうじん', meaning: 'Japanese national (esp. abroad)' },
     ],
@@ -16120,9 +16120,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["牙","阝"],
     mnemonic: 'Karakter 邪 (Wicked / injustice) memiliki 8 goresan, tersusun dari elemen (牙, 阝) yang melambangkan konsep intinya.',
     examples: [
-      { word: '風邪', reading: 'かぜ', meaning: 'cold / flu' },
+      { word: '風邪', reading: 'かぜ', meaning: 'Cold / flu' },
       { word: '邪魔', reading: 'じゃま', meaning: 'Mengganggu / Menghalangi' },
-      { word: '無邪気', reading: 'むじゃき', meaning: 'innocence / simple-mindedness' },
+      { word: '無邪気', reading: 'むじゃき', meaning: 'Innocence / simple-mindedness' },
     ],
   },
   {
@@ -16138,9 +16138,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["氐","阝"],
     mnemonic: 'Karakter 邸 (Residence / mansion) memiliki 8 goresan, tersusun dari elemen (氐, 阝) yang melambangkan konsep intinya.',
     examples: [
-      { word: '邸宅', reading: 'ていたく', meaning: 'mansion / residence' },
-      { word: '公邸', reading: 'こうてい', meaning: 'official residence' },
-      { word: '官邸', reading: 'かんてい', meaning: 'official residence (e.g. of the prime minister)' },
+      { word: '邸宅', reading: 'ていたく', meaning: 'Mansion / residence' },
+      { word: '公邸', reading: 'こうてい', meaning: 'Official residence' },
+      { word: '官邸', reading: 'かんてい', meaning: 'Official residence (e.g. of the prime minister)' },
     ],
   },
   {
@@ -16156,9 +16156,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["丶","阝"],
     mnemonic: 'Karakter 郎 (Son / counter for sons) memiliki 9 goresan, tersusun dari elemen (丶, 阝) yang melambangkan konsep intinya.',
     examples: [
-      { word: 'プー太郎', reading: 'ぷうたろう', meaning: 'unemployed person' },
-      { word: '新郎', reading: 'しんろう', meaning: 'bridegroom' },
-      { word: '野郎', reading: 'やろう', meaning: 'guy' },
+      { word: 'プー太郎', reading: 'ぷうたろう', meaning: 'Unemployed person' },
+      { word: '新郎', reading: 'しんろう', meaning: 'Bridegroom' },
+      { word: '野郎', reading: 'やろう', meaning: 'Guy' },
     ],
   },
   {
@@ -16174,8 +16174,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["君","阝"],
     mnemonic: 'Karakter 郡 (County / district) memiliki 10 goresan, tersusun dari elemen (君, 阝) yang melambangkan konsep intinya.',
     examples: [
-      { word: '郡', reading: 'ぐん', meaning: 'country / district' },
-      { word: '郡部', reading: 'ぐんぶ', meaning: 'rural districts' },
+      { word: '郡', reading: 'ぐん', meaning: 'Country / district' },
+      { word: '郡部', reading: 'ぐんぶ', meaning: 'Rural districts' },
     ],
   },
   {
@@ -16191,9 +16191,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["享","阝"],
     mnemonic: 'Karakter 郭 (Enclosure / quarters) memiliki 11 goresan, tersusun dari elemen (享, 阝) yang melambangkan konsep intinya.',
     examples: [
-      { word: '城郭', reading: 'じょうかく', meaning: 'castle' },
-      { word: '外郭', reading: 'がいかく', meaning: 'outer fence' },
-      { word: '外郭団体', reading: 'がいかくだんたい', meaning: 'auxiliary organization (organisation)' },
+      { word: '城郭', reading: 'じょうかく', meaning: 'Castle' },
+      { word: '外郭', reading: 'がいかく', meaning: 'Outer fence' },
+      { word: '外郭団体', reading: 'がいかくだんたい', meaning: 'Auxiliary organization (organisation)' },
     ],
   },
   {
@@ -16210,8 +16210,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 郷 (Home town / village) memiliki 11 goresan, tersusun dari elemen (乡, 阝) yang melambangkan konsep intinya.',
     examples: [
       { word: '郷愁', reading: 'きょうしゅう', meaning: 'Kerinduan mendalam pada kampung halaman' },
-      { word: '故郷', reading: 'こきょう', meaning: 'hometown' },
-      { word: '郷土', reading: 'きょうど', meaning: 'homeland' },
+      { word: '故郷', reading: 'こきょう', meaning: 'Hometown' },
+      { word: '郷土', reading: 'きょうど', meaning: 'Homeland' },
     ],
   },
   {
@@ -16227,9 +16227,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["酉","勺"],
     mnemonic: 'Karakter 酌 (Menuangkan arak sake cawan) memiliki 10 goresan, tersusun dari elemen (酉, 勺) yang melambangkan konsep intinya.',
     examples: [
-      { word: '酌む', reading: 'くむ', meaning: 'melakukan serve sake' },
-      { word: '媒酌', reading: 'ばいしゃく', meaning: 'matchmaking' },
-      { word: '晩酌', reading: 'ばんしゃく', meaning: 'drink at home with one\'s evening meal' },
+      { word: '酌む', reading: 'くむ', meaning: 'Serve sake' },
+      { word: '媒酌', reading: 'ばいしゃく', meaning: 'Matchmaking' },
+      { word: '晩酌', reading: 'ばんしゃく', meaning: 'Drink at home with one\'s evening meal' },
     ],
   },
   {
@@ -16245,7 +16245,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["酉","寸"],
     mnemonic: 'Karakter 酎 (Sake) memiliki 10 goresan, tersusun dari elemen (酉, 寸) yang melambangkan konsep intinya.',
     examples: [
-      { word: '焼酎', reading: 'しょうちゅう', meaning: 'shōchū' },
+      { word: '焼酎', reading: 'しょうちゅう', meaning: 'Shōchū' },
       { word: '酎ハイ', reading: 'ちゅうはい', meaning: 'Koktail minuman shochu highball' },
     ],
   },
@@ -16262,9 +16262,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["酉","卆"],
     mnemonic: 'Karakter 酔 (Drunk / feel sick) memiliki 11 goresan, tersusun dari elemen (酉, 卆) yang melambangkan konsep intinya.',
     examples: [
-      { word: '酔う', reading: 'よう', meaning: 'melakukan get drunk' },
-      { word: '麻酔', reading: 'ますい', meaning: 'anesthesia' },
-      { word: '酔っ払い', reading: 'よっぱらい', meaning: 'drunkard' },
+      { word: '酔う', reading: 'よう', meaning: 'Mendapatkan (drunk)' },
+      { word: '麻酔', reading: 'ますい', meaning: 'Anesthesia' },
+      { word: '酔っ払い', reading: 'よっぱらい', meaning: 'Drunkard' },
     ],
   },
   {
@@ -16280,9 +16280,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["酉","乍"],
     mnemonic: 'Karakter 酢 (Vinegar / sour) memiliki 12 goresan, tersusun dari elemen (酉, 乍) yang melambangkan konsep intinya.',
     examples: [
-      { word: '酢', reading: 'す', meaning: 'vinegar' },
-      { word: '甘酢', reading: 'あまず', meaning: 'sweet vinegar' },
-      { word: '酢の物', reading: 'すのもの', meaning: 'vinegared dish' },
+      { word: '酢', reading: 'す', meaning: 'Vinegar' },
+      { word: '甘酢', reading: 'あまず', meaning: 'Sweet vinegar' },
+      { word: '酢の物', reading: 'すのもの', meaning: 'Vinegared dish' },
     ],
   },
   {
@@ -16298,7 +16298,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["酉","各"],
     mnemonic: 'Karakter 酪 (Olahan susu keju produk susu) memiliki 13 goresan, tersusun dari elemen (酉, 各) yang melambangkan konsep intinya.',
     examples: [
-      { word: '酪農', reading: 'らくのう', meaning: 'dairy farming' },
+      { word: '酪農', reading: 'らくのう', meaning: 'Dairy farming' },
       { word: '酪語', reading: 'ラクご', meaning: 'Istilah / kosakata terkait Dairy products / whey' },
     ],
   },
@@ -16315,9 +16315,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["酉","州"],
     mnemonic: 'Karakter 酬 (Imbalan hadiah upah jerih payah) memiliki 13 goresan, tersusun dari elemen (酉, 州) yang melambangkan konsep intinya.',
     examples: [
-      { word: '報酬', reading: 'ほうしゅう', meaning: 'remuneration / recompense / reward' },
-      { word: '応酬', reading: 'おうしゅう', meaning: 'exchange (of words, views, punches, cups, etc.)' },
-      { word: '無報酬', reading: 'むほうしゅう', meaning: 'unpaid' },
+      { word: '報酬', reading: 'ほうしゅう', meaning: 'Remuneration / recompense / reward' },
+      { word: '応酬', reading: 'おうしゅう', meaning: 'Exchange (of words, views, punches, cups, etc.)' },
+      { word: '無報酬', reading: 'むほうしゅう', meaning: 'Unpaid' },
     ],
   },
   {
@@ -16333,9 +16333,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["酉","孝"],
     mnemonic: 'Karakter 酵 (Ragi fermentasi biakan ragi) memiliki 14 goresan, tersusun dari elemen (酉, 孝) yang melambangkan konsep intinya.',
     examples: [
-      { word: '発酵', reading: 'はっこう', meaning: 'fermentation' },
-      { word: '酵母', reading: 'こうぼ', meaning: 'yeast' },
-      { word: '酵素', reading: 'こうそ', meaning: 'enzyme' },
+      { word: '発酵', reading: 'はっこう', meaning: 'Fermentation' },
+      { word: '酵母', reading: 'こうぼ', meaning: 'Yeast' },
+      { word: '酵素', reading: 'こうそ', meaning: 'Enzyme' },
     ],
   },
   {
@@ -16351,9 +16351,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["酉","夋"],
     mnemonic: 'Karakter 酸 (Asam / Senyawa asam) memiliki 14 goresan, tersusun dari elemen (酉, 夋) yang melambangkan konsep intinya.',
     examples: [
-      { word: '酸性', reading: 'さんせい', meaning: 'keasaman' },
-      { word: '酸素', reading: 'さんそ', meaning: 'oksigen' },
-      { word: '酸化', reading: 'さんか', meaning: 'oxidation' },
+      { word: '酸性', reading: 'さんせい', meaning: 'Keasaman' },
+      { word: '酸素', reading: 'さんそ', meaning: 'Oksigen' },
+      { word: '酸化', reading: 'さんか', meaning: 'Oxidation' },
     ],
   },
   {
@@ -16369,8 +16369,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["酉","星"],
     mnemonic: 'Karakter 醒 (Terbangun sadar dari tidur pingsan) memiliki 16 goresan, tersusun dari elemen (酉, 星) yang melambangkan konsep intinya.',
     examples: [
-      { word: '覚醒', reading: 'かくせい', meaning: 'waking up' },
-      { word: '覚醒剤', reading: 'かくせいざい', meaning: 'stimulant (e.g. psychoactive drugs like methamphetamine, ritalin, etc.)' },
+      { word: '覚醒', reading: 'かくせい', meaning: 'Waking up' },
+      { word: '覚醒剤', reading: 'かくせいざい', meaning: 'Stimulant (e.g. psychoactive drugs like methamphetamine, ritalin, etc.)' },
     ],
   },
   {
@@ -16386,9 +16386,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["酉","鬼"],
     mnemonic: 'Karakter 醜 (Ugly / unclean) memiliki 17 goresan, tersusun dari elemen (酉, 鬼) yang melambangkan konsep intinya.',
     examples: [
-      { word: '醜い', reading: 'みにくい', meaning: 'ugly' },
-      { word: '醜女', reading: 'しゅうじょ', meaning: 'ugly woman' },
-      { word: '醜悪', reading: 'しゅうあく', meaning: 'ugly' },
+      { word: '醜い', reading: 'みにくい', meaning: 'Ugly' },
+      { word: '醜女', reading: 'しゅうじょ', meaning: 'Ugly woman' },
+      { word: '醜悪', reading: 'しゅうあく', meaning: 'Ugly' },
     ],
   },
   {
@@ -16439,9 +16439,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["里","予"],
     mnemonic: 'Karakter 野 (Plains / field) memiliki 11 goresan, tersusun dari elemen (里, 予) yang melambangkan konsep intinya.',
     examples: [
-      { word: '野菜', reading: 'やさい', meaning: 'vegetable' },
-      { word: '野', reading: 'の', meaning: 'field' },
-      { word: '分野', reading: 'ぶんや', meaning: 'field / sphere' },
+      { word: '野菜', reading: 'やさい', meaning: 'Vegetable' },
+      { word: '野', reading: 'の', meaning: 'Field' },
+      { word: '分野', reading: 'ぶんや', meaning: 'Field / sphere' },
     ],
   },
   {
@@ -16457,7 +16457,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["父","王","丷"],
     mnemonic: 'Karakter 釜 (Kettle / cauldron) memiliki 10 goresan, tersusun dari elemen (父, 王, 丷) yang melambangkan konsep intinya.',
     examples: [
-      { word: '釜', reading: 'かま', meaning: 'iron pot / kettle' },
+      { word: '釜', reading: 'かま', meaning: 'Iron pot / kettle' },
       { word: '釜飯', reading: 'かまめし', meaning: 'Nasi liwet periuk panas khas Jepang' },
     ],
   },
@@ -16474,9 +16474,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["金","勺"],
     mnemonic: 'Karakter 釣 (Angling / fish) memiliki 11 goresan, tersusun dari elemen (金, 勺) yang melambangkan konsep intinya.',
     examples: [
-      { word: '釣', reading: 'つり', meaning: 'fishing' },
-      { word: '釣る', reading: 'つる', meaning: 'melakukan fish' },
-      { word: '釣り鐘', reading: 'つりがね', meaning: 'temple bell (for striking)' },
+      { word: '釣', reading: 'つり', meaning: 'Fishing' },
+      { word: '釣る', reading: 'つる', meaning: 'Fish' },
+      { word: '釣り鐘', reading: 'つりがね', meaning: 'Temple bell (for striking)' },
     ],
   },
   {
@@ -16492,8 +16492,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["金","令"],
     mnemonic: 'Karakter 鈴 (Kecil bell / buzzer) memiliki 13 goresan, tersusun dari elemen (金, 令) yang melambangkan konsep intinya.',
     examples: [
-      { word: '鈴', reading: 'すず', meaning: 'bell' },
-      { word: '風鈴', reading: 'ふうりん', meaning: 'wind chime' },
+      { word: '鈴', reading: 'すず', meaning: 'Bell' },
+      { word: '風鈴', reading: 'ふうりん', meaning: 'Wind chime' },
     ],
   },
   {
@@ -16509,9 +16509,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["金","𠘧","口"],
     mnemonic: 'Karakter 鉛 (Lead) memiliki 13 goresan, tersusun dari elemen (金, 𠘧, 口) yang melambangkan konsep intinya.',
     examples: [
-      { word: '鉛筆', reading: 'えんぴつ', meaning: 'pencil' },
-      { word: '鉛', reading: 'なまり', meaning: 'lead (the metal)' },
-      { word: '亜鉛', reading: 'あえん', meaning: 'zinc (Zn)' },
+      { word: '鉛筆', reading: 'えんぴつ', meaning: 'Pencil' },
+      { word: '鉛', reading: 'なまり', meaning: 'Lead (the metal)' },
+      { word: '亜鉛', reading: 'あえん', meaning: 'Zinc (Zn)' },
     ],
   },
   {
@@ -16527,9 +16527,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["金","本"],
     mnemonic: 'Karakter 鉢 (Bowl / rice tub) memiliki 13 goresan, tersusun dari elemen (金, 本) yang melambangkan konsep intinya.',
     examples: [
-      { word: '鉢', reading: 'はち', meaning: 'a bowl / a pot' },
-      { word: '植木鉢', reading: 'うえきばち', meaning: 'flowerpot' },
-      { word: '火鉢', reading: 'ひばち', meaning: 'brazier' },
+      { word: '鉢', reading: 'はち', meaning: 'A bowl / a pot' },
+      { word: '植木鉢', reading: 'うえきばち', meaning: 'Flowerpot' },
+      { word: '火鉢', reading: 'ひばち', meaning: 'Brazier' },
     ],
   },
   {
@@ -16545,9 +16545,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["金","充"],
     mnemonic: 'Karakter 銃 (Gun / arms) memiliki 14 goresan, tersusun dari elemen (金, 充) yang melambangkan konsep intinya.',
     examples: [
-      { word: '銃', reading: 'じゅう', meaning: 'gun' },
-      { word: '小銃', reading: 'しょうじゅう', meaning: 'rifle' },
-      { word: '拳銃', reading: 'けんじゅう', meaning: 'pistol' },
+      { word: '銃', reading: 'じゅう', meaning: 'Gun' },
+      { word: '小銃', reading: 'しょうじゅう', meaning: 'Rifle' },
+      { word: '拳銃', reading: 'けんじゅう', meaning: 'Pistol' },
     ],
   },
   {
@@ -16563,9 +16563,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["金","名"],
     mnemonic: 'Karakter 銘 (Inscription / signature (of artisan)) memiliki 14 goresan, tersusun dari elemen (金, 名) yang melambangkan konsep intinya.',
     examples: [
-      { word: '銘々', reading: 'めいめい', meaning: 'each / individual' },
-      { word: '感銘', reading: 'かんめい', meaning: 'deep impression' },
-      { word: '銘柄', reading: 'めいがら', meaning: 'brand' },
+      { word: '銘々', reading: 'めいめい', meaning: 'Each / individual' },
+      { word: '感銘', reading: 'かんめい', meaning: 'Deep impression' },
+      { word: '銘柄', reading: 'めいがら', meaning: 'Brand' },
     ],
   },
   {
@@ -16581,9 +16581,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["金","㦮"],
     mnemonic: 'Karakter 銭 (Coin / .01 yen) memiliki 14 goresan, tersusun dari elemen (金, 㦮) yang melambangkan konsep intinya.',
     examples: [
-      { word: '金銭', reading: 'きんせん', meaning: 'uang / cash' },
-      { word: '小銭', reading: 'こぜに', meaning: 'coins / small change' },
-      { word: '釣り銭', reading: 'つりせん', meaning: 'change (for a purchase)' },
+      { word: '金銭', reading: 'きんせん', meaning: 'Uang / cash' },
+      { word: '小銭', reading: 'こぜに', meaning: 'Coins / small change' },
+      { word: '釣り銭', reading: 'つりせん', meaning: 'Change (for a purchase)' },
     ],
   },
   {
@@ -16599,9 +16599,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["金","寿"],
     mnemonic: 'Karakter 鋳 (Casting / mint) memiliki 15 goresan, tersusun dari elemen (金, 寿) yang melambangkan konsep intinya.',
     examples: [
-      { word: '鋳型', reading: 'いがた', meaning: 'mold' },
-      { word: '鋳物', reading: 'いもの', meaning: 'casting' },
-      { word: '鋳造', reading: 'ちゅうぞう', meaning: 'casting' },
+      { word: '鋳型', reading: 'いがた', meaning: 'Mold' },
+      { word: '鋳物', reading: 'いもの', meaning: 'Casting' },
+      { word: '鋳造', reading: 'ちゅうぞう', meaning: 'Casting' },
     ],
   },
   {
@@ -16617,9 +16617,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["金","岡"],
     mnemonic: 'Karakter 鋼 (Steel) memiliki 16 goresan, tersusun dari elemen (金, 岡) yang melambangkan konsep intinya.',
     examples: [
-      { word: '鉄鋼', reading: 'てっこう', meaning: 'iron and steel' },
-      { word: '粗鋼', reading: 'そこう', meaning: 'crude steel' },
-      { word: '製鋼', reading: 'せいこう', meaning: 'steel manufacture' },
+      { word: '鉄鋼', reading: 'てっこう', meaning: 'Iron and steel' },
+      { word: '粗鋼', reading: 'そこう', meaning: 'Crude steel' },
+      { word: '製鋼', reading: 'せいこう', meaning: 'Steel manufacture' },
     ],
   },
   {
@@ -16636,7 +16636,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 錠 (Lock / fetters) memiliki 16 goresan, tersusun dari elemen (金, 定) yang melambangkan konsep intinya.',
     examples: [
       { word: '錠剤', reading: 'じょうざい', meaning: 'Obat bentuk tablet' },
-      { word: '手錠', reading: 'てじょう', meaning: 'handcuffs / manacles' },
+      { word: '手錠', reading: 'てじょう', meaning: 'Handcuffs / manacles' },
     ],
   },
   {
@@ -16669,9 +16669,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["金","東"],
     mnemonic: 'Karakter 錬 (Tempering / refine) memiliki 16 goresan, tersusun dari elemen (金, 東) yang melambangkan konsep intinya.',
     examples: [
-      { word: '錬金術', reading: 'れんきんじゅつ', meaning: 'alchemy' },
-      { word: '錬金術師', reading: 'れんきんじゅつし', meaning: 'alchemist' },
-      { word: '鍛錬', reading: 'たんれん', meaning: 'tempering (metal)' },
+      { word: '錬金術', reading: 'れんきんじゅつ', meaning: 'Alchemy' },
+      { word: '錬金術師', reading: 'れんきんじゅつし', meaning: 'Alchemist' },
+      { word: '鍛錬', reading: 'たんれん', meaning: 'Tempering (metal)' },
     ],
   },
   {
@@ -16687,7 +16687,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["金","固"],
     mnemonic: 'Karakter 錮 (Confinement / to tie) memiliki 16 goresan, tersusun dari elemen (金, 固) yang melambangkan konsep intinya.',
     examples: [
-      { word: '禁錮', reading: 'きんこ', meaning: 'imprisonment (without forced labour)' },
+      { word: '禁錮', reading: 'きんこ', meaning: 'Imprisonment (without forced labour)' },
       { word: '禁錮刑', reading: 'きんこけい', meaning: 'Vonis hukuman kurungan penjara' },
     ],
   },
@@ -16705,8 +16705,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 錯 (Confused / mix) memiliki 16 goresan, tersusun dari elemen (金, 昔) yang melambangkan konsep intinya.',
     examples: [
       { word: '試行錯誤', reading: 'しこうさくご', meaning: 'Metode coba-coba (Trial and Error)' },
-      { word: '錯誤', reading: 'さくご', meaning: 'mistake' },
-      { word: '交錯', reading: 'こうさく', meaning: 'mixture' },
+      { word: '錯誤', reading: 'さくご', meaning: 'Mistake' },
+      { word: '交錯', reading: 'こうさく', meaning: 'Mixture' },
     ],
   },
   {
@@ -16722,7 +16722,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["金","咼"],
     mnemonic: 'Karakter 鍋 (Pot / pan) memiliki 17 goresan, tersusun dari elemen (金, 咼) yang melambangkan konsep intinya.',
     examples: [
-      { word: '鍋', reading: 'なべ', meaning: 'saucepan / pot' },
+      { word: '鍋', reading: 'なべ', meaning: 'Saucepan / pot' },
       { word: '鍋語', reading: 'カご', meaning: 'Istilah / kosakata terkait Pot / pan' },
     ],
   },
@@ -16739,8 +16739,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["金","段"],
     mnemonic: 'Karakter 鍛 (Forge / discipline) memiliki 17 goresan, tersusun dari elemen (金, 段) yang melambangkan konsep intinya.',
     examples: [
-      { word: '鍛える', reading: 'きたえる', meaning: 'melakukan forge / melakukan train / melakukan discipline' },
-      { word: '鍛錬', reading: 'たんれん', meaning: 'tempering (metal)' },
+      { word: '鍛える', reading: 'きたえる', meaning: 'Forge / Melatih / Discipline' },
+      { word: '鍛錬', reading: 'たんれん', meaning: 'Tempering (metal)' },
     ],
   },
   {
@@ -16756,8 +16756,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["金","建"],
     mnemonic: 'Karakter 鍵 (Key) memiliki 17 goresan, tersusun dari elemen (金, 建) yang melambangkan konsep intinya.',
     examples: [
-      { word: '鍵', reading: 'かぎ', meaning: 'a lock / a key' },
-      { word: '鍵盤', reading: 'けんばん', meaning: 'keyboard (of a piano, typewriter, etc.)' },
+      { word: '鍵', reading: 'かぎ', meaning: 'A lock / a key' },
+      { word: '鍵盤', reading: 'けんばん', meaning: 'Keyboard (of a piano, typewriter, etc.)' },
     ],
   },
   {
@@ -16790,9 +16790,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["金","𧴪"],
     mnemonic: 'Karakter 鎖 (Chain / irons) memiliki 18 goresan, tersusun dari elemen (金, 𧴪) yang melambangkan konsep intinya.',
     examples: [
-      { word: '鎖', reading: 'くさり', meaning: 'chain' },
-      { word: '封鎖', reading: 'ふうさ', meaning: 'blockade / freezing (funds)' },
-      { word: '閉鎖', reading: 'へいさ', meaning: 'closing / closure / shutdown' },
+      { word: '鎖', reading: 'くさり', meaning: 'Chain' },
+      { word: '封鎖', reading: 'ふうさ', meaning: 'Blockade / freezing (funds)' },
+      { word: '閉鎖', reading: 'へいさ', meaning: 'Closing / closure / shutdown' },
     ],
   },
   {
@@ -16808,9 +16808,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["金","真"],
     mnemonic: 'Karakter 鎮 (Tranquilize / ancient kedamaian-preservation centers) memiliki 18 goresan, tersusun dari elemen (金, 真) yang melambangkan konsep intinya.',
     examples: [
-      { word: '重鎮', reading: 'じゅうちん', meaning: 'leader' },
-      { word: '鎮圧', reading: 'ちんあつ', meaning: 'suppression (of a riot, revolt, etc.)' },
-      { word: '鎮守', reading: 'ちんじゅ', meaning: 'local Shinto deity' },
+      { word: '重鎮', reading: 'じゅうちん', meaning: 'Leader' },
+      { word: '鎮圧', reading: 'ちんあつ', meaning: 'Suppression (of a riot, revolt, etc.)' },
+      { word: '鎮守', reading: 'ちんじゅ', meaning: 'Local Shinto deity' },
     ],
   },
   {
@@ -16826,9 +16826,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["金","竟"],
     mnemonic: 'Karakter 鏡 (Mirror / speculum) memiliki 19 goresan, tersusun dari elemen (金, 竟) yang melambangkan konsep intinya.',
     examples: [
-      { word: '眼鏡', reading: 'めがね', meaning: 'eye glasses' },
+      { word: '眼鏡', reading: 'めがね', meaning: 'Eye glasses' },
       { word: '鏡', reading: 'かがみ', meaning: 'Cermin' },
-      { word: '顕微鏡', reading: 'けんびきょう', meaning: 'microscope' },
+      { word: '顕微鏡', reading: 'けんびきょう', meaning: 'Microscope' },
     ],
   },
   {
@@ -16844,9 +16844,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["金","童"],
     mnemonic: 'Karakter 鐘 (Bell / gong) memiliki 20 goresan, tersusun dari elemen (金, 童) yang melambangkan konsep intinya.',
     examples: [
-      { word: '鐘', reading: 'かね', meaning: 'bell / chime' },
-      { word: '釣り鐘', reading: 'つりがね', meaning: 'temple bell (for striking)' },
-      { word: '警鐘', reading: 'けいしょう', meaning: 'alarm bell' },
+      { word: '鐘', reading: 'かね', meaning: 'Bell / chime' },
+      { word: '釣り鐘', reading: 'つりがね', meaning: 'Temple bell (for striking)' },
+      { word: '警鐘', reading: 'けいしょう', meaning: 'Alarm bell' },
     ],
   },
   {
@@ -16862,8 +16862,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["門","伐"],
     mnemonic: 'Karakter 閥 (Clique / lineage) memiliki 14 goresan, tersusun dari elemen (門, 伐) yang melambangkan konsep intinya.',
     examples: [
-      { word: '派閥', reading: 'はばつ', meaning: 'clique' },
-      { word: '財閥', reading: 'ざいばつ', meaning: 'zaibatsu' },
+      { word: '派閥', reading: 'はばつ', meaning: 'Clique' },
+      { word: '財閥', reading: 'ざいばつ', meaning: 'Zaibatsu' },
     ],
   },
   {
@@ -16879,9 +16879,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["門","兑"],
     mnemonic: 'Karakter 閲 (Review / inspection) memiliki 15 goresan, tersusun dari elemen (門, 兑) yang melambangkan konsep intinya.',
     examples: [
-      { word: '閲覧', reading: 'えつらん', meaning: 'inspection / referensi / rujukan / browse' },
-      { word: '校閲', reading: 'こうえつ', meaning: 'revision' },
-      { word: '検閲', reading: 'けんえつ', meaning: 'censorship' },
+      { word: '閲覧', reading: 'えつらん', meaning: 'Pemeriksaan / Inspeksi / referensi / rujukan / Meramban' },
+      { word: '校閲', reading: 'こうえつ', meaning: 'Revision' },
+      { word: '検閲', reading: 'けんえつ', meaning: 'Censorship' },
     ],
   },
   {
@@ -16898,8 +16898,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 闘 (Fight / perang) memiliki 18 goresan, tersusun dari elemen (門, 𭔰) yang melambangkan konsep intinya.',
     examples: [
       { word: '孤軍奮闘', reading: 'こぐんふんとう', meaning: 'Berjuang sendirian dengan sekuat tenaga tanpa bantuan siapapun' },
-      { word: '戦闘', reading: 'せんとう', meaning: 'battle / fight / combat' },
-      { word: '奮闘', reading: 'ふんとう', meaning: 'hard struggle / strenuous effort' },
+      { word: '戦闘', reading: 'せんとう', meaning: 'Battle / fight / combat' },
+      { word: '奮闘', reading: 'ふんとう', meaning: 'Hard struggle / strenuous effort' },
     ],
   },
   {
@@ -16933,7 +16933,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["阝","付"],
     mnemonic: 'Karakter 附 (Affixed / attach) memiliki 8 goresan, tersusun dari elemen (阝, 付) yang melambangkan konsep intinya.',
     examples: [
-      { word: '附属', reading: 'ふぞく', meaning: 'attached / belonging / affiliated' },
+      { word: '附属', reading: 'ふぞく', meaning: 'Attached / belonging / affiliated' },
       { word: '寄附', reading: 'きふ', meaning: 'Sumbangan amal donasi sukarela' },
       { word: '附則', reading: 'ふそく', meaning: 'Klausul aturan tambahan lampiran undang-undang' },
     ],
@@ -16968,9 +16968,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["阝","車"],
     mnemonic: 'Karakter 陣 (Camp / pertempuran array) memiliki 10 goresan, tersusun dari elemen (阝, 車) yang melambangkan konsep intinya.',
     examples: [
-      { word: '陣', reading: 'じん', meaning: 'battle formation / camp / encampment' },
-      { word: '先陣', reading: 'せんじん', meaning: 'vanguard' },
-      { word: '出陣', reading: 'しゅつじん', meaning: 'going into battle' },
+      { word: '陣', reading: 'じん', meaning: 'Battle formation / camp / encampment' },
+      { word: '先陣', reading: 'せんじん', meaning: 'Vanguard' },
+      { word: '出陣', reading: 'しゅつじん', meaning: 'Going into battle' },
     ],
   },
   {
@@ -16986,7 +16986,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["阝","咅"],
     mnemonic: 'Karakter 陪 (Obeisance / follow) memiliki 11 goresan, tersusun dari elemen (阝, 咅) yang melambangkan konsep intinya.',
     examples: [
-      { word: '陪審', reading: 'ばいしん', meaning: 'jury' },
+      { word: '陪審', reading: 'ばいしん', meaning: 'Jury' },
       { word: '陪席', reading: 'ばいせき', meaning: 'Duduk mendampingi pejabat dalam jamuan' },
       { word: '陪審員', reading: 'ばいしんいん', meaning: 'Anggota dewan juri persidangan' },
     ],
@@ -17004,9 +17004,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["阝","侌"],
     mnemonic: 'Karakter 陰 (Shade / yin) memiliki 11 goresan, tersusun dari elemen (阝, 侌) yang melambangkan konsep intinya.',
     examples: [
-      { word: '陰', reading: 'かげ', meaning: 'shade / shadow / other side' },
-      { word: 'お陰', reading: 'おかげ', meaning: 'thanks or owing to' },
-      { word: '陰気', reading: 'いんき', meaning: 'gloom / melancholy' },
+      { word: '陰', reading: 'かげ', meaning: 'Shade / shadow / other side' },
+      { word: 'お陰', reading: 'おかげ', meaning: 'Thanks or owing to' },
+      { word: '陰気', reading: 'いんき', meaning: 'Gloom / melancholy' },
     ],
   },
   {
@@ -17022,9 +17022,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["阝","東"],
     mnemonic: 'Karakter 陳 (Exhibit / state) memiliki 11 goresan, tersusun dari elemen (阝, 東) yang melambangkan konsep intinya.',
     examples: [
-      { word: '陳列', reading: 'ちんれつ', meaning: 'exhibition / display / show' },
-      { word: '新陳代謝', reading: 'しんちんたいしゃ', meaning: 'renewal' },
-      { word: '陳情', reading: 'ちんじょう', meaning: 'petition' },
+      { word: '陳列', reading: 'ちんれつ', meaning: 'Exhibition / display / show' },
+      { word: '新陳代謝', reading: 'しんちんたいしゃ', meaning: 'Renewal' },
+      { word: '陳情', reading: 'ちんじょう', meaning: 'Petition' },
     ],
   },
   {
@@ -17040,7 +17040,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["阝","夌"],
     mnemonic: 'Karakter 陵 (Mausoleum / imperial tomb) memiliki 11 goresan, tersusun dari elemen (阝, 夌) yang melambangkan konsep intinya.',
     examples: [
-      { word: '丘陵', reading: 'きゅうりょう', meaning: 'hill' },
+      { word: '丘陵', reading: 'きゅうりょう', meaning: 'Hill' },
       { word: '陵語', reading: 'リョウご', meaning: 'Istilah / kosakata terkait Mausoleum / imperial tomb' },
     ],
   },
@@ -17057,9 +17057,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["阝","匋"],
     mnemonic: 'Karakter 陶 (Pottery / porcelain) memiliki 11 goresan, tersusun dari elemen (阝, 匋) yang melambangkan konsep intinya.',
     examples: [
-      { word: '陶器', reading: 'とうき', meaning: 'pottery / ceramics' },
-      { word: '陶工', reading: 'とうこう', meaning: 'potter' },
-      { word: '陶磁器', reading: 'とうじき', meaning: 'ceramics' },
+      { word: '陶器', reading: 'とうき', meaning: 'Pottery / ceramics' },
+      { word: '陶工', reading: 'とうこう', meaning: 'Potter' },
+      { word: '陶磁器', reading: 'とうじき', meaning: 'Ceramics' },
     ],
   },
   {
@@ -17075,9 +17075,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["阝","㚅"],
     mnemonic: 'Karakter 隆 (Hump / tinggi) memiliki 11 goresan, tersusun dari elemen (阝, 㚅) yang melambangkan konsep intinya.',
     examples: [
-      { word: '興隆', reading: 'こうりゅう', meaning: 'rise' },
-      { word: '隆盛', reading: 'りゅうせい', meaning: 'prosperity' },
-      { word: '隆起', reading: 'りゅうき', meaning: 'protuberance' },
+      { word: '興隆', reading: 'こうりゅう', meaning: 'Rise' },
+      { word: '隆盛', reading: 'りゅうせい', meaning: 'Prosperity' },
+      { word: '隆起', reading: 'りゅうき', meaning: 'Protuberance' },
     ],
   },
   {
@@ -17093,9 +17093,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["阝","㒸"],
     mnemonic: 'Karakter 隊 (Regiment / party) memiliki 12 goresan, tersusun dari elemen (阝, 㒸) yang melambangkan konsep intinya.',
     examples: [
-      { word: '軍隊', reading: 'ぐんたい', meaning: 'army / troops' },
-      { word: '隊', reading: 'たい', meaning: 'party / troops' },
-      { word: '兵隊', reading: 'へいたい', meaning: 'soldier' },
+      { word: '軍隊', reading: 'ぐんたい', meaning: 'Army / troops' },
+      { word: '隊', reading: 'たい', meaning: 'Party / troops' },
+      { word: '兵隊', reading: 'へいたい', meaning: 'Soldier' },
     ],
   },
   {
@@ -17111,9 +17111,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["阝","迶"],
     mnemonic: 'Karakter 随 (Follow / though) memiliki 12 goresan, tersusun dari elemen (阝, 迶) yang melambangkan konsep intinya.',
     examples: [
-      { word: '随分', reading: 'ずいぶん', meaning: 'extremely' },
-      { word: '随筆', reading: 'ずいひつ', meaning: 'essays / miscellaneous writings' },
-      { word: '追随', reading: 'ついずい', meaning: 'following (in the footsteps of)' },
+      { word: '随分', reading: 'ずいぶん', meaning: 'Extremely' },
+      { word: '随筆', reading: 'ずいひつ', meaning: 'Essays / miscellaneous writings' },
+      { word: '追随', reading: 'ついずい', meaning: 'Following (in the footsteps of)' },
     ],
   },
   {
@@ -17129,9 +17129,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["阝","鬲"],
     mnemonic: 'Karakter 隔 (Isolate / alternate) memiliki 13 goresan, tersusun dari elemen (阝, 鬲) yang melambangkan konsep intinya.',
     examples: [
-      { word: '間隔', reading: 'かんかく', meaning: 'space / interval / spc' },
-      { word: '隔週', reading: 'かくしゅう', meaning: 'every other week' },
-      { word: '隔たる', reading: 'へだたる', meaning: 'melakukan be distant' },
+      { word: '間隔', reading: 'かんかく', meaning: 'Space / interval / spc' },
+      { word: '隔週', reading: 'かくしゅう', meaning: 'Every other week' },
+      { word: '隔たる', reading: 'へだたる', meaning: 'Menjadi distant' },
     ],
   },
   {
@@ -17147,8 +17147,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["阝","𡭴"],
     mnemonic: 'Karakter 隙 (Celah retakan waktu luang lowong) memiliki 13 goresan, tersusun dari elemen (阝, 𡭴) yang melambangkan konsep intinya.',
     examples: [
-      { word: '隙', reading: 'すき', meaning: 'unguarded moment / chance' },
-      { word: '隙間', reading: 'すきま', meaning: 'crack / gap / opening' },
+      { word: '隙', reading: 'すき', meaning: 'Unguarded moment / chance' },
+      { word: '隙間', reading: 'すきま', meaning: 'Crack / gap / opening' },
     ],
   },
   {
@@ -17166,7 +17166,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     examples: [
       { word: '隠匿', reading: 'いんとく', meaning: 'Penyembunyian aset secara ilegal' },
       { word: '隠忍自重', reading: 'いんにんじちょう', meaning: 'Bersabar menahan diri menunggu saat yang tepat' },
-      { word: '隠す', reading: 'かくす', meaning: 'melakukan hide / melakukan conceal' },
+      { word: '隠す', reading: 'かくす', meaning: 'Menyembunyikan / Conceal' },
     ],
   },
   {
@@ -17182,9 +17182,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["阝","粦"],
     mnemonic: 'Karakter 隣 (Neighboring) memiliki 16 goresan, tersusun dari elemen (阝, 粦) yang melambangkan konsep intinya.',
     examples: [
-      { word: '隣', reading: 'となり', meaning: 'next to / next door to' },
+      { word: '隣', reading: 'となり', meaning: 'Next to / next door to' },
       { word: '隣人', reading: 'りんじん', meaning: 'Tetangga sebelah' },
-      { word: '善隣', reading: 'ぜんりん', meaning: 'good neighbour' },
+      { word: '善隣', reading: 'ぜんりん', meaning: 'Good neighbour' },
     ],
   },
   {
@@ -17200,7 +17200,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["士","示","隶"],
     mnemonic: 'Karakter 隷 (Slave / servant) memiliki 16 goresan, tersusun dari elemen (士, 示, 隶) yang melambangkan konsep intinya.',
     examples: [
-      { word: '奴隷', reading: 'どれい', meaning: 'slave' },
+      { word: '奴隷', reading: 'どれい', meaning: 'Slave' },
       { word: '隷属', reading: 'れいぞく', meaning: 'Subordinasi ketundukan di bawah kekuasaan' },
     ],
   },
@@ -17217,9 +17217,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["厷","隹"],
     mnemonic: 'Karakter 雄 (Jantan gagah perkasa unggul) memiliki 12 goresan, tersusun dari elemen (厷, 隹) yang melambangkan konsep intinya.',
     examples: [
-      { word: '英雄', reading: 'えいゆう', meaning: 'hero / great man' },
-      { word: '雄', reading: 'おす', meaning: 'male (animal)' },
-      { word: '両雄', reading: 'りょうゆう', meaning: 'two great men' },
+      { word: '英雄', reading: 'えいゆう', meaning: 'Hero / great man' },
+      { word: '雄', reading: 'おす', meaning: 'Male (animal)' },
+      { word: '両雄', reading: 'りょうゆう', meaning: 'Two great men' },
     ],
   },
   {
@@ -17235,9 +17235,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["牙","隹"],
     mnemonic: 'Karakter 雅 (Gracious / elegant) memiliki 13 goresan, tersusun dari elemen (牙, 隹) yang melambangkan konsep intinya.',
     examples: [
-      { word: '優雅', reading: 'ゆうが', meaning: 'elegant' },
-      { word: '雅楽', reading: 'ががく', meaning: 'gagaku' },
-      { word: '雅致', reading: 'がち', meaning: 'artistry' },
+      { word: '優雅', reading: 'ゆうが', meaning: 'Elegant' },
+      { word: '雅楽', reading: 'ががく', meaning: 'Gagaku' },
+      { word: '雅致', reading: 'がち', meaning: 'Artistry' },
     ],
   },
   {
@@ -17253,9 +17253,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["此","隹"],
     mnemonic: 'Karakter 雌 (Betina hewan betina permaisuri) memiliki 14 goresan, tersusun dari elemen (此, 隹) yang melambangkan konsep intinya.',
     examples: [
-      { word: '雌', reading: 'めす', meaning: 'female (animal)' },
-      { word: '雌花', reading: 'めばな', meaning: 'female flower' },
-      { word: '雌雄', reading: 'しゆう', meaning: 'male and female (animals)' },
+      { word: '雌', reading: 'めす', meaning: 'Female (animal)' },
+      { word: '雌花', reading: 'めばな', meaning: 'Female flower' },
+      { word: '雌雄', reading: 'しゆう', meaning: 'Male and female (animals)' },
     ],
   },
   {
@@ -17271,7 +17271,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["雨","分"],
     mnemonic: 'Karakter 雰 (Atmosphere / fog) memiliki 12 goresan, tersusun dari elemen (雨, 分) yang melambangkan konsep intinya.',
     examples: [
-      { word: '雰囲気', reading: 'ふんいき', meaning: 'atmosphere (e.g. / musical) / mood' },
+      { word: '雰囲気', reading: 'ふんいき', meaning: 'Atmosphere (e.g. / musical) / mood' },
       { word: '雰語', reading: 'フンご', meaning: 'Istilah / kosakata terkait Atmosphere / fog' },
     ],
   },
@@ -17288,8 +17288,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["雨","田"],
     mnemonic: 'Karakter 雷 (Thunder / lightning bolt) memiliki 13 goresan, tersusun dari elemen (雨, 田) yang melambangkan konsep intinya.',
     examples: [
-      { word: '雷', reading: 'かみなり', meaning: 'thunder' },
-      { word: '地雷', reading: 'じらい', meaning: 'land mine' },
+      { word: '雷', reading: 'かみなり', meaning: 'Thunder' },
+      { word: '地雷', reading: 'じらい', meaning: 'Land mine' },
       { word: '機雷', reading: 'きらい', meaning: '(sea) mine' },
     ],
   },
@@ -17306,9 +17306,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["雨","日","乚"],
     mnemonic: 'Karakter 電 (Electricity) memiliki 13 goresan, tersusun dari elemen (雨, 日, 乚) yang melambangkan konsep intinya.',
     examples: [
-      { word: '電気', reading: 'でんき', meaning: 'electricity / (electric) light' },
-      { word: '電車', reading: 'でんしゃ', meaning: 'electric train' },
-      { word: '電話', reading: 'でんわ', meaning: 'a telephone' },
+      { word: '電気', reading: 'でんき', meaning: 'Listrik / Penerangan listrik' },
+      { word: '電車', reading: 'でんしゃ', meaning: 'Electric train' },
+      { word: '電話', reading: 'でんわ', meaning: 'A telephone' },
     ],
   },
   {
@@ -17324,9 +17324,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["雨","而"],
     mnemonic: 'Karakter 需 (Demand / request) memiliki 14 goresan, tersusun dari elemen (雨, 而) yang melambangkan konsep intinya.',
     examples: [
-      { word: '需要', reading: 'じゅよう', meaning: 'demand' },
-      { word: '必需品', reading: 'ひつじゅひん', meaning: 'necessities / essential' },
-      { word: '内需', reading: 'ないじゅ', meaning: 'domestic demand' },
+      { word: '需要', reading: 'じゅよう', meaning: 'Demand' },
+      { word: '必需品', reading: 'ひつじゅひん', meaning: 'Necessities / essential' },
+      { word: '内需', reading: 'ないじゅ', meaning: 'Domestic demand' },
     ],
   },
   {
@@ -17342,9 +17342,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["雨","一","亚"],
     mnemonic: 'Karakter 霊 (Spirits / soul) memiliki 15 goresan, tersusun dari elemen (雨, 一, 亚) yang melambangkan konsep intinya.',
     examples: [
-      { word: '幽霊', reading: 'ゆうれい', meaning: 'ghost / specter / phantom' },
-      { word: '亡霊', reading: 'ぼうれい', meaning: 'departed spirit' },
-      { word: '慰霊', reading: 'いれい', meaning: 'consoling the spirits of the dead' },
+      { word: '幽霊', reading: 'ゆうれい', meaning: 'Ghost / specter / phantom' },
+      { word: '亡霊', reading: 'ぼうれい', meaning: 'Departed spirit' },
+      { word: '慰霊', reading: 'いれい', meaning: 'Consoling the spirits of the dead' },
     ],
   },
   {
@@ -17360,8 +17360,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["雨","相"],
     mnemonic: 'Karakter 霜 (Frost) memiliki 17 goresan, tersusun dari elemen (雨, 相) yang melambangkan konsep intinya.',
     examples: [
-      { word: '霜', reading: 'しも', meaning: 'frost' },
-      { word: '霜降り', reading: 'しもふり', meaning: 'speckled with white' },
+      { word: '霜', reading: 'しも', meaning: 'Frost' },
+      { word: '霜降り', reading: 'しもふり', meaning: 'Speckled with white' },
     ],
   },
   {
@@ -17377,9 +17377,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["雨","務"],
     mnemonic: 'Karakter 霧 (Fog / mist) memiliki 19 goresan, tersusun dari elemen (雨, 務) yang melambangkan konsep intinya.',
     examples: [
-      { word: '霧', reading: 'きり', meaning: 'fog / mist' },
-      { word: '夕霧', reading: 'ゆうぎり', meaning: 'evening mist' },
-      { word: '朝霧', reading: 'あさぎり', meaning: 'morning fog' },
+      { word: '霧', reading: 'きり', meaning: 'Fog / mist' },
+      { word: '夕霧', reading: 'ゆうぎり', meaning: 'Evening mist' },
+      { word: '朝霧', reading: 'あさぎり', meaning: 'Morning fog' },
     ],
   },
   {
@@ -17395,9 +17395,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["雨","路"],
     mnemonic: 'Karakter 露 (Embun pagi / Terbuka menampakkan) memiliki 21 goresan, tersusun dari elemen (雨, 路) yang melambangkan konsep intinya.',
     examples: [
-      { word: '露', reading: 'つゆ', meaning: 'dew' },
-      { word: '露骨', reading: 'ろこつ', meaning: 'blunt / outspoken / conspicuous' },
-      { word: '暴露', reading: 'ばくろ', meaning: 'disclosure / exposure / revelation' },
+      { word: '露', reading: 'つゆ', meaning: 'Dew' },
+      { word: '露骨', reading: 'ろこつ', meaning: 'Blunt / outspoken / conspicuous' },
+      { word: '暴露', reading: 'ばくろ', meaning: 'Disclosure / exposure / revelation' },
     ],
   },
   {
@@ -17413,9 +17413,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["革","化"],
     mnemonic: 'Karakter 靴 (Sepatu alas kaki kulit) memiliki 13 goresan, tersusun dari elemen (革, 化) yang melambangkan konsep intinya.',
     examples: [
-      { word: '靴', reading: 'くつ', meaning: 'shoes / footwear' },
-      { word: '靴下', reading: 'くつした', meaning: 'socks' },
-      { word: '革靴', reading: 'かわぐつ', meaning: 'leather shoes' },
+      { word: '靴', reading: 'くつ', meaning: 'Shoes / footwear' },
+      { word: '靴下', reading: 'くつした', meaning: 'Socks' },
+      { word: '革靴', reading: 'かわぐつ', meaning: 'Leather shoes' },
     ],
   },
   {
@@ -17431,8 +17431,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["音","員"],
     mnemonic: 'Karakter 韻 (Rima sajak nada irama puisi) memiliki 19 goresan, tersusun dari elemen (音, 員) yang melambangkan konsep intinya.',
     examples: [
-      { word: '余韻', reading: 'よいん', meaning: 'reverberation' },
-      { word: '韻律', reading: 'いんりつ', meaning: 'metre (of a poem)' },
+      { word: '余韻', reading: 'よいん', meaning: 'Reverberation' },
+      { word: '韻律', reading: 'いんりつ', meaning: 'Metre (of a poem)' },
     ],
   },
   {
@@ -17448,9 +17448,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["鄉","音"],
     mnemonic: 'Karakter 響 (Echo / suara) memiliki 20 goresan, tersusun dari elemen (鄉, 音) yang melambangkan konsep intinya.',
     examples: [
-      { word: '影響', reading: 'えいきょう', meaning: 'pengaruh / effect' },
-      { word: '反響', reading: 'はんきょう', meaning: 'echo / reverberation / repercussion' },
-      { word: '響き', reading: 'ひびき', meaning: 'echo / sound' },
+      { word: '影響', reading: 'えいきょう', meaning: 'Pengaruh / effect' },
+      { word: '反響', reading: 'はんきょう', meaning: 'Echo / reverberation / repercussion' },
+      { word: '響き', reading: 'ひびき', meaning: 'Echo / sound' },
     ],
   },
   {
@@ -17466,9 +17466,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["工","頁"],
     mnemonic: 'Karakter 項 (Paragraph / nape of neck) memiliki 12 goresan, tersusun dari elemen (工, 頁) yang melambangkan konsep intinya.',
     examples: [
-      { word: '事項', reading: 'じこう', meaning: 'matter(s) / item(s) / facts' },
-      { word: '項目', reading: 'こうもく', meaning: 'item' },
-      { word: '条項', reading: 'じょうこう', meaning: 'clause' },
+      { word: '事項', reading: 'じこう', meaning: 'Matter(s) / item(s) / facts' },
+      { word: '項目', reading: 'こうもく', meaning: 'Item' },
+      { word: '条項', reading: 'じょうこう', meaning: 'Clause' },
     ],
   },
   {
@@ -17484,8 +17484,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["彡","頁"],
     mnemonic: 'Karakter 須 (Ought / by all means) memiliki 12 goresan, tersusun dari elemen (彡, 頁) yang melambangkan konsep intinya.',
     examples: [
-      { word: '必須', reading: 'ひっす', meaning: 'indispensable' },
-      { word: '必須条件', reading: 'ひっすじょうけん', meaning: 'essential condition' },
+      { word: '必須', reading: 'ひっす', meaning: 'Indispensable' },
+      { word: '必須条件', reading: 'ひっすじょうけん', meaning: 'Essential condition' },
     ],
   },
   {
@@ -17501,9 +17501,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["元","頁"],
     mnemonic: 'Karakter 頑 (Stubborn / foolish) memiliki 13 goresan, tersusun dari elemen (元, 頁) yang melambangkan konsep intinya.',
     examples: [
-      { word: '頑張る', reading: 'がんばる', meaning: 'melakukan try one\\' },
-      { word: '頑固', reading: 'がんこ', meaning: 'stubbornness / obstinacy' },
-      { word: '頑丈', reading: 'がんじょう', meaning: 'solid / firm / strong' },
+      { word: '頑張る', reading: 'がんばる', meaning: 'Mencoba (one\\)' },
+      { word: '頑固', reading: 'がんこ', meaning: 'Stubbornness / obstinacy' },
+      { word: '頑丈', reading: 'がんじょう', meaning: 'Solid / firm / strong' },
     ],
   },
   {
@@ -17519,7 +17519,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["分","頁"],
     mnemonic: 'Karakter 頒 (Distribute / disseminate) memiliki 13 goresan, tersusun dari elemen (分, 頁) yang melambangkan konsep intinya.',
     examples: [
-      { word: '頒布', reading: 'はんぷ', meaning: 'distribution' },
+      { word: '頒布', reading: 'はんぷ', meaning: 'Distribution' },
       { word: '頒布会', reading: 'はんぷかい', meaning: 'Pertemuan pembagian karya seni/buku' },
     ],
   },
@@ -17536,7 +17536,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["屯","頁"],
     mnemonic: 'Karakter 頓 (Suddenly / immediately) memiliki 13 goresan, tersusun dari elemen (屯, 頁) yang melambangkan konsep intinya.',
     examples: [
-      { word: '整頓', reading: 'せいとん', meaning: 'orderliness' },
+      { word: '整頓', reading: 'せいとん', meaning: 'Orderliness' },
       { word: '華盛頓', reading: 'ワシントン', meaning: 'Washington, D.C. (United States)' },
     ],
   },
@@ -17570,9 +17570,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["步","頁"],
     mnemonic: 'Karakter 頻 (Repeatedly / recur) memiliki 17 goresan, tersusun dari elemen (步, 頁) yang melambangkan konsep intinya.',
     examples: [
-      { word: '頻繁', reading: 'ひんぱん', meaning: 'frequency' },
-      { word: '頻度', reading: 'ひんど', meaning: 'frequency (of occurrence)' },
-      { word: '頻発', reading: 'ひんぱつ', meaning: 'frequent occurrence' },
+      { word: '頻繁', reading: 'ひんぱん', meaning: 'Frequency' },
+      { word: '頻度', reading: 'ひんど', meaning: 'Frequency (of occurrence)' },
+      { word: '頻発', reading: 'ひんぱつ', meaning: 'Frequent occurrence' },
     ],
   },
   {
@@ -17588,7 +17588,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["咢","頁"],
     mnemonic: 'Karakter 顎 (Dagu rahang bawah mulut) memiliki 18 goresan, tersusun dari elemen (咢, 頁) yang melambangkan konsep intinya.',
     examples: [
-      { word: '顎', reading: 'あご', meaning: 'chin' },
+      { word: '顎', reading: 'あご', meaning: 'Chin' },
       { word: '顎骨', reading: 'がっこつ', meaning: 'Tulang rahang pengunyah' },
     ],
   },
@@ -17606,8 +17606,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 顧 (Look back / review) memiliki 21 goresan, tersusun dari elemen (雇, 頁) yang melambangkan konsep intinya.',
     examples: [
       { word: '顧客', reading: 'こきゃく', meaning: 'Pelanggan / Klien bisnis' },
-      { word: '顧みる', reading: 'かえりみる', meaning: 'melakukan look back / melakukan turn around / melakukan review' },
-      { word: '回顧', reading: 'かいこ', meaning: 'recollecting' },
+      { word: '顧みる', reading: 'かえりみる', meaning: 'Melihat (back) / Turn around / Review' },
+      { word: '回顧', reading: 'かいこ', meaning: 'Recollecting' },
     ],
   },
   {
@@ -17623,8 +17623,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["飠","几"],
     mnemonic: 'Karakter 飢 (Hungry / starve) memiliki 10 goresan, tersusun dari elemen (飠, 几) yang melambangkan konsep intinya.',
     examples: [
-      { word: '飢える', reading: 'うえる', meaning: 'melakukan starve' },
-      { word: '飢饉', reading: 'ききん', meaning: 'famine' },
+      { word: '飢える', reading: 'うえる', meaning: 'Starve' },
+      { word: '飢饉', reading: 'ききん', meaning: 'Famine' },
       { word: '飢え死に', reading: 'うえじに', meaning: '(death from) starvation' },
     ],
   },
@@ -17641,8 +17641,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["飠","司"],
     mnemonic: 'Karakter 飼 (Domesticate / raise) memiliki 13 goresan, tersusun dari elemen (飠, 司) yang melambangkan konsep intinya.',
     examples: [
-      { word: '飼う', reading: 'かう', meaning: 'melakukan keep / melakukan own (a pet) / menaikkan / mengangkat' },
-      { word: '飼育', reading: 'しいく', meaning: 'breeding / raising / rearing' },
+      { word: '飼う', reading: 'かう', meaning: 'Keep / Own (a pet) / menaikkan / mengangkat' },
+      { word: '飼育', reading: 'しいく', meaning: 'Breeding / raising / rearing' },
       { word: '飼い主', reading: 'かいぬし', meaning: '(pet) owner' },
     ],
   },
@@ -17659,9 +17659,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["飠","包"],
     mnemonic: 'Karakter 飽 (Sated / tired of) memiliki 13 goresan, tersusun dari elemen (飠, 包) yang melambangkan konsep intinya.',
     examples: [
-      { word: '飽きる', reading: 'あきる', meaning: 'melakukan get tired of / melakukan lose interest in' },
-      { word: '飽和', reading: 'ほうわ', meaning: 'saturation' },
-      { word: '飽くまで', reading: 'あくまで', meaning: 'melakukan the end / melakukan the last / stubbornly' },
+      { word: '飽きる', reading: 'あきる', meaning: 'Mendapatkan (tired of) / Kehilangan (interest in)' },
+      { word: '飽和', reading: 'ほうわ', meaning: 'Saturation' },
+      { word: '飽くまで', reading: 'あくまで', meaning: 'The end / The last / stubbornly' },
     ],
   },
   {
@@ -17677,9 +17677,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["飠","𠂉","巾"],
     mnemonic: 'Karakter 飾 (Decorate / ornament) memiliki 13 goresan, tersusun dari elemen (飠, 𠂉, 巾) yang melambangkan konsep intinya.',
     examples: [
-      { word: '飾り', reading: 'かざり', meaning: 'decoration' },
-      { word: '修飾', reading: 'しゅうしょく', meaning: 'ornamentation / modification (gram)' },
-      { word: '飾る', reading: 'かざる', meaning: 'melakukan decorate / melakukan adorn' },
+      { word: '飾り', reading: 'かざり', meaning: 'Decoration' },
+      { word: '修飾', reading: 'しゅうしょく', meaning: 'Ornamentation / modification (gram)' },
+      { word: '飾る', reading: 'かざる', meaning: 'Decorate / Adorn' },
     ],
   },
   {
@@ -17695,7 +17695,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["飠","并"],
     mnemonic: 'Karakter 餅 (Mochi rice cake) memiliki 14 goresan, tersusun dari elemen (飠, 并) yang melambangkan konsep intinya.',
     examples: [
-      { word: '餅', reading: 'もち', meaning: 'sticky rice cake' },
+      { word: '餅', reading: 'もち', meaning: 'Sticky rice cake' },
       { word: '煎餅', reading: 'せんべい', meaning: '(Japanese) rice cracker' },
     ],
   },
@@ -17712,9 +17712,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["𦍌","食"],
     mnemonic: 'Karakter 養 (Foster / bring up) memiliki 15 goresan, tersusun dari elemen (𦍌, 食) yang melambangkan konsep intinya.',
     examples: [
-      { word: '栄養', reading: 'えいよう', meaning: 'nutrition / nourishment' },
-      { word: '扶養', reading: 'ふよう', meaning: 'support / maintenance' },
-      { word: '保養', reading: 'ほよう', meaning: 'health preservation / recuperation / recreation' },
+      { word: '栄養', reading: 'えいよう', meaning: 'Nutrition / nourishment' },
+      { word: '扶養', reading: 'ふよう', meaning: 'Support / maintenance' },
+      { word: '保養', reading: 'ほよう', meaning: 'Health preservation / recuperation / recreation' },
     ],
   },
   {
@@ -17730,7 +17730,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["飠","耳"],
     mnemonic: 'Karakter 餌 (Makanan / bait) memiliki 14 goresan, tersusun dari elemen (飠, 耳) yang melambangkan konsep intinya.',
     examples: [
-      { word: '餌', reading: 'えさ', meaning: 'feed / bait' },
+      { word: '餌', reading: 'えさ', meaning: 'Feed / bait' },
       { word: '好餌', reading: 'こうじ', meaning: 'Umpan mangsa yang sangat menggiurkan' },
     ],
   },
@@ -17747,7 +17747,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["飠","我"],
     mnemonic: 'Karakter 餓 (Starve / hungry) memiliki 15 goresan, tersusun dari elemen (飠, 我) yang melambangkan konsep intinya.',
     examples: [
-      { word: '飢餓', reading: 'きが', meaning: 'starvation' },
+      { word: '飢餓', reading: 'きが', meaning: 'Starvation' },
       { word: '餓死', reading: 'がし', meaning: '(death from) starvation' },
     ],
   },
@@ -17764,9 +17764,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["馬","太"],
     mnemonic: 'Karakter 駄 (Burdensome / pack horse) memiliki 14 goresan, tersusun dari elemen (馬, 太) yang melambangkan konsep intinya.',
     examples: [
-      { word: '無駄', reading: 'むだ', meaning: 'futility / uselessness' },
-      { word: '駄作', reading: 'ださく', meaning: 'poor work' },
-      { word: '無駄遣い', reading: 'むだづかい', meaning: 'waste money on / squander money on' },
+      { word: '無駄', reading: 'むだ', meaning: 'Futility / uselessness' },
+      { word: '駄作', reading: 'ださく', meaning: 'Poor work' },
+      { word: '無駄遣い', reading: 'むだづかい', meaning: 'Waste money on / squander money on' },
     ],
   },
   {
@@ -17782,8 +17782,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["馬","区"],
     mnemonic: 'Karakter 駆 (Drive / berlari) memiliki 14 goresan, tersusun dari elemen (馬, 区) yang melambangkan konsep intinya.',
     examples: [
-      { word: '駆ける', reading: 'かける', meaning: 'berlari' },
-      { word: '駆け足', reading: 'かけあし', meaning: 'running fast / double time' },
+      { word: '駆ける', reading: 'かける', meaning: 'Berlari' },
+      { word: '駆け足', reading: 'かけあし', meaning: 'Running fast / double time' },
       { word: '駆けっこ', reading: 'かけっこ', meaning: '(foot) race' },
     ],
   },
@@ -17817,8 +17817,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["馬","奇"],
     mnemonic: 'Karakter 騎 (Equestrian / riding on horses) memiliki 18 goresan, tersusun dari elemen (馬, 奇) yang melambangkan konsep intinya.',
     examples: [
-      { word: '一騎打ち', reading: 'いっきうち', meaning: 'single combat' },
-      { word: '騎兵', reading: 'きへい', meaning: 'cavalry' },
+      { word: '一騎打ち', reading: 'いっきうち', meaning: 'Single combat' },
+      { word: '騎兵', reading: 'きへい', meaning: 'Cavalry' },
       { word: '騎士', reading: 'きし', meaning: '(medieval) knight' },
     ],
   },
@@ -17835,9 +17835,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["馬","𧈡"],
     mnemonic: 'Karakter 騒 (Boisterous / make noise) memiliki 18 goresan, tersusun dari elemen (馬, 𧈡) yang melambangkan konsep intinya.',
     examples: [
-      { word: '騒ぎ', reading: 'さわぎ', meaning: 'kegemparan / keributan / gangguan keributan' },
-      { word: '騒音', reading: 'そうおん', meaning: 'noise' },
-      { word: '騒ぐ', reading: 'さわぐ', meaning: 'melakukan make noise / melakukan clamor' },
+      { word: '騒ぎ', reading: 'さわぎ', meaning: 'Kegemparan / keributan / gangguan keributan' },
+      { word: '騒音', reading: 'そうおん', meaning: 'Noise' },
+      { word: '騒ぐ', reading: 'さわぐ', meaning: 'Membuat (noise) / Clamor' },
     ],
   },
   {
@@ -17853,9 +17853,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["月","駦"],
     mnemonic: 'Karakter 騰 (Leaping up / jumping up) memiliki 20 goresan, tersusun dari elemen (月, 駦) yang melambangkan konsep intinya.',
     examples: [
-      { word: '沸騰', reading: 'ふっとう', meaning: 'boiling / seething' },
-      { word: '急騰', reading: 'きゅうとう', meaning: 'sudden rise (in price)' },
-      { word: '暴騰', reading: 'ぼうとう', meaning: 'sudden rise' },
+      { word: '沸騰', reading: 'ふっとう', meaning: 'Boiling / seething' },
+      { word: '急騰', reading: 'きゅうとう', meaning: 'Sudden rise (in price)' },
+      { word: '暴騰', reading: 'ぼうとう', meaning: 'Sudden rise' },
     ],
   },
   {
@@ -17871,9 +17871,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["敬","馬"],
     mnemonic: 'Karakter 驚 (Wonder / be surprised) memiliki 22 goresan, tersusun dari elemen (敬, 馬) yang melambangkan konsep intinya.',
     examples: [
-      { word: '驚き', reading: 'おどろき', meaning: 'surprise / astonishment / wonder' },
-      { word: '驚く', reading: 'おどろく', meaning: 'melakukan be surprised / melakukan be astonished' },
-      { word: '驚異', reading: 'きょうい', meaning: 'wonder / miracle' },
+      { word: '驚き', reading: 'おどろき', meaning: 'Surprise / astonishment / wonder' },
+      { word: '驚く', reading: 'おどろく', meaning: 'Menjadi surprised / Menjadi astonished' },
+      { word: '驚異', reading: 'きょうい', meaning: 'Wonder / miracle' },
     ],
   },
   {
@@ -17889,8 +17889,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["骨","亥"],
     mnemonic: 'Karakter 骸 (Bone / body) memiliki 16 goresan, tersusun dari elemen (骨, 亥) yang melambangkan konsep intinya.',
     examples: [
-      { word: '亡骸', reading: 'なきがら', meaning: 'remains' },
-      { word: '骸骨', reading: 'がいこつ', meaning: 'skeleton' },
+      { word: '亡骸', reading: 'なきがら', meaning: 'Remains' },
+      { word: '骸骨', reading: 'がいこつ', meaning: 'Skeleton' },
     ],
   },
   {
@@ -17906,9 +17906,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["骨","迶"],
     mnemonic: 'Karakter 髄 (Marrow / pith) memiliki 19 goresan, tersusun dari elemen (骨, 迶) yang melambangkan konsep intinya.',
     examples: [
-      { word: '真髄', reading: 'しんずい', meaning: 'essence' },
-      { word: '脊髄', reading: 'せきずい', meaning: 'spinal cord' },
-      { word: '骨髄', reading: 'こつずい', meaning: 'bone marrow' },
+      { word: '真髄', reading: 'しんずい', meaning: 'Essence' },
+      { word: '脊髄', reading: 'せきずい', meaning: 'Spinal cord' },
+      { word: '骨髄', reading: 'こつずい', meaning: 'Bone marrow' },
     ],
   },
   {
@@ -17924,8 +17924,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["木","缶","木","冖","鬯","彡"],
     mnemonic: 'Karakter 鬱 (Gloom / depression) memiliki 29 goresan, tersusun dari elemen (木, 缶, 木) yang melambangkan konsep intinya.',
     examples: [
-      { word: '憂鬱', reading: 'ゆううつ', meaning: 'depression / melancholy' },
-      { word: '鬱陶しい', reading: 'うっとうしい', meaning: 'gloomy (e.g. mood)' },
+      { word: '憂鬱', reading: 'ゆううつ', meaning: 'Depression / melancholy' },
+      { word: '鬱陶しい', reading: 'うっとうしい', meaning: 'Gloomy (e.g. mood)' },
     ],
   },
   {
@@ -17942,8 +17942,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     mnemonic: 'Karakter 鬼 (Iblis raksasa oni roh jahat) memiliki 10 goresan, tersusun dari elemen (甶, 儿, 厶) yang melambangkan konsep intinya.',
     examples: [
       { word: '百鬼夜行', reading: 'ひゃっきやこう', meaning: 'Kekacauan merajalela di mana oknum jahat bertindak sesuka hati' },
-      { word: '鬼', reading: 'おに', meaning: 'ogre / demon / \\' },
-      { word: '吸血鬼', reading: 'きゅうけつき', meaning: 'vampire' },
+      { word: '鬼', reading: 'おに', meaning: 'Ogre / demon / \\' },
+      { word: '吸血鬼', reading: 'きゅうけつき', meaning: 'Vampire' },
     ],
   },
   {
@@ -17959,9 +17959,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["云","鬼"],
     mnemonic: 'Karakter 魂 (Soul / jiwa / roh) memiliki 14 goresan, tersusun dari elemen (云, 鬼) yang melambangkan konsep intinya.',
     examples: [
-      { word: '魂', reading: 'たましい', meaning: 'soul / spirit' },
-      { word: '商魂', reading: 'しょうこん', meaning: 'commercial spirit' },
-      { word: '鎮魂', reading: 'ちんこん', meaning: 'repose of a soul' },
+      { word: '魂', reading: 'たましい', meaning: 'Soul / spirit' },
+      { word: '商魂', reading: 'しょうこん', meaning: 'Commercial spirit' },
+      { word: '鎮魂', reading: 'ちんこん', meaning: 'Repose of a soul' },
     ],
   },
   {
@@ -17977,9 +17977,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["鬼","未"],
     mnemonic: 'Karakter 魅 (Memikat mempesona daya tarik) memiliki 15 goresan, tersusun dari elemen (鬼, 未) yang melambangkan konsep intinya.',
     examples: [
-      { word: '魅力', reading: 'みりょく', meaning: 'charm / fascination / appeal' },
-      { word: '魅了', reading: 'みりょう', meaning: 'charm' },
-      { word: '魅力的', reading: 'みりょくてき', meaning: 'charming' },
+      { word: '魅力', reading: 'みりょく', meaning: 'Charm / fascination / appeal' },
+      { word: '魅了', reading: 'みりょう', meaning: 'Charm' },
+      { word: '魅力的', reading: 'みりょくてき', meaning: 'Charming' },
     ],
   },
   {
@@ -17995,9 +17995,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["麻","鬼"],
     mnemonic: 'Karakter 魔 (Iblis sihir setan magis) memiliki 21 goresan, tersusun dari elemen (麻, 鬼) yang melambangkan konsep intinya.',
     examples: [
-      { word: '悪魔', reading: 'あくま', meaning: 'devil / demon / evil spirit' },
+      { word: '悪魔', reading: 'あくま', meaning: 'Devil / demon / evil spirit' },
       { word: '邪魔', reading: 'じゃま', meaning: 'Mengganggu / Menghalangi' },
-      { word: 'お邪魔します', reading: 'おじゃまします', meaning: 'excuse me for disturbing you' },
+      { word: 'お邪魔します', reading: 'おじゃまします', meaning: 'Excuse me for disturbing you' },
     ],
   },
   {
@@ -18013,8 +18013,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["魚","羊"],
     mnemonic: 'Karakter 鮮 (Fresh / vivid) memiliki 17 goresan, tersusun dari elemen (魚, 羊) yang melambangkan konsep intinya.',
     examples: [
-      { word: '新鮮', reading: 'しんせん', meaning: 'fresh' },
-      { word: '鮮やか', reading: 'あざやか', meaning: 'vivid / clear' },
+      { word: '新鮮', reading: 'しんせん', meaning: 'Fresh' },
+      { word: '鮮やか', reading: 'あざやか', meaning: 'Vivid / clear' },
       { word: '北朝鮮', reading: 'きたちょうせん', meaning: 'North Korea' },
     ],
   },
@@ -18031,8 +18031,8 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["魚","京"],
     mnemonic: 'Karakter 鯨 (Whale) memiliki 19 goresan, tersusun dari elemen (魚, 京) yang melambangkan konsep intinya.',
     examples: [
-      { word: '捕鯨', reading: 'ほげい', meaning: 'whaling' },
-      { word: '鯨肉', reading: 'げいにく', meaning: 'whale meat' },
+      { word: '捕鯨', reading: 'ほげい', meaning: 'Whaling' },
+      { word: '鯨肉', reading: 'げいにく', meaning: 'Whale meat' },
     ],
   },
   {
@@ -18048,9 +18048,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["爫","夫","鳥"],
     mnemonic: 'Karakter 鶏 (Chicken) memiliki 19 goresan, tersusun dari elemen (爫, 夫, 鳥) yang melambangkan konsep intinya.',
     examples: [
-      { word: '鶏肉', reading: 'とりにく', meaning: 'chicken meat' },
-      { word: '養鶏', reading: 'ようけい', meaning: 'poultry raising' },
-      { word: '鶏卵', reading: 'けいらん', meaning: 'hen\'s egg' },
+      { word: '鶏肉', reading: 'とりにく', meaning: 'Chicken meat' },
+      { word: '養鶏', reading: 'ようけい', meaning: 'Poultry raising' },
+      { word: '鶏卵', reading: 'けいらん', meaning: 'Hen\'s egg' },
     ],
   },
   {
@@ -18083,9 +18083,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["广","コ","丨","丨","比"],
     mnemonic: 'Karakter 鹿 (Rusa kijang hewan bertanduk) memiliki 11 goresan, tersusun dari elemen (广, コ, 丨, 丨, 比) yang melambangkan konsep intinya.',
     examples: [
-      { word: '馬鹿', reading: 'ばか', meaning: 'fool / idiot' },
-      { word: '馬鹿らしい', reading: 'ばからしい', meaning: 'absurd' },
-      { word: '馬鹿馬鹿しい', reading: 'ばかばかしい', meaning: 'absurd' },
+      { word: '馬鹿', reading: 'ばか', meaning: 'Fool / idiot' },
+      { word: '馬鹿らしい', reading: 'ばからしい', meaning: 'Absurd' },
+      { word: '馬鹿馬鹿しい', reading: 'ばかばかしい', meaning: 'Absurd' },
     ],
   },
   {
@@ -18101,7 +18101,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["林","鹿"],
     mnemonic: 'Karakter 麓 (Kaki of a gunung) memiliki 19 goresan, tersusun dari elemen (林, 鹿) yang melambangkan konsep intinya.',
     examples: [
-      { word: '麓', reading: 'ふもと', meaning: 'the foot / the bottom / the base (of a mountain)' },
+      { word: '麓', reading: 'ふもと', meaning: 'The foot / the bottom / the base (of a mountain)' },
       { word: '山麓', reading: 'さんろく', meaning: 'Kawasan lembah kaki gunung' },
     ],
   },
@@ -18118,9 +18118,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["丽","鹿"],
     mnemonic: 'Karakter 麗 (Lovely / beautiful) memiliki 19 goresan, tersusun dari elemen (丽, 鹿) yang melambangkan konsep intinya.',
     examples: [
-      { word: '綺麗', reading: 'きれい', meaning: 'pretty / clean / tidy' },
-      { word: '美辞麗句', reading: 'びじれいく', meaning: 'flowery words' },
-      { word: '華麗', reading: 'かれい', meaning: 'splendid' },
+      { word: '綺麗', reading: 'きれい', meaning: 'Pretty / clean / tidy' },
+      { word: '美辞麗句', reading: 'びじれいく', meaning: 'Flowery words' },
+      { word: '華麗', reading: 'かれい', meaning: 'Splendid' },
     ],
   },
   {
@@ -18136,7 +18136,7 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["麦","面"],
     mnemonic: 'Karakter 麺 (Noodles / wheat flour) memiliki 16 goresan, tersusun dari elemen (麦, 面) yang melambangkan konsep intinya.',
     examples: [
-      { word: '拉麺', reading: 'ラーメン', meaning: 'ramen' },
+      { word: '拉麺', reading: 'ラーメン', meaning: 'Ramen' },
       { word: '麺', reading: 'めん', meaning: 'Mie gandum ramen udon soba' },
       { word: '製麺', reading: 'せいめん', meaning: 'Produksi pembuatan mie' },
     ],
@@ -18154,9 +18154,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["广","林"],
     mnemonic: 'Karakter 麻 (Hemp / flax) memiliki 11 goresan, tersusun dari elemen (广, 林) yang melambangkan konsep intinya.',
     examples: [
-      { word: '麻', reading: 'あさ', meaning: 'hemp' },
-      { word: '麻酔', reading: 'ますい', meaning: 'anesthesia' },
-      { word: '麻痺', reading: 'まひ', meaning: 'paralysis / palsy / numbness' },
+      { word: '麻', reading: 'あさ', meaning: 'Hemp' },
+      { word: '麻酔', reading: 'ますい', meaning: 'Anesthesia' },
+      { word: '麻痺', reading: 'まひ', meaning: 'Paralysis / palsy / numbness' },
     ],
   },
   {
@@ -18172,9 +18172,9 @@ export const KANJI_N1_COMPLETE: KanjiItem[] = [
     radicals: ["壴","支"],
     mnemonic: 'Karakter 鼓 (Gendang bedug tabuh musik tsuzumi) memiliki 13 goresan, tersusun dari elemen (壴, 支) yang melambangkan konsep intinya.',
     examples: [
-      { word: '太鼓', reading: 'たいこ', meaning: 'drum / tambourine' },
-      { word: '鼓動', reading: 'こどう', meaning: 'beat' },
-      { word: '鼓膜', reading: 'こまく', meaning: 'eardrum' },
+      { word: '太鼓', reading: 'たいこ', meaning: 'Drum / tambourine' },
+      { word: '鼓動', reading: 'こどう', meaning: 'Beat' },
+      { word: '鼓膜', reading: 'こまく', meaning: 'Eardrum' },
     ],
   },
 ];
