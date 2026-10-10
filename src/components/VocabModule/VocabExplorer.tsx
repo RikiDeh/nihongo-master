@@ -101,15 +101,10 @@ export const VocabExplorer: React.FC<VocabExplorerProps> = ({ onGoToQuiz, initia
     });
   }, [selectedLevel, selectedCategory, onlyBookmarked, deferredSearchQuery, progress.bookmarkedVocabIds]);
 
-  // Set active item fallback
-  useEffect(() => {
-    if (filteredVocab.length > 0 && !activeVocab) {
-      setActiveVocab(filteredVocab[0]);
-    }
-  }, [filteredVocab, activeVocab]);
-
   const displayedVocab = filteredVocab.slice(0, visibleCount);
-  const currentInspectorItem = activeVocab || displayedVocab[0] || null;
+  const currentInspectorItem = (activeVocab && filteredVocab.some(v => v.id === activeVocab.id))
+    ? activeVocab
+    : (displayedVocab[0] || null);
   const currentFlashcard = filteredVocab[flashcardIndex] || filteredVocab[0];
 
   const handleNextFlashcard = () => {

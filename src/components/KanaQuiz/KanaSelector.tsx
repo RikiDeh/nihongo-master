@@ -135,6 +135,47 @@ export const KanaSelector: React.FC<KanaSelectorProps> = ({ onStartQuiz }) => {
   const activeDakutenGroups = scriptType === 'hiragana' ? HIRAGANA_DAKUTEN_GROUPS : KATAKANA_DAKUTEN_GROUPS;
   const activeYoonGroups = scriptType === 'hiragana' ? HIRAGANA_YOON_GROUPS : KATAKANA_YOON_GROUPS;
 
+  // Helper function to check if all items in a group set are selected
+  const areAllItemsSelected = (items: KanaItem[]) => {
+    return items.length > 0 && items.every(i => selectedItemIds.has(i.id));
+  };
+
+  // Group definitions for presets
+  const hiraganaAllItems = [
+    ...HIRAGANA_GOJUUON_GROUPS, ...HIRAGANA_DAKUTEN_GROUPS, ...HIRAGANA_YOON_GROUPS
+  ].flatMap(g => g.items);
+
+  const katakanaAllItems = [
+    ...KATAKANA_GOJUUON_GROUPS, ...KATAKANA_DAKUTEN_GROUPS, ...KATAKANA_YOON_GROUPS
+  ].flatMap(g => g.items);
+
+  const gojuuonBothItems = [
+    ...HIRAGANA_GOJUUON_GROUPS, ...KATAKANA_GOJUUON_GROUPS
+  ].flatMap(g => g.items);
+
+  const allItemsList = [
+    ...hiraganaAllItems, ...katakanaAllItems
+  ];
+
+  // Active status for presets
+  const isGojuuonBothActive = areAllItemsSelected(gojuuonBothItems);
+  const isHiraganaAllActive = areAllItemsSelected(hiraganaAllItems);
+  const isKatakanaAllActive = areAllItemsSelected(katakanaAllItems);
+  const isAllActive = areAllItemsSelected(allItemsList);
+
+  const togglePresetItems = (targetItems: KanaItem[]) => {
+    setSelectedItemIds(prev => {
+      const next = new Set(prev);
+      const allSelected = targetItems.every(i => next.has(i.id));
+      if (allSelected) {
+        targetItems.forEach(i => next.delete(i.id));
+      } else {
+        targetItems.forEach(i => next.add(i.id));
+      }
+      return next;
+    });
+  };
+
   const selectedTotal = selectedItemIds.size;
 
   return (
@@ -167,6 +208,9 @@ export const KanaSelector: React.FC<KanaSelectorProps> = ({ onStartQuiz }) => {
           >
             <span className="font-serif-jp text-sm font-bold">あ</span>
             <span>Hiragana (平仮名)</span>
+            {isHiraganaAllActive && (
+              <span className="w-2 h-2 rounded-full bg-[#c84b31] dark:bg-[#e05d44]" title="Semua Hiragana terpilih" />
+            )}
           </button>
           <button
             type="button"
@@ -179,6 +223,9 @@ export const KanaSelector: React.FC<KanaSelectorProps> = ({ onStartQuiz }) => {
           >
             <span className="font-serif-jp text-sm font-bold">ア</span>
             <span>Katakana (片仮名)</span>
+            {isKatakanaAllActive && (
+              <span className="w-2 h-2 rounded-full bg-[#1e3a8a] dark:bg-[#3b82f6]" title="Semua Katakana terpilih" />
+            )}
           </button>
         </div>
       </div>
@@ -217,34 +264,76 @@ export const KanaSelector: React.FC<KanaSelectorProps> = ({ onStartQuiz }) => {
           </div>
         </div>
 
-        {/* Quick Presets Buttons */}
+        {/* Quick Presets Buttons with Active State Indicators */}
         <div className="flex flex-wrap items-center gap-2">
           <span className="text-[10px] font-mono uppercase text-[#78716c] dark:text-[#a1a1aa] mr-1">Preset:</span>
+          
+          {/* Preset: Dasar 46 Keduanya */}
           <button
             type="button"
-            onClick={() => selectPreset('gojuuon-both')}
-            className="px-2.5 py-1 rounded bg-[#faf8f5] dark:bg-[#18181b] hover:bg-[#e7e5e4] dark:hover:bg-[#27272a] border border-[#e7e5e4] dark:border-[#27272a] text-xs text-[#1c1917] dark:text-[#f4f4f5] transition cursor-pointer"
+            onClick={() => togglePresetItems(gojuuonBothItems)}
+            className={`px-2.5 py-1 rounded text-xs transition cursor-pointer flex items-center gap-1.5 border ${
+              isGojuuonBothActive
+                ? 'bg-[#c84b31]/10 dark:bg-[#e05d44]/15 border-[#c84b31] dark:border-[#e05d44] text-[#c84b31] dark:text-[#e05d44] font-bold shadow-xs ring-1 ring-[#c84b31]/20'
+                : 'bg-[#faf8f5] dark:bg-[#18181b] hover:bg-[#e7e5e4] dark:hover:bg-[#27272a] border-[#e7e5e4] dark:border-[#27272a] text-[#1c1917] dark:text-[#f4f4f5]'
+            }`}
+            title={isGojuuonBothActive ? 'Klik untuk membatalkan pilihan Dasar 46' : 'Klik untuk memilih Dasar 46'}
           >
-            Dasar 46 Keduanya
+            <span className="font-mono text-[10px]">{isGojuuonBothActive ? '✓' : '+'}</span>
+            <span>Dasar 46 Keduanya</span>
           </button>
+
+          {/* Preset: Semua Hiragana */}
           <button
             type="button"
-            onClick={() => selectPreset(scriptType === 'hiragana' ? 'hiragana-all' : 'katakana-all')}
-            className="px-2.5 py-1 rounded bg-[#faf8f5] dark:bg-[#18181b] hover:bg-[#e7e5e4] dark:hover:bg-[#27272a] border border-[#e7e5e4] dark:border-[#27272a] text-xs text-[#1c1917] dark:text-[#f4f4f5] transition cursor-pointer"
+            onClick={() => togglePresetItems(hiraganaAllItems)}
+            className={`px-2.5 py-1 rounded text-xs transition cursor-pointer flex items-center gap-1.5 border ${
+              isHiraganaAllActive
+                ? 'bg-[#c84b31]/10 dark:bg-[#e05d44]/15 border-[#c84b31] dark:border-[#e05d44] text-[#c84b31] dark:text-[#e05d44] font-bold shadow-xs ring-1 ring-[#c84b31]/20'
+                : 'bg-[#faf8f5] dark:bg-[#18181b] hover:bg-[#e7e5e4] dark:hover:bg-[#27272a] border-[#e7e5e4] dark:border-[#27272a] text-[#1c1917] dark:text-[#f4f4f5]'
+            }`}
+            title={isHiraganaAllActive ? 'Klik untuk membatalkan semua Hiragana' : 'Klik untuk memilih semua Hiragana'}
           >
-            Semua {scriptType === 'hiragana' ? 'Hiragana' : 'Katakana'}
+            <span className="font-mono text-[10px]">{isHiraganaAllActive ? '✓' : '+'}</span>
+            <span>Semua Hiragana</span>
           </button>
+
+          {/* Preset: Semua Katakana */}
           <button
             type="button"
-            onClick={() => selectPreset('all')}
-            className="px-2.5 py-1 rounded bg-[#faf8f5] dark:bg-[#18181b] hover:bg-[#e7e5e4] dark:hover:bg-[#27272a] border border-[#e7e5e4] dark:border-[#27272a] text-xs text-[#1c1917] dark:text-[#f4f4f5] transition cursor-pointer"
+            onClick={() => togglePresetItems(katakanaAllItems)}
+            className={`px-2.5 py-1 rounded text-xs transition cursor-pointer flex items-center gap-1.5 border ${
+              isKatakanaAllActive
+                ? 'bg-[#1e3a8a]/10 dark:bg-[#3b82f6]/15 border-[#1e3a8a] dark:border-[#3b82f6] text-[#1e3a8a] dark:text-[#3b82f6] font-bold shadow-xs ring-1 ring-[#1e3a8a]/20'
+                : 'bg-[#faf8f5] dark:bg-[#18181b] hover:bg-[#e7e5e4] dark:hover:bg-[#27272a] border-[#e7e5e4] dark:border-[#27272a] text-[#1c1917] dark:text-[#f4f4f5]'
+            }`}
+            title={isKatakanaAllActive ? 'Klik untuk membatalkan semua Katakana' : 'Klik untuk memilih semua Katakana'}
           >
-            Pilih Seluruhnya (Hira + Kata)
+            <span className="font-mono text-[10px]">{isKatakanaAllActive ? '✓' : '+'}</span>
+            <span>Semua Katakana</span>
           </button>
+
+          {/* Preset: Pilih Seluruhnya */}
+          <button
+            type="button"
+            onClick={() => togglePresetItems(allItemsList)}
+            className={`px-2.5 py-1 rounded text-xs transition cursor-pointer flex items-center gap-1.5 border ${
+              isAllActive
+                ? 'bg-[#1c1917] dark:bg-[#f4f4f5] border-[#1c1917] dark:border-[#f4f4f5] text-white dark:text-[#18181b] font-bold shadow-xs'
+                : 'bg-[#faf8f5] dark:bg-[#18181b] hover:bg-[#e7e5e4] dark:hover:bg-[#27272a] border-[#e7e5e4] dark:border-[#27272a] text-[#1c1917] dark:text-[#f4f4f5]'
+            }`}
+            title={isAllActive ? 'Klik untuk membatalkan seluruh pilihan' : 'Klik untuk memilih seluruh Hiragana & Katakana'}
+          >
+            <span className="font-mono text-[10px]">{isAllActive ? '✓' : '+'}</span>
+            <span>Pilih Seluruhnya (Hira + Kata)</span>
+          </button>
+
+          {/* Reset button */}
           <button
             type="button"
             onClick={() => selectPreset('clear')}
             className="px-2.5 py-1 rounded bg-transparent hover:bg-rose-500/10 border border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] hover:text-rose-600 text-xs transition cursor-pointer flex items-center gap-1 ml-auto"
+            title="Kosongkan semua pilihan"
           >
             <RotateCcw className="w-3 h-3" />
             <span>Reset</span>
@@ -498,8 +587,8 @@ export const KanaSelector: React.FC<KanaSelectorProps> = ({ onStartQuiz }) => {
         </div>
       )}
 
-      {/* Floating Bottom Action Dock */}
-      <div className="fixed bottom-0 left-0 right-0 md:left-64 bg-[#faf8f5]/95 dark:bg-[#18181b]/95 backdrop-blur-md border-t border-[#e7e5e4] dark:border-[#27272a] p-3 sm:p-4 z-40 transition-colors">
+      {/* Sticky Bottom Action Dock (Responsive to sidebar state) */}
+      <div className="sticky bottom-0 bg-[#faf8f5]/95 dark:bg-[#18181b]/95 backdrop-blur-md border-t border-[#e7e5e4] dark:border-[#27272a] p-3 sm:p-4 z-40 mt-8 shadow-lg transition-colors">
         <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-lg bg-white dark:bg-[#1f1f23] border border-[#d6d3d1] dark:border-[#3f3f46] flex items-center justify-center font-mono font-bold text-[#c84b31] dark:text-[#e05d44]">
