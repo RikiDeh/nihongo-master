@@ -41,14 +41,18 @@ Aplikasi belajar bahasa Jepang interaktif modern yang menyempurnakan konsep **To
 Aplikasi dijalankan menggunakan runtime super cepat **Bun**:
 
 ```bash
-# 1. Masuk ke direktori proyek
-cd /home/shikideh/Projects/nihongo-master
+# 1. Clone repositori & masuk ke direktori
+git clone https://github.com/RikiDeh/nihongo-master.git
+cd nihongo-master
 
-# 2. Jalankan development server
-~/.bun/bin/bun run dev
+# 2. Pasang dependensi
+bun install
+
+# 3. Jalankan development server
+bun run dev
 ```
 
-Buka URL lokal yang muncul di browser (biasanya `http://localhost:5173`).
+Buka URL lokal yang muncul di browser (`http://localhost:5173`).
 
 ---
 
