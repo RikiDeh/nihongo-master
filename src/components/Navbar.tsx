@@ -7,7 +7,7 @@ import { VOCAB_DATA } from '../data/vocabData';
 import { getDueSrsItems } from '../utils/srsEngine';
 import { getUserProgress, subscribeToStorage } from '../utils/storage';
 
-export type ActiveModule = 'kana' | 'kanji' | 'vocab' | 'grammar' | 'dojo' | 'quiz' | 'roadmap';
+export type ActiveModule = 'kana' | 'kanji' | 'vocab' | 'grammar' | 'dojo' | 'quiz' | 'roadmap' | 'design-lab';
 
 interface NavbarProps {
   activeModule: ActiveModule;
@@ -216,6 +216,20 @@ export const Navbar: React.FC<NavbarProps> = ({ activeModule, onSelectModule, on
             >
               <Swords className="w-3.5 h-3.5 text-rose-400" />
               <span>Dojo Kata Kerja</span>
+            </button>
+
+            <button
+              type="button"
+              onClick={() => onSelectModule('design-lab')}
+              className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl border text-xs font-bold transition cursor-pointer ${
+                activeModule === 'design-lab'
+                  ? 'bg-indigo-600 border-indigo-500 text-white shadow-md shadow-indigo-500/25'
+                  : 'bg-indigo-950/40 border-indigo-800/60 text-indigo-300 hover:bg-indigo-900/60'
+              }`}
+              title="Buka Design Lab: Sandbox Uji Perbandingan Desain (Zero DB Touch)"
+            >
+              <span className="text-xs">🧪</span>
+              <span className="hidden sm:inline">Design Lab</span>
             </button>
 
             <button

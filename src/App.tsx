@@ -13,9 +13,18 @@ const GrammarExplorer = lazy(() => import('./components/GrammarModule/GrammarExp
 const ConjugationDojo = lazy(() => import('./components/ConjugationModule/ConjugationDojo').then(m => ({ default: m.ConjugationDojo })));
 const N5QuizCenter = lazy(() => import('./components/QuizModule/N5QuizCenter').then(m => ({ default: m.N5QuizCenter })));
 const RoadmapView = lazy(() => import('./components/Roadmap/RoadmapView').then(m => ({ default: m.RoadmapView })));
+const DesignShowroom = lazy(() => import('./components/DesignLab/DesignShowroom').then(m => ({ default: m.DesignShowroom })));
 
 export function App() {
-  const [activeModule, setActiveModule] = useState<ActiveModule>('kana');
+  const [activeModule, setActiveModule] = useState<ActiveModule>(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('lab') === 'true' || window.location.hash === '#lab') {
+        return 'design-lab';
+      }
+    }
+    return 'kana';
+  });
   const [activeLevel, setActiveLevel] = useState<JLPTLevel | 'ALL' | undefined>(undefined);
   const [isSrsOpen, setIsSrsOpen] = useState(false);
 
@@ -155,6 +164,10 @@ export function App() {
 
           {activeModule === 'roadmap' && (
             <RoadmapView onNavigate={handleNavigateFromRoadmap} />
+          )}
+
+          {activeModule === 'design-lab' && (
+            <DesignShowroom onBackToApp={() => setActiveModule('kana')} />
           )}
         </Suspense>
       </main>
