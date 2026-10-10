@@ -342,17 +342,99 @@ export const KanaSelector: React.FC<KanaSelectorProps> = ({ onStartQuiz }) => {
 
       {/* VIEW 1: GOJUUON 50-SOUND ORTHODOX MATRIX TABLE */}
       {categoryView === 'gojuuon' && (
-        <div className="bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] rounded-xl p-3 sm:p-6 shadow-xs mb-8 overflow-hidden">
-          {/* Mobile scroll hint */}
-          <div className="flex sm:hidden items-center justify-between pb-2 mb-2 border-b border-[#e7e5e4]/60 dark:border-[#27272a]/60 text-[11px] font-mono text-[#78716c] dark:text-[#a1a1aa]">
-            <span>Tabel 50 Bunyi (五十音図)</span>
-            <span className="flex items-center gap-1 text-[#c84b31] dark:text-[#e05d44] font-medium">
-              Geser ⟷
-            </span>
+        <div className="space-y-4 mb-8">
+          {/* MOBILE RESPONSIVE 5-COLUMNS CARD VIEW (Zero Horizontal Scroll!) */}
+          <div className="block sm:hidden space-y-3">
+            {GOJUUON_ROW_CONFIG.map(row => {
+              const rowItems: KanaItem[] = [];
+              row.vowels.forEach(romaji => {
+                if (romaji) {
+                  const item = itemsByRomaji.get(romaji);
+                  if (item) rowItems.push(item);
+                }
+              });
+              const isRowAllSelected = rowItems.length > 0 && rowItems.every(i => selectedItemIds.has(i.id));
+
+              return (
+                <div key={row.rowName} className="bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] rounded-xl p-3 shadow-xs">
+                  <div className="flex items-center justify-between mb-2 pb-1.5 border-b border-[#e7e5e4]/60 dark:border-[#27272a]/60">
+                    <span className="text-xs font-mono font-bold text-[#1c1917] dark:text-[#f4f4f5]">
+                      Baris {row.rowName}
+                    </span>
+                    <button
+                      type="button"
+                      onClick={() => toggleItemsList(rowItems)}
+                      className="text-[11px] font-mono text-[#78716c] dark:text-[#a1a1aa] flex items-center gap-1"
+                    >
+                      <span>{isRowAllSelected ? '✓ Batalkan' : '+ Pilih Baris'}</span>
+                    </button>
+                  </div>
+
+                  <div className="grid grid-cols-5 gap-1.5">
+                    {row.vowels.map((romaji, idx) => {
+                      if (!romaji) {
+                        return (
+                          <div 
+                            key={`empty-${idx}`} 
+                            className="h-13 rounded-lg border border-dashed border-[#e7e5e4]/50 dark:border-[#27272a]/50 bg-black/[0.02] dark:bg-white/[0.01] flex items-center justify-center text-[#d6d3d1] dark:text-[#3f3f46] text-xs font-mono select-none"
+                          >
+                            —
+                          </div>
+                        );
+                      }
+
+                      const item = itemsByRomaji.get(romaji);
+                      if (!item) return <div key={romaji} className="h-13" />;
+
+                      const isSelected = selectedItemIds.has(item.id);
+
+                      return (
+                        <button
+                          key={item.id}
+                          type="button"
+                          onClick={() => toggleItem(item.id)}
+                          className={`h-13 rounded-xl border flex flex-col items-center justify-center transition cursor-pointer select-none active:scale-95 ${
+                            isSelected
+                              ? 'bg-[#c84b31]/10 dark:bg-[#e05d44]/15 border-[#c84b31] dark:border-[#e05d44] text-[#c84b31] dark:text-[#e05d44] font-bold shadow-xs'
+                              : 'bg-[#faf8f5] dark:bg-[#18181b] border-[#e7e5e4] dark:border-[#27272a] text-[#1c1917] dark:text-[#f4f4f5]'
+                          }`}
+                        >
+                          <span className="text-xl font-jp leading-none mb-0.5">{item.character}</span>
+                          <span className="text-[10px] font-mono text-[#78716c] dark:text-[#a1a1aa] leading-none">{item.romaji}</span>
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+              );
+            })}
+
+            {/* Special N mobile card */}
+            {specialNItem && (
+              <div className="bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] rounded-xl p-3 shadow-xs flex items-center justify-between">
+                <div>
+                  <span className="text-xs font-mono font-bold block">Konsonan N (撥音)</span>
+                  <span className="text-[11px] text-[#78716c] dark:text-[#a1a1aa]">Satu-satunya huruf tanpa vokal</span>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => toggleItem(specialNItem.id)}
+                  className={`w-14 h-13 rounded-xl border flex flex-col items-center justify-center transition cursor-pointer select-none active:scale-95 ${
+                    selectedItemIds.has(specialNItem.id)
+                      ? 'bg-[#c84b31]/10 dark:bg-[#e05d44]/15 border-[#c84b31] dark:border-[#e05d44] text-[#c84b31] dark:text-[#e05d44] font-bold shadow-xs'
+                      : 'bg-[#faf8f5] dark:bg-[#18181b] border-[#e7e5e4] dark:border-[#27272a] text-[#1c1917] dark:text-[#f4f4f5]'
+                  }`}
+                >
+                  <span className="text-xl font-jp leading-none mb-0.5">{specialNItem.character}</span>
+                  <span className="text-[10px] font-mono text-[#78716c] dark:text-[#a1a1aa] leading-none">{specialNItem.romaji}</span>
+                </button>
+              </div>
+            )}
           </div>
 
-          <div className="overflow-x-auto pb-2 -mx-1 px-1">
-            <div className="min-w-[560px] sm:min-w-[620px]">
+          {/* DESKTOP MATRIX TABLE (SM AND UP) */}
+          <div className="hidden sm:block bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] rounded-xl p-6 shadow-xs overflow-x-auto">
+            <div className="min-w-[620px]">
             {/* Table Header: Vowel Columns [A, I, U, E, O] */}
             <div className="grid grid-cols-6 gap-2 mb-2 pb-2 border-b border-[#e7e5e4] dark:border-[#27272a] text-center font-mono text-xs font-bold text-[#78716c] dark:text-[#a1a1aa]">
               <div className="text-left font-jp text-xs uppercase text-[#1c1917] dark:text-[#f4f4f5] flex items-center">
@@ -360,7 +442,6 @@ export const KanaSelector: React.FC<KanaSelectorProps> = ({ onStartQuiz }) => {
               </div>
               {['a (段)', 'i (段)', 'u (段)', 'e (段)', 'o (段)'].map((col, idx) => {
                 const vowelChar = ['a', 'i', 'u', 'e', 'o'][idx];
-                // Kumpulkan semua item di kolom ini
                 const colItems: KanaItem[] = [];
                 GOJUUON_ROW_CONFIG.forEach(r => {
                   const romaji = r.vowels[idx];

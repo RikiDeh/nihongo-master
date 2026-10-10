@@ -9,6 +9,7 @@ import {
   Target, 
   RotateCcw,
   ChevronRight,
+  ChevronDown,
   ShieldCheck
 } from 'lucide-react';
 import { ActiveModule } from '../Navbar';
@@ -49,6 +50,7 @@ export const RoadmapView: React.FC<RoadmapViewProps> = ({
   const [activeArcId, setActiveArcId] = useState<string>(() => {
     return getUserProgress().currentArcId || 'arc_0';
   });
+  const [showAllMissionsMobile, setShowAllMissionsMobile] = useState(false);
 
   // State untuk Stage Quiz Runner Modal
   const [activeStageQuiz, setActiveStageQuiz] = useState<RoadmapStage | null>(null);
@@ -277,64 +279,79 @@ export const RoadmapView: React.FC<RoadmapViewProps> = ({
         </div>
       </div>
 
-      {/* 3. THREE DYNAMIC DAILY MISSIONS (QUESTS) - COLLAPSIBLE ON MOBILE */}
-      <div className="mb-8">
-        <div className="flex items-center justify-between mb-3 px-1">
+      {/* 3. THREE DYNAMIC DAILY MISSIONS (QUESTS) - COMPACT COLLAPSIBLE ON MOBILE */}
+      <div className="mb-6">
+        <div className="flex items-center justify-between mb-2.5 px-1">
           <div className="flex items-center gap-2">
             <Target className="w-4 h-4 text-[#c84b31] dark:text-[#e05d44]" />
             <h2 className="text-xs font-bold uppercase font-mono tracking-wider text-[#1c1917] dark:text-[#f4f4f5]">
               Target Harian (Misi Hari Ini)
             </h2>
           </div>
-          <span className="text-xs font-mono text-[#78716c] dark:text-[#a1a1aa]">
+          <button
+            type="button"
+            onClick={() => setShowAllMissionsMobile(prev => !prev)}
+            className="md:hidden text-xs font-mono text-[#c84b31] dark:text-[#e05d44] flex items-center gap-1 font-semibold"
+          >
+            <span>{dailyMissionsData.missions.filter(m => m.completed).length}/3 Selesai</span>
+            <ChevronDown className={`w-3.5 h-3.5 transition-transform ${showAllMissionsMobile ? 'rotate-180' : ''}`} />
+          </button>
+          <span className="hidden md:inline text-xs font-mono text-[#78716c] dark:text-[#a1a1aa]">
             {dailyMissionsData.missions.filter(m => m.completed).length} / 3 Selesai
           </span>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-          {dailyMissionsData.missions.map(mission => (
-            <div
-              key={mission.id}
-              className={`p-4 rounded-xl border transition-all ${
-                mission.completed
-                  ? 'bg-emerald-50/50 dark:bg-emerald-950/20 border-emerald-500/40 text-emerald-950 dark:text-emerald-100'
-                  : 'bg-white dark:bg-[#1f1f23] border-[#e7e5e4] dark:border-[#27272a] text-[#1c1917] dark:text-[#f4f4f5]'
-              }`}
-            >
-              <div className="flex items-start justify-between gap-2 mb-2">
-                <span className="text-xs font-bold leading-tight">
-                  {mission.title}
-                </span>
-                {mission.completed ? (
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
-                ) : (
-                  <span className="text-[10px] font-mono font-bold text-[#c84b31] dark:text-[#e05d44] shrink-0">
-                    {mission.current}/{mission.target}
+        {/* Mobile: Show first incomplete mission by default or all if expanded */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-2.5">
+          {dailyMissionsData.missions.map((mission, idx) => {
+            const isHiddenOnMobile = !showAllMissionsMobile && idx > 0 && !mission.completed && dailyMissionsData.missions[0].completed === false;
+            
+            return (
+              <div
+                key={mission.id}
+                className={`p-3.5 rounded-xl border transition-all ${
+                  isHiddenOnMobile ? 'hidden md:block' : 'block'
+                } ${
+                  mission.completed
+                    ? 'bg-emerald-50/50 dark:bg-emerald-950/20 border-emerald-500/40 text-emerald-950 dark:text-emerald-100'
+                    : 'bg-white dark:bg-[#1f1f23] border-[#e7e5e4] dark:border-[#27272a] text-[#1c1917] dark:text-[#f4f4f5]'
+                }`}
+              >
+                <div className="flex items-start justify-between gap-2 mb-1.5">
+                  <span className="text-xs font-bold leading-tight">
+                    {mission.title}
                   </span>
+                  {mission.completed ? (
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
+                  ) : (
+                    <span className="text-[10px] font-mono font-bold text-[#c84b31] dark:text-[#e05d44] shrink-0">
+                      {mission.current}/{mission.target}
+                    </span>
+                  )}
+                </div>
+                <p className="text-[11px] text-[#78716c] dark:text-[#a1a1aa] mb-2 leading-relaxed">
+                  {mission.description}
+                </p>
+                
+                {!mission.completed && (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      if (mission.id === 'srs') {
+                        if (onOpenSrs) onOpenSrs();
+                      } else if (mission.id === 'quiz') {
+                        onNavigate('quiz');
+                      }
+                    }}
+                    className="w-full py-1.5 px-3 rounded-lg border border-[#e7e5e4] dark:border-[#27272a] hover:bg-[#faf8f5] dark:hover:bg-[#18181b] text-xs font-mono font-medium transition cursor-pointer flex items-center justify-center gap-1.5"
+                  >
+                    <span>Mulai Sekarang</span>
+                    <ChevronRight className="w-3.5 h-3.5" />
+                  </button>
                 )}
               </div>
-              <p className="text-[11px] text-[#78716c] dark:text-[#a1a1aa] mb-3 leading-relaxed">
-                {mission.description}
-              </p>
-              
-              {!mission.completed && (
-                <button
-                  type="button"
-                  onClick={() => {
-                    if (mission.id === 'srs') {
-                      if (onOpenSrs) onOpenSrs();
-                    } else if (mission.id === 'quiz') {
-                      onNavigate('quiz');
-                    }
-                  }}
-                  className="w-full py-1.5 px-3 rounded-lg border border-[#e7e5e4] dark:border-[#27272a] hover:bg-[#faf8f5] dark:hover:bg-[#18181b] text-xs font-mono font-medium transition cursor-pointer flex items-center justify-center gap-1.5"
-                >
-                  <span>Mulai Sekarang</span>
-                  <ChevronRight className="w-3.5 h-3.5" />
-                </button>
-              )}
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
 

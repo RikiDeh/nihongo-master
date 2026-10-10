@@ -91,7 +91,7 @@ interface ConjugationDojoProps {
 
 export const ConjugationDojo: React.FC<ConjugationDojoProps> = ({ onSwitchSubModule }) => {
   const [showRomaji] = useShowRomaji();
-  const [activeTab, setActiveTab] = useState<'cheatsheet' | 'trainer'>('trainer');
+  const [activeTab, setActiveTab] = useState<'trainer' | 'matrix' | 'cheatsheet'>('trainer');
 
   // Cheatsheet inspector state
   const [selectedVerbId, setSelectedVerbId] = useState<string>(VERBS_DATA[0].id);
@@ -272,30 +272,42 @@ export const ConjugationDojo: React.FC<ConjugationDojoProps> = ({ onSwitchSubMod
         </p>
       </div>
 
-      {/* Main Tabs (Cheatsheet vs Drill Trainer) */}
-      <div className="flex items-center justify-center gap-2 mb-8 border-b border-[#e7e5e4] dark:border-[#27272a] pb-3">
+      {/* Main Tabs (Cheatsheet vs Drill Trainer vs Verb Matrix) */}
+      <div className="flex items-center justify-center gap-1.5 sm:gap-2 mb-8 border-b border-[#e7e5e4] dark:border-[#27272a] pb-3 overflow-x-auto no-scrollbar">
         <button
           onClick={() => setActiveTab('trainer')}
-          className={`px-5 py-2 rounded-lg text-xs sm:text-sm font-sans font-medium flex items-center gap-2 transition cursor-pointer border ${
+          className={`px-3.5 sm:px-5 py-2 rounded-lg text-xs sm:text-sm font-sans font-medium flex items-center gap-1.5 transition cursor-pointer border whitespace-nowrap shrink-0 ${
             activeTab === 'trainer'
               ? 'bg-[#1c1917] dark:bg-[#f4f4f5] text-white dark:text-[#18181b] border-transparent font-bold shadow-xs'
               : 'bg-white dark:bg-[#1f1f23] border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
           }`}
         >
           <Flame className="w-4 h-4 text-[#c84b31]" />
-          <span>Drill Trainer (Latihan Refleks)</span>
+          <span>Latihan Refleks</span>
+        </button>
+
+        <button
+          onClick={() => setActiveTab('matrix')}
+          className={`px-3.5 sm:px-5 py-2 rounded-lg text-xs sm:text-sm font-sans font-medium flex items-center gap-1.5 transition cursor-pointer border whitespace-nowrap shrink-0 ${
+            activeTab === 'matrix'
+              ? 'bg-[#1c1917] dark:bg-[#f4f4f5] text-white dark:text-[#18181b] border-transparent font-bold shadow-xs'
+              : 'bg-white dark:bg-[#1f1f23] border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
+          }`}
+        >
+          <Sparkles className="w-4 h-4 text-[#c84b31] dark:text-[#e05d44]" />
+          <span>Kamus Perubahan Kata</span>
         </button>
 
         <button
           onClick={() => setActiveTab('cheatsheet')}
-          className={`px-5 py-2 rounded-lg text-xs sm:text-sm font-sans font-medium flex items-center gap-2 transition cursor-pointer border ${
+          className={`px-3.5 sm:px-5 py-2 rounded-lg text-xs sm:text-sm font-sans font-medium flex items-center gap-1.5 transition cursor-pointer border whitespace-nowrap shrink-0 ${
             activeTab === 'cheatsheet'
               ? 'bg-[#1c1917] dark:bg-[#f4f4f5] text-white dark:text-[#18181b] border-transparent font-bold shadow-xs'
               : 'bg-white dark:bg-[#1f1f23] border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
           }`}
         >
           <BookOpen className="w-4 h-4 text-[#1e3a8a] dark:text-[#60a5fa]" />
-          <span>Rumus & Panduan Kaidah</span>
+          <span>Rumus Kaidah</span>
         </button>
       </div>
 
@@ -655,7 +667,182 @@ export const ConjugationDojo: React.FC<ConjugationDojoProps> = ({ onSwitchSubMod
       )}
 
       {/* ==================================================================== */}
-      {/* TAB 2: RUMUS & CHEATSHEET INTERAKTIF                                 */}
+      {/* TAB 2: MATRIKS & KAMUS PERUBAHAN KATA KERJA                         */}
+      {/* ==================================================================== */}
+      {activeTab === 'matrix' && (
+        <div className="bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] rounded-2xl p-5 sm:p-8 shadow-xs">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4 pb-4 border-b border-[#e7e5e4] dark:border-[#27272a]">
+            <div>
+              <h2 className="text-xl font-bold font-jp text-[#1c1917] dark:text-[#f4f4f5]">
+                Kamus Konjugasi 6 Bentuk Utama
+              </h2>
+              <p className="text-xs text-[#78716c] dark:text-[#a1a1aa] mt-0.5">
+                Ketuk kata kerja di bawah untuk melihat rincian 6 bentuk perubahan secara instan.
+              </p>
+            </div>
+
+            {/* Selected Verb Hero Badge */}
+            <div className="flex items-center gap-3 p-2.5 rounded-xl bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a]">
+              <div className="text-2xl font-jp font-bold text-[#c84b31] dark:text-[#e05d44]">
+                {selectedVerb.kanji}
+              </div>
+              <div>
+                <div className="text-xs font-bold text-[#1c1917] dark:text-[#f4f4f5] leading-tight">
+                  {selectedVerb.kana} • {selectedVerb.romaji}
+                </div>
+                <div className="text-[11px] text-[#78716c] dark:text-[#a1a1aa] leading-tight">
+                  Arti: <strong className="text-[#1c1917] dark:text-[#f4f4f5]">{selectedVerb.meaningId}</strong> ({selectedVerb.group.toUpperCase()})
+                </div>
+              </div>
+              <button
+                onClick={() => speakJapanese(selectedVerb.kanji)}
+                className="p-1.5 rounded-md hover:bg-black/5 dark:hover:bg-white/10 transition cursor-pointer ml-auto"
+                title="Dengarkan kata dasar"
+              >
+                <Volume2 className="w-4 h-4 text-[#2e7d32]" />
+              </button>
+            </div>
+          </div>
+
+          {/* Verb selector pills (Touch-friendly 42px+ targets with subtle scroll hint) */}
+          <div className="flex items-center gap-2 overflow-x-auto pb-4 mb-6 no-scrollbar -mx-2 px-2">
+            {VERBS_DATA.map(v => (
+              <button
+                key={v.id}
+                onClick={() => setSelectedVerbId(v.id)}
+                className={`min-h-[42px] px-3.5 py-2 rounded-xl text-xs font-medium transition cursor-pointer shrink-0 font-jp border flex items-center justify-center ${
+                  selectedVerbId === v.id
+                    ? 'bg-[#1c1917] dark:bg-[#f4f4f5] text-white dark:text-[#18181b] border-transparent font-bold shadow-xs'
+                    : 'bg-[#faf8f5] dark:bg-[#18181b] border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
+                }`}
+              >
+                <span className="font-bold text-sm mr-1">{v.kanji}</span>
+                <span className="opacity-75 text-[11px]">({v.meaningId})</span>
+              </button>
+            ))}
+          </div>
+
+          {/* 6 Forms Matrix Table Grid */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+            {/* Form 1: Masu */}
+            <div className="p-3.5 rounded-xl bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a] text-center">
+              <span className="text-[10px] font-mono font-bold text-[#1e3a8a] dark:text-[#60a5fa] uppercase tracking-wider block mb-1">
+                Sopan (~Masu)
+              </span>
+              <div className="text-xl font-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-0.5">
+                {selectedVerb.forms.masu.kanji}
+              </div>
+              <div className="text-xs font-mono text-[#78716c] dark:text-[#a1a1aa] mb-2">
+                {selectedVerb.forms.masu.romaji}
+              </div>
+              <button
+                onClick={() => speakJapanese(selectedVerb.forms.masu.kanji)}
+                className="p-1.5 rounded-md bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] hover:text-[#1c1917] dark:hover:text-[#f4f4f5] transition cursor-pointer"
+              >
+                <Volume2 className="w-3.5 h-3.5 text-[#2e7d32]" />
+              </button>
+            </div>
+
+            {/* Form 2: Te */}
+            <div className="p-3.5 rounded-xl bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a] text-center">
+              <span className="text-[10px] font-mono font-bold text-[#2e7d32] uppercase tracking-wider block mb-1">
+                Sambung (~Te)
+              </span>
+              <div className="text-xl font-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-0.5">
+                {selectedVerb.forms.te.kanji}
+              </div>
+              <div className="text-xs font-mono text-[#78716c] dark:text-[#a1a1aa] mb-2">
+                {selectedVerb.forms.te.romaji}
+              </div>
+              <button
+                onClick={() => speakJapanese(selectedVerb.forms.te.kanji)}
+                className="p-1.5 rounded-md bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] hover:text-[#1c1917] dark:hover:text-[#f4f4f5] transition cursor-pointer"
+              >
+                <Volume2 className="w-3.5 h-3.5 text-[#2e7d32]" />
+              </button>
+            </div>
+
+            {/* Form 3: Nai */}
+            <div className="p-3.5 rounded-xl bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a] text-center">
+              <span className="text-[10px] font-mono font-bold text-[#c84b31] uppercase tracking-wider block mb-1">
+                Negatif (~Nai)
+              </span>
+              <div className="text-xl font-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-0.5">
+                {selectedVerb.forms.nai.kanji}
+              </div>
+              <div className="text-xs font-mono text-[#78716c] dark:text-[#a1a1aa] mb-2">
+                {selectedVerb.forms.nai.romaji}
+              </div>
+              <button
+                onClick={() => speakJapanese(selectedVerb.forms.nai.kanji)}
+                className="p-1.5 rounded-md bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] hover:text-[#1c1917] dark:hover:text-[#f4f4f5] transition cursor-pointer"
+              >
+                <Volume2 className="w-3.5 h-3.5 text-[#2e7d32]" />
+              </button>
+            </div>
+
+            {/* Form 4: Ta */}
+            <div className="p-3.5 rounded-xl bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a] text-center">
+              <span className="text-[10px] font-mono font-bold text-[#d97706] uppercase tracking-wider block mb-1">
+                Lampau (~Ta)
+              </span>
+              <div className="text-xl font-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-0.5">
+                {selectedVerb.forms.ta.kanji}
+              </div>
+              <div className="text-xs font-mono text-[#78716c] dark:text-[#a1a1aa] mb-2">
+                {selectedVerb.forms.ta.romaji}
+              </div>
+              <button
+                onClick={() => speakJapanese(selectedVerb.forms.ta.kanji)}
+                className="p-1.5 rounded-md bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] hover:text-[#1c1917] dark:hover:text-[#f4f4f5] transition cursor-pointer"
+              >
+                <Volume2 className="w-3.5 h-3.5 text-[#2e7d32]" />
+              </button>
+            </div>
+
+            {/* Form 5: Potential */}
+            <div className="p-3.5 rounded-xl bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a] text-center">
+              <span className="text-[10px] font-mono font-bold text-[#0284c7] uppercase tracking-wider block mb-1">
+                Potensial (N4)
+              </span>
+              <div className="text-xl font-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-0.5">
+                {selectedVerb.forms.potential.kanji}
+              </div>
+              <div className="text-xs font-mono text-[#78716c] dark:text-[#a1a1aa] mb-2">
+                {selectedVerb.forms.potential.romaji}
+              </div>
+              <button
+                onClick={() => speakJapanese(selectedVerb.forms.potential.kanji)}
+                className="p-1.5 rounded-md bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] hover:text-[#1c1917] dark:hover:text-[#f4f4f5] transition cursor-pointer"
+              >
+                <Volume2 className="w-3.5 h-3.5 text-[#2e7d32]" />
+              </button>
+            </div>
+
+            {/* Form 6: Passive */}
+            <div className="p-3.5 rounded-xl bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a] text-center">
+              <span className="text-[10px] font-mono font-bold text-[#7c3aed] uppercase tracking-wider block mb-1">
+                Pasif (N4)
+              </span>
+              <div className="text-xl font-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-0.5">
+                {selectedVerb.forms.passive.kanji}
+              </div>
+              <div className="text-xs font-mono text-[#78716c] dark:text-[#a1a1aa] mb-2">
+                {selectedVerb.forms.passive.romaji}
+              </div>
+              <button
+                onClick={() => speakJapanese(selectedVerb.forms.passive.kanji)}
+                className="p-1.5 rounded-md bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] hover:text-[#1c1917] dark:hover:text-[#f4f4f5] transition cursor-pointer"
+              >
+                <Volume2 className="w-3.5 h-3.5 text-[#2e7d32]" />
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ==================================================================== */}
+      {/* TAB 3: RUMUS & CHEATSHEET INTERAKTIF                                 */}
       {/* ==================================================================== */}
       {activeTab === 'cheatsheet' && (
         <div className="space-y-8">
@@ -757,151 +944,9 @@ export const ConjugationDojo: React.FC<ConjugationDojoProps> = ({ onSwitchSubMod
                 </div>
               </div>
             </div>
-
-            {/* Interactive Verb Matrix Inspector */}
-            <div className="pt-6 border-t border-[#e7e5e4] dark:border-[#27272a]">
-              <h3 className="text-base font-bold font-jp text-[#1c1917] dark:text-[#f4f4f5] mb-4 flex items-center gap-2">
-                <span>Pilih Kata Kerja untuk Melihat Matriks Perubahan:</span>
-              </h3>
-
-              {/* Verb selector pills (Touch-friendly 40px+ targets with subtle scroll hint) */}
-              <div className="flex items-center gap-2 overflow-x-auto pb-4 mb-6 no-scrollbar -mx-2 px-2">
-                {VERBS_DATA.map(v => (
-                  <button
-                    key={v.id}
-                    onClick={() => setSelectedVerbId(v.id)}
-                    className={`min-h-[42px] px-3.5 py-2 rounded-xl text-xs font-medium transition cursor-pointer shrink-0 font-jp border flex items-center justify-center ${
-                      selectedVerbId === v.id
-                        ? 'bg-[#1c1917] dark:bg-[#f4f4f5] text-white dark:text-[#18181b] border-transparent font-bold shadow-xs'
-                        : 'bg-white dark:bg-[#1f1f23] border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
-                    }`}
-                  >
-                    <span className="font-bold text-sm mr-1">{v.kanji}</span>
-                    <span className="opacity-75 text-[11px]">({v.meaningId})</span>
-                  </button>
-                ))}
-              </div>
-
-              {/* 6 Forms Matrix Table */}
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
-                {/* Form 1: Masu */}
-                <div className="p-3.5 rounded-xl bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a] text-center">
-                  <span className="text-[10px] font-mono font-bold text-[#1e3a8a] dark:text-[#60a5fa] uppercase tracking-wider block mb-1">
-                    Sopan (~Masu)
-                  </span>
-                  <div className="text-xl font-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-0.5">
-                    {selectedVerb.forms.masu.kanji}
-                  </div>
-                  <div className="text-xs font-mono text-[#78716c] dark:text-[#a1a1aa] mb-2">
-                    {selectedVerb.forms.masu.romaji}
-                  </div>
-                  <button
-                    onClick={() => speakJapanese(selectedVerb.forms.masu.kanji)}
-                    className="p-1.5 rounded-md bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] hover:text-[#1c1917] dark:hover:text-[#f4f4f5] transition cursor-pointer"
-                  >
-                    <Volume2 className="w-3.5 h-3.5 text-[#2e7d32]" />
-                  </button>
-                </div>
-
-                {/* Form 2: Te */}
-                <div className="p-3.5 rounded-xl bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a] text-center">
-                  <span className="text-[10px] font-mono font-bold text-[#2e7d32] uppercase tracking-wider block mb-1">
-                    Sambung (~Te)
-                  </span>
-                  <div className="text-xl font-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-0.5">
-                    {selectedVerb.forms.te.kanji}
-                  </div>
-                  <div className="text-xs font-mono text-[#78716c] dark:text-[#a1a1aa] mb-2">
-                    {selectedVerb.forms.te.romaji}
-                  </div>
-                  <button
-                    onClick={() => speakJapanese(selectedVerb.forms.te.kanji)}
-                    className="p-1.5 rounded-md bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] hover:text-[#1c1917] dark:hover:text-[#f4f4f5] transition cursor-pointer"
-                  >
-                    <Volume2 className="w-3.5 h-3.5 text-[#2e7d32]" />
-                  </button>
-                </div>
-
-                {/* Form 3: Nai */}
-                <div className="p-3.5 rounded-xl bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a] text-center">
-                  <span className="text-[10px] font-mono font-bold text-[#c84b31] uppercase tracking-wider block mb-1">
-                    Negatif (~Nai)
-                  </span>
-                  <div className="text-xl font-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-0.5">
-                    {selectedVerb.forms.nai.kanji}
-                  </div>
-                  <div className="text-xs font-mono text-[#78716c] dark:text-[#a1a1aa] mb-2">
-                    {selectedVerb.forms.nai.romaji}
-                  </div>
-                  <button
-                    onClick={() => speakJapanese(selectedVerb.forms.nai.kanji)}
-                    className="p-1.5 rounded-md bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] hover:text-[#1c1917] dark:hover:text-[#f4f4f5] transition cursor-pointer"
-                  >
-                    <Volume2 className="w-3.5 h-3.5 text-[#2e7d32]" />
-                  </button>
-                </div>
-
-                {/* Form 4: Ta */}
-                <div className="p-3.5 rounded-xl bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a] text-center">
-                  <span className="text-[10px] font-mono font-bold text-[#d97706] uppercase tracking-wider block mb-1">
-                    Lampau (~Ta)
-                  </span>
-                  <div className="text-xl font-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-0.5">
-                    {selectedVerb.forms.ta.kanji}
-                  </div>
-                  <div className="text-xs font-mono text-[#78716c] dark:text-[#a1a1aa] mb-2">
-                    {selectedVerb.forms.ta.romaji}
-                  </div>
-                  <button
-                    onClick={() => speakJapanese(selectedVerb.forms.ta.kanji)}
-                    className="p-1.5 rounded-md bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] hover:text-[#1c1917] dark:hover:text-[#f4f4f5] transition cursor-pointer"
-                  >
-                    <Volume2 className="w-3.5 h-3.5 text-[#2e7d32]" />
-                  </button>
-                </div>
-
-                {/* Form 5: Potential */}
-                <div className="p-3.5 rounded-xl bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a] text-center">
-                  <span className="text-[10px] font-mono font-bold text-[#0284c7] uppercase tracking-wider block mb-1">
-                    Potensial (N4)
-                  </span>
-                  <div className="text-xl font-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-0.5">
-                    {selectedVerb.forms.potential.kanji}
-                  </div>
-                  <div className="text-xs font-mono text-[#78716c] dark:text-[#a1a1aa] mb-2">
-                    {selectedVerb.forms.potential.romaji}
-                  </div>
-                  <button
-                    onClick={() => speakJapanese(selectedVerb.forms.potential.kanji)}
-                    className="p-1.5 rounded-md bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] hover:text-[#1c1917] dark:hover:text-[#f4f4f5] transition cursor-pointer"
-                  >
-                    <Volume2 className="w-3.5 h-3.5 text-[#2e7d32]" />
-                  </button>
-                </div>
-
-                {/* Form 6: Passive */}
-                <div className="p-3.5 rounded-xl bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a] text-center">
-                  <span className="text-[10px] font-mono font-bold text-[#7c3aed] uppercase tracking-wider block mb-1">
-                    Pasif (N4)
-                  </span>
-                  <div className="text-xl font-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-0.5">
-                    {selectedVerb.forms.passive.kanji}
-                  </div>
-                  <div className="text-xs font-mono text-[#78716c] dark:text-[#a1a1aa] mb-2">
-                    {selectedVerb.forms.passive.romaji}
-                  </div>
-                  <button
-                    onClick={() => speakJapanese(selectedVerb.forms.passive.kanji)}
-                    className="p-1.5 rounded-md bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] hover:text-[#1c1917] dark:hover:text-[#f4f4f5] transition cursor-pointer"
-                  >
-                    <Volume2 className="w-3.5 h-3.5 text-[#2e7d32]" />
-                  </button>
-                </div>
-              </div>
-            </div>
           </div>
 
-          {/* Card 2: N4 Potential & Passive Formula Guide */}
+          {/* Card 2: Potential & Passive Guide */}
           <div className="bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] rounded-xl p-6 sm:p-8 shadow-xs">
             <div className="flex items-center gap-2.5 mb-6">
               <Sparkles className="w-5 h-5 text-[#1e3a8a] dark:text-[#60a5fa]" />

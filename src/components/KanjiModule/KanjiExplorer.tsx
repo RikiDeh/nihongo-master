@@ -2,7 +2,7 @@ import React, { useState, useEffect, useMemo, useDeferredValue } from 'react';
 import { KANJI_DATA } from '../../data/kanjiData';
 import { CORE_RADICALS_JOYO } from '../../data/radicalsData';
 import { JLPTLevel, KanjiItem } from '../../types';
-import { Search, BookOpen, Volume2, Sparkles, Lightbulb, Play, Layers, Star, CheckCircle2 } from 'lucide-react';
+import { Search, BookOpen, Volume2, Sparkles, Lightbulb, Play, Layers, Star, CheckCircle2, X } from 'lucide-react';
 import { speakJapanese } from '../../utils/audio';
 import { 
   isKanjiBookmarked, 
@@ -27,6 +27,7 @@ export const KanjiExplorer: React.FC<KanjiExplorerProps> = ({ onGoToQuiz, initia
   const deferredSearchQuery = useDeferredValue(searchQuery);
   const [visibleCount, setVisibleCount] = useState(60);
   const [activeKanji, setActiveKanji] = useState<KanjiItem | null>(KANJI_DATA[0]);
+  const [isMobileDrawerOpen, setIsMobileDrawerOpen] = useState(false);
   const [, setStorageTick] = useState(0);
 
   // Subscribe ke perubahan localStorage
@@ -349,7 +350,10 @@ export const KanjiExplorer: React.FC<KanjiExplorerProps> = ({ onGoToQuiz, initia
                   return (
                     <div
                       key={item.id}
-                      onClick={() => setActiveKanji(item)}
+                      onClick={() => {
+                        setActiveKanji(item);
+                        setIsMobileDrawerOpen(true);
+                      }}
                       className={`p-3.5 rounded-lg border text-center transition cursor-pointer relative group ${
                         isActive 
                           ? 'bg-white dark:bg-[#27272a] border-[#1c1917] dark:border-[#f4f4f5] shadow-xs ring-1 ring-[#1c1917] dark:ring-[#f4f4f5]' 
@@ -430,8 +434,8 @@ export const KanjiExplorer: React.FC<KanjiExplorerProps> = ({ onGoToQuiz, initia
               )}
             </div>
 
-            {/* Kanji Detailed Inspector with Mnemonic (Right / 5 cols) */}
-            <div className="lg:col-span-5">
+            {/* Kanji Detailed Inspector with Mnemonic (Desktop Right Column / 5 cols) */}
+            <div className="hidden lg:block lg:col-span-5">
               {activeKanji ? (
                 <div className="sticky top-20 bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] rounded-xl p-6 shadow-sm">
                   <div className="flex items-center justify-between mb-4">
@@ -599,6 +603,134 @@ export const KanjiExplorer: React.FC<KanjiExplorerProps> = ({ onGoToQuiz, initia
               )}
             </div>
           </div>
+
+          {/* MOBILE INSTANT BOTTOM DRAWER (LG:HIDDEN) */}
+          {isMobileDrawerOpen && activeKanji && (
+            <div className="lg:hidden fixed inset-0 z-50 flex flex-col justify-end">
+              <div 
+                className="fixed inset-0 bg-black/50 backdrop-blur-xs transition-opacity animate-fadeIn"
+                onClick={() => setIsMobileDrawerOpen(false)}
+              />
+              <div className="relative bg-[#faf8f5] dark:bg-[#18181b] border-t border-[#e7e5e4] dark:border-[#27272a] rounded-t-3xl max-h-[85vh] overflow-y-auto p-5 pb-20 shadow-2xl z-50 animate-slideUp">
+                <div className="w-12 h-1 bg-[#d6d3d1] dark:bg-[#3f3f46] rounded-full mx-auto mb-4" />
+                
+                <div className="flex items-center justify-between mb-3">
+                  <div className="flex items-center gap-2">
+                    <span className={`px-2 py-0.5 rounded text-[11px] font-mono font-bold border ${getLevelBadgeClass(activeKanji.level)}`}>
+                      [{activeKanji.level}]
+                    </span>
+                    {activeKanji.category && (
+                      <span className="text-[11px] font-sans text-[#78716c] dark:text-[#a1a1aa] px-2 py-0.5 rounded bg-white dark:bg-[#27272a] border border-[#e7e5e4] dark:border-[#27272a]">
+                        {activeKanji.category}
+                      </span>
+                    )}
+                  </div>
+                  <div className="flex items-center gap-1.5">
+                    <button
+                      type="button"
+                      onClick={() => toggleBookmarkKanji(activeKanji.id)}
+                      className={`p-2 rounded-lg border text-xs transition cursor-pointer ${
+                        isKanjiBookmarked(activeKanji.id)
+                          ? 'bg-[#c84b31]/10 border-[#c84b31]/40 text-[#c84b31] dark:text-[#e05d44]'
+                          : 'bg-white dark:bg-[#27272a] border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] dark:text-[#a1a1aa]'
+                      }`}
+                    >
+                      <Star className={`w-4 h-4 ${isKanjiBookmarked(activeKanji.id) ? 'fill-[#c84b31] text-[#c84b31] dark:fill-[#e05d44] dark:text-[#e05d44]' : ''}`} />
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setIsMobileDrawerOpen(false)}
+                      className="p-2 rounded-lg bg-white dark:bg-[#27272a] border border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] dark:text-[#a1a1aa]"
+                      aria-label="Tutup panel"
+                    >
+                      <X className="w-4 h-4" />
+                    </button>
+                  </div>
+                </div>
+
+                {/* Character & Meanings */}
+                <div className="text-center py-4 bg-white dark:bg-[#1f1f23] rounded-xl border border-[#e7e5e4] dark:border-[#27272a] mb-4 shadow-xs">
+                  <div className="text-7xl font-jp font-black text-[#1c1917] dark:text-[#f4f4f5] mb-2 leading-none">
+                    {activeKanji.kanji}
+                  </div>
+                  <div className="text-lg font-jp font-bold text-[#c84b31] dark:text-[#e05d44]">
+                    {activeKanji.meaningId}
+                  </div>
+                  <div className="text-xs font-sans text-[#78716c] dark:text-[#a1a1aa] mt-0.5">
+                    {activeKanji.meaning}
+                  </div>
+                  <div className="mt-3 flex justify-center">
+                    <button
+                      type="button"
+                      onClick={() => speakJapanese(activeKanji.kanji)}
+                      className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-[#2e7d32]/10 border border-[#2e7d32]/30 text-[#2e7d32] dark:text-[#4ade80] text-xs font-bold transition cursor-pointer"
+                    >
+                      <Volume2 className="w-4 h-4" />
+                      <span>Putar Audio Pengucapan</span>
+                    </button>
+                  </div>
+                </div>
+
+                {/* Mnemonic Story */}
+                {activeKanji.mnemonic && (
+                  <div className="p-3.5 rounded-xl bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] mb-3 shadow-xs">
+                    <div className="flex items-center gap-1.5 text-xs font-jp font-bold text-[#c84b31] dark:text-[#e05d44] mb-1">
+                      <Lightbulb className="w-3.5 h-3.5" />
+                      <span>Cerita Pengingat [記憶術]:</span>
+                    </div>
+                    <p className="text-xs font-sans text-[#78716c] dark:text-[#a1a1aa] leading-relaxed">
+                      {activeKanji.mnemonic}
+                    </p>
+                  </div>
+                )}
+
+                {/* Readings */}
+                <div className="grid grid-cols-2 gap-2 mb-3">
+                  <div className="p-3 bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] rounded-xl shadow-xs">
+                    <span className="text-[10px] font-mono font-bold uppercase text-[#c84b31] dark:text-[#e05d44] block mb-1">
+                      [音] On'yomi:
+                    </span>
+                    <span className="text-xs font-mono font-medium text-[#1c1917] dark:text-[#f4f4f5]">
+                      {activeKanji.onyomi.join(', ') || '—'}
+                    </span>
+                  </div>
+                  <div className="p-3 bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] rounded-xl shadow-xs">
+                    <span className="text-[10px] font-mono font-bold uppercase text-[#1e3a8a] dark:text-[#3b82f6] block mb-1">
+                      [訓] Kun'yomi:
+                    </span>
+                    <span className="text-xs font-mono font-medium text-[#1c1917] dark:text-[#f4f4f5]">
+                      {activeKanji.kunyomi.join(', ') || '—'}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Example Compounds */}
+                {activeKanji.examples.length > 0 && (
+                  <div className="bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] rounded-xl p-3 shadow-xs">
+                    <h4 className="text-[11px] font-mono font-bold text-[#78716c] dark:text-[#a1a1aa] uppercase tracking-wider mb-2">
+                      Kosakata Contoh [熟語]
+                    </h4>
+                    <div className="space-y-1.5">
+                      {activeKanji.examples.slice(0, 3).map(ex => (
+                        <div 
+                          key={ex.word}
+                          onClick={() => speakJapanese(ex.word)}
+                          className="p-2 rounded-lg bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a] flex items-center justify-between"
+                        >
+                          <div>
+                            <span className="font-bold text-xs text-[#1c1917] dark:text-[#f4f4f5] mr-1.5">{ex.word}</span>
+                            <span className="text-[11px] text-[#78716c] dark:text-[#a1a1aa]">({ex.reading})</span>
+                            <div className="text-[11px] text-[#78716c] dark:text-[#a1a1aa]">{ex.meaning}</div>
+                          </div>
+                          <Volume2 className="w-3.5 h-3.5 text-[#2e7d32]" />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
         </>
       )}
 

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo, useDeferredValue } from 'react';
 import { VOCAB_DATA } from '../../data/vocabData';
 import { JLPTLevel, VocabItem } from '../../types';
-import { Search, Layers, Volume2, RotateCw, Trophy, Star } from 'lucide-react';
+import { Search, Layers, Volume2, RotateCw, Trophy, Star, X } from 'lucide-react';
 import { speakJapanese } from '../../utils/audio';
 import { useShowRomaji } from '../../hooks/useShowRomaji';
 import { 
@@ -28,6 +28,7 @@ export const VocabExplorer: React.FC<VocabExplorerProps> = ({ onGoToQuiz, initia
   const [flashcardIndex, setFlashcardIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
   const [activeVocab, setActiveVocab] = useState<VocabItem | null>(null);
+  const [isMobileDrawerOpen, setIsMobileDrawerOpen] = useState(false);
   const [, setStorageTick] = useState(0);
 
   // Subscribe ke perubahan localStorage
@@ -358,7 +359,10 @@ export const VocabExplorer: React.FC<VocabExplorerProps> = ({ onGoToQuiz, initia
                 return (
                   <div
                     key={item.id}
-                    onClick={() => setActiveVocab(item)}
+                    onClick={() => {
+                      setActiveVocab(item);
+                      setIsMobileDrawerOpen(true);
+                    }}
                     className={`p-3.5 rounded-xl border transition cursor-pointer flex items-center justify-between gap-3 ${
                       isActive 
                         ? 'bg-white dark:bg-[#27272a] border-[#1c1917] dark:border-[#f4f4f5] shadow-xs ring-1 ring-[#1c1917] dark:ring-[#f4f4f5]' 
@@ -452,8 +456,8 @@ export const VocabExplorer: React.FC<VocabExplorerProps> = ({ onGoToQuiz, initia
               )}
             </div>
 
-            {/* Right Column (5 Cols): Sticky Card Inspector Detail */}
-            <div className="lg:col-span-5">
+            {/* Right Column (5 Cols): Sticky Card Inspector Detail (Desktop Only) */}
+            <div className="hidden lg:block lg:col-span-5">
               {currentInspectorItem ? (
                 <div className="sticky top-20 bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] rounded-xl p-6 shadow-sm">
                   {/* Top Header of Inspector */}
@@ -569,6 +573,104 @@ export const VocabExplorer: React.FC<VocabExplorerProps> = ({ onGoToQuiz, initia
               )}
             </div>
           </div>
+
+          {/* MOBILE INSTANT BOTTOM DRAWER FOR VOCAB (LG:HIDDEN) */}
+          {isMobileDrawerOpen && currentInspectorItem && (
+            <div className="lg:hidden fixed inset-0 z-50 flex flex-col justify-end">
+              <div 
+                className="fixed inset-0 bg-black/50 backdrop-blur-xs transition-opacity animate-fadeIn"
+                onClick={() => setIsMobileDrawerOpen(false)}
+              />
+              <div className="relative bg-[#faf8f5] dark:bg-[#18181b] border-t border-[#e7e5e4] dark:border-[#27272a] rounded-t-3xl max-h-[85vh] overflow-y-auto p-5 pb-20 shadow-2xl z-50 animate-slideUp">
+                <div className="w-12 h-1 bg-[#d6d3d1] dark:bg-[#3f3f46] rounded-full mx-auto mb-4" />
+                
+                <div className="flex items-center justify-between mb-3">
+                  <div className="flex items-center gap-2">
+                    <span className={`px-2 py-0.5 rounded text-[11px] font-mono font-bold border ${getLevelBadgeClass(currentInspectorItem.level)}`}>
+                      [{currentInspectorItem.level}]
+                    </span>
+                    <span className="text-xs font-sans text-[#78716c] dark:text-[#a1a1aa] px-2 py-0.5 rounded bg-white dark:bg-[#27272a] border border-[#e7e5e4] dark:border-[#27272a]">
+                      {currentInspectorItem.category}
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-1.5">
+                    <button
+                      type="button"
+                      onClick={() => toggleBookmarkVocab(currentInspectorItem.id)}
+                      className="p-2 rounded-lg bg-white dark:bg-[#27272a] border border-[#e7e5e4] dark:border-[#27272a] text-[#78716c]"
+                    >
+                      <Star className={`w-4 h-4 ${isVocabBookmarked(currentInspectorItem.id) ? 'fill-[#c84b31] text-[#c84b31]' : ''}`} />
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setIsMobileDrawerOpen(false)}
+                      className="p-2 rounded-lg bg-white dark:bg-[#27272a] border border-[#e7e5e4] dark:border-[#27272a] text-[#78716c]"
+                    >
+                      <X className="w-4 h-4" />
+                    </button>
+                  </div>
+                </div>
+
+                {/* Big Word Card */}
+                <div className="text-center py-5 bg-white dark:bg-[#1f1f23] rounded-2xl border border-[#e7e5e4] dark:border-[#27272a] mb-4 shadow-xs">
+                  <div className="text-5xl font-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-2 leading-none">
+                    {currentInspectorItem.kanji || currentInspectorItem.kana}
+                  </div>
+                  {currentInspectorItem.kanji && (
+                    <div className="text-lg font-jp text-[#c84b31] dark:text-[#e05d44] mb-1">
+                      {currentInspectorItem.kana}
+                    </div>
+                  )}
+                  <div className="text-xs font-mono text-[#78716c] dark:text-[#a1a1aa] mb-3">
+                    ({currentInspectorItem.romaji})
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => speakJapanese(currentInspectorItem.kanji || currentInspectorItem.kana)}
+                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-[#2e7d32]/10 border border-[#2e7d32]/30 text-[#2e7d32] dark:text-[#4ade80] text-xs font-bold"
+                  >
+                    <Volume2 className="w-4 h-4" />
+                    <span>Dengarkan Pelafalan</span>
+                  </button>
+                </div>
+
+                {/* Meaning */}
+                <div className="p-4 bg-white dark:bg-[#1f1f23] rounded-xl border border-[#e7e5e4] dark:border-[#27272a] mb-3 shadow-xs">
+                  <span className="text-[10px] font-mono uppercase text-[#78716c] dark:text-[#a1a1aa] block mb-1">Arti:</span>
+                  <div className="text-base font-bold text-[#1c1917] dark:text-[#f4f4f5]">
+                    {currentInspectorItem.meaningId}
+                  </div>
+                  {currentInspectorItem.meaningEn && (
+                    <div className="text-xs text-[#78716c] dark:text-[#a1a1aa] mt-0.5">
+                      {currentInspectorItem.meaningEn}
+                    </div>
+                  )}
+                </div>
+
+                {/* Example sentence */}
+                {currentInspectorItem.exampleSentence && (
+                  <div className="p-4 bg-white dark:bg-[#1f1f23] rounded-xl border border-[#e7e5e4] dark:border-[#27272a] shadow-xs">
+                    <div className="flex items-center justify-between mb-1.5">
+                      <span className="text-[10px] font-mono uppercase text-[#78716c] dark:text-[#a1a1aa]">Contoh Kalimat:</span>
+                      <button
+                        type="button"
+                        onClick={() => speakJapanese(currentInspectorItem.exampleSentence!.jp)}
+                        className="text-[#2e7d32] p-1"
+                      >
+                        <Volume2 className="w-4 h-4" />
+                      </button>
+                    </div>
+                    <div className="text-sm font-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-1">
+                      {currentInspectorItem.exampleSentence.jp}
+                    </div>
+                    <div className="text-xs text-[#78716c] dark:text-[#a1a1aa]">
+                      {currentInspectorItem.exampleSentence.id}
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
         </div>
       )}
     </div>
