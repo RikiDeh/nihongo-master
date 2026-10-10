@@ -1,23 +1,39 @@
 import React, { useState, useEffect } from 'react';
-import { BookOpen, Layers, Award, Compass, Trophy, Swords, Settings, Flame, CheckCircle2, Sun, Moon } from 'lucide-react';
+import { 
+  BookOpen, 
+  Layers, 
+  Award, 
+  Compass, 
+  Trophy, 
+  Swords, 
+  Settings, 
+  Flame, 
+  Sun, 
+  Moon,
+  ChevronLeft,
+  ChevronRight
+} from 'lucide-react';
 import { SettingsModal } from './Settings/SettingsModal';
 import { useShowRomaji } from '../hooks/useShowRomaji';
-import { KANJI_DATA } from '../data/kanjiData';
-import { VOCAB_DATA } from '../data/vocabData';
 import { getDueSrsItems } from '../utils/srsEngine';
 import { getUserProgress, subscribeToStorage } from '../utils/storage';
 
 export type ActiveModule = 'kana' | 'kanji' | 'vocab' | 'grammar' | 'dojo' | 'quiz' | 'roadmap' | 'design-lab';
 
-interface NavbarProps {
+interface SidebarNavProps {
   activeModule: ActiveModule;
   onSelectModule: (module: ActiveModule) => void;
   onOpenSrsReview?: () => void;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ activeModule, onSelectModule, onOpenSrsReview }) => {
+export const SidebarNav: React.FC<SidebarNavProps> = ({
+  activeModule,
+  onSelectModule,
+  onOpenSrsReview,
+}) => {
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [showRomaji, , toggleShowRomaji] = useShowRomaji();
+  const [isCollapsed, setIsCollapsed] = useState(false);
 
   const [isDark, setIsDark] = useState<boolean>(() => {
     if (typeof document !== 'undefined') {
@@ -51,271 +67,260 @@ export const Navbar: React.FC<NavbarProps> = ({ activeModule, onSelectModule, on
     return () => unsubscribe();
   }, []);
 
+  const navItems: { id: ActiveModule; label: string; jp: string; icon: React.ReactNode; badge?: string }[] = [
+    { id: 'kana', label: 'Kana Matrix', jp: '仮名', icon: <span className="font-serif-jp text-sm font-bold">あ</span>, badge: '50音' },
+    { id: 'kanji', label: 'Joyō Kanji', jp: '漢字', icon: <BookOpen className="w-4 h-4" />, badge: '2.167' },
+    { id: 'vocab', label: 'Kosakata', jp: '語彙', icon: <Layers className="w-4 h-4" />, badge: '9.177' },
+    { id: 'grammar', label: 'Tata Bahasa', jp: '文法', icon: <Award className="w-4 h-4" /> },
+    { id: 'dojo', label: 'Dojo Konjugasi', jp: '活用', icon: <Swords className="w-4 h-4" /> },
+    { id: 'quiz', label: 'Pusat Ujian JLPT', jp: '試験', icon: <Trophy className="w-4 h-4" />, badge: 'N5→N1' },
+    { id: 'roadmap', label: 'Peta Jalan 0→N1', jp: '道程', icon: <Compass className="w-4 h-4" /> },
+  ];
+
   return (
     <>
-      <header className="sticky top-0 z-40 bg-[#faf8f5]/90 dark:bg-[#18181b]/90 backdrop-blur-md border-b border-[#e7e5e4] dark:border-[#27272a] transition-colors duration-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-          {/* Logo / Brand — Traditional Hanko Seal Stamp */}
-          <div 
-            onClick={() => onSelectModule('kana')}
-            className="flex items-center gap-3 cursor-pointer group"
-          >
-            {/* Hanko Square Stamp */}
-            <div className="w-9 h-9 rounded bg-[#c84b31] dark:bg-[#e05d44] border border-[#a63a23] dark:border-[#c84b31] flex items-center justify-center text-white font-serif-jp font-black text-xl shadow-sm transition-transform duration-150 group-hover:scale-105 select-none">
-              日
-            </div>
-            <div>
-              <div className="flex items-center gap-2">
-                <span className="font-serif-jp font-bold text-base tracking-tight text-[#1c1917] dark:text-[#f4f4f5]">
-                  日本語マスター
-                </span>
-                <span className="px-1.5 py-0.5 rounded text-[10px] font-mono font-bold border border-[#c84b31]/30 dark:border-[#e05d44]/30 text-[#c84b31] dark:text-[#e05d44] bg-[#c84b31]/5 dark:bg-[#e05d44]/10">
-                  [0→N1]
-                </span>
+      {/* DESKTOP SIDEBAR (MD AND UP) */}
+      <aside 
+        className={`hidden md:flex flex-col justify-between shrink-0 h-screen sticky top-0 z-30 bg-[#faf8f5] dark:bg-[#18181b] border-r border-[#e7e5e4] dark:border-[#27272a] transition-all duration-200 ${
+          isCollapsed ? 'w-20' : 'w-64'
+        }`}
+      >
+        {/* Top Branding Section */}
+        <div>
+          <div className="p-4 flex items-center justify-between border-b border-[#e7e5e4] dark:border-[#27272a]">
+            <div 
+              onClick={() => onSelectModule('kana')}
+              className="flex items-center gap-3 cursor-pointer group overflow-hidden select-none"
+            >
+              {/* Hanko Stamp */}
+              <div className="w-9 h-9 rounded-md bg-[#c84b31] dark:bg-[#e05d44] border border-[#a63a23] dark:border-[#c84b31] flex items-center justify-center text-white font-serif-jp font-black text-xl shadow-xs shrink-0 group-hover:scale-105 transition-transform">
+                日
               </div>
-              <p className="text-[11px] font-sans text-[#78716c] dark:text-[#a1a1aa] -mt-0.5">
-                Studi Mandiri Bahasa Jepang
-              </p>
+              {!isCollapsed && (
+                <div className="truncate">
+                  <div className="font-serif-jp font-bold text-sm text-[#1c1917] dark:text-[#f4f4f5] tracking-tight">
+                    日本語マスター
+                  </div>
+                  <div className="text-[10px] font-mono text-[#78716c] dark:text-[#a1a1aa]">
+                    NihongoMaster 0→N1
+                  </div>
+                </div>
+              )}
             </div>
+
+            {/* Collapse toggle */}
+            <button
+              type="button"
+              onClick={() => setIsCollapsed(c => !c)}
+              className="p-1.5 rounded-md hover:bg-[#f4f0e8] dark:hover:bg-[#27272a] text-[#78716c] dark:text-[#a1a1aa] transition cursor-pointer"
+              title={isCollapsed ? 'Perluas Sidebar' : 'Ciutkan Sidebar'}
+            >
+              {isCollapsed ? <ChevronRight className="w-4 h-4" /> : <ChevronLeft className="w-4 h-4" />}
+            </button>
           </div>
 
-          {/* Navigation Tabs (Desktop) — Zen Editorial Clean Segment */}
-          <nav className="hidden xl:flex items-center gap-1 bg-[#f4f0e8]/80 dark:bg-[#1f1f23]/80 p-1 rounded-lg border border-[#e7e5e4] dark:border-[#27272a]">
-            <button
-              onClick={() => onSelectModule('kana')}
-              className={`px-3 py-1.5 rounded-md text-xs font-medium transition cursor-pointer flex items-center gap-1.5 ${
-                activeModule === 'kana'
-                  ? 'bg-white dark:bg-[#27272a] text-[#1c1917] dark:text-[#f4f4f5] shadow-sm font-semibold'
-                  : 'text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
-              }`}
-            >
-              <span className="font-serif-jp text-sm leading-none font-bold">仮</span>
-              <span>Kana</span>
-            </button>
-
-            <button
-              onClick={() => onSelectModule('kanji')}
-              className={`px-3 py-1.5 rounded-md text-xs font-medium transition cursor-pointer flex items-center gap-1.5 ${
-                activeModule === 'kanji'
-                  ? 'bg-white dark:bg-[#27272a] text-[#1c1917] dark:text-[#f4f4f5] shadow-sm font-semibold'
-                  : 'text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
-              }`}
-            >
-              <BookOpen className="w-3.5 h-3.5" />
-              <span>Kanji</span>
-            </button>
-
-            <button
-              onClick={() => onSelectModule('vocab')}
-              className={`px-3 py-1.5 rounded-md text-xs font-medium transition cursor-pointer flex items-center gap-1.5 ${
-                activeModule === 'vocab'
-                  ? 'bg-white dark:bg-[#27272a] text-[#1c1917] dark:text-[#f4f4f5] shadow-sm font-semibold'
-                  : 'text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
-              }`}
-            >
-              <Layers className="w-3.5 h-3.5" />
-              <span>Kosakata</span>
-            </button>
-
-            <button
-              onClick={() => onSelectModule('grammar')}
-              className={`px-3 py-1.5 rounded-md text-xs font-medium transition cursor-pointer flex items-center gap-1.5 ${
-                activeModule === 'grammar'
-                  ? 'bg-white dark:bg-[#27272a] text-[#1c1917] dark:text-[#f4f4f5] shadow-sm font-semibold'
-                  : 'text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
-              }`}
-            >
-              <Award className="w-3.5 h-3.5" />
-              <span>Tata Bahasa</span>
-            </button>
-
-            <button
-              onClick={() => onSelectModule('dojo')}
-              className={`px-3 py-1.5 rounded-md text-xs font-medium transition cursor-pointer flex items-center gap-1.5 ${
-                activeModule === 'dojo'
-                  ? 'bg-white dark:bg-[#27272a] text-[#c84b31] dark:text-[#e05d44] shadow-sm font-bold border border-[#c84b31]/20 dark:border-[#e05d44]/30'
-                  : 'text-[#78716c] dark:text-[#a1a1aa] hover:text-[#c84b31] dark:hover:text-[#e05d44]'
-              }`}
-            >
-              <Swords className="w-3.5 h-3.5" />
-              <span>Dojo Konjugasi</span>
-            </button>
-
-            <button
-              onClick={() => onSelectModule('quiz')}
-              className={`px-3 py-1.5 rounded-md text-xs font-medium transition cursor-pointer flex items-center gap-1.5 ${
-                activeModule === 'quiz'
-                  ? 'bg-white dark:bg-[#27272a] text-[#1e3a8a] dark:text-[#3b82f6] shadow-sm font-bold border border-[#1e3a8a]/20 dark:border-[#3b82f6]/30'
-                  : 'text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1e3a8a] dark:hover:text-[#3b82f6]'
-              }`}
-            >
-              <Trophy className="w-3.5 h-3.5" />
-              <span>Pusat Ujian</span>
-            </button>
-
-            <button
-              onClick={() => onSelectModule('roadmap')}
-              className={`px-3 py-1.5 rounded-md text-xs font-medium transition cursor-pointer flex items-center gap-1.5 ${
-                activeModule === 'roadmap'
-                  ? 'bg-white dark:bg-[#27272a] text-[#1c1917] dark:text-[#f4f4f5] shadow-sm font-semibold'
-                  : 'text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
-              }`}
-            >
-              <Compass className="w-3.5 h-3.5" />
-              <span>Peta Jalan</span>
-            </button>
-          </nav>
-
-          {/* Right Action Icons — Clean Monoline & Hanko Badges */}
-          <div className="flex items-center gap-2">
-            {/* Live Corpus Count Badge */}
-            <div 
-              className="hidden lg:flex items-center gap-1.5 px-2.5 py-1.5 rounded-md bg-[#f4f0e8]/80 dark:bg-[#1f1f23]/80 border border-[#e7e5e4] dark:border-[#27272a] text-xs text-[#78716c] dark:text-[#a1a1aa] font-mono select-none"
-              title={`Total Basis Data: ${KANJI_DATA.length} Kanji + ${VOCAB_DATA.length} Kosakata aktif`}
-            >
-              <span className="font-serif-jp text-xs text-[#1c1917] dark:text-[#f4f4f5]">書</span>
-              <span className="font-bold text-[#1c1917] dark:text-[#f4f4f5]">
-                {(KANJI_DATA.length + VOCAB_DATA.length).toLocaleString('id-ID')}
-              </span>
-              <span className="text-[11px] font-sans hidden 2xl:inline">Materi</span>
+          {/* Quick Habit / SRS Banner */}
+          {!isCollapsed ? (
+            <div className="p-3 mx-3 mt-3 rounded-lg bg-[#f4f0e8]/80 dark:bg-[#1f1f23]/80 border border-[#e7e5e4] dark:border-[#27272a] text-xs">
+              <div className="flex items-center justify-between mb-1.5">
+                <span className="text-[10px] font-mono font-bold uppercase text-[#78716c] dark:text-[#a1a1aa]">
+                  HABIT BELAJAR
+                </span>
+                <span className="font-mono font-bold text-[#c84b31] dark:text-[#e05d44]">
+                  🔥 {dailyStreak} Hari
+                </span>
+              </div>
+              {onOpenSrsReview && (
+                <button
+                  type="button"
+                  onClick={onOpenSrsReview}
+                  className={`w-full py-1.5 px-2.5 rounded-md text-xs font-medium flex items-center justify-between transition cursor-pointer ${
+                    dueCount > 0
+                      ? 'bg-[#c84b31]/10 text-[#c84b31] dark:text-[#e05d44] border border-[#c84b31]/30 font-bold'
+                      : 'bg-[#2e7d32]/10 text-[#2e7d32] dark:text-[#4ade80] border border-[#2e7d32]/25'
+                  }`}
+                >
+                  <span className="flex items-center gap-1.5">
+                    <Flame className="w-3.5 h-3.5" />
+                    <span>SRS Review</span>
+                  </span>
+                  <span className="font-mono">{dueCount > 0 ? `${dueCount} Butir` : 'Tuntas'}</span>
+                </button>
+              )}
             </div>
+          ) : (
+            <div className="p-2 flex justify-center mt-2">
+              {onOpenSrsReview && (
+                <button
+                  type="button"
+                  onClick={onOpenSrsReview}
+                  className={`p-2 rounded-lg border text-xs font-mono font-bold transition cursor-pointer ${
+                    dueCount > 0
+                      ? 'bg-[#c84b31]/10 border-[#c84b31]/30 text-[#c84b31] dark:text-[#e05d44]'
+                      : 'bg-[#2e7d32]/10 border-[#2e7d32]/25 text-[#2e7d32] dark:text-[#4ade80]'
+                  }`}
+                  title={`SRS Review: ${dueCount} materi jatuh tempo`}
+                >
+                  <Flame className="w-4 h-4" />
+                </button>
+              )}
+            </div>
+          )}
 
-            {/* Global Romaji Toggle Switch */}
+          {/* Navigation Items List */}
+          <nav className="p-3 space-y-1 mt-2">
+            {navItems.map(item => {
+              const isActive = activeModule === item.id;
+              return (
+                <button
+                  key={item.id}
+                  type="button"
+                  onClick={() => onSelectModule(item.id)}
+                  title={isCollapsed ? item.label : undefined}
+                  className={`w-full p-2.5 rounded-lg text-xs font-medium transition cursor-pointer flex items-center justify-between ${
+                    isActive
+                      ? 'bg-white dark:bg-[#27272a] text-[#1c1917] dark:text-[#f4f4f5] shadow-xs border border-[#d6d3d1] dark:border-[#3f3f46] font-bold'
+                      : 'text-[#78716c] dark:text-[#a1a1aa] hover:bg-[#f4f0e8]/80 dark:hover:bg-[#1f1f23]/80 hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
+                  } ${isCollapsed ? 'justify-center' : ''}`}
+                >
+                  <div className="flex items-center gap-3">
+                    <span className="shrink-0">{item.icon}</span>
+                    {!isCollapsed && <span>{item.label}</span>}
+                  </div>
+
+                  {!isCollapsed && (
+                    <div className="flex items-center gap-1.5">
+                      {item.badge && (
+                        <span className="text-[10px] font-mono px-1.5 py-0.2 rounded border border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] dark:text-[#a1a1aa]">
+                          {item.badge}
+                        </span>
+                      )}
+                      <span className="font-serif-jp text-xs opacity-60">{item.jp}</span>
+                    </div>
+                  )}
+                </button>
+              );
+            })}
+          </nav>
+        </div>
+
+        {/* Bottom Utility Controls */}
+        <div className="p-3 border-t border-[#e7e5e4] dark:border-[#27272a] space-y-2">
+          {/* Romaji toggle */}
+          {!isCollapsed ? (
             <button
               type="button"
               onClick={toggleShowRomaji}
-              className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-md border text-xs font-medium transition cursor-pointer select-none ${
+              className={`w-full py-2 px-3 rounded-lg border text-xs font-medium transition cursor-pointer flex items-center justify-between ${
                 showRomaji
                   ? 'bg-[#2e7d32]/10 border-[#2e7d32]/30 text-[#2e7d32] dark:text-[#4ade80]'
-                  : 'bg-[#f4f0e8]/80 dark:bg-[#1f1f23]/80 border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
+                  : 'bg-[#faf8f5] dark:bg-[#18181b] border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] dark:text-[#a1a1aa]'
               }`}
-              title={showRomaji ? 'Romaji Aktif. Klik untuk mematikan bantuan Romaji' : 'Romaji Mati. Klik untuk menyalakan bantuan Romaji'}
             >
-              <span className="text-[10px] font-mono font-bold px-1 py-0.5 rounded bg-black/5 dark:bg-white/10">
-                {showRomaji ? 'Aa' : 'あ'}
-              </span>
-              <span className="hidden sm:inline font-sans">Romaji</span>
-              <span className="font-mono text-[10px] font-bold">
-                [{showRomaji ? 'ON' : 'OFF'}]
-              </span>
+              <span className="font-sans">Bantuan Romaji</span>
+              <span className="font-mono text-[10px] font-bold">[{showRomaji ? 'ON' : 'OFF'}]</span>
             </button>
+          ) : (
+            <button
+              type="button"
+              onClick={toggleShowRomaji}
+              className="w-full p-2 rounded-lg border border-[#e7e5e4] dark:border-[#27272a] text-center text-xs font-mono font-bold"
+              title={`Romaji ${showRomaji ? 'Aktif' : 'Mati'}`}
+            >
+              {showRomaji ? 'Aa' : 'あ'}
+            </button>
+          )}
 
-            {/* SRS Review Button — Calm Editorial State */}
-            {onOpenSrsReview && (
-              <button
-                type="button"
-                onClick={onOpenSrsReview}
-                className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-md border text-xs font-medium transition cursor-pointer select-none ${
-                  dueCount > 0
-                    ? 'bg-[#c84b31]/10 border-[#c84b31]/30 text-[#c84b31] dark:text-[#e05d44] hover:bg-[#c84b31]/15 font-semibold'
-                    : 'bg-[#2e7d32]/10 border-[#2e7d32]/25 text-[#2e7d32] dark:text-[#4ade80] hover:bg-[#2e7d32]/15'
-                }`}
-                title="Buka Sesi SRS Review (Spaced Repetition System)"
-              >
-                {dueCount > 0 ? (
-                  <>
-                    <Flame className="w-3.5 h-3.5 text-[#c84b31] dark:text-[#e05d44]" />
-                    <span className="font-mono font-bold">{dueCount}</span>
-                    <span className="font-serif-jp hidden sm:inline">[復習]</span>
-                  </>
-                ) : (
-                  <>
-                    <CheckCircle2 className="w-3.5 h-3.5 text-[#2e7d32] dark:text-[#4ade80]" />
-                    <span className="font-sans hidden sm:inline">Tuntas</span>
-                  </>
-                )}
-                {dailyStreak > 0 && (
-                  <span className="ml-1 pl-1.5 border-l border-[#e7e5e4] dark:border-[#27272a] text-[11px] font-mono font-bold text-[#c84b31] dark:text-[#e05d44] hidden md:inline">
-                    {dailyStreak}d
-                  </span>
-                )}
-              </button>
-            )}
-
-            {/* Theme Switcher — Washi Light vs Sumi Dark */}
+          {/* Theme & Settings Buttons */}
+          <div className="flex items-center gap-2">
             <button
               type="button"
               onClick={toggleTheme}
-              className="p-2 rounded-md bg-[#f4f0e8]/80 dark:bg-[#1f1f23]/80 border border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5] transition cursor-pointer"
+              className="flex-1 py-2 px-3 rounded-lg bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] text-xs font-medium text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5] transition cursor-pointer flex items-center justify-center gap-1.5"
               title={isDark ? 'Ganti ke Mode Terang (Kertas Washi)' : 'Ganti ke Mode Gelap (Tinta Sumi)'}
             >
-              {isDark ? <Sun className="w-4 h-4 text-amber-400" /> : <Moon className="w-4 h-4 text-stone-600" />}
+              {isDark ? <Sun className="w-3.5 h-3.5 text-amber-400" /> : <Moon className="w-3.5 h-3.5 text-stone-600" />}
+              {!isCollapsed && <span>{isDark ? 'Washi' : 'Sumi'}</span>}
             </button>
 
             <button
+              type="button"
               onClick={() => setIsSettingsOpen(true)}
-              className="p-2 rounded-md bg-[#f4f0e8]/80 dark:bg-[#1f1f23]/80 border border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5] transition cursor-pointer"
-              title="Pengaturan & Backup Data (JSON)"
+              className="p-2 rounded-lg bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5] transition cursor-pointer shrink-0"
+              title="Pengaturan & Backup Data"
             >
               <Settings className="w-4 h-4" />
             </button>
           </div>
         </div>
+      </aside>
 
-        {/* Mobile Nav Bar — Clean Zen Line */}
-        <div className="xl:hidden flex items-center justify-around border-t border-[#e7e5e4] dark:border-[#27272a] bg-[#faf8f5]/95 dark:bg-[#18181b]/95 px-2 py-2 text-[10px]">
-          <button
+      {/* MOBILE TOP BAR & BOTTOM DOCK (MOBILE PHONES) */}
+      <div className="md:hidden">
+        {/* Mobile Top Header */}
+        <header className="sticky top-0 z-30 bg-[#faf8f5]/95 dark:bg-[#18181b]/95 backdrop-blur-md border-b border-[#e7e5e4] dark:border-[#27272a] px-4 py-2.5 flex items-center justify-between">
+          <div 
             onClick={() => onSelectModule('kana')}
-            className={`flex flex-col items-center py-1 px-1 rounded-md transition ${activeModule === 'kana' ? 'text-[#c84b31] dark:text-[#e05d44] font-bold' : 'text-[#78716c] dark:text-[#a1a1aa]'}`}
+            className="flex items-center gap-2.5 cursor-pointer"
           >
-            <span className="font-serif-jp text-sm leading-none font-bold">仮</span>
-            <span className="mt-0.5">Kana</span>
-          </button>
-          <button
-            onClick={() => onSelectModule('kanji')}
-            className={`flex flex-col items-center py-1 px-1 rounded-md transition ${activeModule === 'kanji' ? 'text-[#c84b31] dark:text-[#e05d44] font-bold' : 'text-[#78716c] dark:text-[#a1a1aa]'}`}
-          >
-            <BookOpen className="w-3.5 h-3.5 mb-0.5" />
-            <span>Kanji</span>
-          </button>
-          <button
-            onClick={() => onSelectModule('vocab')}
-            className={`flex flex-col items-center py-1 px-1 rounded-md transition ${activeModule === 'vocab' ? 'text-[#c84b31] dark:text-[#e05d44] font-bold' : 'text-[#78716c] dark:text-[#a1a1aa]'}`}
-          >
-            <Layers className="w-3.5 h-3.5 mb-0.5" />
-            <span>Vocab</span>
-          </button>
-          <button
-            onClick={() => onSelectModule('grammar')}
-            className={`flex flex-col items-center py-1 px-1 rounded-md transition ${activeModule === 'grammar' ? 'text-[#c84b31] dark:text-[#e05d44] font-bold' : 'text-[#78716c] dark:text-[#a1a1aa]'}`}
-          >
-            <Award className="w-3.5 h-3.5 mb-0.5" />
-            <span>Grammar</span>
-          </button>
-          <button
-            onClick={() => onSelectModule('dojo')}
-            className={`flex flex-col items-center py-1 px-1 rounded-md transition ${activeModule === 'dojo' ? 'text-[#c84b31] dark:text-[#e05d44] font-bold' : 'text-[#78716c] dark:text-[#a1a1aa]'}`}
-          >
-            <Swords className="w-3.5 h-3.5 mb-0.5" />
-            <span>Dojo</span>
-          </button>
-          <button
-            onClick={() => onSelectModule('quiz')}
-            className={`flex flex-col items-center py-1 px-1 rounded-md transition ${activeModule === 'quiz' ? 'text-[#1e3a8a] dark:text-[#3b82f6] font-bold' : 'text-[#78716c] dark:text-[#a1a1aa]'}`}
-          >
-            <Trophy className="w-3.5 h-3.5 mb-0.5" />
-            <span>Ujian</span>
-          </button>
-          <button
-            onClick={() => onSelectModule('roadmap')}
-            className={`flex flex-col items-center py-1 px-1 rounded-md transition ${activeModule === 'roadmap' ? 'text-[#c84b31] dark:text-[#e05d44] font-bold' : 'text-[#78716c] dark:text-[#a1a1aa]'}`}
-          >
-            <Compass className="w-3.5 h-3.5 mb-0.5" />
-            <span>0→N1</span>
-          </button>
-          {onOpenSrsReview && (
-            <button
-              onClick={onOpenSrsReview}
-              className={`flex flex-col items-center py-1 px-1 rounded-md transition ${dueCount > 0 ? 'text-[#c84b31] dark:text-[#e05d44] font-bold' : 'text-[#78716c] dark:text-[#a1a1aa]'}`}
-            >
-              <Flame className="w-3.5 h-3.5 mb-0.5" />
-              <span className="font-mono">{dueCount > 0 ? dueCount : 'SRS'}</span>
-            </button>
-          )}
-        </div>
-      </header>
+            <div className="w-7 h-7 rounded bg-[#c84b31] dark:bg-[#e05d44] flex items-center justify-center text-white font-serif-jp font-bold text-sm">
+              日
+            </div>
+            <span className="font-serif-jp font-bold text-sm text-[#1c1917] dark:text-[#f4f4f5]">
+              日本語マスター
+            </span>
+          </div>
 
-      {/* Settings & Backup Modal */}
+          <div className="flex items-center gap-2">
+            {onOpenSrsReview && (
+              <button
+                type="button"
+                onClick={onOpenSrsReview}
+                className="px-2 py-1 rounded text-xs font-mono font-bold border border-[#c84b31]/30 bg-[#c84b31]/10 text-[#c84b31] dark:text-[#e05d44]"
+              >
+                🔥 {dueCount}
+              </button>
+            )}
+
+            <button
+              type="button"
+              onClick={toggleTheme}
+              className="p-1.5 rounded border border-[#e7e5e4] dark:border-[#27272a] text-[#78716c]"
+            >
+              {isDark ? <Sun className="w-3.5 h-3.5 text-amber-400" /> : <Moon className="w-3.5 h-3.5" />}
+            </button>
+
+            <button
+              type="button"
+              onClick={() => setIsSettingsOpen(true)}
+              className="p-1.5 rounded border border-[#e7e5e4] dark:border-[#27272a] text-[#78716c]"
+            >
+              <Settings className="w-3.5 h-3.5" />
+            </button>
+          </div>
+        </header>
+
+        {/* Mobile Floating Bottom Bar */}
+        <nav className="fixed bottom-0 left-0 right-0 z-30 bg-[#faf8f5]/95 dark:bg-[#18181b]/95 backdrop-blur-md border-t border-[#e7e5e4] dark:border-[#27272a] px-2 py-1.5 flex items-center justify-around text-[10px]">
+          {navItems.map(item => (
+            <button
+              key={item.id}
+              type="button"
+              onClick={() => onSelectModule(item.id)}
+              className={`flex flex-col items-center py-1 px-1 transition ${
+                activeModule === item.id 
+                  ? 'text-[#c84b31] dark:text-[#e05d44] font-bold' 
+                  : 'text-[#78716c] dark:text-[#a1a1aa]'
+              }`}
+            >
+              <span className="mb-0.5">{item.icon}</span>
+              <span>{item.label.split(' ')[0]}</span>
+            </button>
+          ))}
+        </nav>
+      </div>
+
+      {/* Settings Modal */}
       <SettingsModal 
         isOpen={isSettingsOpen} 
         onClose={() => setIsSettingsOpen(false)} 
@@ -323,3 +328,4 @@ export const Navbar: React.FC<NavbarProps> = ({ activeModule, onSelectModule, on
     </>
   );
 };
+export { SidebarNav as Navbar };

@@ -74,10 +74,12 @@ export function App() {
     setActiveModule(module);
   };
 
+  const isFullFocusMode = kanaStage === 'quiz';
+
   return (
-    <div className="min-h-screen bg-[#faf8f5] dark:bg-[#18181b] text-[#1c1917] dark:text-[#f4f4f5] flex flex-col font-sans transition-colors duration-200">
-      {/* Top Navbar (hidden during quiz session to minimize distraction, like Tofugu focus mode) */}
-      {kanaStage !== 'quiz' && (
+    <div className="min-h-screen bg-[#faf8f5] dark:bg-[#18181b] text-[#1c1917] dark:text-[#f4f4f5] flex flex-col md:flex-row font-sans transition-colors duration-200">
+      {/* Sidebar Navigation (hidden during focus quiz session) */}
+      {!isFullFocusMode && (
         <Navbar 
           activeModule={activeModule} 
           onSelectModule={(mod) => {
@@ -90,101 +92,103 @@ export function App() {
         />
       )}
 
-      {/* Main Content Area */}
-      <main className="flex-1 pb-16">
-        <Suspense fallback={
-          <div className="flex items-center justify-center min-h-[50vh]">
-            <div className="w-8 h-8 border-4 border-rose-500 border-t-transparent rounded-full animate-spin" />
-          </div>
-        }>
-          {activeModule === 'kana' && (
-            <>
-              {kanaStage === 'selector' && (
-                <KanaSelector onStartQuiz={handleStartQuiz} />
-              )}
-
-              {kanaStage === 'quiz' && (
-                <KanaQuizSession
-                  items={activeQuizItems}
-                  requeueMistakes={requeueMistakes}
-                  requireEnter={requireEnter}
-                  onFinishQuiz={handleFinishQuiz}
-                  onExit={handleBackToSelector}
-                />
-              )}
-
-              {kanaStage === 'results' && quizSummary && (
-                <KanaResults
-                  summary={quizSummary}
-                  onRetryMissed={handleRetryMissed}
-                  onRetryAll={handleRetryAll}
-                  onBackToSelector={handleBackToSelector}
-                  onGoToKanji={() => {
-                    setActiveModule('kanji');
-                    setActiveLevel('N5');
-                    setKanaStage('selector');
-                  }}
-                />
-              )}
-            </>
-          )}
-
-          {activeModule === 'kanji' && (
-            <KanjiExplorer 
-              key={`kanji-${activeLevel || 'N5'}`}
-              initialLevel={activeLevel} 
-              onGoToQuiz={() => setActiveModule('quiz')} 
-            />
-          )}
-
-          {activeModule === 'vocab' && (
-            <VocabExplorer 
-              key={`vocab-${activeLevel || 'N5'}`}
-              initialLevel={activeLevel} 
-              onGoToQuiz={() => setActiveModule('quiz')} 
-            />
-          )}
-
-          {activeModule === 'grammar' && (
-            <GrammarExplorer 
-              key={`grammar-${activeLevel || 'N5'}`}
-              initialLevel={activeLevel} 
-              onGoToQuiz={() => setActiveModule('quiz')} 
-            />
-          )}
-
-          {activeModule === 'dojo' && <ConjugationDojo />}
-
-          {activeModule === 'quiz' && (
-            <N5QuizCenter 
-              key={`quiz-${activeLevel || 'N5'}`}
-              initialLevel={activeLevel} 
-            />
-          )}
-
-          {activeModule === 'roadmap' && (
-            <RoadmapView onNavigate={handleNavigateFromRoadmap} />
-          )}
-
-          {activeModule === 'design-lab' && (
-            <DesignShowroom onBackToApp={() => setActiveModule('kana')} />
-          )}
-        </Suspense>
-      </main>
-
-      {/* Footer */}
-      {kanaStage !== 'quiz' && (
-        <footer className="border-t border-[#e7e5e4] dark:border-[#27272a] bg-[#faf8f5]/90 dark:bg-[#18181b]/90 py-6 text-center text-xs text-[#78716c] dark:text-[#a1a1aa]">
-          <div className="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
-            <div className="flex items-center gap-2">
-              <span className="font-serif-jp font-bold text-[#1c1917] dark:text-[#f4f4f5]">日本語マスター</span>
-              <span className="text-[#a8a29e] dark:text-[#71717a]">|</span>
-              <span className="font-medium text-[#78716c] dark:text-[#a1a1aa]">NihongoMaster — Platform Belajar Bahasa Jepang 0→N1</span>
+      {/* Main Workspace Canvas (Expansive Width) */}
+      <div className="flex-1 flex flex-col min-w-0 min-h-screen">
+        <main className={`flex-1 ${!isFullFocusMode ? 'pb-20 md:pb-12' : ''}`}>
+          <Suspense fallback={
+            <div className="flex items-center justify-center min-h-[50vh]">
+              <div className="w-8 h-8 border-4 border-[#c84b31] border-t-transparent rounded-full animate-spin" />
             </div>
-            <p className="text-[11px] font-sans">Kurikulum Otentik N5 hingga N1 • 100% In-Context JLPT Questions</p>
-          </div>
-        </footer>
-      )}
+          }>
+            {activeModule === 'kana' && (
+              <>
+                {kanaStage === 'selector' && (
+                  <KanaSelector onStartQuiz={handleStartQuiz} />
+                )}
+
+                {kanaStage === 'quiz' && (
+                  <KanaQuizSession
+                    items={activeQuizItems}
+                    requeueMistakes={requeueMistakes}
+                    requireEnter={requireEnter}
+                    onFinishQuiz={handleFinishQuiz}
+                    onExit={handleBackToSelector}
+                  />
+                )}
+
+                {kanaStage === 'results' && quizSummary && (
+                  <KanaResults
+                    summary={quizSummary}
+                    onRetryMissed={handleRetryMissed}
+                    onRetryAll={handleRetryAll}
+                    onBackToSelector={handleBackToSelector}
+                    onGoToKanji={() => {
+                      setActiveModule('kanji');
+                      setActiveLevel('N5');
+                      setKanaStage('selector');
+                    }}
+                  />
+                )}
+              </>
+            )}
+
+            {activeModule === 'kanji' && (
+              <KanjiExplorer 
+                key={`kanji-${activeLevel || 'N5'}`}
+                initialLevel={activeLevel} 
+                onGoToQuiz={() => setActiveModule('quiz')} 
+              />
+            )}
+
+            {activeModule === 'vocab' && (
+              <VocabExplorer 
+                key={`vocab-${activeLevel || 'N5'}`}
+                initialLevel={activeLevel} 
+                onGoToQuiz={() => setActiveModule('quiz')} 
+              />
+            )}
+
+            {activeModule === 'grammar' && (
+              <GrammarExplorer 
+                key={`grammar-${activeLevel || 'N5'}`}
+                initialLevel={activeLevel} 
+                onGoToQuiz={() => setActiveModule('quiz')} 
+              />
+            )}
+
+            {activeModule === 'dojo' && <ConjugationDojo />}
+
+            {activeModule === 'quiz' && (
+              <N5QuizCenter 
+                key={`quiz-${activeLevel || 'N5'}`}
+                initialLevel={activeLevel} 
+              />
+            )}
+
+            {activeModule === 'roadmap' && (
+              <RoadmapView onNavigate={handleNavigateFromRoadmap} />
+            )}
+
+            {activeModule === 'design-lab' && (
+              <DesignShowroom onBackToApp={() => setActiveModule('kana')} />
+            )}
+          </Suspense>
+        </main>
+
+        {/* Minimal Editorial Footer */}
+        {!isFullFocusMode && (
+          <footer className="border-t border-[#e7e5e4] dark:border-[#27272a] bg-[#faf8f5]/90 dark:bg-[#18181b]/90 py-5 text-center text-xs text-[#78716c] dark:text-[#a1a1aa] mt-auto">
+            <div className="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
+              <div className="flex items-center gap-2">
+                <span className="font-serif-jp font-bold text-[#1c1917] dark:text-[#f4f4f5]">日本語マスター</span>
+                <span className="text-[#a8a29e] dark:text-[#71717a]">|</span>
+                <span className="font-medium text-[#78716c] dark:text-[#a1a1aa]">NihongoMaster — Platform Belajar Bahasa Jepang 0→N1</span>
+              </div>
+              <p className="text-[11px] font-sans">Kurikulum Otentik N5 hingga N1 • 100% In-Context JLPT Questions</p>
+            </div>
+          </footer>
+        )}
+      </div>
 
       {/* Srs Review Session Modal */}
       {isSrsOpen && (
