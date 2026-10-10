@@ -41,6 +41,26 @@ describe('Benteng Anti-Rot & Ketahanan Data (SPK #10)', () => {
     }
   });
 
+  it('memastikan dataset Kosakata bebas dari artifak "melakukan + English" dan kalimat robotik (Mandor Manifesto Layer 2)', () => {
+    const melakukanEnglishRegex = /melakukan\s+[a-zA-Z]/;
+    const roboticSentenceRegex = /Dalam masyarakat nyata|menyadari pentingnya melakukan/;
+
+    const badMeaningIds: string[] = [];
+    const badSentences: string[] = [];
+
+    for (const item of VOCAB_DATA) {
+      if (melakukanEnglishRegex.test(item.meaningId)) {
+        badMeaningIds.push(`${item.id}: ${item.meaningId}`);
+      }
+      if (item.exampleSentence?.id && (melakukanEnglishRegex.test(item.exampleSentence.id) || roboticSentenceRegex.test(item.exampleSentence.id))) {
+        badSentences.push(`${item.id}: ${item.exampleSentence.id}`);
+      }
+    }
+
+    expect(badMeaningIds.length).toBe(0);
+    expect(badSentences.length).toBe(0);
+  });
+
   it('memastikan dataset Tata Bahasa memiliki field wajib dan contoh kalimat', () => {
     for (const item of GRAMMAR_DATA) {
       expect(item.id).toBeTruthy();
