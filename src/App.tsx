@@ -153,12 +153,17 @@ export function App() {
               />
             )}
 
-            {activeModule === 'dojo' && <ConjugationDojo />}
+            {activeModule === 'dojo' && (
+              <ConjugationDojo 
+                onSwitchSubModule={(mod) => setActiveModule(mod)} 
+              />
+            )}
 
             {activeModule === 'quiz' && (
               <N5QuizCenter 
                 key={`quiz-${activeLevel || 'N5'}`}
                 initialLevel={activeLevel} 
+                onSwitchSubModule={(mod) => setActiveModule(mod)}
               />
             )}
 

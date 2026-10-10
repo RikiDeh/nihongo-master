@@ -23,14 +23,16 @@ import {
   Trophy, 
   ArrowRight,
   Flame,
-  Star
+  Star,
+  Swords
 } from 'lucide-react';
 
 interface QuizCenterProps {
   initialLevel?: 'N5' | 'N4' | 'N3' | 'N2' | 'N1' | 'ALL';
+  onSwitchSubModule?: (subModule: 'quiz' | 'dojo') => void;
 }
 
-export const N5QuizCenter: React.FC<QuizCenterProps> = ({ initialLevel }) => {
+export const N5QuizCenter: React.FC<QuizCenterProps> = ({ initialLevel, onSwitchSubModule }) => {
   const [selectedLevel, setSelectedLevel] = useState<'N5' | 'N4' | 'N3' | 'N2' | 'N1'>(
     initialLevel && initialLevel !== 'ALL' ? initialLevel : 'N5'
   );
@@ -130,6 +132,30 @@ export const N5QuizCenter: React.FC<QuizCenterProps> = ({ initialLevel }) => {
     <div className="w-full max-w-5xl mx-auto px-4 py-8 animate-fadeIn">
       {stage === 'menu' && (
         <>
+          {/* Latihan Hub Switcher (Mobile & Desktop Cohesive Bar) */}
+          {onSwitchSubModule && (
+            <div className="flex items-center justify-center mb-6">
+              <div className="inline-flex p-1 bg-[#f4f0e8]/90 dark:bg-[#1f1f23]/90 border border-[#e7e5e4] dark:border-[#27272a] rounded-xl shadow-xs w-full sm:w-auto">
+                <button
+                  type="button"
+                  onClick={() => onSwitchSubModule('quiz')}
+                  className="flex-1 sm:flex-initial px-4 py-2 rounded-lg text-xs font-bold transition flex items-center justify-center gap-2 bg-white dark:bg-[#27272a] text-[#1c1917] dark:text-[#f4f4f5] shadow-xs border border-[#d6d3d1] dark:border-[#3f3f46] cursor-pointer"
+                >
+                  <Trophy className="w-4 h-4 text-[#1e3a8a] dark:text-[#60a5fa]" />
+                  <span>Ujian & Tryout JLPT</span>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => onSwitchSubModule('dojo')}
+                  className="flex-1 sm:flex-initial px-4 py-2 rounded-lg text-xs font-medium transition flex items-center justify-center gap-2 text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5] cursor-pointer"
+                >
+                  <Swords className="w-4 h-4 text-[#c84b31]" />
+                  <span>Dojo Konjugasi</span>
+                </button>
+              </div>
+            </div>
+          )}
+
           {/* Header */}
           <div className="text-center mb-8">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-[#1e3a8a]/5 dark:bg-[#3b82f6]/10 border border-[#1e3a8a]/20 dark:border-[#3b82f6]/25 text-[#1e3a8a] dark:text-[#3b82f6] text-xs font-mono font-medium mb-3 select-none">
@@ -144,12 +170,12 @@ export const N5QuizCenter: React.FC<QuizCenterProps> = ({ initialLevel }) => {
             </p>
 
             {/* Level Switcher Tab — Clean Zen Segments */}
-            <div className="inline-flex flex-wrap justify-center p-1 bg-[#f4f0e8]/80 dark:bg-[#1f1f23]/80 border border-[#e7e5e4] dark:border-[#27272a] rounded-lg gap-1 mb-6">
+            <div className="inline-flex flex-wrap justify-center p-1.5 bg-[#f4f0e8]/80 dark:bg-[#1f1f23]/80 border border-[#e7e5e4] dark:border-[#27272a] rounded-xl gap-1 mb-6 max-w-full">
               {(['N5', 'N4', 'N3', 'N2', 'N1'] as const).map(lvl => (
                 <button
                   key={lvl}
                   onClick={() => setSelectedLevel(lvl)}
-                  className={`px-3 py-1.5 rounded-md text-xs font-mono font-bold transition cursor-pointer flex items-center gap-1.5 ${
+                  className={`min-h-[40px] px-3.5 py-1.5 rounded-lg text-xs font-mono font-bold transition cursor-pointer flex items-center justify-center gap-1.5 ${
                     selectedLevel === lvl
                       ? 'bg-white dark:bg-[#27272a] text-[#1c1917] dark:text-[#f4f4f5] shadow-sm border border-[#d6d3d1] dark:border-[#3f3f46]'
                       : 'text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
@@ -167,14 +193,14 @@ export const N5QuizCenter: React.FC<QuizCenterProps> = ({ initialLevel }) => {
               {[
                 { count: 10, label: 'Mini Mock (10 Soal)' },
                 { count: 20, label: 'Standar JLPT (20 Soal)' },
-                { count: 25, label: 'Tryout Penuh (25 Soal • 25 Menit)' },
+                { count: 25, label: 'Tryout Penuh (25 Soal • 25m)' },
               ].map(({ count, label }) => (
                 <button
                   key={count}
                   onClick={() => setQuestionCount(count)}
-                  className={`px-3 py-1 rounded-md text-xs font-sans font-medium transition cursor-pointer border ${
+                  className={`min-h-[40px] px-3.5 py-2 rounded-xl text-xs font-sans font-medium transition cursor-pointer border flex items-center justify-center ${
                     questionCount === count
-                      ? 'bg-[#1c1917] dark:bg-[#f4f4f5] text-white dark:text-[#18181b] border-transparent shadow-sm'
+                      ? 'bg-[#1c1917] dark:bg-[#f4f4f5] text-white dark:text-[#18181b] border-transparent shadow-xs font-bold'
                       : 'bg-white dark:bg-[#1f1f23] border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
                   }`}
                 >

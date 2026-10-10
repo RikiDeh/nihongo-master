@@ -85,7 +85,11 @@ function generateNewQuestion(
   };
 }
 
-export const ConjugationDojo: React.FC = () => {
+interface ConjugationDojoProps {
+  onSwitchSubModule?: (subModule: 'quiz' | 'dojo') => void;
+}
+
+export const ConjugationDojo: React.FC<ConjugationDojoProps> = ({ onSwitchSubModule }) => {
   const [showRomaji] = useShowRomaji();
   const [activeTab, setActiveTab] = useState<'cheatsheet' | 'trainer'>('trainer');
 
@@ -230,6 +234,30 @@ export const ConjugationDojo: React.FC = () => {
 
   return (
     <div className="w-full max-w-5xl mx-auto px-4 py-8 animate-fadeIn">
+      {/* Latihan Hub Switcher (Mobile & Desktop Cohesive Bar) */}
+      {onSwitchSubModule && (
+        <div className="flex items-center justify-center mb-6">
+          <div className="inline-flex p-1 bg-[#f4f0e8]/90 dark:bg-[#1f1f23]/90 border border-[#e7e5e4] dark:border-[#27272a] rounded-xl shadow-xs w-full sm:w-auto">
+            <button
+              type="button"
+              onClick={() => onSwitchSubModule('quiz')}
+              className="flex-1 sm:flex-initial px-4 py-2 rounded-lg text-xs font-medium transition flex items-center justify-center gap-2 text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5] cursor-pointer"
+            >
+              <Trophy className="w-4 h-4 text-[#1e3a8a] dark:text-[#60a5fa]" />
+              <span>Ujian & Tryout JLPT</span>
+            </button>
+            <button
+              type="button"
+              onClick={() => onSwitchSubModule('dojo')}
+              className="flex-1 sm:flex-initial px-4 py-2 rounded-lg text-xs font-bold transition flex items-center justify-center gap-2 bg-white dark:bg-[#27272a] text-[#1c1917] dark:text-[#f4f4f5] shadow-xs border border-[#d6d3d1] dark:border-[#3f3f46] cursor-pointer"
+            >
+              <Swords className="w-4 h-4 text-[#c84b31]" />
+              <span>Dojo Konjugasi</span>
+            </button>
+          </div>
+        </div>
+      )}
+
       {/* Title */}
       <div className="text-center mb-8">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#c84b31]/10 border border-[#c84b31]/20 text-[#c84b31] text-xs font-mono font-medium mb-3">
@@ -371,10 +399,10 @@ export const ConjugationDojo: React.FC = () => {
       {activeTab === 'trainer' && !isSessionFinished && currentQuestion && (
         <div className="max-w-2xl mx-auto">
           {/* Trainer Filter & Streak Bar */}
-          <div className="bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] rounded-xl p-4 mb-6 shadow-xs space-y-3">
-            {/* Session Duration Selector */}
-            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 p-2.5 bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a] rounded-lg">
-              <div className="flex items-center gap-1.5 overflow-x-auto w-full sm:w-auto">
+          <div className="bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] rounded-2xl p-4 sm:p-5 mb-6 shadow-xs space-y-4">
+            {/* Session Duration Selector + Counter */}
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 p-2.5 bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a] rounded-xl">
+              <div className="flex items-center gap-1.5 overflow-x-auto w-full sm:w-auto no-scrollbar py-0.5">
                 <span className="text-[10px] font-mono font-bold text-[#78716c] dark:text-[#a1a1aa] uppercase mr-1 shrink-0">DURASI:</span>
                 {(
                   [
@@ -386,9 +414,9 @@ export const ConjugationDojo: React.FC = () => {
                   <button
                     key={m.id}
                     onClick={() => handleStartNewSession(m.id)}
-                    className={`px-2.5 py-1 rounded-md text-xs font-mono font-medium transition cursor-pointer shrink-0 border ${
+                    className={`min-h-[40px] px-3.5 py-1.5 rounded-lg text-xs font-mono font-medium transition cursor-pointer shrink-0 border flex items-center justify-center ${
                       sessionMode === m.id
-                        ? 'bg-[#1c1917] dark:bg-[#f4f4f5] text-white dark:text-[#18181b] border-transparent font-bold'
+                        ? 'bg-[#1c1917] dark:bg-[#f4f4f5] text-white dark:text-[#18181b] border-transparent font-bold shadow-xs'
                         : 'bg-white dark:bg-[#1f1f23] border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
                     }`}
                   >
@@ -398,7 +426,7 @@ export const ConjugationDojo: React.FC = () => {
               </div>
 
               {/* Progress counter: Soal X dari Y */}
-              <div className="text-xs font-mono font-medium text-[#78716c] dark:text-[#a1a1aa] shrink-0 self-end sm:self-auto">
+              <div className="text-xs font-mono font-medium text-[#78716c] dark:text-[#a1a1aa] shrink-0 self-end sm:self-auto px-1">
                 {sessionMode === 'endless' ? (
                   <span>Soal ke-<strong className="text-[#1c1917] dark:text-[#f4f4f5]">{questionIndex}</strong></span>
                 ) : (
@@ -407,15 +435,38 @@ export const ConjugationDojo: React.FC = () => {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-1">
-              {/* Form Filter Selector */}
-              <div className="flex items-center gap-1 overflow-x-auto w-full sm:w-auto pb-1 sm:pb-0">
-                <span className="text-[10px] font-mono font-bold text-[#78716c] dark:text-[#a1a1aa] uppercase mr-1 shrink-0">BENTUK:</span>
-                {(['random', 'te', 'masu', 'nai', 'ta', 'potential', 'passive'] as const).map(f => (
+            {/* Form Filter Selector with clear labels */}
+            <div>
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-[10px] font-mono font-bold text-[#78716c] dark:text-[#a1a1aa] uppercase">TARGET PERUBAHAN BENTUK:</span>
+                {/* Streak & Score Tracker */}
+                <div className="flex items-center gap-2 font-mono text-xs">
+                  <div className="flex items-center gap-1 px-2 py-0.5 rounded-md bg-[#c84b31]/10 text-[#c84b31] font-bold text-[11px]">
+                    <Flame className="w-3.5 h-3.5" />
+                    <span>{streak}</span>
+                  </div>
+                  <div className="text-[11px] text-[#78716c] dark:text-[#a1a1aa]">
+                    Skor: <strong className="text-[#1c1917] dark:text-[#f4f4f5]">{correctCount}</strong>/{totalAnswered}
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-1.5 overflow-x-auto pb-1.5 no-scrollbar -mx-1 px-1">
+                {(
+                  [
+                    { id: 'random', label: 'Acak', hint: 'Semua Bentuk' },
+                    { id: 'te', label: '~Te', hint: 'Sambung' },
+                    { id: 'masu', label: '~Masu', hint: 'Sopan' },
+                    { id: 'nai', label: '~Nai', hint: 'Negatif' },
+                    { id: 'ta', label: '~Ta', hint: 'Lampau' },
+                    { id: 'potential', label: 'Potensial', hint: 'Bisa' },
+                    { id: 'passive', label: 'Pasif', hint: 'Di-' },
+                  ] as const
+                ).map(f => (
                   <button
-                    key={f}
+                    key={f.id}
                     onClick={() => {
-                      setSelectedFormFilter(f);
+                      setSelectedFormFilter(f.id);
                       setIsAnswered(false);
                       setSelectedOption(null);
                       let nextDeck = [...unseenDeck];
@@ -423,80 +474,74 @@ export const ConjugationDojo: React.FC = () => {
                       if (nextDeck.length === 0) nextDeck = fisherYatesShuffle([...pool]);
                       const nextVerb = nextDeck.pop() || pool[0];
                       setUnseenDeck(nextDeck);
-                      setCurrentQuestion(generateNewQuestion(f, selectedGroupFilter, nextVerb));
+                      setCurrentQuestion(generateNewQuestion(f.id, selectedGroupFilter, nextVerb));
                     }}
-                    className={`px-2.5 py-1 rounded-md text-xs font-mono font-medium transition cursor-pointer shrink-0 border ${
-                      selectedFormFilter === f
-                        ? 'bg-[#c84b31] text-white border-transparent font-bold'
+                    className={`min-h-[44px] px-3 py-1.5 rounded-xl text-left transition cursor-pointer shrink-0 border flex flex-col justify-center ${
+                      selectedFormFilter === f.id
+                        ? 'bg-[#c84b31] text-white border-transparent font-bold shadow-xs'
                         : 'bg-[#faf8f5] dark:bg-[#18181b] border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
                     }`}
                   >
-                    {f === 'random' ? 'Acak' : f === 'potential' ? 'Potensial' : f === 'passive' ? 'Pasif' : `~${f.toUpperCase()}`}
+                    <span className="text-xs font-mono font-bold leading-tight">{f.label}</span>
+                    <span className={`text-[10px] leading-tight ${selectedFormFilter === f.id ? 'text-white/80' : 'text-[#a8a29e] dark:text-[#71717a]'}`}>
+                      {f.hint}
+                    </span>
                   </button>
                 ))}
-              </div>
-
-              {/* Streak & Score Tracker */}
-              <div className="flex items-center gap-3 shrink-0 self-end sm:self-auto font-mono text-xs">
-                <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a] text-[#c84b31] font-bold">
-                  <Flame className="w-3.5 h-3.5" />
-                  <span>Streak: {streak}</span>
-                </div>
-                <div className="text-[#78716c] dark:text-[#a1a1aa]">
-                  Skor: <strong className="text-[#1c1917] dark:text-[#f4f4f5]">{correctCount}</strong>/{totalAnswered}
-                </div>
               </div>
             </div>
 
             {/* Group Filter Selector */}
-            <div className="flex items-center gap-1 overflow-x-auto pt-2 border-t border-[#e7e5e4] dark:border-[#27272a]">
-              <span className="text-[10px] font-mono font-bold text-[#78716c] dark:text-[#a1a1aa] uppercase mr-1 shrink-0">GOLONGAN:</span>
-              {([
-                { id: 'all', label: 'Semua Golongan' },
-                { id: 'godan', label: 'Gol. 1 (Godan)' },
-                { id: 'ichidan', label: 'Gol. 2 (Ichidan)' },
-                { id: 'irregular', label: 'Gol. 3 (Irregular)' },
-              ] as const).map(g => (
-                <button
-                  key={g.id}
-                  onClick={() => {
-                    setSelectedGroupFilter(g.id);
-                    setIsAnswered(false);
-                    setSelectedOption(null);
-                    let nextDeck = [...unseenDeck];
-                    const pool = VERBS_DATA.filter(v => g.id === 'all' || v.group === g.id);
-                    if (nextDeck.length === 0) nextDeck = fisherYatesShuffle([...pool]);
-                    const nextVerb = nextDeck.pop() || pool[0];
-                    setUnseenDeck(nextDeck);
-                    setCurrentQuestion(generateNewQuestion(selectedFormFilter, g.id, nextVerb));
-                  }}
-                  className={`px-2.5 py-1 rounded-md text-xs font-mono font-medium transition cursor-pointer shrink-0 border ${
-                    selectedGroupFilter === g.id
-                      ? 'bg-[#1e3a8a] text-white border-transparent font-bold'
-                      : 'bg-[#faf8f5] dark:bg-[#18181b] border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
-                  }`}
-                >
-                  {g.label}
-                </button>
-              ))}
+            <div className="pt-2 border-t border-[#e7e5e4] dark:border-[#27272a]">
+              <span className="text-[10px] font-mono font-bold text-[#78716c] dark:text-[#a1a1aa] uppercase block mb-2">GOLONGAN KATA KERJA:</span>
+              <div className="flex items-center gap-1.5 overflow-x-auto pb-1 no-scrollbar -mx-1 px-1">
+                {([
+                  { id: 'all', label: 'Semua Golongan' },
+                  { id: 'godan', label: 'Gol. 1 (Godan)' },
+                  { id: 'ichidan', label: 'Gol. 2 (Ichidan)' },
+                  { id: 'irregular', label: 'Gol. 3 (Irregular)' },
+                ] as const).map(g => (
+                  <button
+                    key={g.id}
+                    onClick={() => {
+                      setSelectedGroupFilter(g.id);
+                      setIsAnswered(false);
+                      setSelectedOption(null);
+                      let nextDeck = [...unseenDeck];
+                      const pool = VERBS_DATA.filter(v => g.id === 'all' || v.group === g.id);
+                      if (nextDeck.length === 0) nextDeck = fisherYatesShuffle([...pool]);
+                      const nextVerb = nextDeck.pop() || pool[0];
+                      setUnseenDeck(nextDeck);
+                      setCurrentQuestion(generateNewQuestion(selectedFormFilter, g.id, nextVerb));
+                    }}
+                    className={`min-h-[40px] px-3 py-1.5 rounded-lg text-xs font-mono font-medium transition cursor-pointer shrink-0 border flex items-center justify-center ${
+                      selectedGroupFilter === g.id
+                        ? 'bg-[#1e3a8a] text-white border-transparent font-bold shadow-xs'
+                        : 'bg-[#faf8f5] dark:bg-[#18181b] border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
+                    }`}
+                  >
+                    {g.label}
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
 
           {/* Drill Question Card */}
-          <div className="bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] rounded-xl p-6 sm:p-8 shadow-xs relative overflow-hidden mb-6">
+          <div className="bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] rounded-2xl p-5 sm:p-8 shadow-xs relative overflow-hidden mb-6">
             {/* Header badges */}
-            <div className="flex items-center justify-between mb-6">
-              <span className={`px-2.5 py-1 rounded text-xs font-mono font-bold border ${getGroupBadge(currentQuestion.verb.group).color}`}>
+            <div className="flex items-center justify-between mb-5">
+              <span className={`px-2.5 py-1 rounded-md text-xs font-mono font-bold border ${getGroupBadge(currentQuestion.verb.group).color}`}>
                 {getGroupBadge(currentQuestion.verb.group).label}
               </span>
 
-              <span className={`px-2.5 py-1 rounded text-xs font-mono font-bold tracking-wider border ${getTargetFormBadge(currentQuestion.targetForm).color}`}>
+              <span className={`px-2.5 py-1 rounded-md text-xs font-mono font-bold tracking-wider border ${getTargetFormBadge(currentQuestion.targetForm).color}`}>
                 {getTargetFormBadge(currentQuestion.targetForm).label}
               </span>
             </div>
 
             {/* Target Challenge Display */}
-            <div className="text-center py-6 bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a] rounded-xl mb-6">
+            <div className="text-center py-6 px-4 bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a] rounded-2xl mb-6">
               <span className="text-[10px] font-mono text-[#78716c] dark:text-[#a1a1aa] uppercase tracking-wider block mb-1">
                 BENTUK KAMUS (JISHOKEI):
               </span>
@@ -507,8 +552,9 @@ export const ConjugationDojo: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => speakJapanese(currentQuestion.verb.kanji)}
-                  className="p-2 rounded-lg bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] hover:text-[#1c1917] dark:hover:text-[#f4f4f5] transition"
+                  className="p-2.5 min-h-[44px] min-w-[44px] flex items-center justify-center rounded-xl bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] hover:text-[#1c1917] dark:hover:text-[#f4f4f5] transition cursor-pointer shadow-xs active:scale-95"
                   title="Dengarkan pengucapan"
+                  aria-label="Dengarkan pengucapan kata dasar"
                 >
                   <Volume2 className="w-4 h-4 text-[#2e7d32]" />
                 </button>
@@ -526,11 +572,11 @@ export const ConjugationDojo: React.FC = () => {
               </div>
             </div>
 
-            {/* 4 Choices */}
+            {/* 4 Choices (Responsive 44px+ Touch Targets) */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
               {currentQuestion.options.map((opt, idx) => {
                 const isCorrect = opt.kanji === currentQuestion.correctAnswer;
-                let btnStyle = 'bg-white dark:bg-[#1f1f23] border-[#e7e5e4] dark:border-[#27272a] text-[#1c1917] dark:text-[#f4f4f5] hover:border-[#1c1917] dark:hover:border-[#71717a]';
+                let btnStyle = 'bg-white dark:bg-[#1f1f23] border-[#e7e5e4] dark:border-[#27272a] text-[#1c1917] dark:text-[#f4f4f5] hover:border-[#1c1917] dark:hover:border-[#71717a] active:scale-[0.99]';
 
                 if (isAnswered) {
                   if (isCorrect) {
@@ -547,10 +593,10 @@ export const ConjugationDojo: React.FC = () => {
                     key={idx}
                     disabled={isAnswered}
                     onClick={() => handleSelectOption(idx)}
-                    className={`p-4 rounded-xl border text-base text-left font-medium transition flex items-center justify-between cursor-pointer select-none shadow-xs ${btnStyle}`}
+                    className={`min-h-[56px] p-4 rounded-xl border text-base text-left font-medium transition flex items-center justify-between cursor-pointer select-none shadow-xs ${btnStyle}`}
                   >
                     <div>
-                      <span className="text-lg font-jp font-bold block mb-0.5">
+                      <span className="text-lg font-jp font-bold block mb-0.5 leading-tight">
                         {opt.kanji}
                       </span>
                       {showRomaji && opt.romaji && (
@@ -588,12 +634,12 @@ export const ConjugationDojo: React.FC = () => {
               </div>
             )}
 
-            {/* Next Button */}
+            {/* Next Button (Full-width on mobile for easy one-hand thumb tapping) */}
             {isAnswered && (
               <div className="flex justify-end">
                 <button
                   onClick={handleNextQuestion}
-                  className="px-6 py-2.5 rounded-lg bg-[#c84b31] hover:bg-[#b03f27] text-white font-bold text-sm flex items-center gap-2 shadow-xs transition cursor-pointer"
+                  className="w-full sm:w-auto min-h-[48px] px-6 py-3 rounded-xl bg-[#c84b31] hover:bg-[#b03f27] text-white font-bold text-sm flex items-center justify-center gap-2 shadow-xs transition cursor-pointer active:scale-95"
                 >
                   <span>
                     {sessionMode !== 'endless' && questionIndex >= parseInt(sessionMode, 10)
@@ -718,19 +764,20 @@ export const ConjugationDojo: React.FC = () => {
                 <span>Pilih Kata Kerja untuk Melihat Matriks Perubahan:</span>
               </h3>
 
-              {/* Verb pills */}
-              <div className="flex items-center gap-1.5 overflow-x-auto pb-4 mb-6">
+              {/* Verb selector pills (Touch-friendly 40px+ targets with subtle scroll hint) */}
+              <div className="flex items-center gap-2 overflow-x-auto pb-4 mb-6 no-scrollbar -mx-2 px-2">
                 {VERBS_DATA.map(v => (
                   <button
                     key={v.id}
                     onClick={() => setSelectedVerbId(v.id)}
-                    className={`px-3 py-1.5 rounded-lg text-xs font-medium transition cursor-pointer shrink-0 font-jp border ${
+                    className={`min-h-[42px] px-3.5 py-2 rounded-xl text-xs font-medium transition cursor-pointer shrink-0 font-jp border flex items-center justify-center ${
                       selectedVerbId === v.id
-                        ? 'bg-[#1c1917] dark:bg-[#f4f4f5] text-white dark:text-[#18181b] border-transparent font-bold'
+                        ? 'bg-[#1c1917] dark:bg-[#f4f4f5] text-white dark:text-[#18181b] border-transparent font-bold shadow-xs'
                         : 'bg-white dark:bg-[#1f1f23] border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
                     }`}
                   >
-                    {v.kanji} ({v.meaningId})
+                    <span className="font-bold text-sm mr-1">{v.kanji}</span>
+                    <span className="opacity-75 text-[11px]">({v.meaningId})</span>
                   </button>
                 ))}
               </div>
