@@ -163,7 +163,7 @@ export const OnboardingTourModal: React.FC<InteractiveTourProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 pointer-events-none animate-fadeIn select-none">
+    <div className="fixed inset-0 z-[60] pointer-events-none animate-fadeIn select-none">
       {/* 1. Backdrop semi-transparent with cutout spotlight if target exists */}
       <div 
         className="fixed inset-0 bg-black/60 pointer-events-auto transition-all duration-300"
@@ -173,7 +173,7 @@ export const OnboardingTourModal: React.FC<InteractiveTourProps> = ({
       {/* 2. Spotlight Box Ring around target element */}
       {targetRect && (
         <div 
-          className="fixed pointer-events-none transition-all duration-300 z-50 rounded-xl border-2 border-[#c84b31] dark:border-[#e05d44] shadow-[0_0_25px_rgba(200,75,49,0.7)] animate-pulse"
+          className="fixed pointer-events-none transition-all duration-300 z-[60] rounded-xl border-2 border-[#c84b31] dark:border-[#e05d44] shadow-[0_0_25px_rgba(200,75,49,0.7)] animate-pulse"
           style={{
             top: `${Math.max(4, targetRect.top - 6)}px`,
             left: `${Math.max(4, targetRect.left - 6)}px`,
@@ -190,7 +190,7 @@ export const OnboardingTourModal: React.FC<InteractiveTourProps> = ({
       )}
 
       {/* 3. Floating Interactive Guide Card (Centered on mobile, positioned smart) */}
-      <div className="fixed inset-x-4 bottom-24 sm:bottom-auto sm:top-1/2 sm:left-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2 sm:max-w-md z-50 pointer-events-auto">
+      <div className="fixed inset-x-4 bottom-24 sm:bottom-auto sm:top-1/2 sm:left-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2 sm:max-w-md z-[60] pointer-events-auto">
         <div className="bg-[#faf8f5] dark:bg-[#18181b] border-2 border-[#c84b31]/40 dark:border-[#e05d44]/40 rounded-2xl p-5 sm:p-6 shadow-2xl relative text-left overflow-hidden animate-slideUp">
           {/* Glow ambient background accents */}
           <div className="absolute -top-16 -left-16 w-32 h-32 bg-[#c84b31]/15 rounded-full blur-2xl pointer-events-none" />

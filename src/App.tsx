@@ -28,13 +28,20 @@ export function App() {
   });
   const [activeLevel, setActiveLevel] = useState<JLPTLevel | 'ALL' | undefined>(undefined);
   const [isSrsOpen, setIsSrsOpen] = useState(false);
-  const [isTourOpen, setIsTourOpen] = useState<boolean>(() => {
+  const [isTourOpen, setIsTourOpen] = useState(false);
+
+  // Otomatis munculkan Tour untuk User Baru setelah DOM terpasang sempurna
+  useEffect(() => {
     if (typeof window !== 'undefined') {
       const hasSeenTour = localStorage.getItem('nihongo_tour_seen');
-      return !hasSeenTour;
+      if (!hasSeenTour) {
+        const timer = setTimeout(() => {
+          setIsTourOpen(true);
+        }, 500);
+        return () => clearTimeout(timer);
+      }
     }
-    return false;
-  });
+  }, []);
 
   useEffect(() => {
     const handleTourReset = () => {
