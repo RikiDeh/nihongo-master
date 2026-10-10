@@ -1012,7 +1012,7 @@ export const VOCAB_N4_BATCH4: VocabItem[] = [
     exampleSentence: {
       jp: '自動車を作る工場を見学しました。',
       furigana: 'じどうしゃをつくるこうじょうをけんがくしました。',
-      id: 'Saya melakukan kunjungan studi ke pabrik pembuatan mobil.',
+      id: 'Saya mengadakan kunjungan studi ke pabrik pembuatan mobil.',
     },
   },
   {
@@ -2938,7 +2938,7 @@ export const VOCAB_N4_BATCH4: VocabItem[] = [
     exampleSentence: {
       jp: '理科室で化学の実験を行いました。',
       furigana: 'りかしつでかがくのじっけんをおこないました。',
-      id: 'Kami melakukan percobaan kimia di ruang laboratorium sains.',
+      id: 'Kami mengadakan percobaan kimia di ruang laboratorium sains.',
     },
   },
   {

@@ -653,7 +653,7 @@ export const VOCAB_N3_BATCH2: VocabItem[] = [
     exampleSentence: {
       jp: '大勢の人の前で発表するのでとても緊張している。',
       furigana: 'おおぜいのひとのまえではっぴょうするのでとてもきんちょうしている。',
-      id: 'Saya sangat gugup karena harus melakukan presentasi di hadapan banyak orang.',
+      id: 'Saya sangat gugup karena harus membawakan presentasi di hadapan banyak orang.',
     },
   },
   {

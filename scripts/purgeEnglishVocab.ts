@@ -7,7 +7,6 @@
  */
 
 import fs from 'fs';
-import path from 'path';
 import type { VocabItem, KanjiItem } from '../src/types';
 import { VOCAB_N5_COMPLETE } from '../src/data/vocabN5CompleteData';
 import { VOCAB_N4_COMPLETE } from '../src/data/vocabN4CompleteData';
@@ -202,7 +201,6 @@ const VERB_DICT: Record<string, string> = {
   'oppose': 'Menentang',
   'compete': 'Bersaing',
   'fight': 'Bertarung',
-  'quarrel': 'Bertengkar',
   'argue': 'Berdebat',
   'discuss': 'Mendiskusikan',
   'explain': 'Menjelaskan',
@@ -294,7 +292,6 @@ const VERB_DICT: Record<string, string> = {
   'get': 'Mendapatkan',
   'obtain': 'Memperoleh',
   'gain': 'Meraih',
-  'win': 'Menang',
   'clothe': 'Mengenakan pakaian',
 };
 
@@ -393,6 +390,71 @@ const NOUN_ADJ_DICT: Record<string, string> = {
   'have a nice day / see you': 'Selamat beraktivitas / Sampai jumpa',
   'sorry to have kept you waiting': 'Maaf telah membuat Anda menunggu',
   '(humble) to know': 'Mengetahui (ragam sopan kenjougo)',
+  'atomic bomb': 'Bom atom',
+  'light': 'Cahaya / Ringan',
+  'engineering': 'Teknik / Rekayasa',
+  'imperial palace': 'Istana kaisar',
+  'mining industry': 'Industri pertambangan',
+  'brightly': 'Terang benderang',
+  'archeology': 'Arkeologi',
+  'mine': 'Tambang / Ranjau',
+  'developing (film)': 'Mencuci cetak film',
+  'principle / general rule': 'Prinsip / Aturan umum',
+  'actual place / local': 'Tempat kejadian / Lokal',
+  'limit / restriction': 'Batas / Pembatasan',
+  'origin (coordinates / starting point)': 'Titik asal / Titik pangkal',
+  'original / source': 'Naskah asli / Sumber',
+  'the text / original': 'Teks asli / Naskah asli',
+  'strict / close': 'Ketat / Akurat / Rinci',
+  'origin (coordinates, starting point)': 'Titik asal / Titik pangkal',
+  'principle, general rule': 'Prinsip / Aturan umum',
+  'actual place, local': 'Tempat kejadian / Lokal',
+  'limit, restriction': 'Batas / Pembatasan',
+  'original, source': 'Naskah asli / Sumber',
+  'the text, original': 'Teks asli / Naskah asli',
+  'strict, close': 'Ketat / Akurat / Rinci',
+  'verbal statement': 'Pernyataan lisan',
+  '1st in rank': 'Peringkat pertama / Juara satu',
+  'prosperous conditions': 'Kondisi makmur / Kejayaan',
+  'short course': 'Kursus singkat',
+  'hard / rigorous / strict': 'Keras / Ketat / Disiplin',
+  'cause / origin / source': 'Penyebab / Asal mula / Sumber',
+  'doctrine / cause / principle': 'Doktrin / Prinsip / Asas',
+  'restrict / limit / confine': 'Membatasi / Menyekat',
+  'limit / bound': 'Batas / Batasan',
+  'origin / original / former': 'Asal mula / Semula / Mantan',
+  'origin / beginning / rise': 'Asal-usul / Awal mula / Bangkit',
+  'origin / primeval': 'Asal mula / Purba',
+  'strict / severe / firm': 'Ketat / Keras / Tegas',
+  'limit / bounds': 'Batas / Limit',
+  'principle / theory / fundamental truth': 'Prinsip / Teori / Kebenaran dasar',
+  'light / soft': 'Ringan / Lembut',
+  'light / non-serious / minor': 'Ringan / Tidak serius / Sepele',
+  'easy / sederhana / light': 'Mudah / Sederhana / Ringan',
+  'lively / casual / light': 'Lincah / Santai / Ringan',
+  'cheerful / buoyant / lighthearted': 'Ceria / Riang / Bersemangat',
+  'flight / desertion / escape': 'Pelarian / Disersi / Kabur',
+  'side / sidelight / lateral': 'Sisi samping / Aspek sampingan',
+  'insult / contempt / slight': 'Hinaan / Pelecehan / Meremehkan',
+  'cost of fuel and light': 'Biaya bahan bakar dan penerangan',
+  'game under lights (e.g. / baseball) / night game': 'Pertandingan malam hari (lampu stadion)',
+  '(flash of) lightning': 'Kilatan petir / Halilintar',
+  'evening / (evening) twilight': 'Senja hari / Petang',
+  'coal mine / coal pit': 'Tambang batu bara',
+  'light bulb': 'Bola lampu',
+  'telephone pole / telegraph pole / light pole': 'Tiang listrik / Tiang telepon',
+  'lighthouse': 'Mercusuar',
+  'sunlight / rays of the sun': 'Sinar matahari',
+  'sunlight': 'Sinar matahari',
+  'beam / light ray': 'Berkas cahaya / Sinar',
+  'alighting / getting off': 'Turun dari kendaraan',
+  'slightly ~': 'Sedikit ~ / Agak ~',
+  'traffic lights / signal / semaphore': 'Lampu lalu lintas / Sinyal',
+  'lamplight / light (in general)': 'Cahaya lampu / Penerangan',
+  'daytime / broad daylight': 'Siang hari bolong',
+  'aviation / flight': 'Penerbangan / Aviasi',
+  'electric light': 'Lampu listrik',
+  'electricity / (electric) light': 'Listrik / Penerangan listrik',
 };
 
 // ============================================================================
@@ -606,7 +668,6 @@ const KANJI_DICT: Record<string, string> = {
   '晶': 'Kristal berkilau / Bersih jernih',
   '智': 'Kebijaksanaan kecerdasan luhur',
   '暮': 'Senja hari / Menjalani kehidupan',
-  '暴': 'Kekerasan mengamuk / Membuka kedok',
   '曇': 'Berawan mendung',
   '曹': 'Kolega pejabat / Kopral pangkat',
   '朔': 'Awal bulan baru / Utara dingin',
@@ -689,7 +750,6 @@ const KANJI_DICT: Record<string, string> = {
   '禹': 'Raja Yu agung pendiri dinasti',
   '禽': 'Unggas burung peliharaan',
   '禾': 'Padi bulir gandum tanaman',
-  '私': 'Saya pribadi',
   '秤': 'Timbangan neraca ukur',
   '稽': 'Berlatih meneliti / Menunduk hormat',
   '突': 'Menusuk menabrak / Tiba-tiba',
@@ -768,7 +828,6 @@ const KANJI_DICT: Record<string, string> = {
   '薯': 'Ubi kentang tanaman umbi',
   '薇': 'Pakis osmund pakis liar gunung',
   '薔': 'Bunga mawar berduri mekar',
-  '薇': 'Bunga mawar harum wangi',
   '藁': 'Jerami padi tangkai kering',
   '藍': 'Nila tanaman nila biru indigo',
   '藤': 'Bunga wisteria ungu merambat',
@@ -805,7 +864,6 @@ const KANJI_DICT: Record<string, string> = {
   '觴': 'Cawan gelas piala arak anggur',
   '詞': 'Kata lirik syair puisi istilah',
   '註': 'Catatan kaki penjelasan anotasi',
-  '評': 'Menilai kritik evaluasi ulasan',
   '詼': 'Candaan jenaka humor sindiran',
   '誹': 'Menghina menjelek-jelekkan fitnah',
   '諡': 'Gelar anumerta nama kehormatan wafat',
@@ -858,7 +916,6 @@ const KANJI_DICT: Record<string, string> = {
   '醗': 'Meragi memfermentasi ragi arak',
   '酵': 'Ragi fermentasi biakan ragi',
   '酷': 'Kejam berat menyengsarakan',
-  '酸': 'Asam rasa asam senyawa asam',
   '采': 'Memilih mengambil dadu rupa',
   '釉': 'Lapisan glasir keramik porselen',
   '釘': 'Paku pasak paku besi',
@@ -991,7 +1048,7 @@ const VERB_TEMPLATES: SentenceTemplate[] = [
   {
     jp: (w) => `準備をしっかりしてから${w}予定です。`,
     furigana: (f) => `じゅんびをしっかりしてから${f}よていです。`,
-    id: (m) => `Berencana ${m} setelah melakukan persiapan dengan matang.`,
+    id: (m) => `Berencana ${m} setelah menyiapkan segala hal dengan matang.`,
   },
   {
     jp: (w) => `毎日コツコツと${w}ことが上達の秘訣だ。`,
@@ -1228,10 +1285,18 @@ async function main() {
         }
       }
 
-      // 2. Variasikan contoh kalimat robotik
+      // 2. Variasikan contoh kalimat robotik & hybrid
       if (item.exampleSentence) {
         const { jp, id } = item.exampleSentence;
-        if (jp.includes('実社会において') || id.includes('Dalam masyarakat nyata')) {
+        if (
+          jp.includes('実社会において') ||
+          jp.includes('日々の生活の中で') ||
+          id.includes('Dalam masyarakat nyata') ||
+          id.includes('menyadari pentingnya') ||
+          id.includes('melakukan ') ||
+          id.includes('setelah melakukan') ||
+          /melakukan\s+[a-zA-Z]/.test(id)
+        ) {
           totalRobotSentencesFixed++;
 
           const word = item.kanji || item.kana;

@@ -28,9 +28,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に会うことを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにあうことをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya bertemu dengan tepat.',
+      jp: '焦らずに落ち着いて会うようにしている。',
+      furigana: 'あせらずにおちついてあうようにしている。',
+      id: 'Berusaha untuk bertemu dengan tenang tanpa tergesa-gesa.',
     },
   },
   {
@@ -140,9 +140,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に開くことを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにあくことをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya membuka dengan tepat.',
+      jp: '周囲の状況をよく確かめてから開くべきだ。',
+      furigana: 'しゅういのじょうきょうをよくたしかめてからあくべきだ。',
+      id: 'Sebaiknya membuka setelah memastikan situasi sekitar dengan baik.',
     },
   },
   {
@@ -156,9 +156,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に開けることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにあけることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan open (v.t.) dengan tepat.',
+      jp: '毎日コツコツと開けることが上達の秘訣だ。',
+      furigana: 'まいにちコツコツとあけることがじょうたつのひけつだ。',
+      id: 'Rutin membuka ((v.t.)) setiap hari adalah kunci kemajuan.',
     },
   },
   {
@@ -172,9 +172,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に上げることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにあげることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya menaikkan dengan tepat.',
+      jp: '準備をしっかりしてから上げる予定です。',
+      furigana: 'じゅんびをしっかりしてからあげるよていです。',
+      id: 'Berencana menaikkan setelah menyiapkan segala hal dengan matang.',
     },
   },
   {
@@ -284,9 +284,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に遊ぶことを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにあそぶことをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya bermain dengan tepat.',
+      jp: '毎日コツコツと遊ぶことが上達の秘訣だ。',
+      furigana: 'まいにちコツコツとあそぶことがじょうたつのひけつだ。',
+      id: 'Rutin bermain setiap hari adalah kunci kemajuan.',
     },
   },
   {
@@ -524,9 +524,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に浴びることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにあびることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan bathe dengan tepat.',
+      jp: '準備をしっかりしてから浴びる予定です。',
+      furigana: 'じゅんびをしっかりしてからあびるよていです。',
+      id: 'Berencana bathe setelah menyiapkan segala hal dengan matang.',
     },
   },
   {
@@ -620,9 +620,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に洗うことを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにあらうことをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan wash dengan tepat.',
+      jp: '焦らずに落ち着いて洗うようにしている。',
+      furigana: 'あせらずにおちついてあらうようにしている。',
+      id: 'Berusaha untuk mencuci dengan tenang tanpa tergesa-gesa.',
     },
   },
   {
@@ -636,9 +636,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に在ることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにあることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan be dengan tepat.',
+      jp: '準備をしっかりしてから在る予定です。',
+      furigana: 'じゅんびをしっかりしてからあるよていです。',
+      id: 'Berencana be setelah menyiapkan segala hal dengan matang.',
     },
   },
   {
@@ -652,9 +652,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に有ることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにあることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan be dengan tepat.',
+      jp: '周囲の状況をよく確かめてから有るべきだ。',
+      furigana: 'しゅういのじょうきょうをよくたしかめてからあるべきだ。',
+      id: 'Sebaiknya be setelah memastikan situasi sekitar dengan baik.',
     },
   },
   {
@@ -668,9 +668,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に歩くことを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにあるくことをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya berjalan kaki dengan tepat.',
+      jp: '焦らずに落ち着いて歩くようにしている。',
+      furigana: 'あせらずにおちついてあるくようにしている。',
+      id: 'Berusaha untuk berjalan kaki dengan tenang tanpa tergesa-gesa.',
     },
   },
   {
@@ -732,9 +732,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に言うことを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにいうことをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya berkata dengan tepat.',
+      jp: '焦らずに落ち着いて言うようにしている。',
+      furigana: 'あせらずにおちついていうようにしている。',
+      id: 'Berusaha untuk berkata dengan tenang tanpa tergesa-gesa.',
     },
   },
   {
@@ -780,9 +780,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に行くことを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにいくことをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya pergi dengan tepat.',
+      jp: '周囲の状況をよく確かめてから行くべきだ。',
+      furigana: 'しゅういのじょうきょうをよくたしかめてからいくべきだ。',
+      id: 'Sebaiknya pergi setelah memastikan situasi sekitar dengan baik.',
     },
   },
   {
@@ -1148,9 +1148,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に要ることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにいることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan need dengan tepat.',
+      jp: '毎日コツコツと要ることが上達の秘訣だ。',
+      furigana: 'まいにちコツコツといることがじょうたつのひけつだ。',
+      id: 'Rutin need setiap hari adalah kunci kemajuan.',
     },
   },
   {
@@ -1164,9 +1164,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に入れることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにいれることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan put in dengan tepat.',
+      jp: '準備をしっかりしてから入れる予定です。',
+      furigana: 'じゅんびをしっかりしてからいれるよていです。',
+      id: 'Berencana menaruh (in) setelah menyiapkan segala hal dengan matang.',
     },
   },
   {
@@ -1276,9 +1276,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に歌うことを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにうたうことをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan sing dengan tepat.',
+      jp: '準備をしっかりしてから歌う予定です。',
+      furigana: 'じゅんびをしっかりしてからうたうよていです。',
+      id: 'Berencana menyanyi setelah menyiapkan segala hal dengan matang.',
     },
   },
   {
@@ -1308,9 +1308,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に生まれることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにうまれることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan be born dengan tepat.',
+      jp: '焦らずに落ち着いて生まれるようにしている。',
+      furigana: 'あせらずにおちついてうまれるようにしている。',
+      id: 'Berusaha untuk menjadi born dengan tenang tanpa tergesa-gesa.',
     },
   },
   {
@@ -1340,9 +1340,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に売ることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにうることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan sell (v.t.) dengan tepat.',
+      jp: '準備をしっかりしてから売る予定です。',
+      furigana: 'じゅんびをしっかりしてからうるよていです。',
+      id: 'Berencana menjual ((v.t.)) setelah menyiapkan segala hal dengan matang.',
     },
   },
   {
@@ -1676,9 +1676,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に起きることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにおきることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan get up (e.g. dengan tepat.',
+      jp: '焦らずに落ち着いて起きるようにしている。',
+      furigana: 'あせらずにおちついておきるようにしている。',
+      id: 'Berusaha untuk mendapatkan (up (e.g.) dengan tenang tanpa tergesa-gesa.',
     },
   },
   {
@@ -1692,9 +1692,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に置くことを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにおくことをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya menaruh dengan tepat.',
+      jp: '毎日コツコツと置くことが上達の秘訣だ。',
+      furigana: 'まいにちコツコツとおくことがじょうたつのひけつだ。',
+      id: 'Rutin menaruh setiap hari adalah kunci kemajuan.',
     },
   },
   {
@@ -1788,9 +1788,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に教えることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにおしえることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya mengajar dengan tepat.',
+      jp: '焦らずに落ち着いて教えるようにしている。',
+      furigana: 'あせらずにおちついておしえるようにしている。',
+      id: 'Berusaha untuk mengajar dengan tenang tanpa tergesa-gesa.',
     },
   },
   {
@@ -1804,9 +1804,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に押すことを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにおすことをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan push dengan tepat.',
+      jp: '毎日コツコツと押すことが上達の秘訣だ。',
+      furigana: 'まいにちコツコツとおすことがじょうたつのひけつだ。',
+      id: 'Rutin mendorong setiap hari adalah kunci kemajuan.',
     },
   },
   {
@@ -2108,9 +2108,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に覚えることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにおぼえることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya belajar dengan tepat.',
+      jp: '準備をしっかりしてから覚える予定です。',
+      furigana: 'じゅんびをしっかりしてからおぼえるよていです。',
+      id: 'Berencana belajar setelah menyiapkan segala hal dengan matang.',
     },
   },
   {
@@ -2172,9 +2172,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に泳ぐことを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにおよぐことをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan swim dengan tepat.',
+      jp: '準備をしっかりしてから泳ぐ予定です。',
+      furigana: 'じゅんびをしっかりしてからおよぐよていです。',
+      id: 'Berencana berenang setelah menyiapkan segala hal dengan matang.',
     },
   },
   {
@@ -2188,9 +2188,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に降りることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにおりることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan get off dengan tepat.',
+      jp: '周囲の状況をよく確かめてから降りるべきだ。',
+      furigana: 'しゅういのじょうきょうをよくたしかめてからおりるべきだ。',
+      id: 'Sebaiknya mendapatkan (off) setelah memastikan situasi sekitar dengan baik.',
     },
   },
   {
@@ -2204,9 +2204,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に終ることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにおわることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan finish dengan tepat.',
+      jp: '焦らずに落ち着いて終るようにしている。',
+      furigana: 'あせらずにおちついておわるようにしている。',
+      id: 'Berusaha untuk menyelesaikan dengan tenang tanpa tergesa-gesa.',
     },
   },
   {
@@ -2380,9 +2380,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に買うことを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにかうことをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya membeli dengan tepat.',
+      jp: '焦らずに落ち着いて買うようにしている。',
+      furigana: 'あせらずにおちついてかうようにしている。',
+      id: 'Berusaha untuk membeli dengan tenang tanpa tergesa-gesa.',
     },
   },
   {
@@ -2396,9 +2396,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に返すことを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにかえすことをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan return something dengan tepat.',
+      jp: '準備をしっかりしてから返す予定です。',
+      furigana: 'じゅんびをしっかりしてからかえすよていです。',
+      id: 'Berencana mengembalikan (something) setelah menyiapkan segala hal dengan matang.',
     },
   },
   {
@@ -2412,9 +2412,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に帰ることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにかえることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan go back dengan tepat.',
+      jp: '周囲の状況をよく確かめてから帰るべきだ。',
+      furigana: 'しゅういのじょうきょうをよくたしかめてからかえるべきだ。',
+      id: 'Sebaiknya go back setelah memastikan situasi sekitar dengan baik.',
     },
   },
   {
@@ -2476,9 +2476,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に書くことを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにかくことをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya menulis dengan tepat.',
+      jp: '周囲の状況をよく確かめてから書くべきだ。',
+      furigana: 'しゅういのじょうきょうをよくたしかめてからかくべきだ。',
+      id: 'Sebaiknya menulis setelah memastikan situasi sekitar dengan baik.',
     },
   },
   {
@@ -2524,9 +2524,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に掛けることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにかけることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan put on (e.g. dengan tepat.',
+      jp: '準備をしっかりしてから掛ける予定です。',
+      furigana: 'じゅんびをしっかりしてからかけるよていです。',
+      id: 'Berencana menaruh (on (e.g.) setelah menyiapkan segala hal dengan matang.',
     },
   },
   {
@@ -2540,9 +2540,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切にかけることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにかけることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan dial dengan tepat.',
+      jp: '周囲の状況をよく確かめてからかけるべきだ。',
+      furigana: 'しゅういのじょうきょうをよくたしかめてからかけるべきだ。',
+      id: 'Sebaiknya dial setelah memastikan situasi sekitar dengan baik.',
     },
   },
   {
@@ -2572,9 +2572,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に貸すことを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにかすことをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan lend dengan tepat.',
+      jp: '準備をしっかりしてから貸す予定です。',
+      furigana: 'じゅんびをしっかりしてからかすよていです。',
+      id: 'Berencana meminjamkan setelah menyiapkan segala hal dengan matang.',
     },
   },
   {
@@ -2780,9 +2780,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切にかぶることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにかぶることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan wear dengan tepat.',
+      jp: '焦らずに落ち着いてかぶるようにしている。',
+      furigana: 'あせらずにおちついてかぶるようにしている。',
+      id: 'Berusaha untuk mengenakan dengan tenang tanpa tergesa-gesa.',
     },
   },
   {
@@ -2876,9 +2876,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に借りることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにかりることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan borrow dengan tepat.',
+      jp: '周囲の状況をよく確かめてから借りるべきだ。',
+      furigana: 'しゅういのじょうきょうをよくたしかめてからかりるべきだ。',
+      id: 'Sebaiknya meminjam setelah memastikan situasi sekitar dengan baik.',
     },
   },
   {
@@ -2903,7 +2903,7 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     kana: 'かるい',
     romaji: 'karui',
     meaningEn: 'light, non-serious, minor',
-    meaningId: 'light / non-serious / minor',
+    meaningId: 'Ringan / Tidak serius / Sepele',
     level: 'N5',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
@@ -3068,9 +3068,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に消えることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにきえることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan vanish dengan tepat.',
+      jp: '焦らずに落ち着いて消えるようにしている。',
+      furigana: 'あせらずにおちついてきえるようにしている。',
+      id: 'Berusaha untuk vanish dengan tenang tanpa tergesa-gesa.',
     },
   },
   {
@@ -3084,9 +3084,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に聞くことを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにきくことをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya mendengar dengan tepat.',
+      jp: '毎日コツコツと聞くことが上達の秘訣だ。',
+      furigana: 'まいにちコツコツときくことがじょうたつのひけつだ。',
+      id: 'Rutin mendengar setiap hari adalah kunci kemajuan.',
     },
   },
   {
@@ -3340,9 +3340,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に切ることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにきることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan cut dengan tepat.',
+      jp: '毎日コツコツと切ることが上達の秘訣だ。',
+      furigana: 'まいにちコツコツときることがじょうたつのひけつだ。',
+      id: 'Rutin memotong setiap hari adalah kunci kemajuan.',
     },
   },
   {
@@ -3356,9 +3356,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に着ることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにきることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan put on (clothes above your waist) dengan tepat.',
+      jp: '周囲の状況をよく確かめてから着るべきだ。',
+      furigana: 'しゅういのじょうきょうをよくたしかめてからきるべきだ。',
+      id: 'Sebaiknya menaruh (on (clothes above your waist)) setelah memastikan situasi sekitar dengan baik.',
     },
   },
   {
@@ -3580,9 +3580,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に曇ることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにくもることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan become cloudy dengan tepat.',
+      jp: '準備をしっかりしてから曇る予定です。',
+      furigana: 'じゅんびをしっかりしてからくもるよていです。',
+      id: 'Berencana become cloudy setelah menyiapkan segala hal dengan matang.',
     },
   },
   {
@@ -3660,9 +3660,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に来ることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにくることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya datang dengan tepat.',
+      jp: '周囲の状況をよく確かめてから来るべきだ。',
+      furigana: 'しゅういのじょうきょうをよくたしかめてからくるべきだ。',
+      id: 'Sebaiknya datang setelah memastikan situasi sekitar dengan baik.',
     },
   },
   {
@@ -3756,9 +3756,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に消すことを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにけすことをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan erase dengan tepat.',
+      jp: '準備をしっかりしてから消す予定です。',
+      furigana: 'じゅんびをしっかりしてからけすよていです。',
+      id: 'Berencana erase setelah menyiapkan segala hal dengan matang.',
     },
   },
   {
@@ -4092,9 +4092,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に答えることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにこたえることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya menjawab dengan tepat.',
+      jp: '毎日コツコツと答えることが上達の秘訣だ。',
+      furigana: 'まいにちコツコツとこたえることがじょうたつのひけつだ。',
+      id: 'Rutin menjawab setiap hari adalah kunci kemajuan.',
     },
   },
   {
@@ -4236,9 +4236,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切にコピーすることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにコピーすることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan copy dengan tepat.',
+      jp: '周囲の状況をよく確かめてからコピーするべきだ。',
+      furigana: 'しゅういのじょうきょうをよくたしかめてからコピーするべきだ。',
+      id: 'Sebaiknya copy setelah memastikan situasi sekitar dengan baik.',
     },
   },
   {
@@ -4252,9 +4252,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に困ることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにこまることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan be bothered dengan tepat.',
+      jp: '焦らずに落ち着いて困るようにしている。',
+      furigana: 'あせらずにおちついてこまるようにしている。',
+      id: 'Berusaha untuk menjadi bothered dengan tenang tanpa tergesa-gesa.',
     },
   },
   {
@@ -4444,9 +4444,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に咲くことを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにさくことをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan bloom dengan tepat.',
+      jp: '毎日コツコツと咲くことが上達の秘訣だ。',
+      furigana: 'まいにちコツコツとさくことがじょうたつのひけつだ。',
+      id: 'Rutin bloom setiap hari adalah kunci kemajuan.',
     },
   },
   {
@@ -4476,9 +4476,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に差すことを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにさすことをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan raise (stretch out) hands dengan tepat.',
+      jp: '焦らずに落ち着いて差すようにしている。',
+      furigana: 'あせらずにおちついてさすようにしている。',
+      id: 'Berusaha untuk raise (stretch out) hands dengan tenang tanpa tergesa-gesa.',
     },
   },
   {
@@ -4844,9 +4844,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に死ぬことを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにしぬことをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya meninggal dunia dengan tepat.',
+      jp: '焦らずに落ち着いて死ぬようにしている。',
+      furigana: 'あせらずにおちついてしぬようにしている。',
+      id: 'Berusaha untuk meninggal dunia dengan tenang tanpa tergesa-gesa.',
     },
   },
   {
@@ -4892,9 +4892,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に閉まることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにしまることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya menutup dengan tepat.',
+      jp: '周囲の状況をよく確かめてから閉まるべきだ。',
+      furigana: 'しゅういのじょうきょうをよくたしかめてからしまるべきだ。',
+      id: 'Sebaiknya menutup setelah memastikan situasi sekitar dengan baik.',
     },
   },
   {
@@ -4908,9 +4908,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に閉めることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにしめることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya menutup dengan tepat.',
+      jp: '焦らずに落ち着いて閉めるようにしている。',
+      furigana: 'あせらずにおちついてしめるようにしている。',
+      id: 'Berusaha untuk menutup dengan tenang tanpa tergesa-gesa.',
     },
   },
   {
@@ -4924,9 +4924,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に締めることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにしめることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan tie dengan tepat.',
+      jp: '毎日コツコツと締めることが上達の秘訣だ。',
+      furigana: 'まいにちコツコツとしめることがじょうたつのひけつだ。',
+      id: 'Rutin mengikat setiap hari adalah kunci kemajuan.',
     },
   },
   {
@@ -5148,9 +5148,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に知ることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにしることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya mengetahui dengan tepat.',
+      jp: '毎日コツコツと知ることが上達の秘訣だ。',
+      furigana: 'まいにちコツコツとしることがじょうたつのひけつだ。',
+      id: 'Rutin mengetahui setiap hari adalah kunci kemajuan.',
     },
   },
   {
@@ -5244,9 +5244,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Makanan & Cita Rasa',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に吸うことを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにすうことをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan breathe in dengan tepat.',
+      jp: '周囲の状況をよく確かめてから吸うべきだ。',
+      furigana: 'しゅういのじょうきょうをよくたしかめてからすうべきだ。',
+      id: 'Sebaiknya bernapas (in) setelah memastikan situasi sekitar dengan baik.',
     },
   },
   {
@@ -5452,9 +5452,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に住むことを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにすむことをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan reside dengan tepat.',
+      jp: '準備をしっかりしてから住む予定です。',
+      furigana: 'じゅんびをしっかりしてからすむよていです。',
+      id: 'Berencana reside setelah menyiapkan segala hal dengan matang.',
     },
   },
   {
@@ -5468,9 +5468,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切にすることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにすることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan do dengan tepat.',
+      jp: '周囲の状況をよく確かめてからするべきだ。',
+      furigana: 'しゅういのじょうきょうをよくたしかめてからするべきだ。',
+      id: 'Sebaiknya do setelah memastikan situasi sekitar dengan baik.',
     },
   },
   {
@@ -5484,9 +5484,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に座ることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにすわることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya duduk dengan tepat.',
+      jp: '焦らずに落ち着いて座るようにしている。',
+      furigana: 'あせらずにおちついてすわるようにしている。',
+      id: 'Berusaha untuk duduk dengan tenang tanpa tergesa-gesa.',
     },
   },
   {
@@ -6108,9 +6108,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に出すことを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにだすことをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan take (something) out dengan tepat.',
+      jp: '周囲の状況をよく確かめてから出すべきだ。',
+      furigana: 'しゅういのじょうきょうをよくたしかめてからだすべきだ。',
+      id: 'Sebaiknya mengambil ((something) out) setelah memastikan situasi sekitar dengan baik.',
     },
   },
   {
@@ -6140,9 +6140,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に立つことを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにたつことをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan stand up dengan tepat.',
+      jp: '毎日コツコツと立つことが上達の秘訣だ。',
+      furigana: 'まいにちコツコツとたつことがじょうたつのひけつだ。',
+      id: 'Rutin berdiri (up) setiap hari adalah kunci kemajuan.',
     },
   },
   {
@@ -6204,9 +6204,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に頼むことを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにたのむことをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan request dengan tepat.',
+      jp: '毎日コツコツと頼むことが上達の秘訣だ。',
+      furigana: 'まいにちコツコツとたのむことがじょうたつのひけつだ。',
+      id: 'Rutin request setiap hari adalah kunci kemajuan.',
     },
   },
   {
@@ -6268,9 +6268,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Makanan & Cita Rasa',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に食べることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにたべることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya makan dengan tepat.',
+      jp: '準備をしっかりしてから食べる予定です。',
+      furigana: 'じゅんびをしっかりしてからたべるよていです。',
+      id: 'Berencana makan setelah menyiapkan segala hal dengan matang.',
     },
   },
   {
@@ -6412,9 +6412,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に違うことを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにちがうことをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan be different dengan tepat.',
+      jp: '周囲の状況をよく確かめてから違うべきだ。',
+      furigana: 'しゅういのじょうきょうをよくたしかめてからちがうべきだ。',
+      id: 'Sebaiknya menjadi different setelah memastikan situasi sekitar dengan baik.',
     },
   },
   {
@@ -6588,9 +6588,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に使うことを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにつかうことをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya menggunakan dengan tepat.',
+      jp: '周囲の状況をよく確かめてから使うべきだ。',
+      furigana: 'しゅういのじょうきょうをよくたしかめてからつかうべきだ。',
+      id: 'Sebaiknya menggunakan setelah memastikan situasi sekitar dengan baik.',
     },
   },
   {
@@ -6604,9 +6604,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に疲れることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにつかれることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan get (become) tired dengan tepat.',
+      jp: '焦らずに落ち着いて疲れるようにしている。',
+      furigana: 'あせらずにおちついてつかれるようにしている。',
+      id: 'Berusaha untuk mendapatkan ((become) tired) dengan tenang tanpa tergesa-gesa.',
     },
   },
   {
@@ -6636,9 +6636,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に着くことを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにつくことをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan arrive at dengan tepat.',
+      jp: '準備をしっかりしてから着く予定です。',
+      furigana: 'じゅんびをしっかりしてからつくよていです。',
+      id: 'Berencana tiba (at) setelah menyiapkan segala hal dengan matang.',
     },
   },
   {
@@ -6668,9 +6668,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Makanan & Cita Rasa',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に作ることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにつくることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya membuat dengan tepat.',
+      jp: '焦らずに落ち着いて作るようにしている。',
+      furigana: 'あせらずにおちついてつくるようにしている。',
+      id: 'Berusaha untuk membuat dengan tenang tanpa tergesa-gesa.',
     },
   },
   {
@@ -6684,9 +6684,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切につけることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにつけることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan turn on (e.g. dengan tepat.',
+      jp: '毎日コツコツとつけることが上達の秘訣だ。',
+      furigana: 'まいにちコツコツとつけることがじょうたつのひけつだ。',
+      id: 'Rutin turn on (e.g. setiap hari adalah kunci kemajuan.',
     },
   },
   {
@@ -6700,9 +6700,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Bisnis & Pekerjaan',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に勤めることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにつとめることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan work (for) dengan tepat.',
+      jp: '準備をしっかりしてから勤める予定です。',
+      furigana: 'じゅんびをしっかりしてからつとめるよていです。',
+      id: 'Berencana bekerja ((for)) setelah menyiapkan segala hal dengan matang.',
     },
   },
   {
@@ -6828,9 +6828,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に出かけることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにでかけることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan go out dengan tepat.',
+      jp: '周囲の状況をよく確かめてから出かけるべきだ。',
+      furigana: 'しゅういのじょうきょうをよくたしかめてからでかけるべきだ。',
+      id: 'Sebaiknya go out setelah memastikan situasi sekitar dengan baik.',
     },
   },
   {
@@ -6860,9 +6860,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切にできることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにできることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan be able to (to accomplish) dengan tepat.',
+      jp: '毎日コツコツとできることが上達の秘訣だ。',
+      furigana: 'まいにちコツコツとできることがじょうたつのひけつだ。',
+      id: 'Rutin menjadi able to (to accomplish) setiap hari adalah kunci kemajuan.',
     },
   },
   {
@@ -6956,9 +6956,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に出ることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにでることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan appear dengan tepat.',
+      jp: '焦らずに落ち着いて出るようにしている。',
+      furigana: 'あせらずにおちついてでるようにしている。',
+      id: 'Berusaha untuk muncul dengan tenang tanpa tergesa-gesa.',
     },
   },
   {
@@ -6999,7 +6999,7 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     kana: 'でんき',
     romaji: 'denki',
     meaningEn: 'electricity, (electric) light',
-    meaningId: 'electricity / (electric) light',
+    meaningId: 'Listrik / Penerangan listrik',
     level: 'N5',
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Benda (Noun)',
@@ -7452,9 +7452,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に飛ぶことを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにとぶことをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan fly dengan tepat.',
+      jp: '準備をしっかりしてから飛ぶ予定です。',
+      furigana: 'じゅんびをしっかりしてからとぶよていです。',
+      id: 'Berencana terbang setelah menyiapkan segala hal dengan matang.',
     },
   },
   {
@@ -7468,9 +7468,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に止まることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにとまることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan come to a halt dengan tepat.',
+      jp: '周囲の状況をよく確かめてから止まるべきだ。',
+      furigana: 'しゅういのじょうきょうをよくたしかめてからとまるべきだ。',
+      id: 'Sebaiknya come to a halt setelah memastikan situasi sekitar dengan baik.',
     },
   },
   {
@@ -7548,9 +7548,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に取ることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにとることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan take (a class) dengan tepat.',
+      jp: '毎日コツコツと取ることが上達の秘訣だ。',
+      furigana: 'まいにちコツコツととることがじょうたつのひけつだ。',
+      id: 'Rutin mengambil ((a class)) setiap hari adalah kunci kemajuan.',
     },
   },
   {
@@ -7564,9 +7564,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に撮ることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにとることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan take (a photo) dengan tepat.',
+      jp: '準備をしっかりしてから撮る予定です。',
+      furigana: 'じゅんびをしっかりしてからとるよていです。',
+      id: 'Berencana mengambil ((a photo)) setelah menyiapkan segala hal dengan matang.',
     },
   },
   {
@@ -7676,9 +7676,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Lingkungan & Alam',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に鳴くことを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつになくことをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan make sound (animal) dengan tepat.',
+      jp: '準備をしっかりしてから鳴く予定です。',
+      furigana: 'じゅんびをしっかりしてからなくよていです。',
+      id: 'Berencana membuat (sound (animal)) setelah menyiapkan segala hal dengan matang.',
     },
   },
   {
@@ -7692,9 +7692,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に無くすことを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつになくすことをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan lose something dengan tepat.',
+      jp: '周囲の状況をよく確かめてから無くすべきだ。',
+      furigana: 'しゅういのじょうきょうをよくたしかめてからなくすべきだ。',
+      id: 'Sebaiknya kehilangan (something) setelah memastikan situasi sekitar dengan baik.',
     },
   },
   {
@@ -7836,9 +7836,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に習うことを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにならうことをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya belajar dengan tepat.',
+      jp: '毎日コツコツと習うことが上達の秘訣だ。',
+      furigana: 'まいにちコツコツとならうことがじょうたつのひけつだ。',
+      id: 'Rutin belajar setiap hari adalah kunci kemajuan.',
     },
   },
   {
@@ -7852,9 +7852,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に並ぶことを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにならぶことをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan line up dengan tepat.',
+      jp: '準備をしっかりしてから並ぶ予定です。',
+      furigana: 'じゅんびをしっかりしてからならぶよていです。',
+      id: 'Berencana line up setelah menyiapkan segala hal dengan matang.',
     },
   },
   {
@@ -7868,9 +7868,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に並べることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにならべることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan put (things) side by side dengan tepat.',
+      jp: '周囲の状況をよく確かめてから並べるべきだ。',
+      furigana: 'しゅういのじょうきょうをよくたしかめてからならべるべきだ。',
+      id: 'Sebaiknya menaruh ((things) side by side) setelah memastikan situasi sekitar dengan baik.',
     },
   },
   {
@@ -7884,9 +7884,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切になることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつになることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan become dengan tepat.',
+      jp: '焦らずに落ち着いてなるようにしている。',
+      furigana: 'あせらずにおちついてなるようにしている。',
+      id: 'Berusaha untuk become dengan tenang tanpa tergesa-gesa.',
     },
   },
   {
@@ -8076,9 +8076,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に脱ぐことを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにぬぐことをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan take off (clothes) dengan tepat.',
+      jp: '焦らずに落ち着いて脱ぐようにしている。',
+      furigana: 'あせらずにおちついてぬぐようにしている。',
+      id: 'Berusaha untuk mengambil (off (clothes)) dengan tenang tanpa tergesa-gesa.',
     },
   },
   {
@@ -8140,9 +8140,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に寝ることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにねることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya tidur dengan tepat.',
+      jp: '焦らずに落ち着いて寝るようにしている。',
+      furigana: 'あせらずにおちついてねるようにしている。',
+      id: 'Berusaha untuk tidur dengan tenang tanpa tergesa-gesa.',
     },
   },
   {
@@ -8188,9 +8188,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に登ることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにのぼることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan climb dengan tepat.',
+      jp: '焦らずに落ち着いて登るようにしている。',
+      furigana: 'あせらずにおちついてのぼるようにしている。',
+      id: 'Berusaha untuk mendaki dengan tenang tanpa tergesa-gesa.',
     },
   },
   {
@@ -8220,9 +8220,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Makanan & Cita Rasa',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に飲むことを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにのむことをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya minum dengan tepat.',
+      jp: '準備をしっかりしてから飲む予定です。',
+      furigana: 'じゅんびをしっかりしてからのむよていです。',
+      id: 'Berencana minum setelah menyiapkan segala hal dengan matang.',
     },
   },
   {
@@ -8236,9 +8236,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に乗ることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにのることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan get on dengan tepat.',
+      jp: '周囲の状況をよく確かめてから乗るべきだ。',
+      furigana: 'しゅういのじょうきょうをよくたしかめてからのるべきだ。',
+      id: 'Sebaiknya mendapatkan (on) setelah memastikan situasi sekitar dengan baik.',
     },
   },
   {
@@ -8332,9 +8332,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に入ることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにはいることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya masuk dengan tepat.',
+      jp: '準備をしっかりしてから入る予定です。',
+      furigana: 'じゅんびをしっかりしてからはいるよていです。',
+      id: 'Berencana masuk setelah menyiapkan segala hal dengan matang.',
     },
   },
   {
@@ -8364,9 +8364,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切にはくことを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにはくことをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan put on (items below your waist) dengan tepat.',
+      jp: '焦らずに落ち着いてはくようにしている。',
+      furigana: 'あせらずにおちついてはくようにしている。',
+      id: 'Berusaha untuk menaruh (on (items below your waist)) dengan tenang tanpa tergesa-gesa.',
     },
   },
   {
@@ -8476,9 +8476,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に走ることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにはしることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya berlari dengan tepat.',
+      jp: '焦らずに落ち着いて走るようにしている。',
+      furigana: 'あせらずにおちついてはしるようにしている。',
+      id: 'Berusaha untuk berlari dengan tenang tanpa tergesa-gesa.',
     },
   },
   {
@@ -8540,9 +8540,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Bisnis & Pekerjaan',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に働くことを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにはたらくことをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya bekerja dengan tepat.',
+      jp: '焦らずに落ち着いて働くようにしている。',
+      furigana: 'あせらずにおちついてはたらくようにしている。',
+      id: 'Berusaha untuk bekerja dengan tenang tanpa tergesa-gesa.',
     },
   },
   {
@@ -8636,9 +8636,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に話すことを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにはなすことをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya berbicara dengan tepat.',
+      jp: '周囲の状況をよく確かめてから話すべきだ。',
+      furigana: 'しゅういのじょうきょうをよくたしかめてからはなすべきだ。',
+      id: 'Sebaiknya berbicara setelah memastikan situasi sekitar dengan baik.',
     },
   },
   {
@@ -8716,9 +8716,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に貼ることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにはることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan post dengan tepat.',
+      jp: '焦らずに落ち着いて貼るようにしている。',
+      furigana: 'あせらずにおちついてはるようにしている。',
+      id: 'Berusaha untuk post dengan tenang tanpa tergesa-gesa.',
     },
   },
   {
@@ -8748,9 +8748,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に晴れることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにはれることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan be sunny dengan tepat.',
+      jp: '準備をしっかりしてから晴れる予定です。',
+      furigana: 'じゅんびをしっかりしてからはれるよていです。',
+      id: 'Berencana menjadi sunny setelah menyiapkan segala hal dengan matang.',
     },
   },
   {
@@ -8924,9 +8924,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に引くことを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにひくことをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan pull dengan tepat.',
+      jp: '準備をしっかりしてから引く予定です。',
+      furigana: 'じゅんびをしっかりしてからひくよていです。',
+      id: 'Berencana menarik setelah menyiapkan segala hal dengan matang.',
     },
   },
   {
@@ -8940,9 +8940,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に弾くことを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにひくことをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan play (a string instrument or piano) dengan tepat.',
+      jp: '周囲の状況をよく確かめてから弾くべきだ。',
+      furigana: 'しゅういのじょうきょうをよくたしかめてからひくべきだ。',
+      id: 'Sebaiknya bermain ((a string instrument or piano)) setelah memastikan situasi sekitar dengan baik.',
     },
   },
   {
@@ -9260,9 +9260,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Lingkungan & Alam',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に吹くことを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにふくことをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan blow (wind dengan tepat.',
+      jp: '毎日コツコツと吹くことが上達の秘訣だ。',
+      furigana: 'まいにちコツコツとふくことがじょうたつのひけつだ。',
+      id: 'Rutin blow (wind setiap hari adalah kunci kemajuan.',
     },
   },
   {
@@ -9388,9 +9388,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Lingkungan & Alam',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に降ることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにふることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan precipitate dengan tepat.',
+      jp: '準備をしっかりしてから降る予定です。',
+      furigana: 'じゅんびをしっかりしてからふるよていです。',
+      id: 'Berencana precipitate setelah menyiapkan segala hal dengan matang.',
     },
   },
   {
@@ -9660,9 +9660,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に欲しいことを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにほしいことをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan want dengan tepat.',
+      jp: '焦らずに落ち着いて欲しいようにしている。',
+      furigana: 'あせらずにおちついてほしいようにしている。',
+      id: 'Berusaha untuk menginginkan dengan tenang tanpa tergesa-gesa.',
     },
   },
   {
@@ -9948,9 +9948,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に曲ることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにまがることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan turn dengan tepat.',
+      jp: '焦らずに落ち着いて曲るようにしている。',
+      furigana: 'あせらずにおちついてまがるようにしている。',
+      id: 'Berusaha untuk turn dengan tenang tanpa tergesa-gesa.',
     },
   },
   {
@@ -10028,9 +10028,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に待つことを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにまつことをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya menunggu dengan tepat.',
+      jp: '毎日コツコツと待つことが上達の秘訣だ。',
+      furigana: 'まいにちコツコツとまつことがじょうたつのひけつだ。',
+      id: 'Rutin menunggu setiap hari adalah kunci kemajuan.',
     },
   },
   {
@@ -10140,9 +10140,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に磨くことを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにみがくことをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan brush (teeth) dengan tepat.',
+      jp: '毎日コツコツと磨くことが上達の秘訣だ。',
+      furigana: 'まいにちコツコツとみがくことがじょうたつのひけつだ。',
+      id: 'Rutin brush (teeth) setiap hari adalah kunci kemajuan.',
     },
   },
   {
@@ -10220,9 +10220,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に見せることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにみせることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan show dengan tepat.',
+      jp: '準備をしっかりしてから見せる予定です。',
+      furigana: 'じゅんびをしっかりしてからみせるよていです。',
+      id: 'Berencana menunjukkan setelah menyiapkan segala hal dengan matang.',
     },
   },
   {
@@ -10348,9 +10348,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に見ることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにみることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melihat dengan tepat.',
+      jp: '周囲の状況をよく確かめてから見るべきだ。',
+      furigana: 'しゅういのじょうきょうをよくたしかめてからみるべきだ。',
+      id: 'Sebaiknya melihat setelah memastikan situasi sekitar dengan baik.',
     },
   },
   {
@@ -10556,9 +10556,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に持つことを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにもつことをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya memegang dengan tepat.',
+      jp: '準備をしっかりしてから持つ予定です。',
+      furigana: 'じゅんびをしっかりしてからもつよていです。',
+      id: 'Berencana memegang setelah menyiapkan segala hal dengan matang.',
     },
   },
   {
@@ -10732,9 +10732,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に休むことを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにやすむことをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan rest dengan tepat.',
+      jp: '準備をしっかりしてから休む予定です。',
+      furigana: 'じゅんびをしっかりしてからやすむよていです。',
+      id: 'Berencana beristirahat setelah menyiapkan segala hal dengan matang.',
     },
   },
   {
@@ -10780,9 +10780,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切にやることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにやることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan do dengan tepat.',
+      jp: '毎日コツコツとやることが上達の秘訣だ。',
+      furigana: 'まいにちコツコツとやることがじょうたつのひけつだ。',
+      id: 'Rutin do setiap hari adalah kunci kemajuan.',
     },
   },
   {
@@ -11004,9 +11004,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に呼ぶことを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつによぶことをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan call (one\'s name) dengan tepat.',
+      jp: '焦らずに落ち着いて呼ぶようにしている。',
+      furigana: 'あせらずにおちついてよぶようにしている。',
+      id: 'Berusaha untuk memanggil ((one\'s name)) dengan tenang tanpa tergesa-gesa.',
     },
   },
   {
@@ -11020,9 +11020,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に読むことを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつによむことをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya membaca dengan tepat.',
+      jp: '毎日コツコツと読むことが上達の秘訣だ。',
+      furigana: 'まいにちコツコツとよむことがじょうたつのひけつだ。',
+      id: 'Rutin membaca setiap hari adalah kunci kemajuan.',
     },
   },
   {
@@ -11372,9 +11372,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に分かることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにわかることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya memahami dengan tepat.',
+      jp: '毎日コツコツと分かることが上達の秘訣だ。',
+      furigana: 'まいにちコツコツとわかることがじょうたつのひけつだ。',
+      id: 'Rutin memahami setiap hari adalah kunci kemajuan.',
     },
   },
   {
@@ -11388,9 +11388,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に忘れることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにわすれることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melupakan dengan tepat.',
+      jp: '準備をしっかりしてから忘れる予定です。',
+      furigana: 'じゅんびをしっかりしてからわすれるよていです。',
+      id: 'Berencana melupakan setelah menyiapkan segala hal dengan matang.',
     },
   },
   {
@@ -11436,9 +11436,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に渡すことを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにわたすことをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan hand (something) over (v.t.) dengan tepat.',
+      jp: '毎日コツコツと渡すことが上達の秘訣だ。',
+      furigana: 'まいにちコツコツとわたすことがじょうたつのひけつだ。',
+      id: 'Rutin hand (something) over (v.t.) setiap hari adalah kunci kemajuan.',
     },
   },
   {
@@ -11452,9 +11452,9 @@ export const VOCAB_N5_COMPLETE: VocabItem[] = [
     category: 'Aktivitas Sehari-hari',
     partOfSpeech: 'Kata Kerja (Verb)',
     exampleSentence: {
-      jp: '日々の生活の中で、適切に渡ることを意識する。',
-      furigana: 'ひびのせいかつのなかで、てきせつにわたることをいしきする。',
-      id: 'Dalam kehidupan sehari-hari, menyadari pentingnya melakukan cross over dengan tepat.',
+      jp: '準備をしっかりしてから渡る予定です。',
+      furigana: 'じゅんびをしっかりしてからわたるよていです。',
+      id: 'Berencana menyeberang (over) setelah menyiapkan segala hal dengan matang.',
     },
   },
   {

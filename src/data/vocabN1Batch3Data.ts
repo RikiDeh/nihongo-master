@@ -273,7 +273,7 @@ export const VOCAB_N1_BATCH3: VocabItem[] = [
     exampleSentence: {
       jp: '戦争捕虜の権利を守るため、国際赤十字が収容所の視察を行った。',
       furigana: 'せんそうほりょのけんりをまもるため、こくさいせきじゅうじがしゅうようじょのしさつをおこなった。',
-      id: 'Demi melindungi hak-hak tawanan perang, Palang Merah Internasional melakukan inspeksi ke kamp penahanan.',
+      id: 'Demi melindungi hak-hak tawanan perang, Palang Merah Internasional mengadakan inspeksi ke kamp penahanan.',
     },
   },
   {
@@ -437,7 +437,7 @@ export const VOCAB_N1_BATCH3: VocabItem[] = [
     exampleSentence: {
       jp: '経営危機に瀕した二大ライバル企業が、呉越同舟で事業統合に踏み切った。',
       furigana: 'けいえいききにひんしたにだいライバルきぎょうが、ごえつどうしゅうでじぎょうとうごうにふみきった。',
-      id: 'Dua korporasi rival yang menghadapi krisis kebangkrutan terpaksa bersatu bagai musuh satu perahu untuk melakukan merger bisnis.',
+      id: 'Dua korporasi rival yang menghadapi krisis kebangkrutan terpaksa bersatu bagai musuh satu perahu untuk melangsungkan merger bisnis.',
     },
   },
   {

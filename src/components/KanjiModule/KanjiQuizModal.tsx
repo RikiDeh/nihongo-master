@@ -75,9 +75,9 @@ export const KanjiQuizModal: React.FC<KanjiQuizModalProps> = ({ kanjiList, onClo
     const clean = input.trim().toLowerCase();
     if (!clean) return false;
 
-    // Check Indonesian meaning (e.g. "satu", "buku", "matahari")
+    // Check Indonesian meaning (e.g. "satu", "buku", "matahari") - Anti-cheat SPK 19-R
     const meaningKeywords = item.meaningId.toLowerCase().split(/[,/]/).map(s => s.trim());
-    if (meaningKeywords.some(k => k === clean || clean.includes(k) || k.includes(clean))) {
+    if (meaningKeywords.some(k => k === clean || (clean.length >= 3 && k.includes(clean)))) {
       return true;
     }
 

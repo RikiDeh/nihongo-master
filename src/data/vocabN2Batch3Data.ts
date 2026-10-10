@@ -277,7 +277,7 @@ export const VOCAB_N2_BATCH3: VocabItem[] = [
     exampleSentence: {
       jp: '決勝戦の終了直前に痛恨のミスを犯し、チームは敗北した。',
       furigana: 'けっしょうせんのしゅうりょうちょくぜんにつうこんのミスをおかし、チームはいぼくした。',
-      id: 'Sesaat sebelum laga final usai, ia melakukan kesalahan fatal yang amat disesali dan berujung pada kekalahan tim.',
+      id: 'Sesaat sebelum laga final usai, ia membuat kesalahan fatal yang amat disesali dan berujung pada kekalahan tim.',
     },
   },
   {

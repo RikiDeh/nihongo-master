@@ -741,7 +741,7 @@ export const VOCAB_N4_BATCH2: VocabItem[] = [
     exampleSentence: {
       jp: '皆の前で間違えて恥ずかしかったです。',
       furigana: 'みなのまえでまちがえてはずかしかったです。',
-      id: 'Saya merasa malu karena melakukan kesalahan di depan semua orang.',
+      id: 'Saya merasa malu karena berbuat kesalahan di depan semua orang.',
     },
   },
   {

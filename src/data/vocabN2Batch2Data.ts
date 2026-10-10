@@ -457,7 +457,7 @@ export const VOCAB_N2_BATCH2: VocabItem[] = [
     exampleSentence: {
       jp: '二つの銀行が合併し、国内最大規模のメガバンクが誕生した。',
       furigana: 'ふたつのぎんこうががっぺいし、こくないさいだいきぼのメガバンクがたんじょうした。',
-      id: 'Dua bank melakukan merger, melahirkan megabank berskala terbesar di dalam negeri.',
+      id: 'Dua bank melangsungkan merger, melahirkan megabank berskala terbesar di dalam negeri.',
     },
   },
 
