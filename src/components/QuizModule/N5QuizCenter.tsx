@@ -132,29 +132,6 @@ export const N5QuizCenter: React.FC<QuizCenterProps> = ({ initialLevel, onSwitch
     <div className="w-full max-w-5xl mx-auto px-4 py-8 animate-fadeIn">
       {stage === 'menu' && (
         <>
-          {/* Latihan Hub Switcher (Mobile & Desktop Cohesive Bar) */}
-          {onSwitchSubModule && (
-            <div className="flex items-center justify-center mb-6">
-              <div className="inline-flex p-1 bg-[#f4f0e8]/90 dark:bg-[#1f1f23]/90 border border-[#e7e5e4] dark:border-[#27272a] rounded-xl shadow-xs w-full sm:w-auto">
-                <button
-                  type="button"
-                  onClick={() => onSwitchSubModule('quiz')}
-                  className="flex-1 sm:flex-initial px-4 py-2 rounded-lg text-xs font-bold transition flex items-center justify-center gap-2 bg-white dark:bg-[#27272a] text-[#1c1917] dark:text-[#f4f4f5] shadow-xs border border-[#d6d3d1] dark:border-[#3f3f46] cursor-pointer"
-                >
-                  <Trophy className="w-4 h-4 text-[#1e3a8a] dark:text-[#60a5fa]" />
-                  <span>Ujian & Tryout JLPT</span>
-                </button>
-                <button
-                  type="button"
-                  onClick={() => onSwitchSubModule('dojo')}
-                  className="flex-1 sm:flex-initial px-4 py-2 rounded-lg text-xs font-medium transition flex items-center justify-center gap-2 text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5] cursor-pointer"
-                >
-                  <Swords className="w-4 h-4 text-[#c84b31]" />
-                  <span>Dojo Konjugasi</span>
-                </button>
-              </div>
-            </div>
-          )}
 
           {/* Header */}
           <div className="text-center mb-8">
