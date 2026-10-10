@@ -195,21 +195,26 @@ export const RoadmapView: React.FC<RoadmapViewProps> = ({
     }
   };
 
+  // Cari stage aktif berikutnya yang belum selesai
+  const allStagesInOrder = ROADMAP_ARCS.flatMap(a => a.stages);
+  const nextActiveStage = allStagesInOrder.find(s => !completedSet.has(s.id)) || allStagesInOrder[0];
+  const nextActiveArc = ROADMAP_ARCS.find(a => a.stages.some(s => s.id === nextActiveStage.id)) || ROADMAP_ARCS[0];
+
   return (
-    <div className="max-w-5xl mx-auto px-4 py-8">
+    <div className="max-w-5xl mx-auto px-4 py-6 md:py-8">
       {/* 1. TOP HEADER / DAILY HUB HERO */}
-      <div className="mb-8 p-6 rounded-2xl bg-gradient-to-r from-[#faf8f5] via-[#f4f0e8] to-[#faf8f5] dark:from-[#18181b] dark:via-[#1f1f23] dark:to-[#18181b] border border-[#e7e5e4] dark:border-[#27272a] shadow-xs relative overflow-hidden">
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 relative z-10">
+      <div className="mb-6 p-5 sm:p-6 rounded-2xl bg-gradient-to-r from-[#faf8f5] via-[#f4f0e8] to-[#faf8f5] dark:from-[#18181b] dark:via-[#1f1f23] dark:to-[#18181b] border border-[#e7e5e4] dark:border-[#27272a] shadow-xs relative overflow-hidden">
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 relative z-10">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#c84b31]/10 border border-[#c84b31]/25 text-[#c84b31] dark:text-[#e05d44] text-xs font-mono font-bold uppercase mb-2">
-              <span className="w-2 h-2 rounded-full bg-[#c84b31] dark:bg-[#e05d44] animate-ping" />
-              <span>BERANDA PETUALANGAN JEPANG 0→N1</span>
+            <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-md bg-[#c84b31]/10 border border-[#c84b31]/25 text-[#c84b31] dark:text-[#e05d44] text-[11px] font-mono font-bold uppercase mb-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#c84b31] dark:bg-[#e05d44] animate-ping" />
+              <span>BERANDA PETUALANGAN 0→N1</span>
             </div>
-            <h1 className="text-2xl sm:text-3xl font-bold font-sans text-[#1c1917] dark:text-[#f4f4f5] tracking-tight">
+            <h1 className="text-xl sm:text-2xl font-bold font-sans text-[#1c1917] dark:text-[#f4f4f5] tracking-tight">
               Selamat Belajar, <span className="font-jp text-[#c84b31] dark:text-[#e05d44]">道場生</span>
             </h1>
-            <p className="text-xs sm:text-sm text-[#78716c] dark:text-[#a1a1aa] mt-1 max-w-xl">
-              Setiap bab dirancang terarah memadukan bunyi Kana, tulisan Kanji, kosakata, dan tata bahasa asli JLPT.
+            <p className="text-xs text-[#78716c] dark:text-[#a1a1aa] mt-1 max-w-xl">
+              Kurikulum terarah dari dasar aksara hingga kecakapan JLPT. Ikuti langkah terdekatmu di bawah ini.
             </p>
           </div>
 
@@ -218,31 +223,67 @@ export const RoadmapView: React.FC<RoadmapViewProps> = ({
             <button
               type="button"
               onClick={() => setIsSignInOpen(true)}
-              className="flex-1 md:flex-none p-3.5 rounded-xl border border-[#c84b31]/30 bg-white dark:bg-[#18181b] hover:bg-[#c84b31]/5 transition shadow-xs cursor-pointer flex items-center gap-3.5 group"
+              className="w-full md:w-auto p-3 rounded-xl border border-[#c84b31]/30 bg-white dark:bg-[#18181b] hover:bg-[#c84b31]/5 transition shadow-xs cursor-pointer flex items-center justify-between md:justify-start gap-3.5 group"
             >
-              <div className="w-10 h-10 rounded-lg bg-[#c84b31]/15 dark:bg-[#e05d44]/20 flex items-center justify-center text-[#c84b31] dark:text-[#e05d44] group-hover:scale-110 transition-transform">
-                <Flame className="w-6 h-6 fill-current" />
+              <div className="w-9 h-9 rounded-lg bg-[#c84b31]/15 dark:bg-[#e05d44]/20 flex items-center justify-center text-[#c84b31] dark:text-[#e05d44] group-hover:scale-110 transition-transform">
+                <Flame className="w-5 h-5 fill-current" />
               </div>
               <div className="text-left">
                 <div className="text-[10px] font-mono font-bold uppercase text-[#78716c] dark:text-[#a1a1aa]">
                   {signInStatus.canClaim ? 'KLAIM HARI INI' : 'API AKTIF'}
                 </div>
-                <div className="text-base font-mono font-black text-[#1c1917] dark:text-[#f4f4f5] leading-none">
+                <div className="text-sm font-mono font-black text-[#1c1917] dark:text-[#f4f4f5] leading-none">
                   🔥 {progress.dailyStreak || 0} Hari
                 </div>
               </div>
+              <ChevronRight className="w-4 h-4 text-[#78716c] md:hidden" />
             </button>
           </div>
         </div>
       </div>
 
-      {/* 2. THREE DYNAMIC DAILY MISSIONS (QUESTS) */}
-      <div className="mb-10">
+      {/* 2. ONE CLEAR NEXT ACTION CARD (ANTI-BINGUNG HERO) */}
+      <div className="mb-8 p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#1f1f23] border-2 border-[#c84b31]/40 dark:border-[#e05d44]/40 shadow-sm relative overflow-hidden">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div className="flex-1">
+            <div className="flex items-center gap-2 mb-1.5">
+              <span className="px-2 py-0.5 rounded text-[10px] font-mono font-bold uppercase bg-[#c84b31]/10 text-[#c84b31] dark:text-[#e05d44] border border-[#c84b31]/20">
+                FOKUS BELAJARMU SEKARANG
+              </span>
+              <span className="text-xs font-mono text-[#78716c] dark:text-[#a1a1aa]">
+                {nextActiveArc.title}
+              </span>
+            </div>
+            <h2 className="text-lg sm:text-xl font-bold font-sans text-[#1c1917] dark:text-[#f4f4f5] flex items-center gap-2">
+              <span>{nextActiveStage.title}</span>
+              <span className="font-jp text-sm text-[#78716c] dark:text-[#a1a1aa] font-normal">{nextActiveStage.titleJp}</span>
+            </h2>
+            <p className="text-xs text-[#78716c] dark:text-[#a1a1aa] mt-1 leading-relaxed max-w-xl">
+              {nextActiveStage.description}
+            </p>
+          </div>
+
+          <button
+            type="button"
+            onClick={() => {
+              setActiveArcId(nextActiveArc.id);
+              handleStartStage(nextActiveStage);
+            }}
+            className="w-full sm:w-auto px-6 py-3 rounded-xl bg-[#c84b31] hover:bg-[#b03d25] text-white text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 shadow-sm transition cursor-pointer active:scale-98 shrink-0"
+          >
+            <Play className="w-4 h-4 fill-current" />
+            <span>Lanjut Belajar Sekarang</span>
+          </button>
+        </div>
+      </div>
+
+      {/* 3. THREE DYNAMIC DAILY MISSIONS (QUESTS) - COLLAPSIBLE ON MOBILE */}
+      <div className="mb-8">
         <div className="flex items-center justify-between mb-3 px-1">
           <div className="flex items-center gap-2">
             <Target className="w-4 h-4 text-[#c84b31] dark:text-[#e05d44]" />
-            <h2 className="text-sm font-bold uppercase font-mono tracking-wider text-[#1c1917] dark:text-[#f4f4f5]">
-              Target Harian (Daily Missions)
+            <h2 className="text-xs font-bold uppercase font-mono tracking-wider text-[#1c1917] dark:text-[#f4f4f5]">
+              Target Harian (Misi Hari Ini)
             </h2>
           </div>
           <span className="text-xs font-mono text-[#78716c] dark:text-[#a1a1aa]">

@@ -586,8 +586,8 @@ export const KanaSelector: React.FC<KanaSelectorProps> = ({ onStartQuiz }) => {
         </div>
       )}
 
-      {/* Sticky Bottom Action Dock (Responsive to sidebar state) */}
-      <div className="sticky bottom-0 bg-[#faf8f5]/95 dark:bg-[#18181b]/95 backdrop-blur-md border-t border-[#e7e5e4] dark:border-[#27272a] p-3 sm:p-4 z-40 mt-8 shadow-lg transition-colors">
+      {/* Sticky Bottom Action Dock (Offset on mobile so it doesn't collide with fixed navbar) */}
+      <div className="sticky bottom-14 md:bottom-0 bg-[#faf8f5]/95 dark:bg-[#18181b]/95 backdrop-blur-md border-t border-[#e7e5e4] dark:border-[#27272a] p-3 sm:p-4 z-20 mt-8 shadow-lg transition-colors">
         <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-lg bg-white dark:bg-[#1f1f23] border border-[#d6d3d1] dark:border-[#3f3f46] flex items-center justify-center font-mono font-bold text-[#c84b31] dark:text-[#e05d44]">

@@ -303,23 +303,86 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
           </div>
         </header>
 
-        {/* Mobile Floating Bottom Bar */}
-        <nav className="fixed bottom-0 left-0 right-0 z-30 bg-[#faf8f5]/95 dark:bg-[#18181b]/95 backdrop-blur-md border-t border-[#e7e5e4] dark:border-[#27272a] px-2 py-1.5 flex items-center justify-around text-[10px]">
-          {navItems.map(item => (
-            <button
-              key={item.id}
-              type="button"
-              onClick={() => onSelectModule(item.id)}
-              className={`flex flex-col items-center py-1 px-1 transition ${
-                activeModule === item.id 
-                  ? 'text-[#c84b31] dark:text-[#e05d44] font-bold' 
-                  : 'text-[#78716c] dark:text-[#a1a1aa]'
-              }`}
-            >
-              <span className="mb-0.5">{item.icon}</span>
-              <span>{item.label.split(' ')[0]}</span>
-            </button>
-          ))}
+        {/* Mobile Floating Bottom Bar - 4 Ergonomic Primary Pillars */}
+        <nav className="fixed bottom-0 left-0 right-0 z-30 bg-[#faf8f5]/95 dark:bg-[#18181b]/95 backdrop-blur-md border-t border-[#e7e5e4] dark:border-[#27272a] px-3 py-2 flex items-center justify-around text-xs shadow-lg">
+          {/* Tab 1: Belajar (Roadmap) */}
+          <button
+            type="button"
+            onClick={() => onSelectModule('roadmap')}
+            className={`flex-1 flex flex-col items-center py-1 transition cursor-pointer ${
+              activeModule === 'roadmap' 
+                ? 'text-[#c84b31] dark:text-[#e05d44] font-bold' 
+                : 'text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917]'
+            }`}
+          >
+            <Compass className="w-5 h-5 mb-1" />
+            <span className="text-[11px] font-sans">Belajar</span>
+          </button>
+
+          {/* Tab 2: Kana (Fondasi Aksara) */}
+          <button
+            type="button"
+            onClick={() => onSelectModule('kana')}
+            className={`flex-1 flex flex-col items-center py-1 transition cursor-pointer ${
+              activeModule === 'kana' 
+                ? 'text-[#c84b31] dark:text-[#e05d44] font-bold' 
+                : 'text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917]'
+            }`}
+          >
+            <span className="font-jp text-base font-bold leading-5 mb-1">あ</span>
+            <span className="text-[11px] font-sans">Kana</span>
+          </button>
+
+          {/* Tab 3: Latihan (Drill, Dojo, Quiz) */}
+          <button
+            type="button"
+            onClick={() => {
+              // Jika sedang tidak di latihan, arahkan ke quiz atau dojo
+              if (activeModule !== 'quiz' && activeModule !== 'dojo') {
+                onSelectModule('quiz');
+              } else if (activeModule === 'quiz') {
+                onSelectModule('dojo');
+              } else {
+                onSelectModule('quiz');
+              }
+            }}
+            className={`flex-1 flex flex-col items-center py-1 transition cursor-pointer ${
+              activeModule === 'quiz' || activeModule === 'dojo'
+                ? 'text-[#c84b31] dark:text-[#e05d44] font-bold' 
+                : 'text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917]'
+            }`}
+          >
+            <Swords className="w-5 h-5 mb-1" />
+            <span className="text-[11px] font-sans">
+              {activeModule === 'dojo' ? 'Dojo' : 'Latihan'}
+            </span>
+          </button>
+
+          {/* Tab 4: Pustaka (Kamus Kanji, Kosakata, Tata Bahasa) */}
+          <button
+            type="button"
+            onClick={() => {
+              if (activeModule !== 'kanji' && activeModule !== 'vocab' && activeModule !== 'grammar') {
+                onSelectModule('kanji');
+              } else if (activeModule === 'kanji') {
+                onSelectModule('vocab');
+              } else if (activeModule === 'vocab') {
+                onSelectModule('grammar');
+              } else {
+                onSelectModule('kanji');
+              }
+            }}
+            className={`flex-1 flex flex-col items-center py-1 transition cursor-pointer ${
+              activeModule === 'kanji' || activeModule === 'vocab' || activeModule === 'grammar'
+                ? 'text-[#c84b31] dark:text-[#e05d44] font-bold' 
+                : 'text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917]'
+            }`}
+          >
+            <BookOpen className="w-5 h-5 mb-1" />
+            <span className="text-[11px] font-sans">
+              {activeModule === 'kanji' ? 'Kanji' : activeModule === 'vocab' ? 'Kosakata' : activeModule === 'grammar' ? 'Tata Bahasa' : 'Pustaka'}
+            </span>
+          </button>
         </nav>
       </div>
 
