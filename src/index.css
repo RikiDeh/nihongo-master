@@ -3,13 +3,47 @@
 :root {
   --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
   --font-jp: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'Meiryo', sans-serif;
-  --font-serif-jp: 'Noto Serif JP', 'Hiragino Mincho ProN', 'Yu Mincho', 'Meiryo', serif;
+  --font-serif-jp: 'Noto Serif JP', 'Shippori Mincho', 'Yu Mincho', 'Hiragino Mincho ProN', 'Meiryo', serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* Zen Editorial Washi & Ink Tokens (DESIGN.md) */
+  --color-washi-canvas: #faf8f5;
+  --color-pure-paper: #ffffff;
+  --color-paper-wash: #f4f0e8;
+  --color-hairline-mist: #e7e5e4;
+  --color-border-strong: #d6d3d1;
+  --color-sumi-ink: #1c1917;
+  --color-ash-stone: #78716c;
+  --color-faded-whisper: #a8a29e;
+  --color-hanko-vermilion: #c84b31;
+  --color-aizome-indigo: #1e3a8a;
+  --color-matcha-bamboo: #2e7d32;
+
+  /* Dark mode mappings default */
+  --color-sumi-dark: #18181b;
+  --color-surface-dark: #1f1f23;
+  --color-border-dark: #27272a;
+  --color-text-dark: #f4f4f5;
+}
+
+.dark {
+  --color-washi-canvas: #18181b;
+  --color-pure-paper: #1f1f23;
+  --color-paper-wash: #27272a;
+  --color-hairline-mist: #27272a;
+  --color-border-strong: #3f3f46;
+  --color-sumi-ink: #f4f4f5;
+  --color-ash-stone: #a1a1aa;
+  --color-faded-whisper: #71717a;
+  --color-hanko-vermilion: #e05d44;
+  --color-aizome-indigo: #3b82f6;
+  --color-matcha-bamboo: #4ade80;
 }
 
 body {
   font-family: var(--font-sans);
-  background-color: #0b0f19;
-  color: #f1f5f9;
+  background-color: var(--color-washi-canvas);
+  color: var(--color-sumi-ink);
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -21,7 +55,16 @@ body {
 }
 
 .font-serif-jp {
-  font-family: 'Noto Serif JP', 'Hiragino Mincho ProN', 'Yu Mincho', 'Meiryo', serif;
+  font-family: 'Noto Serif JP', 'Shippori Mincho', 'Yu Mincho', 'Hiragino Mincho ProN', 'Meiryo', serif;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* Hairline utility */
+.border-hairline {
+  border-width: 1px;
 }
 
 @keyframes shake {
@@ -49,12 +92,12 @@ body {
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: rgba(15, 23, 42, 0.6);
+  background: rgba(24, 24, 27, 0.4);
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(100, 116, 139, 0.4);
+  background: rgba(161, 161, 170, 0.3);
   border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(148, 163, 184, 0.6);
+  background: rgba(161, 161, 170, 0.5);
 }

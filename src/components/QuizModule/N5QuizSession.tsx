@@ -13,7 +13,7 @@ interface N5QuizSessionProps {
 }
 
 export const N5QuizSession: React.FC<N5QuizSessionProps> = ({
-  title,
+  title: _title,
   categoryBadge,
   questions,
   durationMinutes,
@@ -33,7 +33,6 @@ export const N5QuizSession: React.FC<N5QuizSessionProps> = ({
   React.useEffect(() => {
     if (timeLeft === null) return;
     if (timeLeft <= 0) {
-      // Time is up, finish quiz automatically
       const filledAnswers = [...userAnswers];
       while (filledAnswers.length < questions.length) {
         filledAnswers.push(null);
@@ -60,15 +59,15 @@ export const N5QuizSession: React.FC<N5QuizSessionProps> = ({
   const getMondaiBadge = (q: MultipleChoiceQuestion) => {
     if (q.mondaiType) {
       switch (q.mondaiType) {
-        case 'kanji-yomi': return { label: 'Mondai 1: Kanji Yomi', color: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30' };
-        case 'hyouki': return { label: 'Mondai 2: Hyouki', color: 'bg-indigo-500/20 text-indigo-300 border-indigo-500/30' };
-        case 'bunmyaku-kitei': return { label: 'Mondai 3: Kosakata Rumpang', color: 'bg-amber-500/20 text-amber-300 border-amber-500/30' };
-        case 'bunpou': return { label: 'Mondai 4: Tata Bahasa', color: 'bg-purple-500/20 text-purple-300 border-purple-500/30' };
-        case 'choukai': return { label: 'Mondai 5: Choukai', color: 'bg-cyan-500/20 text-cyan-300 border-cyan-500/30' };
+        case 'kanji-yomi': return { label: 'Mondai 1: Kanji Yomi' };
+        case 'hyouki': return { label: 'Mondai 2: Hyouki' };
+        case 'bunmyaku-kitei': return { label: 'Mondai 3: Kosakata Rumpang' };
+        case 'bunpou': return { label: 'Mondai 4: Tata Bahasa' };
+        case 'choukai': return { label: 'Mondai 5: Choukai' };
       }
     }
     if (q.vectorType === 'listening') {
-      return { label: 'Mondai 5: Choukai', color: 'bg-cyan-500/20 text-cyan-300 border-cyan-500/30' };
+      return { label: 'Mondai 5: Choukai' };
     }
     return null;
   };
@@ -87,7 +86,6 @@ export const N5QuizSession: React.FC<N5QuizSessionProps> = ({
 
     setUserAnswers(prev => [...prev, index]);
 
-    // Bunyikan audio jika ada teksnya
     if (currentQ.audioText) {
       speakJapanese(currentQ.audioText);
     }
@@ -99,13 +97,11 @@ export const N5QuizSession: React.FC<N5QuizSessionProps> = ({
       setSelectedOption(null);
       setIsAnswered(false);
     } else {
-      // Selesai kuis
-      const finalAnswers = [...userAnswers];
       onFinishQuiz({
         total: questions.length,
         correct: correctCount,
         questions,
-        userAnswers: finalAnswers,
+        userAnswers,
       });
     }
   };
@@ -116,110 +112,102 @@ export const N5QuizSession: React.FC<N5QuizSessionProps> = ({
 
   return (
     <div className="w-full max-w-3xl mx-auto px-4 py-8 animate-fadeIn">
-      {/* Top Header Bar */}
-      <div className="flex items-center justify-between mb-4">
+      {/* Session Top Bar */}
+      <div className="flex items-center justify-between mb-4 pb-3 border-b border-[#e7e5e4] dark:border-[#27272a]">
         <div className="flex flex-wrap items-center gap-2">
-          <span className="px-3 py-1 rounded-xl bg-slate-800 text-rose-400 font-bold text-xs border border-slate-700">
-            {categoryBadge}
+          <span className="px-2 py-0.5 rounded text-[11px] font-mono font-bold bg-[#f4f0e8] dark:bg-[#1f1f23] text-[#1c1917] dark:text-[#f4f4f5] border border-[#e7e5e4] dark:border-[#27272a]">
+            [{categoryBadge}]
           </span>
           {mondaiBadge && (
-            <span className={`px-2.5 py-1 rounded-xl font-bold text-xs border animate-pop ${mondaiBadge.color}`}>
+            <span className="px-2 py-0.5 rounded text-[11px] font-mono text-[#78716c] dark:text-[#a1a1aa] border border-[#e7e5e4] dark:border-[#27272a]">
               {mondaiBadge.label}
             </span>
           )}
-          <span className="text-sm font-semibold text-slate-300">
-            Soal {currentIndex + 1} dari {questions.length}
+          <span className="text-xs font-mono font-medium text-[#78716c] dark:text-[#a1a1aa]">
+            Soal {String(currentIndex + 1).padStart(2, '0')}/{String(questions.length).padStart(2, '0')}
           </span>
-          {title && <span className="text-xs text-slate-400 font-medium hidden sm:inline">• {title}</span>}
         </div>
 
         <div className="flex items-center gap-3">
           {timeLeft !== null && (
-            <div className={`px-3 py-1 rounded-xl border text-xs font-mono font-bold flex items-center gap-1.5 ${
+            <div className={`px-2.5 py-1 rounded text-xs font-mono font-bold border ${
               timeLeft < 300 
-                ? 'bg-rose-500/20 text-rose-300 border-rose-500/40 animate-pulse' 
-                : 'bg-slate-900 text-amber-300 border-slate-800'
+                ? 'bg-[#c84b31]/10 text-[#c84b31] dark:text-[#e05d44] border-[#c84b31]/30 animate-pulse' 
+                : 'bg-[#f4f0e8] dark:bg-[#1f1f23] text-[#1c1917] dark:text-[#f4f4f5] border-[#e7e5e4] dark:border-[#27272a]'
             }`}>
-              <span>⏱️ {Math.floor(timeLeft / 60)}:{(timeLeft % 60).toString().padStart(2, '0')}</span>
+              <span>⏱ {Math.floor(timeLeft / 60)}:{(timeLeft % 60).toString().padStart(2, '0')}</span>
             </div>
           )}
           <button
             onClick={onExit}
-            className="text-xs text-slate-400 hover:text-rose-400 transition cursor-pointer font-medium"
+            className="text-xs text-[#78716c] dark:text-[#a1a1aa] hover:text-[#c84b31] dark:hover:text-[#e05d44] transition cursor-pointer font-sans"
           >
-            Keluar Kuis ✕
+            Keluar ✕
           </button>
         </div>
       </div>
 
-      {/* Progress Bar */}
-      <div className="w-full h-2 rounded-full bg-slate-800 overflow-hidden mb-6">
+      {/* Hairline Progress Rule */}
+      <div className="w-full h-1 bg-[#e7e5e4] dark:bg-[#27272a] rounded-full overflow-hidden mb-6">
         <div
-          className="h-full bg-gradient-to-r from-rose-500 to-indigo-500 transition-all duration-300 ease-out"
+          className="h-full bg-[#1c1917] dark:bg-[#f4f4f5] transition-all duration-200 ease-out"
           style={{ width: `${progressPercent}%` }}
         />
       </div>
 
-      {/* Question Card */}
-      <div className="bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8 shadow-xl mb-6 relative overflow-hidden">
-        {/* Category Accent */}
+      {/* Main Question Surface — Washi Card with Hairline 1px */}
+      <div className="bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] rounded-xl p-6 sm:p-8 shadow-xs mb-6 relative">
+        {/* Question Prompt Area */}
         <div className="text-center mb-6">
-          {mondaiBadge && (
-            <div className="inline-block mb-3">
-              <span className={`px-3 py-1 rounded-xl text-xs font-bold border ${mondaiBadge.color}`}>
-                [{mondaiBadge.label}]
-              </span>
-            </div>
-          )}
           {currentQ.vectorType === 'listening' ? (
             <div className="mb-4">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs font-bold mb-3">
-                <Volume2 className="w-3.5 h-3.5 text-cyan-400" />
-                <span>Soal Menyimak (Choukai)</span>
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded text-[11px] font-mono border border-[#1e3a8a]/20 dark:border-[#3b82f6]/30 bg-[#1e3a8a]/5 dark:bg-[#3b82f6]/10 text-[#1e3a8a] dark:text-[#3b82f6] mb-3">
+                <Volume2 className="w-3.5 h-3.5" />
+                <span>[聴解] SOAL MENYIMAK</span>
               </span>
-              <h2 className="text-xl sm:text-2xl font-extrabold text-white leading-relaxed mb-4">
+              <h2 className="text-lg sm:text-xl font-serif-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] leading-relaxed mb-4">
                 {currentQ.question}
               </h2>
               <button
                 onClick={() => speakJapanese(currentQ.audioText!)}
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-gradient-to-r from-cyan-600 to-indigo-600 hover:from-cyan-500 hover:to-indigo-500 text-white font-bold text-sm shadow-lg shadow-cyan-500/20 transition cursor-pointer animate-pop"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#1e3a8a] hover:bg-[#1e40af] text-white font-medium text-xs shadow-xs transition cursor-pointer"
               >
-                <Volume2 className="w-5 h-5 text-white" />
-                <span>Putar Audio Suara</span>
+                <Volume2 className="w-4 h-4" />
+                <span>Putar Audio Percakapan</span>
               </button>
             </div>
           ) : (
-            <>
-              <h2 className="text-xl sm:text-2xl font-extrabold text-white leading-relaxed font-jp tracking-wide">
+            <div className="bg-[#faf8f5] dark:bg-[#18181b]/50 border border-[#e7e5e4] dark:border-[#27272a] rounded-lg p-5 mb-4">
+              <h2 className="text-lg sm:text-2xl font-serif-jp font-semibold text-[#1c1917] dark:text-[#f4f4f5] leading-relaxed tracking-wide whitespace-pre-line">
                 {currentQ.question}
               </h2>
 
               {currentQ.audioText && (
                 <button
                   onClick={() => speakJapanese(currentQ.audioText!)}
-                  className="mt-3 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-emerald-400 text-xs font-semibold transition cursor-pointer"
+                  className="mt-3 inline-flex items-center gap-1 px-2.5 py-1 rounded border border-[#e7e5e4] dark:border-[#27272a] bg-white dark:bg-[#1f1f23] text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5] text-xs font-sans transition cursor-pointer"
                   title="Dengarkan pengucapan"
                 >
-                  <Volume2 className="w-4 h-4" />
-                  <span>Dengarkan Suara</span>
+                  <Volume2 className="w-3.5 h-3.5" />
+                  <span>Dengar Pelafalan</span>
                 </button>
               )}
-            </>
+            </div>
           )}
         </div>
 
-        {/* 4 Choices */}
+        {/* 4 Choices — Hairline Ruled Option Cards with Monospace [1..4] */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
           {currentQ.options.map((opt, idx) => {
-            let btnStyle = 'bg-slate-950/80 border-slate-800 text-slate-200 hover:border-slate-600 hover:bg-slate-800/80';
+            let btnStyle = 'bg-white dark:bg-[#1f1f23] border-[#e7e5e4] dark:border-[#27272a] text-[#1c1917] dark:text-[#f4f4f5] hover:border-[#1c1917] dark:hover:border-[#f4f4f5]';
             
             if (isAnswered) {
               if (idx === currentQ.correctIndex) {
-                btnStyle = 'bg-emerald-500/20 border-emerald-500 text-emerald-300 font-bold shadow-md shadow-emerald-500/10';
+                btnStyle = 'bg-[#2e7d32]/10 dark:bg-[#4ade80]/15 border-[#2e7d32] dark:border-[#4ade80] text-[#2e7d32] dark:text-[#4ade80] font-bold';
               } else if (idx === selectedOption) {
-                btnStyle = 'bg-rose-500/20 border-rose-500 text-rose-300 font-bold shadow-md shadow-rose-500/10';
+                btnStyle = 'bg-[#c84b31]/10 dark:bg-[#e05d44]/15 border-[#c84b31] dark:border-[#e05d44] text-[#c84b31] dark:text-[#e05d44] font-bold';
               } else {
-                btnStyle = 'bg-slate-950/40 border-slate-900 text-slate-600 opacity-60';
+                btnStyle = 'bg-black/5 dark:bg-white/5 border-transparent text-[#a8a29e] dark:text-[#71717a] opacity-50';
               }
             }
 
@@ -228,46 +216,46 @@ export const N5QuizSession: React.FC<N5QuizSessionProps> = ({
                 key={idx}
                 disabled={isAnswered}
                 onClick={() => handleSelectOption(idx)}
-                className={`p-4 rounded-2xl border-2 text-sm sm:text-base text-left font-medium transition duration-150 flex items-center justify-between cursor-pointer select-none ${btnStyle}`}
+                className={`p-3.5 rounded-lg border text-sm sm:text-base text-left transition duration-150 flex items-center justify-between cursor-pointer select-none active:translate-y-px ${btnStyle}`}
               >
                 <div className="flex items-center gap-3">
-                  <span className="w-7 h-7 rounded-lg bg-slate-800/80 border border-slate-700 flex items-center justify-center text-xs font-mono font-bold text-slate-400">
-                    {String.fromCharCode(65 + idx)}
+                  <span className="w-6 h-6 rounded border border-[#e7e5e4] dark:border-[#27272a] bg-[#faf8f5] dark:bg-[#18181b] flex items-center justify-center text-xs font-mono font-bold text-[#78716c] dark:text-[#a1a1aa]">
+                    {idx + 1}
                   </span>
-                  <span className="font-jp">{opt}</span>
+                  <span className="font-serif-jp">{opt}</span>
                 </div>
 
                 {isAnswered && idx === currentQ.correctIndex && (
-                  <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0" />
+                  <CheckCircle2 className="w-4 h-4 text-[#2e7d32] dark:text-[#4ade80] shrink-0" />
                 )}
                 {isAnswered && idx === selectedOption && idx !== currentQ.correctIndex && (
-                  <XCircle className="w-5 h-5 text-rose-400 shrink-0" />
+                  <XCircle className="w-4 h-4 text-[#c84b31] dark:text-[#e05d44] shrink-0" />
                 )}
               </button>
             );
           })}
         </div>
 
-        {/* Instant Explanation Box */}
+        {/* Instant Explanation Box — Scholarly Commentary Style */}
         {isAnswered && (
-          <div className={`p-4 sm:p-5 rounded-2xl border animate-pop mb-4 ${
+          <div className={`p-4 rounded-lg border mb-4 font-sans ${
             isCurrentCorrect 
-              ? 'bg-emerald-950/30 border-emerald-500/40 text-emerald-200' 
-              : 'bg-rose-950/30 border-rose-500/40 text-rose-200'
+              ? 'bg-[#2e7d32]/5 dark:bg-[#4ade80]/10 border-[#2e7d32]/30 dark:border-[#4ade80]/30 text-[#1c1917] dark:text-[#f4f4f5]' 
+              : 'bg-[#c84b31]/5 dark:bg-[#e05d44]/10 border-[#c84b31]/30 dark:border-[#e05d44]/30 text-[#1c1917] dark:text-[#f4f4f5]'
           }`}>
             <div className="flex items-start gap-3">
               <div className="mt-0.5">
                 {isCurrentCorrect ? (
-                  <CheckCircle2 className="w-5 h-5 text-emerald-400" />
+                  <CheckCircle2 className="w-4 h-4 text-[#2e7d32] dark:text-[#4ade80]" />
                 ) : (
-                  <Lightbulb className="w-5 h-5 text-amber-400" />
+                  <Lightbulb className="w-4 h-4 text-[#c84b31] dark:text-[#e05d44]" />
                 )}
               </div>
               <div className="flex-1">
-                <span className="font-bold text-sm block mb-1">
-                  {isCurrentCorrect ? 'Jawaban Benar! 🎉' : 'Jawaban Kurang Tepat! 💡'}
+                <span className="font-serif-jp font-bold text-sm block mb-1">
+                  {isCurrentCorrect ? 'Jawaban Tepat [正解]' : 'Evaluasi Jawaban [解説]'}
                 </span>
-                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed whitespace-pre-line">
+                <p className="text-xs sm:text-sm text-[#78716c] dark:text-[#a1a1aa] leading-relaxed whitespace-pre-line">
                   {currentQ.explanation}
                 </p>
               </div>
@@ -275,14 +263,14 @@ export const N5QuizSession: React.FC<N5QuizSessionProps> = ({
           </div>
         )}
 
-        {/* Action Button */}
+        {/* Action Button — Hanko Vermilion Primary Action */}
         {isAnswered && (
           <div className="flex justify-end pt-2">
             <button
               onClick={handleNext}
-              className="px-6 py-3 rounded-2xl bg-gradient-to-r from-rose-500 to-indigo-600 hover:from-rose-600 hover:to-indigo-700 text-white font-bold text-sm flex items-center gap-2 shadow-lg shadow-rose-500/25 transition cursor-pointer animate-pop"
+              className="px-5 py-2.5 rounded-lg bg-[#c84b31] dark:bg-[#e05d44] hover:bg-[#b03f27] text-white font-medium text-xs sm:text-sm flex items-center gap-2 shadow-xs transition cursor-pointer active:translate-y-px"
             >
-              <span>{currentIndex + 1 < questions.length ? 'Soal Berikutnya' : 'Lihat Hasil Kuis'}</span>
+              <span>{currentIndex + 1 < questions.length ? 'Soal Berikutnya' : 'Rangkuman Ujian'}</span>
               <ArrowRight className="w-4 h-4" />
             </button>
           </div>

@@ -75,7 +75,7 @@ export function App() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans">
+    <div className="min-h-screen bg-[#faf8f5] dark:bg-[#18181b] text-[#1c1917] dark:text-[#f4f4f5] flex flex-col font-sans transition-colors duration-200">
       {/* Top Navbar (hidden during quiz session to minimize distraction, like Tofugu focus mode) */}
       {kanaStage !== 'quiz' && (
         <Navbar 
@@ -174,13 +174,14 @@ export function App() {
 
       {/* Footer */}
       {kanaStage !== 'quiz' && (
-        <footer className="border-t border-slate-900 bg-slate-950/80 py-6 text-center text-xs text-slate-400">
+        <footer className="border-t border-[#e7e5e4] dark:border-[#27272a] bg-[#faf8f5]/90 dark:bg-[#18181b]/90 py-6 text-center text-xs text-[#78716c] dark:text-[#a1a1aa]">
           <div className="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
             <div className="flex items-center gap-2">
-              <span className="font-bold text-slate-300">NihongoMaster</span>
-              <span>— Platform Belajar Bahasa Jepang Mandiri</span>
+              <span className="font-serif-jp font-bold text-[#1c1917] dark:text-[#f4f4f5]">日本語マスター</span>
+              <span className="text-[#a8a29e] dark:text-[#71717a]">|</span>
+              <span className="font-medium text-[#78716c] dark:text-[#a1a1aa]">NihongoMaster — Platform Belajar Bahasa Jepang 0→N1</span>
             </div>
-            <p>Fitur kuis Kana simultan, evaluasi Romaji, dan kurikulum N5 hingga N1.</p>
+            <p className="text-[11px] font-sans">Kurikulum Otentik N5 hingga N1 • 100% In-Context JLPT Questions</p>
           </div>
         </footer>
       )}

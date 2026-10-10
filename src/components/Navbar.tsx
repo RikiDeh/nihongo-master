@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Sparkles, BookOpen, Layers, Award, Compass, Trophy, Swords, Settings, Flame, CheckCircle2 } from 'lucide-react';
+import { BookOpen, Layers, Award, Compass, Trophy, Swords, Settings, Flame, CheckCircle2 } from 'lucide-react';
 import { SettingsModal } from './Settings/SettingsModal';
 import { useShowRomaji } from '../hooks/useShowRomaji';
 import { KANJI_DATA } from '../data/kanjiData';
@@ -34,47 +34,52 @@ export const Navbar: React.FC<NavbarProps> = ({ activeModule, onSelectModule, on
 
   return (
     <>
-      <header className="sticky top-0 z-40 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
+      <header className="sticky top-0 z-40 bg-[#faf8f5]/90 dark:bg-[#18181b]/90 backdrop-blur-md border-b border-[#e7e5e4] dark:border-[#27272a] transition-colors duration-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-          {/* Logo / Brand */}
+          {/* Logo / Brand — Traditional Hanko Seal Stamp */}
           <div 
             onClick={() => onSelectModule('kana')}
             className="flex items-center gap-3 cursor-pointer group"
           >
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-rose-500 to-indigo-600 flex items-center justify-center text-white font-jp font-black text-xl shadow-lg shadow-rose-500/20 group-hover:scale-105 transition-transform">
+            {/* Hanko Square Stamp */}
+            <div className="w-9 h-9 rounded bg-[#c84b31] dark:bg-[#e05d44] border border-[#a63a23] dark:border-[#c84b31] flex items-center justify-center text-white font-serif-jp font-black text-xl shadow-sm transition-transform duration-150 group-hover:scale-105 select-none">
               日
             </div>
             <div>
-              <div className="flex items-center gap-1.5">
-                <span className="font-extrabold text-base tracking-tight text-white">NihongoMaster</span>
-                <span className="px-1.5 py-0.2 rounded bg-rose-500/20 text-rose-300 border border-rose-500/30 text-[10px] font-bold">
-                  0→N1
+              <div className="flex items-center gap-2">
+                <span className="font-serif-jp font-bold text-base tracking-tight text-[#1c1917] dark:text-[#f4f4f5]">
+                  日本語マスター
+                </span>
+                <span className="px-1.5 py-0.5 rounded text-[10px] font-mono font-bold border border-[#c84b31]/30 dark:border-[#e05d44]/30 text-[#c84b31] dark:text-[#e05d44] bg-[#c84b31]/5 dark:bg-[#e05d44]/10">
+                  [0→N1]
                 </span>
               </div>
-              <p className="text-[11px] text-slate-400 -mt-0.5">Belajar Bahasa Jepang Lengkap</p>
+              <p className="text-[11px] font-sans text-[#78716c] dark:text-[#a1a1aa] -mt-0.5">
+                Studi Mandiri Bahasa Jepang
+              </p>
             </div>
           </div>
 
-          {/* Navigation Tabs (Desktop) */}
-          <nav className="hidden xl:flex items-center gap-1 bg-slate-900/80 p-1.5 rounded-2xl border border-slate-800">
+          {/* Navigation Tabs (Desktop) — Zen Editorial Clean Segment */}
+          <nav className="hidden xl:flex items-center gap-1 bg-[#f4f0e8]/80 dark:bg-[#1f1f23]/80 p-1 rounded-lg border border-[#e7e5e4] dark:border-[#27272a]">
             <button
               onClick={() => onSelectModule('kana')}
-              className={`px-3 py-1.5 rounded-xl text-xs font-semibold flex items-center gap-1.5 transition cursor-pointer ${
+              className={`px-3 py-1.5 rounded-md text-xs font-medium transition cursor-pointer flex items-center gap-1.5 ${
                 activeModule === 'kana'
-                  ? 'bg-rose-500 text-white shadow-md shadow-rose-500/25'
-                  : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60'
+                  ? 'bg-white dark:bg-[#27272a] text-[#1c1917] dark:text-[#f4f4f5] shadow-sm font-semibold'
+                  : 'text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
               }`}
             >
-              <Sparkles className="w-3.5 h-3.5" />
+              <span className="font-serif-jp text-sm leading-none font-bold">仮</span>
               <span>Kana</span>
             </button>
 
             <button
               onClick={() => onSelectModule('kanji')}
-              className={`px-3 py-1.5 rounded-xl text-xs font-semibold flex items-center gap-1.5 transition cursor-pointer ${
+              className={`px-3 py-1.5 rounded-md text-xs font-medium transition cursor-pointer flex items-center gap-1.5 ${
                 activeModule === 'kanji'
-                  ? 'bg-rose-500 text-white shadow-md shadow-rose-500/25'
-                  : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60'
+                  ? 'bg-white dark:bg-[#27272a] text-[#1c1917] dark:text-[#f4f4f5] shadow-sm font-semibold'
+                  : 'text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
               }`}
             >
               <BookOpen className="w-3.5 h-3.5" />
@@ -83,10 +88,10 @@ export const Navbar: React.FC<NavbarProps> = ({ activeModule, onSelectModule, on
 
             <button
               onClick={() => onSelectModule('vocab')}
-              className={`px-3 py-1.5 rounded-xl text-xs font-semibold flex items-center gap-1.5 transition cursor-pointer ${
+              className={`px-3 py-1.5 rounded-md text-xs font-medium transition cursor-pointer flex items-center gap-1.5 ${
                 activeModule === 'vocab'
-                  ? 'bg-rose-500 text-white shadow-md shadow-rose-500/25'
-                  : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60'
+                  ? 'bg-white dark:bg-[#27272a] text-[#1c1917] dark:text-[#f4f4f5] shadow-sm font-semibold'
+                  : 'text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
               }`}
             >
               <Layers className="w-3.5 h-3.5" />
@@ -95,10 +100,10 @@ export const Navbar: React.FC<NavbarProps> = ({ activeModule, onSelectModule, on
 
             <button
               onClick={() => onSelectModule('grammar')}
-              className={`px-3 py-1.5 rounded-xl text-xs font-semibold flex items-center gap-1.5 transition cursor-pointer ${
+              className={`px-3 py-1.5 rounded-md text-xs font-medium transition cursor-pointer flex items-center gap-1.5 ${
                 activeModule === 'grammar'
-                  ? 'bg-rose-500 text-white shadow-md shadow-rose-500/25'
-                  : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60'
+                  ? 'bg-white dark:bg-[#27272a] text-[#1c1917] dark:text-[#f4f4f5] shadow-sm font-semibold'
+                  : 'text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
               }`}
             >
               <Award className="w-3.5 h-3.5" />
@@ -107,10 +112,10 @@ export const Navbar: React.FC<NavbarProps> = ({ activeModule, onSelectModule, on
 
             <button
               onClick={() => onSelectModule('dojo')}
-              className={`px-3 py-1.5 rounded-xl text-xs font-bold flex items-center gap-1.5 transition cursor-pointer ${
+              className={`px-3 py-1.5 rounded-md text-xs font-medium transition cursor-pointer flex items-center gap-1.5 ${
                 activeModule === 'dojo'
-                  ? 'bg-rose-600 text-white shadow-md shadow-rose-600/25'
-                  : 'text-rose-400 hover:text-rose-200 hover:bg-rose-950/40'
+                  ? 'bg-white dark:bg-[#27272a] text-[#c84b31] dark:text-[#e05d44] shadow-sm font-bold border border-[#c84b31]/20 dark:border-[#e05d44]/30'
+                  : 'text-[#78716c] dark:text-[#a1a1aa] hover:text-[#c84b31] dark:hover:text-[#e05d44]'
               }`}
             >
               <Swords className="w-3.5 h-3.5" />
@@ -119,122 +124,98 @@ export const Navbar: React.FC<NavbarProps> = ({ activeModule, onSelectModule, on
 
             <button
               onClick={() => onSelectModule('quiz')}
-              className={`px-3 py-1.5 rounded-xl text-xs font-bold flex items-center gap-1.5 transition cursor-pointer ${
+              className={`px-3 py-1.5 rounded-md text-xs font-medium transition cursor-pointer flex items-center gap-1.5 ${
                 activeModule === 'quiz'
-                  ? 'bg-indigo-600 text-white shadow-md shadow-indigo-500/25'
-                  : 'text-indigo-400 hover:text-indigo-200 hover:bg-indigo-950/40'
+                  ? 'bg-white dark:bg-[#27272a] text-[#1e3a8a] dark:text-[#3b82f6] shadow-sm font-bold border border-[#1e3a8a]/20 dark:border-[#3b82f6]/30'
+                  : 'text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1e3a8a] dark:hover:text-[#3b82f6]'
               }`}
             >
               <Trophy className="w-3.5 h-3.5" />
-              <span>Pusat Ujian & Kuis</span>
+              <span>Pusat Ujian</span>
             </button>
 
             <button
               onClick={() => onSelectModule('roadmap')}
-              className={`px-3 py-1.5 rounded-xl text-xs font-semibold flex items-center gap-1.5 transition cursor-pointer ${
+              className={`px-3 py-1.5 rounded-md text-xs font-medium transition cursor-pointer flex items-center gap-1.5 ${
                 activeModule === 'roadmap'
-                  ? 'bg-rose-500 text-white shadow-md shadow-rose-500/25'
-                  : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60'
+                  ? 'bg-white dark:bg-[#27272a] text-[#1c1917] dark:text-[#f4f4f5] shadow-sm font-semibold'
+                  : 'text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
               }`}
             >
               <Compass className="w-3.5 h-3.5" />
-              <span>Peta Jalan 0→N1</span>
+              <span>Peta Jalan</span>
             </button>
           </nav>
 
-          {/* Right Action Icons (Live Mastery Counter, Romaji Toggle, Dojo Shortcut & Settings) */}
+          {/* Right Action Icons — Clean Monoline & Hanko Badges */}
           <div className="flex items-center gap-2">
-            {/* Live Mastery Counter Badge */}
+            {/* Live Corpus Count Badge */}
             <div 
-              className="hidden lg:flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl bg-slate-900/90 border border-slate-800/80 text-xs text-slate-300 font-medium select-none shadow-sm"
+              className="hidden lg:flex items-center gap-1.5 px-2.5 py-1.5 rounded-md bg-[#f4f0e8]/80 dark:bg-[#1f1f23]/80 border border-[#e7e5e4] dark:border-[#27272a] text-xs text-[#78716c] dark:text-[#a1a1aa] font-mono select-none"
               title={`Total Basis Data: ${KANJI_DATA.length} Kanji + ${VOCAB_DATA.length} Kosakata aktif`}
             >
-              <span className="text-sm leading-none">📚</span>
-              <span className="font-bold text-rose-300 tracking-tight">
-                {(KANJI_DATA.length + VOCAB_DATA.length).toLocaleString('id-ID')}+
+              <span className="font-serif-jp text-xs text-[#1c1917] dark:text-[#f4f4f5]">書</span>
+              <span className="font-bold text-[#1c1917] dark:text-[#f4f4f5]">
+                {(KANJI_DATA.length + VOCAB_DATA.length).toLocaleString('id-ID')}
               </span>
-              <span className="text-slate-400 text-[11px] font-medium hidden 2xl:inline">Kata & Kanji Tersedia</span>
-              <span className="text-slate-400 text-[11px] font-medium inline 2xl:hidden">Materi</span>
+              <span className="text-[11px] font-sans hidden 2xl:inline">Materi</span>
             </div>
 
             {/* Global Romaji Toggle Switch */}
             <button
               type="button"
               onClick={toggleShowRomaji}
-              className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl border text-xs font-bold transition cursor-pointer select-none ${
+              className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-md border text-xs font-medium transition cursor-pointer select-none ${
                 showRomaji
-                  ? 'bg-emerald-500/10 border-emerald-500/30 text-emerald-300 hover:bg-emerald-500/20'
-                  : 'bg-slate-900 border-slate-800 text-slate-400 hover:text-slate-200 hover:bg-slate-800'
+                  ? 'bg-[#2e7d32]/10 border-[#2e7d32]/30 text-[#2e7d32] dark:text-[#4ade80]'
+                  : 'bg-[#f4f0e8]/80 dark:bg-[#1f1f23]/80 border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
               }`}
-              title={showRomaji ? 'Romaji Aktif. Klik untuk mematikan bantuan Romaji (Mode Huruf Murni)' : 'Romaji Mati (Mode Murni). Klik untuk menyalakan bantuan Romaji'}
+              title={showRomaji ? 'Romaji Aktif. Klik untuk mematikan bantuan Romaji' : 'Romaji Mati. Klik untuk menyalakan bantuan Romaji'}
             >
-              <span className={`text-[10px] font-mono px-1 py-0.5 rounded font-black ${
-                showRomaji ? 'bg-emerald-500 text-slate-950' : 'bg-slate-800 text-slate-300'
-              }`}>
+              <span className="text-[10px] font-mono font-bold px-1 py-0.5 rounded bg-black/5 dark:bg-white/10">
                 {showRomaji ? 'Aa' : 'あ'}
               </span>
-              <span className="hidden sm:inline">Romaji:</span>
-              <span className={showRomaji ? 'text-emerald-400 font-extrabold' : 'text-slate-400 font-bold'}>
-                {showRomaji ? 'ON' : 'OFF'}
+              <span className="hidden sm:inline font-sans">Romaji</span>
+              <span className="font-mono text-[10px] font-bold">
+                [{showRomaji ? 'ON' : 'OFF'}]
               </span>
             </button>
 
-            {/* SRS Spaced Repetition Due Badge & Habit Streak */}
+            {/* SRS Review Button — Calm Editorial State */}
             {onOpenSrsReview && (
               <button
                 type="button"
                 onClick={onOpenSrsReview}
-                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl border text-xs font-bold transition cursor-pointer shadow-sm ${
+                className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-md border text-xs font-medium transition cursor-pointer select-none ${
                   dueCount > 0
-                    ? 'bg-amber-500/15 border-amber-500/35 text-amber-300 hover:bg-amber-500/25 animate-pulse'
-                    : 'bg-emerald-500/10 border-emerald-500/25 text-emerald-300 hover:bg-emerald-500/20'
+                    ? 'bg-[#c84b31]/10 border-[#c84b31]/30 text-[#c84b31] dark:text-[#e05d44] hover:bg-[#c84b31]/15 font-semibold'
+                    : 'bg-[#2e7d32]/10 border-[#2e7d32]/25 text-[#2e7d32] dark:text-[#4ade80] hover:bg-[#2e7d32]/15'
                 }`}
                 title="Buka Sesi SRS Review (Spaced Repetition System)"
               >
                 {dueCount > 0 ? (
                   <>
-                    <Flame className="w-3.5 h-3.5 text-amber-400 fill-amber-400" />
-                    <span>🔥 {dueCount} Review Siap</span>
+                    <Flame className="w-3.5 h-3.5 text-[#c84b31] dark:text-[#e05d44]" />
+                    <span className="font-mono font-bold">{dueCount}</span>
+                    <span className="font-serif-jp hidden sm:inline">[復習]</span>
                   </>
                 ) : (
                   <>
-                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
-                    <span>✓ Review Tuntas</span>
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[#2e7d32] dark:text-[#4ade80]" />
+                    <span className="font-sans hidden sm:inline">Tuntas</span>
                   </>
                 )}
                 {dailyStreak > 0 && (
-                  <span className="ml-1 pl-1.5 border-l border-slate-700/80 text-[11px] text-amber-400/90 hidden md:inline">
-                    {dailyStreak}🔥
+                  <span className="ml-1 pl-1.5 border-l border-[#e7e5e4] dark:border-[#27272a] text-[11px] font-mono font-bold text-[#c84b31] dark:text-[#e05d44] hidden md:inline">
+                    {dailyStreak}d
                   </span>
                 )}
               </button>
             )}
 
             <button
-              onClick={() => onSelectModule('dojo')}
-              className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-rose-600/20 border border-rose-500/30 text-xs font-bold text-rose-300 hover:bg-rose-600/30 transition cursor-pointer"
-            >
-              <Swords className="w-3.5 h-3.5 text-rose-400" />
-              <span>Dojo Kata Kerja</span>
-            </button>
-
-            <button
-              type="button"
-              onClick={() => onSelectModule('design-lab')}
-              className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl border text-xs font-bold transition cursor-pointer ${
-                activeModule === 'design-lab'
-                  ? 'bg-indigo-600 border-indigo-500 text-white shadow-md shadow-indigo-500/25'
-                  : 'bg-indigo-950/40 border-indigo-800/60 text-indigo-300 hover:bg-indigo-900/60'
-              }`}
-              title="Buka Design Lab: Sandbox Uji Perbandingan Desain (Zero DB Touch)"
-            >
-              <span className="text-xs">🧪</span>
-              <span className="hidden sm:inline">Design Lab</span>
-            </button>
-
-            <button
               onClick={() => setIsSettingsOpen(true)}
-              className="p-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-400 hover:text-white hover:bg-slate-800 transition cursor-pointer"
+              className="p-2 rounded-md bg-[#f4f0e8]/80 dark:bg-[#1f1f23]/80 border border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5] transition cursor-pointer"
               title="Pengaturan & Backup Data (JSON)"
             >
               <Settings className="w-4 h-4" />
@@ -242,53 +223,53 @@ export const Navbar: React.FC<NavbarProps> = ({ activeModule, onSelectModule, on
           </div>
         </div>
 
-        {/* Mobile Nav Bar */}
-        <div className="xl:hidden flex items-center justify-around border-t border-slate-800/80 bg-slate-950 px-2 py-2 text-[10px]">
+        {/* Mobile Nav Bar — Clean Zen Line */}
+        <div className="xl:hidden flex items-center justify-around border-t border-[#e7e5e4] dark:border-[#27272a] bg-[#faf8f5]/95 dark:bg-[#18181b]/95 px-2 py-2 text-[10px]">
           <button
             onClick={() => onSelectModule('kana')}
-            className={`flex flex-col items-center py-1 px-1 rounded-lg ${activeModule === 'kana' ? 'text-rose-400 font-bold' : 'text-slate-400'}`}
+            className={`flex flex-col items-center py-1 px-1 rounded-md transition ${activeModule === 'kana' ? 'text-[#c84b31] dark:text-[#e05d44] font-bold' : 'text-[#78716c] dark:text-[#a1a1aa]'}`}
           >
-            <Sparkles className="w-3.5 h-3.5 mb-0.5" />
-            <span>Kana</span>
+            <span className="font-serif-jp text-sm leading-none font-bold">仮</span>
+            <span className="mt-0.5">Kana</span>
           </button>
           <button
             onClick={() => onSelectModule('kanji')}
-            className={`flex flex-col items-center py-1 px-1 rounded-lg ${activeModule === 'kanji' ? 'text-rose-400 font-bold' : 'text-slate-400'}`}
+            className={`flex flex-col items-center py-1 px-1 rounded-md transition ${activeModule === 'kanji' ? 'text-[#c84b31] dark:text-[#e05d44] font-bold' : 'text-[#78716c] dark:text-[#a1a1aa]'}`}
           >
             <BookOpen className="w-3.5 h-3.5 mb-0.5" />
             <span>Kanji</span>
           </button>
           <button
             onClick={() => onSelectModule('vocab')}
-            className={`flex flex-col items-center py-1 px-1 rounded-lg ${activeModule === 'vocab' ? 'text-rose-400 font-bold' : 'text-slate-400'}`}
+            className={`flex flex-col items-center py-1 px-1 rounded-md transition ${activeModule === 'vocab' ? 'text-[#c84b31] dark:text-[#e05d44] font-bold' : 'text-[#78716c] dark:text-[#a1a1aa]'}`}
           >
             <Layers className="w-3.5 h-3.5 mb-0.5" />
             <span>Vocab</span>
           </button>
           <button
             onClick={() => onSelectModule('grammar')}
-            className={`flex flex-col items-center py-1 px-1 rounded-lg ${activeModule === 'grammar' ? 'text-rose-400 font-bold' : 'text-slate-400'}`}
+            className={`flex flex-col items-center py-1 px-1 rounded-md transition ${activeModule === 'grammar' ? 'text-[#c84b31] dark:text-[#e05d44] font-bold' : 'text-[#78716c] dark:text-[#a1a1aa]'}`}
           >
             <Award className="w-3.5 h-3.5 mb-0.5" />
             <span>Grammar</span>
           </button>
           <button
             onClick={() => onSelectModule('dojo')}
-            className={`flex flex-col items-center py-1 px-1 rounded-lg ${activeModule === 'dojo' ? 'text-rose-400 font-bold' : 'text-rose-400/70'}`}
+            className={`flex flex-col items-center py-1 px-1 rounded-md transition ${activeModule === 'dojo' ? 'text-[#c84b31] dark:text-[#e05d44] font-bold' : 'text-[#78716c] dark:text-[#a1a1aa]'}`}
           >
             <Swords className="w-3.5 h-3.5 mb-0.5" />
             <span>Dojo</span>
           </button>
           <button
             onClick={() => onSelectModule('quiz')}
-            className={`flex flex-col items-center py-1 px-1 rounded-lg ${activeModule === 'quiz' ? 'text-indigo-400 font-bold' : 'text-indigo-400/70'}`}
+            className={`flex flex-col items-center py-1 px-1 rounded-md transition ${activeModule === 'quiz' ? 'text-[#1e3a8a] dark:text-[#3b82f6] font-bold' : 'text-[#78716c] dark:text-[#a1a1aa]'}`}
           >
             <Trophy className="w-3.5 h-3.5 mb-0.5" />
-            <span>Kuis</span>
+            <span>Ujian</span>
           </button>
           <button
             onClick={() => onSelectModule('roadmap')}
-            className={`flex flex-col items-center py-1 px-1 rounded-lg ${activeModule === 'roadmap' ? 'text-rose-400 font-bold' : 'text-slate-400'}`}
+            className={`flex flex-col items-center py-1 px-1 rounded-md transition ${activeModule === 'roadmap' ? 'text-[#c84b31] dark:text-[#e05d44] font-bold' : 'text-[#78716c] dark:text-[#a1a1aa]'}`}
           >
             <Compass className="w-3.5 h-3.5 mb-0.5" />
             <span>0→N1</span>
@@ -296,10 +277,10 @@ export const Navbar: React.FC<NavbarProps> = ({ activeModule, onSelectModule, on
           {onOpenSrsReview && (
             <button
               onClick={onOpenSrsReview}
-              className={`flex flex-col items-center py-1 px-1 rounded-lg ${dueCount > 0 ? 'text-amber-400 font-bold animate-pulse' : 'text-slate-400'}`}
+              className={`flex flex-col items-center py-1 px-1 rounded-md transition ${dueCount > 0 ? 'text-[#c84b31] dark:text-[#e05d44] font-bold' : 'text-[#78716c] dark:text-[#a1a1aa]'}`}
             >
-              <Flame className="w-3.5 h-3.5 mb-0.5 text-amber-500" />
-              <span>{dueCount > 0 ? `${dueCount} SRS` : 'SRS'}</span>
+              <Flame className="w-3.5 h-3.5 mb-0.5" />
+              <span className="font-mono">{dueCount > 0 ? dueCount : 'SRS'}</span>
             </button>
           )}
         </div>

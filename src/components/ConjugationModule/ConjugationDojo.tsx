@@ -211,20 +211,20 @@ export const ConjugationDojo: React.FC = () => {
 
   const getTargetFormBadge = (form: ConjugationForm) => {
     switch (form) {
-      case 'te': return { label: 'BENTUK ~TE', color: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40' };
-      case 'masu': return { label: 'BENTUK ~MASU', color: 'bg-sky-500/20 text-sky-300 border-sky-500/40' };
-      case 'nai': return { label: 'BENTUK ~NAI', color: 'bg-rose-500/20 text-rose-300 border-rose-500/40' };
-      case 'ta': return { label: 'BENTUK ~TA', color: 'bg-amber-500/20 text-amber-300 border-amber-500/40' };
-      case 'potential': return { label: 'POTENSIAL (BISA)', color: 'bg-cyan-500/20 text-cyan-300 border-cyan-500/40' };
-      case 'passive': return { label: 'PASIF (DI-/TER-)', color: 'bg-violet-500/20 text-violet-300 border-violet-500/40' };
+      case 'te': return { label: 'BENTUK ~TE', color: 'bg-[#2e7d32]/10 text-[#2e7d32] border-[#2e7d32]/30' };
+      case 'masu': return { label: 'BENTUK ~MASU', color: 'bg-[#1e3a8a]/10 text-[#1e3a8a] dark:text-[#60a5fa] border-[#1e3a8a]/30' };
+      case 'nai': return { label: 'BENTUK ~NAI', color: 'bg-[#c84b31]/10 text-[#c84b31] border-[#c84b31]/30' };
+      case 'ta': return { label: 'BENTUK ~TA', color: 'bg-[#d97706]/10 text-[#d97706] border-[#d97706]/30' };
+      case 'potential': return { label: 'POTENSIAL (BISA)', color: 'bg-[#0284c7]/10 text-[#0284c7] border-[#0284c7]/30' };
+      case 'passive': return { label: 'PASIF (DI-/TER-)', color: 'bg-[#7c3aed]/10 text-[#7c3aed] border-[#7c3aed]/30' };
     }
   };
 
   const getGroupBadge = (group: VerbGroup) => {
     switch (group) {
-      case 'ichidan': return { label: 'Gol. 2 (Ichidan)', color: 'bg-teal-500/20 text-teal-300 border-teal-500/30' };
-      case 'godan': return { label: 'Gol. 1 (Godan)', color: 'bg-indigo-500/20 text-indigo-300 border-indigo-500/30' };
-      case 'irregular': return { label: 'Gol. 3 (Irregular)', color: 'bg-purple-500/20 text-purple-300 border-purple-500/30' };
+      case 'ichidan': return { label: 'Gol. 2 (Ichidan)', color: 'bg-[#2e7d32]/10 text-[#2e7d32] border-[#2e7d32]/30' };
+      case 'godan': return { label: 'Gol. 1 (Godan)', color: 'bg-[#1e3a8a]/10 text-[#1e3a8a] dark:text-[#60a5fa] border-[#1e3a8a]/30' };
+      case 'irregular': return { label: 'Gol. 3 (Irregular)', color: 'bg-[#7c3aed]/10 text-[#7c3aed] border-[#7c3aed]/30' };
     }
   };
 
@@ -232,42 +232,42 @@ export const ConjugationDojo: React.FC = () => {
     <div className="w-full max-w-5xl mx-auto px-4 py-8 animate-fadeIn">
       {/* Title */}
       <div className="text-center mb-8">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/10 border border-rose-500/20 text-rose-300 text-xs font-semibold mb-3">
-          <Swords className="w-3.5 h-3.5 text-rose-400" />
-          <span>Dojo Konjugasi Kata Kerja (Doushi no Katsuyou)</span>
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#c84b31]/10 border border-[#c84b31]/20 text-[#c84b31] text-xs font-mono font-medium mb-3">
+          <Swords className="w-3.5 h-3.5" />
+          <span>DOJO KONJUGASI KATA KERJA (動詞の活用)</span>
         </div>
-        <h1 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-2">
-          Masteri Perubahan Bentuk Kata Kerja (N5 & N4)
+        <h1 className="text-3xl sm:text-4xl font-bold font-serif-jp text-[#1c1917] dark:text-[#f4f4f5] tracking-tight mb-2">
+          Masteri Perubahan Bentuk Kata Kerja
         </h1>
-        <p className="text-slate-400 text-sm max-w-xl mx-auto">
-          Tembus tembok konjugasi! Kuasai rumus perubahan Bentuk-Te, Masu, Nai, Ta, Potensial (可能形), dan Pasif (受身形) dengan panduan visual dan latihan refleks instan.
+        <p className="text-[#78716c] dark:text-[#a1a1aa] text-sm max-w-xl mx-auto">
+          Kuasai pola perubahan Bentuk-Te, Masu, Nai, Ta, Potensial (可能形), dan Pasif (受身形) dengan panduan visual dan latihan refleks instan.
         </p>
       </div>
 
       {/* Main Tabs (Cheatsheet vs Drill Trainer) */}
-      <div className="flex items-center justify-center gap-2 mb-8 border-b border-slate-800 pb-2">
+      <div className="flex items-center justify-center gap-2 mb-8 border-b border-[#e7e5e4] dark:border-[#27272a] pb-3">
         <button
           onClick={() => setActiveTab('trainer')}
-          className={`px-5 py-2.5 rounded-2xl text-xs sm:text-sm font-bold flex items-center gap-2 transition cursor-pointer ${
+          className={`px-5 py-2 rounded-lg text-xs sm:text-sm font-sans font-medium flex items-center gap-2 transition cursor-pointer border ${
             activeTab === 'trainer'
-              ? 'bg-rose-500 text-white shadow-lg shadow-rose-500/25'
-              : 'bg-slate-900 border border-slate-800 text-slate-400 hover:text-white'
+              ? 'bg-[#1c1917] dark:bg-[#f4f4f5] text-white dark:text-[#18181b] border-transparent font-bold shadow-xs'
+              : 'bg-white dark:bg-[#1f1f23] border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
           }`}
         >
-          <Flame className="w-4 h-4 text-amber-300" />
+          <Flame className="w-4 h-4 text-[#c84b31]" />
           <span>Drill Trainer (Latihan Refleks)</span>
         </button>
 
         <button
           onClick={() => setActiveTab('cheatsheet')}
-          className={`px-5 py-2.5 rounded-2xl text-xs sm:text-sm font-bold flex items-center gap-2 transition cursor-pointer ${
+          className={`px-5 py-2 rounded-lg text-xs sm:text-sm font-sans font-medium flex items-center gap-2 transition cursor-pointer border ${
             activeTab === 'cheatsheet'
-              ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-600/25'
-              : 'bg-slate-900 border border-slate-800 text-slate-400 hover:text-white'
+              ? 'bg-[#1c1917] dark:bg-[#f4f4f5] text-white dark:text-[#18181b] border-transparent font-bold shadow-xs'
+              : 'bg-white dark:bg-[#1f1f23] border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
           }`}
         >
-          <BookOpen className="w-4 h-4 text-indigo-300" />
-          <span>Rumus & Cheatsheet Interaktif</span>
+          <BookOpen className="w-4 h-4 text-[#1e3a8a] dark:text-[#60a5fa]" />
+          <span>Rumus & Panduan Kaidah</span>
         </button>
       </div>
 
@@ -275,63 +275,63 @@ export const ConjugationDojo: React.FC = () => {
       {/* TAB 1: DRILL TRAINER                                                 */}
       {/* ==================================================================== */}
       {activeTab === 'trainer' && isSessionFinished && (
-        <div className="max-w-2xl mx-auto bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8 shadow-2xl text-center animate-fadeIn">
-          <Trophy className="w-14 h-14 text-amber-400 mx-auto mb-3" />
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-white mb-2">
-            Sesi Latihan Dojo Selesai!
+        <div className="max-w-2xl mx-auto bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] rounded-xl p-6 sm:p-8 shadow-xs text-center animate-fadeIn">
+          <Trophy className="w-12 h-12 text-[#c84b31] mx-auto mb-3" />
+          <h2 className="text-2xl sm:text-3xl font-bold font-serif-jp text-[#1c1917] dark:text-[#f4f4f5] mb-2">
+            Sesi Latihan Dojo Selesai
           </h2>
-          <p className="text-xs sm:text-sm text-slate-400 mb-6">
+          <p className="text-xs sm:text-sm text-[#78716c] dark:text-[#a1a1aa] mb-6">
             Refleks konjugasi Anda semakin terasah. Sesi {sessionMode === 'endless' ? 'Mode Bertahan' : `${sessionMode} Soal`} telah selesai.
           </p>
 
           {/* Stats Grid */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-lg mx-auto mb-8">
-            <div className="p-3 bg-slate-950/60 border border-slate-800 rounded-2xl">
-              <span className="text-[10px] text-slate-400 block uppercase font-bold">Total Soal</span>
-              <span className="text-2xl font-bold text-white">{totalAnswered}</span>
+            <div className="p-3 bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a] rounded-lg">
+              <span className="text-[10px] text-[#78716c] dark:text-[#a1a1aa] block uppercase font-mono font-bold">Total Soal</span>
+              <span className="text-2xl font-bold font-mono text-[#1c1917] dark:text-[#f4f4f5]">{totalAnswered}</span>
             </div>
-            <div className="p-3 bg-slate-950/60 border border-slate-800 rounded-2xl">
-              <span className="text-[10px] text-slate-400 block uppercase font-bold">Jawaban Benar</span>
-              <span className="text-2xl font-bold text-emerald-400">{correctCount}</span>
+            <div className="p-3 bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a] rounded-lg">
+              <span className="text-[10px] text-[#78716c] dark:text-[#a1a1aa] block uppercase font-mono font-bold">Jawaban Benar</span>
+              <span className="text-2xl font-bold font-mono text-[#2e7d32]">{correctCount}</span>
             </div>
-            <div className="p-3 bg-slate-950/60 border border-slate-800 rounded-2xl">
-              <span className="text-[10px] text-slate-400 block uppercase font-bold">Akurasi</span>
-              <span className="text-2xl font-bold text-indigo-400">
+            <div className="p-3 bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a] rounded-lg">
+              <span className="text-[10px] text-[#78716c] dark:text-[#a1a1aa] block uppercase font-mono font-bold">Akurasi</span>
+              <span className="text-2xl font-bold font-mono text-[#1e3a8a] dark:text-[#60a5fa]">
                 {Math.round((correctCount / (totalAnswered || 1)) * 100)}%
               </span>
             </div>
-            <div className="p-3 bg-slate-950/60 border border-slate-800 rounded-2xl">
-              <span className="text-[10px] text-slate-400 block uppercase font-bold">Rekor Streak</span>
-              <span className="text-2xl font-bold text-amber-400">{bestStreak}</span>
+            <div className="p-3 bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a] rounded-lg">
+              <span className="text-[10px] text-[#78716c] dark:text-[#a1a1aa] block uppercase font-mono font-bold">Rekor Streak</span>
+              <span className="text-2xl font-bold font-mono text-[#c84b31]">{bestStreak}</span>
             </div>
           </div>
 
           {/* Mistakes Breakdown */}
           {wrongItems.length > 0 && (
             <div className="mb-8 text-left max-w-lg mx-auto">
-              <h3 className="text-xs font-bold uppercase tracking-wider text-rose-400 mb-3 flex items-center gap-1.5">
+              <h3 className="text-xs font-mono font-bold uppercase tracking-wider text-[#c84b31] mb-3 flex items-center gap-1.5">
                 <AlertTriangle className="w-4 h-4" />
                 <span>Kata Kerja yang Sempat Keliru ({wrongItems.length}):</span>
               </h3>
               <div className="space-y-2 max-h-56 overflow-y-auto p-1 scrollbar-thin">
                 {wrongItems.map((item, idx) => (
-                  <div key={idx} className="p-3 rounded-2xl bg-slate-950 border border-slate-800/80 flex items-center justify-between">
+                  <div key={idx} className="p-3 rounded-lg bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a] flex items-center justify-between">
                     <div>
                       <div className="flex items-center gap-2">
-                        <span className="text-lg font-jp font-bold text-white">{item.verb.kanji}</span>
-                        <span className="text-xs text-slate-400">({item.verb.kana})</span>
-                        <span className={`px-2 py-0.5 rounded text-[10px] font-bold border ${getTargetFormBadge(item.targetForm).color}`}>
+                        <span className="text-lg font-serif-jp font-bold text-[#1c1917] dark:text-[#f4f4f5]">{item.verb.kanji}</span>
+                        <span className="text-xs text-[#78716c] dark:text-[#a1a1aa]">({item.verb.kana})</span>
+                        <span className={`px-2 py-0.5 rounded text-[10px] font-mono font-bold border ${getTargetFormBadge(item.targetForm).color}`}>
                           {getTargetFormBadge(item.targetForm).label}
                         </span>
                       </div>
                       <div className="text-xs mt-1">
-                        <span className="text-rose-400 font-mono mr-2">Pilihan: {item.userAnswer}</span>
-                        <span className="text-emerald-400 font-bold font-mono">Kunci: {item.correctAnswer}</span>
+                        <span className="text-[#c84b31] font-mono mr-2">Pilihan: {item.userAnswer}</span>
+                        <span className="text-[#2e7d32] font-bold font-mono">Kunci: {item.correctAnswer}</span>
                       </div>
                     </div>
                     <button
                       onClick={() => speakJapanese(item.correctAnswer)}
-                      className="p-2 rounded-xl bg-slate-900 text-slate-400 hover:text-white hover:bg-slate-800 transition cursor-pointer"
+                      className="p-2 rounded-lg bg-white dark:bg-[#1f1f23] text-[#78716c] hover:text-[#1c1917] dark:hover:text-[#f4f4f5] border border-[#e7e5e4] dark:border-[#27272a] transition cursor-pointer"
                       title="Dengarkan pelafalan"
                     >
                       <Volume2 className="w-4 h-4" />
@@ -346,23 +346,23 @@ export const ConjugationDojo: React.FC = () => {
           <div className="flex flex-wrap items-center justify-center gap-3">
             <button
               onClick={() => handleStartNewSession('10')}
-              className="px-5 py-2.5 rounded-xl bg-rose-500 hover:bg-rose-600 text-white font-bold text-xs shadow-lg shadow-rose-500/25 transition cursor-pointer flex items-center gap-1.5"
+              className="px-4 py-2 rounded-lg bg-[#c84b31] hover:bg-[#b03f27] text-white font-bold text-xs shadow-xs transition cursor-pointer flex items-center gap-1.5"
             >
               <RotateCcw className="w-3.5 h-3.5" />
-              <span>⚡ Latihan 10 Soal Lagi</span>
+              <span>Latihan 10 Soal Lagi</span>
             </button>
             <button
               onClick={() => handleStartNewSession('20')}
-              className="px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs shadow-lg shadow-indigo-600/25 transition cursor-pointer flex items-center gap-1.5"
+              className="px-4 py-2 rounded-lg bg-[#1e3a8a] hover:bg-[#1e40af] text-white font-bold text-xs shadow-xs transition cursor-pointer flex items-center gap-1.5"
             >
               <RotateCcw className="w-3.5 h-3.5" />
-              <span>📝 Latihan 20 Soal Lagi</span>
+              <span>Latihan 20 Soal Lagi</span>
             </button>
             <button
               onClick={() => handleStartNewSession('endless')}
-              className="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-xs transition cursor-pointer border border-slate-700"
+              className="px-4 py-2 rounded-lg bg-white dark:bg-[#1f1f23] hover:bg-[#faf8f5] dark:hover:bg-[#27272a] text-[#1c1917] dark:text-[#f4f4f5] font-medium text-xs transition cursor-pointer border border-[#e7e5e4] dark:border-[#27272a]"
             >
-              🔥 Coba Mode Bertahan
+              Mode Bertahan
             </button>
           </div>
         </div>
@@ -371,25 +371,25 @@ export const ConjugationDojo: React.FC = () => {
       {activeTab === 'trainer' && !isSessionFinished && currentQuestion && (
         <div className="max-w-2xl mx-auto">
           {/* Trainer Filter & Streak Bar */}
-          <div className="bg-slate-900/90 border border-slate-800 rounded-3xl p-4 mb-6 shadow-xl space-y-3">
-            {/* Session Duration Selector SPK #19 */}
-            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 p-2.5 bg-slate-950/80 border border-slate-800/80 rounded-2xl">
+          <div className="bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] rounded-xl p-4 mb-6 shadow-xs space-y-3">
+            {/* Session Duration Selector */}
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 p-2.5 bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a] rounded-lg">
               <div className="flex items-center gap-1.5 overflow-x-auto w-full sm:w-auto">
-                <span className="text-[11px] font-bold text-slate-500 uppercase mr-1 shrink-0">Durasi:</span>
+                <span className="text-[10px] font-mono font-bold text-[#78716c] dark:text-[#a1a1aa] uppercase mr-1 shrink-0">DURASI:</span>
                 {(
                   [
-                    { id: '10', label: '⚡ 10 Soal (Kilat)' },
-                    { id: '20', label: '📝 20 Soal (Standar)' },
-                    { id: 'endless', label: '🔥 Mode Bertahan' },
+                    { id: '10', label: '10 Soal' },
+                    { id: '20', label: '20 Soal' },
+                    { id: 'endless', label: 'Bertahan' },
                   ] as const
                 ).map(m => (
                   <button
                     key={m.id}
                     onClick={() => handleStartNewSession(m.id)}
-                    className={`px-2.5 py-1 rounded-xl text-xs font-bold transition cursor-pointer shrink-0 ${
+                    className={`px-2.5 py-1 rounded-md text-xs font-mono font-medium transition cursor-pointer shrink-0 border ${
                       sessionMode === m.id
-                        ? 'bg-rose-500 text-white shadow-sm shadow-rose-500/30'
-                        : 'bg-slate-900 border border-slate-800 text-slate-400 hover:text-white'
+                        ? 'bg-[#1c1917] dark:bg-[#f4f4f5] text-white dark:text-[#18181b] border-transparent font-bold'
+                        : 'bg-white dark:bg-[#1f1f23] border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
                     }`}
                   >
                     {m.label}
@@ -398,11 +398,11 @@ export const ConjugationDojo: React.FC = () => {
               </div>
 
               {/* Progress counter: Soal X dari Y */}
-              <div className="text-xs font-mono font-bold text-slate-300 shrink-0 self-end sm:self-auto">
+              <div className="text-xs font-mono font-medium text-[#78716c] dark:text-[#a1a1aa] shrink-0 self-end sm:self-auto">
                 {sessionMode === 'endless' ? (
-                  <span>Soal ke-<strong className="text-rose-400">{questionIndex}</strong></span>
+                  <span>Soal ke-<strong className="text-[#1c1917] dark:text-[#f4f4f5]">{questionIndex}</strong></span>
                 ) : (
-                  <span>Soal <strong className="text-rose-400">{questionIndex}</strong> dari <strong className="text-white">{sessionMode}</strong></span>
+                  <span>Soal <strong className="text-[#1c1917] dark:text-[#f4f4f5]">{questionIndex}</strong> dari <strong className="text-[#1c1917] dark:text-[#f4f4f5]">{sessionMode}</strong></span>
                 )}
               </div>
             </div>
@@ -410,7 +410,7 @@ export const ConjugationDojo: React.FC = () => {
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-1">
               {/* Form Filter Selector */}
               <div className="flex items-center gap-1 overflow-x-auto w-full sm:w-auto pb-1 sm:pb-0">
-                <span className="text-[11px] font-bold text-slate-500 uppercase mr-1 shrink-0">Bentuk:</span>
+                <span className="text-[10px] font-mono font-bold text-[#78716c] dark:text-[#a1a1aa] uppercase mr-1 shrink-0">BENTUK:</span>
                 {(['random', 'te', 'masu', 'nai', 'ta', 'potential', 'passive'] as const).map(f => (
                   <button
                     key={f}
@@ -425,32 +425,32 @@ export const ConjugationDojo: React.FC = () => {
                       setUnseenDeck(nextDeck);
                       setCurrentQuestion(generateNewQuestion(f, selectedGroupFilter, nextVerb));
                     }}
-                    className={`px-3 py-1 rounded-xl text-xs font-bold transition cursor-pointer shrink-0 ${
+                    className={`px-2.5 py-1 rounded-md text-xs font-mono font-medium transition cursor-pointer shrink-0 border ${
                       selectedFormFilter === f
-                        ? 'bg-rose-500 text-white shadow-sm shadow-rose-500/30'
-                        : 'bg-slate-950 border border-slate-800 text-slate-400 hover:text-white'
+                        ? 'bg-[#c84b31] text-white border-transparent font-bold'
+                        : 'bg-[#faf8f5] dark:bg-[#18181b] border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
                     }`}
                   >
-                    {f === 'random' ? '🎲 Acak' : f === 'potential' ? '⚡ Potensial (N4)' : f === 'passive' ? '🛡️ Pasif (N4)' : `~${f.toUpperCase()}`}
+                    {f === 'random' ? 'Acak' : f === 'potential' ? 'Potensial' : f === 'passive' ? 'Pasif' : `~${f.toUpperCase()}`}
                   </button>
                 ))}
               </div>
 
               {/* Streak & Score Tracker */}
-              <div className="flex items-center gap-3 shrink-0 self-end sm:self-auto">
-                <div className="flex items-center gap-1.5 px-3 py-1 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-300 text-xs font-bold">
-                  <Flame className="w-4 h-4 fill-amber-400 text-amber-400" />
+              <div className="flex items-center gap-3 shrink-0 self-end sm:self-auto font-mono text-xs">
+                <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a] text-[#c84b31] font-bold">
+                  <Flame className="w-3.5 h-3.5" />
                   <span>Streak: {streak}</span>
                 </div>
-                <div className="text-xs text-slate-400 font-medium">
-                  Skor: <strong className="text-white font-bold">{correctCount}</strong>/{totalAnswered}
+                <div className="text-[#78716c] dark:text-[#a1a1aa]">
+                  Skor: <strong className="text-[#1c1917] dark:text-[#f4f4f5]">{correctCount}</strong>/{totalAnswered}
                 </div>
               </div>
             </div>
 
             {/* Group Filter Selector */}
-            <div className="flex items-center gap-1 overflow-x-auto pt-2 border-t border-slate-800/80">
-              <span className="text-[11px] font-bold text-slate-500 uppercase mr-1 shrink-0">Golongan:</span>
+            <div className="flex items-center gap-1 overflow-x-auto pt-2 border-t border-[#e7e5e4] dark:border-[#27272a]">
+              <span className="text-[10px] font-mono font-bold text-[#78716c] dark:text-[#a1a1aa] uppercase mr-1 shrink-0">GOLONGAN:</span>
               {([
                 { id: 'all', label: 'Semua Golongan' },
                 { id: 'godan', label: 'Gol. 1 (Godan)' },
@@ -470,10 +470,10 @@ export const ConjugationDojo: React.FC = () => {
                     setUnseenDeck(nextDeck);
                     setCurrentQuestion(generateNewQuestion(selectedFormFilter, g.id, nextVerb));
                   }}
-                  className={`px-2.5 py-1 rounded-lg text-xs font-medium transition cursor-pointer shrink-0 ${
+                  className={`px-2.5 py-1 rounded-md text-xs font-mono font-medium transition cursor-pointer shrink-0 border ${
                     selectedGroupFilter === g.id
-                      ? 'bg-indigo-600 text-white font-bold shadow-sm shadow-indigo-600/30'
-                      : 'bg-slate-950 border border-slate-800/80 text-slate-400 hover:text-slate-200'
+                      ? 'bg-[#1e3a8a] text-white border-transparent font-bold'
+                      : 'bg-[#faf8f5] dark:bg-[#18181b] border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
                   }`}
                 >
                   {g.label}
@@ -483,46 +483,46 @@ export const ConjugationDojo: React.FC = () => {
           </div>
 
           {/* Drill Question Card */}
-          <div className="bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8 shadow-2xl relative overflow-hidden mb-6">
+          <div className="bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] rounded-xl p-6 sm:p-8 shadow-xs relative overflow-hidden mb-6">
             {/* Header badges */}
             <div className="flex items-center justify-between mb-6">
-              <span className={`px-3 py-1 rounded-full text-xs font-bold border ${getGroupBadge(currentQuestion.verb.group).color}`}>
+              <span className={`px-2.5 py-1 rounded text-xs font-mono font-bold border ${getGroupBadge(currentQuestion.verb.group).color}`}>
                 {getGroupBadge(currentQuestion.verb.group).label}
               </span>
 
-              <span className={`px-3 py-1 rounded-xl text-xs font-black tracking-wider border ${getTargetFormBadge(currentQuestion.targetForm).color}`}>
+              <span className={`px-2.5 py-1 rounded text-xs font-mono font-bold tracking-wider border ${getTargetFormBadge(currentQuestion.targetForm).color}`}>
                 {getTargetFormBadge(currentQuestion.targetForm).label}
               </span>
             </div>
 
             {/* Target Challenge Display */}
-            <div className="text-center py-4 bg-slate-950/70 border border-slate-800/80 rounded-2xl mb-6">
-              <span className="text-xs text-slate-400 uppercase tracking-wider block mb-1">
-                Bentuk Kamus (Jishokei):
+            <div className="text-center py-6 bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a] rounded-xl mb-6">
+              <span className="text-[10px] font-mono text-[#78716c] dark:text-[#a1a1aa] uppercase tracking-wider block mb-1">
+                BENTUK KAMUS (JISHOKEI):
               </span>
               <div className="flex items-center justify-center gap-3">
-                <span className="text-4xl sm:text-5xl font-jp font-extrabold text-white">
+                <span className="text-4xl sm:text-5xl font-serif-jp font-bold text-[#1c1917] dark:text-[#f4f4f5]">
                   {currentQuestion.verb.kanji}
                 </span>
                 <button
                   type="button"
                   onClick={() => speakJapanese(currentQuestion.verb.kanji)}
-                  className="p-2 rounded-xl bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700 transition"
+                  className="p-2 rounded-lg bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] hover:text-[#1c1917] dark:hover:text-[#f4f4f5] transition"
                   title="Dengarkan pengucapan"
                 >
-                  <Volume2 className="w-4 h-4 text-emerald-400" />
+                  <Volume2 className="w-4 h-4 text-[#2e7d32]" />
                 </button>
               </div>
-              <div className="text-sm font-jp text-rose-400 font-semibold mt-1">
+              <div className="text-sm font-serif-jp text-[#c84b31] font-semibold mt-1">
                 {currentQuestion.verb.kana}
                 {showRomaji && (
-                  <span className="text-slate-400 font-mono text-xs ml-1.5 font-normal">
+                  <span className="text-[#78716c] dark:text-[#a1a1aa] font-mono text-xs ml-1.5 font-normal">
                     • {currentQuestion.verb.romaji}
                   </span>
                 )}
               </div>
-              <div className="text-xs text-slate-300 mt-0.5">
-                Arti: <strong className="text-white">{currentQuestion.verb.meaningId}</strong>
+              <div className="text-xs text-[#78716c] dark:text-[#a1a1aa] mt-0.5">
+                Arti: <strong className="text-[#1c1917] dark:text-[#f4f4f5]">{currentQuestion.verb.meaningId}</strong>
               </div>
             </div>
 
@@ -530,15 +530,15 @@ export const ConjugationDojo: React.FC = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
               {currentQuestion.options.map((opt, idx) => {
                 const isCorrect = opt.kanji === currentQuestion.correctAnswer;
-                let btnStyle = 'bg-slate-950/80 border-slate-800 text-slate-200 hover:border-slate-600 hover:bg-slate-800/80';
+                let btnStyle = 'bg-white dark:bg-[#1f1f23] border-[#e7e5e4] dark:border-[#27272a] text-[#1c1917] dark:text-[#f4f4f5] hover:border-[#1c1917] dark:hover:border-[#71717a]';
 
                 if (isAnswered) {
                   if (isCorrect) {
-                    btnStyle = 'bg-emerald-500/20 border-emerald-500 text-emerald-300 font-bold shadow-md shadow-emerald-500/10';
+                    btnStyle = 'bg-[#2e7d32]/10 border-[#2e7d32] text-[#2e7d32] font-bold';
                   } else if (idx === selectedOption) {
-                    btnStyle = 'bg-rose-500/20 border-rose-500 text-rose-300 font-bold shadow-md shadow-rose-500/10';
+                    btnStyle = 'bg-[#c84b31]/10 border-[#c84b31] text-[#c84b31] font-bold';
                   } else {
-                    btnStyle = 'bg-slate-950/40 border-slate-900 text-slate-600 opacity-60';
+                    btnStyle = 'bg-[#faf8f5] dark:bg-[#18181b] border-[#e7e5e4] dark:border-[#27272a] text-[#a8a29e] dark:text-[#71717a] opacity-60';
                   }
                 }
 
@@ -547,24 +547,24 @@ export const ConjugationDojo: React.FC = () => {
                     key={idx}
                     disabled={isAnswered}
                     onClick={() => handleSelectOption(idx)}
-                    className={`p-4 rounded-2xl border-2 text-base text-left font-medium transition duration-150 flex items-center justify-between cursor-pointer select-none ${btnStyle}`}
+                    className={`p-4 rounded-xl border text-base text-left font-medium transition flex items-center justify-between cursor-pointer select-none shadow-xs ${btnStyle}`}
                   >
                     <div>
-                      <span className="text-lg font-jp font-bold block mb-0.5">
+                      <span className="text-lg font-serif-jp font-bold block mb-0.5">
                         {opt.kanji}
                       </span>
                       {showRomaji && opt.romaji && (
-                        <span className="text-xs font-mono text-slate-400">
+                        <span className="text-xs font-mono text-[#78716c] dark:text-[#a1a1aa]">
                           {opt.romaji}
                         </span>
                       )}
                     </div>
 
                     {isAnswered && isCorrect && (
-                      <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0" />
+                      <CheckCircle2 className="w-5 h-5 text-[#2e7d32] shrink-0" />
                     )}
                     {isAnswered && idx === selectedOption && !isCorrect && (
-                      <XCircle className="w-5 h-5 text-rose-400 shrink-0" />
+                      <XCircle className="w-5 h-5 text-[#c84b31] shrink-0" />
                     )}
                   </button>
                 );
@@ -573,14 +573,14 @@ export const ConjugationDojo: React.FC = () => {
 
             {/* Instant Rule Explanation Box */}
             {isAnswered && (
-              <div className="p-4 sm:p-5 rounded-2xl bg-slate-950/90 border border-slate-800 mb-6 animate-pop">
+              <div className="p-4 sm:p-5 rounded-xl bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a] mb-6">
                 <div className="flex items-start gap-3">
-                  <Lightbulb className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
+                  <Lightbulb className="w-5 h-5 text-[#d97706] shrink-0 mt-0.5" />
                   <div>
-                    <span className="font-bold text-sm text-white block mb-1">
-                      Kunci Jawaban & Logika Bunyi:
+                    <span className="font-bold text-sm text-[#1c1917] dark:text-[#f4f4f5] block mb-1">
+                      Kunci Jawaban & Logika Perubahan:
                     </span>
-                    <p className="text-xs sm:text-sm text-slate-300 leading-relaxed whitespace-pre-line">
+                    <p className="text-xs sm:text-sm text-[#78716c] dark:text-[#a1a1aa] leading-relaxed whitespace-pre-line font-serif-jp">
                       {currentQuestion.explanation}
                     </p>
                   </div>
@@ -593,7 +593,7 @@ export const ConjugationDojo: React.FC = () => {
               <div className="flex justify-end">
                 <button
                   onClick={handleNextQuestion}
-                  className="px-6 py-3 rounded-2xl bg-gradient-to-r from-rose-500 to-indigo-600 hover:from-rose-600 hover:to-indigo-700 text-white font-bold text-sm flex items-center gap-2 shadow-lg shadow-rose-500/25 transition cursor-pointer animate-pop"
+                  className="px-6 py-2.5 rounded-lg bg-[#c84b31] hover:bg-[#b03f27] text-white font-bold text-sm flex items-center gap-2 shadow-xs transition cursor-pointer"
                 >
                   <span>
                     {sessionMode !== 'endless' && questionIndex >= parseInt(sessionMode, 10)
@@ -613,66 +613,66 @@ export const ConjugationDojo: React.FC = () => {
       {/* ==================================================================== */}
       {activeTab === 'cheatsheet' && (
         <div className="space-y-8">
-          {/* Card 1: Visual Rule Breakdown (The Legendary Te-Form Cheat Sheet) */}
-          <div className="bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8 shadow-xl">
+          {/* Card 1: Visual Rule Breakdown */}
+          <div className="bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] rounded-xl p-6 sm:p-8 shadow-xs">
             <div className="flex items-center gap-2.5 mb-6">
-              <Sparkles className="w-5 h-5 text-amber-400" />
-              <h2 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
-                Rumus Emas Bentuk-Te & Ta (Godan vs Ichidan)
+              <Sparkles className="w-5 h-5 text-[#c84b31]" />
+              <h2 className="text-xl sm:text-2xl font-bold font-serif-jp text-[#1c1917] dark:text-[#f4f4f5] tracking-tight">
+                Rumus Bentuk-Te & Ta (Godan vs Ichidan)
               </h2>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">
               {/* Group 1: Godan */}
-              <div className="md:col-span-2 bg-slate-950/80 border border-indigo-500/30 rounded-2xl p-5">
-                <span className="px-2.5 py-1 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/40 text-xs font-bold mb-3 inline-block">
+              <div className="md:col-span-2 bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a] rounded-xl p-5">
+                <span className="px-2.5 py-1 rounded text-xs font-mono font-bold bg-[#1e3a8a]/10 text-[#1e3a8a] dark:text-[#60a5fa] border border-[#1e3a8a]/20 mb-3 inline-block">
                   Golongan 1: Godan (U-Verbs)
                 </span>
-                <p className="text-xs text-slate-300 mb-4">
+                <p className="text-xs text-[#78716c] dark:text-[#a1a1aa] mb-4">
                   Perubahan bentuk-te ditentukan oleh <strong>huruf akhir</strong> kata kerja:
                 </p>
 
                 <div className="space-y-2 text-xs">
-                  <div className="p-3 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-between">
-                    <span className="font-mono text-rose-300 font-bold">Akhiran [う], [つ], [る]</span>
-                    <span className="font-bold text-emerald-400 font-jp">➔ 〜って (〜tte) / 〜った (〜tta)</span>
-                    <span className="text-[11px] text-slate-400">買<strong className="text-white">って</strong>, 待<strong className="text-white">って</strong></span>
+                  <div className="p-3 rounded-lg bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] flex items-center justify-between">
+                    <span className="font-mono text-[#c84b31] font-bold">Akhiran [う], [つ], [る]</span>
+                    <span className="font-bold text-[#2e7d32] font-serif-jp">➔ 〜って (〜tte) / 〜った (〜tta)</span>
+                    <span className="text-[11px] text-[#78716c] dark:text-[#a1a1aa] font-serif-jp">買<strong className="text-[#1c1917] dark:text-[#f4f4f5]">って</strong>, 待<strong className="text-[#1c1917] dark:text-[#f4f4f5]">って</strong></span>
                   </div>
 
-                  <div className="p-3 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-between">
-                    <span className="font-mono text-sky-300 font-bold">Akhiran [む], [ぶ], [ぬ]</span>
-                    <span className="font-bold text-emerald-400 font-jp">➔ 〜んで (〜nde) / 〜んだ (〜nda)</span>
-                    <span className="text-[11px] text-slate-400">飲<strong className="text-white">んで</strong>, 遊<strong className="text-white">んで</strong></span>
+                  <div className="p-3 rounded-lg bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] flex items-center justify-between">
+                    <span className="font-mono text-[#1e3a8a] dark:text-[#60a5fa] font-bold">Akhiran [む], [ぶ], [ぬ]</span>
+                    <span className="font-bold text-[#2e7d32] font-serif-jp">➔ 〜んで (〜nde) / 〜んだ (〜nda)</span>
+                    <span className="text-[11px] text-[#78716c] dark:text-[#a1a1aa] font-serif-jp">飲<strong className="text-[#1c1917] dark:text-[#f4f4f5]">んで</strong>, 遊<strong className="text-[#1c1917] dark:text-[#f4f4f5]">んで</strong></span>
                   </div>
 
-                  <div className="p-3 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-between">
-                    <span className="font-mono text-amber-300 font-bold">Akhiran [く]</span>
-                    <span className="font-bold text-emerald-400 font-jp">➔ 〜いて (〜ite) / 〜いた (〜ita)</span>
-                    <span className="text-[11px] text-slate-400">書<strong className="text-white">いて</strong>, 聞<strong className="text-white">いて</strong></span>
+                  <div className="p-3 rounded-lg bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] flex items-center justify-between">
+                    <span className="font-mono text-[#d97706] font-bold">Akhiran [く]</span>
+                    <span className="font-bold text-[#2e7d32] font-serif-jp">➔ 〜いて (〜ite) / 〜いた (〜ita)</span>
+                    <span className="text-[11px] text-[#78716c] dark:text-[#a1a1aa] font-serif-jp">書<strong className="text-[#1c1917] dark:text-[#f4f4f5]">いて</strong>, 聞<strong className="text-[#1c1917] dark:text-[#f4f4f5]">いて</strong></span>
                   </div>
 
-                  <div className="p-3 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-between">
-                    <span className="font-mono text-purple-300 font-bold">Akhiran [ぐ]</span>
-                    <span className="font-bold text-emerald-400 font-jp">➔ 〜いで (〜ide) / 〜いだ (〜ida)</span>
-                    <span className="text-[11px] text-slate-400">泳<strong className="text-white">いで</strong></span>
+                  <div className="p-3 rounded-lg bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] flex items-center justify-between">
+                    <span className="font-mono text-[#7c3aed] font-bold">Akhiran [ぐ]</span>
+                    <span className="font-bold text-[#2e7d32] font-serif-jp">➔ 〜いで (〜ide) / 〜いだ (〜ida)</span>
+                    <span className="text-[11px] text-[#78716c] dark:text-[#a1a1aa] font-serif-jp">泳<strong className="text-[#1c1917] dark:text-[#f4f4f5]">いで</strong></span>
                   </div>
 
-                  <div className="p-3 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-between">
-                    <span className="font-mono text-teal-300 font-bold">Akhiran [す]</span>
-                    <span className="font-bold text-emerald-400 font-jp">➔ 〜して (〜shite) / 〜した (〜shita)</span>
-                    <span className="text-[11px] text-slate-400">話<strong className="text-white">して</strong></span>
+                  <div className="p-3 rounded-lg bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] flex items-center justify-between">
+                    <span className="font-mono text-[#0284c7] font-bold">Akhiran [す]</span>
+                    <span className="font-bold text-[#2e7d32] font-serif-jp">➔ 〜して (〜shite) / 〜した (〜shita)</span>
+                    <span className="text-[11px] text-[#78716c] dark:text-[#a1a1aa] font-serif-jp">話<strong className="text-[#1c1917] dark:text-[#f4f4f5]">して</strong></span>
                   </div>
                 </div>
 
                 {/* Important exceptions banner */}
-                <div className="mt-4 p-3.5 rounded-xl bg-rose-950/30 border border-rose-500/40 text-xs text-rose-200">
-                  <div className="flex items-center gap-2 font-bold text-rose-300 mb-1">
-                    <AlertTriangle className="w-4 h-4 text-rose-400" />
-                    <span>2 Pengecualian Wajib Ingat di Ujian N5:</span>
+                <div className="mt-4 p-3.5 rounded-lg bg-[#c84b31]/5 border border-[#c84b31]/20 text-xs text-[#c84b31]">
+                  <div className="flex items-center gap-2 font-bold mb-1">
+                    <AlertTriangle className="w-4 h-4 text-[#c84b31]" />
+                    <span>2 Pengecualian Wajib Ingat:</span>
                   </div>
-                  <ul className="list-disc list-inside space-y-1 text-slate-300 pl-1">
-                    <li><strong>行く (iku = pergi)</strong>: Berubah menjadi <strong className="text-white font-jp">行って (itte)</strong>, BUKAN <s>iite</s>!</li>
-                    <li><strong>帰る (kaeru = pulang)</strong>: Berakhiran "-eru" tapi termasuk <strong className="text-white">GODAN</strong> ➔ <strong className="text-white font-jp">帰って (kaette)</strong>!</li>
+                  <ul className="list-disc list-inside space-y-1 text-[#78716c] dark:text-[#a1a1aa] pl-1 font-serif-jp">
+                    <li><strong>行く (iku = pergi)</strong>: Berubah menjadi <strong className="text-[#1c1917] dark:text-[#f4f4f5]">行って (itte)</strong>, BUKAN <s>iite</s>!</li>
+                    <li><strong>帰る (kaeru = pulang)</strong>: Berakhiran "-eru" tapi termasuk <strong>GODAN</strong> ➔ <strong className="text-[#1c1917] dark:text-[#f4f4f5]">帰って (kaette)</strong>!</li>
                   </ul>
                 </div>
               </div>
@@ -680,31 +680,31 @@ export const ConjugationDojo: React.FC = () => {
               {/* Group 2 & 3: Ichidan and Irregular */}
               <div className="space-y-4">
                 {/* Ichidan */}
-                <div className="bg-slate-950/80 border border-teal-500/30 rounded-2xl p-5">
-                  <span className="px-2.5 py-1 rounded-full bg-teal-500/20 text-teal-300 border border-teal-500/40 text-xs font-bold mb-2 inline-block">
+                <div className="bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a] rounded-xl p-5">
+                  <span className="px-2.5 py-1 rounded text-xs font-mono font-bold bg-[#2e7d32]/10 text-[#2e7d32] border border-[#2e7d32]/20 mb-2 inline-block">
                     Golongan 2: Ichidan (Ru-Verbs)
                   </span>
-                  <p className="text-xs text-slate-300 mb-3">
-                    Paling mudah! Cukup <strong>buang [る]</strong> lalu langsung tempel akhiran yang diinginkan:
+                  <p className="text-xs text-[#78716c] dark:text-[#a1a1aa] mb-3">
+                    Paling mudah! Cukup <strong>buang [る]</strong> lalu tempel akhiran yang diinginkan:
                   </p>
-                  <div className="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-xs text-emerald-300 font-jp font-bold">
+                  <div className="p-2.5 rounded-lg bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] text-xs text-[#2e7d32] font-serif-jp font-bold">
                     食べる ➔ 食べ【て】 / 食べ【ます】 / 食べ【ない】
                   </div>
                 </div>
 
                 {/* Irregular */}
-                <div className="bg-slate-950/80 border border-purple-500/30 rounded-2xl p-5">
-                  <span className="px-2.5 py-1 rounded-full bg-purple-500/20 text-purple-300 border border-purple-500/40 text-xs font-bold mb-2 inline-block">
+                <div className="bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a] rounded-xl p-5">
+                  <span className="px-2.5 py-1 rounded text-xs font-mono font-bold bg-[#7c3aed]/10 text-[#7c3aed] border border-[#7c3aed]/20 mb-2 inline-block">
                     Golongan 3: Irregular (Fukisoku)
                   </span>
-                  <p className="text-xs text-slate-300 mb-3">
+                  <p className="text-xs text-[#78716c] dark:text-[#a1a1aa] mb-3">
                     Hanya ada 2 kata dasar (wajib dihafal mati):
                   </p>
-                  <div className="space-y-1.5 text-xs">
-                    <div className="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-200">
+                  <div className="space-y-1.5 text-xs font-serif-jp">
+                    <div className="p-2 rounded-md bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] text-[#1c1917] dark:text-[#f4f4f5]">
                       <strong>する (suru):</strong> して • します • しない • した
                     </div>
-                    <div className="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-200">
+                    <div className="p-2 rounded-md bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] text-[#1c1917] dark:text-[#f4f4f5]">
                       <strong>来る (kuru):</strong> きて • きます • こない • きた
                     </div>
                   </div>
@@ -713,8 +713,8 @@ export const ConjugationDojo: React.FC = () => {
             </div>
 
             {/* Interactive Verb Matrix Inspector */}
-            <div className="pt-6 border-t border-slate-800">
-              <h3 className="text-base font-bold text-white mb-4 flex items-center gap-2">
+            <div className="pt-6 border-t border-[#e7e5e4] dark:border-[#27272a]">
+              <h3 className="text-base font-bold font-serif-jp text-[#1c1917] dark:text-[#f4f4f5] mb-4 flex items-center gap-2">
                 <span>Pilih Kata Kerja untuk Melihat Matriks Perubahan:</span>
               </h3>
 
@@ -724,10 +724,10 @@ export const ConjugationDojo: React.FC = () => {
                   <button
                     key={v.id}
                     onClick={() => setSelectedVerbId(v.id)}
-                    className={`px-3 py-1.5 rounded-xl text-xs font-bold transition cursor-pointer shrink-0 font-jp ${
+                    className={`px-3 py-1.5 rounded-lg text-xs font-medium transition cursor-pointer shrink-0 font-serif-jp border ${
                       selectedVerbId === v.id
-                        ? 'bg-rose-500 text-white shadow-md shadow-rose-500/25'
-                        : 'bg-slate-950 border border-slate-800 text-slate-400 hover:text-white hover:bg-slate-800'
+                        ? 'bg-[#1c1917] dark:bg-[#f4f4f5] text-white dark:text-[#18181b] border-transparent font-bold'
+                        : 'bg-white dark:bg-[#1f1f23] border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
                     }`}
                   >
                     {v.kanji} ({v.meaningId})
@@ -738,116 +738,116 @@ export const ConjugationDojo: React.FC = () => {
               {/* 6 Forms Matrix Table */}
               <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
                 {/* Form 1: Masu */}
-                <div className="p-4 rounded-2xl bg-slate-950 border border-slate-800 text-center">
-                  <span className="text-[10px] font-bold text-sky-400 uppercase tracking-wider block mb-1">
+                <div className="p-3.5 rounded-xl bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a] text-center">
+                  <span className="text-[10px] font-mono font-bold text-[#1e3a8a] dark:text-[#60a5fa] uppercase tracking-wider block mb-1">
                     Sopan (~Masu)
                   </span>
-                  <div className="text-xl font-jp font-bold text-white mb-0.5">
+                  <div className="text-xl font-serif-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-0.5">
                     {selectedVerb.forms.masu.kanji}
                   </div>
-                  <div className="text-xs font-mono text-slate-400 mb-2">
+                  <div className="text-xs font-mono text-[#78716c] dark:text-[#a1a1aa] mb-2">
                     {selectedVerb.forms.masu.romaji}
                   </div>
                   <button
                     onClick={() => speakJapanese(selectedVerb.forms.masu.kanji)}
-                    className="p-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white transition"
+                    className="p-1.5 rounded-md bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] hover:text-[#1c1917] dark:hover:text-[#f4f4f5] transition cursor-pointer"
                   >
-                    <Volume2 className="w-3.5 h-3.5 text-emerald-400" />
+                    <Volume2 className="w-3.5 h-3.5 text-[#2e7d32]" />
                   </button>
                 </div>
 
                 {/* Form 2: Te */}
-                <div className="p-4 rounded-2xl bg-slate-950 border border-slate-800 text-center">
-                  <span className="text-[10px] font-bold text-emerald-400 uppercase tracking-wider block mb-1">
+                <div className="p-3.5 rounded-xl bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a] text-center">
+                  <span className="text-[10px] font-mono font-bold text-[#2e7d32] uppercase tracking-wider block mb-1">
                     Sambung (~Te)
                   </span>
-                  <div className="text-xl font-jp font-bold text-white mb-0.5">
+                  <div className="text-xl font-serif-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-0.5">
                     {selectedVerb.forms.te.kanji}
                   </div>
-                  <div className="text-xs font-mono text-slate-400 mb-2">
+                  <div className="text-xs font-mono text-[#78716c] dark:text-[#a1a1aa] mb-2">
                     {selectedVerb.forms.te.romaji}
                   </div>
                   <button
                     onClick={() => speakJapanese(selectedVerb.forms.te.kanji)}
-                    className="p-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white transition"
+                    className="p-1.5 rounded-md bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] hover:text-[#1c1917] dark:hover:text-[#f4f4f5] transition cursor-pointer"
                   >
-                    <Volume2 className="w-3.5 h-3.5 text-emerald-400" />
+                    <Volume2 className="w-3.5 h-3.5 text-[#2e7d32]" />
                   </button>
                 </div>
 
                 {/* Form 3: Nai */}
-                <div className="p-4 rounded-2xl bg-slate-950 border border-slate-800 text-center">
-                  <span className="text-[10px] font-bold text-rose-400 uppercase tracking-wider block mb-1">
+                <div className="p-3.5 rounded-xl bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a] text-center">
+                  <span className="text-[10px] font-mono font-bold text-[#c84b31] uppercase tracking-wider block mb-1">
                     Negatif (~Nai)
                   </span>
-                  <div className="text-xl font-jp font-bold text-white mb-0.5">
+                  <div className="text-xl font-serif-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-0.5">
                     {selectedVerb.forms.nai.kanji}
                   </div>
-                  <div className="text-xs font-mono text-slate-400 mb-2">
+                  <div className="text-xs font-mono text-[#78716c] dark:text-[#a1a1aa] mb-2">
                     {selectedVerb.forms.nai.romaji}
                   </div>
                   <button
                     onClick={() => speakJapanese(selectedVerb.forms.nai.kanji)}
-                    className="p-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white transition"
+                    className="p-1.5 rounded-md bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] hover:text-[#1c1917] dark:hover:text-[#f4f4f5] transition cursor-pointer"
                   >
-                    <Volume2 className="w-3.5 h-3.5 text-emerald-400" />
+                    <Volume2 className="w-3.5 h-3.5 text-[#2e7d32]" />
                   </button>
                 </div>
 
                 {/* Form 4: Ta */}
-                <div className="p-4 rounded-2xl bg-slate-950 border border-slate-800 text-center">
-                  <span className="text-[10px] font-bold text-amber-400 uppercase tracking-wider block mb-1">
+                <div className="p-3.5 rounded-xl bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a] text-center">
+                  <span className="text-[10px] font-mono font-bold text-[#d97706] uppercase tracking-wider block mb-1">
                     Lampau (~Ta)
                   </span>
-                  <div className="text-xl font-jp font-bold text-white mb-0.5">
+                  <div className="text-xl font-serif-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-0.5">
                     {selectedVerb.forms.ta.kanji}
                   </div>
-                  <div className="text-xs font-mono text-slate-400 mb-2">
+                  <div className="text-xs font-mono text-[#78716c] dark:text-[#a1a1aa] mb-2">
                     {selectedVerb.forms.ta.romaji}
                   </div>
                   <button
                     onClick={() => speakJapanese(selectedVerb.forms.ta.kanji)}
-                    className="p-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white transition"
+                    className="p-1.5 rounded-md bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] hover:text-[#1c1917] dark:hover:text-[#f4f4f5] transition cursor-pointer"
                   >
-                    <Volume2 className="w-3.5 h-3.5 text-emerald-400" />
+                    <Volume2 className="w-3.5 h-3.5 text-[#2e7d32]" />
                   </button>
                 </div>
 
                 {/* Form 5: Potential */}
-                <div className="p-4 rounded-2xl bg-slate-950 border border-slate-800 text-center">
-                  <span className="text-[10px] font-bold text-cyan-400 uppercase tracking-wider block mb-1">
-                    ⚡ Potensial (N4)
+                <div className="p-3.5 rounded-xl bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a] text-center">
+                  <span className="text-[10px] font-mono font-bold text-[#0284c7] uppercase tracking-wider block mb-1">
+                    Potensial (N4)
                   </span>
-                  <div className="text-xl font-jp font-bold text-white mb-0.5">
+                  <div className="text-xl font-serif-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-0.5">
                     {selectedVerb.forms.potential.kanji}
                   </div>
-                  <div className="text-xs font-mono text-slate-400 mb-2">
+                  <div className="text-xs font-mono text-[#78716c] dark:text-[#a1a1aa] mb-2">
                     {selectedVerb.forms.potential.romaji}
                   </div>
                   <button
                     onClick={() => speakJapanese(selectedVerb.forms.potential.kanji)}
-                    className="p-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white transition"
+                    className="p-1.5 rounded-md bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] hover:text-[#1c1917] dark:hover:text-[#f4f4f5] transition cursor-pointer"
                   >
-                    <Volume2 className="w-3.5 h-3.5 text-cyan-400" />
+                    <Volume2 className="w-3.5 h-3.5 text-[#2e7d32]" />
                   </button>
                 </div>
 
                 {/* Form 6: Passive */}
-                <div className="p-4 rounded-2xl bg-slate-950 border border-slate-800 text-center">
-                  <span className="text-[10px] font-bold text-violet-400 uppercase tracking-wider block mb-1">
-                    🛡️ Pasif (N4)
+                <div className="p-3.5 rounded-xl bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a] text-center">
+                  <span className="text-[10px] font-mono font-bold text-[#7c3aed] uppercase tracking-wider block mb-1">
+                    Pasif (N4)
                   </span>
-                  <div className="text-xl font-jp font-bold text-white mb-0.5">
+                  <div className="text-xl font-serif-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-0.5">
                     {selectedVerb.forms.passive.kanji}
                   </div>
-                  <div className="text-xs font-mono text-slate-400 mb-2">
+                  <div className="text-xs font-mono text-[#78716c] dark:text-[#a1a1aa] mb-2">
                     {selectedVerb.forms.passive.romaji}
                   </div>
                   <button
                     onClick={() => speakJapanese(selectedVerb.forms.passive.kanji)}
-                    className="p-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white transition"
+                    className="p-1.5 rounded-md bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] hover:text-[#1c1917] dark:hover:text-[#f4f4f5] transition cursor-pointer"
                   >
-                    <Volume2 className="w-3.5 h-3.5 text-violet-400" />
+                    <Volume2 className="w-3.5 h-3.5 text-[#2e7d32]" />
                   </button>
                 </div>
               </div>
@@ -855,102 +855,102 @@ export const ConjugationDojo: React.FC = () => {
           </div>
 
           {/* Card 2: N4 Potential & Passive Formula Guide */}
-          <div className="bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8 shadow-xl">
+          <div className="bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] rounded-xl p-6 sm:p-8 shadow-xs">
             <div className="flex items-center gap-2.5 mb-6">
-              <Sparkles className="w-5 h-5 text-cyan-400" />
-              <h2 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
-                Rumus Emas Konjugasi Level N4: Potensial (可能形) & Pasif (受身形)
+              <Sparkles className="w-5 h-5 text-[#1e3a8a] dark:text-[#60a5fa]" />
+              <h2 className="text-xl sm:text-2xl font-bold font-serif-jp text-[#1c1917] dark:text-[#f4f4f5] tracking-tight">
+                Rumus Konjugasi N4: Potensial (可能形) & Pasif (受身形)
               </h2>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               {/* Potential Guide */}
-              <div className="bg-slate-950/80 border border-cyan-500/30 rounded-2xl p-5">
+              <div className="bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a] rounded-xl p-5">
                 <div className="flex items-center justify-between mb-3">
-                  <span className="px-2.5 py-1 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 text-xs font-bold inline-block">
-                    ⚡ Bentuk Potensial (Arti: Bisa / Mampu)
+                  <span className="px-2.5 py-1 rounded text-xs font-mono font-bold bg-[#0284c7]/10 text-[#0284c7] border border-[#0284c7]/20 inline-block">
+                    Bentuk Potensial (Arti: Bisa / Mampu)
                   </span>
-                  <span className="text-[11px] text-slate-500 font-mono">可能形 (Kanōkei)</span>
+                  <span className="text-[11px] text-[#78716c] dark:text-[#a1a1aa] font-mono">可能形 (Kanōkei)</span>
                 </div>
-                <p className="text-xs text-slate-300 mb-4">
+                <p className="text-xs text-[#78716c] dark:text-[#a1a1aa] mb-4">
                   Mengubah kata kerja dasar menjadi kemampuan melakukan tindakan:
                 </p>
 
                 <div className="space-y-2 text-xs">
-                  <div className="p-3 rounded-xl bg-slate-900 border border-slate-800">
-                    <div className="font-bold text-slate-200 mb-1">Golongan 1 (Godan):</div>
-                    <p className="text-slate-400">
-                      Ganti vokal akhir baris <span className="text-amber-400 font-bold">"u"</span> ke baris <span className="text-cyan-300 font-bold">"e"</span> lalu tambahkan <span className="text-emerald-400 font-bold">[る]</span>:
+                  <div className="p-3 rounded-lg bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a]">
+                    <div className="font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-1 font-sans">Golongan 1 (Godan):</div>
+                    <p className="text-[#78716c] dark:text-[#a1a1aa]">
+                      Ganti vokal akhir baris <span className="text-[#d97706] font-bold">"u"</span> ke baris <span className="text-[#0284c7] font-bold">"e"</span> lalu tambahkan <span className="text-[#2e7d32] font-bold">[る]</span>:
                     </p>
-                    <div className="mt-1.5 font-jp text-slate-200 space-y-0.5">
-                      <div>書く (kaku) ➔ 書<strong className="text-cyan-300">ける</strong> (kakeru = bisa menulis)</div>
-                      <div>飲む (nomu) ➔ 飲<strong className="text-cyan-300">める</strong> (nomeru = bisa minum)</div>
-                      <div>買う (kau) ➔ 買<strong className="text-cyan-300">える</strong> (kaeru = bisa beli)</div>
+                    <div className="mt-1.5 font-serif-jp text-[#1c1917] dark:text-[#f4f4f5] space-y-0.5">
+                      <div>書く (kaku) ➔ 書<strong className="text-[#0284c7]">ける</strong> (kakeru = bisa menulis)</div>
+                      <div>飲む (nomu) ➔ 飲<strong className="text-[#0284c7]">める</strong> (nomeru = bisa minum)</div>
+                      <div>買う (kau) ➔ 買<strong className="text-[#0284c7]">える</strong> (kaeru = bisa beli)</div>
                     </div>
                   </div>
 
-                  <div className="p-3 rounded-xl bg-slate-900 border border-slate-800">
-                    <div className="font-bold text-slate-200 mb-1">Golongan 2 (Ichidan):</div>
-                    <p className="text-slate-400">
-                      Buang akhiran <span className="text-rose-400 font-bold">[る]</span> lalu ganti dengan <span className="text-cyan-300 font-bold">[られる]</span>:
+                  <div className="p-3 rounded-lg bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a]">
+                    <div className="font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-1 font-sans">Golongan 2 (Ichidan):</div>
+                    <p className="text-[#78716c] dark:text-[#a1a1aa]">
+                      Buang akhiran <span className="text-[#c84b31] font-bold">[る]</span> lalu ganti dengan <span className="text-[#0284c7] font-bold">[られる]</span>:
                     </p>
-                    <div className="mt-1.5 font-jp text-slate-200 space-y-0.5">
-                      <div>食べる ➔ 食べ<strong className="text-cyan-300">られる</strong> (taberareru = bisa makan)</div>
-                      <div>見る ➔ 見<strong className="text-cyan-300">られる</strong> (mirareru = bisa melihat)</div>
+                    <div className="mt-1.5 font-serif-jp text-[#1c1917] dark:text-[#f4f4f5] space-y-0.5">
+                      <div>食べる ➔ 食べ<strong className="text-[#0284c7]">られる</strong> (taberareru = bisa makan)</div>
+                      <div>見る ➔ 見<strong className="text-[#0284c7]">られる</strong> (mirareru = bisa melihat)</div>
                     </div>
                   </div>
 
-                  <div className="p-3 rounded-xl bg-slate-900 border border-slate-800">
-                    <div className="font-bold text-slate-200 mb-1">Golongan 3 (Irregular):</div>
-                    <div className="font-jp text-slate-200 space-y-0.5">
-                      <div>する ➔ <strong className="text-cyan-300">できる</strong> (dekiru = bisa melakukan)</div>
-                      <div>来る (kuru) ➔ <strong className="text-cyan-300">来られる</strong> (korareru = bisa datang)</div>
+                  <div className="p-3 rounded-lg bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a]">
+                    <div className="font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-1 font-sans">Golongan 3 (Irregular):</div>
+                    <div className="font-serif-jp text-[#1c1917] dark:text-[#f4f4f5] space-y-0.5">
+                      <div>する ➔ <strong className="text-[#0284c7]">できる</strong> (dekiru = bisa melakukan)</div>
+                      <div>来る (kuru) ➔ <strong className="text-[#0284c7]">来られる</strong> (korareru = bisa datang)</div>
                     </div>
                   </div>
                 </div>
               </div>
 
               {/* Passive Guide */}
-              <div className="bg-slate-950/80 border border-violet-500/30 rounded-2xl p-5">
+              <div className="bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a] rounded-xl p-5">
                 <div className="flex items-center justify-between mb-3">
-                  <span className="px-2.5 py-1 rounded-full bg-violet-500/20 text-violet-300 border border-violet-500/40 text-xs font-bold inline-block">
-                    🛡️ Bentuk Pasif (Arti: Di- / Ter- / Kena)
+                  <span className="px-2.5 py-1 rounded text-xs font-mono font-bold bg-[#7c3aed]/10 text-[#7c3aed] border border-[#7c3aed]/20 inline-block">
+                    Bentuk Pasif (Arti: Di- / Ter- / Kena)
                   </span>
-                  <span className="text-[11px] text-slate-500 font-mono">受身形 (Ukemikei)</span>
+                  <span className="text-[11px] text-[#78716c] dark:text-[#a1a1aa] font-mono">受身形 (Ukemikei)</span>
                 </div>
-                <p className="text-xs text-slate-300 mb-4">
+                <p className="text-xs text-[#78716c] dark:text-[#a1a1aa] mb-4">
                   Menyatakan perbuatan yang diterima subjek atau perbuatan yang merugikan (adversative passive):
                 </p>
 
                 <div className="space-y-2 text-xs">
-                  <div className="p-3 rounded-xl bg-slate-900 border border-slate-800">
-                    <div className="font-bold text-slate-200 mb-1">Golongan 1 (Godan):</div>
-                    <p className="text-slate-400">
-                      Ganti vokal akhir baris <span className="text-amber-400 font-bold">"u"</span> ke baris <span className="text-violet-300 font-bold">"a"</span> lalu tambahkan <span className="text-emerald-400 font-bold">[れる]</span> (ingat akhiran う ➔ <strong className="text-rose-400">わ</strong>れる!):
+                  <div className="p-3 rounded-lg bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a]">
+                    <div className="font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-1 font-sans">Golongan 1 (Godan):</div>
+                    <p className="text-[#78716c] dark:text-[#a1a1aa]">
+                      Ganti vokal akhir baris <span className="text-[#d97706] font-bold">"u"</span> ke baris <span className="text-[#7c3aed] font-bold">"a"</span> lalu tambahkan <span className="text-[#2e7d32] font-bold">[れる]</span> (ingat akhiran う ➔ <strong className="text-[#c84b31]">わ</strong>れる!):
                     </p>
-                    <div className="mt-1.5 font-jp text-slate-200 space-y-0.5">
-                      <div>書く (kaku) ➔ 書<strong className="text-violet-300">かれる</strong> (kakareru = ditulis)</div>
-                      <div>買う (kau) ➔ 買<strong className="text-violet-300">われる</strong> (kawareru = dibeli)</div>
-                      <div>話す (hanasu) ➔ 話<strong className="text-violet-300">される</strong> (hanasareru = dibicarakan)</div>
+                    <div className="mt-1.5 font-serif-jp text-[#1c1917] dark:text-[#f4f4f5] space-y-0.5">
+                      <div>書く (kaku) ➔ 書<strong className="text-[#7c3aed]">かれる</strong> (kakareru = ditulis)</div>
+                      <div>買う (kau) ➔ 買<strong className="text-[#7c3aed]">われる</strong> (kawareru = dibeli)</div>
+                      <div>話す (hanasu) ➔ 話<strong className="text-[#7c3aed]">される</strong> (hanasareru = dibicarakan)</div>
                     </div>
                   </div>
 
-                  <div className="p-3 rounded-xl bg-slate-900 border border-slate-800">
-                    <div className="font-bold text-slate-200 mb-1">Golongan 2 (Ichidan):</div>
-                    <p className="text-slate-400">
-                      Buang <span className="text-rose-400 font-bold">[る]</span> lalu tambahkan <span className="text-violet-300 font-bold">[られる]</span> (kembar dengan potensial):
+                  <div className="p-3 rounded-lg bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a]">
+                    <div className="font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-1 font-sans">Golongan 2 (Ichidan):</div>
+                    <p className="text-[#78716c] dark:text-[#a1a1aa]">
+                      Buang <span className="text-[#c84b31] font-bold">[る]</span> lalu tambahkan <span className="text-[#7c3aed] font-bold">[られる]</span>:
                     </p>
-                    <div className="mt-1.5 font-jp text-slate-200 space-y-0.5">
-                      <div>食べる ➔ 食べ<strong className="text-violet-300">られる</strong> (taberareru = dimakan)</div>
-                      <div>褒める ➔ 褒め<strong className="text-violet-300">られる</strong> (homerareru = dipuji)</div>
+                    <div className="mt-1.5 font-serif-jp text-[#1c1917] dark:text-[#f4f4f5] space-y-0.5">
+                      <div>食べる ➔ 食べ<strong className="text-[#7c3aed]">られる</strong> (taberareru = dimakan)</div>
+                      <div>褒める ➔ 褒め<strong className="text-[#7c3aed]">られる</strong> (homerareru = dipuji)</div>
                     </div>
                   </div>
 
-                  <div className="p-3 rounded-xl bg-slate-900 border border-slate-800">
-                    <div className="font-bold text-slate-200 mb-1">Golongan 3 (Irregular):</div>
-                    <div className="font-jp text-slate-200 space-y-0.5">
-                      <div>する ➔ <strong className="text-violet-300">される</strong> (sareru = dilakukan / dikerjai)</div>
-                      <div>来る (kuru) ➔ <strong className="text-violet-300">来られる</strong> (korareru = didatangi)</div>
+                  <div className="p-3 rounded-lg bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a]">
+                    <div className="font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-1 font-sans">Golongan 3 (Irregular):</div>
+                    <div className="font-serif-jp text-[#1c1917] dark:text-[#f4f4f5] space-y-0.5">
+                      <div>する ➔ <strong className="text-[#7c3aed]">される</strong> (sareru = dilakukan / dikerjai)</div>
+                      <div>来る (kuru) ➔ <strong className="text-[#7c3aed]">来られる</strong> (korareru = didatangi)</div>
                     </div>
                   </div>
                 </div>
