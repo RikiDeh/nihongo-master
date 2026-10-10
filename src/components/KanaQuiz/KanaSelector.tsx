@@ -8,7 +8,7 @@ import {
   KATAKANA_YOON_GROUPS 
 } from '../../data/kanaData';
 import { KanaGroup, KanaItem } from '../../types';
-import { Play, CheckSquare, Square, Sparkles, Zap, RotateCcw } from 'lucide-react';
+import { Play, CheckSquare, Square, RotateCcw } from 'lucide-react';
 
 interface KanaSelectorProps {
   onStartQuiz: (selectedItems: KanaItem[], requeueMistakes: boolean, requireEnter: boolean) => void;
@@ -20,17 +20,15 @@ export const KanaSelector: React.FC<KanaSelectorProps> = ({ onStartQuiz }) => {
   // Mode: true = require pressing Enter to answer (anti-guessing), false = auto-submit on typing
   const [requireEnter, setRequireEnter] = useState(true);
 
-
   // Store selected item IDs
   const [selectedItemIds, setSelectedItemIds] = useState<Set<string>>(() => {
     // Default select Hiragana Vowels + K row for a quick quickstart
     const initial = new Set<string>();
-
     HIRAGANA_GOJUUON_GROUPS[0].items.forEach(i => initial.add(i.id));
     return initial;
   });
 
-  // Active tab in selector: 'all', 'hiragana', 'katakana'
+  // Active tab in selector: 'both' | 'hiragana' | 'katakana'
   const [activeTab, setActiveTab] = useState<'both' | 'hiragana' | 'katakana'>('both');
 
   const toggleItem = (id: string) => {
@@ -88,7 +86,6 @@ export const KanaSelector: React.FC<KanaSelectorProps> = ({ onStartQuiz }) => {
     setSelectedItemIds(next);
   };
 
-  // Find all items selected
   const getAllKanaItems = (): KanaItem[] => {
     const all = [
       ...HIRAGANA_GOJUUON_GROUPS, ...HIRAGANA_DAKUTEN_GROUPS, ...HIRAGANA_YOON_GROUPS,
@@ -111,19 +108,19 @@ export const KanaSelector: React.FC<KanaSelectorProps> = ({ onStartQuiz }) => {
     onStartQuiz(items, requeueMistakes, requireEnter);
   };
 
-
-
-  const renderGroupSection = (title: string, groups: KanaGroup[], accentColor: string, badgeLabel: string) => {
+  const renderGroupSection = (title: string, groups: KanaGroup[], badgeLabel: string) => {
     return (
-      <div className="mb-8">
-        <div className="flex items-center gap-2 mb-4 pb-2 border-b border-slate-800">
-          <span className={`px-2.5 py-0.5 rounded text-xs font-semibold ${badgeLabel === 'Hiragana' ? 'bg-rose-500/20 text-rose-300 border border-rose-500/30' : 'bg-sky-500/20 text-sky-300 border border-sky-500/30'}`}>
-            {badgeLabel}
+      <div className="mb-10">
+        <div className="flex items-center gap-2.5 mb-4 pb-2 border-b border-[#e7e5e4] dark:border-[#27272a]">
+          <span className="px-2 py-0.5 rounded text-[11px] font-mono font-semibold border border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] dark:text-[#a1a1aa] bg-[#f4f0e8]/60 dark:bg-[#1f1f23]/60">
+            [{badgeLabel}]
           </span>
-          <h3 className="text-base font-bold text-slate-200">{title}</h3>
+          <h3 className="text-base font-serif-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] tracking-wide">
+            {title}
+          </h3>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
           {groups.map(group => {
             const isGroupFullySelected = group.items.every(i => selectedItemIds.has(i.id));
             const selectedCount = group.items.filter(i => selectedItemIds.has(i.id)).length;
@@ -131,32 +128,32 @@ export const KanaSelector: React.FC<KanaSelectorProps> = ({ onStartQuiz }) => {
             return (
               <div 
                 key={group.id} 
-                className={`p-3.5 rounded-xl border transition-all duration-150 ${
+                className={`p-4 rounded-xl border transition-all duration-150 ${
                   selectedCount > 0 
-                    ? 'bg-slate-900/90 border-slate-700 shadow-md' 
-                    : 'bg-slate-950/60 border-slate-800/80 hover:border-slate-700'
+                    ? 'bg-white dark:bg-[#1f1f23] border-[#d6d3d1] dark:border-[#3f3f46] shadow-xs' 
+                    : 'bg-[#ffffff]/50 dark:bg-[#18181b]/50 border-[#e7e5e4] dark:border-[#27272a] hover:border-[#d6d3d1] dark:hover:border-[#3f3f46]'
                 }`}
               >
                 {/* Header row for group toggle */}
-                <div className="flex items-center justify-between mb-2.5">
+                <div className="flex items-center justify-between mb-3">
                   <button 
                     onClick={() => toggleGroup(group)}
                     className="flex items-center gap-2 text-left group cursor-pointer focus:outline-none"
                   >
                     {isGroupFullySelected ? (
-                      <CheckSquare className="w-4 h-4 text-emerald-400 shrink-0" />
+                      <CheckSquare className="w-4 h-4 text-[#c84b31] dark:text-[#e05d44] shrink-0" />
                     ) : selectedCount > 0 ? (
-                      <div className="w-4 h-4 rounded bg-emerald-500/30 border border-emerald-400 flex items-center justify-center shrink-0">
-                        <div className="w-2 h-2 bg-emerald-400 rounded-xs" />
+                      <div className="w-4 h-4 rounded border border-[#c84b31] dark:border-[#e05d44] bg-[#c84b31]/20 flex items-center justify-center shrink-0">
+                        <div className="w-2 h-2 bg-[#c84b31] dark:bg-[#e05d44] rounded-xs" />
                       </div>
                     ) : (
-                      <Square className="w-4 h-4 text-slate-500 group-hover:text-slate-400 shrink-0" />
+                      <Square className="w-4 h-4 text-[#a8a29e] dark:text-[#71717a] group-hover:text-[#78716c] shrink-0" />
                     )}
-                    <span className="text-xs font-semibold text-slate-300 group-hover:text-white transition-colors">
+                    <span className="text-xs font-semibold text-[#1c1917] dark:text-[#f4f4f5] group-hover:text-[#c84b31] dark:group-hover:text-[#e05d44] transition-colors">
                       {group.name}
                     </span>
                   </button>
-                  <span className="text-[11px] font-mono text-slate-400">
+                  <span className="text-[11px] font-mono text-[#78716c] dark:text-[#a1a1aa]">
                     {selectedCount}/{group.items.length}
                   </span>
                 </div>
@@ -172,14 +169,14 @@ export const KanaSelector: React.FC<KanaSelectorProps> = ({ onStartQuiz }) => {
                         onClick={() => toggleItem(item.id)}
                         className={`group relative flex flex-col items-center justify-center px-2 py-1.5 rounded-lg border text-center transition-all cursor-pointer min-w-[42px] ${
                           isSelected 
-                            ? 'bg-rose-500/20 border-rose-500/50 text-white shadow-sm ring-1 ring-rose-500/30' 
-                            : 'bg-slate-800/60 border-slate-800 text-slate-400 hover:bg-slate-800 hover:text-slate-200 hover:border-slate-700'
+                            ? 'bg-[#c84b31]/10 dark:bg-[#e05d44]/15 border-[#c84b31] dark:border-[#e05d44] text-[#c84b31] dark:text-[#e05d44] ring-1 ring-[#c84b31]/30 font-bold' 
+                            : 'bg-[#faf8f5] dark:bg-[#18181b] border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] dark:text-[#a1a1aa] hover:border-[#d6d3d1] dark:hover:border-[#3f3f46] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
                         }`}
                       >
-                        <span className="text-lg font-jp font-medium leading-none mb-1">
+                        <span className="text-lg font-serif-jp leading-none mb-1">
                           {item.character}
                         </span>
-                        <span className="text-[10px] font-mono text-slate-400 group-hover:text-slate-200">
+                        <span className="text-[10px] font-mono opacity-80">
                           {item.romaji}
                         </span>
                       </button>
@@ -197,35 +194,31 @@ export const KanaSelector: React.FC<KanaSelectorProps> = ({ onStartQuiz }) => {
   const selectedTotal = selectedItemIds.size;
 
   return (
-    <div className="w-full max-w-6xl mx-auto px-4 py-8">
-      {/* Hero Banner */}
+    <div className="w-full max-w-6xl mx-auto px-4 py-8 pb-32">
+      {/* Editorial Hero Header */}
       <div className="text-center mb-8">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/10 border border-rose-500/20 text-rose-300 text-xs font-medium mb-3">
-          <Sparkles className="w-3.5 h-3.5" />
-          <span>Kuis Kana Interaktif — Gabungan Hiragana & Katakana</span>
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded border border-[#c84b31]/25 bg-[#c84b31]/5 text-[#c84b31] dark:text-[#e05d44] text-xs font-mono font-medium mb-3">
+          <span>[仮名選択] KANA GATEWAY • 0 KE N5</span>
         </div>
-        <h1 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-3">
-          Pilih Huruf untuk Kuis
+        <h1 className="text-3xl sm:text-4xl font-bold font-serif-jp text-[#1c1917] dark:text-[#f4f4f5] tracking-tight mb-2">
+          Pilih Aksara Hiragana & Katakana
         </h1>
-        <p className="text-slate-400 max-w-2xl mx-auto text-sm sm:text-base">
-          Berbeda dengan Tofugu yang harus dipilih terpisah, di sini kamu bisa menguji 
-          <span className="text-rose-400 font-semibold"> Hiragana</span> dan 
-          <span className="text-sky-400 font-semibold"> Katakana</span> sekaligus bersamaan, termasuk varian 
-          <span className="text-amber-400 font-semibold"> Dakuten</span> dan 
-          <span className="text-emerald-400 font-semibold"> Kombinasi (Yōon)</span>!
+        <p className="text-[#78716c] dark:text-[#a1a1aa] max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
+          Kuasai fondasi aksara Jepang secara simultan. Uji Hiragana dan Katakana dalam satu sesi terpadu, mencakup Gojūon dasar, Dakuten, dan varian kombinasi Yōon.
         </p>
       </div>
 
-      {/* Preset Quick Selectors */}
-      <div className="bg-slate-900/80 border border-slate-800 rounded-2xl p-4 sm:p-5 mb-8 backdrop-blur-sm shadow-xl">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4 pb-4 border-b border-slate-800">
+      {/* Preset Quick Selectors Tray */}
+      <div className="bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] rounded-xl p-4 sm:p-5 mb-8 shadow-xs">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4 pb-4 border-b border-[#e7e5e4] dark:border-[#27272a]">
           <div className="flex items-center gap-2">
-            <Zap className="w-4 h-4 text-amber-400" />
-            <span className="text-xs font-bold uppercase tracking-wider text-slate-300">Pintasan Pilihan Cepat</span>
+            <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#78716c] dark:text-[#a1a1aa]">
+              Pintasan Pilihan Cepat
+            </span>
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-xs text-slate-400">Total Terpilih:</span>
-            <span className="px-2.5 py-0.5 rounded-full bg-rose-500/20 border border-rose-500/40 text-rose-300 font-mono font-bold text-xs">
+            <span className="text-xs text-[#78716c] dark:text-[#a1a1aa]">Total Terpilih:</span>
+            <span className="px-2.5 py-0.5 rounded border border-[#c84b31]/30 text-[#c84b31] dark:text-[#e05d44] bg-[#c84b31]/5 font-mono font-bold text-xs">
               {selectedTotal} Karakter
             </span>
           </div>
@@ -233,44 +226,51 @@ export const KanaSelector: React.FC<KanaSelectorProps> = ({ onStartQuiz }) => {
 
         <div className="flex flex-wrap gap-2">
           <button
+            type="button"
             onClick={() => selectPreset('all')}
-            className="px-3 py-1.5 rounded-lg bg-indigo-600/30 hover:bg-indigo-600/50 border border-indigo-500/40 text-indigo-200 text-xs font-medium transition cursor-pointer"
+            className="px-3 py-1.5 rounded-lg bg-[#f4f0e8] dark:bg-[#27272a] hover:bg-[#e7e5e4] dark:hover:bg-[#3f3f46] border border-[#e7e5e4] dark:border-[#3f3f46] text-[#1c1917] dark:text-[#f4f4f5] text-xs font-medium transition cursor-pointer"
           >
-            🌟 Pilih Semua (Hiragana + Katakana)
+            Pilih Semua (Hiragana + Katakana)
           </button>
           <button
+            type="button"
             onClick={() => selectPreset('hiragana-all')}
-            className="px-3 py-1.5 rounded-lg bg-rose-500/20 hover:bg-rose-500/30 border border-rose-500/40 text-rose-200 text-xs font-medium transition cursor-pointer"
+            className="px-3 py-1.5 rounded-lg bg-[#f4f0e8] dark:bg-[#27272a] hover:bg-[#e7e5e4] dark:hover:bg-[#3f3f46] border border-[#e7e5e4] dark:border-[#3f3f46] text-[#1c1917] dark:text-[#f4f4f5] text-xs font-medium transition cursor-pointer"
           >
             Semua Hiragana
           </button>
           <button
+            type="button"
             onClick={() => selectPreset('katakana-all')}
-            className="px-3 py-1.5 rounded-lg bg-sky-500/20 hover:bg-sky-500/30 border border-sky-500/40 text-sky-200 text-xs font-medium transition cursor-pointer"
+            className="px-3 py-1.5 rounded-lg bg-[#f4f0e8] dark:bg-[#27272a] hover:bg-[#e7e5e4] dark:hover:bg-[#3f3f46] border border-[#e7e5e4] dark:border-[#3f3f46] text-[#1c1917] dark:text-[#f4f4f5] text-xs font-medium transition cursor-pointer"
           >
             Semua Katakana
           </button>
           <button
+            type="button"
             onClick={() => selectPreset('gojuuon-both')}
-            className="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 text-xs font-medium transition cursor-pointer"
+            className="px-3 py-1.5 rounded-lg bg-[#f4f0e8] dark:bg-[#27272a] hover:bg-[#e7e5e4] dark:hover:bg-[#3f3f46] border border-[#e7e5e4] dark:border-[#3f3f46] text-[#1c1917] dark:text-[#f4f4f5] text-xs font-medium transition cursor-pointer"
           >
             Dasar 46 (Gojūon Keduanya)
           </button>
           <button
+            type="button"
             onClick={() => selectPreset('dakuten-both')}
-            className="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 text-xs font-medium transition cursor-pointer"
+            className="px-3 py-1.5 rounded-lg bg-[#f4f0e8] dark:bg-[#27272a] hover:bg-[#e7e5e4] dark:hover:bg-[#3f3f46] border border-[#e7e5e4] dark:border-[#3f3f46] text-[#1c1917] dark:text-[#f4f4f5] text-xs font-medium transition cursor-pointer"
           >
             Dakuten & Handakuten
           </button>
           <button
+            type="button"
             onClick={() => selectPreset('yoon-both')}
-            className="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 text-xs font-medium transition cursor-pointer"
+            className="px-3 py-1.5 rounded-lg bg-[#f4f0e8] dark:bg-[#27272a] hover:bg-[#e7e5e4] dark:hover:bg-[#3f3f46] border border-[#e7e5e4] dark:border-[#3f3f46] text-[#1c1917] dark:text-[#f4f4f5] text-xs font-medium transition cursor-pointer"
           >
             Kombinasi (Yōon)
           </button>
           <button
+            type="button"
             onClick={() => selectPreset('clear')}
-            className="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-red-500/20 border border-slate-700 hover:border-red-500/40 text-slate-400 hover:text-red-300 text-xs font-medium transition cursor-pointer flex items-center gap-1.5 ml-auto"
+            className="px-3 py-1.5 rounded-lg bg-transparent hover:bg-rose-500/10 border border-[#e7e5e4] dark:border-[#27272a] hover:border-rose-400 text-[#78716c] hover:text-rose-600 text-xs font-medium transition cursor-pointer flex items-center gap-1.5 ml-auto"
           >
             <RotateCcw className="w-3 h-3" />
             Reset
@@ -279,33 +279,36 @@ export const KanaSelector: React.FC<KanaSelectorProps> = ({ onStartQuiz }) => {
       </div>
 
       {/* Tabs Filter for View */}
-      <div className="flex border-b border-slate-800 mb-6 gap-2">
+      <div className="flex border-b border-[#e7e5e4] dark:border-[#27272a] mb-8 gap-2">
         <button
+          type="button"
           onClick={() => setActiveTab('both')}
-          className={`pb-3 px-4 text-sm font-semibold border-b-2 transition cursor-pointer ${
+          className={`pb-3 px-4 text-xs sm:text-sm font-semibold border-b-2 transition cursor-pointer ${
             activeTab === 'both' 
-              ? 'border-rose-500 text-rose-400' 
-              : 'border-transparent text-slate-400 hover:text-slate-200'
+              ? 'border-[#c84b31] text-[#c84b31] dark:text-[#e05d44]' 
+              : 'border-transparent text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
           }`}
         >
           Semua (Hiragana & Katakana)
         </button>
         <button
+          type="button"
           onClick={() => setActiveTab('hiragana')}
-          className={`pb-3 px-4 text-sm font-semibold border-b-2 transition cursor-pointer ${
+          className={`pb-3 px-4 text-xs sm:text-sm font-semibold border-b-2 transition cursor-pointer ${
             activeTab === 'hiragana' 
-              ? 'border-rose-500 text-rose-400' 
-              : 'border-transparent text-slate-400 hover:text-slate-200'
+              ? 'border-[#c84b31] text-[#c84b31] dark:text-[#e05d44]' 
+              : 'border-transparent text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
           }`}
         >
           Hiragana Saja
         </button>
         <button
+          type="button"
           onClick={() => setActiveTab('katakana')}
-          className={`pb-3 px-4 text-sm font-semibold border-b-2 transition cursor-pointer ${
+          className={`pb-3 px-4 text-xs sm:text-sm font-semibold border-b-2 transition cursor-pointer ${
             activeTab === 'katakana' 
-              ? 'border-sky-500 text-sky-400' 
-              : 'border-transparent text-slate-400 hover:text-slate-200'
+              ? 'border-[#c84b31] text-[#c84b31] dark:text-[#e05d44]' 
+              : 'border-transparent text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
           }`}
         >
           Katakana Saja
@@ -316,41 +319,45 @@ export const KanaSelector: React.FC<KanaSelectorProps> = ({ onStartQuiz }) => {
       <div>
         {(activeTab === 'both' || activeTab === 'hiragana') && (
           <div className="mb-12">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="w-3 h-3 rounded-full bg-rose-500"></span>
-              <h2 className="text-xl font-bold text-white">Modul Hiragana (ひらがな)</h2>
+            <div className="flex items-center gap-2 mb-6">
+              <span className="w-2.5 h-2.5 rounded-xs bg-[#c84b31] shrink-0" />
+              <h2 className="text-xl font-serif-jp font-bold text-[#1c1917] dark:text-[#f4f4f5]">
+                Aksara Hiragana (平仮名)
+              </h2>
             </div>
-            {renderGroupSection('Hiragana Standar 46 Huruf (Gojūon)', HIRAGANA_GOJUUON_GROUPS, 'rose', 'Hiragana')}
-            {renderGroupSection('Hiragana Dakuten & Handakuten (だくてん)', HIRAGANA_DAKUTEN_GROUPS, 'rose', 'Hiragana')}
-            {renderGroupSection('Hiragana Kombinasi (Yōon / ようおん)', HIRAGANA_YOON_GROUPS, 'rose', 'Hiragana')}
+            {renderGroupSection('Hiragana Standar 46 Huruf (Gojūon)', HIRAGANA_GOJUUON_GROUPS, '平仮名')}
+            {renderGroupSection('Hiragana Dakuten & Handakuten', HIRAGANA_DAKUTEN_GROUPS, '平仮名')}
+            {renderGroupSection('Hiragana Kombinasi (Yōon)', HIRAGANA_YOON_GROUPS, '平仮名')}
           </div>
         )}
 
         {(activeTab === 'both' || activeTab === 'katakana') && (
           <div className="mb-12">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="w-3 h-3 rounded-full bg-sky-500"></span>
-              <h2 className="text-xl font-bold text-white">Modul Katakana (カタカナ)</h2>
+            <div className="flex items-center gap-2 mb-6">
+              <span className="w-2.5 h-2.5 rounded-xs bg-[#1e3a8a] dark:bg-[#3b82f6] shrink-0" />
+              <h2 className="text-xl font-serif-jp font-bold text-[#1c1917] dark:text-[#f4f4f5]">
+                Aksara Katakana (片仮名)
+              </h2>
             </div>
-            {renderGroupSection('Katakana Standar 46 Huruf (Gojūon)', KATAKANA_GOJUUON_GROUPS, 'sky', 'Katakana')}
-            {renderGroupSection('Katakana Dakuten & Handakuten (ダクテン)', KATAKANA_DAKUTEN_GROUPS, 'sky', 'Katakana')}
-            {renderGroupSection('Katakana Kombinasi (Yōon / ヨウオン)', KATAKANA_YOON_GROUPS, 'sky', 'Katakana')}
+            {renderGroupSection('Katakana Standar 46 Huruf (Gojūon)', KATAKANA_GOJUUON_GROUPS, '片仮名')}
+            {renderGroupSection('Katakana Dakuten & Handakuten', KATAKANA_DAKUTEN_GROUPS, '片仮名')}
+            {renderGroupSection('Katakana Kombinasi (Yōon)', KATAKANA_YOON_GROUPS, '片仮名')}
           </div>
         )}
       </div>
 
-      {/* Floating Bottom Action Bar */}
-      <div className="fixed bottom-0 left-0 right-0 bg-slate-950/95 backdrop-blur-md border-t border-slate-800 p-4 z-40">
+      {/* Floating Bottom Action Bar (Washi Dock) */}
+      <div className="fixed bottom-0 left-0 right-0 bg-[#faf8f5]/95 dark:bg-[#18181b]/95 backdrop-blur-md border-t border-[#e7e5e4] dark:border-[#27272a] p-4 z-40 transition-colors">
         <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-slate-800/80 border border-slate-700 flex items-center justify-center font-mono font-bold text-rose-400">
+            <div className="w-10 h-10 rounded-lg bg-white dark:bg-[#1f1f23] border border-[#d6d3d1] dark:border-[#3f3f46] flex items-center justify-center font-mono font-bold text-[#c84b31] dark:text-[#e05d44]">
               {selectedTotal}
             </div>
             <div>
-              <div className="text-sm font-semibold text-white">
+              <div className="text-sm font-semibold text-[#1c1917] dark:text-[#f4f4f5]">
                 {selectedTotal > 0 ? `${selectedTotal} Karakter Dipilih` : 'Belum Ada Huruf Terpilih'}
               </div>
-              <div className="text-xs text-slate-400">
+              <div className="text-xs text-[#78716c] dark:text-[#a1a1aa]">
                 {selectedTotal === 0 ? 'Pilih minimal 1 huruf untuk memulai' : 'Siap untuk sesi kuis'}
               </div>
             </div>
@@ -358,77 +365,76 @@ export const KanaSelector: React.FC<KanaSelectorProps> = ({ onStartQuiz }) => {
 
           {/* Mode Switchers */}
           <div className="flex flex-wrap items-center gap-2">
-            {/* Enter Requirement Switcher (Anti-Tebak) */}
-            <div className="flex items-center gap-1 bg-slate-900 p-1 rounded-xl border border-slate-800 text-xs">
+            {/* Enter Requirement Switcher */}
+            <div className="flex items-center gap-1 bg-white dark:bg-[#1f1f23] p-1 rounded-lg border border-[#e7e5e4] dark:border-[#27272a] text-xs">
               <button
                 type="button"
                 onClick={() => setRequireEnter(true)}
-                title="Wajib tekan Enter untuk mengirim jawaban. Mengetik huruf tidak akan langsung dinilai (mencegah tebak-tebakan)."
-                className={`px-3 py-1.5 rounded-lg font-medium transition cursor-pointer ${
+                title="Wajib tekan Enter untuk mengirim jawaban (anti-tebak)."
+                className={`px-3 py-1.5 rounded-md font-medium transition cursor-pointer ${
                   requireEnter
-                    ? 'bg-emerald-500 text-white shadow-sm'
-                    : 'text-slate-400 hover:text-slate-200'
+                    ? 'bg-[#1c1917] dark:bg-[#f4f4f5] text-white dark:text-[#18181b] font-bold shadow-xs'
+                    : 'text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
                 }`}
               >
-                🛡️ Wajib Enter (Anti-Tebak)
+                Wajib Enter
               </button>
               <button
                 type="button"
                 onClick={() => setRequireEnter(false)}
                 title="Jawaban langsung dinilai otomatis saat huruf cocok."
-                className={`px-3 py-1.5 rounded-lg font-medium transition cursor-pointer ${
+                className={`px-3 py-1.5 rounded-md font-medium transition cursor-pointer ${
                   !requireEnter
-                    ? 'bg-amber-500 text-white shadow-sm'
-                    : 'text-slate-400 hover:text-slate-200'
+                    ? 'bg-[#1c1917] dark:bg-[#f4f4f5] text-white dark:text-[#18181b] font-bold shadow-xs'
+                    : 'text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
                 }`}
               >
-                ⚡ Auto-Submit
+                Auto-Submit
               </button>
             </div>
 
             {/* Re-queue Switcher */}
-            <div className="flex items-center gap-1 bg-slate-900 p-1 rounded-xl border border-slate-800 text-xs">
+            <div className="flex items-center gap-1 bg-white dark:bg-[#1f1f23] p-1 rounded-lg border border-[#e7e5e4] dark:border-[#27272a] text-xs">
               <button
                 type="button"
                 onClick={() => setRequeueMistakes(true)}
-                className={`px-3 py-1.5 rounded-lg font-medium transition cursor-pointer ${
+                className={`px-3 py-1.5 rounded-md font-medium transition cursor-pointer ${
                   requeueMistakes
-                    ? 'bg-rose-500 text-white shadow-sm'
-                    : 'text-slate-400 hover:text-slate-200'
+                    ? 'bg-[#c84b31] text-white font-bold shadow-xs'
+                    : 'text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
                 }`}
               >
-                🔁 Ulangi Salah
+                Ulangi Salah
               </button>
               <button
                 type="button"
                 onClick={() => setRequeueMistakes(false)}
-                className={`px-3 py-1.5 rounded-lg font-medium transition cursor-pointer ${
+                className={`px-3 py-1.5 rounded-md font-medium transition cursor-pointer ${
                   !requeueMistakes
-                    ? 'bg-sky-500 text-white shadow-sm'
-                    : 'text-slate-400 hover:text-slate-200'
+                    ? 'bg-[#1c1917] dark:bg-[#f4f4f5] text-white dark:text-[#18181b] font-bold shadow-xs'
+                    : 'text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
                 }`}
               >
-                🎯 1x Putaran
+                1x Putaran
               </button>
             </div>
           </div>
 
-
           <button
+            type="button"
             onClick={handleStart}
             disabled={selectedTotal === 0}
-            className={`px-6 py-3 rounded-xl font-bold text-sm flex items-center gap-2 transition cursor-pointer shadow-lg ${
+            className={`px-6 py-2.5 rounded-lg font-semibold text-xs uppercase tracking-wider flex items-center gap-2 transition cursor-pointer ${
               selectedTotal > 0
-                ? 'bg-rose-500 hover:bg-rose-600 text-white shadow-rose-500/25'
-                : 'bg-slate-800 text-slate-500 cursor-not-allowed border border-slate-700'
+                ? 'bg-[#c84b31] hover:bg-[#b03d25] text-white shadow-xs active:translate-y-px'
+                : 'bg-[#e7e5e4] dark:bg-[#27272a] text-[#a8a29e] dark:text-[#71717a] cursor-not-allowed'
             }`}
           >
-            <Play className="w-4 h-4 fill-current" />
-            Mulai Kuis Sekarang
+            <Play className="w-3.5 h-3.5 fill-current" />
+            <span>Mulai Sesi Kuis</span>
           </button>
         </div>
       </div>
-
     </div>
   );
 };

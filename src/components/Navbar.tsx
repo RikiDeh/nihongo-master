@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BookOpen, Layers, Award, Compass, Trophy, Swords, Settings, Flame, CheckCircle2 } from 'lucide-react';
+import { BookOpen, Layers, Award, Compass, Trophy, Swords, Settings, Flame, CheckCircle2, Sun, Moon } from 'lucide-react';
 import { SettingsModal } from './Settings/SettingsModal';
 import { useShowRomaji } from '../hooks/useShowRomaji';
 import { KANJI_DATA } from '../data/kanjiData';
@@ -18,6 +18,25 @@ interface NavbarProps {
 export const Navbar: React.FC<NavbarProps> = ({ activeModule, onSelectModule, onOpenSrsReview }) => {
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [showRomaji, , toggleShowRomaji] = useShowRomaji();
+
+  const [isDark, setIsDark] = useState<boolean>(() => {
+    if (typeof document !== 'undefined') {
+      return document.documentElement.classList.contains('dark');
+    }
+    return false;
+  });
+
+  const toggleTheme = () => {
+    const next = !isDark;
+    setIsDark(next);
+    if (next) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('nihongo_theme', 'dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('nihongo_theme', 'light');
+    }
+  };
 
   const [dueCount, setDueCount] = useState<number>(() => getDueSrsItems().length);
   const [dailyStreak, setDailyStreak] = useState<number>(() => getUserProgress().dailyStreak || 0);
@@ -212,6 +231,16 @@ export const Navbar: React.FC<NavbarProps> = ({ activeModule, onSelectModule, on
                 )}
               </button>
             )}
+
+            {/* Theme Switcher — Washi Light vs Sumi Dark */}
+            <button
+              type="button"
+              onClick={toggleTheme}
+              className="p-2 rounded-md bg-[#f4f0e8]/80 dark:bg-[#1f1f23]/80 border border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5] transition cursor-pointer"
+              title={isDark ? 'Ganti ke Mode Terang (Kertas Washi)' : 'Ganti ke Mode Gelap (Tinta Sumi)'}
+            >
+              {isDark ? <Sun className="w-4 h-4 text-amber-400" /> : <Moon className="w-4 h-4 text-stone-600" />}
+            </button>
 
             <button
               onClick={() => setIsSettingsOpen(true)}

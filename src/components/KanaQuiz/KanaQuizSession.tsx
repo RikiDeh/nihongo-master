@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { KanaItem, QuizAttempt, QuizSummary } from '../../types';
 import { playSuccessSound, playErrorSound, speakJapanese } from '../../utils/audio';
-import { Volume2, VolumeX, Flame, X, ArrowRight, CornerDownLeft, Type, RotateCcw, Keyboard, Zap } from 'lucide-react';
+import { Volume2, VolumeX, Flame, X, ArrowRight, CornerDownLeft, Type, RotateCcw, Keyboard } from 'lucide-react';
 
 interface KanaQuizSessionProps {
   items: KanaItem[];
@@ -36,10 +36,10 @@ export const KanaQuizSession: React.FC<KanaQuizSessionProps> = ({
 
   // Stats
   const [streak, setStreak] = useState(0);
-  const [maxStreak, setMaxStreak] = useState(0);
+  const [_maxStreak, setMaxStreak] = useState(0);
   const startTimeRef = useRef<number>(0);
   const [soundEnabled, setSoundEnabled] = useState(true);
-  const [useSerifFont, setUseSerifFont] = useState(false);
+  const [useSerifFont, setUseSerifFont] = useState(true); // Default true for Japanese Zen Mincho
   const [retriedItemIds, setRetriedItemIds] = useState<Set<string>>(() => new Set());
 
   // Tracking attempts by kana item id
@@ -50,60 +50,169 @@ export const KanaQuizSession: React.FC<KanaQuizSessionProps> = ({
 
   const currentItem = queue[0];
 
-  // Inisialisasi waktu mulai di effect agar render murni/deterministik
   useEffect(() => {
     startTimeRef.current = Date.now();
   }, []);
 
-  // Check if current item was previously answered wrong (re-queued item)
   const isCurrentItemRetried = currentItem 
     ? retriedItemIds.has(currentItem.id) 
     : false;
 
-  // Ensure input is focused
   useEffect(() => {
-    inputRef.current?.focus();
-  }, [queue.length, inputState]);
+    if (currentItem && attemptsMapRef.current) {
+      if (!attemptsMapRef.current.has(currentItem.id)) {
+        attemptsMapRef.current.set(currentItem.id, {
+          kana: currentItem,
+          userInputs: [],
+          isCorrectFirstTry: true,
+          failedAttempts: 0,
+        });
+      }
+    }
+  }, [currentItem]);
 
-  // Helper to check answer
-  const isAnswerValid = (input: string, item: KanaItem): boolean => {
-    const clean = input.trim().toLowerCase();
-    if (!clean) return false;
-    if (clean === item.romaji.toLowerCase()) return true;
-    if (item.aliases && item.aliases.some(alias => alias.toLowerCase() === clean)) return true;
-    // Dukungan alias kanonikal bebas bentrok SPK #19 (ぢ: di/ji, づ: du/zu)
-    if ((item.character === 'ぢ' || item.character === 'ヂ') && (clean === 'di' || clean === 'ji' || clean === 'dji')) return true;
-    if ((item.character === 'づ' || item.character === 'ヅ') && (clean === 'du' || clean === 'zu' || clean === 'dzu')) return true;
-    if ((item.character === 'じ' || item.character === 'ジ') && (clean === 'ji' || clean === 'zi')) return true;
-    if ((item.character === 'ず' || item.character === 'ズ') && (clean === 'zu' || clean === 'dzu')) return true;
+  useEffect(() => {
+    if (currentItem && soundEnabled) {
+      speakJapanese(currentItem.character);
+    }
+    setUserInput('');
+    setInputState('idle');
+    setRevealedAnswer(null);
+    isTransitioningRef.current = false;
+    setTimeout(() => {
+      inputRef.current?.focus();
+    }, 10);
+  }, [currentItem, soundEnabled]);
+
+  const handleCorrectAnswer = () => {
+    if (isTransitioningRef.current) return;
+    isTransitioningRef.current = true;
+
+    setInputState('correct');
+    if (soundEnabled) playSuccessSound();
+
+    setStreak(s => {
+      const next = s + 1;
+      setMaxStreak(m => Math.max(m, next));
+      return next;
+    });
+
+    const attempt = attemptsMapRef.current.get(currentItem.id);
+    if (attempt) {
+      attempt.userInputs.push(userInput.trim().toLowerCase());
+    }
+
+    setTimeout(() => {
+      setQueue(prev => {
+        const nextQueue = prev.slice(1);
+        if (nextQueue.length === 0) {
+          finishSession();
+        }
+        return nextQueue;
+      });
+    }, 350);
+  };
+
+  const handleWrongAnswer = () => {
+    if (isTransitioningRef.current) return;
+
+    setInputState('wrong');
+    if (soundEnabled) playErrorSound();
+    setStreak(0);
+
+    const attempt = attemptsMapRef.current.get(currentItem.id);
+    if (attempt) {
+      attempt.isCorrectFirstTry = false;
+      attempt.failedAttempts += 1;
+      attempt.userInputs.push(userInput.trim().toLowerCase());
+    }
+
+    setRetriedItemIds(prev => new Set(prev).add(currentItem.id));
+    setRevealedAnswer(currentItem.romaji);
+  };
+
+  const proceedAfterMistake = () => {
+    if (isTransitioningRef.current) return;
+    isTransitioningRef.current = true;
+
+    if (requeueMistakes) {
+      setQueue(prev => {
+        const [failed, ...rest] = prev;
+        const insertIndex = Math.min(Math.floor(Math.random() * 3) + 3, rest.length);
+        const nextQueue = [...rest];
+        nextQueue.splice(insertIndex, 0, failed);
+        return nextQueue;
+      });
+    } else {
+      setQueue(prev => {
+        const nextQueue = prev.slice(1);
+        if (nextQueue.length === 0) {
+          finishSession();
+        }
+        return nextQueue;
+      });
+    }
+  };
+
+  const finishSession = () => {
+    const attempts = Array.from(attemptsMapRef.current.values());
+    const totalQuestions = attempts.length;
+    const correctFirstTryCount = attempts.filter(a => a.isCorrectFirstTry).length;
+    const wrongItems = attempts.filter(a => !a.isCorrectFirstTry);
+    const accuracy = totalQuestions > 0 ? Math.round((correctFirstTryCount / totalQuestions) * 100) : 0;
+    const timeSpentSeconds = Math.round((Date.now() - startTimeRef.current) / 1000);
+
+    const summary: QuizSummary = {
+      totalQuestions,
+      correctFirstTryCount,
+      accuracy,
+      timeSpentSeconds,
+      wrongItems,
+      allAttempts: attempts,
+    };
+
+    onFinishQuiz(summary);
+  };
+
+  const checkAnswerStrict = (val: string): boolean => {
+    const clean = val.trim().toLowerCase();
+    if (!clean || !currentItem) return false;
+
+    if (clean === currentItem.romaji.toLowerCase()) {
+      return true;
+    }
+
+    if (currentItem.character === 'ぢ' || currentItem.character === 'ヂ') {
+      if (clean === 'di' || clean === 'ji') return true;
+    }
+    if (currentItem.character === 'づ' || currentItem.character === 'ヅ') {
+      if (clean === 'du' || clean === 'zu') return true;
+    }
+
+    if (currentItem.character === 'し' || currentItem.character === 'シ') {
+      if (clean === 'si' || clean === 'shi') return true;
+    }
+    if (currentItem.character === 'ち' || currentItem.character === 'チ') {
+      if (clean === 'ti' || clean === 'chi') return true;
+    }
+    if (currentItem.character === 'つ' || currentItem.character === 'ツ') {
+      if (clean === 'tu' || clean === 'tsu') return true;
+    }
+    if (currentItem.character === 'ふ' || currentItem.character === 'フ') {
+      if (clean === 'hu' || clean === 'fu') return true;
+    }
+
     return false;
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    // If locked or in wrong/correct state, ignore
-    if (isTransitioningRef.current || inputState === 'wrong' || inputState === 'correct') return;
-
     const val = e.target.value;
+    if (inputState === 'wrong' || isTransitioningRef.current) return;
     setUserInput(val);
 
-    // If auto-submit is allowed, check immediately
-    if (!requireEnterMode) {
-      if (currentItem && isAnswerValid(val, currentItem)) {
-        handleCorrect();
-      }
-    }
-  };
-
-  const handleSubmitAnswer = () => {
-    if (isTransitioningRef.current) return;
-
-    if (inputState === 'wrong') {
-      advanceAfterWrong();
-    } else if (inputState === 'idle' && userInput.trim().length > 0) {
-      if (currentItem && isAnswerValid(userInput, currentItem)) {
-        handleCorrect();
-      } else {
-        handleWrong();
+    if (!requireEnterMode && val.trim().length > 0) {
+      if (checkAnswerStrict(val)) {
+        handleCorrectAnswer();
       }
     }
   };
@@ -111,180 +220,73 @@ export const KanaQuizSession: React.FC<KanaQuizSessionProps> = ({
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
       e.preventDefault();
-      handleSubmitAnswer();
-    }
-  };
-
-  const handleCorrect = () => {
-    if (!currentItem || isTransitioningRef.current || inputState === 'correct') return;
-    isTransitioningRef.current = true;
-
-    // Record stats
-    const currentAttempt = attemptsMapRef.current.get(currentItem.id) || {
-      kana: currentItem,
-      userInputs: [],
-      isCorrectFirstTry: true,
-      failedAttempts: 0,
-    };
-    currentAttempt.userInputs.push(userInput.trim().toLowerCase());
-    attemptsMapRef.current.set(currentItem.id, currentAttempt);
-
-    setInputState('correct');
-    setStreak(s => {
-      const next = s + 1;
-      if (next > maxStreak) setMaxStreak(next);
-      return next;
-    });
-
-    if (soundEnabled) {
-      playSuccessSound();
-      speakJapanese(currentItem.character);
-    }
-
-    setTimeout(() => {
-      setQueue(prevQueue => {
-        const remaining = prevQueue.slice(1);
-        if (remaining.length === 0) {
-          // Quiz completed!
-          finishQuiz();
-        }
-        return remaining;
-      });
-
-      setUserInput('');
-      setInputState('idle');
-      setRevealedAnswer(null);
-      isTransitioningRef.current = false;
-    }, 280);
-  };
-
-  const handleWrong = () => {
-    if (!currentItem || isTransitioningRef.current || inputState === 'wrong') return;
-
-    const currentAttempt = attemptsMapRef.current.get(currentItem.id) || {
-      kana: currentItem,
-      userInputs: [],
-      isCorrectFirstTry: false,
-      failedAttempts: 0,
-    };
-    currentAttempt.isCorrectFirstTry = false;
-    currentAttempt.failedAttempts += 1;
-    currentAttempt.userInputs.push(userInput.trim().toLowerCase());
-    attemptsMapRef.current.set(currentItem.id, currentAttempt);
-
-    setRetriedItemIds(prev => {
-      const next = new Set(prev);
-      next.add(currentItem.id);
-      return next;
-    });
-
-    setInputState('wrong');
-    setRevealedAnswer(currentItem.romaji);
-    setStreak(0);
-
-    if (soundEnabled) {
-      playErrorSound();
-    }
-  };
-
-  const advanceAfterWrong = () => {
-    if (!currentItem || isTransitioningRef.current || inputState !== 'wrong') return;
-    isTransitioningRef.current = true;
-
-    setQueue(prevQueue => {
-      const remaining = prevQueue.slice(1);
-
-      if (requeueMistakes) {
-        // Put current item further back so user masters it (at least 4 items away or at end)
-        const insertPosition = Math.min(4, remaining.length);
-        const newQueue = [...remaining];
-        newQueue.splice(insertPosition, 0, currentItem);
-        return newQueue;
+      if (inputState === 'wrong') {
+        proceedAfterMistake();
       } else {
-        // In 1-pass mode, do not re-queue
-        if (remaining.length === 0) {
-          finishQuiz();
-        }
-        return remaining;
+        handleSubmitAnswer();
       }
-    });
-
-    setUserInput('');
-    setInputState('idle');
-    setRevealedAnswer(null);
-    isTransitioningRef.current = false;
+    } else if (e.key === 'Escape') {
+      onExit();
+    }
   };
 
-  const finishQuiz = () => {
-    const elapsed = startTimeRef.current ? Math.round((Date.now() - startTimeRef.current) / 1000) : 1;
-    const timeSpentSeconds = Math.max(1, elapsed);
-    const allAttempts = Array.from(attemptsMapRef.current.values());
-    const wrongItems = allAttempts.filter(a => !a.isCorrectFirstTry);
-    const correctFirstTryCount = allAttempts.filter(a => a.isCorrectFirstTry).length;
-    const accuracy = allAttempts.length > 0 
-      ? Math.round((correctFirstTryCount / allAttempts.length) * 100) 
-      : 100;
+  const handleSubmitAnswer = () => {
+    if (isTransitioningRef.current || !currentItem) return;
+    const clean = userInput.trim().toLowerCase();
+    if (clean.length === 0) return;
 
-    const summary: QuizSummary = {
-      totalQuestions: allAttempts.length,
-      correctFirstTryCount,
-      accuracy,
-      timeSpentSeconds,
-      wrongItems,
-      allAttempts,
-    };
-
-    onFinishQuiz(summary);
+    if (checkAnswerStrict(clean)) {
+      handleCorrectAnswer();
+    } else {
+      handleWrongAnswer();
+    }
   };
 
   if (!currentItem) {
-    return null;
+    return (
+      <div className="flex items-center justify-center min-h-[60vh]">
+        <div className="w-8 h-8 border-2 border-[#c84b31] border-t-transparent rounded-full animate-spin" />
+      </div>
+    );
   }
 
-  const progressPercentage = Math.round(((initialCount - queue.length) / initialCount) * 100);
+  const itemsCompleted = initialCount - queue.length;
+  const progressPercentage = initialCount > 0 ? Math.round((itemsCompleted / initialCount) * 100) : 0;
 
   return (
-    <div className="min-h-[85vh] flex flex-col justify-between max-w-4xl mx-auto px-4 py-6">
-      {/* Top Header / Stats Bar */}
-      <div>
-        <div className="flex items-center justify-between mb-4">
+    <div className="w-full max-w-4xl mx-auto px-4 py-6 min-h-[85vh] flex flex-col justify-between">
+      {/* Top Zen Navigation Bar */}
+      <div className="mb-6">
+        <div className="flex items-center justify-between gap-4 mb-4 pb-3 border-b border-[#e7e5e4] dark:border-[#27272a]">
           <button
+            type="button"
             onClick={onExit}
-            className="flex items-center gap-1.5 text-xs font-semibold text-slate-400 hover:text-white px-3 py-1.5 rounded-lg hover:bg-slate-800 transition cursor-pointer"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-[#e7e5e4] dark:border-[#27272a] bg-white dark:bg-[#1f1f23] text-xs font-mono font-medium text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5] transition cursor-pointer"
           >
-            <X className="w-4 h-4" />
-            Keluar Sesi
+            <X className="w-3.5 h-3.5" />
+            <span>Keluar Sesi</span>
           </button>
 
-          <div className="flex items-center gap-2 sm:gap-3">
-            {/* Toggle Require Enter (Anti-Tebak) */}
+          <div className="flex items-center gap-2">
             <button
-              onClick={() => setRequireEnterMode(prev => !prev)}
-              title={requireEnterMode ? 'Mode: Wajib Tekan Enter (Anti-Tebak). Klik untuk beralih ke Auto-submit.' : 'Mode: Auto-Submit (Cepat). Klik untuk mewajibkan Enter.'}
-              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl border text-xs font-semibold transition cursor-pointer ${
+              type="button"
+              onClick={() => setRequireEnterMode(m => !m)}
+              title={requireEnterMode ? 'Mode Anti-Tebak Aktif: Wajib Enter' : 'Mode Auto-Submit Aktif'}
+              className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg border text-xs font-mono font-semibold transition cursor-pointer ${
                 requireEnterMode
-                  ? 'bg-emerald-500/20 border-emerald-500/40 text-emerald-300'
-                  : 'bg-slate-800 border-slate-700 text-slate-400 hover:text-slate-200'
+                  ? 'bg-white dark:bg-[#1f1f23] border-[#d6d3d1] dark:border-[#3f3f46] text-[#1c1917] dark:text-[#f4f4f5]'
+                  : 'bg-[#f4f0e8] dark:bg-[#27272a] border-[#e7e5e4] dark:border-[#3f3f46] text-[#78716c] dark:text-[#a1a1aa]'
               }`}
             >
-              {requireEnterMode ? (
-                <>
-                  <Keyboard className="w-3.5 h-3.5" />
-                  <span className="hidden sm:inline">Wajib Enter (Anti-Tebak)</span>
-                </>
-              ) : (
-                <>
-                  <Zap className="w-3.5 h-3.5 text-amber-400" />
-                  <span className="hidden sm:inline">Auto-Submit</span>
-                </>
-              )}
+              <Keyboard className="w-3.5 h-3.5" />
+              <span>{requireEnterMode ? 'Enter: ON' : 'Auto: ON'}</span>
             </button>
 
             {/* Streak Counter */}
-            <div className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold border transition ${
+            <div className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-mono font-bold border transition ${
               streak > 0 
-                ? 'bg-amber-500/20 border-amber-500/40 text-amber-300' 
-                : 'bg-slate-800/60 border-slate-700 text-slate-400'
+                ? 'bg-[#c84b31]/10 border-[#c84b31]/30 text-[#c84b31] dark:text-[#e05d44]' 
+                : 'bg-white dark:bg-[#1f1f23] border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] dark:text-[#a1a1aa]'
             }`}>
               <Flame className={`w-3.5 h-3.5 ${streak > 0 ? 'fill-current' : ''}`} />
               <span>{streak}</span>
@@ -292,96 +294,83 @@ export const KanaQuizSession: React.FC<KanaQuizSessionProps> = ({
 
             {/* Font Style Toggle */}
             <button
+              type="button"
               onClick={() => setUseSerifFont(f => !f)}
-              title="Ganti font (Gothic vs Mincho/Serif)"
-              className={`p-2 rounded-xl border text-xs font-medium transition cursor-pointer ${
+              title="Ganti font (Mincho Kuas vs Gothic Modern)"
+              className={`p-2 rounded-lg border text-xs font-medium transition cursor-pointer ${
                 useSerifFont 
-                  ? 'bg-purple-500/20 border-purple-500/40 text-purple-300' 
-                  : 'bg-slate-800 border-slate-700 text-slate-400 hover:text-slate-200'
+                  ? 'bg-[#1c1917] dark:bg-[#f4f4f5] text-white dark:text-[#18181b] border-transparent' 
+                  : 'bg-white dark:bg-[#1f1f23] border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] dark:text-[#a1a1aa]'
               }`}
             >
-              <Type className="w-4 h-4" />
+              <Type className="w-3.5 h-3.5" />
             </button>
 
             {/* Audio Toggle */}
             <button
+              type="button"
               onClick={() => setSoundEnabled(s => !s)}
               title={soundEnabled ? 'Suara Aktif' : 'Suara Dimatikan'}
-              className="p-2 rounded-xl bg-slate-800 border border-slate-700 text-slate-400 hover:text-slate-200 transition cursor-pointer"
+              className="p-2 rounded-lg bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5] transition cursor-pointer"
             >
-              {soundEnabled ? <Volume2 className="w-4 h-4 text-emerald-400" /> : <VolumeX className="w-4 h-4" />}
+              {soundEnabled ? <Volume2 className="w-3.5 h-3.5 text-[#2e7d32] dark:text-[#4ade80]" /> : <VolumeX className="w-3.5 h-3.5" />}
             </button>
           </div>
         </div>
 
-        {/* Progress Bar */}
-        <div className="w-full bg-slate-800/80 rounded-full h-2 mb-2 overflow-hidden">
+        {/* Progress Bar Hairline */}
+        <div className="w-full bg-[#e7e5e4] dark:bg-[#27272a] rounded-full h-1.5 mb-2 overflow-hidden">
           <div 
-            className="bg-gradient-to-r from-rose-500 to-indigo-500 h-full transition-all duration-300"
+            className="bg-[#c84b31] dark:bg-[#e05d44] h-full transition-all duration-300"
             style={{ width: `${Math.min(100, Math.max(0, progressPercentage))}%` }}
           />
         </div>
-        <div className="flex justify-between text-[11px] font-mono text-slate-400">
-          <span>Antrean Kuis: <strong className="text-slate-200">{queue.length}</strong> pertanyaan tersisa</span>
-          <span>Progres: <strong className="text-slate-200">{progressPercentage}%</strong></span>
+        <div className="flex justify-between text-[11px] font-mono text-[#78716c] dark:text-[#a1a1aa]">
+          <span>Antrean: <strong className="text-[#1c1917] dark:text-[#f4f4f5]">{queue.length}</strong> tersisa</span>
+          <span>Progres: <strong className="text-[#1c1917] dark:text-[#f4f4f5]">{progressPercentage}%</strong></span>
         </div>
       </div>
 
       {/* Main Flashcard / Quiz Stage */}
-      <div className="flex flex-col items-center justify-center my-auto py-8">
+      <div className="flex flex-col items-center justify-center my-auto py-6">
         {/* Character Type Badge */}
         <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
-          <span className={`px-3 py-1 rounded-full text-xs font-extrabold uppercase tracking-wider shadow-sm ${
-            currentItem.type === 'hiragana'
-              ? 'bg-rose-500/30 text-rose-300 border border-rose-500/50'
-              : 'bg-sky-500/30 text-sky-300 border border-sky-500/50'
-          }`}>
-            {currentItem.type === 'hiragana' ? '🌸 HIRAGANA' : '🔷 KATAKANA'}
+          <span className="px-2.5 py-0.5 rounded text-[11px] font-mono font-bold tracking-wider border border-[#c84b31]/30 bg-[#c84b31]/5 text-[#c84b31] dark:text-[#e05d44]">
+            {currentItem.type === 'hiragana' ? '[平仮名] HIRAGANA' : '[片仮名] KATAKANA'}
           </span>
 
-          <span className="text-xs text-slate-400 font-medium px-2 py-0.5 rounded bg-slate-900 border border-slate-800">
-            {currentItem.category === 'gojuuon' ? 'Standar' : currentItem.category === 'dakuten' ? 'Dakuten' : 'Kombinasi (Yōon)'}
+          <span className="text-[11px] font-mono text-[#78716c] dark:text-[#a1a1aa] px-2 py-0.5 rounded bg-[#f4f0e8] dark:bg-[#27272a] border border-[#e7e5e4] dark:border-[#3f3f46]">
+            {currentItem.category === 'gojuuon' ? 'Gojūon' : currentItem.category === 'dakuten' ? 'Dakuten' : 'Yōon'}
           </span>
-
-          {/* Ambiguity hints for duplicate sound characters */}
-          {(currentItem.character === 'ぢ' || currentItem.character === 'ヂ') && (
-            <span className="text-[11px] text-amber-300 font-medium px-2.5 py-0.5 rounded bg-amber-500/15 border border-amber-500/30">
-              💡 Tips: {currentItem.character} bisa diketik &apos;di&apos; atau &apos;ji&apos;
-            </span>
-          )}
-          {(currentItem.character === 'づ' || currentItem.character === 'ヅ') && (
-            <span className="text-[11px] text-amber-300 font-medium px-2.5 py-0.5 rounded bg-amber-500/15 border border-amber-500/30">
-              💡 Tips: {currentItem.character} bisa diketik &apos;du&apos; atau &apos;zu&apos;
-            </span>
-          )}
 
           <button
+            type="button"
             onClick={() => speakJapanese(currentItem.character)}
             title="Dengarkan pengucapan asli"
-            className="p-1 text-slate-400 hover:text-white transition cursor-pointer"
+            className="p-1 text-[#78716c] hover:text-[#1c1917] dark:hover:text-[#f4f4f5] transition cursor-pointer"
           >
             <Volume2 className="w-3.5 h-3.5" />
           </button>
         </div>
 
-        {/* Clear Notice if this item is a RE-QUEUE because user previously missed it */}
+        {/* Notice for Re-queue */}
         {isCurrentItemRetried && (
-          <div className="mb-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-300 text-xs font-medium animate-pop">
+          <div className="mb-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-[#c84b31]/5 border border-[#c84b31]/20 text-[#c84b31] dark:text-[#e05d44] text-xs font-mono animate-pop">
             <RotateCcw className="w-3.5 h-3.5 shrink-0" />
-            <span>Pengulangan: Huruf ini muncul lagi karena tadi sempat salah dijawab</span>
+            <span>Remediasi: Huruf ini diulang karena tadi salah</span>
           </div>
         )}
 
-        {/* Big Kana Character Display */}
+        {/* Big Kana Character Display Card */}
         <div 
-          className={`w-64 h-64 sm:w-72 sm:h-72 rounded-3xl flex items-center justify-center border transition-all duration-200 shadow-2xl relative select-none ${
-            useSerifFont ? 'font-serif-jp' : 'font-jp'
+          className={`w-64 h-64 sm:w-72 sm:h-72 rounded-2xl flex items-center justify-center border transition-all duration-200 shadow-sm relative select-none ${
+            useSerifFont ? 'font-serif-jp' : 'font-sans'
           } ${
             inputState === 'correct'
-              ? 'bg-emerald-950/40 border-emerald-500/80 shadow-emerald-500/20 text-emerald-300 scale-105'
+              ? 'bg-emerald-50 dark:bg-emerald-950/30 border-emerald-500 text-emerald-800 dark:text-emerald-300 scale-102'
               : inputState === 'wrong'
-              ? 'bg-rose-950/40 border-rose-500/80 shadow-rose-500/20 text-rose-300 animate-shake'
-              : 'bg-slate-900/90 border-slate-700/80 text-white'
+              ? 'bg-rose-50 dark:bg-rose-950/30 border-rose-400 text-rose-800 dark:text-rose-300 animate-shake'
+              : 'bg-white dark:bg-[#1f1f23] border-[#e7e5e4] dark:border-[#27272a] text-[#1c1917] dark:text-[#f4f4f5]'
           }`}
         >
           <span className="text-8xl sm:text-9xl font-bold tracking-tight">
@@ -391,13 +380,13 @@ export const KanaQuizSession: React.FC<KanaQuizSessionProps> = ({
 
         {/* Revealed correct answer on mistake */}
         {inputState === 'wrong' && revealedAnswer && (
-          <div className="mt-4 px-4 py-2 rounded-xl bg-rose-500/20 border border-rose-500/40 text-center animate-pop">
-            <span className="text-xs text-rose-300 font-medium block">Jawaban yang benar:</span>
-            <span className="text-xl font-mono font-bold text-white tracking-widest uppercase">
+          <div className="mt-4 px-5 py-2.5 rounded-lg bg-rose-50 dark:bg-rose-950/30 border border-rose-300 dark:border-rose-900 text-center animate-pop">
+            <span className="text-xs text-rose-700 dark:text-rose-300 font-medium block">Jawaban yang benar:</span>
+            <span className="text-xl font-mono font-bold text-rose-900 dark:text-white tracking-widest uppercase">
               {revealedAnswer}
             </span>
-            <span className="text-[11px] text-rose-300/80 block mt-1">
-              Tekan <kbd className="px-1.5 py-0.5 bg-rose-900/50 rounded border border-rose-500/30 text-white font-mono">Enter</kbd> untuk melanjutkan
+            <span className="text-[11px] text-rose-600 dark:text-rose-300/80 block mt-1">
+              Tekan <kbd className="px-1.5 py-0.5 bg-white dark:bg-rose-900/50 rounded border border-rose-300 dark:border-rose-800 font-mono text-xs">Enter</kbd> untuk melanjutkan
             </span>
           </div>
         )}
@@ -423,25 +412,26 @@ export const KanaQuizSession: React.FC<KanaQuizSessionProps> = ({
                 ? 'Ketik romaji lalu Enter...'
                 : 'Ketik romaji...'
             }
-            className={`w-full pl-5 pr-12 py-3.5 rounded-2xl text-center text-xl font-mono font-semibold tracking-wider transition-all duration-150 outline-none border-2 ${
+            className={`w-full pl-5 pr-12 py-3 rounded-xl text-center text-xl font-mono font-semibold tracking-wider transition-all duration-150 outline-none border ${
               inputState === 'correct'
-                ? 'bg-emerald-900/30 border-emerald-500 text-emerald-200 ring-2 ring-emerald-500/30'
+                ? 'bg-emerald-50 dark:bg-emerald-950/20 border-emerald-500 text-emerald-900 dark:text-emerald-200 ring-2 ring-emerald-500/20'
                 : inputState === 'wrong'
-                ? 'bg-rose-900/30 border-rose-500 text-rose-200 ring-2 ring-rose-500/30'
-                : 'bg-slate-900 border-slate-700 text-white focus:border-rose-500 focus:ring-4 focus:ring-rose-500/10'
+                ? 'bg-rose-50 dark:bg-rose-950/20 border-rose-500 text-rose-900 dark:text-rose-200 ring-2 ring-rose-500/20'
+                : 'bg-white dark:bg-[#1f1f23] border-[#d6d3d1] dark:border-[#3f3f46] text-[#1c1917] dark:text-[#f4f4f5] focus:border-[#c84b31] dark:focus:border-[#e05d44] focus:ring-2 focus:ring-[#c84b31]/10'
             }`}
           />
 
           {/* Submit / Next Button */}
           <button
+            type="button"
             onClick={handleSubmitAnswer}
             disabled={inputState === 'idle' && userInput.trim().length === 0}
-            className={`absolute right-2.5 top-1/2 -translate-y-1/2 p-2 rounded-xl transition cursor-pointer ${
+            className={`absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-lg transition cursor-pointer ${
               inputState === 'wrong'
-                ? 'bg-rose-500 hover:bg-rose-600 text-white shadow-md'
+                ? 'bg-[#c84b31] hover:bg-[#b03d25] text-white shadow-xs'
                 : userInput.trim().length > 0
-                ? 'bg-rose-500 hover:bg-rose-600 text-white shadow-md'
-                : 'text-slate-600 cursor-not-allowed'
+                ? 'bg-[#c84b31] hover:bg-[#b03d25] text-white shadow-xs'
+                : 'text-[#a8a29e] dark:text-[#71717a] cursor-not-allowed'
             }`}
             title={inputState === 'wrong' ? 'Lanjut (Enter)' : 'Kirim Jawaban (Enter)'}
           >
@@ -453,24 +443,22 @@ export const KanaQuizSession: React.FC<KanaQuizSessionProps> = ({
           </button>
         </div>
 
-        <p className="mt-3 text-xs text-slate-400">
+        <p className="mt-3 text-xs text-[#78716c] dark:text-[#a1a1aa]">
           {requireEnterMode ? (
             <span>
-              Ketik jawabanmu lalu tekan <kbd className="px-1.5 py-0.5 bg-slate-800 rounded border border-slate-700 font-mono text-slate-300">Enter</kbd> untuk menilai (Anti-Tebak)
+              Ketik jawaban lalu tekan <kbd className="px-1.5 py-0.5 bg-white dark:bg-[#27272a] rounded border border-[#d6d3d1] dark:border-[#3f3f46] font-mono text-[11px]">Enter</kbd> (Anti-Tebak)
             </span>
           ) : (
             <span>
-              Mode Auto-Submit: Jawaban langsung dinilai saat karakter cocok
+              Auto-Submit: Jawaban langsung dinilai saat karakter cocok
             </span>
           )}
         </p>
       </div>
 
-      {/* Footer explanation */}
-      <div className="text-center text-xs text-slate-500 pb-2 flex items-center justify-center gap-3">
-        <span>
-          {requireEnterMode ? '🛡️ Mode Ujian Aktif: Jawaban salah akan langsung dicatat saat menekan Enter.' : '⚡ Mode Cepat Aktif'}
-        </span>
+      {/* Footer hint */}
+      <div className="text-center text-xs text-[#a8a29e] dark:text-[#71717a] pb-2 font-mono">
+        Tekan [Esc] kapan saja untuk mengakhiri sesi lebih awal
       </div>
     </div>
   );
