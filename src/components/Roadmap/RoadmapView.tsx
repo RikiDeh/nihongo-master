@@ -266,6 +266,7 @@ export const RoadmapView: React.FC<RoadmapViewProps> = ({
           </div>
 
           <button
+            id="tour-hero-action"
             type="button"
             onClick={() => {
               setActiveArcId(nextActiveArc.id);

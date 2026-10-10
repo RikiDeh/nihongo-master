@@ -181,6 +181,8 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
               return (
                 <button
                   key={item.id}
+                  id={`tour-nav-${item.id}`}
+                  data-tour-target={item.id}
                   type="button"
                   onClick={() => onSelectModule(item.id)}
                   title={isCollapsed ? item.label : undefined}
@@ -294,6 +296,7 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
           <div className="flex items-center gap-1.5 sm:gap-2">
             {/* Quick Romaji Toggle on Mobile Header */}
             <button
+              id="tour-header-romaji"
               type="button"
               onClick={toggleShowRomaji}
               className={`px-2 py-1 rounded-lg text-xs font-mono font-bold border transition cursor-pointer ${
@@ -309,6 +312,7 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
 
             {onOpenSrsReview && (
               <button
+                id="tour-header-srs"
                 type="button"
                 onClick={onOpenSrsReview}
                 className="px-2 py-1 rounded-lg text-xs font-mono font-bold border border-[#c84b31]/30 bg-[#c84b31]/10 text-[#c84b31] dark:text-[#e05d44]"
@@ -478,6 +482,7 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
         <nav className="fixed bottom-0 left-0 right-0 z-30 bg-[#faf8f5]/95 dark:bg-[#18181b]/95 backdrop-blur-md border-t border-[#e7e5e4] dark:border-[#27272a] px-3 pt-2 pb-[max(0.6rem,env(safe-area-inset-bottom))] flex items-center justify-around text-xs shadow-lg">
           {/* Tab 1: Belajar (Roadmap) */}
           <button
+            id="tour-dock-roadmap"
             type="button"
             onClick={() => {
               setMobileMenuType(null);
@@ -495,6 +500,7 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
 
           {/* Tab 2: Kana (Fondasi Aksara) */}
           <button
+            id="tour-dock-kana"
             type="button"
             onClick={() => {
               setMobileMenuType(null);
@@ -512,6 +518,7 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
 
           {/* Tab 3: Latihan (Ujian JLPT & Dojo Konjugasi) */}
           <button
+            id="tour-dock-latihan"
             type="button"
             onClick={() => setMobileMenuType(prev => prev === 'latihan' ? null : 'latihan')}
             className={`flex-1 flex flex-col items-center py-1 transition cursor-pointer ${
@@ -529,6 +536,7 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
 
           {/* Tab 4: Pustaka (Kamus Kanji, Kosakata, Tata Bahasa) */}
           <button
+            id="tour-dock-pustaka"
             type="button"
             onClick={() => setMobileMenuType(prev => prev === 'pustaka' ? null : 'pustaka')}
             className={`flex-1 flex flex-col items-center py-1 transition cursor-pointer ${

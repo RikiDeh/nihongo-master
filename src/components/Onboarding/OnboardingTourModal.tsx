@@ -1,101 +1,152 @@
-import React, { useState } from 'react';
-import { Compass, BookOpen, Swords, Sparkles, X, ChevronRight, ChevronLeft, Check, Layers, HelpCircle } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { 
+  Compass, 
+  BookOpen, 
+  Swords, 
+  Sparkles, 
+  X, 
+  ChevronRight, 
+  ChevronLeft, 
+  Check, 
+  Layers, 
+  Flame, 
+  MousePointerClick,
+  Info
+} from 'lucide-react';
 
-interface OnboardingTourModalProps {
+interface InteractiveTourProps {
   isOpen: boolean;
   onClose: () => void;
-  onNavigateToModule?: (module: 'roadmap' | 'kana' | 'dojo' | 'kanji' | 'vocab' | 'quiz') => void;
+  onSelectModule?: (module: 'roadmap' | 'kana' | 'dojo' | 'kanji' | 'vocab' | 'quiz') => void;
 }
 
 interface TourStep {
+  targetIdDesktop?: string;
+  targetIdMobile?: string;
   title: string;
-  jpSubtitle: string;
   badge: string;
   description: string;
-  highlights: { title: string; desc: string }[];
-  targetModule?: 'roadmap' | 'kana' | 'dojo' | 'kanji' | 'vocab' | 'quiz';
+  actionHint: string;
+  moduleToActivate?: 'roadmap' | 'kana' | 'dojo' | 'kanji' | 'vocab' | 'quiz';
   tip: string;
 }
 
 const TOUR_STEPS: TourStep[] = [
   {
-    title: 'Selamat Datang di NihongoMaster',
-    jpSubtitle: 'ようこそ！日本語の道へ',
-    badge: 'PANDUAN PEMULA',
-    description: 'Platform belajar bahasa Jepang otentik dari 0 (Nol) hingga lulus JLPT N1 dengan kurikulum bertahap, latihan refleks, dan sistem Spaced Repetition (SRS).',
-    highlights: [
-      { title: 'Kurikulum Otentik', desc: 'Rute terstruktur dari Hiragana/Katakana hingga 2.167 Joyō Kanji.' },
-      { title: 'Ramah Mobile & Desktop', desc: 'Desain responsif Zen Washi tanpa slider rumit dan tanpa lag.' },
-      { title: 'Anti-Lupa (SRS)', desc: 'Algoritma review otomatis yang menjaga materi tetap menempel di ingatan.' },
-    ],
-    tip: 'Kamu bisa membuka kembali panduan ini kapan saja lewat menu Pengaturan ⚙️.',
+    targetIdDesktop: 'tour-hero-action',
+    targetIdMobile: 'tour-hero-action',
+    title: '1. Tombol Mulai Belajar (Hero CTA)',
+    badge: 'LANGKAH UTAMA',
+    description: 'Ini adalah pusat komando harianmu. Setiap kali membuka aplikasi, kamu tidak perlu bingung memilih materi; cukup klik tombol ini untuk langsung melanjutkan stage belajarmu saat ini.',
+    actionHint: 'Klik tombol merah ini untuk langsung memulai materi terdekatmu.',
+    moduleToActivate: 'roadmap',
+    tip: 'Selesaikan Arc 0 (Hiragana & Katakana) terlebih dahulu sebelum melompat ke Kanji!',
   },
   {
-    title: '1. Peta Belajar (Roadmap)',
-    jpSubtitle: '学習の地図 (Arc 0 → N1)',
-    badge: 'LANGKAH PERTAMA',
-    description: 'Pusat komando belajarmu. Cukup buka Roadmap setiap hari dan ikuti tombol "Fokus Belajarmu Sekarang" untuk lanjut tanpa perlu bingung harus mulai dari mana.',
-    highlights: [
-      { title: 'Arc 0: Fondasi Aksara', desc: 'Kuasai 46 Hiragana & 46 Katakana beserta bunyi turunan (Dakuten & Youon).' },
-      { title: 'Misi Harian (Daily Quests)', desc: '3 tantangan harian ringkas untuk mempertahankan Streak belajar.' },
-      { title: 'Status Progres', desc: 'Lacak persentase penguasaan materi di setiap tingkatan level.' },
-    ],
-    targetModule: 'roadmap',
-    tip: 'Bagi pengguna baru, selesaikan Arc 0 terlebih dahulu sebelum masuk ke Kanji!',
+    targetIdDesktop: 'tour-nav-kana',
+    targetIdMobile: 'tour-dock-kana',
+    title: '2. Menu Kana 「あ」',
+    badge: 'FONDASI AKSARA',
+    description: 'Menu ini berisi Matriks 50 Bunyi (Gojūon), Dakuten, dan Yoon. Di mobile, kamu akan melihat tampilan kartu 5-kolom yang pas di layar ponsel tanpa slider geser yang merepotkan.',
+    actionHint: 'Klik tab Kana untuk melihat tabel huruf dan mulai latihan refleks membaca.',
+    moduleToActivate: 'kana',
+    tip: 'Di desktop, kamu bisa gunakan tombol angka 1–4 di keyboard saat sesi kuis berlangsung.',
   },
   {
-    title: '2. Fondasi Aksara (Kana)',
-    jpSubtitle: '仮名の基礎 (Hiragana & Katakana)',
-    badge: 'MENU KANA 「あ」',
-    description: 'Pelajari bentuk tulisan, bunyi pelafalan asli Tokyo, dan uji refleks membaca secara bertahap per baris.',
-    highlights: [
-      { title: 'Matriks Gojūon Native', desc: 'Tabel kartu 5-kolom yang pas di layar ponsel tanpa slider geser ke samping.' },
-      { title: 'Mode Kuis Refleks', desc: 'Kuis interaktif dengan audio native; kesalahan otomatis diulang sampai hafal.' },
-      { title: 'Bantuan Romaji', desc: 'Bisa dinyalakan/dimatikan dengan tombol [Aa] di bilah navigasi.' },
-    ],
-    targetModule: 'kana',
-    tip: 'Gunakan tombol angka 1–4 di keyboard desktop untuk menjawab kuis secepat kilat!',
+    targetIdDesktop: 'tour-header-romaji',
+    targetIdMobile: 'tour-header-romaji',
+    title: '3. Tombol Bantuan Romaji [Aa / あ]',
+    badge: 'BANTUAN CEPAT',
+    description: 'Tombol ini untuk menyalakan atau mematikan ejaan abjad Latin (Romaji) secara instan di seluruh kosakata, kanji, dan contoh kalimat.',
+    actionHint: 'Klik tombol ini jika ingin melatih mata membaca huruf Jepang asli tanpa bantuan abjad.',
+    tip: 'Tersedia di bilah header atas mobile dan di bagian bawah sidebar desktop.',
   },
   {
-    title: '3. Mode Latihan & Ujian',
-    jpSubtitle: '鍛錬と模擬試験 (Dojo & JLPT)',
-    badge: 'MENU LATIHAN ⚔️',
-    description: 'Di menu bilah bawah "Latihan", kamu bisa mengakses 2 fasilitas drill utama:',
-    highlights: [
-      { title: 'Dojo Konjugasi Kata Kerja', desc: 'Latih perubahan bentuk Te, Masu, Nai, Ta, Potensial (bisa), dan Pasif (di-/ter-).' },
-      { title: 'Pusat Ujian JLPT (N5→N1)', desc: 'Simulasi Mondai 1 (Bacaan Kanji), Mondai 2 (Ejaan), Mondai 3 (Konteks), & Mondai 4 (Tata Bahasa).' },
-      { title: 'Ghost Engine (Remedial)', desc: 'Sistem mencatat soal yang salah dan menyediakan tombol 1-klik untuk drill ulang.' },
-    ],
-    targetModule: 'dojo',
-    tip: 'Soal kuis dijamin 100% sesuai level N yang dipilih tanpa bocor kosakata sulit.',
+    targetIdDesktop: 'tour-header-srs',
+    targetIdMobile: 'tour-header-srs',
+    title: '4. Indikator SRS & Habit Api (🔥)',
+    badge: 'SISTEM ANTI-LUPA',
+    description: 'Menampilkan streak belajar harian dan jumlah butir materi (Kanji/Kosakata) yang sudah jatuh tempo untuk diulang agar tidak lupa.',
+    actionHint: 'Klik tombol api ini saat angka menyala untuk masuk ke sesi ulasan kilat Spaced Repetition.',
+    tip: 'Cukup ulas 5-10 menit per hari untuk mempertahankan retensi memori jangka panjang.',
   },
   {
-    title: '4. Pustaka Lengkap & Kamus',
-    jpSubtitle: '辞書と文法 (Kanji, Kosakata, Grammar)',
-    badge: 'MENU PUSTAKA 📚',
-    description: 'Koleksi kamus pintar dengan detail lengkap yang langsung muncul di layar tanpa perlu scroll jauh:',
-    highlights: [
-      { title: '2.167 Joyō Kanji', desc: 'Dilengkapi jumlah goresan, cerita mnemonik, arti Indonesia, dan bacaan Onyomi/Kunyomi.' },
-      { title: '9.177 Kosakata Berkalimat', desc: 'Contoh kalimat otentik untuk memahami cara pakai kata dalam percakapan nyata.' },
-      { title: 'Drawer Instan di Mobile', desc: 'Mengetuk kartu langsung memunculkan lembar detail dari bawah layar.' },
-    ],
-    targetModule: 'kanji',
-    tip: 'Tandai materi penting dengan bintang untuk dimasukkan ke ulasan hafalan SRS harian.',
+    targetIdDesktop: 'tour-nav-dojo',
+    targetIdMobile: 'tour-dock-latihan',
+    title: '5. Menu Latihan (Dojo & JLPT ⚔️)',
+    badge: 'DRILL REFLEKS',
+    description: 'Pusat latihan intensif yang mencakup Dojo Konjugasi (perubahan bentuk Te, Masu, Nai, Ta, Potensial, Pasif) serta Simulasi Ujian JLPT berwaktu lengkap dengan pembahasan.',
+    actionHint: 'Pilih menu ini saat kamu ingin menguji pemahaman dan kecepatan refleks tata bahasa.',
+    moduleToActivate: 'dojo',
+    tip: 'Jika ada soal yang salah, gunakan fitur Ghost Engine untuk melatih kembali hanya soal-soal yang salah.',
+  },
+  {
+    targetIdDesktop: 'tour-nav-kanji',
+    targetIdMobile: 'tour-dock-pustaka',
+    title: '6. Pustaka Lengkap (Kanji, Vocab & Grammar 📚)',
+    badge: 'KAMUS PINTAR',
+    description: 'Akses ke 2.167 Joyō Kanji dan 9.177 Kosakata berkalimat contoh. Di mobile, mengetuk kartu kanji/kosakata akan langsung memunculkan drawer lembar detail dari bawah layar tanpa perlu scroll ke bawah.',
+    actionHint: 'Klik kartu kata atau kanji apa saja untuk melihat arti, pelafalan audio, dan contoh kalimatnya.',
+    moduleToActivate: 'kanji',
+    tip: 'Gunakan fitur pencarian dan filter level (N5→N1) untuk mencari kosakata spesifik.',
   },
 ];
 
-export const OnboardingTourModal: React.FC<OnboardingTourModalProps> = ({
+export const OnboardingTourModal: React.FC<InteractiveTourProps> = ({
   isOpen,
   onClose,
-  onNavigateToModule,
+  onSelectModule,
 }) => {
   const [currentStep, setCurrentStep] = useState(0);
-
-  if (!isOpen) return null;
+  const [targetRect, setTargetRect] = useState<DOMRect | null>(null);
 
   const step = TOUR_STEPS[currentStep];
   const isFirst = currentStep === 0;
   const isLast = currentStep === TOUR_STEPS.length - 1;
+
+  // Auto-navigate to module if step needs it
+  useEffect(() => {
+    if (!isOpen) return;
+    if (step.moduleToActivate && onSelectModule) {
+      onSelectModule(step.moduleToActivate);
+    }
+  }, [currentStep, isOpen]);
+
+  // Track target bounding box for spotlight pointer
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const updatePosition = () => {
+      const isMobile = window.innerWidth < 768;
+      const targetId = isMobile ? step.targetIdMobile : step.targetIdDesktop;
+      
+      if (targetId) {
+        const el = document.getElementById(targetId);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          setTargetRect(rect);
+          // Gently scroll target into view if not in viewport
+          if (rect.top < 0 || rect.bottom > window.innerHeight) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+          return;
+        }
+      }
+      setTargetRect(null);
+    };
+
+    const timer = setTimeout(updatePosition, 150);
+    window.addEventListener('resize', updatePosition);
+    window.addEventListener('scroll', updatePosition, true);
+
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener('resize', updatePosition);
+      window.removeEventListener('scroll', updatePosition, true);
+    };
+  }, [currentStep, isOpen, step]);
+
+  if (!isOpen) return null;
 
   const handleNext = () => {
     if (isLast) {
@@ -111,140 +162,125 @@ export const OnboardingTourModal: React.FC<OnboardingTourModalProps> = ({
     }
   };
 
-  const handleJumpToModule = () => {
-    if (step.targetModule && onNavigateToModule) {
-      onNavigateToModule(step.targetModule);
-      onClose();
-    }
-  };
-
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-md animate-fadeIn">
+    <div className="fixed inset-0 z-50 pointer-events-none animate-fadeIn select-none">
+      {/* 1. Backdrop semi-transparent with cutout spotlight if target exists */}
       <div 
-        className="fixed inset-0" 
-        onClick={onClose} 
-        aria-hidden="true" 
+        className="fixed inset-0 bg-black/60 pointer-events-auto transition-all duration-300"
+        onClick={onClose}
       />
-      
-      <div className="relative bg-[#faf8f5] dark:bg-[#18181b] border-2 border-[#c84b31]/40 dark:border-[#e05d44]/40 rounded-2xl max-w-lg w-full p-6 sm:p-7 shadow-2xl z-10 flex flex-col text-left overflow-hidden animate-slideUp">
-        {/* Glow ambient background accents */}
-        <div className="absolute -top-24 -left-24 w-48 h-48 bg-[#c84b31]/10 dark:bg-[#e05d44]/15 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute -bottom-24 -right-24 w-48 h-48 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
 
-        {/* Top Header Row */}
-        <div className="flex items-center justify-between mb-4 pb-3 border-b border-[#e7e5e4] dark:border-[#27272a] relative z-10">
-          <div className="flex items-center gap-2">
-            <span className="px-2.5 py-0.5 rounded text-[10px] font-mono font-bold bg-[#c84b31]/10 text-[#c84b31] dark:text-[#e05d44] border border-[#c84b31]/20">
-              {step.badge}
-            </span>
-            <span className="text-xs font-mono text-[#78716c] dark:text-[#a1a1aa]">
-              Langkah {currentStep + 1} dari {TOUR_STEPS.length}
+      {/* 2. Spotlight Box Ring around target element */}
+      {targetRect && (
+        <div 
+          className="fixed pointer-events-none transition-all duration-300 z-50 rounded-xl border-2 border-[#c84b31] dark:border-[#e05d44] shadow-[0_0_25px_rgba(200,75,49,0.7)] animate-pulse"
+          style={{
+            top: `${Math.max(4, targetRect.top - 6)}px`,
+            left: `${Math.max(4, targetRect.left - 6)}px`,
+            width: `${targetRect.width + 12}px`,
+            height: `${targetRect.height + 12}px`,
+          }}
+        >
+          {/* Target Pointer Tag */}
+          <div className="absolute -top-7 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded bg-[#c84b31] text-white text-[10px] font-mono font-bold whitespace-nowrap shadow-md flex items-center gap-1">
+            <MousePointerClick className="w-3 h-3 animate-bounce" />
+            <span>Target Elemen</span>
+          </div>
+        </div>
+      )}
+
+      {/* 3. Floating Interactive Guide Card (Centered on mobile, positioned smart) */}
+      <div className="fixed inset-x-4 bottom-24 sm:bottom-auto sm:top-1/2 sm:left-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2 sm:max-w-md z-50 pointer-events-auto">
+        <div className="bg-[#faf8f5] dark:bg-[#18181b] border-2 border-[#c84b31]/40 dark:border-[#e05d44]/40 rounded-2xl p-5 sm:p-6 shadow-2xl relative text-left overflow-hidden animate-slideUp">
+          {/* Glow ambient background accents */}
+          <div className="absolute -top-16 -left-16 w-32 h-32 bg-[#c84b31]/15 rounded-full blur-2xl pointer-events-none" />
+
+          {/* Top Bar */}
+          <div className="flex items-center justify-between mb-3 pb-2.5 border-b border-[#e7e5e4] dark:border-[#27272a]">
+            <div className="flex items-center gap-2">
+              <span className="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-[#c84b31]/10 text-[#c84b31] dark:text-[#e05d44] border border-[#c84b31]/20">
+                {step.badge}
+              </span>
+              <span className="text-xs font-mono text-[#78716c] dark:text-[#a1a1aa]">
+                {currentStep + 1} / {TOUR_STEPS.length}
+              </span>
+            </div>
+
+            <button
+              type="button"
+              onClick={onClose}
+              className="p-1 rounded-lg text-[#78716c] hover:text-[#1c1917] dark:hover:text-[#f4f4f5] transition cursor-pointer"
+              title="Tutup Panduan"
+            >
+              <X className="w-4 h-4" />
+            </button>
+          </div>
+
+          {/* Step Content */}
+          <div className="mb-4">
+            <h3 className="text-base sm:text-lg font-bold font-jp text-[#1c1917] dark:text-[#f4f4f5] tracking-tight">
+              {step.title}
+            </h3>
+            <p className="text-xs sm:text-sm text-[#78716c] dark:text-[#a1a1aa] mt-1.5 leading-relaxed">
+              {step.description}
+            </p>
+          </div>
+
+          {/* Action Hint Card */}
+          <div className="p-2.5 rounded-xl bg-white dark:bg-[#1f1f23] border border-[#c84b31]/25 dark:border-[#e05d44]/30 text-xs text-[#1c1917] dark:text-[#f4f4f5] mb-3 flex items-start gap-2 shadow-2xs">
+            <MousePointerClick className="w-4 h-4 text-[#c84b31] dark:text-[#e05d44] shrink-0 mt-0.5" />
+            <span className="text-[11px] leading-snug">
+              <strong>Fungsi:</strong> {step.actionHint}
             </span>
           </div>
 
-          <button
-            type="button"
-            onClick={onClose}
-            className="p-1.5 rounded-lg text-[#78716c] hover:text-[#1c1917] dark:hover:text-[#f4f4f5] hover:bg-black/5 dark:hover:bg-white/5 transition cursor-pointer"
-            title="Lewati Panduan"
-          >
-            <X className="w-4 h-4" />
-          </button>
-        </div>
+          {/* Practical Tip */}
+          <div className="p-2.5 rounded-xl bg-[#c84b31]/5 border border-[#c84b31]/15 text-[11px] text-[#78716c] dark:text-[#a1a1aa] mb-4 flex items-start gap-2">
+            <Sparkles className="w-3.5 h-3.5 text-[#c84b31] dark:text-[#e05d44] shrink-0 mt-0.5" />
+            <span className="leading-snug">
+              <strong>Tips:</strong> {step.tip}
+            </span>
+          </div>
 
-        {/* Title & Japanese Subtitle */}
-        <div className="mb-4 relative z-10">
-          <h2 className="text-xl sm:text-2xl font-bold font-jp text-[#1c1917] dark:text-[#f4f4f5] tracking-tight">
-            {step.title}
-          </h2>
-          <p className="text-xs font-jp text-[#c84b31] dark:text-[#e05d44] font-medium mt-0.5">
-            {step.jpSubtitle}
-          </p>
-          <p className="text-xs sm:text-sm text-[#78716c] dark:text-[#a1a1aa] mt-2 leading-relaxed">
-            {step.description}
-          </p>
-        </div>
-
-        {/* Step Highlights Cards */}
-        <div className="space-y-2.5 mb-5 relative z-10">
-          {step.highlights.map((item, idx) => (
-            <div 
-              key={idx}
-              className="p-3 rounded-xl bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] flex items-start gap-3 shadow-xs"
-            >
-              <div className="w-5 h-5 rounded-full bg-[#c84b31]/10 text-[#c84b31] dark:text-[#e05d44] flex items-center justify-center shrink-0 mt-0.5 font-bold text-xs">
-                ✓
-              </div>
-              <div className="text-xs">
-                <span className="font-bold text-[#1c1917] dark:text-[#f4f4f5] block mb-0.5">
-                  {item.title}
-                </span>
-                <span className="text-[#78716c] dark:text-[#a1a1aa] leading-normal">
-                  {item.desc}
-                </span>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Helpful Tip Banner */}
-        <div className="p-3 rounded-xl bg-[#c84b31]/5 border border-[#c84b31]/20 text-xs text-[#78716c] dark:text-[#a1a1aa] mb-5 flex items-start gap-2 relative z-10">
-          <Sparkles className="w-4 h-4 text-[#c84b31] dark:text-[#e05d44] shrink-0 mt-0.5" />
-          <span className="text-[11px] leading-relaxed">
-            <strong className="text-[#1c1917] dark:text-[#f4f4f5]">Tips:</strong> {step.tip}
-          </span>
-        </div>
-
-        {/* Progress Dots Indicator */}
-        <div className="flex items-center justify-center gap-1.5 mb-5 relative z-10">
-          {TOUR_STEPS.map((_, idx) => (
-            <button
-              key={idx}
-              type="button"
-              onClick={() => setCurrentStep(idx)}
-              className={`h-1.5 rounded-full transition-all cursor-pointer ${
-                idx === currentStep 
-                  ? 'w-6 bg-[#c84b31] dark:bg-[#e05d44]' 
-                  : 'w-1.5 bg-[#d6d3d1] dark:bg-[#3f3f46] hover:bg-[#a8a29e]'
-              }`}
-              title={`Lompat ke langkah ${idx + 1}`}
-            />
-          ))}
-        </div>
-
-        {/* Bottom Navigation Buttons */}
-        <div className="flex items-center justify-between gap-3 pt-3 border-t border-[#e7e5e4] dark:border-[#27272a] relative z-10">
-          <button
-            type="button"
-            onClick={handlePrev}
-            disabled={isFirst}
-            className={`px-4 py-2.5 rounded-xl text-xs font-medium border flex items-center gap-1.5 transition cursor-pointer ${
-              isFirst
-                ? 'opacity-30 border-transparent text-[#78716c] cursor-not-allowed'
-                : 'bg-white dark:bg-[#1f1f23] border-[#e7e5e4] dark:border-[#27272a] text-[#1c1917] dark:text-[#f4f4f5] hover:bg-black/5 dark:hover:bg-white/5'
-            }`}
-          >
-            <ChevronLeft className="w-4 h-4" />
-            <span>Kembali</span>
-          </button>
-
-          <div className="flex items-center gap-2">
-            {step.targetModule && (
+          {/* Progress Dots */}
+          <div className="flex items-center justify-center gap-1.5 mb-4">
+            {TOUR_STEPS.map((_, idx) => (
               <button
+                key={idx}
                 type="button"
-                onClick={handleJumpToModule}
-                className="px-3 py-2.5 rounded-xl text-xs font-medium text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5] transition cursor-pointer"
-              >
-                Coba Buka Sekarang
-              </button>
-            )}
+                onClick={() => setCurrentStep(idx)}
+                className={`h-1.5 rounded-full transition-all cursor-pointer ${
+                  idx === currentStep 
+                    ? 'w-5 bg-[#c84b31] dark:bg-[#e05d44]' 
+                    : 'w-1.5 bg-[#d6d3d1] dark:bg-[#3f3f46]'
+                }`}
+                title={`Ke langkah ${idx + 1}`}
+              />
+            ))}
+          </div>
+
+          {/* Navigation Controls */}
+          <div className="flex items-center justify-between gap-3 pt-2.5 border-t border-[#e7e5e4] dark:border-[#27272a]">
+            <button
+              type="button"
+              onClick={handlePrev}
+              disabled={isFirst}
+              className={`px-3 py-2 rounded-xl text-xs font-medium border flex items-center gap-1 transition cursor-pointer ${
+                isFirst
+                  ? 'opacity-30 border-transparent text-[#78716c] cursor-not-allowed'
+                  : 'bg-white dark:bg-[#1f1f23] border-[#e7e5e4] dark:border-[#27272a] text-[#1c1917] dark:text-[#f4f4f5]'
+              }`}
+            >
+              <ChevronLeft className="w-4 h-4" />
+              <span>Sebelumnya</span>
+            </button>
 
             <button
               type="button"
               onClick={handleNext}
-              className="px-5 py-2.5 rounded-xl text-xs font-bold bg-[#c84b31] dark:bg-[#e05d44] hover:bg-[#a63a23] dark:hover:bg-[#c84b31] text-white flex items-center gap-1.5 transition shadow-xs cursor-pointer"
+              className="px-4 py-2 rounded-xl text-xs font-bold bg-[#c84b31] dark:bg-[#e05d44] hover:bg-[#a63a23] text-white flex items-center gap-1.5 transition shadow-xs cursor-pointer"
             >
-              <span>{isLast ? 'Mulai Belajar Sekarang' : 'Lanjut'}</span>
+              <span>{isLast ? 'Selesai & Paham' : 'Langkah Berikutnya'}</span>
               {isLast ? <Check className="w-4 h-4" /> : <ChevronRight className="w-4 h-4" />}
             </button>
           </div>

@@ -224,7 +224,7 @@ export function App() {
       <OnboardingTourModal
         isOpen={isTourOpen}
         onClose={handleCloseTour}
-        onNavigateToModule={(mod) => {
+        onSelectModule={(mod) => {
           setActiveModule(mod);
           if (mod === 'kana') {
             setKanaStage('selector');
