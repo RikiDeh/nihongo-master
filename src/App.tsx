@@ -4,6 +4,7 @@ import { KanaSelector } from './components/KanaQuiz/KanaSelector';
 import { KanaQuizSession } from './components/KanaQuiz/KanaQuizSession';
 import { KanaResults } from './components/KanaQuiz/KanaResults';
 import { KanaItem, QuizSummary, JLPTLevel } from './types';
+import { SrsReviewSession } from './components/SrsModule/SrsReviewSession';
 
 // Lazy-loaded components for optimal bundle size
 const KanjiExplorer = lazy(() => import('./components/KanjiModule/KanjiExplorer').then(m => ({ default: m.KanjiExplorer })));
@@ -16,6 +17,7 @@ const RoadmapView = lazy(() => import('./components/Roadmap/RoadmapView').then(m
 export function App() {
   const [activeModule, setActiveModule] = useState<ActiveModule>('kana');
   const [activeLevel, setActiveLevel] = useState<JLPTLevel | 'ALL' | undefined>(undefined);
+  const [isSrsOpen, setIsSrsOpen] = useState(false);
 
   // Kana Quiz Sub-states: 'selector' | 'quiz' | 'results'
   const [kanaStage, setKanaStage] = useState<'selector' | 'quiz' | 'results'>('selector');
@@ -75,6 +77,7 @@ export function App() {
               setKanaStage('selector');
             }
           }} 
+          onOpenSrsReview={() => setIsSrsOpen(true)}
         />
       )}
 
@@ -167,6 +170,11 @@ export function App() {
             <p>Fitur kuis Kana simultan, evaluasi Romaji, dan kurikulum N5 hingga N1.</p>
           </div>
         </footer>
+      )}
+
+      {/* Srs Review Session Modal */}
+      {isSrsOpen && (
+        <SrsReviewSession onClose={() => setIsSrsOpen(false)} />
       )}
     </div>
   );

@@ -1,20 +1,36 @@
-import React, { useState } from 'react';
-import { Sparkles, BookOpen, Layers, Award, Compass, Trophy, Swords, Settings } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Sparkles, BookOpen, Layers, Award, Compass, Trophy, Swords, Settings, Flame, CheckCircle2 } from 'lucide-react';
 import { SettingsModal } from './Settings/SettingsModal';
 import { useShowRomaji } from '../hooks/useShowRomaji';
 import { KANJI_DATA } from '../data/kanjiData';
 import { VOCAB_DATA } from '../data/vocabData';
+import { getDueSrsItems } from '../utils/srsEngine';
+import { getUserProgress, subscribeToStorage } from '../utils/storage';
 
 export type ActiveModule = 'kana' | 'kanji' | 'vocab' | 'grammar' | 'dojo' | 'quiz' | 'roadmap';
 
 interface NavbarProps {
   activeModule: ActiveModule;
   onSelectModule: (module: ActiveModule) => void;
+  onOpenSrsReview?: () => void;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ activeModule, onSelectModule }) => {
+export const Navbar: React.FC<NavbarProps> = ({ activeModule, onSelectModule, onOpenSrsReview }) => {
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [showRomaji, , toggleShowRomaji] = useShowRomaji();
+
+  const [dueCount, setDueCount] = useState<number>(() => getDueSrsItems().length);
+  const [dailyStreak, setDailyStreak] = useState<number>(() => getUserProgress().dailyStreak || 0);
+
+  useEffect(() => {
+    const updateStats = () => {
+      setDueCount(getDueSrsItems().length);
+      setDailyStreak(getUserProgress().dailyStreak || 0);
+    };
+
+    const unsubscribe = subscribeToStorage(updateStats);
+    return () => unsubscribe();
+  }, []);
 
   return (
     <>
@@ -163,6 +179,37 @@ export const Navbar: React.FC<NavbarProps> = ({ activeModule, onSelectModule }) 
               </span>
             </button>
 
+            {/* SRS Spaced Repetition Due Badge & Habit Streak */}
+            {onOpenSrsReview && (
+              <button
+                type="button"
+                onClick={onOpenSrsReview}
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl border text-xs font-bold transition cursor-pointer shadow-sm ${
+                  dueCount > 0
+                    ? 'bg-amber-500/15 border-amber-500/35 text-amber-300 hover:bg-amber-500/25 animate-pulse'
+                    : 'bg-emerald-500/10 border-emerald-500/25 text-emerald-300 hover:bg-emerald-500/20'
+                }`}
+                title="Buka Sesi SRS Review (Spaced Repetition System)"
+              >
+                {dueCount > 0 ? (
+                  <>
+                    <Flame className="w-3.5 h-3.5 text-amber-400 fill-amber-400" />
+                    <span>🔥 {dueCount} Review Siap</span>
+                  </>
+                ) : (
+                  <>
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+                    <span>✓ Review Tuntas</span>
+                  </>
+                )}
+                {dailyStreak > 0 && (
+                  <span className="ml-1 pl-1.5 border-l border-slate-700/80 text-[11px] text-amber-400/90 hidden md:inline">
+                    {dailyStreak}🔥
+                  </span>
+                )}
+              </button>
+            )}
+
             <button
               onClick={() => onSelectModule('dojo')}
               className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-rose-600/20 border border-rose-500/30 text-xs font-bold text-rose-300 hover:bg-rose-600/30 transition cursor-pointer"
@@ -232,6 +279,15 @@ export const Navbar: React.FC<NavbarProps> = ({ activeModule, onSelectModule }) 
             <Compass className="w-3.5 h-3.5 mb-0.5" />
             <span>0→N1</span>
           </button>
+          {onOpenSrsReview && (
+            <button
+              onClick={onOpenSrsReview}
+              className={`flex flex-col items-center py-1 px-1 rounded-lg ${dueCount > 0 ? 'text-amber-400 font-bold animate-pulse' : 'text-slate-400'}`}
+            >
+              <Flame className="w-3.5 h-3.5 mb-0.5 text-amber-500" />
+              <span>{dueCount > 0 ? `${dueCount} SRS` : 'SRS'}</span>
+            </button>
+          )}
         </div>
       </header>
 

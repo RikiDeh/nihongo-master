@@ -6,7 +6,7 @@ import { GRAMMAR_DATA } from '../data/grammarData';
 const STORAGE_KEY = 'nihongo_master_progress_v1';
 export const CURRENT_STORAGE_VERSION = 2;
 
-const DEFAULT_PROGRESS: UserProgressData = {
+export const DEFAULT_PROGRESS: UserProgressData = {
   version: CURRENT_STORAGE_VERSION,
   bookmarkedKanjiIds: [],
   masteredKanjiIds: [],
@@ -14,7 +14,15 @@ const DEFAULT_PROGRESS: UserProgressData = {
   masteredVocabIds: [],
   quizHistory: [],
   failedItemIds: [],
+  dailyStreak: 0,
+  lastActiveDate: '',
+  dailyGoalTarget: 15,
+  dailyCardsCompleted: 0,
+  srsRecords: {},
 };
+
+// Fallback in-memory storage for test/SSR environments (Bun test, Node)
+let inMemoryStorage: UserProgressData = { ...DEFAULT_PROGRESS };
 
 // Cached valid ID sets for O(1) membership checks
 let validKanjiIds: Set<string> | null = null;
@@ -39,6 +47,16 @@ function getValidGrammarIds(): Set<string> {
 export const MAX_QUIZ_HISTORY = 50;
 
 /**
+ * Format tanggal 'YYYY-MM-DD' lokal
+ */
+export function getLocalDateString(date: Date = new Date()): string {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const day = String(date.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+}
+
+/**
  * Pembersih otomatis untuk mencegah 'ID Hantu' dan pembengkakan memori di localStorage
  */
 export function sanitizeUserProgress(data: UserProgressData): { sanitized: UserProgressData; modified: boolean } {
@@ -56,6 +74,16 @@ export function sanitizeUserProgress(data: UserProgressData): { sanitized: UserP
   const rawHistory = Array.isArray(data.quizHistory) ? data.quizHistory : [];
   const cleanQuizHistory = rawHistory.slice(0, MAX_QUIZ_HISTORY);
 
+  // Sanitasi SRS records (pastikan hanya item valid)
+  const cleanSrsRecords: Record<string, typeof data.srsRecords[string]> = {};
+  if (data.srsRecords && typeof data.srsRecords === 'object') {
+    for (const [id, rec] of Object.entries(data.srsRecords)) {
+      if (kanjiSet.has(id) || vocabSet.has(id) || grammarSet.has(id)) {
+        cleanSrsRecords[id] = rec;
+      }
+    }
+  }
+
   const modified = 
     data.version !== CURRENT_STORAGE_VERSION ||
     cleanBookmarkedKanji.length !== data.bookmarkedKanjiIds.length ||
@@ -63,7 +91,11 @@ export function sanitizeUserProgress(data: UserProgressData): { sanitized: UserP
     cleanBookmarkedVocab.length !== data.bookmarkedVocabIds.length ||
     cleanMasteredVocab.length !== data.masteredVocabIds.length ||
     cleanFailedItems.length !== data.failedItemIds.length ||
-    cleanQuizHistory.length !== rawHistory.length;
+    cleanQuizHistory.length !== rawHistory.length ||
+    typeof data.dailyStreak !== 'number' ||
+    typeof data.dailyCardsCompleted !== 'number' ||
+    typeof data.srsRecords !== 'object' ||
+    Object.keys(cleanSrsRecords).length !== Object.keys(data.srsRecords || {}).length;
 
   return {
     sanitized: {
@@ -74,6 +106,11 @@ export function sanitizeUserProgress(data: UserProgressData): { sanitized: UserP
       masteredVocabIds: cleanMasteredVocab,
       quizHistory: cleanQuizHistory,
       failedItemIds: cleanFailedItems,
+      dailyStreak: typeof data.dailyStreak === 'number' ? data.dailyStreak : 0,
+      lastActiveDate: typeof data.lastActiveDate === 'string' ? data.lastActiveDate : '',
+      dailyGoalTarget: typeof data.dailyGoalTarget === 'number' ? data.dailyGoalTarget : 15,
+      dailyCardsCompleted: typeof data.dailyCardsCompleted === 'number' ? data.dailyCardsCompleted : 0,
+      srsRecords: cleanSrsRecords,
     },
     modified,
   };
@@ -120,7 +157,9 @@ function notifyListeners() {
  * Mengambil seluruh data progress dari localStorage dengan sanitasi otomatis
  */
 export function getUserProgress(): UserProgressData {
-  if (typeof window === 'undefined') return DEFAULT_PROGRESS;
+  if (typeof window === 'undefined') {
+    return inMemoryStorage;
+  }
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (!raw) return DEFAULT_PROGRESS;
@@ -133,6 +172,11 @@ export function getUserProgress(): UserProgressData {
       masteredVocabIds: Array.isArray(parsed.masteredVocabIds) ? parsed.masteredVocabIds : [],
       quizHistory: Array.isArray(parsed.quizHistory) ? parsed.quizHistory : [],
       failedItemIds: Array.isArray(parsed.failedItemIds) ? parsed.failedItemIds : [],
+      dailyStreak: typeof parsed.dailyStreak === 'number' ? parsed.dailyStreak : 0,
+      lastActiveDate: typeof parsed.lastActiveDate === 'string' ? parsed.lastActiveDate : '',
+      dailyGoalTarget: typeof parsed.dailyGoalTarget === 'number' ? parsed.dailyGoalTarget : 15,
+      dailyCardsCompleted: typeof parsed.dailyCardsCompleted === 'number' ? parsed.dailyCardsCompleted : 0,
+      srsRecords: typeof parsed.srsRecords === 'object' && parsed.srsRecords !== null ? parsed.srsRecords : {},
     };
 
     const { sanitized, modified } = sanitizeUserProgress(rawData);
@@ -150,12 +194,61 @@ export function getUserProgress(): UserProgressData {
 /**
  * Menyimpan seluruh data progress ke localStorage
  */
-function saveUserProgress(data: UserProgressData): void {
-  if (typeof window === 'undefined') return;
+export function saveUserProgress(data: UserProgressData): void {
+  if (typeof window === 'undefined') {
+    inMemoryStorage = data;
+    return;
+  }
   const success = safeSetLocalStorage(STORAGE_KEY, JSON.stringify(data));
   if (success) {
     notifyListeners();
   }
+}
+
+/**
+ * Evaluasi & Update Daily Study Habit Tracker (TIKET 21.2)
+ * - Jika tanggal sekarang == lastActiveDate: pertahankan streak, tambahkan dailyCardsCompleted +1
+ * - Jika tanggal sekarang == kemarin (lastActiveDate == yesterday): dailyStreak bertambah +1, dailyCardsCompleted direset ke 1, lastActiveDate = hari ini
+ * - Jika tanggal jeda > 1 hari: dailyStreak reset ke 1, dailyCardsCompleted = 1, lastActiveDate = hari ini
+ */
+export function evaluateDailyStreak(dateForTest?: Date): UserProgressData {
+  const data = getUserProgress();
+  const now = dateForTest || new Date();
+  const todayStr = getLocalDateString(now);
+
+  const yesterdayDate = new Date(now);
+  yesterdayDate.setDate(yesterdayDate.getDate() - 1);
+  const yesterdayStr = getLocalDateString(yesterdayDate);
+
+  let newStreak = data.dailyStreak;
+  let newCardsCompleted = data.dailyCardsCompleted;
+
+  if (!data.lastActiveDate) {
+    // Pengguna baru belajar pertama kali
+    newStreak = 1;
+    newCardsCompleted = 1;
+  } else if (data.lastActiveDate === todayStr) {
+    // Belajar lagi di hari yang sama
+    newCardsCompleted += 1;
+  } else if (data.lastActiveDate === yesterdayStr) {
+    // Belajar berturut-turut hari berikutnya (streak berlanjut)
+    newStreak += 1;
+    newCardsCompleted = 1;
+  } else {
+    // Jeda lebih dari 1 hari (streak terputus)
+    newStreak = 1;
+    newCardsCompleted = 1;
+  }
+
+  const updated: UserProgressData = {
+    ...data,
+    dailyStreak: newStreak,
+    dailyCardsCompleted: newCardsCompleted,
+    lastActiveDate: todayStr,
+  };
+
+  saveUserProgress(updated);
+  return updated;
 }
 
 // ============================================================================
@@ -269,6 +362,11 @@ export function importProgressJSON(jsonString: string): boolean {
       masteredVocabIds: Array.isArray(parsed.masteredVocabIds) ? parsed.masteredVocabIds : [],
       quizHistory: Array.isArray(parsed.quizHistory) ? parsed.quizHistory : [],
       failedItemIds: Array.isArray(parsed.failedItemIds) ? parsed.failedItemIds : [],
+      dailyStreak: typeof parsed.dailyStreak === 'number' ? parsed.dailyStreak : 0,
+      lastActiveDate: typeof parsed.lastActiveDate === 'string' ? parsed.lastActiveDate : null,
+      dailyGoalTarget: typeof parsed.dailyGoalTarget === 'number' ? parsed.dailyGoalTarget : 15,
+      dailyCardsCompleted: typeof parsed.dailyCardsCompleted === 'number' ? parsed.dailyCardsCompleted : 0,
+      srsRecords: (typeof parsed.srsRecords === 'object' && parsed.srsRecords !== null) ? parsed.srsRecords : {},
     };
 
     const { sanitized } = sanitizeUserProgress(validated);

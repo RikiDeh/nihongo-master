@@ -119,6 +119,27 @@ export interface QuizHistoryEntry {
   accuracy: number;
 }
 
+export type SrsStage = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7;
+// 0: Belum Dipelajari
+// 1: Pemula I (4 jam)
+// 2: Pemula II (8 jam)
+// 3: Menengah I (24 jam / 1 hari)
+// 4: Menengah II (72 jam / 3 hari)
+// 5: Mahir (168 jam / 1 minggu)
+// 6: Penguasaan Luhur (336 jam / 2 minggu)
+// 7: Burned / Permanen (720 jam / 1 bulan)
+
+export interface SrsItemRecord {
+  id: string; // ID unik kosakata/kanji/grammar
+  itemType: 'kanji' | 'vocab' | 'grammar';
+  level: JLPTLevel;
+  stage: SrsStage;
+  nextReviewTimestamp: number; // Unix timestamp kapan kartu jatuh tempo
+  lastReviewedTimestamp: number;
+  streak: number;
+  failCount: number; // Jika failCount >= 4, status menjadi 'leech'
+}
+
 export interface UserProgressData {
   version: number; // Schema version (v2)
   bookmarkedKanjiIds: string[];
@@ -127,6 +148,11 @@ export interface UserProgressData {
   masteredVocabIds: string[];
   quizHistory: QuizHistoryEntry[];
   failedItemIds: string[]; // Daftar ID kanji/kata yang pernah salah dijawab
+  dailyStreak: number; // rekor hari belajar berturut-turut
+  lastActiveDate: string; // format 'YYYY-MM-DD'
+  dailyGoalTarget: number; // default: 15 kartu per hari
+  dailyCardsCompleted: number; // jumlah kartu/kuis yang diselesaikan hari ini
+  srsRecords: Record<string, SrsItemRecord>; // menyimpan status seluruh kartu SRS
 }
 
 export type VerbGroup = 'godan' | 'ichidan' | 'irregular';
