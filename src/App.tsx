@@ -5,6 +5,7 @@ import { KanaQuizSession } from './components/KanaQuiz/KanaQuizSession';
 import { KanaResults } from './components/KanaQuiz/KanaResults';
 import { KanaItem, QuizSummary, JLPTLevel } from './types';
 import { SrsReviewSession } from './components/SrsModule/SrsReviewSession';
+import { OnboardingTourModal } from './components/Onboarding/OnboardingTourModal';
 
 // Lazy-loaded components for optimal bundle size
 const KanjiExplorer = lazy(() => import('./components/KanjiModule/KanjiExplorer').then(m => ({ default: m.KanjiExplorer })));
@@ -27,6 +28,20 @@ export function App() {
   });
   const [activeLevel, setActiveLevel] = useState<JLPTLevel | 'ALL' | undefined>(undefined);
   const [isSrsOpen, setIsSrsOpen] = useState(false);
+  const [isTourOpen, setIsTourOpen] = useState<boolean>(() => {
+    if (typeof window !== 'undefined') {
+      const hasSeenTour = localStorage.getItem('nihongo_tour_seen');
+      return !hasSeenTour;
+    }
+    return false;
+  });
+
+  const handleCloseTour = () => {
+    setIsTourOpen(false);
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('nihongo_tour_seen', 'true');
+    }
+  };
 
   // Kana Quiz Sub-states: 'selector' | 'quiz' | 'results'
   const [kanaStage, setKanaStage] = useState<'selector' | 'quiz' | 'results'>('selector');
@@ -87,6 +102,7 @@ export function App() {
             }
           }} 
           onOpenSrsReview={() => setIsSrsOpen(true)}
+          onOpenTour={() => setIsTourOpen(true)}
         />
       )}
 
@@ -203,6 +219,18 @@ export function App() {
       {isSrsOpen && (
         <SrsReviewSession onClose={() => setIsSrsOpen(false)} />
       )}
+
+      {/* Onboarding Tour Modal (Untuk Pengguna Baru & Tombol Bantuan) */}
+      <OnboardingTourModal
+        isOpen={isTourOpen}
+        onClose={handleCloseTour}
+        onNavigateToModule={(mod) => {
+          setActiveModule(mod);
+          if (mod === 'kana') {
+            setKanaStage('selector');
+          }
+        }}
+      />
     </div>
   );
 }

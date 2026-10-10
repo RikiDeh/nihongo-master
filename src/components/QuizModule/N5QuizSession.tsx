@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { MultipleChoiceQuestion } from '../../types';
-import { Volume2, CheckCircle2, XCircle, ArrowRight, Lightbulb } from 'lucide-react';
+import { Volume2, CheckCircle2, XCircle, ArrowRight, Lightbulb, AlertTriangle } from 'lucide-react';
 import { speakJapanese } from '../../utils/audio';
 
 interface N5QuizSessionProps {
@@ -25,6 +25,7 @@ export const N5QuizSession: React.FC<N5QuizSessionProps> = ({
   const [isAnswered, setIsAnswered] = useState(false);
   const [correctCount, setCorrectCount] = useState(0);
   const [userAnswers, setUserAnswers] = useState<(number | null)[]>([]);
+  const [showExitConfirm, setShowExitConfirm] = useState(false);
   const [timeLeft, setTimeLeft] = useState<number | null>(
     durationMinutes ? durationMinutes * 60 : null
   );
@@ -167,8 +168,8 @@ export const N5QuizSession: React.FC<N5QuizSessionProps> = ({
             </div>
           )}
           <button
-            onClick={onExit}
-            className="text-xs text-[#78716c] dark:text-[#a1a1aa] hover:text-[#c84b31] dark:hover:text-[#e05d44] transition cursor-pointer font-sans"
+            onClick={() => setShowExitConfirm(true)}
+            className="text-xs text-[#78716c] dark:text-[#a1a1aa] hover:text-[#c84b31] dark:hover:text-[#e05d44] transition cursor-pointer font-sans px-2 py-1 rounded border border-transparent hover:border-[#e7e5e4] dark:hover:border-[#27272a]"
           >
             Keluar ✕
           </button>
@@ -305,6 +306,39 @@ export const N5QuizSession: React.FC<N5QuizSessionProps> = ({
           </div>
         )}
       </div>
+
+      {/* Konfirmasi Keluar Modal Dialog (Mencegah salah sentuh di mobile) */}
+      {showExitConfirm && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs animate-fadeIn">
+          <div className="bg-[#faf8f5] dark:bg-[#18181b] border-2 border-[#c84b31]/40 dark:border-[#e05d44]/40 rounded-2xl max-w-sm w-full p-6 shadow-2xl relative text-center animate-slideUp">
+            <div className="w-12 h-12 rounded-full bg-[#c84b31]/10 text-[#c84b31] dark:text-[#e05d44] flex items-center justify-center mx-auto mb-3">
+              <AlertTriangle className="w-6 h-6" />
+            </div>
+            <h3 className="text-lg font-bold font-jp text-[#1c1917] dark:text-[#f4f4f5] mb-1.5">
+              Keluar dari Sesi Ujian?
+            </h3>
+            <p className="text-xs text-[#78716c] dark:text-[#a1a1aa] mb-6 leading-relaxed">
+              Progres soal yang sudah kamu jawab saat ini tidak akan disimpan ke riwayat skor jika keluar sebelum selesai.
+            </p>
+            <div className="flex items-center gap-2.5">
+              <button
+                type="button"
+                onClick={() => setShowExitConfirm(false)}
+                className="flex-1 py-2.5 px-4 rounded-xl border border-[#e7e5e4] dark:border-[#27272a] bg-white dark:bg-[#1f1f23] text-xs font-semibold text-[#1c1917] dark:text-[#f4f4f5] hover:bg-black/5 dark:hover:bg-white/5 transition cursor-pointer"
+              >
+                Lanjutkan Ujian
+              </button>
+              <button
+                type="button"
+                onClick={onExit}
+                className="flex-1 py-2.5 px-4 rounded-xl bg-[#c84b31] dark:bg-[#e05d44] hover:bg-[#a63a23] text-white text-xs font-bold transition shadow-xs cursor-pointer"
+              >
+                Ya, Keluar
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
