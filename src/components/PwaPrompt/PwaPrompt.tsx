@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Download, WifiOff, X, Sparkles } from 'lucide-react';
+import { Download, WifiOff, X, Sparkles, RefreshCw } from 'lucide-react';
+import { useRegisterSW } from 'virtual:pwa-register/react';
 
 interface BeforeInstallPromptEvent extends Event {
   prompt: () => Promise<void>;
@@ -11,6 +12,24 @@ export const PwaPrompt: React.FC = () => {
   const [showInstallBanner, setShowInstallBanner] = useState(false);
   const [isOffline, setIsOffline] = useState(!navigator.onLine);
   const [dismissedOffline, setDismissedOffline] = useState(false);
+
+  // Hook Service Worker dari vite-plugin-pwa untuk mendeteksi pembaruan otomatis
+  const {
+    needRefresh: [needRefresh, setNeedRefresh],
+    updateServiceWorker,
+  } = useRegisterSW({
+    onRegistered(r) {
+      if (r) {
+        // Cek update otomatis setiap 1 jam jika app terus terbuka
+        setInterval(() => {
+          r.update().catch(() => {});
+        }, 60 * 60 * 1000);
+      }
+    },
+    onRegisterError(error) {
+      console.debug('SW registration error:', error);
+    },
+  });
 
   useEffect(() => {
     // 1. Tangani event status koneksi (Offline / Online)
@@ -97,7 +116,39 @@ export const PwaPrompt: React.FC = () => {
         </div>
       )}
 
-      {/* 2. Banner Pasang Aplikasi PWA */}
+      {/* 2. Banner Pembaruan Versi Baru (Auto Update Prompt) */}
+      {needRefresh && (
+        <div className="fixed top-16 left-1/2 -translate-x-1/2 z-50 w-[92%] max-w-md animate-slideDown pointer-events-auto">
+          <div className="flex items-center justify-between gap-3 px-4 py-3 rounded-2xl bg-[#1c1917] dark:bg-[#1f1f23] text-white shadow-2xl border border-[#c84b31]/40 text-xs">
+            <div className="flex items-center gap-2.5">
+              <div className="w-8 h-8 rounded-lg bg-[#c84b31]/20 text-[#c84b31] dark:text-[#e05d44] flex items-center justify-center shrink-0">
+                <RefreshCw className="w-4 h-4 animate-spin" />
+              </div>
+              <div className="leading-tight">
+                <strong className="block text-[#f4f4f5] font-bold">Pembaruan Tersedia!</strong>
+                <span className="text-stone-300 text-[11px]">Versi baru siap dengan perbaikan & materi terkini.</span>
+              </div>
+            </div>
+            <div className="flex items-center gap-1.5 shrink-0">
+              <button
+                onClick={() => setNeedRefresh(false)}
+                className="px-2.5 py-1.5 rounded-lg text-stone-400 hover:text-white transition cursor-pointer text-[11px]"
+              >
+                Nanti
+              </button>
+              <button
+                onClick={() => updateServiceWorker(true)}
+                className="px-3 py-1.5 rounded-lg bg-[#c84b31] hover:bg-[#b03f27] text-white font-bold transition cursor-pointer text-[11px] shadow-sm flex items-center gap-1"
+              >
+                <RefreshCw className="w-3 h-3" />
+                <span>Perbarui</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* 3. Banner Pasang Aplikasi PWA */}
       {showInstallBanner && deferredPrompt && (
         <div className="fixed bottom-20 md:bottom-6 right-4 md:right-6 z-40 max-w-sm w-[90%] sm:w-auto animate-slideUp pointer-events-auto">
           <div className="bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] rounded-2xl p-4 shadow-xl flex flex-col gap-3">
