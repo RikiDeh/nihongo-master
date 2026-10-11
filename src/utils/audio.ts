@@ -127,6 +127,7 @@ if (typeof window !== 'undefined') {
  * Tier 3: Browser SpeechSynthesis API fallback.
  */
 let currentAudioInstance: HTMLAudioElement | null = null;
+let currentPlaybackSessionId = 0;
 
 export function speakJapanese(text: string): Promise<void> {
   return new Promise((resolve) => {
@@ -137,13 +138,26 @@ export function speakJapanese(text: string): Promise<void> {
 
     const cleanText = text.trim();
 
+    // Inkrementasi session ID untuk membatalkan proses playback sebelumnya
+    currentPlaybackSessionId++;
+    const thisPlaybackId = currentPlaybackSessionId;
+
     // Hentikan audio yang sedang diputar jika ada
     if (currentAudioInstance) {
       try {
         currentAudioInstance.pause();
-        currentAudioInstance.currentTime = 0;
+        currentAudioInstance.onended = null;
+        currentAudioInstance.onerror = null;
+        currentAudioInstance.src = '';
       } catch {}
       currentAudioInstance = null;
+    }
+
+    // Batalkan speech synthesis aktif jika ada
+    if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+      try {
+        window.speechSynthesis.cancel();
+      } catch {}
     }
 
     // Daftar sumber audio berurutan (Primary -> Secondary -> Fallback)
@@ -157,6 +171,9 @@ export function speakJapanese(text: string): Promise<void> {
     const cleanup = () => {
       if (!hasResolved) {
         hasResolved = true;
+        if (currentPlaybackSessionId === thisPlaybackId) {
+          currentAudioInstance = null;
+        }
         resolve();
       }
     };
@@ -164,9 +181,29 @@ export function speakJapanese(text: string): Promise<void> {
     let urlIndex = 0;
 
     const tryNextAudioSource = () => {
+      // Jika user sudah menekan tombol baru / sesi ini sudah usang, batalkan!
+      if (currentPlaybackSessionId !== thisPlaybackId) {
+        cleanup();
+        return;
+      }
+
       if (urlIndex < audioUrls.length) {
         const url = audioUrls[urlIndex];
         urlIndex++;
+
+        let hasFailedThisUrl = false;
+        const onUrlFailed = (reason: string, err?: unknown) => {
+          if (hasFailedThisUrl) return; // Mencegah pemanggilan ganda dari onerror + play().catch
+          hasFailedThisUrl = true;
+
+          if (currentPlaybackSessionId !== thisPlaybackId) {
+            cleanup();
+            return;
+          }
+
+          console.debug(`Audio source ${reason} (${url}):`, err);
+          tryNextAudioSource();
+        };
 
         try {
           const audio = new Audio();
@@ -175,30 +212,38 @@ export function speakJapanese(text: string): Promise<void> {
           // Elemen audio HTML5 bisa memutar media cross-origin secara opaque tanpa CORS header.
           (audio as any).referrerPolicy = 'no-referrer';
           audio.preload = 'auto';
-          audio.src = url;
 
           currentAudioInstance = audio;
 
-          audio.onended = cleanup;
-          audio.onerror = (err) => {
-            console.debug(`Audio source failed (${url}):`, err);
-            tryNextAudioSource();
+          audio.onended = () => {
+            if (currentPlaybackSessionId === thisPlaybackId) {
+              cleanup();
+            }
           };
+
+          audio.onerror = (err) => {
+            onUrlFailed('onerror', err);
+          };
+
+          audio.src = url;
 
           const playPromise = audio.play();
           if (playPromise !== undefined) {
             playPromise.catch((err) => {
-              console.debug(`Audio play() rejected (${url}):`, err);
-              tryNextAudioSource();
+              // Jika play() gagal (misal diblokir browser atau error network), coba URL berikutnya
+              onUrlFailed('playPromise.catch', err);
             });
           }
         } catch (e) {
-          console.debug(`Audio init exception:`, e);
-          tryNextAudioSource();
+          onUrlFailed('exception', e);
         }
       } else {
         // Jika semua CDN jaringan gagal (misal offline), beralih ke Web Speech API
-        fallbackSpeechSynthesis(cleanText).then(cleanup);
+        if (currentPlaybackSessionId === thisPlaybackId) {
+          fallbackSpeechSynthesis(cleanText).then(cleanup);
+        } else {
+          cleanup();
+        }
       }
     };
 
