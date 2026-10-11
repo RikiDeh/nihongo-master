@@ -127,7 +127,7 @@ export const KanaQuizSession: React.FC<KanaQuizSessionProps> = ({
         }
         return nextQueue;
       });
-    }, 500);
+    }, 900);
   };
 
   const handleWrongAnswer = () => {

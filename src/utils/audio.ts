@@ -149,7 +149,8 @@ export function speakJapanese(text: string): Promise<void> {
     // Daftar sumber audio berurutan (Primary -> Secondary -> Fallback)
     const audioUrls = [
       `https://dict.youdao.com/dictvoice?audio=${encodeURIComponent(cleanText)}&le=jap`,
-      `https://translate.google.com/translate_tts?ie=UTF-8&tl=ja&client=tw-ob&q=${encodeURIComponent(cleanText)}`
+      `https://translate.google.com/translate_tts?ie=UTF-8&tl=ja&client=tw-ob&q=${encodeURIComponent(cleanText)}`,
+      `https://translate.google.com/translate_tts?ie=UTF-8&tl=ja&client=gtx&q=${encodeURIComponent(cleanText)}`
     ];
 
     let hasResolved = false;
@@ -169,25 +170,30 @@ export function speakJapanese(text: string): Promise<void> {
 
         try {
           const audio = new Audio();
+          // PENTING: Jangan set audio.crossOrigin = 'anonymous' karena server audio
+          // tidak mengembalikan Access-Control-Allow-Origin, sehingga browser akan memblokirnya!
+          // Elemen audio HTML5 bisa memutar media cross-origin secara opaque tanpa CORS header.
           (audio as any).referrerPolicy = 'no-referrer';
-          audio.crossOrigin = 'anonymous';
           audio.preload = 'auto';
           audio.src = url;
 
           currentAudioInstance = audio;
 
           audio.onended = cleanup;
-          audio.onerror = () => {
+          audio.onerror = (err) => {
+            console.debug(`Audio source failed (${url}):`, err);
             tryNextAudioSource();
           };
 
           const playPromise = audio.play();
           if (playPromise !== undefined) {
-            playPromise.catch(() => {
+            playPromise.catch((err) => {
+              console.debug(`Audio play() rejected (${url}):`, err);
               tryNextAudioSource();
             });
           }
-        } catch {
+        } catch (e) {
+          console.debug(`Audio init exception:`, e);
           tryNextAudioSource();
         }
       } else {
