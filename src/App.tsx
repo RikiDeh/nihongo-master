@@ -9,15 +9,53 @@ import { OnboardingTourModal } from './components/Onboarding/OnboardingTourModal
 import { RoadmapStage, ROADMAP_ARCS } from './data/roadmapData';
 import { completeRoadmapStage, reportMissionActivity } from './utils/storage';
 import { PwaPrompt } from './components/PwaPrompt/PwaPrompt';
+import { ErrorBoundary } from './components/ErrorBoundary/ErrorBoundary';
 
-// Lazy-loaded components for optimal bundle size
-const KanjiExplorer = lazy(() => import('./components/KanjiModule/KanjiExplorer').then(m => ({ default: m.KanjiExplorer })));
-const VocabExplorer = lazy(() => import('./components/VocabModule/VocabExplorer').then(m => ({ default: m.VocabExplorer })));
-const GrammarExplorer = lazy(() => import('./components/GrammarModule/GrammarExplorer').then(m => ({ default: m.GrammarExplorer })));
-const ConjugationDojo = lazy(() => import('./components/ConjugationModule/ConjugationDojo').then(m => ({ default: m.ConjugationDojo })));
-const N5QuizCenter = lazy(() => import('./components/QuizModule/N5QuizCenter').then(m => ({ default: m.N5QuizCenter })));
-const RoadmapView = lazy(() => import('./components/Roadmap/RoadmapView').then(m => ({ default: m.RoadmapView })));
-const DesignShowroom = lazy(() => import('./components/DesignLab/DesignShowroom').then(m => ({ default: m.DesignShowroom })));
+/**
+ * Resilient lazy loader yang otomatis me-retry jika jaringan fluktuatif atau
+ * melakukan reload otomatis jika hash chunk berubah akibat deployment versi baru.
+ */
+function lazyWithRetry<T extends React.ComponentType<any>>(
+  factory: () => Promise<{ default: T }>
+) {
+  return lazy(async () => {
+    try {
+      return await factory();
+    } catch (error) {
+      console.warn('Initial lazy import failed, retrying once...', error);
+      try {
+        // Coba lagi setelah jeda 300ms
+        await new Promise((resolve) => setTimeout(resolve, 300));
+        return await factory();
+      } catch (retryError) {
+        // Jika tetap gagal karena chunk hilang (akibat deploy baru), auto-reload halaman
+        const isChunkError =
+          (retryError as Error)?.message?.includes('Failed to fetch dynamically imported module') ||
+          (retryError as Error)?.message?.includes('Importing a module script failed');
+
+        if (isChunkError && typeof window !== 'undefined') {
+          const reloadKey = 'nihongo_lazy_chunk_reload';
+          const lastReload = sessionStorage.getItem(reloadKey);
+          const now = Date.now();
+          if (!lastReload || now - parseInt(lastReload, 10) > 10000) {
+            sessionStorage.setItem(reloadKey, now.toString());
+            window.location.reload();
+          }
+        }
+        throw retryError;
+      }
+    }
+  });
+}
+
+// Lazy-loaded components dengan perlindungan auto-retry & auto-recovery
+const KanjiExplorer = lazyWithRetry(() => import('./components/KanjiModule/KanjiExplorer').then(m => ({ default: m.KanjiExplorer })));
+const VocabExplorer = lazyWithRetry(() => import('./components/VocabModule/VocabExplorer').then(m => ({ default: m.VocabExplorer })));
+const GrammarExplorer = lazyWithRetry(() => import('./components/GrammarModule/GrammarExplorer').then(m => ({ default: m.GrammarExplorer })));
+const ConjugationDojo = lazyWithRetry(() => import('./components/ConjugationModule/ConjugationDojo').then(m => ({ default: m.ConjugationDojo })));
+const N5QuizCenter = lazyWithRetry(() => import('./components/QuizModule/N5QuizCenter').then(m => ({ default: m.N5QuizCenter })));
+const RoadmapView = lazyWithRetry(() => import('./components/Roadmap/RoadmapView').then(m => ({ default: m.RoadmapView })));
+const DesignShowroom = lazyWithRetry(() => import('./components/DesignLab/DesignShowroom').then(m => ({ default: m.DesignShowroom })));
 
 export function App() {
   const [activeModule, setActiveModule] = useState<ActiveModule>(() => {
@@ -179,11 +217,12 @@ export function App() {
       {/* Main Workspace Canvas (Expansive Width) */}
       <div className="flex-1 flex flex-col min-w-0 min-h-screen">
         <main className={`flex-1 ${!isFullFocusMode ? 'pb-20 md:pb-12' : ''}`}>
-          <Suspense fallback={
-            <div className="flex items-center justify-center min-h-[50vh]">
-              <div className="w-8 h-8 border-4 border-[#c84b31] border-t-transparent rounded-full animate-spin" />
-            </div>
-          }>
+          <ErrorBoundary>
+            <Suspense fallback={
+              <div className="flex items-center justify-center min-h-[50vh]">
+                <div className="w-8 h-8 border-4 border-[#c84b31] border-t-transparent rounded-full animate-spin" />
+              </div>
+            }>
             {activeModule === 'kana' && (
               <>
                 {kanaStage === 'selector' && (
@@ -281,7 +320,8 @@ export function App() {
               <DesignShowroom onBackToApp={() => setActiveModule('kana')} />
             )}
           </Suspense>
-        </main>
+        </ErrorBoundary>
+      </main>
 
         {/* Minimal Editorial Footer (Added pb-20 on mobile so floating bottom bar never covers it) */}
         {!isFullFocusMode && (
