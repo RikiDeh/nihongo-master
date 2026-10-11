@@ -67,9 +67,7 @@ export const KanaQuizSession: React.FC<KanaQuizSessionProps> = ({
   }, [currentItem]);
 
   useEffect(() => {
-    if (currentItem && soundEnabled) {
-      speakJapanese(currentItem.character);
-    }
+    // Anti-Cheat: JANGAN putar audio saat kartu baru muncul agar user tidak bisa menebak hanya dari mendengar
     setUserInput('');
     setInputState('idle');
     setRevealedAnswer(null);
@@ -78,7 +76,7 @@ export const KanaQuizSession: React.FC<KanaQuizSessionProps> = ({
     setTimeout(() => {
       inputRef.current?.focus();
     }, 10);
-  }, [currentItem, soundEnabled]);
+  }, [currentItem]);
 
   const finishSession = React.useCallback(() => {
     const attempts = Array.from(attemptsMapRef.current.values());
@@ -105,7 +103,10 @@ export const KanaQuizSession: React.FC<KanaQuizSessionProps> = ({
     isTransitioningRef.current = true;
 
     setInputState('correct');
-    if (soundEnabled) playSuccessSound();
+    if (soundEnabled) {
+      playSuccessSound();
+      speakJapanese(currentItem.character);
+    }
 
     setStreak(s => {
       const next = s + 1;
@@ -126,14 +127,17 @@ export const KanaQuizSession: React.FC<KanaQuizSessionProps> = ({
         }
         return nextQueue;
       });
-    }, 350);
+    }, 500);
   };
 
   const handleWrongAnswer = () => {
     if (isTransitioningRef.current) return;
 
     setInputState('wrong');
-    if (soundEnabled) playErrorSound();
+    if (soundEnabled) {
+      playErrorSound();
+      speakJapanese(currentItem.character);
+    }
     setStreak(0);
     setAutoAdvanceCountdown(3);
 
@@ -324,14 +328,17 @@ export const KanaQuizSession: React.FC<KanaQuizSessionProps> = ({
             {currentItem.category === 'gojuuon' ? 'Gojūon' : currentItem.category === 'dakuten' ? 'Dakuten' : 'Yōon'}
           </span>
 
-          <button
-            type="button"
-            onClick={() => speakJapanese(currentItem.character)}
-            title="Dengarkan pengucapan asli"
-            className="p-1 text-[#78716c] hover:text-[#1c1917] dark:hover:text-[#f4f4f5] transition cursor-pointer"
-          >
-            <Volume2 className="w-3.5 h-3.5" />
-          </button>
+          {/* Tombol audio HANYA muncul setelah user menjawab (bukan saat menebak) agar tidak membocorkan jawaban */}
+          {inputState !== 'idle' && (
+            <button
+              type="button"
+              onClick={() => speakJapanese(currentItem.character)}
+              title="Dengarkan pengucapan asli"
+              className="p-1 text-[#78716c] hover:text-[#1c1917] dark:hover:text-[#f4f4f5] transition cursor-pointer animate-pop"
+            >
+              <Volume2 className="w-3.5 h-3.5" />
+            </button>
+          )}
         </div>
 
         {/* Notice for Re-queue */}

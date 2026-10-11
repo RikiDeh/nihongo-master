@@ -107,10 +107,24 @@ export function playCompletionSound() {
 }
 
 /**
- * Robust Japanese speech playback.
- * 1. Primary: Native Japanese voice streaming via Google TTS audio.
- *    Works 100% reliably on Linux, Windows, Mac, Android, iOS without needing OS Japanese TTS voices!
- * 2. Fallback: Browser Web Speech API (speechSynthesis) if offline.
+// Auto-unlock AudioContext on user gesture (fixes Firefox Linux suspended state)
+if (typeof window !== 'undefined') {
+  const unlockAudioContext = () => {
+    const ctx = getAudioContext();
+    if (ctx && ctx.state === 'suspended') {
+      ctx.resume().catch(() => {});
+    }
+  };
+  window.addEventListener('click', unlockAudioContext, { passive: true });
+  window.addEventListener('keydown', unlockAudioContext, { passive: true });
+  window.addEventListener('touchstart', unlockAudioContext, { passive: true });
+}
+
+/**
+ * Robust Multi-Tier Japanese Audio Engine.
+ * Tier 1: Youdao Native Japanese Pronunciation CDN (Bypass CORS/Referer restriction, 100% works on Firefox Linux).
+ * Tier 2: Google TTS endpoint (with no-referrer policy).
+ * Tier 3: Browser SpeechSynthesis API fallback.
  */
 let currentAudioInstance: HTMLAudioElement | null = null;
 
@@ -123,7 +137,7 @@ export function speakJapanese(text: string): Promise<void> {
 
     const cleanText = text.trim();
 
-    // Stop currently playing audio if any
+    // Hentikan audio yang sedang diputar jika ada
     if (currentAudioInstance) {
       try {
         currentAudioInstance.pause();
@@ -132,19 +146,11 @@ export function speakJapanese(text: string): Promise<void> {
       currentAudioInstance = null;
     }
 
-    // Try Google Translate Japanese TTS endpoint
-    const ttsUrl = `https://translate.google.com/translate_tts?ie=UTF-8&tl=ja&client=tw-ob&q=${encodeURIComponent(cleanText)}`;
-    
-    let audio = audioCache.get(cleanText);
-    if (!audio) {
-      audio = new Audio(ttsUrl);
-      audio.preload = 'auto';
-      audioCache.set(cleanText, audio);
-    } else {
-      audio.currentTime = 0;
-    }
-
-    currentAudioInstance = audio;
+    // Daftar sumber audio berurutan (Primary -> Secondary -> Fallback)
+    const audioUrls = [
+      `https://dict.youdao.com/dictvoice?audio=${encodeURIComponent(cleanText)}&le=jap`,
+      `https://translate.google.com/translate_tts?ie=UTF-8&tl=ja&client=tw-ob&q=${encodeURIComponent(cleanText)}`
+    ];
 
     let hasResolved = false;
     const cleanup = () => {
@@ -154,20 +160,43 @@ export function speakJapanese(text: string): Promise<void> {
       }
     };
 
-    audio.onended = cleanup;
-    
-    audio.onerror = () => {
-      // If network fails (e.g. offline), fall back to Web Speech API
-      fallbackSpeechSynthesis(cleanText).then(cleanup);
+    let urlIndex = 0;
+
+    const tryNextAudioSource = () => {
+      if (urlIndex < audioUrls.length) {
+        const url = audioUrls[urlIndex];
+        urlIndex++;
+
+        try {
+          const audio = new Audio();
+          (audio as any).referrerPolicy = 'no-referrer';
+          audio.crossOrigin = 'anonymous';
+          audio.preload = 'auto';
+          audio.src = url;
+
+          currentAudioInstance = audio;
+
+          audio.onended = cleanup;
+          audio.onerror = () => {
+            tryNextAudioSource();
+          };
+
+          const playPromise = audio.play();
+          if (playPromise !== undefined) {
+            playPromise.catch(() => {
+              tryNextAudioSource();
+            });
+          }
+        } catch {
+          tryNextAudioSource();
+        }
+      } else {
+        // Jika semua CDN jaringan gagal (misal offline), beralih ke Web Speech API
+        fallbackSpeechSynthesis(cleanText).then(cleanup);
+      }
     };
 
-    const playPromise = audio.play();
-    if (playPromise !== undefined) {
-      playPromise.catch(() => {
-        // Autoplay policy or error, fallback to Web Speech API
-        fallbackSpeechSynthesis(cleanText).then(cleanup);
-      });
-    }
+    tryNextAudioSource();
   });
 }
 
