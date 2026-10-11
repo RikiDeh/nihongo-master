@@ -284,26 +284,26 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
       {/* MOBILE TOP BAR & BOTTOM DOCK (MOBILE PHONES) */}
       <div className="md:hidden">
         {/* Mobile Top Header */}
-        <header className="sticky top-0 z-30 bg-[#faf8f5]/95 dark:bg-[#18181b]/95 backdrop-blur-md border-b border-[#e7e5e4] dark:border-[#27272a] px-3 sm:px-4 py-2.5 flex items-center justify-between">
+        <header className="sticky top-0 z-30 bg-[#faf8f5]/95 dark:bg-[#18181b]/95 backdrop-blur-md border-b border-[#e7e5e4] dark:border-[#27272a] px-3.5 sm:px-5 py-2.5 flex items-center justify-between">
           <div 
             onClick={() => onSelectModule('roadmap')}
-            className="flex items-center gap-2 cursor-pointer"
+            className="flex items-center gap-2.5 cursor-pointer active:opacity-80 transition"
           >
-            <div className="w-7 h-7 rounded bg-[#c84b31] dark:bg-[#e05d44] flex items-center justify-center text-white font-jp font-bold text-sm shadow-xs">
+            <div className="w-7 h-7 rounded-lg bg-[#c84b31] dark:bg-[#e05d44] flex items-center justify-center text-white font-jp font-bold text-xs shadow-xs">
               日
             </div>
-            <span className="font-jp font-bold text-sm text-[#1c1917] dark:text-[#f4f4f5]">
+            <span className="font-jp font-bold text-sm tracking-tight text-[#1c1917] dark:text-[#f4f4f5]">
               日本語マスター
             </span>
           </div>
 
-          <div className="flex items-center gap-1.5 sm:gap-2">
+          <div className="flex items-center gap-2">
             {/* Quick Romaji Toggle on Mobile Header */}
             <button
               id="tour-header-romaji"
               type="button"
               onClick={toggleShowRomaji}
-              className={`px-2 py-1 rounded-lg text-xs font-mono font-bold border transition cursor-pointer ${
+              className={`h-8 px-2.5 rounded-lg text-xs font-mono font-bold border transition cursor-pointer flex items-center justify-center ${
                 showRomaji
                   ? 'bg-[#2e7d32]/10 border-[#2e7d32]/30 text-[#2e7d32] dark:text-[#4ade80]'
                   : 'bg-white dark:bg-[#1f1f23] border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] dark:text-[#a1a1aa]'
@@ -319,18 +319,21 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
                 id="tour-header-srs"
                 type="button"
                 onClick={onOpenSrsReview}
-                className="px-2 py-1 rounded-lg text-xs font-mono font-bold border border-[#c84b31]/30 bg-[#c84b31]/10 text-[#c84b31] dark:text-[#e05d44]"
+                className="h-8 px-2.5 rounded-lg text-xs font-mono font-bold border border-[#c84b31]/30 bg-[#c84b31]/10 text-[#c84b31] dark:text-[#e05d44] flex items-center gap-1 active:scale-95 transition"
                 title="Sesi Review SRS Harian"
               >
-                🔥 {dueCount}
+                <Flame className="w-3.5 h-3.5 fill-current" />
+                <span>{dueCount}</span>
               </button>
             )}
+
+            <div className="h-4 w-px bg-[#e7e5e4] dark:bg-[#27272a] mx-0.5" />
 
             {onOpenTour && (
               <button
                 type="button"
                 onClick={onOpenTour}
-                className="p-1.5 sm:p-2 rounded-lg border border-[#e7e5e4] dark:border-[#27272a] text-[#c84b31] dark:text-[#e05d44] hover:bg-black/5 dark:hover:bg-white/5 transition cursor-pointer"
+                className="w-8 h-8 rounded-lg border border-[#e7e5e4] dark:border-[#27272a] text-[#c84b31] dark:text-[#e05d44] bg-white dark:bg-[#1f1f23] hover:bg-black/5 dark:hover:bg-white/5 transition cursor-pointer flex items-center justify-center shrink-0"
                 title="Panduan Pemula"
                 aria-label="Buka Panduan Pemula"
               >
@@ -341,7 +344,7 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
             <button
               type="button"
               onClick={toggleTheme}
-              className="p-1.5 sm:p-2 rounded-lg border border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5] transition cursor-pointer"
+              className="w-8 h-8 rounded-lg border border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] dark:text-[#a1a1aa] bg-white dark:bg-[#1f1f23] hover:text-[#1c1917] dark:hover:text-[#f4f4f5] transition cursor-pointer flex items-center justify-center shrink-0"
               aria-label={isDark ? 'Ganti ke tema terang Washi' : 'Ganti ke tema gelap Sumi'}
             >
               {isDark ? <Sun className="w-4 h-4 text-amber-400" /> : <Moon className="w-4 h-4" />}
@@ -350,7 +353,7 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
             <button
               type="button"
               onClick={() => setIsSettingsOpen(true)}
-              className="p-1.5 sm:p-2 rounded-lg border border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5] transition cursor-pointer"
+              className="w-8 h-8 rounded-lg border border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] dark:text-[#a1a1aa] bg-white dark:bg-[#1f1f23] hover:text-[#1c1917] dark:hover:text-[#f4f4f5] transition cursor-pointer flex items-center justify-center shrink-0"
               aria-label="Buka Pengaturan"
             >
               <Settings className="w-4 h-4" />

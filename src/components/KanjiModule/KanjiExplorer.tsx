@@ -337,10 +337,10 @@ export const KanjiExplorer: React.FC<KanjiExplorerProps> = ({ onGoToQuiz, initia
       {activeTab === 'kanji' && (
         <>
           {/* Controls: Level & Category & Search */}
-          <div className="bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] rounded-xl p-4 mb-6 flex flex-col gap-3 shadow-xs">
-            <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
+          <div className="bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] rounded-2xl p-4 sm:p-5 mb-8 flex flex-col gap-4 shadow-xs">
+            <div className="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4">
               {/* JLPT Level filter */}
-              <div className="flex items-center gap-1 overflow-x-auto w-full sm:w-auto pb-1 sm:pb-0">
+              <div className="flex items-center gap-1.5 overflow-x-auto pb-1 lg:pb-0 scrollbar-none">
                 {levels.map(lvl => {
                   const count = lvl === 'ALL'
                     ? KANJI_DATA.length
@@ -352,7 +352,7 @@ export const KanjiExplorer: React.FC<KanjiExplorerProps> = ({ onGoToQuiz, initia
                         setSelectedLevel(lvl);
                         setSelectedCategory('ALL');
                       }}
-                      className={`px-3 py-1.5 rounded-lg text-xs font-mono font-medium transition cursor-pointer shrink-0 border ${
+                      className={`px-3.5 py-1.5 rounded-lg text-xs font-mono font-medium transition cursor-pointer shrink-0 border ${
                         selectedLevel === lvl
                           ? 'bg-[#1c1917] dark:bg-[#f4f4f5] text-white dark:text-[#18181b] border-transparent font-bold shadow-xs'
                           : 'bg-[#faf8f5] dark:bg-[#18181b] border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
@@ -365,10 +365,10 @@ export const KanjiExplorer: React.FC<KanjiExplorerProps> = ({ onGoToQuiz, initia
               </div>
 
               {/* Search and Bookmark Filter */}
-              <div className="flex items-center gap-2 w-full sm:w-auto">
+              <div className="flex items-center gap-2.5 w-full lg:w-auto">
                 <button
                   onClick={() => setOnlyBookmarked(prev => !prev)}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-sans font-medium flex items-center gap-1.5 transition cursor-pointer shrink-0 border ${
+                  className={`px-3.5 py-2 rounded-lg text-xs font-sans font-medium flex items-center gap-1.5 transition cursor-pointer shrink-0 border ${
                     onlyBookmarked
                       ? 'bg-[#c84b31]/10 border-[#c84b31]/40 text-[#c84b31] dark:text-[#e05d44] font-bold'
                       : 'bg-[#faf8f5] dark:bg-[#18181b] border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
@@ -379,14 +379,14 @@ export const KanjiExplorer: React.FC<KanjiExplorerProps> = ({ onGoToQuiz, initia
                   <span>Favorit ({bookmarkedCount})</span>
                 </button>
 
-                <div className="relative flex-1 sm:w-64">
-                  <Search className="w-3.5 h-3.5 text-[#78716c] dark:text-[#a1a1aa] absolute left-3 top-1/2 -translate-y-1/2" />
+                <div className="relative flex-1 sm:w-72">
+                  <Search className="w-4 h-4 text-[#78716c] dark:text-[#a1a1aa] absolute left-3 top-1/2 -translate-y-1/2" />
                   <input
                     type="text"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     placeholder="Cari kanji, arti, On/Kun..."
-                    className="w-full pl-8 pr-3 py-1.5 rounded-lg bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a] text-xs text-[#1c1917] dark:text-[#f4f4f5] placeholder-[#a8a29e] dark:placeholder-[#71717a] focus:outline-none focus:border-[#1c1917] dark:focus:border-[#f4f4f5]"
+                    className="w-full pl-9 pr-3 py-2 rounded-lg bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a] text-xs text-[#1c1917] dark:text-[#f4f4f5] placeholder-[#a8a29e] dark:placeholder-[#71717a] focus:outline-none focus:border-[#1c1917] dark:focus:border-[#f4f4f5]"
                   />
                 </div>
               </div>

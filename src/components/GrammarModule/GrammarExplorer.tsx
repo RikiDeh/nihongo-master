@@ -47,20 +47,20 @@ export const GrammarExplorer: React.FC<GrammarExplorerProps> = ({ onGoToQuiz, in
       <div>
         {/* Sub-module Switcher Bar */}
         <div className="w-full max-w-5xl mx-auto px-4 pt-6 flex justify-center">
-          <div className="bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] p-1 rounded-lg flex items-center gap-1 shadow-xs">
+          <div className="bg-[#f4f0e8]/80 dark:bg-[#1f1f23]/80 border border-[#e7e5e4] dark:border-[#27272a] p-1 rounded-xl flex items-center gap-1.5 shadow-xs">
             <button
               type="button"
               onClick={() => setSubModule('patterns')}
-              className="px-4 py-2 rounded-md text-xs font-mono font-medium transition text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5] cursor-pointer"
+              className="px-4 py-2 rounded-lg text-xs font-mono transition cursor-pointer text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]"
             >
               [文法] Pola Kalimat N5→N1
             </button>
             <button
               type="button"
               onClick={() => setSubModule('particles')}
-              className="px-4 py-2 rounded-md text-xs font-mono font-bold transition bg-[#1c1917] dark:bg-[#f4f4f5] text-white dark:text-[#18181b] shadow-xs cursor-pointer"
+              className="px-4 py-2 rounded-lg text-xs font-mono font-bold transition bg-white dark:bg-[#27272a] text-[#1c1917] dark:text-[#f4f4f5] shadow-xs border border-[#d6d3d1] dark:border-[#3f3f46] cursor-pointer"
             >
-              [助詞] Latihan Partikel N5
+              [助詞] Latihan Partikel N5•N4•N3
             </button>
           </div>
         </div>
@@ -73,20 +73,20 @@ export const GrammarExplorer: React.FC<GrammarExplorerProps> = ({ onGoToQuiz, in
     <div className="w-full max-w-5xl mx-auto px-4 py-8 pb-24">
       {/* Sub-module Switcher Bar */}
       <div className="flex justify-center mb-8">
-        <div className="bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] p-1 rounded-lg flex items-center gap-1 shadow-xs">
+        <div className="bg-[#f4f0e8]/80 dark:bg-[#1f1f23]/80 border border-[#e7e5e4] dark:border-[#27272a] p-1 rounded-xl flex items-center gap-1.5 shadow-xs">
           <button
             type="button"
             onClick={() => setSubModule('patterns')}
-            className="px-4 py-2 rounded-md text-xs font-mono font-bold transition bg-[#1c1917] dark:bg-[#f4f4f5] text-white dark:text-[#18181b] shadow-xs cursor-pointer"
+            className="px-4 py-2 rounded-lg text-xs font-mono font-bold transition bg-white dark:bg-[#27272a] text-[#1c1917] dark:text-[#f4f4f5] shadow-xs border border-[#d6d3d1] dark:border-[#3f3f46] cursor-pointer"
           >
             [文法] Pola Kalimat N5→N1
           </button>
           <button
             type="button"
             onClick={() => setSubModule('particles')}
-            className="px-4 py-2 rounded-md text-xs font-mono font-medium transition text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5] cursor-pointer"
+            className="px-4 py-2 rounded-lg text-xs font-mono transition cursor-pointer text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]"
           >
-            [助詞] Latihan Partikel N5
+            [助詞] Latihan Partikel N5•N4•N3
           </button>
         </div>
       </div>

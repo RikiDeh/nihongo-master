@@ -230,11 +230,11 @@ export const KanaSelector: React.FC<KanaSelectorProps> = ({ onStartQuiz }) => {
       </div>
 
       {/* Control Strip & Presets */}
-      <div className="bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] rounded-xl p-4 mb-6 shadow-xs">
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-3 pb-3 border-b border-[#e7e5e4] dark:border-[#27272a]">
+      <div className="bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] rounded-2xl p-4 sm:p-5 mb-8 shadow-xs">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-4 pb-4 border-b border-[#e7e5e4] dark:border-[#27272a]">
           {/* Category Tabs */}
-          <div className="flex items-center gap-1.5 overflow-x-auto w-full sm:w-auto pb-1 sm:pb-0 scrollbar-none">
-            <span className="text-[11px] font-mono uppercase text-[#78716c] dark:text-[#a1a1aa] mr-1 shrink-0">Tabel:</span>
+          <div className="flex items-center gap-2 overflow-x-auto w-full sm:w-auto pb-1 sm:pb-0 scrollbar-none">
+            <span className="text-[11px] font-mono uppercase tracking-wider text-[#78716c] dark:text-[#a1a1aa] mr-1 shrink-0">Tabel:</span>
             {[
               { id: 'gojuuon', label: '50 Bunyi Dasar (Gojūon)' },
               { id: 'dakuten', label: 'Bunyi Keruh (Dakuten)' },
@@ -244,7 +244,7 @@ export const KanaSelector: React.FC<KanaSelectorProps> = ({ onStartQuiz }) => {
                 key={tab.id}
                 type="button"
                 onClick={() => setCategoryView(tab.id as any)}
-                className={`px-3 py-1.5 rounded-lg text-xs font-medium transition cursor-pointer border whitespace-nowrap shrink-0 ${
+                className={`px-3.5 py-1.5 rounded-lg text-xs font-medium transition cursor-pointer border whitespace-nowrap shrink-0 ${
                   categoryView === tab.id
                     ? 'bg-[#1c1917] dark:bg-[#f4f4f5] text-white dark:text-[#18181b] border-transparent font-bold shadow-xs'
                     : 'bg-[#faf8f5] dark:bg-[#18181b] border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
@@ -255,23 +255,23 @@ export const KanaSelector: React.FC<KanaSelectorProps> = ({ onStartQuiz }) => {
             ))}
           </div>
 
-          <div className="flex items-center gap-2 text-xs font-mono">
+          <div className="flex items-center gap-2 text-xs font-mono shrink-0">
             <span className="text-[#78716c] dark:text-[#a1a1aa]">Terpilih:</span>
-            <span className="px-2.5 py-0.5 rounded border border-[#c84b31]/30 text-[#c84b31] dark:text-[#e05d44] bg-[#c84b31]/5 font-bold">
+            <span className="px-3 py-1 rounded-lg border border-[#c84b31]/30 text-[#c84b31] dark:text-[#e05d44] bg-[#c84b31]/5 font-bold">
               {selectedTotal} Karakter
             </span>
           </div>
         </div>
 
         {/* Quick Presets Buttons (Scrollable chips on mobile, clean layout) */}
-        <div className="flex items-center gap-1.5 overflow-x-auto pb-1 no-scrollbar -mx-1 px-1">
-          <span className="text-[10px] font-mono uppercase text-[#78716c] dark:text-[#a1a1aa] mr-1 shrink-0">Preset:</span>
+        <div className="flex items-center gap-2 overflow-x-auto pb-1 no-scrollbar pt-1">
+          <span className="text-[10px] font-mono uppercase tracking-wider text-[#78716c] dark:text-[#a1a1aa] mr-1 shrink-0">Preset:</span>
           
           {/* Preset: Dasar 46 Keduanya */}
           <button
             type="button"
             onClick={() => togglePresetItems(gojuuonBothItems)}
-            className={`min-h-[36px] px-3 py-1.5 rounded-lg text-xs transition cursor-pointer flex items-center gap-1.5 border shrink-0 ${
+            className={`min-h-[36px] px-3.5 py-1.5 rounded-lg text-xs transition cursor-pointer flex items-center gap-1.5 border shrink-0 ${
               isGojuuonBothActive
                 ? 'bg-[#c84b31]/10 dark:bg-[#e05d44]/15 border-[#c84b31] dark:border-[#e05d44] text-[#c84b31] dark:text-[#e05d44] font-bold shadow-xs'
                 : 'bg-[#faf8f5] dark:bg-[#18181b] hover:bg-[#e7e5e4] dark:hover:bg-[#27272a] border-[#e7e5e4] dark:border-[#27272a] text-[#1c1917] dark:text-[#f4f4f5]'
@@ -279,14 +279,14 @@ export const KanaSelector: React.FC<KanaSelectorProps> = ({ onStartQuiz }) => {
             title={isGojuuonBothActive ? 'Klik untuk membatalkan pilihan Dasar 46' : 'Klik untuk memilih Dasar 46'}
           >
             <span className="font-mono text-[10px] font-bold">{isGojuuonBothActive ? '✓' : '+'}</span>
-            <span>Dasar 46 Keduanya</span>
+            <span>Dasar 46</span>
           </button>
 
           {/* Preset: Semua Hiragana */}
           <button
             type="button"
             onClick={() => togglePresetItems(hiraganaAllItems)}
-            className={`min-h-[36px] px-3 py-1.5 rounded-lg text-xs transition cursor-pointer flex items-center gap-1.5 border shrink-0 ${
+            className={`min-h-[36px] px-3.5 py-1.5 rounded-lg text-xs transition cursor-pointer flex items-center gap-1.5 border shrink-0 ${
               isHiraganaAllActive
                 ? 'bg-[#c84b31]/10 dark:bg-[#e05d44]/15 border-[#c84b31] dark:border-[#e05d44] text-[#c84b31] dark:text-[#e05d44] font-bold shadow-xs'
                 : 'bg-[#faf8f5] dark:bg-[#18181b] hover:bg-[#e7e5e4] dark:hover:bg-[#27272a] border-[#e7e5e4] dark:border-[#27272a] text-[#1c1917] dark:text-[#f4f4f5]'
@@ -301,7 +301,7 @@ export const KanaSelector: React.FC<KanaSelectorProps> = ({ onStartQuiz }) => {
           <button
             type="button"
             onClick={() => togglePresetItems(katakanaAllItems)}
-            className={`min-h-[36px] px-3 py-1.5 rounded-lg text-xs transition cursor-pointer flex items-center gap-1.5 border shrink-0 ${
+            className={`min-h-[36px] px-3.5 py-1.5 rounded-lg text-xs transition cursor-pointer flex items-center gap-1.5 border shrink-0 ${
               isKatakanaAllActive
                 ? 'bg-[#1e3a8a]/10 dark:bg-[#3b82f6]/15 border-[#1e3a8a] dark:border-[#3b82f6] text-[#1e3a8a] dark:text-[#3b82f6] font-bold shadow-xs'
                 : 'bg-[#faf8f5] dark:bg-[#18181b] hover:bg-[#e7e5e4] dark:hover:bg-[#27272a] border-[#e7e5e4] dark:border-[#27272a] text-[#1c1917] dark:text-[#f4f4f5]'
@@ -316,7 +316,7 @@ export const KanaSelector: React.FC<KanaSelectorProps> = ({ onStartQuiz }) => {
           <button
             type="button"
             onClick={() => togglePresetItems(allItemsList)}
-            className={`min-h-[36px] px-3 py-1.5 rounded-lg text-xs transition cursor-pointer flex items-center gap-1.5 border shrink-0 ${
+            className={`min-h-[36px] px-3.5 py-1.5 rounded-lg text-xs transition cursor-pointer flex items-center gap-1.5 border shrink-0 ${
               isAllActive
                 ? 'bg-[#1c1917] dark:bg-[#f4f4f5] border-[#1c1917] dark:border-[#f4f4f5] text-white dark:text-[#18181b] font-bold shadow-xs'
                 : 'bg-[#faf8f5] dark:bg-[#18181b] hover:bg-[#e7e5e4] dark:hover:bg-[#27272a] border-[#e7e5e4] dark:border-[#27272a] text-[#1c1917] dark:text-[#f4f4f5]'
@@ -324,14 +324,17 @@ export const KanaSelector: React.FC<KanaSelectorProps> = ({ onStartQuiz }) => {
             title={isAllActive ? 'Klik untuk membatalkan seluruh pilihan' : 'Klik untuk memilih seluruh Hiragana & Katakana'}
           >
             <span className="font-mono text-[10px] font-bold">{isAllActive ? '✓' : '+'}</span>
-            <span>Semua (Hira + Kata)</span>
+            <span>Semua (Hira+Kata)</span>
           </button>
+
+          {/* Separator */}
+          <div className="h-5 w-px bg-[#e7e5e4] dark:border-[#27272a] mx-1 shrink-0" />
 
           {/* Reset button */}
           <button
             type="button"
             onClick={() => selectPreset('clear')}
-            className="min-h-[36px] px-3 py-1.5 rounded-lg bg-transparent hover:bg-rose-500/10 border border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] hover:text-rose-600 text-xs transition cursor-pointer flex items-center gap-1 shrink-0 ml-auto"
+            className="min-h-[36px] px-3.5 py-1.5 rounded-lg bg-transparent hover:bg-rose-500/10 border border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] hover:text-rose-600 text-xs transition cursor-pointer flex items-center gap-1.5 shrink-0 ml-auto"
             title="Kosongkan semua pilihan"
           >
             <RotateCcw className="w-3 h-3" />
