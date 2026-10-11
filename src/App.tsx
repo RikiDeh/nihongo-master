@@ -8,6 +8,7 @@ import { SrsReviewSession } from './components/SrsModule/SrsReviewSession';
 import { OnboardingTourModal } from './components/Onboarding/OnboardingTourModal';
 import { RoadmapStage, ROADMAP_ARCS } from './data/roadmapData';
 import { completeRoadmapStage, reportMissionActivity } from './utils/storage';
+import { PwaPrompt } from './components/PwaPrompt/PwaPrompt';
 
 // Lazy-loaded components for optimal bundle size
 const KanjiExplorer = lazy(() => import('./components/KanjiModule/KanjiExplorer').then(m => ({ default: m.KanjiExplorer })));
@@ -313,6 +314,9 @@ export function App() {
           }
         }}
       />
+
+      {/* PWA Offline Indicator & Install Prompt */}
+      <PwaPrompt />
     </div>
   );
 }
