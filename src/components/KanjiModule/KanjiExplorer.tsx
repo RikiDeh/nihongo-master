@@ -698,7 +698,7 @@ export const KanjiExplorer: React.FC<KanjiExplorerProps> = ({ onGoToQuiz, initia
                 className="fixed inset-0 bg-black/50 backdrop-blur-xs transition-opacity animate-fadeIn"
                 onClick={() => setIsMobileDrawerOpen(false)}
               />
-              <div className="relative bg-[#faf8f5] dark:bg-[#18181b] border-t border-[#e7e5e4] dark:border-[#27272a] rounded-t-3xl max-h-[85vh] overflow-y-auto p-5 pb-20 shadow-2xl z-50 animate-slideUp">
+              <div className="relative bg-[#faf8f5] dark:bg-[#18181b] border-t border-[#e7e5e4] dark:border-[#27272a] rounded-t-3xl max-h-[85vh] overflow-y-auto p-5 pb-28 shadow-2xl z-50 animate-slideUp">
                 <div className="w-12 h-1 bg-[#d6d3d1] dark:bg-[#3f3f46] rounded-full mx-auto mb-4" />
                 
                 <div className="flex items-center justify-between mb-3">

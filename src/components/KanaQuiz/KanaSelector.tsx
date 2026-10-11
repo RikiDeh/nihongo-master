@@ -681,7 +681,7 @@ export const KanaSelector: React.FC<KanaSelectorProps> = ({ onStartQuiz }) => {
       )}
 
       {/* Sticky Bottom Action Dock (Clean Ergonomic Floating Card) */}
-      <div className="sticky bottom-16 md:bottom-2 z-20 mt-8 transition-all">
+      <div className="sticky bottom-20 md:bottom-4 z-20 mt-10 transition-all">
         <div className="max-w-4xl mx-auto px-2 sm:px-4">
           <div className="bg-[#faf8f5]/95 dark:bg-[#18181b]/95 backdrop-blur-md border border-[#e7e5e4] dark:border-[#27272a] p-3.5 sm:p-4 rounded-2xl shadow-xl transition-colors">
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 sm:gap-4">
@@ -702,12 +702,12 @@ export const KanaSelector: React.FC<KanaSelectorProps> = ({ onStartQuiz }) => {
                   </div>
                 </div>
 
-                {/* Mobile-only compact mode toggle */}
-                <div className="sm:hidden flex items-center gap-1 bg-[#f4f0e8] dark:bg-[#27272a] p-0.5 rounded-lg border border-[#e7e5e4] dark:border-[#3f3f46] text-xs">
+                {/* Mobile-only mode toggle */}
+                <div className="sm:hidden flex items-center gap-1 bg-[#f4f0e8] dark:bg-[#27272a] p-1 rounded-lg border border-[#e7e5e4] dark:border-[#3f3f46] text-xs">
                   <button
                     type="button"
                     onClick={() => setRequeueMistakes(true)}
-                    className={`px-2 py-1 rounded-md text-[11px] font-medium transition cursor-pointer ${
+                    className={`px-2.5 py-1 rounded-md text-[11px] font-medium transition cursor-pointer ${
                       requeueMistakes
                         ? 'bg-[#c84b31] text-white font-bold shadow-xs'
                         : 'text-[#78716c] dark:text-[#a1a1aa]'
@@ -718,7 +718,7 @@ export const KanaSelector: React.FC<KanaSelectorProps> = ({ onStartQuiz }) => {
                   <button
                     type="button"
                     onClick={() => setRequeueMistakes(false)}
-                    className={`px-2 py-1 rounded-md text-[11px] font-medium transition cursor-pointer ${
+                    className={`px-2.5 py-1 rounded-md text-[11px] font-medium transition cursor-pointer ${
                       !requeueMistakes
                         ? 'bg-[#1c1917] dark:bg-[#f4f4f5] text-white dark:text-[#18181b] font-bold shadow-xs'
                         : 'text-[#78716c] dark:text-[#a1a1aa]'
@@ -757,12 +757,12 @@ export const KanaSelector: React.FC<KanaSelectorProps> = ({ onStartQuiz }) => {
                   </button>
                 </div>
 
-                {/* Primary CTA (Full width on mobile, sleek, thumb-friendly min 46px) */}
+                {/* Primary CTA (Full width on mobile, thumb-friendly min 48px) */}
                 <button
                   type="button"
                   onClick={handleStart}
                   disabled={selectedTotal === 0}
-                  className={`w-full sm:w-auto min-h-[46px] px-6 py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition cursor-pointer shadow-xs active:scale-[0.98] ${
+                  className={`w-full sm:w-auto min-h-[48px] px-6 py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition cursor-pointer shadow-xs active:scale-[0.98] ${
                     selectedTotal > 0
                       ? 'bg-[#c84b31] hover:bg-[#b03d25] text-white'
                       : 'bg-[#e7e5e4] dark:bg-[#27272a] text-[#a8a29e] dark:text-[#71717a] cursor-not-allowed'

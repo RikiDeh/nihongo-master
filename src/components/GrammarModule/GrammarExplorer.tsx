@@ -105,8 +105,8 @@ export const GrammarExplorer: React.FC<GrammarExplorerProps> = ({ onGoToQuiz, in
       </div>
 
       {/* Filter Tabs & Search Bar */}
-      <div className="space-y-4 mb-6">
-        <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
+      <div className="bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] rounded-2xl p-4 sm:p-5 mb-8 shadow-xs space-y-4">
+        <div className="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4">
           {/* Level Tabs */}
           <div className="flex items-center gap-1.5 overflow-x-auto pb-1 sm:pb-0 scrollbar-none">
             {levels.map(lvl => (
@@ -114,7 +114,7 @@ export const GrammarExplorer: React.FC<GrammarExplorerProps> = ({ onGoToQuiz, in
                 key={lvl}
                 type="button"
                 onClick={() => setSelectedLevel(lvl)}
-                className={`px-3 py-1.5 rounded-lg text-xs font-mono font-medium transition cursor-pointer shrink-0 border ${
+                className={`min-h-[40px] px-3.5 py-1.5 rounded-lg text-xs font-mono font-medium transition cursor-pointer shrink-0 border flex items-center justify-center ${
                   selectedLevel === lvl
                     ? 'bg-[#1c1917] dark:bg-[#f4f4f5] text-white dark:text-[#18181b] border-transparent font-bold shadow-xs'
                     : 'bg-white dark:bg-[#1f1f23] border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] dark:text-[#a1a1aa] hover:border-[#d6d3d1]'
@@ -125,28 +125,30 @@ export const GrammarExplorer: React.FC<GrammarExplorerProps> = ({ onGoToQuiz, in
             ))}
           </div>
 
-          {/* Search Bar */}
-          <div className="relative flex-1 sm:max-w-xs">
-            <Search className="w-3.5 h-3.5 text-[#78716c] absolute left-3 top-1/2 -translate-y-1/2" />
-            <input
-              type="text"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Cari pola (misal: わけ, たら)..."
-              className="w-full pl-9 pr-3 py-1.5 rounded-lg bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] text-xs text-[#1c1917] dark:text-[#f4f4f5] placeholder-[#a8a29e] focus:outline-none focus:border-[#c84b31]"
-            />
-          </div>
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+            {/* Search Bar */}
+            <div className="relative flex-1 sm:w-64">
+              <Search className="w-3.5 h-3.5 text-[#78716c] absolute left-3 top-1/2 -translate-y-1/2" />
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Cari pola (misal: わけ, たら)..."
+                className="w-full pl-9 pr-3 py-2 rounded-lg bg-white dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a] text-xs text-[#1c1917] dark:text-[#f4f4f5] placeholder-[#a8a29e] focus:outline-none focus:border-[#c84b31]"
+              />
+            </div>
 
-          {onGoToQuiz && (
-            <button
-              type="button"
-              onClick={onGoToQuiz}
-              className="px-4 py-1.5 rounded-lg bg-[#c84b31] hover:bg-[#b03d25] text-white text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-1.5 transition cursor-pointer shrink-0 shadow-xs active:translate-y-px"
-            >
-              <Trophy className="w-3.5 h-3.5" />
-              <span>{selectedLevel === 'ALL' ? 'Pusat Ujian' : `Kuis ${selectedLevel}`}</span>
-            </button>
-          )}
+            {onGoToQuiz && (
+              <button
+                type="button"
+                onClick={onGoToQuiz}
+                className="min-h-[40px] px-4 py-2 rounded-lg bg-[#c84b31] hover:bg-[#b03d25] text-white text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-1.5 transition cursor-pointer shrink-0 shadow-xs active:translate-y-px"
+              >
+                <Trophy className="w-3.5 h-3.5" />
+                <span>{selectedLevel === 'ALL' ? 'Pusat Ujian' : `Kuis ${selectedLevel}`}</span>
+              </button>
+            )}
+          </div>
         </div>
       </div>
 
