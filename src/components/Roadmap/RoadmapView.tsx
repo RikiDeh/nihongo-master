@@ -184,11 +184,12 @@ export const RoadmapView: React.FC<RoadmapViewProps> = ({
         const score = Math.round((correctCount / quizQuestions.length) * 100);
         if (score >= activeStageQuiz.passingScore) {
           // LULUS! Tentukan arc berikutnya jika stage ini adalah stage terakhir
-          const arcStages = currentArc.stages;
+          const stageArc = ROADMAP_ARCS.find(a => a.stages.some(s => s.id === activeStageQuiz.id)) || currentArc;
+          const arcStages = stageArc.stages;
           const isLast = arcStages[arcStages.length - 1].id === activeStageQuiz.id;
           let nextArcId: string | undefined = undefined;
-          if (isLast && currentArc.arcNumber + 1 < ROADMAP_ARCS.length) {
-            nextArcId = ROADMAP_ARCS[currentArc.arcNumber + 1].id;
+          if (isLast && stageArc.arcNumber + 1 < ROADMAP_ARCS.length) {
+            nextArcId = ROADMAP_ARCS[stageArc.arcNumber + 1].id;
           }
           completeRoadmapStage(activeStageQuiz.id, nextArcId);
         }
