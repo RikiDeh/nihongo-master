@@ -189,6 +189,7 @@ export interface VerbItem {
 
 export interface ParticleQuestion {
   id: string;
+  level?: JLPTLevel;
   sentenceWithBlank: string;    // e.g. "わたし___ がくせいです。"
   sentenceComplete: string;     // e.g. "わたしはがくせいです。"
   translationId: string;        // e.g. "Saya adalah seorang siswa."

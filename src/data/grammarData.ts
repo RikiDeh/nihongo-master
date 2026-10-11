@@ -1,5 +1,6 @@
 import { GrammarItem } from '../types';
 import { GRAMMAR_BATCH2 } from './grammarBatch2Data';
+import { GRAMMAR_BATCH3 } from './grammarBatch3Data';
 
 const GRAMMAR_CORE: GrammarItem[] = [
   // N5
@@ -737,4 +738,4 @@ const GRAMMAR_CORE: GrammarItem[] = [
   },
 ];
 
-export const GRAMMAR_DATA: GrammarItem[] = [...GRAMMAR_CORE, ...GRAMMAR_BATCH2];
+export const GRAMMAR_DATA: GrammarItem[] = [...GRAMMAR_CORE, ...GRAMMAR_BATCH2, ...GRAMMAR_BATCH3];

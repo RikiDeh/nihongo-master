@@ -28,6 +28,8 @@ export const KanjiExplorer: React.FC<KanjiExplorerProps> = ({ onGoToQuiz, initia
   const [visibleCount, setVisibleCount] = useState(60);
   const [activeKanji, setActiveKanji] = useState<KanjiItem | null>(KANJI_DATA[0]);
   const [isMobileDrawerOpen, setIsMobileDrawerOpen] = useState(false);
+  const [radicalSearch, setRadicalSearch] = useState('');
+  const [radicalStrokeFilter, setRadicalStrokeFilter] = useState<number | 'ALL'>('ALL');
   const [, setStorageTick] = useState(0);
 
   // Subscribe ke perubahan localStorage
@@ -107,6 +109,21 @@ export const KanjiExplorer: React.FC<KanjiExplorerProps> = ({ onGoToQuiz, initia
     });
   }, [selectedLevel, selectedCategory, onlyBookmarked, deferredSearchQuery, progress.bookmarkedKanjiIds]);
 
+  const filteredRadicals = useMemo(() => {
+    return CORE_RADICALS_JOYO.filter(rad => {
+      if (radicalStrokeFilter !== 'ALL' && rad.strokes !== radicalStrokeFilter) {
+        return false;
+      }
+      const q = radicalSearch.trim().toLowerCase();
+      if (!q) return true;
+      const matchRadical = rad.radical.includes(q);
+      const matchName = rad.nameId.toLowerCase().includes(q);
+      const matchMeaning = rad.meaningId.toLowerCase().includes(q);
+      const matchExamples = rad.examples.some(ex => ex.includes(q));
+      return matchRadical || matchName || matchMeaning || matchExamples;
+    });
+  }, [radicalStrokeFilter, radicalSearch]);
+
   const displayedKanji = filteredKanji.slice(0, visibleCount);
 
   const getLevelBadgeClass = (level: JLPTLevel) => {
@@ -158,7 +175,7 @@ export const KanjiExplorer: React.FC<KanjiExplorerProps> = ({ onGoToQuiz, initia
             }`}
           >
             <span className="font-jp font-bold">部</span>
-            <span>Radikal Dasar ({CORE_RADICALS_JOYO.length})</span>
+            <span>214 Radikal Kangxi ({CORE_RADICALS_JOYO.length})</span>
           </button>
         </div>
 
@@ -189,60 +206,130 @@ export const KanjiExplorer: React.FC<KanjiExplorerProps> = ({ onGoToQuiz, initia
         <div className="mb-12">
           <div className="bg-[#1e3a8a]/5 dark:bg-[#3b82f6]/10 border border-[#1e3a8a]/20 dark:border-[#3b82f6]/30 rounded-xl p-5 mb-6 text-xs sm:text-sm text-[#78716c] dark:text-[#a1a1aa] leading-relaxed">
             <h3 className="text-sm sm:text-base font-jp font-bold text-[#1e3a8a] dark:text-[#3b82f6] mb-1.5 flex items-center gap-2">
-              <Sparkles className="w-4 h-4" />
-              <span>Mengapa Harus Belajar Radikal Dulu? (Metode WaniKani & Heisig)</span>
+              <Sparkles className="w-4 h-4 text-[#1e3a8a] dark:text-[#3b82f6]" />
+              <span>214 Radikal Resmi Kangxi Bushu (214部首) & Metode Heisig/WaniKani</span>
             </h3>
-            Kanji bukanlah coretan acak yang harus dihafal membabi buta. Semua kanji tersusun dari kombinasi radikal dasar. Begitu kamu mengenal 60+ Radikal Utama Joyō Kanji (N5 s/d N1) di bawah ini, menghafal 2.167 kanji akan terasa seperti menyusun balok LEGO!
+            Kanji bukanlah coretan acak yang harus dihafal membabi buta. Semua kanji tersusun dari kombinasi 214 radikal dasar (Kangxi Bushu). Mengenal radikal beserta maknanya akan mengubah hafalan 2.136 Joyō Kanji menjadi proses merangkai balok cerita yang bermakna!
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {CORE_RADICALS_JOYO.map((rad) => (
-              <div
-                key={rad.id}
-                className="bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] hover:border-[#1e3a8a] dark:hover:border-[#3b82f6] rounded-xl p-4 transition shadow-xs"
+          {/* Radical Filters & Search */}
+          <div className="bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] rounded-xl p-4 mb-6 flex flex-col gap-3 shadow-xs">
+            <div className="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center justify-between">
+              <div className="relative flex-1">
+                <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-[#78716c] dark:text-[#a1a1aa]" />
+                <input
+                  type="text"
+                  placeholder="Cari radikal, makna (Indo), nama, atau kanji turunan..."
+                  value={radicalSearch}
+                  onChange={(e) => setRadicalSearch(e.target.value)}
+                  className="w-full pl-9 pr-8 py-2 rounded-lg bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a] text-xs sm:text-sm text-[#1c1917] dark:text-[#f4f4f5] focus:outline-hidden focus:ring-1 focus:ring-[#1e3a8a] dark:focus:ring-[#3b82f6]"
+                />
+                {radicalSearch && (
+                  <button
+                    onClick={() => setRadicalSearch('')}
+                    className="absolute right-2.5 top-1/2 -translate-y-1/2 text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5] p-0.5"
+                    aria-label="Bersihkan pencarian"
+                  >
+                    <X className="w-3.5 h-3.5" />
+                  </button>
+                )}
+              </div>
+              <div className="text-xs text-[#78716c] dark:text-[#a1a1aa] font-mono shrink-0 self-center">
+                Ditemukan: <strong className="text-[#1e3a8a] dark:text-[#3b82f6]">{filteredRadicals.length}</strong> / {CORE_RADICALS_JOYO.length}
+              </div>
+            </div>
+
+            {/* Stroke Count Filter Pills */}
+            <div className="flex items-center gap-1.5 overflow-x-auto pb-1 text-xs no-scrollbar">
+              <span className="text-[11px] font-mono text-[#78716c] dark:text-[#a1a1aa] mr-1 shrink-0">Coretan:</span>
+              <button
+                onClick={() => setRadicalStrokeFilter('ALL')}
+                className={`px-2.5 py-1 rounded-md text-xs font-mono transition shrink-0 cursor-pointer ${
+                  radicalStrokeFilter === 'ALL'
+                    ? 'bg-[#1e3a8a] text-white font-bold dark:bg-[#3b82f6]'
+                    : 'bg-[#faf8f5] dark:bg-[#18181b] text-[#78716c] dark:text-[#a1a1aa] border border-[#e7e5e4] dark:border-[#27272a] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
+                }`}
               >
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-3xl font-jp font-bold text-[#1e3a8a] dark:text-[#3b82f6]">
-                    {rad.radical}
-                  </span>
-                  <span className="text-[11px] font-mono text-[#78716c] dark:text-[#a1a1aa] px-2 py-0.5 rounded bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a]">
-                    {rad.strokes} Coretan
-                  </span>
-                </div>
+                Semua
+              </button>
+              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17].map((str) => (
+                <button
+                  key={str}
+                  onClick={() => setRadicalStrokeFilter(str)}
+                  className={`px-2 py-1 rounded-md text-xs font-mono transition shrink-0 cursor-pointer ${
+                    radicalStrokeFilter === str
+                      ? 'bg-[#1e3a8a] text-white font-bold dark:bg-[#3b82f6]'
+                      : 'bg-[#faf8f5] dark:bg-[#18181b] text-[#78716c] dark:text-[#a1a1aa] border border-[#e7e5e4] dark:border-[#27272a] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
+                  }`}
+                >
+                  {str}画
+                </button>
+              ))}
+            </div>
+          </div>
 
-                <div className="text-sm font-sans font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-0.5">
-                  {rad.meaningId}
-                </div>
-                <div className="text-xs text-[#78716c] dark:text-[#a1a1aa] mb-3 font-sans">
-                  Nama: <code className="text-[#1c1917] dark:text-[#f4f4f5] font-mono">{rad.nameId}</code>
-                </div>
-
-                <div className="pt-2 border-t border-[#e7e5e4] dark:border-[#27272a]">
-                  <span className="text-[10px] text-[#78716c] dark:text-[#a1a1aa] uppercase tracking-wider block mb-1 font-mono">
-                    Contoh di Kanji Aktif:
-                  </span>
-                  <div className="flex flex-wrap gap-1.5">
-                    {rad.examples.map((ex) => (
-                      <span
-                        key={ex}
-                        onClick={() => {
-                          const target = KANJI_DATA.find(k => k.kanji === ex);
-                          if (target) {
-                            setActiveKanji(target);
-                            setActiveTab('kanji');
-                          }
-                        }}
-                        className="px-2 py-0.5 rounded bg-[#faf8f5] dark:bg-[#18181b] hover:bg-[#c84b31]/10 hover:text-[#c84b31] dark:hover:bg-[#e05d44]/15 dark:hover:text-[#e05d44] border border-[#e7e5e4] dark:border-[#27272a] text-xs font-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] transition cursor-pointer"
-                        title="Klik untuk lihat kanji ini di penjelajah"
-                      >
-                        {ex}
+          {filteredRadicals.length === 0 ? (
+            <div className="text-center py-16 bg-white dark:bg-[#1f1f23] rounded-xl border border-[#e7e5e4] dark:border-[#27272a]">
+              <p className="text-sm text-[#78716c] dark:text-[#a1a1aa]">Tidak ada radikal yang cocok dengan pencarian &quot;{radicalSearch}&quot;.</p>
+              <button
+                onClick={() => { setRadicalSearch(''); setRadicalStrokeFilter('ALL'); }}
+                className="mt-3 px-3.5 py-1.5 rounded-lg bg-[#1e3a8a] text-white text-xs hover:bg-[#1e3a8a]/90 transition"
+              >
+                Reset Filter
+              </button>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {filteredRadicals.map((rad) => (
+                <div
+                  key={rad.id}
+                  className="bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] hover:border-[#1e3a8a] dark:hover:border-[#3b82f6] rounded-xl p-4 transition shadow-xs flex flex-col justify-between"
+                >
+                  <div>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-3xl font-jp font-bold text-[#1e3a8a] dark:text-[#3b82f6]">
+                        {rad.radical}
                       </span>
-                    ))}
+                      <span className="text-[11px] font-mono text-[#78716c] dark:text-[#a1a1aa] px-2 py-0.5 rounded bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a]">
+                        {rad.strokes} Coretan
+                      </span>
+                    </div>
+
+                    <div className="text-sm font-sans font-bold text-[#1c1917] dark:text-[#f4f4f5] mb-0.5">
+                      {rad.meaningId}
+                    </div>
+                    <div className="text-xs text-[#78716c] dark:text-[#a1a1aa] mb-3 font-sans">
+                      Nama: <code className="text-[#1c1917] dark:text-[#f4f4f5] font-mono">{rad.nameId}</code>
+                    </div>
+                  </div>
+
+                  <div className="pt-2 border-t border-[#e7e5e4] dark:border-[#27272a]">
+                    <span className="text-[10px] text-[#78716c] dark:text-[#a1a1aa] uppercase tracking-wider block mb-1 font-mono">
+                      Contoh di Joyō Kanji:
+                    </span>
+                    <div className="flex flex-wrap gap-1.5">
+                      {rad.examples.map((ex) => (
+                        <span
+                          key={ex}
+                          onClick={() => {
+                            const target = KANJI_DATA.find(k => k.kanji === ex);
+                            if (target) {
+                              setActiveKanji(target);
+                              setActiveTab('kanji');
+                            }
+                          }}
+                          className="px-2 py-0.5 rounded bg-[#faf8f5] dark:bg-[#18181b] hover:bg-[#c84b31]/10 hover:text-[#c84b31] dark:hover:bg-[#e05d44]/15 dark:hover:text-[#e05d44] border border-[#e7e5e4] dark:border-[#27272a] text-xs font-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] transition cursor-pointer"
+                          title="Klik untuk lihat kanji ini di penjelajah"
+                        >
+                          {ex}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          )}
         </div>
       )}
 

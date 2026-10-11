@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { PARTICLE_QUESTIONS } from '../../data/particlesData';
-import { ParticleQuestion } from '../../types';
+import { ParticleQuestion, JLPTLevel } from '../../types';
 import { speakJapanese, playSuccessSound, playErrorSound } from '../../utils/audio';
 import { 
   Volume2, 
@@ -17,6 +17,8 @@ import confetti from 'canvas-confetti';
 
 export const ParticleDrill: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'drill' | 'summary'>('drill');
+  const [selectedLevel, setSelectedLevel] = useState<JLPTLevel | 'ALL'>('ALL');
+  const [summaryLevel, setSummaryLevel] = useState<JLPTLevel>('N5');
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
   const [isAnswered, setIsAnswered] = useState(false);
@@ -25,8 +27,21 @@ export const ParticleDrill: React.FC = () => {
   const [correctCount, setCorrectCount] = useState(0);
   const [totalAnswered, setTotalAnswered] = useState(0);
 
+  // Filter daftar soal berdasarkan level JLPT yang dipilih
+  const activeQuestions = useMemo(() => {
+    if (selectedLevel === 'ALL') return PARTICLE_QUESTIONS;
+    return PARTICLE_QUESTIONS.filter(q => q.level === selectedLevel);
+  }, [selectedLevel]);
+
   // Soal yang sedang aktif
-  const currentQuestion: ParticleQuestion = PARTICLE_QUESTIONS[currentIndex] || PARTICLE_QUESTIONS[0];
+  const currentQuestion: ParticleQuestion = activeQuestions[currentIndex] || activeQuestions[0] || PARTICLE_QUESTIONS[0];
+
+  const handleLevelChange = (lvl: JLPTLevel | 'ALL') => {
+    setSelectedLevel(lvl);
+    setCurrentIndex(0);
+    setSelectedOption(null);
+    setIsAnswered(false);
+  };
 
   const handleSelectOption = (particle: string) => {
     if (isAnswered) return;
@@ -60,7 +75,7 @@ export const ParticleDrill: React.FC = () => {
   const handleNext = () => {
     setSelectedOption(null);
     setIsAnswered(false);
-    if (currentIndex < PARTICLE_QUESTIONS.length - 1) {
+    if (currentIndex < activeQuestions.length - 1) {
       setCurrentIndex(prev => prev + 1);
     } else {
       setCurrentIndex(0); // Loop kembali
@@ -70,14 +85,14 @@ export const ParticleDrill: React.FC = () => {
   const handleRandomize = () => {
     setSelectedOption(null);
     setIsAnswered(false);
-    const randomIndex = Math.floor(Math.random() * PARTICLE_QUESTIONS.length);
+    const randomIndex = Math.floor(Math.random() * activeQuestions.length);
     setCurrentIndex(randomIndex);
   };
 
   const isCurrentCorrect = selectedOption === currentQuestion.correctParticle;
 
   const renderInteractiveSentence = () => {
-    const parts = currentQuestion.sentenceWithBlank.split('【　】');
+    const parts = currentQuestion.sentenceWithBlank.split(/【　】|___/);
     return (
       <div className="text-2xl sm:text-3xl font-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] leading-relaxed flex flex-wrap items-center justify-center gap-1 my-3">
         <span>{parts[0]}</span>
@@ -103,19 +118,50 @@ export const ParticleDrill: React.FC = () => {
     );
   };
 
+  const getLevelBadge = (level?: JLPTLevel) => {
+    switch (level) {
+      case 'N5':
+        return 'bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border-emerald-500/30';
+      case 'N4':
+        return 'bg-blue-500/10 text-blue-700 dark:text-blue-400 border-blue-500/30';
+      case 'N3':
+        return 'bg-amber-500/10 text-amber-700 dark:text-amber-400 border-amber-500/30';
+      default:
+        return 'bg-stone-500/10 text-stone-700 dark:text-stone-300 border-stone-500/30';
+    }
+  };
+
   return (
     <div className="w-full max-w-4xl mx-auto px-4 py-8 animate-fadeIn">
       {/* Title */}
       <div className="text-center mb-8">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded border border-[#c84b31]/25 bg-[#c84b31]/5 text-[#c84b31] dark:text-[#e05d44] text-xs font-mono font-medium mb-3">
-          <span>[助詞道場] N5 PARTICLE DRILL</span>
+          <span>[助詞道場] JLPT PARTICLE DRILL (N5 • N4 • N3)</span>
         </div>
         <h1 className="text-3xl sm:text-4xl font-bold font-jp text-[#1c1917] dark:text-[#f4f4f5] tracking-tight mb-2">
           Latihan Refleks Partikel Bahasa Jepang
         </h1>
         <p className="text-[#78716c] dark:text-[#a1a1aa] text-sm max-w-xl mx-auto">
-          Kuasai perbedaan partikel krusial: <span className="font-jp font-bold text-[#c84b31]">は vs が</span>, <span className="font-jp font-bold text-[#1e3a8a] dark:text-[#60a5fa]">に vs で</span>, <span className="font-jp font-bold text-[#2e7d32]">を</span>, dan lainnya lewat kalimat nyata.
+          Kuasai partikel inti N5 hingga N3: <span className="font-jp font-bold text-[#c84b31]">は vs が</span>, <span className="font-jp font-bold text-[#1e3a8a] dark:text-[#60a5fa]">に vs で</span>, <span className="font-bold text-amber-600">だけ vs しか</span>, serta pola komposit <span className="font-jp font-bold">〜として / 〜につれて</span>.
         </p>
+      </div>
+
+      {/* Level Filters */}
+      <div className="flex items-center justify-center gap-2 mb-4">
+        {(['ALL', 'N5', 'N4', 'N3'] as (JLPTLevel | 'ALL')[]).map((lvl) => (
+          <button
+            key={lvl}
+            type="button"
+            onClick={() => handleLevelChange(lvl)}
+            className={`px-3 py-1.5 rounded-lg text-xs font-mono font-bold transition cursor-pointer border ${
+              selectedLevel === lvl
+                ? 'bg-[#c84b31] text-white border-[#c84b31] shadow-xs'
+                : 'bg-white dark:bg-[#1f1f23] text-[#78716c] dark:text-[#a1a1aa] border-[#e7e5e4] dark:border-[#27272a] hover:border-[#c84b31]'
+            }`}
+          >
+            {lvl === 'ALL' ? `Semua Level (${PARTICLE_QUESTIONS.length})` : `${lvl} (${PARTICLE_QUESTIONS.filter(q => q.level === lvl).length})`}
+          </button>
+        ))}
       </div>
 
       {/* Tabs */}
@@ -143,7 +189,7 @@ export const ParticleDrill: React.FC = () => {
           }`}
         >
           <BookOpen className="w-3.5 h-3.5" />
-          <span>Tabel Partikel N5</span>
+          <span>Tabel Panduan Partikel</span>
         </button>
       </div>
 
@@ -154,12 +200,17 @@ export const ParticleDrill: React.FC = () => {
           <div className="bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] rounded-xl p-3.5 mb-6 shadow-xs flex items-center justify-between">
             <div className="flex items-center gap-2">
               <span className="px-2.5 py-0.5 rounded text-xs font-mono font-bold bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a] text-[#78716c] dark:text-[#a1a1aa]">
-                Soal {currentIndex + 1} / {PARTICLE_QUESTIONS.length}
+                Soal {currentIndex + 1} / {activeQuestions.length}
               </span>
+              {currentQuestion.level && (
+                <span className={`px-2 py-0.5 rounded text-[11px] font-mono font-bold border ${getLevelBadge(currentQuestion.level)}`}>
+                  {currentQuestion.level}
+                </span>
+              )}
               <button
                 type="button"
                 onClick={handleRandomize}
-                className="p-1 rounded text-[#78716c] hover:text-[#1c1917] dark:hover:text-[#f4f4f5] transition"
+                className="p-1 rounded text-[#78716c] hover:text-[#1c1917] dark:hover:text-[#f4f4f5] transition cursor-pointer"
                 title="Acak Soal"
               >
                 <RotateCw className="w-3.5 h-3.5" />
@@ -283,66 +334,197 @@ export const ParticleDrill: React.FC = () => {
       {/* TAB 2: PANDUAN & CHEATSHEET PARTIKEL */}
       {activeTab === 'summary' && (
         <div className="bg-white dark:bg-[#1f1f23] border border-[#e7e5e4] dark:border-[#27272a] rounded-xl p-6 sm:p-8 shadow-xs space-y-6">
-          <div className="flex items-center gap-2.5 mb-2">
-            <BookOpen className="w-5 h-5 text-[#c84b31]" />
-            <h2 className="text-xl sm:text-2xl font-bold font-jp text-[#1c1917] dark:text-[#f4f4f5] tracking-tight">
-              Tabel Komparasi Partikel Inti JLPT N5
-            </h2>
-          </div>
-          <p className="text-xs sm:text-sm text-[#78716c] dark:text-[#a1a1aa]">
-            Ringkasan rumus penggunaan 8 partikel wajib yang selalu diujikan di JLPT N5:
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {/* WA vs GA */}
-            <div className="p-4 rounded-lg bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a]">
-              <div className="flex items-center justify-between mb-2">
-                <span className="font-jp font-bold text-[#c84b31] dark:text-[#e05d44] text-lg">は (wa) vs が (ga)</span>
-                <span className="text-[10px] px-2 py-0.5 rounded font-mono border border-stone-200 dark:border-zinc-800 text-[#78716c]">Topik / Subjek</span>
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[#e7e5e4] dark:border-[#27272a] pb-4">
+            <div className="flex items-center gap-2.5">
+              <BookOpen className="w-5 h-5 text-[#c84b31]" />
+              <div>
+                <h2 className="text-xl sm:text-2xl font-bold font-jp text-[#1c1917] dark:text-[#f4f4f5] tracking-tight">
+                  Tabel Komparasi Partikel JLPT
+                </h2>
+                <p className="text-xs text-[#78716c] dark:text-[#a1a1aa] mt-0.5">
+                  Rumus dan kaidah partikel penting per tingkat kemampuan
+                </p>
               </div>
-              <ul className="text-xs text-[#78716c] dark:text-[#a1a1aa] space-y-1.5 leading-relaxed">
-                <li>• <strong className="text-[#1c1917] dark:text-[#f4f4f5]">は</strong>: Penanda Topik umum (&ldquo;Mengenai X...&rdquo;).</li>
-                <li>• <strong className="text-[#1c1917] dark:text-[#f4f4f5]">が</strong>: Penanda Subjek penegas / Objek kesukaan (すき/きらい) / Kata tanya subjek (だれが).</li>
-              </ul>
             </div>
 
-            {/* NI vs DE */}
-            <div className="p-4 rounded-lg bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a]">
-              <div className="flex items-center justify-between mb-2">
-                <span className="font-jp font-bold text-[#1e3a8a] dark:text-[#60a5fa] text-lg">に (ni) vs で (de)</span>
-                <span className="text-[10px] px-2 py-0.5 rounded font-mono border border-stone-200 dark:border-zinc-800 text-[#78716c]">Tempat & Waktu</span>
-              </div>
-              <ul className="text-xs text-[#78716c] dark:text-[#a1a1aa] space-y-1.5 leading-relaxed">
-                <li>• <strong className="text-[#1c1917] dark:text-[#f4f4f5]">に</strong>: Titik waktu berangka (７じに) / Tempat keberadaan benda statis (つくえのうえに あります).</li>
-                <li>• <strong className="text-[#1c1917] dark:text-[#f4f4f5]">で</strong>: Tempat aktivitas aksi dinamis (がっこうで たべます) / Alat (はしで).</li>
-              </ul>
-            </div>
-
-            {/* O & E */}
-            <div className="p-4 rounded-lg bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a]">
-              <div className="flex items-center justify-between mb-2">
-                <span className="font-jp font-bold text-[#2e7d32] dark:text-[#4ade80] text-lg">を (o) & へ (e)</span>
-                <span className="text-[10px] px-2 py-0.5 rounded font-mono border border-stone-200 dark:border-zinc-800 text-[#78716c]">Objek & Arah</span>
-              </div>
-              <ul className="text-xs text-[#78716c] dark:text-[#a1a1aa] space-y-1.5 leading-relaxed">
-                <li>• <strong className="text-[#1c1917] dark:text-[#f4f4f5]">を</strong>: Objek penderita langsung kata kerja transitif (ごはんを たべます).</li>
-                <li>• <strong className="text-[#1c1917] dark:text-[#f4f4f5]">へ</strong>: Arah pergerakan / destinasi fisik (にほんへ いきます).</li>
-              </ul>
-            </div>
-
-            {/* TO, KARA, MADE */}
-            <div className="p-4 rounded-lg bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a]">
-              <div className="flex items-center justify-between mb-2">
-                <span className="font-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] text-lg">と / から / まで / も</span>
-                <span className="text-[10px] px-2 py-0.5 rounded font-mono border border-stone-200 dark:border-zinc-800 text-[#78716c]">Relasi</span>
-              </div>
-              <ul className="text-xs text-[#78716c] dark:text-[#a1a1aa] space-y-1.5 leading-relaxed">
-                <li>• <strong className="text-[#1c1917] dark:text-[#f4f4f5]">と</strong>: Bersama orang (ともだちと) / Dan menghubungkan kata benda.</li>
-                <li>• <strong className="text-[#1c1917] dark:text-[#f4f4f5]">から〜まで</strong>: Dari (awal) sampai (akhir).</li>
-                <li>• <strong className="text-[#1c1917] dark:text-[#f4f4f5]">も</strong>: Menyatakan &ldquo;juga / pun&rdquo;.</li>
-              </ul>
+            {/* Sub-tab Level Selector */}
+            <div className="flex items-center gap-1.5 self-start sm:self-auto bg-[#faf8f5] dark:bg-[#18181b] p-1 rounded-lg border border-[#e7e5e4] dark:border-[#27272a]">
+              {(['N5', 'N4', 'N3'] as JLPTLevel[]).map((lvl) => (
+                <button
+                  key={lvl}
+                  type="button"
+                  onClick={() => setSummaryLevel(lvl)}
+                  className={`px-3 py-1 rounded-md text-xs font-mono font-bold transition cursor-pointer ${
+                    summaryLevel === lvl
+                      ? 'bg-[#c84b31] text-white shadow-xs'
+                      : 'text-[#78716c] dark:text-[#a1a1aa] hover:text-[#1c1917] dark:hover:text-[#f4f4f5]'
+                  }`}
+                >
+                  Tingkat {lvl}
+                </button>
+              ))}
             </div>
           </div>
+
+          {/* N5 CHEATSHEET */}
+          {summaryLevel === 'N5' && (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 animate-fadeIn">
+              {/* WA vs GA */}
+              <div className="p-4 rounded-lg bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a]">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="font-jp font-bold text-[#c84b31] dark:text-[#e05d44] text-lg">は (wa) vs が (ga)</span>
+                  <span className="text-[10px] px-2 py-0.5 rounded font-mono border border-stone-200 dark:border-zinc-800 text-[#78716c]">Topik / Subjek</span>
+                </div>
+                <ul className="text-xs text-[#78716c] dark:text-[#a1a1aa] space-y-1.5 leading-relaxed">
+                  <li>• <strong className="text-[#1c1917] dark:text-[#f4f4f5]">は</strong>: Penanda Topik umum (&ldquo;Mengenai X...&rdquo;).</li>
+                  <li>• <strong className="text-[#1c1917] dark:text-[#f4f4f5]">が</strong>: Penanda Subjek penegas / Objek kesukaan (すき/きらい) / Kata tanya subjek (だれが).</li>
+                </ul>
+              </div>
+
+              {/* NI vs DE */}
+              <div className="p-4 rounded-lg bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a]">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="font-jp font-bold text-[#1e3a8a] dark:text-[#60a5fa] text-lg">に (ni) vs で (de)</span>
+                  <span className="text-[10px] px-2 py-0.5 rounded font-mono border border-stone-200 dark:border-zinc-800 text-[#78716c]">Tempat & Waktu</span>
+                </div>
+                <ul className="text-xs text-[#78716c] dark:text-[#a1a1aa] space-y-1.5 leading-relaxed">
+                  <li>• <strong className="text-[#1c1917] dark:text-[#f4f4f5]">に</strong>: Titik waktu berangka (７じに) / Tempat keberadaan benda statis (つくえのうえに あります).</li>
+                  <li>• <strong className="text-[#1c1917] dark:text-[#f4f4f5]">で</strong>: Tempat aktivitas aksi dinamis (がっこうで たべます) / Alat (はしで).</li>
+                </ul>
+              </div>
+
+              {/* O & E */}
+              <div className="p-4 rounded-lg bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a]">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="font-jp font-bold text-[#2e7d32] dark:text-[#4ade80] text-lg">を (o) & へ (e)</span>
+                  <span className="text-[10px] px-2 py-0.5 rounded font-mono border border-stone-200 dark:border-zinc-800 text-[#78716c]">Objek & Arah</span>
+                </div>
+                <ul className="text-xs text-[#78716c] dark:text-[#a1a1aa] space-y-1.5 leading-relaxed">
+                  <li>• <strong className="text-[#1c1917] dark:text-[#f4f4f5]">を</strong>: Objek penderita langsung kata kerja transitif (ごはんを たべます).</li>
+                  <li>• <strong className="text-[#1c1917] dark:text-[#f4f4f5]">へ</strong>: Arah pergerakan / destinasi fisik (にほんへ いきます).</li>
+                </ul>
+              </div>
+
+              {/* TO, KARA, MADE */}
+              <div className="p-4 rounded-lg bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a]">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="font-jp font-bold text-[#1c1917] dark:text-[#f4f4f5] text-lg">と / から / まで / も</span>
+                  <span className="text-[10px] px-2 py-0.5 rounded font-mono border border-stone-200 dark:border-zinc-800 text-[#78716c]">Relasi & Rentang</span>
+                </div>
+                <ul className="text-xs text-[#78716c] dark:text-[#a1a1aa] space-y-1.5 leading-relaxed">
+                  <li>• <strong className="text-[#1c1917] dark:text-[#f4f4f5]">と</strong>: Bersama orang (ともだちと) / Dan menghubungkan kata benda definitif.</li>
+                  <li>• <strong className="text-[#1c1917] dark:text-[#f4f4f5]">から〜まで</strong>: Dari titik awal [から] hingga titik akhir [まで].</li>
+                  <li>• <strong className="text-[#1c1917] dark:text-[#f4f4f5]">も</strong>: Menyatakan &ldquo;juga / pun&rdquo;.</li>
+                </ul>
+              </div>
+            </div>
+          )}
+
+          {/* N4 CHEATSHEET */}
+          {summaryLevel === 'N4' && (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 animate-fadeIn">
+              {/* DAKE vs SHIKA */}
+              <div className="p-4 rounded-lg bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a]">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="font-jp font-bold text-[#c84b31] dark:text-[#e05d44] text-lg">だけ vs しか...ない</span>
+                  <span className="text-[10px] px-2 py-0.5 rounded font-mono border border-stone-200 dark:border-zinc-800 text-[#78716c]">Batasan & Pembatas</span>
+                </div>
+                <ul className="text-xs text-[#78716c] dark:text-[#a1a1aa] space-y-1.5 leading-relaxed">
+                  <li>• <strong className="text-[#1c1917] dark:text-[#f4f4f5]">だけ</strong>: Hanya/cuma, bisa berpasangan dengan kalimat POSITIF maupun netral.</li>
+                  <li>• <strong className="text-[#1c1917] dark:text-[#f4f4f5]">しか</strong>: WAJIB berpasangan dengan predikat NEGATIF (tidak ada selain itu, ada nuansa kekurangan/keluhan).</li>
+                </ul>
+              </div>
+
+              {/* MADE vs MADE NI */}
+              <div className="p-4 rounded-lg bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a]">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="font-jp font-bold text-[#1e3a8a] dark:text-[#60a5fa] text-lg">まで vs までに</span>
+                  <span className="text-[10px] px-2 py-0.5 rounded font-mono border border-stone-200 dark:border-zinc-800 text-[#78716c]">Batas Waktu</span>
+                </div>
+                <ul className="text-xs text-[#78716c] dark:text-[#a1a1aa] space-y-1.5 leading-relaxed">
+                  <li>• <strong className="text-[#1c1917] dark:text-[#f4f4f5]">まで</strong>: Durasi aksi terus berlanjut hingga waktu tersebut (5-ji made benkyou suru).</li>
+                  <li>• <strong className="text-[#1c1917] dark:text-[#f4f4f5]">までに</strong>: DEADLINE / Batas akhir penyelesaian (&ldquo;paling lambat sebelum jam 5&rdquo;).</li>
+                </ul>
+              </div>
+
+              {/* NI TSUITE vs NI TOTTE */}
+              <div className="p-4 rounded-lg bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a]">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="font-jp font-bold text-[#2e7d32] dark:text-[#4ade80] text-lg">〜について vs 〜にとって</span>
+                  <span className="text-[10px] px-2 py-0.5 rounded font-mono border border-stone-200 dark:border-zinc-800 text-[#78716c]">Topik vs Sudut Pandang</span>
+                </div>
+                <ul className="text-xs text-[#78716c] dark:text-[#a1a1aa] space-y-1.5 leading-relaxed">
+                  <li>• <strong className="text-[#1c1917] dark:text-[#f4f4f5]">〜について</strong>: Tentang / mengenai suatu objek materi bahasan.</li>
+                  <li>• <strong className="text-[#1c1917] dark:text-[#f4f4f5]">〜にとって</strong>: Dari sudut pandang / bagi seseorang (watashi ni totte = bagi saya).</li>
+                </ul>
+              </div>
+
+              {/* TAME NI vs YOU NI */}
+              <div className="p-4 rounded-lg bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a]">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="font-jp font-bold text-amber-600 dark:text-amber-400 text-lg">〜ために vs 〜ように</span>
+                  <span className="text-[10px] px-2 py-0.5 rounded font-mono border border-stone-200 dark:border-zinc-800 text-[#78716c]">Tujuan & Harapan</span>
+                </div>
+                <ul className="text-xs text-[#78716c] dark:text-[#a1a1aa] space-y-1.5 leading-relaxed">
+                  <li>• <strong className="text-[#1c1917] dark:text-[#f4f4f5]">〜ために</strong>: Demi/tujuan disengaja dengan kendali diri (membeli kamus untuk belajar).</li>
+                  <li>• <strong className="text-[#1c1917] dark:text-[#f4f4f5]">〜ように</strong>: Supaya/agar tercapai kondisi potensial di luar kontrol langsung (agar lekas sembuh).</li>
+                </ul>
+              </div>
+            </div>
+          )}
+
+          {/* N3 CHEATSHEET */}
+          {summaryLevel === 'N3' && (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 animate-fadeIn">
+              {/* TO SHITE vs TO SHITE MO */}
+              <div className="p-4 rounded-lg bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a]">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="font-jp font-bold text-[#c84b31] dark:text-[#e05d44] text-lg">〜として vs 〜としても</span>
+                  <span className="text-[10px] px-2 py-0.5 rounded font-mono border border-stone-200 dark:border-zinc-800 text-[#78716c]">Peran vs Konsesif</span>
+                </div>
+                <ul className="text-xs text-[#78716c] dark:text-[#a1a1aa] space-y-1.5 leading-relaxed">
+                  <li>• <strong className="text-[#1c1917] dark:text-[#f4f4f5]">〜として</strong>: Sebagai peran, status, atau kualifikasi resmi (ryuugakusei to shite).</li>
+                  <li>• <strong className="text-[#1c1917] dark:text-[#f4f4f5]">〜としても</strong>: Sekalipun / bahkan seandainya (tatoe shippai shita to shite mo).</li>
+                </ul>
+              </div>
+
+              {/* NI TSURETE vs NI SHITAGATTE */}
+              <div className="p-4 rounded-lg bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a]">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="font-jp font-bold text-[#1e3a8a] dark:text-[#60a5fa] text-lg">〜につれて vs 〜にしたがって</span>
+                  <span className="text-[10px] px-2 py-0.5 rounded font-mono border border-stone-200 dark:border-zinc-800 text-[#78716c]">Perubahan Simultan</span>
+                </div>
+                <ul className="text-xs text-[#78716c] dark:text-[#a1a1aa] space-y-1.5 leading-relaxed">
+                  <li>• <strong className="text-[#1c1917] dark:text-[#f4f4f5]">〜につれて</strong>: Seiring perkembangan waktu / fenomena alami satu arah yang berangsur-angsur.</li>
+                  <li>• <strong className="text-[#1c1917] dark:text-[#f4f4f5]">〜にしたがって</strong>: Sejalan dengan / mematuhi instruksi, aturan, atau hukum.</li>
+                </ul>
+              </div>
+
+              {/* NI OITE vs NI KANSHITE */}
+              <div className="p-4 rounded-lg bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a]">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="font-jp font-bold text-[#2e7d32] dark:text-[#4ade80] text-lg">〜において vs 〜に関して</span>
+                  <span className="text-[10px] px-2 py-0.5 rounded font-mono border border-stone-200 dark:border-zinc-800 text-[#78716c]">Formal Lokatif & Bahasan</span>
+                </div>
+                <ul className="text-xs text-[#78716c] dark:text-[#a1a1aa] space-y-1.5 leading-relaxed">
+                  <li>• <strong className="text-[#1c1917] dark:text-[#f4f4f5]">〜において</strong>: Ragam formal dari [で] (berlangsung di suatu tempat/bidang formal).</li>
+                  <li>• <strong className="text-[#1c1917] dark:text-[#f4f4f5]">〜に関して</strong>: Ragam formal/akademis dari [〜について] (berkenaan dengan topik).</li>
+                </ul>
+              </div>
+
+              {/* NI WATATTE vs O TSUUJITE */}
+              <div className="p-4 rounded-lg bg-[#faf8f5] dark:bg-[#18181b] border border-[#e7e5e4] dark:border-[#27272a]">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="font-jp font-bold text-purple-600 dark:text-purple-400 text-lg">〜にわたって vs 〜を通じて</span>
+                  <span className="text-[10px] px-2 py-0.5 rounded font-mono border border-stone-200 dark:border-zinc-800 text-[#78716c]">Rentang Luas vs Media</span>
+                </div>
+                <ul className="text-xs text-[#78716c] dark:text-[#a1a1aa] space-y-1.5 leading-relaxed">
+                  <li>• <strong className="text-[#1c1917] dark:text-[#f4f4f5]">〜にわたって</strong>: Membentang sepanjang rentang waktu atau area geografis luas.</li>
+                  <li>• <strong className="text-[#1c1917] dark:text-[#f4f4f5]">〜を通じて</strong>: Melalui perantara/media atau sepanjang kurun masa (1年を通じて).</li>
+                </ul>
+              </div>
+            </div>
+          )}
         </div>
       )}
     </div>
